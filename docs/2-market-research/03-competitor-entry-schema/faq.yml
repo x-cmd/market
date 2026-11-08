@@ -1,0 +1,71 @@
+id: x-market-2-market-research-03-competitor-entry-schema
+
+data:
+  - name:
+      en: writing a competitor entry someone else can check
+      cn: 写一份别人能核的竞品条目
+    qa:
+      - id: what-belongs-in-a-competitor-entry
+        question:
+          en: What goes into a competitor entry?
+          cn: 一条竞品资料要填哪几格？
+        answer:
+          en: >
+            Eight cells: who the entity is, what category it sells in, its size and share, its growth rate, its price band, how hard it advertises, how much it is talked about and in what tone, and the source and date for every one of them. A cell you can leave empty is fine. A cell with a number in it but no source, no definition of how it was computed and no date is worse than an empty one, because it looks solid.
+          cn: >
+            八格：主体是谁、品类是什么、规模与份额、增速、价格带、投放强度、声量与情绪、每格的来源与日期。空格不算错。填了数却没写来源、没写算法、没写日期，比空着更糟——因为它看着像实的。
+        confidence: 10
+        reference:
+          - docs/2-market-research/03-competitor-entry-schema/cn.md
+
+      - id: why-the-same-competitor-has-different-prices
+        question:
+          en: Why does the same competitor have two very different prices?
+          cn: 同一个对手，为什么有两个差很多的价格？
+        answer:
+          en: >
+            Because they are two different products. Matomo Cloud is a hosted service at €29 per month for 50,000 hits. Matomo On-Premise is a software licence: Community is free, Team is €230 per month, Business €1209, Enterprise €2834, VIP is quoted. Same name, nearly eight times apart. A price cell that does not say which form of the product it refers to is unusable — the seller and the buyer are not talking about the same thing.
+          cn: >
+            因为那是两种产品。Matomo Cloud 是托管服务，€29 每月含 5 万次 hits。Matomo On-Premise 是软件许可：社区版免费，Team €230 每月，Business €1209，Enterprise €2834，VIP 面议。同一个名字，差了快八倍。价格格不写清是哪种产品形态，这个格就不能用——卖的人和买的人想的不是同一件事。
+        confidence: 10
+        reference:
+          - docs/2-market-research/03-competitor-entry-schema/cn.md
+
+      - id: proxy-vs-real-growth
+        question:
+          en: Can I use commit count as a competitor's growth rate?
+          cn: 提交数能不能当对手的增速？
+        answer:
+          en: >
+            As a proxy for development activity, yes, as long as you say so. In the twelve months from 2025-11-01 to 2026-11-01 the counts were PostHog 41943, umami 1406, Matomo 1065, Plausible 610, taken straight from the GitHub commits API with pagination. That number measures how much code was written, not how much revenue was earned. Writing it in the growth cell without naming it a proxy is what turns a useful figure into a wrong one.
+          cn: >
+            当作开发活跃度的代理值可以，前提是你写明这一点。2025-11-01 到 2026-11-01 这十二个月，提交数是 PostHog 41943、umami 1406、Matomo 1065、Plausible 610，直接用 GitHub commits 接口分页数出来的。这个数衡量的是写了多少代码，不是挣了多少钱。把它填进增速格却不说明它是代理值，好数就变成了错数。
+        confidence: 9
+        reference:
+          - docs/2-market-research/03-competitor-entry-schema/cn.md
+
+      - id: blank-versus-estimated
+        question:
+          en: Should I leave a cell blank or put in a rough estimate?
+          cn: 一格查不到，是留空还是填个估算值？
+        answer:
+          en: >
+            Leave it blank and write why. A blank cell tells the next reader that nobody checked, or that nobody could find it; an estimate tells them nothing except that someone filled it in. If you fill in a market-share figure taken from an industry report, the reader will not go read that report's assumptions — they will just see "Matomo, 3.2% of the market" and compare it with something else. PostHog's pricing cell on this page is blank for exactly this reason: the pricing page renders client-side, and a static fetch returns no prices.
+          cn: >
+            留空，并写清为什么。空格告诉下一个读表的人：这里没人查过，或者查了找不到；估算值什么都告诉不了，只告诉别人有人填过。你填一个来自行业报告的市场份额，读表的人不会去读那份报告的假设，他只会看到「Matomo，市场份额 3.2%」，然后拿去跟别的数比。这一页里 PostHog 的价格格空着正是这个原因：报价页是客户端渲染的，静态抓取拿不到价格。
+        confidence: 10
+        reference:
+          - docs/2-market-research/03-competitor-entry-schema/cn.md
+
+      - id: dated-and-expired-cells
+        question:
+          en: How should I handle cells whose data has gone stale?
+          cn: 过期了的那一格该删还是该留？
+        answer:
+          en: >
+            Leave it, and mark it. A star count of 39990 on 2026-11-08 is true on that day and is a snapshot, not a constant. Deleting a stale cell destroys the one distinction that matters downstream: "we checked and there is nothing" versus "nobody has checked yet". The first needs no work, the second belongs on someone's list. Date every cell separately, because a GitHub snapshot and a pricing page rarely carry the same date.
+          cn: >
+            留着，并标上。2026-11-08 的 star 数 39990 在那一天是真的，而它是快照不是常数。删掉一格过期的数据，会毁掉后面唯一要紧的那个区别：查过了确实没有，和还没人查过。前者不用再做，后者得排进日程。每格各标各的日期，因为 GitHub 快照和报价页很少是同一天取的。
+        confidence: 10
+        reference:
+          - docs/2-market-research/03-competitor-entry-schema/cn.md

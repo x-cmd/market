@@ -1,0 +1,106 @@
+id: x-market-2-market-research-01-industry-entry-scale-growth-concentration
+
+data:
+  - name:
+      en: the three numbers to look at before entering an industry
+      cn: 进这行之前先看的三个数
+    qa:
+      - id: which-three-numbers
+        question:
+          en: Which three numbers belong on the first page of an industry report?
+          cn: 一份行业报告的第一页该放哪三个数？
+        answer:
+          en: >
+            Size, growth and concentration, in that order. Size answers how big the pie is.
+            Growth answers whether it is expanding or shrinking. Concentration answers who is
+            taking the expansion. The order matters: if you fix the growth number before you fix
+            the boundary, you end up comparing a fast-growing niche against a stagnant market,
+            and if you read concentration before size, you misjudge your own position in a market
+            a handful of firms dominate. There is a fourth cell that is not a number: the
+            definition of the boundary and the source. Without it the first three cannot be used.
+          cn: >
+            规模、增速、集中度，顺序不能反。规模回答蛋糕有多大，增速回答蛋糕在变大还是缩水，集中度回答变大时谁拿走了。顺序反了会出事：先定增速再定边界，会拿一个高速增长的小品类去比一个停滞的大盘；先看集中度再看规模，会在巨头主导的行业里低估自己的位置。还有第四格不是数：定义与来源。没有它，前三格都用不了。
+        confidence: 10
+        reference:
+          - docs/2-market-research/01-industry-entry-scale-growth-concentration/cn.md
+
+      - id: three-ways-to-size-a-market
+        question:
+          en: Why can the same industry have three different sizes?
+          cn: 同一个行业为什么能算出三个不同的规模？
+        answer:
+          en: >
+            Because "size" is not one measurement. In EU retail trade in 2024, the net turnover
+            of the retail sector (NACE G47) was EUR 3.47 trillion, wholesale trade (NACE G46) was
+            EUR 6.43 trillion, and the two together came to EUR 11.48 trillion. But the wholesale
+            figure is mostly the same goods being counted again on their way to the shelf, so
+            adding the two does not give you a retail market. The retail sector's value added in
+            2023 was EUR 0.59 trillion, which is the part the industry itself creates after the
+            cost of goods is stripped out. Which one to quote depends on the question: money
+            spent at retail, value created, or money flowing through the whole chain.
+          cn: >
+            因为「规模」不是一个测量。欧盟零售业 2024 年，零售部门（NACE G47）净营业额 3.47 万亿欧元，批发业（NACE G46）6.43 万亿欧元，两个加起来 11.48 万亿欧元。但批发那部分大多是从工厂到货架之间同一批货被数了两遍，两个相加并不等于零售市场规模。零售业 2023 年的增加值是 0.59 万亿欧元，这是行业自己创造出来的那部分。报哪一个取决于你要回答什么：零售端花了多少钱、行业创造了多少新价值、整条链在流转多少钱。
+        confidence: 10
+        reference:
+          - docs/2-market-research/01-industry-entry-scale-growth-concentration/cn.md
+
+      - id: nominal-vs-real-growth
+        question:
+          en: How do I tell whether the industry actually grew, or prices just went up?
+          cn: 怎么分清这行是真的长了，还是只是涨价了？
+        answer:
+          en: >
+            Look for two series instead of one, and never read the nominal one alone. In EU retail
+            trade, turnover (net, in euros) and volume of sales (units adjusted for price) both
+            run from the same monthly dataset. Between 2021 and 2025 turnover rose 19.5% while
+            volume rose 1.6%. In 2022 turnover rose 10.1% and volume only 1.4%. In 2023 turnover
+            rose 4.2% while volume actually fell 1.9%: the industry sold less and the price
+            covered it. The same gap shows up country by country. Estonia's turnover rose 20.2%
+            while its volume fell 7.9%; Belgium's turnover rose 7.8% while its volume fell 8.2%.
+            Both look like growing industries on paper.
+          cn: >
+            要找两条序列，不能只读名义那一条。欧盟零售业里，营业额（欧元计）和销量（扣掉价格影响）出自同一个月度数据集。2021 到 2025 年，名义涨 19.5%，实际只涨 1.6%。2022 年名义 +10.1%，实际 +1.4%。2023 年名义 +4.2%，实际 −1.9%：卖出去的东西比上一年少，价格把它盖住了。同样的差距在国与国之间也成立：爱沙尼亚名义 +20.2%、实际 −7.9%，比利时名义 +7.8%、实际 −8.2%。纸面上看，这两个都是「增长的行业」。
+        confidence: 10
+        reference:
+          - docs/2-market-research/01-industry-entry-scale-growth-concentration/cn.md
+
+      - id: why-cr4-and-hhi-are-blank
+        question:
+          en: Why are the CR4 and HHI cells left empty instead of filled in?
+          cn: CR4 和 HHI 那两格为什么留空，不填上？
+        answer:
+          en: >
+            Because both need firm-level revenue shares, and firm-level revenue is not public.
+            Eurostat's structural business statistics go down to size class by number of employees
+            and no further; the SEC XBRL interface covers US listed companies and misses the
+            private ones. You can compute a number from what is available, but that number
+            describes the "250 employees or more" group, not the top four firms. Labelling it CR4
+            would be fabrication. The empty cell needs a note next to it saying which data would
+            fill it: every firm's turnover in that industry, from a company database, an
+            industry association roster, or counting them yourself. Saying why a cell is empty
+            is more useful than putting a wrong number in it.
+          cn: >
+            因为这两个数都要公司层面的份额，而公司层面的营业额不公开。Eurostat 的结构企业统计只到「按雇员人数分组」这一层就停了，SEC 的 XBRL 接口覆盖的是美国上市公司，私有公司覆盖不到。拿手上的数据能凑出一个数，但那个数描述的是「250 人以上这一组」，不是头部四家。把它标成 CR4 就是造假。空格旁边要写清要填它需要哪一份数据：这门生意里每家公司的营业额，来自企业数据库、行业协会名录，或者自己一家一家数。说清为什么空着，比填一个错的数字有用。
+        confidence: 10
+        reference:
+          - docs/2-market-research/01-industry-entry-scale-growth-concentration/cn.md
+
+      - id: what-size-classes-say-about-concentration
+        question:
+          en: What can size-class data tell me about concentration if CR4 is not available?
+          cn: 拿不到 CR4，按规模分组的数据能看出集中度的什么？
+        answer:
+          en: >
+            Enough to see the shape of the market and, crucially, its direction. In EU retail
+            trade in 2024 there were 3,280,548 enterprises, of which 3,114,569 (94.9%) had fewer
+            than 10 employees and together took 21.5% of turnover. The 3,508 enterprises with 250
+            or more employees, 0.11% of the total, took 50.7%. Per firm the gap is 2,096 to one:
+            EUR 502 million against EUR 239,000. And the direction matters more than the level.
+            Between 2021 and 2024 the 250-plus group's share of turnover rose from 48.7% to 50.7%
+            while the smallest group's share fell from 23.1% to 21.5%. Concentration rising is a
+            signal in itself: the opponent you now face is stronger than it was three years ago.
+          cn: >
+            够看出市场的形状，更重要的是看出方向。2024 年欧盟零售业共 328 万家企业，其中 311 万家（94.9%）雇员不到 10 人，加起来只占 21.5% 的营业额；雇员 250 人以上的 3508 家，占 0.11%，占营业额 50.7%。按每家算差 2096 倍：5.02 亿欧元对 24 万欧元。比水平更重要的是方向：2021 到 2024 年，250 人以上那组的营业额占比从 48.7% 升到 50.7%，最小那组从 23.1% 掉到 21.5%。集中度在上升本身就是一个信号：现在要对抗的对手比三年前更强。
+        confidence: 9
+        reference:
+          - docs/2-market-research/01-industry-entry-scale-growth-concentration/cn.md

@@ -1,0 +1,71 @@
+id: x-market-2-market-research-06-survey-interview-behavior-bias
+
+data:
+  - name:
+      en: how surveys, interviews and behavioral data each go wrong
+      cn: 问卷、访谈、后台数据各自错在哪
+    qa:
+      - id: which-source-is-closest-to-truth
+        question:
+          en: Which of the three sources is closest to the truth?
+          cn: 三种数据里，哪一种最接近真相？
+        answer:
+          en: >
+            None of them, because each one is measuring a different thing and each one fails in a different direction. A survey measures what people say, and what people say drifts with the recall window, the sample frame, and how the interviewer is standing in the room. An interview measures what people say when someone is watching them, which tilts warm. Backend logs measure what actually happened, but they cannot tell you why it happened, they cannot see the people who looked and left, and they cannot tell you what would have happened without the ad. The useful question is never "which is more accurate" but "which way does this one lean, and by how much". Then you let the three pull against each other, because the leanings point in opposite directions.
+          cn: >
+            都不算。三种数据量的不是同一件事，各自朝不同方向出错。问卷量的是人们说的，说什么会随着回忆的时间窗、样本框、以及访谈员站在哪儿而变。访谈量的是有人盯着时说的话，会往热情那边偏。后台日志量的是真实发生的事，但它给不了动机，看不到看了没买的人，也答不了「没有这个广告会怎么样」。有用的问法从来不是「哪个更准」，而是「这个数偏哪边、偏多少」。然后让三个数互相拉扯，因为它们的偏的方向正好相反。
+        confidence: 10
+        reference:
+          - docs/2-market-research/06-survey-interview-behavior-bias/cn.md
+
+      - id: recall-window-changes-the-number
+        question:
+          en: How much can the wording of a survey question change the answer?
+          cn: 问卷问题的问法能把答案改变多少？
+        answer:
+          en: >
+            A lot, and the difference can be traced to a single detail. In the EU's 2025 household ICT survey, 62.35% of individuals said they had bought something online in the last three months. Ask the same people the same year whether they bought online in the past twelve months and the answer becomes 62.35% plus the 11.21% who said their last purchase was three to twelve months ago, which is 73.56%. Eleven points, from nothing but the recall window. This is not a sampling error and it is not a trend. It means a survey reports a stretch of memory, not a fact, and which stretch depends entirely on how the question was worded.
+          cn: >
+            很多，而且差别能追到一个细节上。欧盟 2025 年的家庭 ICT 调查里，62.35% 的人说最近 3 个月网购过。把同一批人、同一年的问题改成「过去 12 个月网购过吗」，答案变成 62.35% 加上 11.21%（最后一次购买在 3 到 12 个月前的人），等于 73.56%。差 11 个点，只因为回忆的时间窗不同。这不是抽样误差，也不是趋势变化。它说明问卷报的是一段记忆而不是事实，而这段记忆有多长，完全取决于问题怎么问。
+        confidence: 10
+        reference:
+          - docs/2-market-research/06-survey-interview-behavior-bias/cn.md
+
+      - id: survey-nonresponse-direction
+        question:
+          en: How do I know which way a survey's sample is skewed?
+          cn: 怎么知道一份问卷的样本偏在哪边？
+        answer:
+          en: >
+            Look at who did not answer, because non-response is not random. Spain's 2025 ICT household survey reports an effective sample of 63.07% of the theoretical sample, and a sharp split by interview history: 50.42% for first interviews against 69.86% for repeat interviews. Within the non-response, refusals are concentrated in the oldest group, who make up 16.13% of the surveyable dwellings but 32.81% of refusals. Absences cluster on 26-to-35-year-olds, who make up 10.93% of the sample but 12.45% of absences. So a survey that draws too many young people will report a market that looks younger than it is. When a statistical office publishes a non-response differential correction coefficient, that number tells you the size of the correction you would have to apply.
+          cn: >
+            看没答上的人，因为无回答不是随机的。西班牙 2025 年的家庭 ICT 调查显示，有效样本只有理论样本的 63.07%，而且按是否首访裂得很开：首访 50.42%，回访 69.86%。在没答上的人里面，拒答集中在最老的那一群，他们占可调查住户的 16.13%，却占拒答的 32.81%。缺席集中在 26 到 35 岁，他们占样本的 10.93%，占缺席的 12.45%。所以抽得偏年轻，报表上的市场就会显得比实际年轻。统计机构公布「非响应差异修正系数」的时候，那个数字就告诉你该补多少权重。
+        confidence: 10
+        reference:
+          - docs/2-market-research/06-survey-interview-behavior-bias/cn.md
+
+      - id: interviewer-changes-the-answer
+        question:
+          en: Can the interviewer alone change what a respondent says?
+          cn: 访谈员一个人就能改掉受访者的答案吗？
+        answer:
+          en: >
+            Yes, and the effect survives controlling for who the respondent is. In the National Survey of Family Growth, sensitive questions were put on an audio computer-assisted self-interview so the interviewer could not see the answer, but the interviewer was still in the room. Interviewers varied enormously in how often they helped the respondent, from under 5% of their interviews to 50%. Controlling for age, gender, race and education, an interviewer who helped during the interview lowered the reported probability of frequent marijuana use by a logit coefficient of −0.21 (p<0.01) and of binge drinking by −0.14 (p<0.10). Sitting next to the respondent lowered the probability that female respondents called their first intercourse consensual by −0.42. Where the interviewer sits is part of your instrument.
+          cn: >
+            能，而且控制住受访者是谁之后这个影响还在。美国国家家庭增长调查把敏感问题放在音频自助采访里，本该让访谈员看不到答案，可访谈员还在旁边。访谈员提供帮助的比例差别极大，从自己不到 5% 的访谈到 50% 都有。控制住年龄、性别、种族和教育之后，访谈员伸手帮忙，受访者报告频繁吸大麻的概率下降（logit 系数 −0.21，p<0.01），报告酗酒的概率也下降（−0.14，p<0.10）。访谈员紧挨着受访者坐下，女性受访者报告「第一次性行为是自愿的」的概率下降 −0.42。访谈员站在哪儿，是你这套工具的一部分。
+        confidence: 9
+        reference:
+          - docs/2-market-research/06-survey-interview-behavior-bias/cn.md
+
+      - id: backend-attribution-overstates
+        question:
+          en: If backend data records what actually happened, why does it overstate results?
+          cn: 后台数据记的是真实发生的事，为什么还会高估？
+        answer:
+          en: >
+            Because what happened is not the same as what would have happened without you, and the exposure was never random. On Facebook, comparing people who saw an ad with people who did not gave a 316% lift, exact matching on the richest available variables brought it to 222%, and a randomized experiment put the truth at 73%. The eBay brand-keyword test was starker: over 1400% from the observational method against −63% from the random experiment, with a 95% interval of [−124%, −3%]. Ads get shown to people who were already likelier to buy, so the log records a counterfactual that never existed. Matching, regression correction and propensity scores were all tried and none recovered the experimental effect.
+          cn: >
+            因为「发生了什么」不等于「没有你的时候会怎样」，而曝光从来不是随机的。Facebook 的那组数据里，直接比看到广告的人和没看到广告的人，算出 316% 的提升；用手上最全的变量做精确匹配，降到 222%；随机分组的实验，真值是 73%。eBay 的品牌词实验更极端：观测口径算出 1400% 以上，随机实验的真值是 −63%，95% 置信区间 [−124%, −3%]。广告会被投给本来就更可能买的人，所以日志记下的是一个从来没存在过的反事实。匹配、回归校正、倾向得分都试过，一个都没能把实验效果找回来。
+        confidence: 10
+        reference:
+          - docs/2-market-research/06-survey-interview-behavior-bias/cn.md

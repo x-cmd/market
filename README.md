@@ -93,37 +93,37 @@ Changing one field changes the whole report. That is the difference between this
   <sub>`docs/1-report-overview/01-report-runbook/`</sub>
 - **[你说的 23%，跟别人说的 23%，是一回事吗](docs/1-report-overview/02-market-share-chart/cn.md)** — 做出一张别人不会误读的市场份额图  
   <sub>`docs/1-report-overview/02-market-share-chart/`</sub>
-- 这门生意还值不值得进 — 判断这门生意还值不值得进  
-  <sub>`docs/1-report-overview/03-growth-chart/` · 待写</sub>
-- 你的价格，在品类里站得住吗 — 看出自己的价格在品类里站不站得住  
-  <sub>`docs/1-report-overview/04-price-band-chart/` · 待写</sub>
-- 再花一块钱，能多换回多少 — 知道再花一块钱能多换回多少  
-  <sub>`docs/1-report-overview/05-ad-spend-chart/` · 待写</sub>
+- **[这门生意还值不值得进](docs/1-report-overview/03-growth-chart/cn.md)** — 判断这门生意还值不值得进  
+  <sub>`docs/1-report-overview/03-growth-chart/`</sub>
+- **[你的价格，在品类里站得住吗](docs/1-report-overview/04-price-band-chart/cn.md)** — 看出自己的价格在品类里站不站得住  
+  <sub>`docs/1-report-overview/04-price-band-chart/`</sub>
+- **[再花一块钱，能多换回多少](docs/1-report-overview/05-ad-spend-chart/cn.md)** — 知道再花一块钱能多换回多少  
+  <sub>`docs/1-report-overview/05-ad-spend-chart/`</sub>
 - **[没有广告，这些单会成交吗](docs/1-report-overview/06-incrementality-chart/cn.md)** — 分清广告赚到的和本来就有的  
   <sub>`docs/1-report-overview/06-incrementality-chart/`</sub>
-- 八个工具，一张表 — 知道八个工具各管什么、什么时候查哪个  
-  <sub>`docs/1-report-overview/07-eight-tools-in-one-table/` · 待写</sub>
+- **[八个工具，一张表](docs/1-report-overview/07-eight-tools-in-one-table/cn.md)** — 知道八个工具各管什么、什么时候查哪个  
+  <sub>`docs/1-report-overview/07-eight-tools-in-one-table/`</sub>
 
 ### 数从哪来 · 市场调研
 
-- 进这行之前，先看这三个数 — 写出一份行业条目：四格数字加口径  
-  <sub>`docs/2-market-research/01-industry-entry-scale-growth-concentration/` · 待写</sub>
-- 这个品类，价格怎么排，促销打多狠 — 写出一份品类条目，画出价格带和促销节奏  
-  <sub>`docs/2-market-research/02-category-entry-price-bands-promo-cadence/` · 待写</sub>
-- 对手的资料，要经得起别人查 — 写出一份别人能核、也能更新的竞品条目  
-  <sub>`docs/2-market-research/03-competitor-entry-schema/` · 待写</sub>
-- 两家公司怎么比，才不算比错 — 把两家公司放进一张表比，而且比的是同一件事  
-  <sub>`docs/2-market-research/04-head-to-head-share-and-growth/` · 待写</sub>
-- 问卷结果可信不可信，先看样本怎么抽的 — 判断一份调研的样本能不能代表你想问的人  
-  <sub>`docs/2-market-research/05-survey-sampling/` · 待写</sub>
-- 问卷、访谈、后台数据，哪个更接近真相 — 知道三种数据各自偏哪边、怎么互补  
-  <sub>`docs/2-market-research/06-survey-interview-behavior-bias/` · 待写</sub>
+- **[进这行之前，先看这三个数](docs/2-market-research/01-industry-entry-scale-growth-concentration/cn.md)** — 写出一份行业条目：四格数字加口径  
+  <sub>`docs/2-market-research/01-industry-entry-scale-growth-concentration/`</sub>
+- **[这个品类，价格怎么排，促销打多狠](docs/2-market-research/02-category-entry-price-bands-promo-cadence/cn.md)** — 写出一份品类条目，画出价格带和促销节奏  
+  <sub>`docs/2-market-research/02-category-entry-price-bands-promo-cadence/`</sub>
+- **[对手的资料，要经得起别人查](docs/2-market-research/03-competitor-entry-schema/cn.md)** — 写出一份别人能核、也能更新的竞品条目  
+  <sub>`docs/2-market-research/03-competitor-entry-schema/`</sub>
+- **[两家公司怎么比，才不算比错](docs/2-market-research/04-head-to-head-share-and-growth/cn.md)** — 把两家公司放进一张表比，而且比的是同一件事  
+  <sub>`docs/2-market-research/04-head-to-head-share-and-growth/`</sub>
+- **[问卷结果可信不可信，先看样本怎么抽的](docs/2-market-research/05-survey-sampling/cn.md)** — 判断一份调研的样本能不能代表你想问的人  
+  <sub>`docs/2-market-research/05-survey-sampling/`</sub>
+- **[问卷、访谈、后台数据，哪个更接近真相](docs/2-market-research/06-survey-interview-behavior-bias/cn.md)** — 知道三种数据各自偏哪边、怎么互补  
+  <sub>`docs/2-market-research/06-survey-interview-behavior-bias/`</sub>
 - 五个卖点只能做一个，按什么排 — 给需求排序时用对的方法，说得清依据  
   <sub>`docs/2-market-research/07-demand-intensity-ranking/` · 待写</sub>
 - **[同样一个占比，能有四种算法](docs/2-market-research/08-share-denominator/cn.md)** — 报任何一个份额之前，能说清分母是谁、分子装了什么  
   <sub>`docs/2-market-research/08-share-denominator/`</sub>
-- 调研数据和官方数据，哪个更可信 — 知道这两类数各自偏哪边，什么时候该信哪个  
-  <sub>`docs/2-market-research/09-panel-vs-census-bias/` · 待写</sub>
+- **[调研数据和官方数据，哪个更可信](docs/2-market-research/09-panel-vs-census-bias/cn.md)** — 知道这两类数各自偏哪边，什么时候该信哪个  
+  <sub>`docs/2-market-research/09-panel-vs-census-bias/`</sub>
 - 一个数敢不敢用，先找第二个来源对一遍 — 会给关键数字配第二个来源，知道不一致时先查什么  
   <sub>`docs/2-market-research/10-cross-source-triangulation/` · 待写</sub>
 - 这个数漏了谁，用之前先看一眼 — 看出一个数覆盖了谁、没覆盖谁，并在图上标出来  
@@ -137,8 +137,8 @@ Changing one field changes the whole report. That is the difference between this
 
 ### 怎么扰动 · 实验设计
 
-- 对照组该怎么定 — 知道对照组该长什么样，以及几种常见的错法  
-  <sub>`docs/3-experiment-design/01-what-a-control-group-is/` · 待写</sub>
+- **[对照组该怎么定](docs/3-experiment-design/01-what-a-control-group-is/cn.md)** — 知道对照组该长什么样，以及几种常见的错法  
+  <sub>`docs/3-experiment-design/01-what-a-control-group-is/`</sub>
 - 样本太少，结论会反着 — 知道差多少算够，为什么小样本会把方向搞反  
   <sub>`docs/3-experiment-design/02-sample-size-and-power/` · 待写</sub>
 - 测的组合太多，会看到假效果 — 知道测了一堆组合以后该怎么读结果  

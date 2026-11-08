@@ -105,9 +105,9 @@ data:
           cn: 这些工具在站内别的地方用在哪几篇？
         answer:
           en: >
-            The incrementality overview and the report runbook use attribution, incrementality testing and marginal ROI. The marginal ROI decay page and the budget allocation pages use marginal ROI, equal marginal returns and confidence intervals. The experiment design pages use incrementality testing and confidence intervals. The toolbox section itself has one page per tool, each explaining what the tool does, what it needs, and the conditions under which it stops working. This page is an index over that set rather than a ninth topic.
+            The site registers the cross-references in one table. Attribution points at the report runbook and the incrementality overview. Incrementality testing points at the incrementality overview and the page on what a control group has to be. MMM contribution decomposition points at the marginal ROI decay page and the marginal versus average ROI page. Adstock decay and the Hill saturation curve both point at the MMM page and at each other. Marginal ROI points at the incrementality overview and the decay page. The equal marginal returns principle points at the two budget optimization pages. Confidence intervals point at the sample size page and the confidence interval page in the experiment design section. The toolbox section itself has one page per tool, each explaining what the tool does, what it needs, and the conditions under which it stops working. This page is an index over that set rather than a ninth topic.
           cn: >
-            增量那一篇和报告跑法那一篇用到了归因、增量实验、边际 ROI。边际回报衰减那一篇和预算分配那几篇用到了边际 ROI、等边际原则、置信区间。实验设计那几篇用到了增量实验和置信区间。工具箱那一节本身是一页讲一个工具，各讲它干什么、要什么、什么时候会不灵。本页是对那一组页的索引，不是第九个话题。
+            站内的引用在一张表里登记。归因指向报告跑法那一篇和增量那一篇。增量实验指向增量那一篇和对照组该怎么定那一篇。MMM 贡献分解指向边际回报衰减那一篇和边际与平均 ROI 那一篇。Adstock 衰减和 Hill 饱和曲线都指向 MMM 那一篇和彼此。边际 ROI 指向增量那一篇和衰减那一篇。等边际原则指向预算优化的那两篇。置信区间指向实验设计那一节的样本量和区间两篇。工具箱那一节本身是一页讲一个工具，各讲它干什么、要什么、什么时候会不灵。本页是对那一组页的索引，不是第九个话题。
         confidence: 9
         reference:
           - docs/1-report-overview/07-eight-tools-in-one-table/cn.md

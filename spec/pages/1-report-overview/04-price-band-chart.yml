@@ -22,4 +22,6 @@ sections:
   content: 一个价格带从 30 到 300 的家居品类
 - title: 你站不站得住，看你落在哪一档
   content: 边界、价格带、促销节奏、季节性四件事
-data_cards: []
+data_cards:
+- us_furniture_store_sales_price_volume
+- us_furniture_store_monthly_volume_seasonality

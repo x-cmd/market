@@ -1,0 +1,109 @@
+# -*- coding: utf-8 -*-
+DATA = {
+    'id': 'x-market-1-report-overview-03-growth-chart',
+    'reference': 'docs/1-report-overview/03-growth-chart/cn.md',
+    'groups': [
+        {
+            'name_en': 'industry size',
+            'name_cn': '行业规模',
+            'qa': [
+                {
+                    'id': 'three-ways-to-size-a-market',
+                    'q_en': 'Why does the same industry have three different sizes?',
+                    'q_cn': '为什么同一个行业有三个不同的规模数字？',
+                    'a_en': (
+                        'Because "size" can mean three different things. Gross output is the total value of everything the industry transacts, including goods that pass through it without being made there. Value added is what the industry itself creates: gross output minus the intermediate inputs bought from other businesses. Revenue is close to gross output but reflects only what the firms themselves book as their own sales. US retail in 2025 shows the gap: 2.95 trillion dollars of gross output against 1.81 trillion of value added. The 1.14 trillion difference is merchandise bought from wholesalers, warehousing, store rent, logistics and payment fees. Use gross output when asking how much money the industry handles, value added when asking what it contributes to the economy, and value added minus labour and capital costs when asking what the firms themselves keep.'
+                    ),
+                    'a_cn': (
+                        '因为「规模」能指三件不同的事。总产值是这个行业经手的全部价值，包括那些只是从它这里过一道、并非它制造的东西。增加值是这个行业自己创造的部分：总产值扣掉从别的企业买来的中间投入。收入接近总产值，但只算企业自己记在账上的销售额。美国零售业 2025 年的差距很直观：总产值 2.95 万亿美元，增加值 1.81 万亿。差的 1.14 万亿是从批发商买来的货、仓储、店铺租金、物流和支付通道费。问「这行一年经手多少钱」用总产值，问「这行给经济贡献了多少」用增加值，问「这行自己赚了多少」用增加值再扣掉工资和资本折旧。'
+                    ),
+                    'confidence': 10,
+                },
+                {
+                    'id': 'which-size-to-compare',
+                    'q_en': 'If I want to compare my market against another industry, which number do I use?',
+                    'q_cn': '要拿我的市场跟别的行业比大小，该用哪个数？',
+                    'a_en': (
+                        'Value added. Gross output measures turnover, and turnover depends on how many times a thing changes hands on its way to the consumer, not on how much the industry actually produces. A clothing factory and a retailer both count the same garment, so retail gross output is many times the value actually created. Comparing retail gross output against the gross output of an industry that does not resell goods measures resale velocity, not economic weight. Value added is what GDP is built from, which is why it is the only one of the three that is comparable across industries without adjustment.'
+                    ),
+                    'a_cn': (
+                        '用增加值。总产值量的是流水，而流水取决于一件东西从消费者手里之前转手了几次，不取决于这个行业真正造出了多少。服装厂和零售商都把同一件衣服算一次，所以零售的总产值可以是真增加值的好几倍。拿零售的总产值去跟一个不转手商品的行业比总产值，比的是转手速度，不是经济体量。增加值是 GDP 的组成部分，三个数里只有它不调整就能跨行业比。'
+                    ),
+                    'confidence': 9,
+                },
+            ],
+        },
+        {
+            'name_en': 'growth',
+            'name_cn': '增速',
+            'qa': [
+                {
+                    'id': 'nominal-vs-real-growth',
+                    'q_en': 'Why does the growth chart have two lines on it?',
+                    'q_cn': '增长图上为什么画两条线？',
+                    'a_en': (
+                        'One is nominal growth and one is real growth. Nominal growth is how much the turnover figure went up. Real growth is how much the volume of goods sold went up, taken from a separate volume index rather than derived by dividing out prices. In EU retail in 2022 nominal growth was 10.2% and real growth was 1.6%. The eight points in between were prices, not business. In 2023 it gets worse: nominal +4.3%, real -1.9%, so the industry took in more money while selling less. Reporting the nominal number in a year of high inflation tells a story that is roughly twice as large as what actually happened to the volume of goods sold.'
+                    ),
+                    'a_cn': (
+                        '一条是名义增速，一条是实际增速。名义增速看营业额这个数涨了多少。实际增速是卖走的东西数量涨了多少，取自销售量指数，不是拿物价自己折算出来的。欧盟零售业 2022 年名义涨 10.2%，实际只涨 1.6%，中间那八个点是物价，不是生意。2023 年更极端：名义 +4.3%，实际 −1.9%，钱多收了，东西反而少卖了。在通胀高的年份报名义数，讲出来的故事差不多是真实销量的两倍。'
+                    ),
+                    'confidence': 10,
+                },
+                {
+                    'id': 'how-to-spot-which-line',
+                    'q_en': 'How can I tell which line I am looking at without reading the label?',
+                    'q_cn': '不读图例，我怎么看出手上那条线是哪个？',
+                    'a_en': (
+                        'Look at whether the two lines ever pull apart. Real growth and nominal growth track each other closely in normal years, because prices move slowly. They diverge sharply in high-inflation years, because that is exactly when nominal growth gets inflated. In the EU retail series they diverge in 2021 and 2022, and in 2020 both fall below zero together. If a single line looks stable year after year and never separates from a second one, it is probably the real series. A nominal series in an inflationary period will always diverge.'
+                    ),
+                    'a_cn': (
+                        '看两条线有没有分开。平常年份物价动得慢，实际和名义两条线贴得很近。高通胀年份它们会明显岔开，因为那正是名义数被物价撑大的时候。欧盟零售业那组数里，2021 和 2022 两条线岔得很开，2020 年两条线一起落到零以下。一条线要是一年年形状都很稳、从不跟另一条线分开，那多半是实际增速。名义增速在通胀期一定会甩开。'
+                    ),
+                    'confidence': 8,
+                },
+            ],
+        },
+        {
+            'name_en': 'concentration',
+            'name_cn': '集中度',
+            'qa': [
+                {
+                    'id': 'cr4-and-hhi',
+                    'q_en': 'What is the difference between CR4 and HHI?',
+                    'q_cn': 'CR4 和 HHI 有什么区别？',
+                    'a_en': (
+                        'CR4 is the combined share of the four largest firms. HHI is the sum of the squared market shares of all firms, on a scale running from 0 to 10000. They answer different questions. CR4 only looks at the top: one company at 60% plus three small ones gives the same CR4 as four companies each at 15%, but the HHI of the first is much higher. HHI looks at the shape of the whole market and gives weight to the long tail of small firms. Conventional thresholds put HHI below 1500 as unconcentrated, 1500 to 2500 as moderately concentrated, and above 2500 as highly concentrated. For the seven large US retailers, CR4 is 84.6% and HHI is 2395.'
+                    ),
+                    'a_cn': (
+                        'CR4 是前四家加起来的份额，HHI 是所有各家份额的平方和，取值从 0 到 10000。两者回答的问题不一样。CR4 只看头部：一家占 60% 加三家小公司，跟四家各占 15%，CR4 一样，但前者的 HHI 高得多。HHI 看整个市场的形状，后面那一长串 1% 的小公司也要算进去。惯例上 HHI 低于 1500 算分散，1500 到 2500 算中度集中，超过 2500 算高集中。美国那七家大型零售商，CR4 是 84.6%，HHI 是 2395。'
+                    ),
+                    'confidence': 9,
+                },
+                {
+                    'id': 'why-denominator-matters',
+                    'q_en': 'Why does the choice of denominator change the concentration numbers so much?',
+                    'q_cn': '换个分母，集中度怎么会差这么多？',
+                    'a_en': (
+                        'Because the denominator sets the unit in which you are measuring. If the seven large US retailers are measured against their own combined revenue of 2.20 trillion dollars, Amazon is 32.65% and CR4 is 84.6%. Measured against total US retail, every share shrinks to single digits and CR4 falls sharply. Both numbers are arithmetically correct. They describe different things: how the big players split the market among themselves, versus how much of the whole market those players hold. This is the same denominator problem that makes a market share chart unreadable, and the fix is the same: write the denominator down, every time.'
+                    ),
+                    'a_cn': (
+                        '因为分母决定了你是在什么单位里量。如果拿那七家美国大型零售商跟自己合计的 2.20 万亿美元比，Amazon 是 32.65%，CR4 是 84.6%。换成跟全美零售总额比，每家的份额都缩到个位数，CR4 也跟着掉一大截。两个数算出来都没错，它们描述的是不同的事：大玩家之间怎么分这块市场，和这些玩家一共占了多大一块。这跟市场份额图看不懂是同一个分母问题，解法也一样：每次都把分母写下来。'
+                    ),
+                    'confidence': 9,
+                },
+                {
+                    'id': 'fiscal-year-alignment',
+                    'q_en': 'Do the fiscal years really matter that much?',
+                    'q_cn': '财年真的有那么要紧吗？',
+                    'a_en': (
+                        'Yes, because the fiscal years of large retailers are spread across the calendar. Walmart runs February to January, Costco runs September to August, and Amazon runs the calendar year. Comparing their reported revenue without aligning periods means the gap you compute between them partly reflects which months each one counted, not how the businesses performed. For the seven retailers used here the fiscal years were aligned to the window February 2025 through January 2026 before any share was computed. Skipping that step is a common way to produce a confident conclusion that reverses when someone checks the source filings.'
+                    ),
+                    'a_cn': (
+                        '要紧，因为大零售商的财年横跨日历。Walmart 是 2 月到次年 1 月，Costco 是 9 月到次年 8 月，Amazon 是自然年。不拉齐就直接比，算出来的差距里有一部分是各家各数了哪几个月，不是经营差。这七家这里用的是 2025 年 2 月到 2026 年 1 月这一段，算份额之前先对齐了。省掉这一步，是那种「结论看着很硬、有人去查原始文件就反过来了」的常见来源。'
+                    ),
+                    'confidence': 9,
+                },
+            ],
+        },
+    ],
+}

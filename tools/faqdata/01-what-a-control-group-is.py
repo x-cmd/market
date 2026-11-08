@@ -1,0 +1,157 @@
+# -*- coding: utf-8 -*-
+DATA = {
+    'id': 'x-market-3-experiment-design-01-what-a-control-group-is',
+    'reference': 'docs/3-experiment-design/01-what-a-control-group-is/cn.md',
+    'groups': [
+        {
+            'name_en': 'what a control group has to be',
+            'name_cn': '对照组要长什么样',
+            'qa': [
+                {
+                    'id': 'why-not-just-report-the-drop',
+                    'q_en': 'Ads stopped and sales fell 18%. Can I report the 18%?',
+                    'q_cn': '广告停了销售掉了 18%，这个数能直接汇报吗？',
+                    'a_en': (
+                        'Not as the effect of advertising. That 18% is the drop in sales after you stopped advertising, and it bundles the ad effect together with everything else that changed: the season, a competitor discount, a broken checkout, a stockout. Without a control you cannot tell how much of the drop the ads were holding up. What you can honestly say is "sales were 18% lower in the month after we stopped" — and that this is a before-and-after comparison, not an increment. The difference between those two sentences is the entire subject of this page.'
+                    ),
+                    'a_cn': (
+                        '不能当成广告的效果。那个 18% 是停投之后销售掉的幅度，里面装的是广告的效果加上别的所有变化：季节、竞品促销、网站改崩、仓库断货。没有对照，你分不清掉的这部分里有多少是广告拽住的。你能如实说的只有「停投那个月销售比之前低 18%」——而且要标明这是停投前后的比较，不是增量。这两句话之间的差别，就是这一页的全部内容。'
+                    ),
+                    'confidence': 10,
+                },
+                {
+                    'id': 'four-conditions',
+                    'q_en': 'What does a valid control group have to satisfy?',
+                    'q_cn': '一个合格的对照要满足哪几条？',
+                    'a_en': (
+                        'Four. First, the two sides must be comparable — ideally randomised, otherwise matched as closely as you can on the dimensions you can measure. Second, both sides must cover the same period of time; comparing this month against last month is not a control, because a promotion in one of the two periods makes the numbers incomparable. Third, nothing else may differ: not pricing, not stock, not budget moved to another channel, not a site redesign. Fourth, the sample must be large enough to resolve the effect you are trying to measure. The first three decide whether the number means anything; the fourth decides whether the number is precise enough to act on.'
+                    ),
+                    'a_cn': (
+                        '四条。第一，两边要可比——最好是随机分，做不到就按你能测到的维度尽量配对。第二，两边必须覆盖同一段时间；拿这个月跟上个月比不是对照，因为其中一个月有大促，两个数就不可比了。第三，除了广告别的都不能动：价格、库存、挪到别的渠道的预算、官网改版。第四，样本要够大，能分辨你想测的那个效果。前三条决定测出来的数有没有意义，第四条决定这个数精不精确、够不够拿去做决策。'
+                    ),
+                    'confidence': 10,
+                },
+                {
+                    'id': 'randomisation-limits',
+                    'q_en': 'If I randomise the split, can I stop worrying about the control being fair?',
+                    'q_cn': '都随机分了，对照这边还需要担心不公平吗？',
+                    'a_en': (
+                        'Randomisation handles known differences, not unknown ones. It guarantees that measurable differences you know about — city size, historical sales, past performance — get spread evenly across the two arms. What it cannot fix is things the split cannot separate: customers who live and work on opposite sides of a city, audiences whose natural traffic comes from different places, or two groups that shop at different stores. These make the arms look comparable when they are not. That is why the four conditions still apply, and why the pre-test period matters: it is the only window that separates "the two sides were different anyway" from "the ads caused this".'
+                    ),
+                    'a_cn': (
+                        '随机分管得住「已知的差异」，管不住「未知的差异」。它保证的是那些你能测到的差别——城市规模、历史销售、过去的表现在——被均匀分开。分不开的是切分本身没法拆的东西：住城东上班城西的人、两边自然流量来源不同的人、逛不同门店的两拨人。这些会让「两边其实不可比」看起来像「两边可比」。所以那四条一条都不能少，前测期也省不得：前测期是唯一能把「两边本来就不一样」和「广告造成了多少」分开的窗口。'
+                    ),
+                    'confidence': 9,
+                },
+                {
+                    'id': 'geo-randomisation',
+                    'q_en': 'How does Google split regions for a geo experiment?',
+                    'q_cn': 'Google 做地域实验，是怎么切地区的？',
+                    'a_en': (
+                        'By randomising the split of designated market areas, and doing a bit more than a coin toss. In the 2011 paper "Measuring Ad Effectiveness Using Geo Experiments", Vaver and Koehler first ranked all regions by the response metric observed in the pretest period, cut the ranked list into groups of equal size, and then randomly chose one region from each group for the treatment arm. That stratified assignment reduces the confidence interval of the estimate by 10% or more. The point worth copying is the stratification: sorting before randomising means the arms stay balanced on the dimension that most affects the result, and randomising within strata is what makes the split defensible.'
+                    ),
+                    'a_cn': (
+                        '把指定的 DMA（指定市场区）随机分开，而且比抛硬币多做一步。2011 年 Vaver 和 Koehler 那篇《Measuring Ad Effectiveness Using Geo Experiments》里，他们先按前测期测到的响应把所有地区排好序，把排好序的名单切成大小相同的一组一组，再从每一组里随机挑一个进实验组。这种分层分配能把估计的置信区间收窄 10% 以上。值得抄的是分层：先排序再随机，保证两组在影响结果最大的那个维度上保持平衡；而在每一层内部随机，才是这个切法站得住的原因。'
+                    ),
+                    'confidence': 9,
+                },
+            ],
+        },
+        {
+            'name_en': 'three common mistakes',
+            'name_cn': '三种常见的错对照',
+            'qa': [
+                {
+                    'id': 'before-and-after',
+                    'q_en': 'Why is comparing the month before and the month after a stop not a control group?',
+                    'q_cn': '拿停投前后比，为什么不算对照？',
+                    'a_en': (
+                        'Because the two periods differ in everything except advertising. Season, competitor activity, promotions, holidays and weather all move sales, and none of them is random between the two windows. There is a second layer: stopping ads usually coincides with budget contraction or a quarter end, so the whole business is already heading down and part of that decline gets credited to the ads. The hard limit is that a before-and-after comparison can only tell you whether sales moved in the same period as the advertising change. It cannot tell you how much of the movement the ads created.'
+                    ),
+                    'a_cn': (
+                        '因为这两段除了广告以外什么都不一样。季节、竞品活动、促销、节假日、天气都在动销售额，而且这些在两段之间不是随机的。还有更深一层：停投往往跟预算收缩、或者季末撞在一起，整门生意本来就在往下走，于是下滑里有一部分被记到了广告头上。这条有个硬底线：前后比只能测出「销售的变化跟广告的变化发生在同一段时间」，测不出「其中有多少是广告造成的」。'
+                    ),
+                    'confidence': 10,
+                },
+                {
+                    'id': 'neighbouring-city',
+                    'q_en': 'Why is a neighbouring city a bad control?',
+                    'q_cn': '为什么拿隔壁城市当对照不行？',
+                    'a_en': (
+                        'Because you picked it, and your picking rule is the problem. You choose the neighbouring city precisely because it looks like yours, and that criterion is one you set yourself, not one drawn at random. Any rule you define in advance will produce a control that matches on the dimensions you thought to check — and the real differences tend to live in the dimensions you did not think to check. A random split at least guarantees balance without regard to what you happened to notice. If the choice was random, a neighbouring city is fine; if the choice was yours, it is not.'
+                    ),
+                    'a_cn': (
+                        '因为是你挑的，而问题就出在「挑」上。你选隔壁城市，理由正是「它跟我们这边像」，而这个标准是你自己定的，不是随机定的。只要标准是你事先定的，你挑出来的对照就会在你想得到的那个维度上像——而真正的差别，往往正好藏在你没想到的维度里。随机分至少能保证平衡，不看你注意到了什么。如果这个选择本身是随机的，隔壁城市没问题；如果是你挑的，就有问题。'
+                    ),
+                    'confidence': 10,
+                },
+                {
+                    'id': 'non-buyers-as-control',
+                    'q_en': 'Can I use the customers who did not buy as the control group?',
+                    'q_cn': '可以用这段时间没下单的客户当对照组吗？',
+                    'a_en': (
+                        'This one fails in two ways, and it is the most tempting of the three because it sounds reasonable. First, not buying is not the same as not being influenced: a customer may have seen the ad and not bought, may never have seen it, or may have seen it and not needed anything. Mixing those three makes the result mean nothing in particular. Second, and more seriously, you use an outcome — whether someone bought — as a cause. Ad impact is what the comparison is supposed to measure, so you cannot use the outcome you are trying to explain as the explanation. There is also a practical flaw: you cannot be sure the control customers were not reached by ads elsewhere.'
+                    ),
+                    'a_cn': (
+                        '这条错在两个地方，也是三个错法里最像样、最容易被采用的一个。第一，「没买」不等于「没被影响」：一个客户可能是看到了广告没买，也可能是压根没看到，还可能是看到了但不需要。把三种人混在一起当对照组，算出来的东西没有明确含义。第二条更严重：你拿了一个结果（有没有下单）去当原因。广告的影响本来就要靠对比才测得出来，你不能拿「没买」这个结果本身去当原因。还有个实际问题：你没法保证对照组的人没在别的地方被别的广告触达过。'
+                    ),
+                    'confidence': 10,
+                },
+                {
+                    'id': 'how-bad-is-a-bad-control',
+                    'q_en': 'Is a bad control worse than no control at all?',
+                    'q_cn': '一个坏的对照，比没有对照更糟吗？',
+                    'a_en': (
+                        'Yes. Without a control you at least know that you do not know, and the number gets a question mark on it. A bad control hands you a number that looks professional, survives being pasted into a report without explanation, and then drives a budget decision. The failure is also silent: nothing in the output signals that the treatment and control arms were never comparable. That is why the pre-test period matters so much — it is the check that tells you whether the arms were balanced before the experiment started, and if you skipped it you cannot find out afterwards.'
+                    ),
+                    'a_cn': (
+                        '更糟。没有对照，你至少知道自己不知道，数字该打个问号。有个坏对照，你会拿到一个看着很专业的数，贴进报告里不需要任何解释，然后拿它去做预算决策。而且这种失败是静默的：输出里没有任何信号告诉你实验组和对照组从来就不可比。这就是前测期那么重要的原因——它是唯一能告诉你两边在实验开始前平不平衡的检查，漏了它，事后也补不回来。'
+                    ),
+                    'confidence': 9,
+                },
+            ],
+        },
+        {
+            'name_en': 'mismatched samples',
+            'name_cn': '样本对不齐',
+            'qa': [
+                {
+                    'id': 'different-density',
+                    'q_en': 'Both arms are "half the cities" — why is the intensity of the ad spend not the same thing?',
+                    'q_cn': '两边都是「一半城市」，为什么投放强度不一样还算同一个实验？',
+                    'a_en': (
+                        'Because "half the cities" describes the split, not the exposure. If the treatment arm has 10 cities at 50,000 each and the control arm has 10 cities at 10,000 each, the two sides sit at completely different distances from saturation. This is especially common in geo splits, because advertiser coverage, auction pressure and inventory differ from city to city. The check is per-capita exposure or per-capita spend rather than total spend: if total spend matches but per-capita differs threefold, you are not running the same experiment on two sides.'
+                    ),
+                    'a_cn': (
+                        '因为「一半城市」说的是怎么切，不是说两边受了多少影响。假如实验组 10 个城市每个投 5 万，对照组 10 个城市每个投 1 万，两边离饱和点的距离完全不同。这在地理切分里特别常见，因为不同城市的广告主覆盖度、竞价激烈程度、库存量都不一样。查法是看人均曝光或者人均花费，不看总花费：总花费一样但人均差三倍，那就不是同一个实验。'
+                    ),
+                    'confidence': 9,
+                },
+                {
+                    'id': 'not-randomly-split',
+                    'q_en': 'A/B test on new customers versus old customers — is that an experiment?',
+                    'q_cn': '把新客分一组、老客分一组做 A/B，这算实验吗？',
+                    'a_en': (
+                        'Not if the groups were formed by who they are rather than by a random draw — that is cohort observation, not an experiment. You can measure that the two cohorts are different, but you cannot say how much of the difference advertising caused, because from the start you never controlled for anything except the ad itself. The same applies to comparing two stores, one on a new layout in a shopping district and one on the old layout in a residential neighbourhood. The test is simple: if the two sides were not separated by a random process, the design is wrong. Random refers to the procedure, not to a result — arms that happen to look balanced afterwards is not the same as a design that was balanced by construction.'
+                    ),
+                    'a_cn': (
+                        '如果这两组是按「是什么人」分的，而不是按随机抽的，那不算实验，这叫分组观察。你能测出这两拨人不一样，但你说不出「广告造成了多少」，因为从一开始你就没有控制住除广告以外的东西。门店实验也一样：A 店在商圈看新版、B 店在社区看旧版，不叫实验。判据很简单：两边如果不是被随机分开的，就是错的。注意「随机」说的是过程，不是一种结果——最后两边碰巧看起来很均衡，不等于设计是对的。'
+                    ),
+                    'confidence': 10,
+                },
+                {
+                    'id': 'pre-period-baseline',
+                    'q_en': 'What does the pre-test period actually do for me?',
+                    'q_cn': '前测期到底能帮我做什么？',
+                    'a_en': (
+                        'It is the only thing that separates "the two sides were already different" from "the ads caused this". Without a pre-period you have one number per side and no way to tell whether the gap between them predates the ads. With a pre-period you can compute the baseline difference, subtract it, and see what is left for the ads to explain. In the wasted campaign on this page, the cities that stopped advertising were already converting 1.3 points higher than the cities that kept running before the test began; that baseline gap was sitting inside the reported 31% decline. Had the pre-period been kept and the baseline normalised, the conclusion could have been rescued.'
+                    ),
+                    'a_cn': (
+                        '它是唯一能把「两边本来就不一样」和「广告造成了多少」分开的东西。没有前测期，你两边各有一个数，没法判断两边的差距是不是广告之前就有的。有了前测期，你可以算出基线差，扣掉它，剩下的才是广告能解释的。这一页里那次作废的投放，停投的两个城市在实验开始前，周转化率本来就比继续投的城市高 1.3 个点，这个基线差就藏在报出来的 31% 里面。当时要是留了前测期、并且按基线做了归一化，这个结论本来是救得回来的。'
+                    ),
+                    'confidence': 10,
+                },
+            ],
+        },
+    ],
+}

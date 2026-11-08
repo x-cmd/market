@@ -1,0 +1,67 @@
+id: x-market-2-market-research-02-category-entry-price-bands-promo-cadence
+
+data:
+  - name:
+      en: category price bands and promotional cadence
+      cn: 品类价格带与促销节奏
+    qa:
+      - id: how-to-cut-price-bands
+        question:
+          en: How should price bands be defined, so that they are not just guesswork?
+          cn: 价格带该怎么切，才不是拍脑袋？
+        answer:
+          en: >
+            Cut by sales volume, not by price. Rank the items in the category by how many units they move, and cut where the cumulative share crosses each quartile. The point is homogeneity inside a band: the items in one band should behave the same way on price sensitivity, repeat purchase and stockpiling. Cutting by price instead can put items with wildly different volumes into the same band.
+          cn: >
+            按销量切，不按价格切。把品类里的条目按卖出的量排队，累计占比跨过每个四分位的位置就是切口。这样切的价值在于档内同质——同一档里的条目在价格敏感度、复购频率、囤货行为上应该是一路人。按价格切会把销量差很多倍的条目塞进同一档。
+        confidence: 9
+        reference:
+          - docs/2-market-research/02-category-entry-price-bands-promo-cadence/cn.md
+      - id: what-is-a-promo-event
+        question:
+          en: How is a promotional event counted when no promotional calendar is published?
+          cn: 没有促销日历，促销次数是怎么数出来的？
+        answer:
+          en: >
+            It is derived from the price index rather than read from a calendar. A month counts as the start of a promotional event when the index sits more than 1% below its trailing twelve-month average; consecutive months below that line are one event. The depth of an event is the lowest month of that run measured against the same average. The caveat matters: an index that falls can also mean supply changed, and CPI cannot tell those two apart.
+          cn: >
+            是从价格指数里算出来的，不是从日历里查的。当月指数低于前 12 个月移动均价 1% 以上，算一次促销事件的开始；连续几个月都低，算同一场。力度是这场促销里最低的那个月相对同一均价的幅度。要紧的是：指数跌也可能是供给变了，CPI 分不开这两件事。
+        confidence: 9
+        reference:
+          - docs/2-market-research/02-category-entry-price-bands-promo-cadence/cn.md
+      - id: which-band-gets-discounted-most
+        question:
+          en: Which price band gets discounted hardest, and why?
+          cn: 哪一档被打折打得最狠，为什么？
+        answer:
+          en: >
+            Not the cheapest and not the biggest seller, but the band in the upper middle. In the worked example steak is deepest at minus 3.6% while roasts are discounted most often at 0.9 times a year. The cheapest band stays shallow because its price leaves no room: at 5.31 dollars a pound there is little to cut. The most expensive band discounts rarely but deeply, because a monthly markdown would destroy the case for a 9.68 dollar price.
+          cn: >
+            既不是最便宜那档，也不是销量最大的那档，是中段偏上的那档。算例里牛排最深（−3.6%），烤牛肉次数最多（0.9 次/年）。最便宜那档打折浅，是因为单价低、可挤的折扣空间本来就窄。最贵那档打折少而深，是因为月月打折就没人信 9.68 美元这个价了。
+        confidence: 8
+        reference:
+          - docs/2-market-research/02-category-entry-price-bands-promo-cadence/cn.md
+      - id: how-to-read-seasonality
+        question:
+          en: How is the peak and trough season of a category read from a monthly series?
+          cn: 旺季淡季怎么从月度序列里读出来？
+        answer:
+          en: >
+            Divide the not seasonally adjusted index by the seasonally adjusted one. A ratio above 1 means that month sits above its usual level, below 1 means it sits below. In the worked example the ratio troughs in February at minus 1.36% and peaks in July at plus 1.36%, a spread of 2.72 percentage points across the year. Bands differ a lot: roasts swing 6.8 points while other beef swings 3.0.
+          cn: >
+            用未季调指数除以季调指数。比值高于 1 表示这个月比通常水平高，低于 1 表示比通常水平低。算例里比值在 2 月最低（−1.36%），7 月最高（+1.36%），全年高低差 2.72 个百分点。分档差距大得多：烤牛肉 6.8 个百分点，其他牛肉只有 3.0 个百分点。
+        confidence: 9
+        reference:
+          - docs/2-market-research/02-category-entry-price-bands-promo-cadence/cn.md
+      - id: which-cells-stay-empty
+        question:
+          en: Which cells of a category entry could not be filled here, and why?
+          cn: 品类条目里哪几格填不上，为什么？
+        answer:
+          en: >
+            The promotional calendar for each band, because public statistics carry price indices but not price tags. Unit counts rather than weight, because dividing household spending by unit price only gives pounds, and turning that into pieces needs pack sizes that differ across items. The seasonally adjusted series for the other-beef band, because BLS publishes only the unadjusted one for it. And the service and installation cell, which this category simply does not have but which in appliances is worth 15 to 25 percent and changes how many bands there are.
+          cn: >
+            各档的促销日历——公开统计有价格指数，没有价格牌。按件而不是按重量算的销量——家庭支出除以单价只能算出磅，换成件数要包装规格，而各条目单位还不一样。其他牛肉那一档的季调指数——BLS 只给未季调的那一条。服务与安装那一格——这个品类没有这一格，但家电品类里它值 15% 到 25%，差一格档数都会变。
+        confidence: 9
+        reference:
+          - docs/2-market-research/02-category-entry-price-bands-promo-cadence/cn.md

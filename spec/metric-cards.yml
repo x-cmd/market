@@ -172,6 +172,210 @@ metric_cards:
     used_in:
     - 2-market-research/01-industry-entry-scale-growth-concentration
 
+  - id: eu_retail_growth_nominal_vs_real
+    label: 欧盟零售业增速：名义 vs 实际（2022—2025）
+    unit: '%'
+    value:
+      nominal_2022: 10.18
+      real_2022: 1.63
+      nominal_2023: 4.30
+      real_2023: -1.93
+      nominal_2024: 2.39
+      real_2024: 1.33
+      nominal_2025: 3.22
+      real_2025: 2.29
+    as_of: 2025
+    geography: EU27_2020
+    denominator: 上一年的同口径指数（名义 2021=100 / 实际 2021=100）
+    numerator: 本年营业额指数 / 本年销售量指数
+    source:
+      type: dataset
+      provider: Eurostat
+      dataset: sts_trtu_m
+      series: M.NETTUR.G47.SCA.I21.EU27_2020 / M.VOL_SLS.G47.SCA.I21.EU27_2020
+      command: x dbnomics data Eurostat/sts_trtu_m/M.NETTUR.G47.SCA.I21.EU27_2020
+      published: 2026-11
+    caveats:
+    - 实际增速用的是销售量指数（VOL_SLS），不是用 HICP 折算的
+    - 两条序列必须同频同口径，指数基期都是 2021=100
+    - 2023 年实际是负的：营业额涨了 4.3%，卖走的东西反而少了 1.9%
+    - G47 是零售业（不含批发），与 G46 分开
+    - 只报名义增速而不写「名义」，等于误导
+    chart:
+      page: 1-report-overview/03-growth-chart
+      template: echarts
+      alt: nominal_vs_real_growth_bars
+    used_in:
+    - 1-report-overview/03-growth-chart
+
+  - id: eu_wholesale_retail_output_vs_value_added
+    label: 欧盟批发零售业：总产出 vs 总增加值（2022）
+    unit: 十亿欧元
+    value:
+      gross_output: 3209.1
+      value_added: 1693.3
+      intermediate_input: 1515.8
+    as_of: 2022
+    geography: EU27_2020
+    denominator: null
+    numerator: 行业总产出 / 行业总增加值
+    source:
+      type: dataset
+      provider: Eurostat
+      dataset: nama_10_a64
+      series: A.CP_MEUR.G.{P1,B1G}.EU27_2020
+      command: x dbnomics data Eurostat/nama_10_a64/A.CP_MEUR.G.P1.EU27_2020
+      published: 2026-11
+    caveats:
+    - 中间那 1.52 万亿是买来再卖出去的，同一笔钱在多个环节各被数一次
+    - 当期价格名义值，没有扣物价
+    - G 是批发零售业合计；分开看 G46 批发、G47 零售差得更远
+    - 跨行业比大小只能用增加值，产出口径比的是流转速度
+    chart:
+      page: 1-report-overview/03-growth-chart
+      template: echarts
+      alt: eu_wholesale_retail_output_vs_value_added
+    used_in:
+    - 1-report-overview/03-growth-chart
+
+  - id: us_retail_output_vs_value_added
+    label: 美国零售业：总产出 vs 总增加值（2025）
+    unit: 十亿美元
+    value:
+      gross_output: 2945.2
+      value_added: 1810.4
+      intermediate_input: 1134.8
+    as_of: 2025
+    geography: 美国（NAICS 44-45 零售业）
+    denominator: null
+    numerator: 行业总产出 / 行业总增加值
+    source:
+      type: dataset
+      provider: BEA
+      dataset: GDPbyIndustry-15 / GDPbyIndustry-1
+      series: 44RT-A
+      command: x dbnomics data BEA/GDPbyIndustry-15/44RT-A
+      published: 2026-10
+    caveats:
+    - 总产出含中间投入，同一件商品在批发和零售各记一次
+    - 增加值才是这个行业新创造的价值，GDP 用的就是增加值
+    - 这里用的是当年价名义值，没有扣物价
+    - 实际增速直接用不变价序列 GDPbyIndustry-208，别自己折算
+    chart:
+      page: 1-report-overview/03-growth-chart
+      template: echarts
+      alt: us_retail_output_vs_value_added
+    used_in:
+    - 1-report-overview/03-growth-chart
+
+  - id: value_added_share_of_output
+    label: 增加值占产出的百分比：赚的是搬运的钱还是加工的钱
+    unit: '%'
+    value:
+      wholesale_G46: 48.35
+      retail_G47: 53.40
+      footwear_retail_G4772: 50.00
+      footwear_manufacturing_C1520: 29.63
+    as_of: 2023
+    geography: 欧盟
+    denominator: 行业总产出
+    numerator: 行业总增加值
+    source:
+      type: dataset
+      provider: Eurostat
+      dataset: sbs_ovw_act
+      series: AV_VAL_OUT_PC
+      command: x dbnomics data Eurostat/nama_10_a64/A.CP_MEUR.G.B1G.EU27_2020
+      published: 2026-11
+    caveats:
+    - 这个比值低，说明这门生意赚的是中间环节的钱，不是加工的钱
+    - 鞋类制造只有 29.63%，一大半产值是买来的皮料和布料
+    - 同一个行业换一格框，产出与增加值的比值就变
+    - 报「这个行业多大」时，先说清楚用的是哪个
+    chart:
+      page: 1-report-overview/03-growth-chart
+      template: echarts
+      alt: value_added_share_of_output
+    used_in:
+    - 1-report-overview/03-growth-chart
+
+  - id: us_retail_peer_shares
+    label: 美国七家大型零售商：换个分母，CR4 从 85% 掉到 22%
+    unit: '%'
+    value:
+      amazon: 32.65
+      walmart: 32.18
+      costco: 12.54
+      home_depot: 7.27
+      kroger: 6.70
+      target: 4.85
+      lowes: 3.81
+      cr3_among_seven: 77.4
+      cr4_among_seven: 84.6
+      hhi_among_seven: 2395
+      seven_total_usd_bn: 2195
+      cr4_among_seven_vs_us_retail: 22.2
+      hhi_among_seven_vs_us_retail: 166
+      amazon_of_us_retail: 8.6
+      us_retail_sales_2025_usd_bn: 8351
+    as_of: 2025
+    geography: 美国
+    denominator: 七家合计营收（2.20 万亿美元）/ 全美零售业零售额（8.35 万亿美元，Census NAICS 44-72）
+    numerator: 各公司结束日落在 2025 年 2 月至 2026 年 1 月窗口内的那个完整财年营收
+    source:
+      type: dataset
+      provider: SEC EDGAR / Census
+      dataset: companyconcept / MRTSSM44X72USN
+      series: us-gaap/RevenueFromContractWithCustomerExcludingAssessedTax
+      command: 'curl -s -H "User-Agent: <you> <mail>" https://data.sec.gov/api/xbrl/companyconcept/CIK0000104169/us-gaap/RevenueFromContractWithCustomerExcludingAssessedTax.json'
+      published: 2026-11
+    caveats:
+    - 七个数的财年不是同一段十二个月：Amazon 到 2025-12-31、Walmart 到 2026-01-31、Costco 到 2025-08-31，其余四家到 2025-01/02
+    - Home Depot、Kroger、Target、Lowe's 用的是 2025 年 1–2 月结束的那个财年，不是它们最新的那个（最新的结束于 2026 年 1–2 月）
+    - 同一个 CR4，分母从「这七家合计」换成「全美零售业零售额」，CR4 从 85% 掉到 22%，HHI 从 2395 掉到 166
+    - 报集中度时，分母里有哪些公司、各家财年怎么截，必须写清楚
+    - 这是营收份额，不是增加值份额，换成增加值 HHI 会下降
+    - HHI 惯例：1500 以下分散，1500–2500 中度集中，2500 以上高集中
+    chart:
+      page: 1-report-overview/03-growth-chart
+      template: echarts
+      alt: peer_shares
+    used_in:
+    - 1-report-overview/03-growth-chart
+
+  - id: eu_footwear_two_frames
+    label: 欧盟鞋类：制造端与零售端是两个框（2023）
+    unit: 十亿欧元
+    value:
+      manufacturing_enterprises: 16000
+      retail_enterprises: 50000
+      manufacturing_value_added: 7.97
+      retail_value_added: 10.00
+      manufacturing_employment: 219000
+      retail_employment: 290000
+    as_of: 2023
+    geography: 欧盟
+    denominator: null
+    numerator: 企业数 / 增加值 / 就业人数
+    source:
+      type: dataset
+      provider: Eurostat
+      dataset: nama_10_a64 / sbs_ovw_act
+      series: C1520 / G4772
+      command: x dbnomics data Eurostat/nama_10_a64/A.CP_MEUR.G.B1G.EU27_2020
+      published: 2026-11
+    caveats:
+    - 「鞋类行业多大」至少三个答案：制造端增加值、零售端增加值、零售端产出
+    - 最宽的和最窄的差 3.2 倍
+    - 制造端量的是「谁在做鞋」，零售端量的是「谁在卖鞋」，中间隔着批发
+    - 报数要说清楚：哪个框、哪一年、哪个算法
+    chart:
+      page: 1-report-overview/03-growth-chart
+      template: echarts
+      alt: eu_footwear_two_frames
+    used_in:
+    - 1-report-overview/03-growth-chart
+
   - id: gh_stars_umami
     label: GitHub star 数
     unit: 个
@@ -578,3 +782,90 @@ metric_cards:
     used_in:
     - 8-analysis-toolbox/08-confidence-intervals-and-fit
 
+
+  - id: us_furniture_store_sales_price_volume
+    label: 美国家具与家居用品商店：名义销售额、价格指数与隐含销量（2019—2023）
+    unit: 十亿美元 / 指数
+    value:
+      monthly_avg_sales_2019: 10.71
+      monthly_avg_sales_2020: 10.02
+      monthly_avg_sales_2021: 12.49
+      monthly_avg_sales_2022: 12.65
+      monthly_avg_sales_2023: 12.02
+      annual_sales_2019: 128.56
+      annual_sales_2020: 120.29
+      annual_sales_2021: 149.88
+      annual_sales_2022: 151.77
+      annual_sales_2023: 144.24
+      price_index_2019: 100.0
+      price_index_2020: 99.8
+      price_index_2021: 104.9
+      price_index_2022: 116.0
+      price_index_2023: 116.1
+      implied_volume_2019: 100.0
+      implied_volume_2020: 93.8
+      implied_volume_2021: 111.2
+      implied_volume_2022: 101.8
+      implied_volume_2023: 96.6
+    as_of: 2023
+    geography: 美国（家具与家居用品专卖店，BEA 零售销售统计第 8 行）
+    denominator: 2019 年 = 100
+    numerator: 名义销售额 / 连锁型价格指数 / 隐含销量
+    source:
+      type: dataset
+      provider: BEA
+      dataset: NIUnderlyingDetail-U00500 / NIUnderlyingDetail-U00700
+      series: T05008-M / T07008-M
+      command: x dbnomics data BEA/NIUnderlyingDetail-U00500/T05008-M
+      published: 2026-11
+    caveats:
+    - monthly_avg_sales_* 是逐月销售额的年均值，annual_sales_* 是 12 个月之和；两者单位都是十亿美元，别混用
+    - BEA 这张表是「月度流量」，销售额 10.71 说的是 2019 年平均每个月，不是全年总额
+    - 隐含销量是本页用销售额 ÷ 价格指数算的，不是官方发布的数量指数
+    - 只框家具与家居用品专卖店这一个业态，超市与线上家居店不在里面
+    - 2022 年价格指数一年涨 10.6%，是全年每月累积的，不是某一次促销
+    - 名义销售额涨 12% 而价格涨 16%，所以销量反而比 2019 年低
+    chart:
+      page: 1-report-overview/04-price-band-chart
+      template: echarts
+      alt: price_band_cpi_vs_price
+    used_in:
+    - 1-report-overview/04-price-band-chart
+
+  - id: us_furniture_store_monthly_volume_seasonality
+    label: 美国家具与家居用品商店：一年的销量季节性（2023 年逐月）
+    unit: 指数
+    value:
+      m01: 107.1
+      m02: 99.8
+      m03: 97.0
+      m04: 95.3
+      m05: 95.0
+      m06: 96.8
+      m07: 95.6
+      m08: 94.7
+      m09: 94.9
+      m10: 92.4
+      m11: 96.3
+      m12: 94.3
+    as_of: 2023
+    geography: 美国（家具与家居用品专卖店）
+    denominator: 2019 年月均 = 100
+    numerator: 隐含销量（销售额 ÷ 连锁型价格指数）
+    source:
+      type: dataset
+      provider: BEA
+      dataset: NIUnderlyingDetail-U00500 / NIUnderlyingDetail-U00700
+      series: T05008-M / T07008-M
+      command: x dbnomics data BEA/NIUnderlyingDetail-U00700/T07008-M
+      published: 2026-11
+    caveats:
+    - 旺季 1 月 107.1 与淡季 10 月 92.4 差 16%
+    - 10 月低是因为需求被 11 月的黑色星期五吃掉，不是因为这天没人生意
+    - 隐含销量是本页算出来的，季节形状会有取整误差
+    chart:
+      page: 1-report-overview/04-price-band-chart
+      template: echarts
+      alt: price_band_seasonality
+    used_in:
+    - 1-report-overview/04-price-band-chart

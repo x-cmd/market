@@ -1,0 +1,71 @@
+id: x-market-2-market-research-05-survey-sampling
+
+data:
+  - name:
+      en: judging a survey by how it sampled
+      cn: 从抽样方式判断一份调研
+    qa:
+      - id: what-is-a-sampling-frame
+        question:
+          en: What is a sampling frame, and why does it decide what a survey can see?
+          cn: 什么是抽样框，它为什么决定了一份调研能看见什么？
+        answer:
+          en: >
+            The sampling frame is the list you draw from: it defines who is inside the survey and who is not. Anyone outside it can never be reached, no matter how many people you sample. Eurostat's annual ICT survey on enterprises draws its frame from national statistical business registers and covers enterprises with 10 or more employees. Eurostat's structural business statistics for 2020 put EU27 wholesale and retail (NACE G45) at 836,811 enterprises, of which 787,565 — 94.12% — had fewer than 10 employees. That is the share of the market the survey literally cannot see, and it is not a rounding error: those small firms carry 19.69% of G45 turnover.
+          cn: >
+            抽样框就是你抽人时用的那份名单：它划定了谁在调研里面、谁在外面。框外的人，再抽多少样本也永远抽不到。Eurostat 每年做的企业 ICT 调查，抽样框来自各国统计机构的企业名录，只覆盖雇员 10 人及以上的企业。Eurostat 结构企业统计显示，欧盟 27 国批发零售业（NACE G45）2020 年共 836,811 家企业，其中雇员少于 10 人的有 787,565 家，占 94.12%。这就是这份调研看不到的那部分市场，而且不是可以忽略的小数：这些小企业占 G45 营业额的 19.69%。
+        confidence: 10
+        reference:
+          - docs/2-market-research/05-survey-sampling/cn.md
+
+      - id: sample-size-vs-representativeness
+        question:
+          en: Does a larger sample make a survey more representative?
+          cn: 样本抽得更多，调研就更有代表性了吗？
+        answer:
+          en: >
+            No. Sample size controls random error; representativeness is set by the frame and by who answered. Ten times the sample shrinks the confidence interval to about a third of its width — sample size helps precision only. It cannot fix a frame that excludes most of the market, because the excluded enterprises are outside the frame, not merely under-sampled. So "only 200 respondents" may be a real problem, but it can also be a cover for a worse one: the sampling method was biased to begin with.
+          cn: >
+            不会。样本量决定的是随机误差，代表性由抽样框和谁愿意答决定。样本翻十倍，置信区间只缩到约三分之一——样本量只管精度。它修不好一个漏掉了大半市场的框，因为框外那部分不是抽少了，是根本不在名单里。所以「只有 200 个样本」可能是个真问题，也可能只是拿来盖住另一个更糟的问题：抽法本来就偏。
+        confidence: 10
+        reference:
+          - docs/2-market-research/05-survey-sampling/cn.md
+
+      - id: coverage-bias-direction
+        question:
+          en: Which way does coverage bias push the numbers?
+          cn: 覆盖偏差会把数字往哪边推？
+        answer:
+          en: >
+            Usually toward flattering the market being studied. The part a frame tends to miss is small, marginal, and cheap — independent shops, sole traders, informal activity, new entrants. So a share computed on the covered population is likely overstated, and a growth rate computed on it is likely understated: the excluded tier is where new business appears. In the EU27 retail case, the 94.81% of enterprises outside the ICT survey frame still account for 22.58% of retail turnover. The direction is not random, and it does not average out.
+          cn: >
+            通常是往好看的那一边推。框容易漏掉的，是小的、边缘的、便宜的那部分——独立小店、独资经营者、非正式经济、新进入者。所以在覆盖到的总体上算出来的占比，多半偏高；在同一个总体上算出来的增速，多半偏低，因为新生意恰恰出现在被漏掉的那一层。欧盟 27 国零售业里，被 ICT 调查框漏掉的 94.81% 的企业，仍占零售营业额的 22.58%。这个方向不是随机的，也不会自己抵消掉。
+        confidence: 9
+        reference:
+          - docs/2-market-research/05-survey-sampling/cn.md
+
+      - id: response-rate-warning
+        question:
+          en: What does a low response rate tell me about the result?
+          cn: 响应率低，对结果意味着什么？
+        answer:
+          en: >
+            It is a warning that the answers may describe the people who replied rather than the people you asked. A response rate of 8.7% — 87 replies from 1,000 — does not mean the remaining 913 are like the 87; they are systematically different, and which way they differ depends on the question. Low response rate does not prove the result is wrong, but it removes your ability to claim it stands for the population. There is one check that needs no external data: compare the characteristics of the replies against the characteristics of the list you sent the questionnaire to. That list is the frame's full membership; the replies are the response outcome. Where they diverge, you know which stratum is off. If the list was thrown away after the mailing, that bias can never be checked — a process failure, not a data failure.
+          cn: >
+            这是一条警报：答案可能只描述了愿意答的人，而不是你问的那群人。8.7% 的响应率——1000 份发出、87 份收回——不代表剩下那 913 人跟这 87 人一样；他们系统性地不同，偏的方向取决于问卷问什么。响应率低不能证明结果错，但它让你没法再声称这个数代表总体。有一个不需要外部数据的自检：拿回收样本的特征，跟你发出问卷的那份名单的特征做对比。名单是抽样框的完整成员，回收是应答结果，哪一层对不上，一目了然。如果发完就把名单扔了，这个偏差就永远查不了——这是流程问题，不是数据问题。
+        confidence: 9
+        reference:
+          - docs/2-market-research/05-survey-sampling/cn.md
+
+      - id: four-sampling-methods
+        question:
+          en: What are the four basic ways to draw a sample, and what does each one cost you?
+          cn: 抽样有哪四种基本打法，各自的代价是什么？
+        answer:
+          en: >
+            Simple random sampling: number everyone in the frame and draw; everyone has an equal chance, but it is slow, expensive, and cannot rescue an incomplete list. Stratified sampling: split the frame into strata, sample each, and reweight by true population shares; far more efficient, but the stratification variable has to be sound — stratifying on "do you shop online" hides the answer in the frame. Systematic sampling: take every kth name; as good as random if the list order and the starting point are both random, which they rarely are. Convenience sampling: ask whoever is easiest to reach; cheapest of the four and the one that most reliably produces a biased result. Convenience samples are usable — they just describe "these people", not "everyone".
+          cn: >
+            简单随机抽样：框里的人全部编号摇号，每个人机会均等，但慢、贵，而且救不了一份不完整的名单。分层抽样：把框里的人分层，每层各抽一部分，最后按真实占比加权；省样本得多，但分层依据本身得可靠——按「你会不会网购」分层，等于把答案藏进框里。系统抽样：每隔 k 个抽一个；名录排序和起点都随机时接近简单随机，而这两条很少同时成立。便利样本：谁方便就问谁；四种里最便宜，也是最容易出偏差的。便利样本不是不能用，它给的是「这些人怎么想」，不是「大家怎么想」。
+        confidence: 10
+        reference:
+          - docs/2-market-research/05-survey-sampling/cn.md

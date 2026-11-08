@@ -1,0 +1,91 @@
+id: x-market-2-market-research-04-head-to-head-share-and-growth
+
+data:
+  - name:
+      en: head-to-head comparison of two companies
+      cn: 两家公司并排比
+    qa:
+      - id: which-three-columns
+        question:
+          en: Which three columns belong in a head-to-head comparison table?
+          cn: 两家公司并排比，一张表该填哪三列？
+        answer:
+          en: >
+            Scale, share and growth. Scale says how big the company is, share says how much of a defined market it holds, growth says whether it is speeding up or slowing down. Each column needs its own scope rules before any number goes in it: scale needs the same category and the same fiscal window, share needs a named denominator, growth needs the same start and end points. A number without those is a side-by-side reading, not a comparison.
+          cn: >
+            规模、份额、增速三列。规模说公司有多大，份额说它在一个框定的市场里占多少，增速说它在变快还是变慢。每一列都要先定好口径再填数：规模要对齐品类和财年，份额要写清分母是谁，增速要对齐起止点。少了这些，摆在表里的就不是比较，只是对照。
+        confidence: 10
+        reference:
+          - docs/2-market-research/04-head-to-head-share-and-growth/cn.md
+      - id: amazon-bigger-on-paper
+        question:
+          en: Amazon reported higher revenue than Walmart last year. Is Amazon the bigger retailer?
+          cn: Amazon 去年的账面收入比 Walmart 高，那 Amazon 是更大的零售商吗？
+        answer:
+          en: >
+            No, and the paper numbers prove nothing. Amazon's 716,924 million dollars of net sales for 2025 includes 128,725 million of AWS cloud revenue, which sells no products at all. Walmart's FY2026 total revenues of 713,163 million dollars are more than half grocery, a category Amazon barely carries. Strip AWS out and Amazon is 118,214 million dollars behind Walmart. The two baskets do not overlap enough to subtract anything, so the honest answer is that this comparison cannot be made without saying what you are comparing.
+          cn: >
+            不能，账面数字本身说明不了什么。Amazon 2025 年 716,924 百万美元净销售里，有 128,725 百万是 AWS 云服务，一分钱商品都不卖。Walmart FY2026 的 713,163 百万美元总收入里超过一半是食品杂货，Amazon 几乎不做这个品类。把 AWS 摘掉，Amazon 就比 Walmart 少 118,214 百万美元。两个篮子没有多少重叠品类可退，所以诚实的答案是：不说清比的是什么，这个比较做不了。
+        confidence: 10
+        reference:
+          - docs/2-market-research/04-head-to-head-share-and-growth/cn.md
+      - id: amazon-no-ecommerce-line
+        question:
+          en: Why can you not just take Amazon's e-commerce revenue and compare it with Walmart's?
+          cn: 为什么不能直接拿 Amazon 的「电商收入」跟 Walmart 比？
+        answer:
+          en: >
+            Because Amazon has no line called e-commerce. Its 2025 revenue splits into eight separate lines: online stores 269,287, physical stores 22,561, third-party seller services 172,162, advertising 68,635, subscription 49,619, AWS 128,725, and others. Walmart has one clean line, e-commerce at 135,400. Depending on which Amazon lines you call online, you get 269,287, 464,010 or 582,264 million dollars for the same company in the same year — a spread of more than a factor of two. The choice is defensible, but it has to be written down.
+          cn: >
+            因为 Amazon 没有一条叫「电商」的收入线。2025 年它拆成 8 条：自有网店 269,287、实体店 22,561、第三方卖家服务 172,162、广告 68,635、订阅 49,619、AWS 128,725 等。Walmart 那边有一条干净的线上销售 135,400。同一家公司、同一年，「线上」能取 269,287、464,010 或 582,264 百万美元三个数，跨度超过一倍。每种取法都说得通，但得写下来。
+        confidence: 10
+        reference:
+          - docs/2-market-research/04-head-to-head-share-and-growth/cn.md
+      - id: third-party-fees-not-gmv
+        question:
+          en: Is Amazon's third-party seller services revenue comparable to Walmart's marketplace sales?
+          cn: Amazon 的第三方卖家服务收入，能跟 Walmart 的 marketplace 销售额比吗？
+        answer:
+          en: >
+            No, and this cell has to stay empty. Third-party seller services at 172,162 million dollars is Amazon's platform fees and service charges on goods sold by independent sellers, not the gross merchandise value of those goods. Walmart discloses no separate global marketplace revenue line, so its marketplace money sits somewhere inside the 135,400 million dollar e-commerce figure with no way to strip it out. Comparing the two would mean putting a fee against a fee but with different scopes, so the cell is left blank rather than estimated.
+          cn: >
+            不能，这一格只能留空。第三方卖家服务 172,162 百万美元是 Amazon 从第三方卖家的商品里拿的平台费和服务费，不是那些商品的总销售额。Walmart 没有单独披露全球 marketplace 收入，它那笔钱混在 135,400 百万的线上销售里，拆不出来。两边一个抽成对一个抽成、范围却不同，这一格留空，不填估算值。
+        confidence: 9
+        reference:
+          - docs/2-market-research/04-head-to-head-share-and-growth/cn.md
+      - id: fiscal-year-offset
+        question:
+          en: Walmart's fiscal year ends January 31 and Amazon's ends December 31. Does the one-month offset matter?
+          cn: Walmart 财年到 1 月 31 日、Amazon 到 12 月 31 日，差一个月有影响吗？
+        answer:
+          en: >
+            It matters because the two missing months are not interchangeable. Walmart's FY2026 runs from 2025-02-01 to 2026-01-31; Amazon's 2025 runs from 2025-01-01 to 2025-12-31. They overlap in only eleven of twelve months, and the two months that differ sit at opposite ends: Amazon has January 2025, Walmart has January 2026. Walmart's FY2026 is therefore roughly calendar 2025 plus one peak month, which is why a one-year growth rate taken straight from the filings is not a like-for-like figure.
+          cn: >
+            有影响，因为多出来的那两个月不是可以互换的。Walmart FY2026 是 2025-02-01 到 2026-01-31，Amazon 2025 年是 2025-01-01 到 2025-12-31。12 个月里只重叠 11 个月，各自多出的那头正好一前一后：Amazon 多 2025 年 1 月，Walmart 多 2026 年 1 月。所以 Walmart 的 FY2026 大致等于日历 2025 年再加一个旺季月，直接拿财报里的同比当同期对比，站不住。
+        confidence: 9
+        reference:
+          - docs/2-market-research/04-head-to-head-share-and-growth/cn.md
+      - id: covid-base-effect
+        question:
+          en: Walmart's online sales grew 66% in 2020 and then 11% in 2021. Did the business slow down?
+          cn: Walmart 线上销售 2020 年涨 66%，2021 年只涨 11%，是生意变差了吗？
+        answer:
+          en: >
+            No. The 66% in 2020 was the pandemic pushing shoppers from stores onto screens, and it left an inflated base for the following year. Walmart's e-commerce grew 11.2% in both 2021 and 2022, then re-accelerated to 22.4% in 2023, 20.6% in 2024 and 24.4% in 2025. Amazon shows the mirror image: online stores actually fell 0.9% in 2022, from 222,075 to 220,004 million dollars, on the same high base. Which start year you pick changes the answer, which is why the base has to be stated.
+          cn: >
+            没有。2020 年那 66% 是疫情把顾客从门店推到屏幕上，留给下一年一个被抬高的基数。Walmart 线上销售 2021 和 2022 都是 +11.2%，之后重新加速到 2023 年 +22.4%、2024 年 +20.6%、2025 年 +24.4%。Amazon 是镜像：同样在高基数上，2022 年自有网店从 222,075 掉到 220,004，同比 −0.9%。从哪一年起算会改变结论，所以基数必须写出来。
+        confidence: 9
+        reference:
+          - docs/2-market-research/04-head-to-head-share-and-growth/cn.md
+      - id: big-share-vs-fast-growth
+        question:
+          en: One company has the bigger online business and the other is growing faster. Which one wins?
+          cn: 一家线上盘子大，另一家涨得快，哪家赢？
+        answer:
+          en: >
+            Neither wins, because those are two different questions. Amazon's online stores bring in 269,287 million dollars against Walmart's 135,400 million of e-commerce, but in the most recent year Walmart's grew 24.4% while Amazon's grew 9.0%. Size answers where you stand now; growth answers where you are headed. Fold them into one sentence saying who is stronger and there is no answer left, because you never said which question you were asking.
+          cn: >
+            都不算赢，因为这是两个问题。Amazon 自有网店 269,287 百万美元，Walmart 线上销售 135,400 百万美元；但最近一年 Walmart 涨 24.4%，Amazon 涨 9.0%。规模回答「现在站在哪」，增速回答「在往哪走」。把两个问题揉成一句「谁更强」，就没有答案了，因为从头到尾没说清问的是哪个。
+        confidence: 9
+        reference:
+          - docs/2-market-research/04-head-to-head-share-and-growth/cn.md

@@ -1,0 +1,316 @@
+id: x-market-1-report-overview-04-price-band-chart
+
+data:
+  - name:
+      en: defining the category
+      cn: 把品类框住
+    qa:
+      - id: why-frame-the-category-first
+        question:
+          en: "Why do I have to define the category before I can chart price bands?"
+          cn: 为什么做价格带之前先把品类框住？
+        answer:
+          en:
+            >
+              Because the price band is computed inside that frame, and the frame decides the
+              answer. The same electric kettle sold by a supermarket, by a specialist store and
+              on a marketplace belongs to three different categories, and the price distribution
+               of each is different. You cannot compare your price to a band drawn from another
+              frame. The second thing the frame decides is whether service and installation are
+              inside the price or added on top: an air conditioner at 3000 yuan can land several
+               hundred yuan apart depending on whether delivery, installation and warranty are
+              included. Write down three things before you chart anything: what you framed by,
+              whether service is included, and what is explicitly outside the frame. Change the
+              frame later and the chart is void, because it is no longer measuring the same
+              thing.
+          cn:
+            >
+              因为价格带是在这个框里算出来的，框决定答案。同一台电热水壶，在超市、在专卖店、
+              在电商平台，属于三个不同的品类，各自的价格分布都不一样。
+              你的价格没法跟另一个框里切出来的带比。框还决定一件事：服务与安装算不算在价里。
+              一台标价 3000 元的空调，含不含送货、安装、保修，到手价能差几百。
+              动手画之前先写下三件事：按什么框、含不含服务、哪些东西明确在框外。口径中途改，
+              前面的价格带图就作废了，因为它量的已经不是同一个东西。
+        confidence: 10
+        reference:
+          - docs/1-report-overview/04-price-band-chart/cn.md
+      - id: product-frame-vs-channel-frame
+        question:
+          en: "What is the difference between framing by product and framing by channel?"
+          cn: 按商品框和按渠道框，差在哪？
+        answer:
+          en:
+            >
+              Framing by product puts everything selling the same thing into one bucket, no
+              matter where it is sold. Framing by channel puts the same product into different
+              buckets depending on how it is sold. The two answers are not comparable and you
+              should pick one and say which. The practical consequence is large: a specialist
+              store sells service and assurance, a supermarket sells cheap and good enough, and
+              a marketplace sells a long tail. Price the same kettle at 79, 249 and 39 yuan and
+              none of those three numbers is wrong — they belong to three different categories.
+              Whichever frame you choose, the answer to "am I too expensive" changes, so the
+              frame is not a formality. It is the first line of the answer.
+          cn:
+            >
+              按商品框，是把卖同一样东西的归成一类，不管在哪儿卖。按渠道框，
+              是把同一样东西按卖法分成不同的类。这两种口径不能比，选了一个就得说清楚。
+              实际差别很大：专卖店卖的是服务与保障，超市卖的是便宜够用，平台卖的是长尾。
+              同一个电热水壶在三个地方标 79、249、39 元，三个数都不算错——它们属于三个品类。
+              你选哪个框，「我是不是太贵了」的答案就跟着变，所以框不是手续，它是答案的第一行。
+        confidence: 9
+        reference:
+          - docs/1-report-overview/04-price-band-chart/cn.md
+  - name:
+      en: cutting the bands
+      cn: 切价格带
+    qa:
+      - id: why-quartiles-not-three-bands
+        question:
+          en: "Why cut the bands by sales quartiles instead of picking three tiers?"
+          cn: 为什么要按销量四分位切，而不是拍三档？
+        answer:
+          en:
+            >
+              Because a band that you decided by feel has no relationship to where the volume
+              actually is. Pick three tiers — entry, mainstream, premium — and the volume can
+              end up almost entirely in the first one, with the middle tier empty. That chart
+              tells the reader nothing and hides the thing you most need to see: that you are in
+               the crowded part of the market. Cutting by sales quartile means you sort every
+              product by price and find the three price points where cumulative volume reaches
+              25, 50 and 75 percent. Now each band holds roughly a quarter of the volume, so a
+              band you fall into tells you immediately whether you are mainstream or marginal,
+              and the boundaries come from the data rather than from your preferences. Two
+              people cutting the same data independently get the same bands.
+          cn:
+            >
+              因为拍出来的档位跟销量实际落在哪儿没有关系。拍三档——入门、主流、
+              高端——结果销量可能全挤在第一档，第二档是空的。那张图什么也没告诉读者，
+              还把你最需要看到的事藏住了：你正待在竞争最挤的那一段。按销量四分位切，
+              是把所有商品按价格从低到高排，找到销量累计到 25%、50%、75% 的三个价格点。
+              这样每档装着差不多四分之一的销量，你落在哪一档一眼就知道自己是主流还是边缘，
+              边界是数据定的而不是你定的。两个人独立切同一份数据，切出来的带是一样的。
+        confidence: 10
+        reference:
+          - docs/1-report-overview/04-price-band-chart/cn.md
+      - id: units-vs-revenue-share
+        question:
+          en: "Why do the sales-volume share and the revenue share tell different stories?"
+          cn: 为什么销量份额和销售额份额讲的不是一回事？
+        answer:
+          en:
+            >
+              Because revenue is units multiplied by price, so the cheapest band buys a large
+              share of the units but a small share of the money. In the worked example on the
+              page, the lowest band holds 42 percent of units but only 21.5 percent of revenue,
+              while the third band holds 18 percent of units and 30.6 percent of revenue. The
+              direction can even reverse. This decides a real question: if the goal is volume —
+              moving product, building channel position, ranking high — the cheapest band is the
+               main battlefield. If the goal is revenue — making money, holding cash — the
+              cheapest band is the worst place to be, and selling more there makes your revenue
+              share smaller, not bigger. And note the second trap: cutting the bands by units
+              but then doing the accounting in revenue mixes two definitions, and the resulting
+              conclusion will be internally inconsistent.
+          cn:
+            >
+              因为销售额是销量乘单价，最便宜的那档能拿到很大的销量份额，
+              却只能换来很小的金额份额。页面上那个算例里，第一档占销量 42%，占销售额只有 21.5%；
+              第三档占销量 18%，占销售额却有 30.6%。方向甚至可以反过来。这直接决定一个真问题：
+              目标是出货量——铺渠道、拉排名——第一档是主战场。目标是销售额——做营收、
+              养现金流——第一档是最差的位置，在那儿卖得越多，你的营收占比反而越小。还有第二个坑：
+              用销量切带，却用销售额算账，两套口径混在一起，结论必然自相矛盾。
+        confidence: 10
+        reference:
+          - docs/1-report-overview/04-price-band-chart/cn.md
+      - id: band-boundary-check
+        question:
+          en: "How do I know a band I cut is not too narrow?"
+          cn: 怎么知道切出来的一档不是被切窄了？
+        answer:
+          en:
+            >
+              Look at where the median price of each band sits relative to that band's
+              boundaries. If the median is pressed against the upper boundary, the band is not
+              really a price segment of its own — it is the bottom edge of the band above
+              leaking downward. Two ways out: merge it into the neighbouring band, or move the
+              boundary to the median price. Doing this check matters because a band whose volume
+               is really the upper band's will send you to the wrong conclusion about your
+              competitors. It also matters for the promotion question, because the promotion
+              intensity of a real price segment differs from that of a spillover region.
+          cn:
+            >
+              看每一档的中位价格落在档位边界的哪儿。如果中位价格紧贴着上边界，
+              这一档就不是一个独立的价位段，而是上一档往下渗出来的。两种处理：并进相邻的那一档，
+              或者把边界挪到中位价格上。这个检查必须做，因为一档如果其实是上一档的溢出，
+              你拿它得出的竞争判断就是错的。跟促销那一条也有关系：一个真实价位段的促销强度，
+              跟一块溢出区的促销强度是不一样的。
+        confidence: 8
+        reference:
+          - docs/1-report-overview/04-price-band-chart/cn.md
+  - name:
+      en: promotion and seasonality
+      cn: 促销与季节性
+    qa:
+      - id: two-kinds-of-discount
+        question:
+          en: "What is the difference between a price that keeps rising and a one-off sale?"
+          cn: 价格一直往上走，和一次大促，有什么不同？
+        answer:
+          en:
+            >
+              They move the band in completely different ways. A price level that keeps rising
+              shifts the whole band upward over time: your position within the band does not
+              change, but buyers have to re-learn what things cost. A one-off sale leaves the
+              price level alone and drops you temporarily into the next band down for the
+              duration, while the buyers who bought you at the higher price would have bought
+              you anyway. The furniture and home furnishings chain-type price index shows the
+              first kind clearly: 99.8 in 2020, 104.9 in 2021, 116.0 in 2022, 116.1 in 2023.
+              That 10.6 percent gain in 2022 was not one sale — it was every month of the year.
+              When someone tells you a category runs 30 percent off, ask which kind it is and
+              how long it lasts. "30 percent off" without a duration is not a number.
+          cn:
+            >
+              两种对价格带的影响完全相反。价格水平一直往上挪，整条带随之上移：
+              你在带里的相对位置不变，但买家得重新适应这个价。一次大促不动价格水平，
+              只在那几天把你临时掉到下一档，而那些本来就会买你高价单的人，照样会买。
+              家具家居店的连锁型价格指数显示的是第一种：2020 年 99.8，2021 年 104.9，2022 年
+              116.0，2023 年 116.1。2022 年那 10.6% 不是一次促销打出来的，是全年每个月都在涨。
+              所以有人说某个品类「打折 30%」的时候，要问是哪一种、持续多久。不说持续时间的「打折
+               30%」不算数。
+        confidence: 9
+        reference:
+          - docs/1-report-overview/04-price-band-chart/cn.md
+      - id: which-band-gets-discounted
+        question:
+          en: "Which price band gets discounted the most?"
+          cn: 哪一档促销打得最狠？
+        answer:
+          en:
+            >
+              The middle. The band with the most sellers and the most competition, which is
+              usually the second band: in the worked example it holds 34 percent of units and
+              30.9 percent of revenue. Everyone there is discounting, and because everyone is,
+              the price gets pushed down without any single seller being able to stop it. The
+              third band discounts differently — it keeps the unit price and adds bundles and
+              sets to push up the basket instead. The top band barely discounts at all, and for
+              a good reason: a 250 yuan item that drops to 180 yuan teaches buyers that it was
+              worth 180 all along, and you have just announced your own future price cut. So the
+               promotion playbook differs by band. In the cheapest band, discounting rarely
+              helps because those buyers were comparing prices anyway and following your rivals
+              down only takes you below your margin. In the top band, use gifts, extended
+              warranty, free delivery and free installation instead of discounts: those change
+              the value you deliver without touching the price you posted.
+          cn:
+            >
+              中间那档。商家最多、竞争最激烈的通常就是第二档，算例里它占销量 34%、占销售额
+              30.9%。大家都在打折，于是价格被压下去，谁也没法单独停下来。第三档的打法不一样：
+              单件价格不降，用捆绑和套装把客单价撑上去。最贵那档几乎不打折，理由很实在——一台标
+              250 元的东西降到 180 元，买家就记住了「它本来就值 180」
+              ，等于你自己替将来宣布了降价。所以促销的打法要按档位来。最便宜那档打折基本没用：
+              买的人本来就在比价，跟着对手往下走只会跌穿毛利线。最贵那档别用折扣，换成赠品、
+              延保、免运费、免安装——这些改变你交付的价值，不动你挂出来的价。
+        confidence: 9
+        reference:
+          - docs/1-report-overview/04-price-band-chart/cn.md
+      - id: which-season-to-raise-prices
+        question:
+          en: "When should I raise prices rather than discount?"
+          cn: 什么时候该涨价，而不是打折？
+        answer:
+          en:
+            >
+              In the busy season. The implied volume index for furniture and home furnishings
+              stores in 2023 ran 107.1 in January, 99.8 in February, then declined to a low of
+              92.4 in October. The busy season runs 16 percent above the quiet one. January is
+              high because moving and redecorating demand bunches at year end; October is low
+              because its demand gets eaten by Black Friday in November. This number sets your
+              stocking and pricing rhythm. In the quiet season, roughly 92 to 95, do not
+              discount: discounting buys very little volume because few people are shopping
+              anyway, and the quiet season is for clearing stock and protecting cash. In the
+              busy season, above 100, this is the window to raise prices — in January the same
+              item can be sold for more. A lot of shops get this exactly backwards. They
+              discount when business is slow, which pushes them further down, and they are too
+              busy shipping to think about pricing up, giving away pricing power they could have
+               had.
+          cn:
+            >
+              在旺季。家具家居店 2023 年的隐含销量指数：1 月 107.1，2 月 99.8，往后一路走低，10
+              月最低 92.4。旺季比淡季高 16%。1 月高是因为年末搬家换房的需求集中，10
+              月低是因为那个月的需求被 11 月的黑色星期五吃掉了。这个数决定你的备货和定价节奏。
+              淡季（92 到 95）买家少，这时候别降价——降价换来的量很少，因为本来就没多少人逛，
+              淡季该做的是清库存和保现金。旺季（100 以上）买家多，这才是涨价的窗口：1
+              月这种月份，同样的货能卖得更贵。很多店的错误正好反着来，淡季看着没生意就打折，
+              越打越没人，旺季忙着出货没想过涨价，白白放掉了定价权。
+        confidence: 9
+        reference:
+          - docs/1-report-overview/04-price-band-chart/cn.md
+  - name:
+      en: the four cells
+      cn: 四格
+    qa:
+      - id: four-cells-to-check
+        question:
+          en: "What are the four things a price position has to state?"
+          cn: 价格位置要写清哪四件事？
+        answer:
+          en:
+            >
+              Boundary, price band, promotion rhythm, seasonality. The boundary says what counts
+               as this category and whether service and installation are inside the price. The
+              price band says which of the quartile bands your price falls in. The promotion
+              rhythm says how many sale events a year, how long each one runs, how deep the
+              discount goes, and which kind of promotion it is — a permanently rising price
+              level or a temporary cut. Seasonality says how big the difference is between peak
+              and quiet months and which months are which. Miss any one of the four and the
+              position does not hold up. With all four filled, the pricing question stops being
+              "is my price right" and becomes something actionable: I am in the second band, it
+              is the crowded one, promotions there need to be regular but cannot run all year,
+              the quiet months are September and October so I do not discount then, and the peak
+               is January and February so I can test the next band up. The answer is still not a
+               yes or no on price. It is a set of decisions with numbers attached, which is the
+              more useful thing to hand someone.
+          cn:
+            >
+              边界、价格带、促销节奏、季节性。边界说清楚这个品类算哪些东西、
+              服务与安装算不算在价里。价格带说你落在四分位切出来的哪一条。促销节奏说一年几次、
+              每次多久、折扣多深、是哪一种促销——是价格水平一直上移，还是临时削价。
+              季节性说淡旺季差多少、哪几个月是哪几个月。少填一格，这个位置就站不住。
+              四格填满之后，定价的问题就从「我的价格对不对」变成一件能执行的事：我在第二档，
+              这一档最挤，促销要跟得上但不能全年不打，淡季是 9 月和 10 月所以那阵不降价，旺季是
+              1 月和 2 月可以试着往上一档试。答案依然不是「对」或「不对」
+              ，而是一串带着数字的决定——那才是能交到人手里的东西。
+        confidence: 10
+        reference:
+          - docs/1-report-overview/04-price-band-chart/cn.md
+      - id: bands-move-over-time
+        question:
+          en: "Why do I have to redo the price band chart every quarter?"
+          cn: 为什么价格带图要每季度重做一次？
+        answer:
+          en:
+            >
+              Because the band itself moves. In the real series on the page, the chain-type
+              price index for furniture and home furnishings stores went from 100 in 2019 to
+              116.1 in 2023 — the whole band shifted up about 16 percent in four years. That was
+               mostly 2022, when the index jumped from 104.9 to 116.0, but the direction had
+              been set for years. Two things follow. First, a price band chart is a snapshot,
+              and a stale one misleads: a price that was mid-band two years ago may now sit at
+              the top of its band, or at the bottom. Second, and more useful, the direction of
+              travel tells you something the level does not. If the whole band is rising and
+              your price is not, you are losing relative position even while your absolute price
+               looks unchanged — that is what happened to the volume in this category, where
+              nominal sales rose 12 percent from 2019 to 2023 while prices rose 16 percent, so
+              implied volume ended lower than it started, at 96.6. Redo the quartile cut each
+              quarter and check where you land.
+          cn:
+            >
+              因为价格带本身会挪。页面上那组真实数据里，家具家居店的连锁型价格指数从 2019 年的
+              100 走到 2023 年的 116.1——整条带四年往上挪了约 16%。主要发生在 2022 年，
+              那一年指数从 104.9 跳到 116.0，但方向早定了。两件事跟着来。第一，价格带图是快照，
+              过期的那张会骗人：两年前在带中间的价格，现在可能贴着上边界，也可能掉到了下边界。
+              第二，也是更有用的，方向本身比水平更能说明问题。如果整条带在涨而你的价没涨，
+              你的相对位置就在退——这正是这个品类发生的事：2019 到 2023 年名义销售额涨了 12%，
+              价格涨了 16%，隐含销量反而比起点还低，只有 96.6。每季度重切一次四分位，
+              看自己落在哪儿。
+        confidence: 9
+        reference:
+          - docs/1-report-overview/04-price-band-chart/cn.md

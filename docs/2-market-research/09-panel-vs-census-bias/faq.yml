@@ -1,0 +1,71 @@
+id: x-market-2-market-research-09-panel-vs-census-bias
+
+data:
+  - name:
+      en: survey data versus official statistics
+      cn: 调研数据与官方统计
+    qa:
+      - id: which-one-to-trust
+        question:
+          en: If a survey and an official statistic disagree, which one do I trust?
+          cn: 调研数和官方数打架，该信哪个？
+        answer:
+          en: >
+            Trust neither on its own. The two answer different questions and each leaves out a different group. Survey and panel data over-represent people who are online, engaged and reachable. Census and administrative records under-represent the small, informal and unregistered end of the market. Because the two biases point in opposite directions, putting them side by side gets you closer to the truth than either alone. The useful first move is not to pick a winner but to draw both frames and see how much they overlap. A third kind needs the same treatment: platform backend logs are recorded rather than asked, so they contain a platform boundary instead of an opinion, and they say nothing about the people outside the platform or the ones who churned.
+          cn: >
+            单独哪一个都别信。两个数回答的是不同的问题，各自漏掉的是不同的一批人。调研和面板数据会高估那些会上网、投入度高、联系得上的人；普查和行政记录会低估市场里小规模、非正式、没登记的那一头。两个偏差方向相反，把它们摆在一起比单看任何一份都更接近真相。有用的第一个动作不是挑赢家，而是把两个框都画出来，看它们重叠的部分有多大。第三类也一样：平台后台日志是记出来的，含的是一道平台边界而不是主观判断，对平台外的人和已经流失的用户只字不提。
+        confidence: 10
+        reference:
+          - docs/2-market-research/09-panel-vs-census-bias/cn.md
+
+      - id: official-frame-too-narrow
+        question:
+          en: How narrow is the frame in official statistics?
+          cn: 官方统计的框有多窄？
+        answer:
+          en: >
+            Narrow enough to change what the number means. Eurostat's annual enterprise ICT survey covers only enterprises with 10 or more employees, and that boundary is encoded into the series name itself. Out of 3.21 million EU retail enterprises in 2020, that frame holds 5.2% of the firms but 77.4% of turnover. The survey figure "13.07% of retail turnover from web sales" is therefore a statement about the large end of retail, not about retail as a whole. When you read an official series, look for the size threshold, the industry code and the employee count before you look at the value.
+          cn: >
+            窄到能改变这个数的含义。Eurostat 的年度企业 ICT 调查只覆盖雇员 10 人及以上的企业，这条边界直接编在序列名字里。欧盟 2020 年 321 万家零售企业里，这个框装着 5.2% 的企业家，却装着 77.4% 的营业额。所以「零售业网络销售占营业额 13.07%」这句话，说的是零售业里偏大的那一头，不是零售业整体。读一条官方序列时，先看规模门槛、行业代码、雇员人数下限，再看数值。
+        confidence: 10
+        reference:
+          - docs/2-market-research/09-panel-vs-census-bias/cn.md
+
+      - id: who-surveys-miss
+        question:
+          en: Who does a survey miss, and how can I tell?
+          cn: 调研漏掉了谁，怎么看出来？
+        answer:
+          en: >
+            Split the survey by a characteristic you care about and look for a gap that persists. In Eurostat's survey of internet purchases, 32.16% of adults with low formal education had bought online in the previous three months in 2020, against 73.84% for those with high formal education — a 41.7 point gap. By 2025 the two lines had reached 39.44% and 79.39%, so the gap was still about 40 points. Sampling error wobbles year to year. A gap that holds steady for six years is a frame problem, and it points in a known direction: toward people who are already online.
+          cn: >
+            把调研按你关心的特征拆开，看有没有一个一直在的差距。Eurostat 的个人网购调查里，2020 年低学历成年人里只有 32.16% 在过去三个月网购过，高学历是 73.84%，差 41.7 个点。到 2025 年两条线分别走到 39.44% 和 79.39%，差距仍有约 40 个点。抽样误差会逐年随机晃。一个六年如一日的差距来自框，而且方向是已知的：偏向本来就已经上网的人。
+        confidence: 9
+        reference:
+          - docs/2-market-research/09-panel-vs-census-bias/cn.md
+
+      - id: panel-aging
+        question:
+          en: How do I know a panel's sample has gone stale?
+          cn: 怎么知道一个面板的样本已经老化？
+        answer:
+          en: >
+            Ask when the panel was started and who it is still tracking. In 2025 only 15.76% of EU adults aged 75 to 89 had bought online in the previous three months, against 72.36% for 25 to 54. A panel built a decade ago and followed forward describes people who are now seventy. Its 2024 number is not wrong, but it describes a sample frame that no longer exists in that form. Separately, watch attrition: the people who keep filling in a panel are systematically different from the ones who drop out, and that difference is not published anywhere. You have to ask the researcher for the response rate and how leavers differ from stayers.
+          cn: >
+            问清楚这个面板是什么时候建的、现在还在跟的是谁。欧盟 2025 年 75 到 89 岁的成年人里只有 15.76% 在过去三个月网购过，25 到 54 岁是 72.36%。一个十年前建起来、一直跟到今天的面板，描述的是如今已经七十岁的人。它那个 2024 年的数不算错，但它描述的是一个已经不以这种形态存在的样本框。另外盯住流失：一直填问卷的人和填两次就退的人，系统性地不一样，而这个差别没有任何公开数字能给你答案，只能问研究者：响应率多少，走了的人和留下的人差在哪。
+        confidence: 8
+        reference:
+          - docs/2-market-research/09-panel-vs-census-bias/cn.md
+
+      - id: both-wrong-at-once
+        question:
+          en: What happens when both kinds of number are wrong at the same time?
+          cn: 两种数一起错的时候是什么样？
+        answer:
+          en: >
+            It is worse than one number being wrong, because the errors point in opposite directions and hide each other. A stale panel describing an older population and an official series with a narrow size threshold can together skip the entire middle of the market: the firms and the people that are too small for the official frame and too new for the panel. The more common version is subtler: one biased survey gets split into "what people said they would buy" and "what people actually bought", and each half is compared against official data. Two numbers and two sources look like cross-validation, but the same biased sample is behind both, so nothing was ever checked.
+          cn: >
+            比一个数错更糟，因为两个错的方向相反，会互相遮掩。一个描述着更老人口的过期面板，配上一条门槛很窄的官方序列，加起来可能整段跳过市场的中间地带——那些对企业官方框来说太小、对面板来说又太新的生意和人群。更常见的版本更隐蔽：同一份有偏的调研被拆成「用户说会买」和「用户真买了」两半，各自去跟官方数据比。两个数、两个来源，看起来像交叉验证，但背后是同一批有偏的样本，等于什么都没验过。
+        confidence: 9
+        reference:
+          - docs/2-market-research/09-panel-vs-census-bias/cn.md

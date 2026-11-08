@@ -25,4 +25,10 @@ sections:
   content: 一个用行业产出份额算集中度的市场
 - title: 先看这三个数，再决定进不进
   content: 规模、增速、集中度三格数字，每一格都要带口径
-data_cards: []
+data_cards:
+- eu_retail_growth_nominal_vs_real
+- eu_wholesale_retail_output_vs_value_added
+- us_retail_output_vs_value_added
+- value_added_share_of_output
+- us_retail_peer_shares
+- eu_footwear_two_frames

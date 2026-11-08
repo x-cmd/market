@@ -1,0 +1,179 @@
+id: x-market-1-report-overview-05-ad-spend-chart
+
+data:
+  - name:
+      en: reading the marginal number
+      cn: 读那个边际的数
+    qa:
+      - id: average-vs-marginal-question
+        question:
+          en: "My channel reports ROI of 2x. Can I add another 200k?"
+          cn: "我的渠道 ROI 报出来是 2 倍，能再加 20 万吗？"
+        answer:
+          en:
+            >
+              Not on that number. Average ROI answers a backward-looking question — how much did
+              the whole pot of money return in total. "Can I add another 200k" is a forward-looking
+              question: what does that extra 200k return on its own. In the worked account on the
+              page, the average ROI across five spend bands is 2.28 while the last band returns
+              0.4 for every unit spent. Those are not two versions of one fact; they describe two
+              different stretches of the same month. The band you are about to spend into is the
+              one that decides the question, and it is always the band nobody puts on a dashboard.
+          cn:
+            >
+              光凭这个数不行。平均 ROI 回答的是回头看的问题——这一整笔钱总共换回多少。
+              「能不能再加 20 万」是往前看的问题：这多出来的 20 万自己换回多少。
+              页面那个算例里，五个花费档的平均 ROI 是 2.28，最后一档每 1 块只换回 0.4。
+              这不是同一个事实的两个版本，是同一个月里两段不同的生意。
+              决定你这个问题的是你打算把钱花进去的那一档，而那一档恰恰是没人放进看板的那一档。
+        confidence: 10
+        reference:
+          - docs/1-report-overview/05-ad-spend-chart/cn.md
+      - id: what-one-means
+        question:
+          en: "Why is 1 the line that matters on this curve?"
+          cn: "这条曲线上，为什么 1 是那条要紧的线？"
+        answer:
+          en:
+            >
+              Because 1 is where the money stops paying for itself. A marginal ROI above 1 means
+              the next unit of spend brings back more than it costs; exactly 1 means it breaks
+              even; below 1 means every unit put in after this point comes back short. In the
+              worked account, the 400k-to-500k band returns 0.4, so those 100k are a net loss of
+              60k — not a flat result, a loss. There is also a clean mathematical property behind
+              it: on a continuous curve, the point where marginal ROI crosses 1 is exactly where
+              total return peaks. Add money before that point and the running total still climbs;
+              add money after it and the running total falls even as spend rises. Since real
+              curves are stepped rather than smooth, the practical move is to stop the budget at
+              the last band whose marginal ROI is still above 1.
+          cn:
+            >
+              因为 1 是钱开始不换自己的地方。边际 ROI 大于 1，下一块钱换回的比花出去的多；
+              正好等于 1，不赚不亏；低于 1，之后每进去一块都换不回来。
+              算例里 40 万到 50 万那一档是 0.4，所以那 10 万是净亏 6 万——不是打平，是亏。
+              背后还有个干净的数学性质：在一条连续曲线上，边际 ROI 穿过 1 的那个点，
+              恰好是总回报的顶点。在那之前加钱，总账还在涨；过了那之后加钱，总账往下掉，
+              哪怕花费一直在涨。真实的曲线是一档一档跳的，不是连续的，所以实用的做法是
+              把预算停在边际 ROI 还大于 1 的最后一档。
+        confidence: 10
+        reference:
+          - docs/1-report-overview/05-ad-spend-chart/cn.md
+
+  - name:
+      en: the number that is not incremental
+      cn: 那个不是增量的数
+    qa:
+      - id: attribute-then-subtract
+        question:
+          en: "We spend 300k a month on search and the platform attributes 600k of sales to it. What is the real number?"
+          cn: "我们每个月搜索广告花 30 万，平台归因了 60 万销售额。真实的数是多少？"
+        answer:
+          en:
+            >
+              It depends on how much of that 600k would have happened anyway, and the platform
+              cannot tell you. Suppose a third of the attributed sales — 180k — comes from people
+              who were going to buy regardless, because they typed the brand name or went straight
+              to the site. That 180k was already yours; the ad only got credited with it. Strip
+              it out and the increment is 600k minus 180k, or 420k, giving a real ROI of 1.4
+              rather than 2. The gap is not a rounding error, and it is not something you can
+              compute yourself: the share of spend that would have converted anyway has to come
+              from a randomized holdout or a geo experiment.
+          cn:
+            >
+              取决于那 60 万里有多少本来也会发生，而平台算不出这个数。假设归因的销售额里有
+              三成——18 万——来自那些反正也会买的人：他们搜了品牌词，或者直接输网址进来。
+              这 18 万本来就是你的，广告只是把功劳记在了自己名下。扣掉之后增量是 60 万减 18 万，
+              等于 42 万，真实 ROI 是 1.4 而不是 2。这中间的差不是四舍五入的误差，
+              而且不是你自己能算出来的：本来也会买的那部分占多少，只能靠随机留出组或者地理实验拿。
+        confidence: 10
+        reference:
+          - docs/1-report-overview/05-ad-spend-chart/cn.md
+      - id: three-methods-three-numbers
+        question:
+          en: "How far apart can an ad's measured return and its real return be?"
+          cn: "一个广告测出来的回报和它真实的回报，能差多远？"
+        answer:
+          en:
+            >
+              Far enough to flip the sign. eBay ran a randomized experiment in 2015 turning off
+              part of its non-brand search advertising. The conventional regression on the same
+              data said 4100% return; adding time and geo controls brought it to 1400%; the
+              randomized experiment measured -63%, with a 95% confidence interval from -124% to
+              -3%. In other words the advertising was not merely unprofitable, it crowded out
+              transactions that would have happened anyway. On brand keywords the substitution is
+              even more direct: when eBay switched off its brand-word ads on Yahoo! and MSN,
+              99.5% of the lost clicks were picked up immediately by natural search on the same
+              platforms. The paper presents that as a floor, since some of the remaining 0.5% may
+              have gone to another entry point such as typing ebay.com directly.
+          cn:
+            >
+              远到能把符号翻过来。eBay 在 2015 年做过一组随机实验，停掉一部分非品牌词搜索广告。
+              同一批数据，用常规回归算是 4100% 的回报；加上时间趋势和地区控制项是 1400%；
+              随机实验测出来的真值是 −63%，95% 置信区间从 −124% 到 −3%。
+              也就是说广告不但不赚钱，还把本来会成交的单挤掉了。
+              品牌词上的替代更直接：eBay 关掉 Yahoo! 和 MSN 上的品牌词广告后，
+              失去的点击有 99.5% 立刻被同平台的自然搜索接走了。
+              论文把 99.5% 当作下限，因为剩下那 0.5% 里可能还有人转去了别的入口，比如直接敲 ebay.com。
+        confidence: 10
+        reference:
+          - docs/1-report-overview/05-ad-spend-chart/cn.md
+
+  - name:
+      en: the curve on real books
+      cn: 真实账上的这条曲线
+    qa:
+      - id: curve-moves
+        question:
+          en: "Our marginal ROI looked fine last month and dropped this month. What moved it?"
+          cn: "上个月边际 ROI 还行，这个月掉了。是什么让它动的？"
+        answer:
+          en:
+            >
+              Four things move the curve, and they move it in opposite directions. Rightward, so
+              that adding money makes more sense: the addressable audience grows, and the creative
+              gets better — the same money buys more clicks that lead to deeper interest.
+              Leftward: competition intensifies, creative fatigues, and the season changes.
+              Competition is visible in the public data — the share of EU enterprises with ten or
+              more employees in NACE C to E that pay to advertise online went from 21.57% in 2014
+              to 26.97% in 2024, more bidders for the same people. Poland went the other way, from
+              27.71% to 20.99%, and that seven-point drop is exactly what a leftward shift looks
+              like. Only creative fatigue is one you can fix with your own hands, by changing the
+              ad.
+          cn:
+            >
+              有四件事会推这条曲线，而且方向相反。往右推、加量更划算的：可触达的人群变大，
+              素材变好——同样的钱买到更多点击，点击带来的兴趣更深。
+              往左推的：竞争加剧、素材疲劳、季节变化。竞争在公开数据里看得见：
+              欧盟雇员十人及以上、NACE C 到 E 的企业里，花钱上网打广告的比例从 2014 年的
+              21.57% 涨到 2024 年的 26.97%，抢同一批人的竞价者变多了。
+              波兰反着走，从 27.71% 掉到 20.99%——这七个百分点就是曲线左移的样子。
+              四条里只有素材疲劳是你靠自己能改的：换素材。
+        confidence: 9
+        reference:
+          - docs/1-report-overview/05-ad-spend-chart/cn.md
+      - id: big-company-check
+        question:
+          en: "Is there a public example of a company whose ad spend is flat while its sales fall?"
+          cn: "有公开例子能看出「广告费没动、销售在掉」吗？"
+        answer:
+          en:
+            >
+              Yes, and it is in the filings. Target's advertising expense was 1.5 billion dollars
+              in FY2022, 1.4 billion in FY2023 and 1.5 billion in both FY2024 and FY2026, while
+              total revenue fell from 109.12 billion to 104.78 billion over the same stretch. Advertising as a share of revenue therefore rose from 1.37% to 1.43%. The
+              money did not shrink but what it bought did, which is marginal return declining on
+              the company's own books. Royal Caribbean is the mirror image: ad spend rose from 509
+              million in 2022 to 693 million in 2025 while revenue went from 8.84 billion to 17.935
+              billion. The difference between the two is not the size of the budget, it is where
+              each sits on its own curve.
+          cn:
+            >
+              有，就在财报里。Target 的广告费 FY2022 是 15 亿美元，FY2023 是 14 亿，
+              FY2024 和 FY2026 都是 15 亿；同期总营收从 1091.2 亿美元掉到 1047.8 亿。
+              广告费占营收比因此从 1.37% 升到 1.43%。钱没少花，但买回来的东西变少了，
+              这就是边际回报在公司的账上往下走。皇家加勒比是镜像：广告费从 2022 年的 5.09 亿
+              涨到 2025 年的 6.93 亿，营收从 88.4 亿涨到 179.35 亿。
+              两家的差别不在预算大小，在各自那条曲线上的位置。
+        confidence: 9
+        reference:
+          - docs/1-report-overview/05-ad-spend-chart/cn.md
