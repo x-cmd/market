@@ -2,7 +2,7 @@
 
 **A manual for writing a market and marketing report.** Every figure is an [x-cmd draw](https://github.com/x-cmd/draw) URL: the data lives in the link, server-rendered as SVG. Open any chart and you see its full parameters; paste it anywhere markdown images work.
 
-> The site itself is a set of pages, not this README. The full table of contents — every page's title, outline, goal, case study and intended reader — is in **[docs/1-overview/00-site-outline/cn.md](docs/1-overview/00-site-outline/cn.md)**.
+> The site itself is a set of pages, not this README. The full table of contents — every page's title, outline, goal, case study and intended reader — is in **[OUTLINE.md](OUTLINE.md)**, which also holds the reasoning behind the structure.
 
 ## The idea
 
@@ -16,7 +16,7 @@ The site follows the table of contents of the report itself.
 
 | Series | What it covers | Pages |
 |---|---|---|
-| [`1-overview`](docs/1-overview/) | What this site is, and five situations that expose the measurement problem | 6 |
+| [`1-overview`](docs/1-overview/) | What this site is, and five situations that expose the measurement problem | 5 |
 | [`2-research`](docs/2-research/) | How to measure these numbers without fooling yourself — plus entries for competitors, industries, categories, brands and users | 13 |
 | `3-experiment` | Designing the test that will actually answer your question | 4 |
 | `4-analytics` | What the numbers the platforms give you actually say | 5 |
@@ -24,7 +24,7 @@ The site follows the table of contents of the report itself.
 | `6-optimization` | How to split money across several channels | 3 |
 | `7-visibility` | How many people see you in search, on social, and inside AI answers | 8 |
 | `8-toolbox` | Eight tools, one page each — a dictionary, not a course | 9 |
-| | **Total** | **53** |
+| | **Total** | **52** |
 
 ## How the charts work
 
@@ -60,12 +60,10 @@ Changing one field changes the whole report. That is the difference between this
 
 ## 中文页
 
-正文目前只有中文版。**全站 53 页的标题、大纲、目标、案例、适合谁读，在 [docs/1-overview/00-site-outline/cn.md](docs/1-overview/00-site-outline/cn.md)**——那是这个站的总纲页。
+正文目前只有中文版。**52 页的标题、大纲、目标、案例、适合谁读，在 [OUTLINE.md](OUTLINE.md)**——那是这个站的工作单。
 
 ### 1-overview · 这个站是什么，以及五个能戳中测量难题的场景
 
-- **[这份报告长什么样：全站 55 页的目录、大纲和目标](docs/1-overview/00-site-outline/cn.md)** —— 知道这个站在写什么、每一节归谁管、自己要的东西在哪一页  
-  <sub>适合谁读：S1 S2 S3 S4</sub>
 - **[平台报你 ROI 4.0，实验测出来是 −63%](docs/1-overview/01-platform-roi-vs-incremental-roi/cn.md)** —— 分清平台报表上的数和你自己测出来的数，看出两者差多少  
   <sub>适合谁读：S1 S2 S4</sub>
 - 美国电商 2025 占零售 16.4%，比 2024 高 0.3 个百分点 —— 读懂任何一个「线上占比 X%」，知道它的分母站在哪一边  
