@@ -2,12 +2,16 @@ site: x-cmd.com/market
 langs:
 - cn
 - en
+flow: 数从哪来 → 怎么扰动 → 怎么读 → 怎么投 → 怎么挪 → 看得见吗 → 查字典
 series:
 - id: 1-overview
-  title: 从这里开始
+  stage: 入口
+  title: 概览
+  scene: 要交一份报告，先弄清楚交哪几张图
   articles:
   - id: 01-market-share-chart
     title: 你的市场份额，别人是按哪个分母在算
+    value: 做出一张别人不会误读的市场份额图
     sections:
     - title: 一眼看出谁领先
       content: 谁占多少的横条图，谁多谁少一眼看见
@@ -45,6 +49,7 @@ series:
       content: 你报出去的是「在某个框里的 23%」
   - id: 02-growth-chart
     title: 这门生意还值不值得进
+    value: 判断这门生意还值不值得进
     sections:
     - title: 知道先看哪两个数
       content: 一条规模曲线加一条增速线
@@ -69,6 +74,7 @@ series:
       content: 规模、增速、集中度三格数字，每一格都要带口径
   - id: 03-price-band-chart
     title: 你的价格，在品类里站得住吗
+    value: 看出自己的价格在品类里站不站得住
     sections:
     - title: 一眼看出你的价格在哪一档
       content: 价格从低到高排开，每一档里有多少销量
@@ -90,6 +96,7 @@ series:
       content: 边界、价格带、促销节奏、季节性四件事
   - id: 04-ad-spend-chart
     title: 再花一块钱，能多换回多少
+    value: 知道再花一块钱能多换回多少
     sections:
     - title: 一眼看出加量还赚不赚
       content: 花费与回报并排，外加一条边际曲线
@@ -113,6 +120,7 @@ series:
       content: 排序看平均，加钱看边际；「还能加量」要有数支撑
   - id: 05-incrementality-chart
     title: 没有广告，这些单会成交吗
+    value: 分清广告赚到的和本来就有的
     sections:
     - title: 先分清平台算的和广告真带来的
       content: 对照组与投放组并排，差的那一块就是增量
@@ -144,11 +152,25 @@ series:
         content: 看总差不逐个解释；五问一起问会抬高假阳性
     - title: 别把收割当成创造
       content: 两个数都是真的，错的是当成同一个数
-- id: 2-market
-  title: 市场规模
+  - id: 06-eight-tools-in-one-table
+    title: 八个工具，一张表
+    value: 知道八个工具各管什么、什么时候查哪个
+    sections:
+    - title: 知道八个工具各管什么
+      content: 工具、干什么、输入、输出、在哪篇用过
+    - title: 知道每个工具管哪一步
+      content: 哪一步解决哪个问题
+    - title: 知道哪几篇讲过
+      content: 每篇列出用了哪几个
+- id: 2-research
+  stage: 数从哪来
+  title: 市场调研
+  scene: 手上一堆数，不确定能不能信
   articles:
-  - id: 11-industry-entry-scale-growth-concentration
+  - id: 01-industry-entry-scale-growth-concentration
     title: 进这行之前，先看这三个数
+    value: 写出一份行业条目：四格数字加口径
+    group: 行业情报
     sections:
     - title: 知道先看哪三个数
       content: 行业报告第一页的三个数，看着简单，坑最多
@@ -163,9 +185,111 @@ series:
     - title: 三个数凑一起，说明这门生意什么样
       content: 规模大集中度低、增速高且集中度也升、规模小增速高，各说明什么
     - title: 四格数字，每一格都要带口径
-      content: 四格数字，每一格都要带口径
-  - id: 01-share-denominator
+      content: 规模、增速、集中度、价格带、季节性，缺哪格就写明为什么缺；口径不同就不能放在一张表里比
+  - id: 02-category-entry-price-bands-promo-cadence
+    title: 这个品类，价格怎么排，促销打多狠
+    value: 写出一份品类条目，画出价格带和促销节奏
+    sections:
+    - title: 先找到你在品类里的位置
+      content: 这个品类里我的价格带在哪儿——没有价格带的讨论全是空话
+    - title: 先把「这个品类」框住
+      content: 按卖什么算还是按怎么卖算；含不含服务与安装
+    - title: 价格带按销量切，不按感觉切
+      content: 按销量的四分位切，不拍脑袋定三档
+    - title: 促销打多狠，你自己心里有数
+      content: 一年几次、每次多久、力度多大；要能被预测
+    - title: 促销集中在哪一档，说明什么
+      content: 促销多集中在中间那一档清库存；最高档少打折，免得伤定位
+    - title: 旺季淡季差多少
+      content: 从月度序列里读出来，季调数在这里有用
+    - title: 边界、价格带、促销节奏、季节性
+      content: 边界、价格带、促销节奏、季节性四件事
+  - id: 03-competitor-entry-schema
+    title: 写竞品，别人才核得了你的数
+    value: 写出一份别人能核、也能更新的竞品条目
+    group: 竞品调研
+    sections:
+    - title: 知道半张表为什么没人能用
+      content: 做了一半的竞品表：名字有了，份额那格是空的
+    - title: 知道一条竞品条目要填哪些
+      content: 主体、品类、规模与份额、增速、价格带、投放强度、声量与情绪、来源与日期
+    - title: 知道每一格都要交代来源
+      content: 份额要有分母；价格带要写取哪天哪些渠道；投放强度要标明是公开信号还是估算
+    - title: 知道每一格都要标截止日期
+      content: 每格要有截止日期；过期的标出来，不要删——删掉以后分不清「没有」和「还没查」
+    - title: 知道查不到就空着别填推算值
+      content: 宁可写「公开渠道查不到」，也不用一个推算值填进去
+    - title: 能被别人查、别人改，靠来源口径时间
+      content: 能被别人查、别人改，靠的是来源、口径、时间
+  - id: 04-head-to-head-share-and-growth
+    title: 两家公司怎么比，才不算比错
+    value: 把两家公司放进一张表比，而且比的是同一件事
+    sections:
+    - title: 知道为什么每家都觉得自己领先
+      content: 每家公司都拿着自己那份材料说自己领先
+    - title: 知道并排比只比这三样
+      content: 规模、份额、增速，各自要什么口径才可比
+    - title: 知道分母不对齐就不能比
+      content: 品类范围不同则两个数不能比
+    - title: 知道增速要对同一段时间
+      content: 起止点不同、会计年度不同，两个坑
+    - title: 一家份额大，一家增速快
+      content: 一家份额大一家增速快：份额大与增长快是两回事
+    - title: 先对齐再比，对不齐的不是比较
+      content: 先对齐再比；对不齐的数字不是比较，是对照
+  - id: 05-survey-sampling
+    title: 问卷结果可信不可信，先看样本怎么抽的
+    value: 判断一份调研的样本能不能代表你想问的人
+    group: 用户调研
+    sections:
+    - title: 知道结果漂亮可能是样本骗你
+      content: 结果很漂亮的问卷，和一个必须先问的问题：样本怎么抽的
+    - title: 知道四种抽法各代表谁
+      content: 简单随机、分层、系统、便利样本；各覆盖谁、多贵、偏哪
+    - title: 知道最常踩的两个坑
+      content: 覆盖偏差（样本框漏人）、自选偏差（愿意填的人和不填的人系统性不同）
+    - title: 知道抽得多不代表有代表性
+      content: 抽一千人不保证有代表性
+    - title: 知道响应率低是警报
+      content: 低于一成要高度警惕：是来的人不是那些人
+    - title: 先看样本框和响应率，再看结果
+      content: 样本框是「谁有可能被抽到」，响应率是「抽到的人里有多少人愿意答」——两个数决定这份结果能不能代表你想问的人
+  - id: 06-survey-interview-behavior-bias
+    title: 问卷、访谈、后台数据，哪个更接近真相
+    value: 知道三种数据各自偏哪边、怎么互补
+    sections:
+    - title: 知道同一个需求为什么三种说法
+      content: 同一个需求：问卷说一般、访谈说很好、行为数据说复购高
+    - title: 知道问卷偏在哪
+      content: 说出来的比想的客气：社交期望偏差与缓和选项
+    - title: 知道访谈偏在哪
+      content: 一对一，访谈者的追问与记录影响判断
+    - title: 知道后台数据缺什么
+      content: 记了买，没记为什么；看不到看了没买、比了没买
+    - title: 知道三个方向相反所以能互补
+      content: 问卷偏保守、访谈偏热情、行为数据缺动机，所以能互相补，但不能互相替代
+    - title: 先看每个数从哪来、偏哪边
+      content: 先看每个数从哪来、偏哪边，再决定信谁
+  - id: 07-demand-intensity-ranking
+    title: 五个卖点只能做一个，按什么排
+    value: 给需求排序时用对的方法，说得清依据
+    sections:
+    - title: 知道为什么不能五个都做
+      content: 五个卖点都说自己重要，只能选一个先做
+    - title: 知道平均分为什么用不了
+      content: 「重要」不是能平均的量，平均之后每个数都没信息量
+    - title: 知道三个能用的强度指标
+      content: 优先级排序、强度分布、支付意愿
+    - title: 知道强度和规模不是一回事
+      content: 大需求可能强度低，小需求可能强度高
+    - title: 五个卖点排出来的第一名反了
+      content: 五个卖点用平均分排出的第一名，与验证后不是同一个
+    - title: 排序先说清按什么排
+      content: 排序先说清按什么排：强度、规模、支付意愿是三把尺
+  - id: 08-share-denominator
     title: 你的份额和别人比之前，先说清分母
+    value: 报任何一个份额之前，能说清分母是谁、分子装了什么
+    group: 方法论
     sections:
     - title: 知道同一句话能指四件事
       content: 「我们线上占比 23%」——投资人问：在什么的 23%
@@ -205,8 +329,9 @@ series:
       content: 分母是谁、分子装了什么、我跟它在同一个框里吗
     - title: 你报的是「某个框里的 23%」
       content: 你报出去的是「在某个框里的 23%」
-  - id: 02-panel-vs-census-bias
+  - id: 09-panel-vs-census-bias
     title: 调研数据和官方数据，哪个更可信
+    value: 知道这两类数各自偏哪边，什么时候该信哪个
     sections:
     - title: 知道两个数打架时先别急着信一个
       content: 两个数打架：不是谁更准，是谁漏了谁
@@ -231,9 +356,10 @@ series:
     - title: 知道两种数一起错的时候
       content: 样本老化又遇上定义窄，两个数一起错，而且方向相反看不出来
     - title: 先问谁数的、漏了谁，再问准不准
-      content: 先问谁数的、漏了谁，再问准不准
-  - id: 03-cross-source-triangulation
+      content: 问三句：谁数的、漏了谁、覆盖的是哪一年。答不上来，这个数就不能拿去做决策
+  - id: 10-cross-source-triangulation
     title: 一个数敢不敢用，先找第二个来源对一遍
+    value: 会给关键数字配第二个来源，知道不一致时先查什么
     sections:
     - title: 知道两个数差三成时先查什么
       content: 第三方说一个数，公司后台说另一个数，差三成
@@ -249,9 +375,10 @@ series:
       - title: 查时点
         content: 季末快照还是月均
     - title: 第二个来源是纠错工具，不是装饰
-      content: 第二个来源是纠错工具，不是装饰
-  - id: 04-coverage-gaps
+      content: 两个来源一致，说明两边的口径和覆盖差不多；不一致，先查口径再查时点。关键是知道错在哪一边
+  - id: 11-coverage-gaps
     title: 这个数漏了谁，用之前先看一眼
+    value: 看出一个数覆盖了谁、没覆盖谁，并在图上标出来
     sections:
     - title: 知道这个数漏了谁
       content: 一张看起来很全的图，图里没画的那部分才是问题
@@ -264,9 +391,10 @@ series:
     - title: 知道怎么把漏掉的部分标出来
       content: 加注释说明覆盖范围；缺口大就断开，别用直线连过去
     - title: 留白是信息，不是缺陷
-      content: 留白是信息，不是缺陷
-  - id: 05-seasonal-vs-nsa
+      content: 覆盖不足时份额类指标通常被高估、增长类通常被低估；把漏掉的部分标出来，比补一条线更有用
+  - id: 12-seasonal-vs-nsa
     title: 季调数和不季调数，别混着用
+    value: 知道两个口径为什么对不上，一张图上该用哪个
     sections:
     - title: 知道同一个月为什么差一大截
       content: 同一个月的两个数：一个涨 12%，一个涨 3%
@@ -280,181 +408,83 @@ series:
       content: 各自对应哪个口径，为什么旺季的环比跌是正常的
     - title: 一张图只用一种口径
       content: 一张图只用一种口径，图注写明是哪种
-  - id: 12-category-entry-price-bands-promo-cadence
-    title: 这个品类，价格怎么排，促销打多狠
-    sections:
-    - title: 先找到你在品类里的位置
-      content: 这个品类里我的价格带在哪儿——没有价格带的讨论全是空话
-    - title: 先把「这个品类」框住
-      content: 按卖什么算还是按怎么卖算；含不含服务与安装
-    - title: 价格带按销量切，不按感觉切
-      content: 按销量的四分位切，不拍脑袋定三档
-    - title: 促销打多狠，你自己心里有数
-      content: 一年几次、每次多久、力度多大；要能被预测
-    - title: 促销集中在哪一档，说明什么
-      content: 促销多集中在中间那一档清库存；最高档少打折，免得伤定位
-    - title: 旺季淡季差多少
-      content: 从月度序列里读出来，季调数在这里有用
-    - title: 边界、价格带、促销节奏、季节性
-      content: 边界、价格带、促销节奏、季节性四件事
-- id: 3-competitor
-  title: 竞争对手
+- id: 3-experiment
+  stage: 怎么扰动
+  title: 实验设计
+  scene: 想知道是不是广告干的，一测就出问题
   articles:
-  - id: 06-competitor-entry-schema
-    title: 写竞品，别人才核得了你的数
+  - id: 01-what-a-control-group-is
+    title: 对照组该怎么定
+    value: 知道对照组该长什么样，以及几种常见的错法
     sections:
-    - title: 知道半张表为什么没人能用
-      content: 做了一半的竞品表：名字有了，份额那格是空的
-    - title: 知道一条竞品条目要填哪些
-      content: 主体、品类、规模与份额、增速、价格带、投放强度、声量与情绪、来源与日期
-    - title: 知道每一格都要交代来源
-      content: 份额要有分母；价格带要写取哪天哪些渠道；投放强度要标明是公开信号还是估算
-    - title: 知道每一格都要标截止日期
-      content: 每格要有截止日期；过期的标出来，不要删——删掉以后分不清「没有」和「还没查」
-    - title: 知道查不到就空着别填推算值
-      content: 宁可写「公开渠道查不到」，也不用一个推算值填进去
-    - title: 能被别人查、别人改，靠来源口径时间
-      content: 能被别人查、别人改，靠的是来源、口径、时间
-  - id: 07-head-to-head-share-and-growth
-    title: 两家公司怎么比，才不算比错
+    - title: 知道为什么切一半城市结果会作废
+      content: 切了一半城市，结果没法用
+    - title: 知道对照组要满足四条
+      content: 随机可比、时间同步、其余无差别、样本够
+    - title: 知道三种最常见的错对照
+      content: 拿停投前后比、拿隔壁城市比、把同期没投的人当对照
+    - title: 知道两种样本不对齐
+      content: 两边投放密度不同；两边本来就不同源
+    - title: 一次因为对照不合格作废的投放
+      content: 一次因样本不均衡作废的投放
+    - title: 没有对照就没有增量；对照不合格比没有更糟
+      content: 没有对照组，你只能看到「有广告的人」和「没广告的人」的差别，看不到广告的功劳
+  - id: 02-sample-size-and-power
+    title: 样本太少，结论会反着
+    value: 知道差多少算够，为什么小样本会把方向搞反
     sections:
-    - title: 知道为什么每家都觉得自己领先
-      content: 每家公司都拿着自己那份材料说自己领先
-    - title: 知道并排比只比这三样
-      content: 规模、份额、增速，各自要什么口径才可比
-    - title: 知道分母不对齐就不能比
-      content: 品类范围不同则两个数不能比
-    - title: 知道增速要对同一段时间
-      content: 起止点不同、会计年度不同，两个坑
-    - title: 一家份额大，一家增速快
-      content: 一家份额大一家增速快：份额大与增长快是两回事
-    - title: 先对齐再比，对不齐的不是比较
-      content: 先对齐再比；对不齐的数字不是比较，是对照
-- id: 4-user
-  title: 客户
-  articles:
-  - id: 08-survey-sampling
-    title: 问卷结果可信不可信，先看样本怎么抽的
+    - title: 知道小实验的漂亮数字为什么可能是反的
+      content: 小实验得了个漂亮的数
+    - title: 知道样本量决定你能看见多小的差别
+      content: 差别越小要看得越准，样本就得越大
+    - title: 知道方向为什么会反
+      content: 小样本下估计值的随机波动可以盖过真效果
+    - title: 知道事前算还是事后算
+      content: 事后算的区间通常宽到没用
+    - title: 跑了三天的小实验，数字是反的
+      content: 跑了三天的小实验
+    - title: 先估样本量，再开跑
+      content: 样本量不够不是「结论弱一点」，是可能把方向都搞反
+  - id: 03-multiple-testing
+    title: 测的组合太多，会看到假效果
+    value: 知道测了一堆组合以后该怎么读结果
     sections:
-    - title: 知道结果漂亮可能是样本骗你
-      content: 结果很漂亮的问卷，和一个必须先问的问题：样本怎么抽的
-    - title: 知道四种抽法各代表谁
-      content: 简单随机、分层、系统、便利样本；各覆盖谁、多贵、偏哪
-    - title: 知道最常踩的两个坑
-      content: 覆盖偏差（样本框漏人）、自选偏差（愿意填的人和不填的人系统性不同）
-    - title: 知道抽得多不代表有代表性
-      content: 抽一千人不保证有代表性
-    - title: 知道响应率低是警报
-      content: 低于一成要高度警惕：是来的人不是那些人
-    - title: 先看样本框和响应率，再看结果
-      content: 先看样本框和响应率，再看结果
-  - id: 09-survey-interview-behavior-bias
-    title: 问卷、访谈、后台数据，哪个更接近真相
+    - title: 知道三个「显著」是怎么来的
+      content: 测了二十个组合，三个看着显著
+    - title: 知道假阳性从哪来
+      content: 测得越多，纯靠运气就越容易出现「显著」
+    - title: 知道组数翻倍假阳性跟着涨
+      content: 组数翻几倍，假阳性的个数跟着涨
+    - title: 知道三种收拾办法
+      content: 预先定好要看哪几个、校正、用统一分组的检验
+    - title: 先定要问的问题，再决定测多少组
+      content: 先定好要看哪几个组合，再去看结果；反过来就容易被那几个「显著」带走
+  - id: 04-confidence-intervals
+    title: 一个数，要配一个区间
+    value: 不再只报一个数，习惯带上区间
     sections:
-    - title: 知道同一个需求为什么三种说法
-      content: 同一个需求：问卷说一般、访谈说很好、行为数据说复购高
-    - title: 知道问卷偏在哪
-      content: 说出来的比想的客气：社交期望偏差与缓和选项
-    - title: 知道访谈偏在哪
-      content: 一对一，访谈者的追问与记录影响判断
-    - title: 知道后台数据缺什么
-      content: 记了买，没记为什么；看不到看了没买、比了没买
-    - title: 知道三个方向相反所以能互补
-      content: 问卷偏保守、访谈偏热情、行为数据缺动机，所以能互相补，但不能互相替代
-    - title: 先看每个数从哪来、偏哪边
-      content: 先看每个数从哪来、偏哪边，再决定信谁
-  - id: 10-demand-intensity-ranking
-    title: 五个卖点只能做一个，按什么排
-    sections:
-    - title: 知道为什么不能五个都做
-      content: 五个卖点都说自己重要，只能选一个先做
-    - title: 知道平均分为什么用不了
-      content: 「重要」不是能平均的量，平均之后每个数都没信息量
-    - title: 知道三个能用的强度指标
-      content: 优先级排序、强度分布、支付意愿
-    - title: 知道强度和规模不是一回事
-      content: 大需求可能强度低，小需求可能强度高
-    - title: 五个卖点排出来的第一名反了
-      content: 五个卖点用平均分排出的第一名，与验证后不是同一个
-    - title: 排序先说清按什么排
-      content: 排序先说清按什么排：强度、规模、支付意愿是三把尺
-- id: 5-ad
-  title: 广告投放
-  articles:
-  - id: 01-reported-cpm-vs-negotiated-cpm
-    title: 渠道报的 CPM，和你谈下来的，为什么不一样
-    sections:
-    - title: 知道四十五和六十差在哪
-      content: 报表四十五，谈到六十
-    - title: 知道 CPM 有三个口径
-      content: 按展示算、按可见算、按实际可见时长算；再对上千次曝光还是万次
-    - title: 知道谈价之前先问这三样
-      content: 口径、折扣位置、返点还是价外返、有效期
-    - title: 同一个渠道的两种 CPM
-      content: 同一个渠道，报表与议价 CPM 差三成
-    - title: 先问口径，再谈价
-      content: 先问口径，再谈价
-  - id: 02-promotion-pulls-demand-forward
-    title: 促销带来的增长，有多少是真的
-    sections:
-    - title: 知道促销周涨的四成有多少是真的
-      content: 促销周涨了四成
-    - title: 知道促销把后面的单挪到了前面
-      content: 促销期的量有一部分是从后面挪过来的
-    - title: 知道要看促销后的三周
-      content: 促销后的三周，和前面对应的三周
-    - title: 知道真增量怎么拆出来
-      content: 把两段一起看，找有没有回补
-    - title: 促销周涨四成，三周后掉回原位
-      content: 促销周涨四成，接下来三周掉回原位
-    - title: 促销的钱，要用促销后的账算
-      content: 促销的钱，要用促销后的账算
-  - id: 03-creative-fatigue-ctr-decay
-    title: 素材什么时候该换
-    sections:
-    - title: 知道 CTR 为什么会自己往下掉
-      content: 同一张图，CTR 一路掉
-    - title: 知道疲劳是怎么发生的
-      content: 反复曝光同一批人，注意力耗掉
-    - title: 知道疲劳曲线长什么样
-      content: 陡降后趋缓，跟饱和曲线不是一回事
-    - title: 知道什么时候该换素材
-      content: CTR 掉到素材初期的一半以下
-    - title: 同一张素材跑了六周
-      content: 同一张素材跑了六周
-    - title: 按素材的寿命排期，别一个投到底
-      content: 按素材的寿命排期，不要一个素材投到底
-  - id: 04-geo-targeting-cost-map
-    title: 不同地区投广告，贵的贵在哪
-    sections:
-    - title: 知道两地 CPM 差三倍差在哪
-      content: 同一份预算，两地 CPM 差三倍
-    - title: 知道一张地域图上要看哪几样
-      content: CPM、转化率、竞争密度、库存
-    - title: 知道便宜不等于划算
-      content: CPM 低但转化也低；竞争密度高的地区贵但抢量快
-    - title: 两地 CPM 差三倍的一份计划
-      content: 一份两地 CPM 差三倍的投放计划
-    - title: 地域要连转化一起看，不能只比 CPM
-      content: 地域要连转化一起看，不能只比 CPM
-  - id: 05-budget-pacing-even-vs-weekend
-    title: 同样的钱，每天花和周末花不一样
-    sections:
-    - title: 知道节奏为什么能改结果
-      content: 每天一千和周末一次七千
-    - title: 知道两种节奏各是什么样
-      content: 均匀花与集中花
-    - title: 知道节奏怎么影响转化
-      content: 集中时段的竞价环境、用户的购买节奏、库存
-    - title: 两周同样预算，两种花法
-      content: 两周同样预算，两种节奏
-    - title: 节奏是变量，不是执行细节
-      content: 节奏是变量，不是执行细节
-- id: 6-result
-  title: 投放效果
+    - title: 知道为什么 4.0 后面要跟一个区间
+      content: ROI 4.0，那区间呢
+    - title: 知道点估计是最容易猜到的那个数
+      content: 它是可能性最高的那个值，不是最靠得住的数
+    - title: 知道区间在说什么
+      content: 重复同样的实验时，有多少比例的结果落在这个范围里
+    - title: 知道区间宽窄由什么决定
+      content: 样本量、变异程度、效应大小
+    - title: 知道区间重叠了能不能比
+      content: 能，差多少才是重点
+    - title: ROI 4.0，区间从 1.2 到 6.8
+      content: 一个 ROI 点估计 4.0、区间从 1.2 到 6.8 的渠道
+    - title: 报数带上区间
+      content: 一个数配一个区间：点估计是最好的猜，区间才是它有多靠得住
+- id: 4-analytics
+  stage: 怎么读
+  title: 效果分析
+  scene: 数字到手了，读不出意思
   articles:
   - id: 01-spend-and-revenue-together
     title: 收入减广告费，不等于赚
+    value: 能把花费和收入放进同一张表，算出自己的真实账
     sections:
     - title: 知道流水好看也可能没赚钱
       content: 流水很好看
@@ -472,9 +502,10 @@ series:
     - title: 一家毛利被投放吃掉的店
       content: 一家毛利被投放吃掉的独立站
     - title: 收入减花费不等于赚，还要再减成本
-      content: 收入减花费不等于赚，还要再减成本
+      content: 三笔账要按同一个时间窗、同一套口径对齐，否则算出来的赚是假的
   - id: 02-roi-ranking-vs-budget-allocation
     title: ROI 最高的渠道，不该加最多钱
+    value: 知道 ROI 排名和加钱顺序不是一回事
     sections:
     - title: 知道 ROI 排名为什么不能当加钱顺序
       content: ROI 最高的渠道该加钱吗
@@ -485,9 +516,10 @@ series:
     - title: 四个渠道，最高的那个已经撞到饱和
       content: 四个渠道，ROI 最高那个已经撞到饱和
     - title: 排序看平均，加钱看边际
-      content: 排序看平均，加钱看边际
+      content: 平均 ROI 告诉你过去怎么样，边际 ROI 告诉你再加一块会怎么样——加钱看后者
   - id: 03-platform-metrics-vs-incremental-metrics
     title: 平台报的数字，和真实效果不是一回事
+    value: 手里有两套数时，知道怎么并列而不混用
     sections:
     - title: 知道两套数该怎么并排放
       content: 两套数并排放着，怎么并列而不混用
@@ -500,9 +532,10 @@ series:
     - title: 知道什么时候用哪一套
       content: 谈平台内的优化用平台口径，谈该不该继续花用增量口径
     - title: 两本账各自记，不要合并成一笔
-      content: 两本账各自记，不要合并成一笔
+      content: 并排写、标口径与日期、不做加总；两套数混进一个 KPI，账就没法核了
   - id: 04-marginal-roi-decay
     title: 加预算之前，先看边际回报
+    value: 能画出自己渠道的边际曲线，读出拐点
     sections:
     - title: 知道平均好看不代表还能加
       content: 平均 ROI 稳定在 4，很好看
@@ -518,6 +551,7 @@ series:
       content: 画自己的边际曲线，读拐点
   - id: 05-did-it-work-three-weeks-later
     title: 效果多久才出来，别急着下结论
+    value: 知道效果什么时候才算完，以及怎么判断
     sections:
     - title: 知道效果没出来不等于没效果
       content: 第三周的数字回来了
@@ -531,71 +565,93 @@ series:
       content: 一次大促的效果，第三周才显形
     - title: 效果什么时候算完，要先定窗口
       content: 效果什么时候才算完，要先定窗口
-  - id: 01-what-a-control-group-is
-    title: 对照组该怎么定
+- id: 5-media
+  stage: 怎么投
+  title: 投放分析
+  scene: 这一笔投放本身的数不对劲
+  articles:
+  - id: 01-reported-cpm-vs-negotiated-cpm
+    title: 渠道报的 CPM，和你谈下来的，为什么不一样
+    value: 能问对渠道报价里那个 CPM 是怎么算的
     sections:
-    - title: 知道为什么切一半城市结果会作废
-      content: 切了一半城市，结果没法用
-    - title: 知道对照组要满足四条
-      content: 随机可比、时间同步、其余无差别、样本够
-    - title: 知道三种最常见的错对照
-      content: 拿停投前后比、拿隔壁城市比、把同期没投的人当对照
-    - title: 知道两种样本不对齐
-      content: 两边投放密度不同；两边本来就不同源
-    - title: 一次因为对照不合格作废的投放
-      content: 一次因样本不均衡作废的投放
-    - title: 没有对照就没有增量；对照不合格比没有更糟
-      content: 没有对照就没有增量；对照不合格比没有更糟
-  - id: 02-sample-size-and-power
-    title: 样本太少，结论会反着
+    - title: 知道四十五和六十差在哪
+      content: 报表四十五，谈到六十
+    - title: 知道 CPM 有三个口径
+      content: 按展示算、按可见算、按实际可见时长算；再对上千次曝光还是万次
+    - title: 知道谈价之前先问这三样
+      content: 口径、折扣位置、返点还是价外返、有效期
+    - title: 同一个渠道的两种 CPM
+      content: 同一个渠道，报表与议价 CPM 差三成
+    - title: 先问口径，再谈价
+      content: 报表的 CPM 和议价的 CPM 不是同一个数，谈之前先问清是哪个口径、返点在哪一层
+  - id: 02-promotion-pulls-demand-forward
+    title: 促销带来的增长，有多少是真的
+    value: 促销结束后能看出真实影响，而不是把提前的量算成增量
     sections:
-    - title: 知道小实验的漂亮数字为什么可能是反的
-      content: 小实验得了个漂亮的数
-    - title: 知道样本量决定你能看见多小的差别
-      content: 差别越小要看得越准，样本就得越大
-    - title: 知道方向为什么会反
-      content: 小样本下估计值的随机波动可以盖过真效果
-    - title: 知道事前算还是事后算
-      content: 事后算的区间通常宽到没用
-    - title: 跑了三天的小实验，数字是反的
-      content: 跑了三天的小实验
-    - title: 先估样本量，再开跑
-      content: 先估样本量，再开跑
-  - id: 03-multiple-testing
-    title: 测的组合太多，会看到假效果
+    - title: 知道促销周涨的四成有多少是真的
+      content: 促销周涨了四成
+    - title: 知道促销把后面的单挪到了前面
+      content: 促销期的量有一部分是从后面挪过来的
+    - title: 知道要看促销后的三周
+      content: 促销后的三周，和前面对应的三周
+    - title: 知道真增量怎么拆出来
+      content: 把两段一起看，找有没有回补
+    - title: 促销周涨四成，三周后掉回原位
+      content: 促销周涨四成，接下来三周掉回原位
+    - title: 促销的钱，要用促销后的账算
+      content: 看促销后的三周和前面对应的三周；没有回补，涨的才是真的
+  - id: 03-creative-fatigue-ctr-decay
+    title: 素材什么时候该换
+    value: 知道素材的疲劳曲线，以及什么时候该换
     sections:
-    - title: 知道三个「显著」是怎么来的
-      content: 测了二十个组合，三个看着显著
-    - title: 知道假阳性从哪来
-      content: 测得越多，纯靠运气就越容易出现「显著」
-    - title: 知道组数翻倍假阳性跟着涨
-      content: 组数翻几倍，假阳性的个数跟着涨
-    - title: 知道三种收拾办法
-      content: 预先定好要看哪几个、校正、用统一分组的检验
-    - title: 先定要问的问题，再决定测多少组
-      content: 先定要问的问题，再决定测多少组
-  - id: 04-confidence-intervals
-    title: 一个数，要配一个区间
+    - title: 知道 CTR 为什么会自己往下掉
+      content: 同一张图，CTR 一路掉
+    - title: 知道疲劳是怎么发生的
+      content: 反复曝光同一批人，注意力耗掉
+    - title: 知道疲劳曲线长什么样
+      content: 陡降后趋缓，跟饱和曲线不是一回事
+    - title: 知道什么时候该换素材
+      content: CTR 掉到素材初期的一半以下
+    - title: 同一张素材跑了六周
+      content: 同一张素材从第一周到第六周，CTR 掉了一半多；疲劳不是错觉，是重复曝光的必然
+    - title: 按素材的寿命排期，别一个投到底
+      content: 按素材的寿命排期，不要一个素材投到底
+  - id: 04-geo-targeting-cost-map
+    title: 不同地区投广告，贵的贵在哪
+    value: 能读一张地域成本图，知道贵在哪儿
     sections:
-    - title: 知道为什么 4.0 后面要跟一个区间
-      content: ROI 4.0，那区间呢
-    - title: 知道点估计是最容易猜到的那个数
-      content: 它是可能性最高的那个值，不是最靠得住的数
-    - title: 知道区间在说什么
-      content: 重复同样的实验时，有多少比例的结果落在这个范围里
-    - title: 知道区间宽窄由什么决定
-      content: 样本量、变异程度、效应大小
-    - title: 知道区间重叠了能不能比
-      content: 能，差多少才是重点
-    - title: ROI 4.0，区间从 1.2 到 6.8
-      content: 一个 ROI 点估计 4.0、区间从 1.2 到 6.8 的渠道
-    - title: 报数带上区间
-      content: 报数带上区间
-- id: 7-budget
-  title: 预算分配
+    - title: 知道两地 CPM 差三倍差在哪
+      content: 同一份预算，两地 CPM 差三倍
+    - title: 知道一张地域图上要看哪几样
+      content: CPM、转化率、竞争密度、库存
+    - title: 知道便宜不等于划算
+      content: CPM 低但转化也低；竞争密度高的地区贵但抢量快
+    - title: 两地 CPM 差三倍的一份计划
+      content: 一份两地 CPM 差三倍的投放计划
+    - title: 地域要连转化一起看，不能只比 CPM
+      content: CPM 低但转化也低，那个便宜是假的；竞争密度高的地区贵，但抢量快
+  - id: 05-budget-pacing-even-vs-weekend
+    title: 同样的钱，每天花和周末花不一样
+    value: 知道花钱的节奏本身会改结果
+    sections:
+    - title: 知道节奏为什么能改结果
+      content: 每天一千和周末一次七千
+    - title: 知道两种节奏各是什么样
+      content: 均匀花与集中花
+    - title: 知道节奏怎么影响转化
+      content: 集中时段的竞价环境、用户的购买节奏、库存
+    - title: 两周同样预算，两种花法
+      content: 两周同样预算，两种节奏
+    - title: 节奏是变量，不是执行细节
+      content: 同样一周七千块，每天一千和周末一次花完，成交数不一样
+- id: 6-optimization
+  stage: 怎么挪
+  title: 预算优化
+  scene: 几个渠道之间，不知道钱往哪放
   articles:
   - id: 01-equal-marginal-returns
     title: 钱怎么分，才不会白花
+    value: 知道在什么条件下各渠道边际拉平就是最优
     sections:
     - title: 知道钱该加到哪
       content: 这笔钱该加到哪
@@ -609,6 +665,7 @@ series:
       content: 拉平是判据不是结果；拉平了还要看绝对值够不够
   - id: 02-state-constraints-first
     title: 算最优之前，先把限制列出来
+    value: 动优化之前先把约束列全
     sections:
     - title: 知道为什么算出来的最优做不到
       content: 算出来的最优根本做不到
@@ -619,9 +676,10 @@ series:
     - title: 一个算出来、做不到的最优解
       content: 一个最优解在现实里做不到的预算方案
     - title: 先列约束，再解
-      content: 先列约束，再解
+      content: 约束没列全，解算器会给你一个违反现实的最优解——它不知道你有人手和库存限制
   - id: 03-after-the-shift-what-goes-wrong
     title: 挪完预算，要复查两件事
+    value: 挪完预算以后能自己查一遍
     sections:
     - title: 知道钱挪了为什么结果没变好
       content: 钱挪了，结果没变好
@@ -633,11 +691,14 @@ series:
       content: 一次挪钱之后，总量没变、只有结构变了
     - title: 挪完预算先查这两件事
       content: 挪完预算要自查这两件事
-- id: 8-brand
-  title: 品牌
+- id: 7-visibility
+  stage: 看得见吗
+  title: 品牌可见度
+  scene: 想知道品牌被多少人看见、被怎么评价
   articles:
-  - id: 13-brand-entry-public-signals
+  - id: 01-brand-entry-public-signals
     title: 你的牌子现在什么位置，能查到的公开信号都在这儿
+    value: 用公开信号查出一个品牌的位置
     sections:
     - title: 知道品牌位置能从哪些公开信号看
       content: 我这个牌子现在什么位置——每个坐标都得是公开可查的数
@@ -654,9 +715,10 @@ series:
     - title: 知道财报里能查到什么
       content: 财报里能拿到什么（广告支出、销售额、区域拆分），拿不到什么（单品牌颗粒度不够）
     - title: 品牌条目是公开信号的目录，不是评价表
-      content: 品牌条目是公开信号的目录，不是评价表
-  - id: 01-visibility-three-measures
+      content: 它只说这个牌子在哪、有多大；该不该学它哪招，不在这张表里
+  - id: 02-visibility-three-measures
     title: 品牌有多响，用三把尺子量
+    value: 知道品牌有多响该看哪三个数
     sections:
     - title: 知道排名高为什么不等于卖得多
       content: 排名第一，却没人买
@@ -674,9 +736,10 @@ series:
     - title: 搜索第一，AI 答案里没人提
       content: 搜索排第一、AI 答案里几乎不被提起的品牌
     - title: 可见度不是一个数，是三个
-      content: 可见度不是一个数，是三个
-  - id: 02-share-of-voice-seo-and-geo
+      content: 份额、位次、情绪各说明一件事，三个都报，缺一个结论就站不住
+  - id: 03-share-of-voice-seo-and-geo
     title: 搜索里和 AI 回答里，各占多少
+    value: 分别算出搜索里和 AI 答案里的份额
     sections:
     - title: 知道两种答案为什么对不上
       content: 搜索里排第一，AI 答案里没影
@@ -690,8 +753,9 @@ series:
       content: 同一个品类问题，搜索结果与三个 AI 答案里的品牌份额
     - title: 两种份额分开报，不要合成一个数
       content: 两种份额分开报，不要合成一个「可见度」
-  - id: 03-same-question-two-answers
+  - id: 04-same-question-two-answers
     title: 问 AI 同一个问题，答案会变
+    value: 知道 GEO 的数该怎么测才算数
     sections:
     - title: 知道同一道题为什么三个答案
       content: 同一道「推荐跑鞋」问了三次，三个答案
@@ -704,9 +768,10 @@ series:
     - title: 同一道题问五次，五个答案
       content: 同一道题问五次出来的五个答案
     - title: GEO 的数必须重复测，单次不算数
-      content: GEO 的数必须重复测，单次不算数
-  - id: 04-volume-without-sentiment-is-blind
+      content: 同一道题问一次的结果不能当数；要问够多次，报提及次数和位次分布，还要报区间
+  - id: 05-volume-without-sentiment-is-blind
     title: 提到你的次数，和说的是好话坏话
+    value: 知道声量为什么要带情绪一起出
     sections:
     - title: 知道量翻倍可能不是好事
       content: 提及量翻倍，全是骂声
@@ -717,9 +782,10 @@ series:
     - title: 提及量翻倍，评论全在骂
       content: 一次提及量翻倍、评论全在骂的舆论
     - title: 声量必须带情绪一起出
-      content: 声量必须带情绪一起出
-  - id: 05-brand-terms-vs-category-terms
+      content: 提及量只说明有多少人提到你，不说明他们是好是坏；情绪单独一列，来源和打标方法要写清
+  - id: 06-brand-terms-vs-category-terms
     title: 品牌词和品类词，看的是两件事
+    value: 分清品牌词和品类词各自说明什么
     sections:
     - title: 知道一个涨一个跌说明什么
       content: 品牌词在涨，品类词在跌
@@ -728,11 +794,12 @@ series:
     - title: 知道各自说明什么
       content: 品牌词看品牌健康，品类词看市场机会
     - title: 一个品牌词在涨、品类词在跌的季度
-      content: 一个品牌词在涨、品类词在跌的季度
+      content: 品牌词的量和品类词的量放在一起，会得到一个没人能解释的数
     - title: 两类词要分开看，分开报
-      content: 两类词要分开看，分开报
-  - id: 06-keyword-list-triage
+      content: 品牌词的量和品类词的量放在一起，会得到一个没人能解释的数
+  - id: 07-keyword-list-triage
     title: 词表排对，后面的数才对
+    value: 排出一张能用的关键词表
     sections:
     - title: 知道词表为什么越加越长越没用
       content: 词表越加越长
@@ -741,9 +808,10 @@ series:
     - title: 三百个词，最后剩十二个
       content: 一张从三百个词开始、最后剩十二个的词表
     - title: 排词表的时间比加词的时间长
-      content: 排词表的时间比加词的时间长
-  - id: 07-the-five-column-table
+      content: 三百个词里真正有用的可能只有十二个；删词比加词更值钱
+  - id: 08-the-five-column-table
     title: 交过来的表，要看哪几列
+    value: 知道交过来的表缺哪一列就不能用
     sections:
     - title: 知道拿到表先看有没有缺列
       content: 表到了，看不懂
@@ -760,8 +828,9 @@ series:
       content: 没查到不等于零：空值、NA 与不写这一行是三件事
     - title: 缺一列这张表就不能用
       content: 缺一列这张表就不能用，先补齐再分析
-  - id: 08-four-lines-side-by-side
+  - id: 09-four-lines-side-by-side
     title: 把四个数放一起看，才知道哪个在动
+    value: 把四条线索并排着读
     sections:
     - title: 知道四个指标为什么会各说各话
       content: 四个指标各说各话
@@ -770,23 +839,17 @@ series:
     - title: 知道并排看要问哪三个问题
       content: 谁先动、动的方向一不一样、有没有互相替代
     - title: 四条线并排的一个季度
-      content: 四条线并排的一个季度
+      content: 四个数各自看都正常，四个放一起才看得出哪个在动、哪个在互相替代
     - title: 单看一条线最容易看错
       content: 单看一条线最容易看错，四个放一起才知道哪个在动
-- id: 9-glossary
-  title: 名词解释
+- id: 8-toolbox
+  stage: 查字典
+  title: 工具箱
+  scene: 遇到一个不认识的词
   articles:
-  - id: 00-toolbox-overview
-    title: 八个工具，一张表
-    sections:
-    - title: 知道八个工具各管什么
-      content: 工具、干什么、输入、输出、在哪篇用过
-    - title: 知道每个工具管哪一步
-      content: 哪一步解决哪个问题
-    - title: 知道哪几篇讲过
-      content: 每篇列出用了哪几个
   - id: 01-attribution
     title: 归因：把功劳分给各个接触点
+    value: 看懂归因在做什么，它什么时候会骗你
     sections:
     - title: 知道归因在做什么
       content: 把转化按接触点分摊
@@ -798,6 +861,7 @@ series:
       content: 1-overview/01、4-analytics/03
   - id: 02-incrementality-testing
     title: 增量实验：拿一块地方做对照
+    value: 看懂增量实验的读法与代价
     sections:
     - title: 知道增量实验在做什么
       content: 停投后少掉的单就是增量
@@ -809,6 +873,7 @@ series:
       content: 1-overview/01、1-overview/05、3-experiment/01
   - id: 03-mmm-contribution
     title: MMM 贡献分解：把长期贡献拆开
+    value: 看懂 MMM 拆出来的贡献是怎么来的
     sections:
     - title: 知道 MMM 贡献分解在做什么
       content: 在多个渠道的回归里拆出各自贡献
@@ -820,6 +885,7 @@ series:
       content: 4-analytics/04
   - id: 04-adstock-decay
     title: Adstock 衰减：广告的效果会拖多久
+    value: 看懂广告效果随时间衰减的形状
     sections:
     - title: 知道 Adstock 在做什么
       content: 把过去的投放效果按衰减曲线累积到今天
@@ -831,6 +897,7 @@ series:
       content: 4-analytics/05、3-mmm-contribution
   - id: 05-hill-saturation-curve
     title: Hill 饱和曲线：效果怎么撞天花板
+    value: 看懂饱和曲线两个参数各管什么
     sections:
     - title: 知道饱和曲线在做什么
       content: 效果随投入增加但增速递减
@@ -842,6 +909,7 @@ series:
       content: 1-overview/03、4-analytics/04
   - id: 06-marginal-vs-average-roi
     title: 边际 ROI 和平均 ROI：两个不同的数
+    value: 不会再把这两个数搞混
     sections:
     - title: 知道这两个数分别是什么
       content: 平均是总回报除以总花费，边际是最后一块钱带来的
@@ -853,6 +921,7 @@ series:
       content: 4-analytics/04、6-optimization/01
   - id: 07-equal-marginal-returns-principle
     title: 等边际原则：最优分配的判据
+    value: 知道这个原则说了什么、成立的条件是什么
     sections:
     - title: 知道这个原则说了什么
       content: 固定总量下，各渠道边际相等时总和最大
@@ -864,6 +933,7 @@ series:
       content: 6-optimization/01、6-optimization/03
   - id: 08-confidence-intervals-and-fit
     title: 置信区间和拟合度：模型能信几分
+    value: 知道一个模型的两个可信度指标各管什么
     sections:
     - title: 知道这两把尺子各量什么
       content: 区间说参数的不确定性，拟合度说模型整体的解释力

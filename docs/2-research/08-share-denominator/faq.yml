@@ -1,4 +1,4 @@
-id: x-market-2-market-01-share-denominator
+id: x-market-2-research-08-share-denominator
 
 data:
   - name:
@@ -16,7 +16,7 @@ data:
             就是你拿来除的那个总体，而且很少是显而易见的。可能是你自己的总销售额，可能是你所在品类的规模，可能是一个国家的全部零售，也可能是全网所有线上交易。四个都能算出对的数，四个都可以被说成「我们线上占比 23%」。但这个数不能在它们之间搬家。你把它报出去的时候，要把这个总体说出来：谁的销售额、哪一年、哪些行业、哪些规模的企业。
         confidence: 10
         reference:
-          - docs/2-market/01-share-denominator/cn.md
+          - docs/2-research/08-share-denominator/cn.md
 
       - id: two-versions-one-year
         question:
@@ -29,7 +29,7 @@ data:
             因为分子和分母是两个独立的选择。Eurostat 问调查范围内的每家企业：你的营业额里有多少来自网络销售。把所有网络销售都算上，欧盟 2024 年的数是营业额的 19.82%；只算卖给消费者的那部分，是 8.49%。同一个分母、同一年、同一批企业，差别只在分子。匈牙利是极端例子：营业额的 30.85% 来自网络销售，但其中只有 0.92% 是卖给消费者的，剩下的几乎全是批发商卖给零售商。
         confidence: 10
         reference:
-          - docs/2-market/01-share-denominator/cn.md
+          - docs/2-research/08-share-denominator/cn.md
 
       - id: not-in-the-frame
         question:
@@ -42,7 +42,7 @@ data:
             那这个公开份额就不是你的参照物，而把它当参照物，是人在会上吃亏最常见的方式。Eurostat 这条序列覆盖的是雇员 10 人及以上、属于 NACE C 到 E 行业的企业。八个雇员的老板的公司不在里面，做软件的不在，主要靠线下成交的品类几乎不出现。你当然还是可以拿自己跟这条线比——只要说清楚是跟哪条线比，也说清楚自己不在什么框里。
         confidence: 9
         reference:
-          - docs/2-market/01-share-denominator/cn.md
+          - docs/2-research/08-share-denominator/cn.md
 
       - id: jagged-series
         question:
@@ -55,7 +55,7 @@ data:
             通常两者都有，而且光看线你分不出来。德国的数从 2023 年的 27.69% 掉到 2024 年的 15.96%，2025 年又冲到 42.01%；同期西班牙从 2011 年的 18.0% 一路稳爬到 2024 年的 31.81%。真实生意不会一年掉十二个点再冲过头。这条线的跳动里，一部分是企业填报的覆盖范围、问卷版本和回答家数。要把它们分开，去看这条序列的元数据标记，别从形状上猜。
         confidence: 9
         reference:
-          - docs/2-market/01-share-denominator/cn.md
+          - docs/2-research/08-share-denominator/cn.md
 
       - id: three-questions-before-publishing
         question:
@@ -68,4 +68,4 @@ data:
             第一，分母是谁——谁的销售额、哪一年、哪些行业、哪些规模的企业。第二，分子里装了什么——B2B 算不算、只算成交还是也算浏览。第三，我跟要拿来对比的那个数，在同一个框里吗。三句都有干脆的答案，这个份额才值得被引用。哪一句只能耸肩，那就把数报出来，但别做那个比较。
         confidence: 10
         reference:
-          - docs/2-market/01-share-denominator/cn.md
+          - docs/2-research/08-share-denominator/cn.md
