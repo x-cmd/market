@@ -1,0 +1,71 @@
+id: x-market-2-research-01-share-denominator
+
+data:
+  - name:
+      en: the denominator of a market share
+      cn: 市场份额的分母
+    qa:
+      - id: what-is-the-denominator
+        question:
+          en: What counts as the denominator of a market share?
+          cn: 一个份额的分母指什么？
+        answer:
+          en: >
+            It is whatever population you divided by, and it is rarely obvious. It might be your own total sales, the size of your category, all retail in a country, or every online transaction everywhere. All four can produce a correct number and all four can be called "our online share is 23%". The number does not travel between them. When you publish one, name the population: whose sales, which year, which industries, which company sizes.
+          cn: >
+            就是你拿来除的那个总体，而且很少是显而易见的。可能是你自己的总销售额，可能是你所在品类的规模，可能是一个国家的全部零售，也可能是全网所有线上交易。四个都能算出对的数，四个都可以被说成「我们线上占比 23%」。但这个数不能在它们之间搬家。你把它报出去的时候，要把这个总体说出来：谁的销售额、哪一年、哪些行业、哪些规模的企业。
+        confidence: 10
+        reference:
+          - docs/2-research/01-share-denominator/cn.md
+
+      - id: two-versions-one-year
+        question:
+          en: Why does the same metric give two different numbers in the same year?
+          cn: 同一个指标、同一年，为什么能有两个数？
+        answer:
+          en: >
+            Because the numerator and the denominator are independent choices. Eurostat asks every enterprise in scope how much of its turnover came from web sales. Count all web sales and the EU27 figure for 2024 is 19.82% of turnover; count only the web sales made to consumers and it is 8.49%. Same denominator, same year, same enterprises — different numerator. Hungary is the extreme: 30.85% of turnover from web sales, but only 0.92% of that from selling to consumers. Almost all of the rest is wholesalers selling to retailers.
+          cn: >
+            因为分子和分母是两个独立的选择。Eurostat 问调查范围内的每家企业：你的营业额里有多少来自网络销售。把所有网络销售都算上，欧盟 2024 年的数是营业额的 19.82%；只算卖给消费者的那部分，是 8.49%。同一个分母、同一年、同一批企业，差别只在分子。匈牙利是极端例子：营业额的 30.85% 来自网络销售，但其中只有 0.92% 是卖给消费者的，剩下的几乎全是批发商卖给零售商。
+        confidence: 10
+        reference:
+          - docs/2-research/01-share-denominator/cn.md
+
+      - id: not-in-the-frame
+        question:
+          en: What if my company is not in the published statistic at all?
+          cn: 我的公司根本不在这个统计里怎么办？
+        answer:
+          en: >
+            Then the published share is not a benchmark for you, and treating it as one is the most common way people get burned in a meeting. The Eurostat series covers enterprises with 10 or more employees in NACE sections C to E. A company with eight people is not in it. A software company is not in it. A local store whose category sells mostly offline barely appears. You can still compare yourself to the line — just say which line, and say what you are not in.
+          cn: >
+            那这个公开份额就不是你的参照物，而把它当参照物，是人在会上吃亏最常见的方式。Eurostat 这条序列覆盖的是雇员 10 人及以上、属于 NACE C 到 E 行业的企业。八个雇员的老板的公司不在里面，做软件的不在，主要靠线下成交的品类几乎不出现。你当然还是可以拿自己跟这条线比——只要说清楚是跟哪条线比，也说清楚自己不在什么框里。
+        confidence: 9
+        reference:
+          - docs/2-research/01-share-denominator/cn.md
+
+      - id: jagged-series
+        question:
+          en: When a series jumps around, is that the market or the method?
+          cn: 一条线上下乱跳，是生意在动还是口径在动？
+        answer:
+          en: >
+            Usually both, and you cannot tell from the line alone. Germany's figure moved from 27.69% in 2023 to 15.96% in 2024 and then to 42.01% in 2025, while Spain climbed steadily from 18.0% in 2011 to 31.81% in 2024. Real business does not fall by twelve points in a year and then jump past it. Part of the movement is coverage, questionnaire version and how many enterprises answered. To separate them, read the metadata flags on the series instead of guessing from the shape.
+          cn: >
+            通常两者都有，而且光看线你分不出来。德国的数从 2023 年的 27.69% 掉到 2024 年的 15.96%，2025 年又冲到 42.01%；同期西班牙从 2011 年的 18.0% 一路稳爬到 2024 年的 31.81%。真实生意不会一年掉十二个点再冲过头。这条线的跳动里，一部分是企业填报的覆盖范围、问卷版本和回答家数。要把它们分开，去看这条序列的元数据标记，别从形状上猜。
+        confidence: 9
+        reference:
+          - docs/2-research/01-share-denominator/cn.md
+
+      - id: three-questions-before-publishing
+        question:
+          en: What should I check before quoting a share publicly?
+          cn: 把一个份额报出去之前，该问哪三句？
+        answer:
+          en: >
+            Who is the denominator — whose sales, which year, which industries, which company sizes. What is in the numerator — do business-to-business sales count, or only sales to consumers, only completed orders or also visits. And am I in the same frame as the number I am comparing myself to. If all three have clean answers, the share is worth quoting. If any of them is a shrug, quote the number but never the comparison.
+          cn: >
+            第一，分母是谁——谁的销售额、哪一年、哪些行业、哪些规模的企业。第二，分子里装了什么——B2B 算不算、只算成交还是也算浏览。第三，我跟要拿来对比的那个数，在同一个框里吗。三句都有干脆的答案，这个份额才值得被引用。哪一句只能耸肩，那就把数报出来，但别做那个比较。
+        confidence: 10
+        reference:
+          - docs/2-research/01-share-denominator/cn.md

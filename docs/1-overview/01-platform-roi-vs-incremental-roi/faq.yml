@@ -1,0 +1,71 @@
+id: x-market-1-overview-01-platform-roi-vs-incremental-roi
+
+data:
+  - name:
+      en: platform-reported ROI vs incremental ROI
+      cn: 平台报的 ROI 与增量 ROI
+    qa:
+      - id: what-is-incremental-roi
+        question:
+          en: What does incremental ROI actually mean?
+          cn: 增量 ROI 到底是什么意思？
+        answer:
+          en: >
+            Incremental ROI is what the ad caused, not what it touched. It is the revenue that would disappear if you turned the ad off. Orders that would have happened anyway — people who were already going to buy and merely saw your ad while searching — are not incremental. A common way to state it: stop the spend, then see which orders stop happening.
+          cn: >
+            增量 ROI 是广告「造成」的那部分，不是广告「碰到」的那部分。它等于把广告停下来之后会消失的销售额。本来就会成交的单不算增量——那些客户本来就要买，只是搜索的时候看见了你。要估它，最直接的办法就是：停掉这笔投放，再看哪些单不成交了。
+        confidence: 10
+        reference:
+          - docs/1-overview/01-platform-roi-vs-incremental-roi/cn.md
+
+      - id: is-the-platform-lying
+        question:
+          en: Is the ROI the ad platform reports wrong?
+          cn: 平台报的那个 ROI 是错的吗？
+        answer:
+          en: >
+            No, and that is the point. The platform number answers a real question — which orders had some contact with an ad — and it answers it well, because it owns the data. The incrementality test answers a different question — how many orders would not have happened without the spend. Two questions, two answers, both true. The mistake is calling both of them ROI and comparing them.
+          cn: >
+            不是，这正是要点。平台那个数回答了一个真实的问题——哪些订单跟广告有过接触——而且它答得好，因为数据就在它手里。增量测试回答的是另一个问题——停掉这笔钱，有多少单不会发生。两个问题，两个答案，都对。错的是把两个数都叫做 ROI，然后拿去比。
+        confidence: 10
+        reference:
+          - docs/1-overview/01-platform-roi-vs-incremental-roi/cn.md
+
+      - id: why-regression-overstates
+        question:
+          en: Why does the observational method overstate the effect?
+          cn: 为什么观测口径会把效果算大？
+        answer:
+          en: >
+            Exposure is not random. People who saw the ad were already more likely to buy — more likely to be on mobile, more likely to be married, more likely to be female. The advertiser cannot see who was exposed, so the difference between exposed and unexposed buyers is not the effect of the ad; it is the ad plus a pile of pre-existing differences. Regression corrects the part it can measure and leaves the rest in the number. On brand keywords, where the buyer was already searching for you, that residual is large enough to flip a negative return into a positive one.
+          cn: >
+            因为曝光不是随机的。看到广告的人，本来就更可能买——更可能用手机，更可能已婚，更可能是女性。广告主看不见谁被曝光了，所以「看到的人」和「没看到的人」之间的差距，不是广告的效果，是广告加上一堆本来就存在的差异。回归能纠正测得到的那部分，测不到的那部分留在数里。在品牌词上，买家本来就在搜你，这个残差大到足以把负的回报算成正的。
+        confidence: 9
+        reference:
+          - docs/1-overview/01-platform-roi-vs-incremental-roi/cn.md
+
+      - id: do-i-need-an-rct
+        question:
+          en: Do I need a full randomized experiment to measure this?
+          cn: 一定要做随机实验才能测出来吗？
+        answer:
+          en: >
+            No. A full random experiment is the gold standard, but most teams can afford something weaker and still useful: a small holdout. Turn the ads off in a few cities, or in one region for a few days, and compare against the rest. The comparison is imperfect — the places you pick are not identical to the ones you keep advertising in — but a held-out slice beats no slice at all. The important part is having something you can hold up against a question like "and what if we had not spent it?".
+          cn: >
+            不必。全量随机实验是最稳的标尺，但多数团队负担不起那个成本，可以用弱一点的办法：留一小块对照。在几个城市、或者一个区域停几天广告，跟其他地方比。这个比法不完美——你挑停投的那几座城市，和你继续投的那些，本来就不一样——但有一块对照，总好过一块都没有。关键是你手里得有东西，能顶得住「那如果不投会怎么样」这种追问。
+        confidence: 9
+        reference:
+          - docs/1-overview/01-platform-roi-vs-incremental-roi/cn.md
+
+      - id: brand-keyword-ads
+        question:
+          en: Is it true that brand keyword ads are worthless?
+          cn: 品牌词广告真的没用吗？
+        answer:
+          en: >
+            The eBay experiment found almost no measurable short-term benefit from brand keyword ads — but read that narrowly. Brand keyword ads mostly capture demand that already existed, which is not the same as being harmful; it is the same as being credited with something it did not create. The same paper found that non-brand ads did lift sales for new and infrequent buyers, while frequent buyers absorbed most of the spend without changing their behaviour. So the question is not whether ads work. It is which ads create demand and which ads collect it.
+          cn: >
+            eBay 那个实验发现品牌词广告几乎没有可测量的短期收益——但这句话要窄着读。品牌词广告主要是在接住已经存在的需求，这跟「有害」不是一回事，跟「把一件它没干成的事记在自己头上」是一回事。同一篇论文也发现，非品牌词广告确实能推动新用户和低频用户下单，而高频用户吃掉了大部分开支，购买行为却没变。所以问题不是广告有没有用。是哪些广告在造需求，哪些广告在收需求。
+        confidence: 9
+        reference:
+          - docs/1-overview/01-platform-roi-vs-incremental-roi/cn.md
