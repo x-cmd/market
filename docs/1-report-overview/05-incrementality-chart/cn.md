@@ -140,9 +140,9 @@ Google 有 geo-lift，Meta 有 Conversion Lift，都不假。但它们都不在�
 
 **三件不费钱的事。**
 
-第一，**留一个小对照组**。不用全城停投，挑几个城市、一块区域、一段时段停一小块就够。有对照和没对照是两个世界，怎么做见 [→ 对照组不是「没投的那群人」那么简单](../../3-experiment/01-what-a-control-group-is/cn.md)。
+第一，**留一个小对照组**。不用全城停投，挑几个城市、一块区域、一段时段停一小块就够。有对照和没对照是两个世界，怎么做见 [→ 对照组不是「没投的那群人」那么简单](../../3-experiment-design/01-what-a-control-group-is/cn.md)。
 
-第二，**别把两套账混着看**。平台报表里的那个 ROI，和你自己测出来的那个 ROI，不是一个数。详见 [→ 平台口径和增量口径，是两套账](../../4-analytics/03-platform-metrics-vs-incremental-metrics/cn.md)。
+第二，**别把两套账混着看**。平台报表里的那个 ROI，和你自己测出来的那个 ROI，不是一个数。详见 [→ 平台口径和增量口径，是两套账](../../4-performance-analysis/03-platform-metrics-vs-incremental-metrics/cn.md)。
 
 第三，**记住每种口径的偏向方向**。观测法——平台报表、最后点击归因——是**高估**。不是「稍微夸大」，是系统性地往大了算。品牌词那一块，它能把负的算成正的。
 
@@ -154,6 +154,6 @@ Google 有 geo-lift，Meta 有 Conversion Lift，都不假。但它们都不在�
 
 广告到底创造了多少，不测就不知道。不测也还有一条底线：别把收割当成创造。
 
-[→ 平台口径和增量口径，是两套账](../../4-analytics/03-platform-metrics-vs-incremental-metrics/cn.md)
+[→ 平台口径和增量口径，是两套账](../../4-performance-analysis/03-platform-metrics-vs-incremental-metrics/cn.md)
 
 **数据**：Blake, Nosko & Tadelis, *Econometrica* 83(1), 2015（eBay 随机实验）；Gordon, Zettelmeyer, Bhargava & Chapsky, *Marketing Science* 38(2), 2019（Facebook 15 个实地实验）。**复现**：图里的数是这两篇论文报告的实验结果，没有一条 x-cmd 命令能把它们重跑一遍；换成你自己的数，把链接里 `d=` 的 `series[].data` 数组改掉就行。

@@ -1,4 +1,4 @@
-# 你的份额和别人比之前，先说清分母
+# 同样一个占比，能有四种算法
 
 「我们线上占比 23%。」
 
@@ -158,6 +158,6 @@ https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E5%90%8C%E
 
 你报出去的从来不是「23%」。是「在某个框里的 23%」。框是什么，得你自己说。
 
-[→ 同一个数，用两个来源各出一次](../../2-research/10-cross-source-triangulation/cn.md) · [→ 行业条目：规模、增速、集中度](../../2-research/01-industry-entry-scale-growth-concentration/cn.md)
+[→ 同一个数，用两个来源各出一次](../../2-market-research/10-cross-source-triangulation/cn.md) · [→ 行业条目：规模、增速、集中度](../../2-market-research/01-industry-entry-scale-growth-concentration/cn.md)
 
 **数据**：Eurostat，企业 ICT 调查 `isoc_ec_evaln2`（网络销售额占营业额比重），2024 年截面与 2011–2025 时间序列，2025 年 11 月取数。**复现**：`x dbnomics data Eurostat/isoc_ec_evaln2/A.GE10.C-E.E_AWSVAL.PC_ETURN.EU27_2020`

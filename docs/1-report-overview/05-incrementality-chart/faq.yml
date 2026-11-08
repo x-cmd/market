@@ -1,4 +1,4 @@
-id: x-market-1-overview-05-incrementality-chart
+id: x-market-1-report-overview-05-incrementality-chart
 
 data:
   - name:
@@ -16,7 +16,7 @@ data:
             增量 ROI 是广告「造成」的那部分，不是广告「碰到」的那部分。它等于把广告停下来之后会消失的销售额。本来就会成交的单不算增量——那些客户本来就要买，只是搜索的时候看见了你。要估它，最直接的办法就是：停掉这笔投放，再看哪些单不成交了。
         confidence: 10
         reference:
-          - docs/1-overview/05-incrementality-chart/cn.md
+          - docs/1-report-overview/05-incrementality-chart/cn.md
 
       - id: is-the-platform-lying
         question:
@@ -29,7 +29,7 @@ data:
             不是，这正是要点。平台那个数回答了一个真实的问题——哪些订单跟广告有过接触——而且它答得好，因为数据就在它手里。增量测试回答的是另一个问题——停掉这笔钱，有多少单不会发生。两个问题，两个答案，都对。错的是把两个数都叫做 ROI，然后拿去比。
         confidence: 10
         reference:
-          - docs/1-overview/05-incrementality-chart/cn.md
+          - docs/1-report-overview/05-incrementality-chart/cn.md
 
       - id: why-regression-overstates
         question:
@@ -42,7 +42,7 @@ data:
             因为曝光不是随机的。看到广告的人，本来就更可能买——更可能用手机，更可能已婚，更可能是女性。广告主看不见谁被曝光了，所以「看到的人」和「没看到的人」之间的差距，不是广告的效果，是广告加上一堆本来就存在的差异。回归能纠正测得到的那部分，测不到的那部分留在数里。在品牌词上，买家本来就在搜你，这个残差大到足以把负的回报算成正的。
         confidence: 9
         reference:
-          - docs/1-overview/05-incrementality-chart/cn.md
+          - docs/1-report-overview/05-incrementality-chart/cn.md
 
       - id: do-i-need-an-rct
         question:
@@ -55,7 +55,7 @@ data:
             不必。全量随机实验是最稳的标尺，但多数团队负担不起那个成本，可以用弱一点的办法：留一小块对照。在几个城市、或者一个区域停几天广告，跟其他地方比。这个比法不完美——你挑停投的那几座城市，和你继续投的那些，本来就不一样——但有一块对照，总好过一块都没有。关键是你手里得有东西，能顶得住「那如果不投会怎么样」这种追问。
         confidence: 9
         reference:
-          - docs/1-overview/05-incrementality-chart/cn.md
+          - docs/1-report-overview/05-incrementality-chart/cn.md
 
       - id: brand-keyword-ads
         question:
@@ -68,4 +68,4 @@ data:
             eBay 那个实验发现品牌词广告几乎没有可测量的短期收益——但这句话要窄着读。品牌词广告主要是在接住已经存在的需求，这跟「有害」不是一回事，跟「把一件它没干成的事记在自己头上」是一回事。同一篇论文也发现，非品牌词广告确实能推动新用户和低频用户下单，而高频用户吃掉了大部分开支，购买行为却没变。所以问题不是广告有没有用。是哪些广告在造需求，哪些广告在收需求。
         confidence: 9
         reference:
-          - docs/1-overview/05-incrementality-chart/cn.md
+          - docs/1-report-overview/05-incrementality-chart/cn.md
