@@ -1,0 +1,125 @@
+id: x-market-8-analysis-toolbox-03-mmm-contribution
+
+data:
+  - name:
+      en: what MMM contribution does
+      cn: MMM 贡献分解在做什么
+    qa:
+      - id: what-mmm-decomposition-does
+        question:
+          en: What does an MMM contribution decomposition actually produce?
+          cn: MMM 贡献分解到底产出的是什么？
+        answer:
+          en: >
+            It splits a period's sales into the part that would have happened anyway and the part attributable to each advertising channel. The model is a regression: sales on one side, channel spend on the other, plus time, season, price and promotion. The gap between what the line predicts and what sales actually were becomes each channel's contribution. The word to watch is contribution. It is a relationship read out of history, not a causal effect, because nothing was held back to see what would have happened otherwise.
+          cn: >
+            它把一段时间的销售拆成「本来就会有的那部分」和「各个渠道带来的那部分」。模型是个回归：一边是销售，一边是各渠道的花费，再加上时间、季节、价格、促销这些变量。回归线预测的值跟实际销售一比，多出来或少下去的部分就是各渠道的贡献。要盯住的是「贡献」这两个字：它是从历史数据里读出来的关系，不是因果效应，因为没有什么被扣住，好让你看看不投会怎么样。
+        confidence: 10
+        reference:
+          - docs/8-analysis-toolbox/03-mmm-contribution/cn.md
+      - id: mmm-vs-attribution-vs-experiment
+        question:
+          en: What does MMM give you that attribution and experiments cannot?
+          cn: MMM 能给你什么，是归因和实验都给不了的？
+        answer:
+          en: >
+            Scope. Attribution needs a touchpoint record for a single order. An experiment needs a place you do not advertise to, and it answers one question at a time. MMM needs only many years of sales and spend, and it decomposes every channel at once, over every week in the history. That global view is the thing the other two methods cannot produce. The price is that MMM reads correlation, so it has to be calibrated against experiments before its numbers are used to move money.
+          cn: >
+            全局。归因要一单一单的接触点记录。实验要一块不投的地方，而且一次只答一个问题。MMM 只要很多年的销售和花费，就能把所有渠道、所有周次一起拆开。这个全局视角是另外两样都给不了的。代价是 MMM 读的是相关性，所以它的数在被拿去挪钱之前，得先用实验校准过。
+        confidence: 9
+        reference:
+          - docs/8-analysis-toolbox/03-mmm-contribution/cn.md
+
+  - name:
+      en: how the contribution is split
+      cn: 贡献是怎么拆的
+    qa:
+      - id: three-pieces
+        question:
+          en: What has to be in the model for the decomposition to mean anything?
+          cn: 模型里必须有哪几样，拆出来的数才立得住？
+        answer:
+          en: >
+            Three things. A baseline: the sales that would have happened with no advertising at all, which for an established brand is commonly said to be forty to seventy percent of sales. A saturation curve, because the first ten thousand and the first million of a channel are not worth the same. And a time lag, because last week's money may not show up in this week's sales, so past spend has to be carried forward with a decay curve before it can be regressed against sales. Change any one of the three and the same data decomposes into a different picture, which is why you cannot read a decomposition chart without knowing how it was built.
+          cn: >
+            三样。一个基线，也就是一条广告都不投时本来会有的销售，成熟品牌通常被说成占销售的四成到七成。一条饱和曲线，因为一个渠道的第一万块和第一百万块不值同一个钱。还有一个时滞，因为上周花的钱可能这周才见效，所以过去的花费得先按衰减曲线累积到今天，再拿去和销售做回归。这三样里换任何一样，同一份数据拆出来的图就不一样，所以看一张拆解图，不能不看它是怎么拆出来的。
+        confidence: 9
+        reference:
+          - docs/8-analysis-toolbox/03-mmm-contribution/cn.md
+      - id: baseline-is-the-hardest
+        question:
+          en: Why is the baseline the most consequential part of the decomposition?
+          cn: 为什么基线是整个拆解里最要紧的一块？
+        answer:
+          en: >
+            Because it decides how much is left for advertising to claim. If the baseline is estimated high, every channel's contribution shrinks; if it is estimated low, every channel's contribution grows. And you cannot measure it directly without actually stopping. That is why the baseline gets less scrutiny than the media numbers even though it is the largest single block on the chart, and why an MMM output should always be read together with the assumptions behind its baseline.
+          cn: >
+            因为它决定了剩给广告去认领的还有多少。基线估高了，各渠道的贡献就都缩水；估低了，就都虚胖。而它没法直接量，除非你真停投一次。所以基线拿到的审视比媒体数少得多，尽管它是图上最大的一块。这也是为什么一份 MMM 的产出必须连着它的基线假设一起看。
+        confidence: 9
+        reference:
+          - docs/8-analysis-toolbox/03-mmm-contribution/cn.md
+      - id: what-a-decomposition-looks-like
+        question:
+          en: What should a decomposition chart contain?
+          cn: 一张贡献分解图上该有什么？
+        answer:
+          en: >
+            A baseline and one number per channel, and the numbers should sum to total sales. If a hundred units of sales split into a baseline of forty-six plus twenty-nine for search, sixteen for social and nine for television, the advertising channels account for fifty-four. What the chart cannot show you is how much of that split survives a change of assumptions, so the chart alone is never enough: you need to know which baseline, which saturation curve and which lag were used to produce it.
+          cn: >
+            一个基线，加上每个渠道一个数，而且这些数加起来应该是总销售。一百块的销售拆成基线四十六、搜索二十九、社交十六、电视九，那广告渠道合起来是五十四。这张图给不了你的是：这些数字在换一套假设之后还剩多少。所以光有图不够，你得知道它是拿哪条基线、哪条饱和曲线、哪个时滞算出来的。
+        confidence: 9
+        reference:
+          - docs/8-analysis-toolbox/03-mmm-contribution/cn.md
+
+  - name:
+      en: when it goes wrong
+      cn: 它什么时候不靠谱
+    qa:
+      - id: collinear-channels
+        question:
+          en: What happens when two channels move together?
+          cn: 两个渠道总是一起动的时候，会出什么事？
+        answer:
+          en: >
+            The regression cannot tell which one to credit. When two channels rise and fall together, as happens when search and social budgets are adjusted in the same week, the split between them is not identified. The total stays stable while each half moves around, which is the tell. A model that says channel A is thirty percent and another that says A is five percent and B is fifty-five percent are both fitting the same data, and neither thirty is safe to act on.
+          cn: >
+            回归分不清该记给谁。两个渠道同涨同跌时——很多品牌搜索和社交预算是在同一周调的——它们之间的贡献就没法识别。**总量稳，各自分不匀**，这就是征兆。模型说渠道 A 占三成，另一个模型说 A 占 5%、B 占 55%，两个在拟合同一份数据，而那个三成都不该拿去决策。
+        confidence: 9
+        reference:
+          - docs/8-analysis-toolbox/03-mmm-contribution/cn.md
+      - id: extrapolation-risk
+        question:
+          en: Can a contribution number be carried over to a new budget level?
+          cn: 贡献数能搬到新的投放水平上吗？
+        answer:
+          en: >
+            No. The contribution describes the past period at the spend level that actually happened. Raise the budget from 100,000 to 500,000 and you land on a different part of the saturation curve, so the contribution does not scale in proportion. There is a sharper version of this problem with a new channel: if the model has never seen that channel, its number is a prior borrowed from elsewhere rather than something measured.
+          cn: >
+            不能。贡献描述的是过去那段时间、在实际发生的那个投放水平上。把预算从 10 万加到 50 万，落点是饱和曲线的另一段，贡献不会按比例涨。新渠道的情况更尖锐：模型没见过这个渠道，它的数是从别处借来的先验，不是量出来的。
+        confidence: 9
+        reference:
+          - docs/8-analysis-toolbox/03-mmm-contribution/cn.md
+      - id: fit-is-not-causality
+        question:
+          en: Does a model that fits sales very well tell you the truth about advertising?
+          cn: 一个把销售拟合得很好的模型，关于广告说的是真的吗？
+        answer:
+          en: >
+            No, and the gap can be enormous. In eBay's 2015 field experiment, turning brand keyword ads off in randomly chosen markets showed that 99.5 percent of the lost clicks were immediately recaptured by organic search. Brand keyword advertising had no measurable short-term benefit, with a measured return of minus 63 percent and a 95 percent confidence interval of minus 124 to minus 3 percent. The same data read through an observational method implied a return above 1,400 percent. A good fit explains the history of sales. It does not show that advertising caused them.
+          cn: >
+            不能，而且差距可以大得离谱。eBay 2015 年那场地实验里，在随机选中的市场关掉品牌词广告，少掉的点击有 99.5% 被自然搜索立即接了回去。品牌词广告对短期成交没有可测量的好处，测出的回报是 −63%，95% 置信区间 −124% 到 −3%。同一份数据用观测口径读，回报高于 1400%。拟合得好，说明这堆变量能解释销售的历史，不说明广告造成了这些销售。
+        confidence: 10
+        reference:
+          - docs/8-analysis-toolbox/03-mmm-contribution/cn.md
+      - id: calibration
+        question:
+          en: How should MMM and experiments be used together?
+          cn: MMM 和实验该怎么配合？
+        answer:
+          en: >
+            Run experiments regularly and use them to calibrate the MMM. Once the observational model lines up with the experimental results, use MMM for the questions an experiment cannot answer, such as a channel that has not been tested yet or next month's split. Run it the other way round, and you are using an uncalibrated correlation number to decide whether to spend more, which is the failure mode the eBay result measures.
+          cn: >
+            定期跑实验，用结果去校准 MMM。观测模型和实验对齐之后，再拿 MMM 去回答实验答不了的问题——比如还没测过的渠道、下个月该怎么分。反过来用，就是拿一个没校准过的相关数去决定该不该加钱，那正是 eBay 那个结果量出来的失败方式。
+        confidence: 9
+        reference:
+          - docs/8-analysis-toolbox/03-mmm-contribution/cn.md

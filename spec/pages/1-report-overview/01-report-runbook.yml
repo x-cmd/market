@@ -1,0 +1,30 @@
+id: 01-report-runbook
+series: 1-report-overview
+stage: 入口
+title: 一份市场报告怎么跑出来
+value: 知道一份报告怎么从零跑出来，每步谁做、做完怎么验
+sections:
+- title: 把问题说清楚
+  content: 行业里叫 brief（需求简报）：一句话的问题、一个交付物、给谁看、什么时候要。人做，agent 可以帮拆候选问题
+- title: 框范围：这次算的是哪块地方
+  content: 行业里叫 scope：哪块地、哪个时间窗、算不算自己。范围决定后面所有数能不能比
+- title: 定一个「就是这个数」
+  content: 行业里叫 source of truth：一个指标只能有一个权威出处，口径卡（metric card）是它的机器可读版
+- title: 算
+  content: 行业里叫 compute：照口径卡上的公式算，别自己发明。最容易出的错不是算错，是算的是另一个东西
+- title: 画
+  content: 行业里叫 visualize：每节配一张图，一张图只讲一件事，数据装在 draw URL 里
+- title: 写
+  content: 行业里叫 narrative：每节一段人话，加一句读者唯一会记住的 takeaway
+- title: 验
+  content: 行业里叫 QA：十条验收清单，交稿前逐条过，agent 先自查一遍、人过第二遍
+- title: 交
+  content: 行业里叫 deliver：报告 + 数据附录 + 复现脚本，三样一起交，少一样就不可信
+- title: 照着跑一遍：产出长什么样
+  content: 用「欧盟电商渗透率」这个题真跑一遍，八步各留一段
+- title: 每周能重跑的那一份
+  content: 固定形状的数字每周换：3 张图、1 张表、5 句话、1 条重跑命令
+- title: 交给 agent 的时候，给它三样东西
+  content: 干什么、照哪张口径卡、做完怎么验。第三样最要紧——没验收标准，拿到的是长得像的交付物
+data_cards:
+- ecom_share_of_turnover

@@ -1,0 +1,19 @@
+id: 05-survey-sampling
+series: 2-market-research
+stage: 数从哪来
+title: 问卷结果可信不可信，先看样本怎么抽的
+value: 判断一份调研的样本能不能代表你想问的人
+sections:
+- title: 结果漂亮，可能是抽的人骗你
+  content: 结果很漂亮的问卷，和一个必须先问的问题：样本怎么抽的
+- title: 四种抽法，各代表谁
+  content: 简单随机、分层、系统、便利样本；各覆盖谁、多贵、偏哪
+- title: 最常踩的两个坑
+  content: 覆盖偏差（样本框漏人）、自选偏差（愿意填的人和不填的人系统性不同）
+- title: 抽得多，不代表有代表性
+  content: 抽一千人不保证有代表性
+- title: 愿意答的人太少，是警报
+  content: 低于一成要高度警惕：是来的人不是那些人
+- title: 先看「抽到的是谁」「多少人愿意答」，再看结果
+  content: 先看样本框和响应率，再看结果
+data_cards: []

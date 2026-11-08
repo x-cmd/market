@@ -1,0 +1,20 @@
+id: 01-attribution
+series: 8-analysis-toolbox
+stage: 查字典
+title: 归因：把功劳分给各个接触点
+value: 看懂归因在做什么，它什么时候会骗你
+sections:
+- title: 归因在做什么
+  content: 把转化按接触点分摊
+- title: 常见几种分法
+  content: 末次点击、首次点击、线性、时间衰减、位置
+- title: 它什么时候不靠谱
+  content: 自然需求被认领；曝光不可见；归因窗口
+- title: 拿归因的两个用法
+  content: 平台内部调账户可以用；决定加不加钱要用对照
+- title: 分的是功劳，不是因果
+  content: 归因数的是「谁碰过这一单」，不是「谁创造了这一单」
+- title: 站内哪几篇讲过
+  content: 1-report-overview/01-report-runbook、1-report-overview/06-incrementality-chart
+data_cards:
+- brand_keyword_click_substitution

@@ -11,10 +11,9 @@ version: 1
 updated: 2025-11
 
 metric_cards:
-  # ── 电商渗透率 ──────────────────────────────────────────────
   - id: ecom_share_of_turnover
     label: 网络销售占企业总营业额
-    unit: "%"
+    unit: '%'
     value: 19.82
     as_of: 2024
     geography: EU27_2020
@@ -28,20 +27,20 @@ metric_cards:
       command: x dbnomics data Eurostat/isoc_ec_evaln2/A.GE10.C-E.E_AWSVAL.PC_ETURN.EU27_2020
       published: 2025-11
     caveats:
-      - 只覆盖雇员 10 人及以上的企业，小店与个体户不在里面
-      - 只覆盖 NACE C-E 行业
-      - 2025 年的调查覆盖范围有变，跟 2024 不能直接比
+    - 只覆盖雇员 10 人及以上的企业，小店与个体户不在里面
+    - 只覆盖 NACE C-E 行业
+    - 2025 年的调查覆盖范围有变，跟 2024 不能直接比
     chart:
       page: 1-report-overview/02-market-share-chart
       template: echarts
       alt: eu2024_two_numerators
     used_in:
-      - 1-report-overview/02-market-share-chart
-      - 2-market-research/08-share-denominator
+    - 1-report-overview/02-market-share-chart
+    - 2-market-research/08-share-denominator
 
   - id: ecom_share_of_turnover_b2c
     label: 网络销售中卖给消费者的部分占企业总营业额
-    unit: "%"
+    unit: '%'
     value: 8.49
     as_of: 2024
     geography: EU27_2020
@@ -55,19 +54,19 @@ metric_cards:
       command: x dbnomics data Eurostat/isoc_ec_evaln2/A.GE10.C-E.E_AWSVAL_B2C.PC_ETURN.EU27_2020
       published: 2025-11
     caveats:
-      - 与 ecom_share_of_turnover 的差别只在分子：剔掉了 B2B
-      - 匈牙利这类批发占比高的国家，两个数会差得极远
+    - 与 ecom_share_of_turnover 的差别只在分子：剔掉了 B2B
+    - 匈牙利这类批发占比高的国家，两个数会差得极远
     chart:
       page: 1-report-overview/02-market-share-chart
       template: echarts
       alt: eu2024_two_numerators
     used_in:
-      - 1-report-overview/02-market-share-chart
-      - 2-market-research/08-share-denominator
+    - 1-report-overview/02-market-share-chart
+    - 2-market-research/08-share-denominator
 
   - id: ecom_b2c_mix
     label: 网络销售里卖给消费者的占几成
-    unit: "%"
+    unit: '%'
     value:
       CY: 90.8
       HU: 3.0
@@ -85,19 +84,19 @@ metric_cards:
       command: x dbnomics series Eurostat isoc_ec_evaln2
       published: 2025-11
     caveats:
-      - 这是两个卡相除得出的，别当成原始序列引
-      - 塞浦路斯 91% 是零售电商，匈牙利 3% 几乎全是批发电商
+    - 这是两个卡相除得出的，别当成原始序列引
+    - 塞浦路斯 91% 是零售电商，匈牙利 3% 几乎全是批发电商
     chart:
       page: 1-report-overview/02-market-share-chart
       template: echarts
       alt: b2c_share_of_web_sales
     used_in:
-      - 2-market-research/08-share-denominator
+    - 1-report-overview/02-market-share-chart
+    - 2-market-research/08-share-denominator
 
-  # ── 投放回报：平台口径 vs 增量口径 ──────────────────────────
   - id: paid_search_roi_observed_vs_randomized
     label: 非品牌词搜索广告的回报率，三种算法三个数
-    unit: "%"
+    unit: '%'
     value:
       regression_no_controls: 4100
       regression_with_time_and_geo_controls: 1400
@@ -111,20 +110,20 @@ metric_cards:
       citation: Blake, Nosko & Tadelis, Econometrica 83(1), 2015 — NBER w20171
       url: https://www.nber.org/papers/w20171
     caveats:
-      - 回归的 4100% 是「惯例算法」，不是真值
-      - 随机实验的 −63% 置信区间是 −124% 到 −3%
-      - 这批数据来自 eBay 2015，方法学的结论比数字本身耐用
+    - 回归的 4100% 是「惯例算法」，不是真值
+    - 随机实验的 −63% 置信区间是 −124% 到 −3%
+    - 这批数据来自 eBay 2015，方法学的结论比数字本身耐用
     chart:
       page: 1-report-overview/06-incrementality-chart
       template: echarts
       alt: ebay_roi_three_ways
     used_in:
-      - 1-report-overview/06-incrementality-chart
-      - 4-performance-analysis/03-platform-metrics-vs-incremental-metrics
+    - 1-report-overview/06-incrementality-chart
+    - 4-performance-analysis/03-platform-metrics-vs-incremental-metrics
 
   - id: ad_lift_observed_vs_rct
     label: 同一个广告活动，观测口径算出的提升 vs 实验真值
-    unit: "%"
+    unit: '%'
     value:
       randomized_experiment: 73
       exact_match_age_gender: 222
@@ -138,19 +137,18 @@ metric_cards:
       citation: Gordon, Zettelmeyer, Bhargava & Chapsky, Marketing Science 38(2), 2019
       url: https://pubsonline.informs.org/doi/pdf/10.1287/mksc.2018.1135
     caveats:
-      - 实验组 2550 万人，只有 37% 真看到广告；曝光折算后真值 73%（95% CI 49–103%）
-      - 四个转化率：对照组 0.033、实验组 0.045、未曝光 0.019、已曝光 0.061
+    - 实验组 2550 万人，只有 37% 真看到广告；曝光折算后真值 73%（95% CI 49–103%）
+    - 四个转化率：对照组 0.033、实验组 0.045、未曝光 0.019、已曝光 0.061
     chart:
       page: 1-report-overview/06-incrementality-chart
       template: echarts
       alt: facebook_study4_lift
     used_in:
-      - 1-report-overview/06-incrementality-chart
+    - 1-report-overview/06-incrementality-chart
 
-  # ── 可直接复现的公开序列 ────────────────────────────────────
   - id: eu_retail_turnover_index
     label: 欧盟零售营业额指数
-    unit: "index"
+    unit: index
     value: null
     as_of: 2025
     geography: DE / EU27_2020 / 各国
@@ -164,19 +162,18 @@ metric_cards:
       command: x dbnomics data Eurostat/sts_trtu_m/M.NETTUR.G.CA.I10.DE
       published: 2025-11
     caveats:
-      - 序列码 M.… 是月度，后面跟国家码
-      - 起点 1994-01
+    - 序列码 M.… 是月度，后面跟国家码
+    - 起点 1994-01
     chart:
       page: 2-market-research/01-industry-entry-scale-growth-concentration
       template: echarts
       alt: eu_turnover_index
     used_in:
-      - 2-market-research/01-industry-entry-scale-growth-concentration
+    - 2-market-research/01-industry-entry-scale-growth-concentration
 
-  # ── 网站分析竞品（跑鞋那组之外的一组） ────────────────────────
   - id: gh_stars_umami
     label: GitHub star 数
-    unit: "个"
+    unit: 个
     value: 39983
     as_of: 2026-11-08
     geography: umami-software/umami
@@ -187,22 +184,22 @@ metric_cards:
       provider: GitHub
       dataset: repos
       series: umami-software/umami
-      command: curl -s https://api.github.com/repos/umami-software/umami
+      command: 'curl -s -H "User-Agent: <you>" https://api.github.com/repos/umami-software/umami'
       published: 2026-11-08
     caveats:
-      - 每天在变，是快照不是固定值
-      - star 是收藏数，不等于在用的人数
-      - 抓取需要 User-Agent，否则 GitHub 会拒
+    - 每天在变，是快照不是固定值
+    - star 是收藏数，不等于在用的人数
+    - 抓取需要 User-Agent，否则 GitHub 会拒
     chart:
       page: 2-market-research/14-analytics-tools-competitors
       template: echarts
       alt: gh_stars
     used_in:
-      - 2-market-research/14-analytics-tools-competitors
+    - 2-market-research/14-analytics-tools-competitors
 
   - id: gh_forks_umami
     label: GitHub fork 数
-    unit: "个"
+    unit: 个
     value: 8501
     as_of: 2026-11-08
     geography: umami-software/umami
@@ -213,23 +210,24 @@ metric_cards:
       provider: GitHub
       dataset: repos
       series: umami-software/umami
-      command: curl -s https://api.github.com/repos/umami-software/umami
+      command: 'curl -s -H "User-Agent: <you>" https://api.github.com/repos/umami-software/umami'
       published: 2026-11-08
     caveats:
-      - fork 是 clone 出来的仓库数，含自己 fork 完就放着的
-      - 对自托管选型比 star 更说明问题：改的人多，踩坑少
+    - fork 是 clone 出来的仓库数，含自己 fork 完就放着的
+    - 对自托管选型比 star 更说明问题：改的人多，踩坑少
+    - 抓取需要 User-Agent，否则 GitHub 会拒
     chart:
       page: 2-market-research/14-analytics-tools-competitors
       template: echarts
       alt: gh_forks
     used_in:
-      - 2-market-research/14-analytics-tools-competitors
+    - 2-market-research/14-analytics-tools-competitors
 
   - id: shoe_brand_revenue
     label: 鞋类品牌年营收（SEC XBRL 口径）
-    unit: "十亿美元"
+    unit: 十亿美元
     value:
-      NIKE: 46.40
+      NIKE: 46.4
       Skechers: 8.97
       Deckers: 5.47
       Wolverine: 1.87
@@ -245,25 +243,25 @@ metric_cards:
       command: 'curl -s -H "User-Agent: <you> <mail>" https://data.sec.gov/api/xbrl/companyconcept/CIK0000320187/us-gaap/RevenueFromContractWithCustomerExcludingAssessedTax.json'
       published: 2026-11-08
     caveats:
-      - 各家财年结束日不同（NIKE 5 月底、Deckers 3 月底、Skechers 12 月底、Wolverine 1 月初）
-      - 横向比之前必须先对齐财年，否则会得出相反的结论
-      - 这是公司总营收，不是跑鞋分部营收
-      - Adidas、ASICS、New Balance、On 不在 us-gaap 库里，留空
+    - 各家财年结束日不同（NIKE 5 月底、Deckers 3 月底、Skechers 12 月底、Wolverine 1 月初）
+    - 横向比之前必须先对齐财年，否则会得出相反的结论
+    - 这是公司总营收，不是跑鞋分部营收
+    - Adidas、ASICS、New Balance、On 不在 us-gaap 库里，留空
     chart:
       page: 2-market-research/13-running-shoes-competitors
       template: echarts
       alt: shoe_rev
     used_in:
-      - 2-market-research/13-running-shoes-competitors
+    - 2-market-research/13-running-shoes-competitors
 
   - id: us_footwear_cpi
     label: 美国鞋类 CPI（季调，1982-84=100）
-    unit: "指数"
+    unit: 指数
     value:
-      "2015": 130.2
-      "2020": 133.2
-      "2022": 144.5
-      "2025": 145.5
+      '2015': 136.8
+      '2020': 133.2
+      '2022': 144.5
+      '2025': 145.5
     as_of: 2026-11-08
     geography: 美国
     denominator: 1982-84 = 100
@@ -276,12 +274,303 @@ metric_cards:
       command: x dbnomics data BLS/cu/CUSR0000SEAE
       published: 2026-11-08
     caveats:
-      - 覆盖全部鞋类，不是只跑鞋
-      - 季调数，做同比要用原始序列
-      - 这里用的是年均值，月度序列在命令输出里
+    - 覆盖全部鞋类，不是只跑鞋
+    - 季调数，做同比要用原始序列
+    - 这里用的是年均值，月度序列在命令输出里
     chart:
       page: 2-market-research/13-running-shoes-competitors
       template: echarts
       alt: shoe_cpi
     used_in:
-      - 2-market-research/13-running-shoes-competitors
+    - 2-market-research/13-running-shoes-competitors
+
+  - id: brand_keyword_click_substitution
+    label: 品牌词广告关掉后，被自然搜索接住的那部分点击
+    unit: '%'
+    value:
+      retained_by_natural_search: 99.5
+      lost: 0.5
+    as_of: 2015
+    geography: eBay（Yahoo! 与 MSN 平台上的品牌词投放）
+    denominator: 关掉品牌词付费搜索后失去的那部分点击流量
+    numerator: 随即被同平台自然搜索接走的点击
+    source:
+      type: published_finding
+      citation: Blake, Nosko & Tadelis, Econometrica 83(1), 2015 — NBER w20171（Table 1，差分中的差分）
+      url: https://www.nber.org/papers/w20171
+    caveats:
+    - 是点击的替代率，不是成交的替代率
+    - 论文说这是保留下限：丢掉的那 0.5% 里可能还有人转去了别的入口（比如直接敲 ebay.com）
+    - 0.5% 约占全部付费点击的 1.5%
+    - 实验停的是 Yahoo! 与 MSN 上的品牌词广告；Google 上的后续实验结论一致
+    chart:
+      page: 8-analysis-toolbox/01-attribution
+      template: echarts
+      alt: ebay_brand_keyword_incrementality
+    used_in:
+    - 8-analysis-toolbox/01-attribution
+    - 8-analysis-toolbox/03-mmm-contribution
+    - 1-report-overview/06-incrementality-chart
+
+  - id: fb_observed_vs_random_lift
+    label: 结账实验：观测口径算出的提升 vs 随机实验真值
+    unit: '%'
+    value:
+      exposed_vs_unexposed: 416
+      randomized_experiment: 77
+    as_of: 2019
+    geography: Facebook（15 个实地实验中的一个结账实验）
+    denominator: 转化率
+    numerator: 有广告与无广告的转化率差
+    source:
+      type: published_finding
+      citation: Gordon, Zettelmeyer, Bhargava & Chapsky, Marketing Science 38(2), 2019
+      url: https://pubsonline.informs.org/doi/pdf/10.1287/mksc.2018.1135
+    caveats:
+    - 观测口径在这次实验里高估了五倍多
+    - 论文的结论不是观测方法一律没用，而是恢复不出实验效果；匹配、回归校正、倾向得分都试过
+    - 曝光不是随机的，平台会把广告投给本来就更可能买的人，这是高估的根源
+    chart:
+      page: 8-analysis-toolbox/02-incrementality-testing
+      template: echarts
+      alt: fb_checkout_416_vs_77
+    used_in:
+    - 8-analysis-toolbox/02-incrementality-testing
+    - 1-report-overview/06-incrementality-chart
+
+  - id: geo_incremental_click_cost
+    label: 一次 geo 实验：平台报的 CPC vs 测出的每次增量点击成本
+    unit: 美元
+    value:
+      reported_cpc: 2.4
+      cost_per_incremental_click: 3.0
+      incremental_click_share: 80
+    as_of: 2011
+    geography: 美国（Google 搜索广告的一个广告主）
+    denominator: 每次点击 / 每次增量点击
+    numerator: 广告花费
+    source:
+      type: published_finding
+      citation: Vaver & Koehler, Measuring Ad Effectiveness Using Geo Experiments, Google
+        Inc., 2011
+      url: http://audentia-gestion.fr/Recherche-Research-Google/38355.pdf
+    caveats:
+    - CPC 低估 CPIC 20%，即付费点击里有 20% 是从自然搜索抢来的，不是多出来的
+    - 这是点击的替代率，不是成交的替代率
+    - 是单个广告主的案例，不是行业平均
+    chart:
+      page: 8-analysis-toolbox/02-incrementality-testing
+      template: echarts
+      alt: geo_cpc_vs_cpic
+    used_in:
+    - 8-analysis-toolbox/02-incrementality-testing
+
+  - id: geo_experiment_design
+    label: 地理实验的随机单位与分层分配的效果
+    unit: 个
+    value:
+      nielsen_dmas: 210
+      per_arm: 105
+      ci_reduction_from_stratification: 10
+    as_of: 2011
+    geography: 美国
+    denominator: null
+    numerator: 地理单位数（随机分配的样本量）
+    source:
+      type: published_finding
+      citation: Vaver & Koehler, Measuring Ad Effectiveness Using Geo Experiments, Google
+        Inc., 2011
+      url: http://audentia-gestion.fr/Recherche-Research-Google/38355.pdf
+    caveats:
+    - 210 是美国常用的 DMA 数量，不是唯一可选的地理单位
+    - 邮编太小，Google 明确说不可行：投放不准，人也会跨边界
+    - 分层分配（按规模排序后分组再抽）能把区间收窄约 10%
+    - 论文还给了用前测期数据预演区间宽度的办法，不用花钱就能先看设计测不测得出东西
+    used_in:
+    - 8-analysis-toolbox/02-incrementality-testing
+
+  - id: ebay_brand_roi_observed_vs_randomized
+    label: eBay 品牌词广告：观测口径算出的回报 vs 随机实验真值
+    unit: '%'
+    value:
+      observed_method: '>1400'
+      randomized_experiment: -63
+    as_of: 2015
+    geography: eBay（Yahoo! 与 MSN 平台上的品牌词投放）
+    denominator: 品牌词广告花费
+    numerator: 归因到品牌词广告的成交
+    source:
+      type: published_finding
+      citation: Blake, Nosko & Tadelis, Econometrica 83(1), 2015 — NBER w20171
+      url: https://www.nber.org/papers/w20171
+    caveats:
+    - 随机实验的回报是负的：−63%，95% 置信区间 [−124%, −3%]
+    - 观测口径的 1,400% 以上是论文给出的量级，不是精确值
+    - 论文说观测方法恢复不出实验效果：匹配、回归校正、倾向得分都试过
+    - 是 eBay 的特例：自家品牌词自然搜索排第一，那个词上几乎没有对手竞价
+    chart:
+      page: 1-report-overview/06-incrementality-chart
+      template: echarts
+      alt: ebay_roi_three_ways
+    used_in:
+    - 1-report-overview/06-incrementality-chart
+
+  - id: mmm_baseline_share_range
+    label: MMM 拆解里，基线（没广告也会有的销售）占多少，以及基线怎么改贡献
+    unit: '%'
+    value:
+      baseline_in_decomposition: 18
+      baseline_scenario_a: 20
+      baseline_scenario_b: 40
+      search_contribution_at_baseline_a: 38
+      search_contribution_at_baseline_b: 29
+    as_of: 2026
+    geography: 算例（页面用一个四渠道的分解做敏感性示意，不是某一家的实测）
+    denominator: 总销售额
+    numerator: 不投任何广告时本来会有的销售
+    source:
+      type: published_finding
+      citation: 本页算例：基线从 20% 提到 40%，搜索广告贡献从 38% 掉到 29%
+      url: ''
+    caveats:
+    - 基线是估计出来的，不能直接量，除非真停投一次
+    - 基线估高了，各渠道贡献就都缩小；估低了就都虚胖
+    - 同一份数据、同一个模型，只换基线设定，一个渠道的贡献就差了三成
+    - 这一格决定整份 MMM 报告的可信空间
+    used_in:
+    - 8-analysis-toolbox/03-mmm-contribution
+
+  - id: mmm_adstock_rate_by_channel
+    label: Adstock 衰减率（λ）的行业惯例区间，按渠道
+    unit: 比率（每天保留的比例）
+    value:
+      search:
+      - 0.1
+      - 0.3
+      social:
+      - 0.7
+      - 0.7
+      television:
+      - 0.7
+      - 0.9
+    as_of: 2017
+    geography: 通用（营销组合模型里的常见取值）
+    denominator: null
+    numerator: 当天投放的效果在后续每一天还剩多少
+    source:
+      type: published_finding
+      citation: Jin, Wang, Sun, Chan & Koehler, Bayesian Methods for Media Mix Modeling
+        with Carryover and Shape Effects, Google Research, 2017
+      url: https://research.google/pubs/
+    caveats:
+    - 这些是先验知识，不是从数据里估出来的
+    - 衰减率由事先设定，模型算出的电视贡献大可能只是因为电视的尾巴长
+    - 衰减太快会低估长尾渠道，太慢会高估短尾渠道
+    - 单渠道的真实衰减形状未必是指数的
+    used_in:
+    - 8-analysis-toolbox/04-adstock-decay
+    - 8-analysis-toolbox/03-mmm-contribution
+
+  - id: hill_saturation_ceiling_ratio
+    label: Hill 饱和曲线：拿到 90% 天花板需要投到饱和点的几倍
+    unit: 倍
+    value:
+      half_ceiling_at: 1.0
+      ninety_percent_ceiling_at: 3.0
+    as_of: 2026
+    geography: 通用（Hill 曲线的数学性质，与渠道无关）
+    denominator: null
+    numerator: 投入量（以饱和点 k 为单位）
+    source:
+      type: published_finding
+      citation: Hill 函数 效果(x) = x^α / (x^α + k^α) 的代数性质
+      url: https://en.wikipedia.org/wiki/Hill_equation
+    caveats:
+    - 3 倍这个关系对任何 α 都成立，因为 3^α / (3^α + 1) = 0.9
+    - k 本身估不准的时候，这个倍数关系救不了你
+    - α 大于 1 时曲线在低投入段更平，小额试水的回报被压扁
+    used_in:
+    - 8-analysis-toolbox/05-hill-saturation-curve
+
+  - id: marginal_roi_floor
+    label: 平均 ROI 的下限是 1，边际 ROI 没有下限
+    unit: 倍
+    value:
+      average_roi_floor: 1.0
+      marginal_roi_can_be_negative: true
+    as_of: 2026
+    geography: 通用（算术性质）
+    denominator: 总花费（平均 ROI）/ 分档花费（边际 ROI）
+    numerator: 总回报 / 该档换回
+    source:
+      type: published_finding
+      citation: 算例：搜索广告五档各 10 万，回报 48/31/20/11/4 万，平均 ROI 2.28，最后一档边际 ROI 0.4
+      url: ''
+    caveats:
+    - 平均 ROI 是累计的，前几档赚的钱会替后面的档次垫着
+    - 边际 ROI 可以是 0，也可以是负数
+    - 一个渠道平均 ROI 还有 1.9、边际 ROI 掉到 0.2，不是矛盾是两个问题
+    - 这个 2.28 是账面回报不是增量回报，真实增量可能低得多
+    chart:
+      page: 8-analysis-toolbox/06-marginal-vs-average-roi
+      template: echarts
+      alt: avg_roi_vs_marginal_roi
+    used_in:
+    - 8-analysis-toolbox/06-marginal-vs-average-roi
+    - 8-analysis-toolbox/07-equal-marginal-returns-principle
+
+  - id: equal_marginal_optimum_split
+    label: 等边际最优分配的一个算例：100 万怎么分给两个渠道
+    unit: '%'
+    value:
+      total_budget: 1000000
+      search_share_at_optimum: 50
+      social_share_at_optimum: 50
+      marginal_return_at_optimum: 2.0
+      total_return_all_to_search: 1.14
+      total_return_by_equal_marginal: 2.3
+      total_return_with_social_capped_at_40: 1.97
+    as_of: 2026
+    geography: 算例（搜索广告与社交广告两条分档边际曲线，交点约在 20–30 万那一档）
+    denominator: 100 万总预算
+    numerator: 每 1 块钱换回的钱
+    source:
+      type: published_finding
+      citation: 本页算例：搜索分档边际 4.8/3.1/2.0/1.1/0.4，社交分档边际 1.2/1.8/2.4/2.9/3.3
+      url: ''
+    caveats:
+    - 交点落在 20–30 万那一档，所以两边各花到边际约 2.0 的位置
+    - 全给搜索广告总回报 1.14，按边际拉平总回报 2.30，差一倍多
+    - 社交广告加上「不超过 40%」的约束后，总回报从 2.30 掉到 1.97
+    - 峰值是平的：交点前后挪一档，总回报几乎一样
+    - 这是数学本来的样子，不是算得不准
+    chart:
+      page: 8-analysis-toolbox/07-equal-marginal-returns-principle
+      template: echarts
+      alt: equal_marginal_total_return
+    used_in:
+    - 8-analysis-toolbox/07-equal-marginal-returns-principle
+
+  - id: ci_width_vs_sample_size
+    label: 同一个效应，样本量不同给出的 95% 置信区间半宽
+    unit: '%'
+    value:
+      sample_2000: 9
+      sample_200: 29
+      sample_50: 56
+    as_of: 2026
+    geography: 通用（区间宽度按 1.96 × 标准误，随样本量开方缩小的规律）
+    denominator: 估计出的效应量
+    numerator: 95% 置信区间的半宽
+    source:
+      type: published_finding
+      citation: 本页算例：同一个效应，样本量差 40 倍，区间宽度差 6 倍
+      url: ''
+    caveats:
+    - 区间宽度跟样本量的平方根成反比，所以翻倍样本只收窄约三成
+    - 区间是对称的，所以它必然包含零的可能：区间跨过零时，那个效应跟零没有区别
+    - 区间只覆盖「模型形式是对的」这个前提，不覆盖模型形式本身对不对
+    - 看了很多个模型只报最好的那个，区间是假的
+    used_in:
+    - 8-analysis-toolbox/08-confidence-intervals-and-fit
+

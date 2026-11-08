@@ -1,0 +1,19 @@
+id: 06-survey-interview-behavior-bias
+series: 2-market-research
+stage: 数从哪来
+title: 问卷、访谈、后台数据，哪个更接近真相
+value: 知道三种数据各自偏哪边、怎么互补
+sections:
+- title: 同一个需求，为什么三种说法
+  content: 同一个需求：问卷说一般、访谈说很好、行为数据说复购高
+- title: 问卷：往客气了偏
+  content: 说出来的比想的客气：社交期望偏差与缓和选项
+- title: 访谈：容易被带着走
+  content: 一对一，访谈者的追问与记录影响判断
+- title: 后台数据：记了买，没记为什么
+  content: 记了买，没记为什么；看不到看了没买、比了没买
+- title: 三个偏的方向相反，所以能互相补
+  content: 问卷偏保守、访谈偏热情、行为数据缺动机，所以能互相补，但不能互相替代
+- title: 先看每个数从哪来、偏哪边
+  content: 先看每个数从哪来、偏哪边，再决定信谁
+data_cards: []

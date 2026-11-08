@@ -1,0 +1,21 @@
+id: 01-industry-entry-scale-growth-concentration
+series: 2-market-research
+stage: 数从哪来
+title: 进这行之前，先看这三个数
+value: 写出一份行业条目：四格数字加口径
+sections:
+- title: 先看哪三个数
+  content: 行业报告第一页的三个数，看着简单，坑最多
+- title: 这一页要填哪些格子
+  content: 定义与边界、规模、增速、集中度、价格带分布、季节性、来源与口径
+- title: 「行业多大」有三种算法
+  content: 产值、收入、增加值三种算法；在有零售批发的行业里能差一倍
+- title: 涨的是真东西，还是只是涨价
+  content: 把名义增速当实际增速讲，是行业报告最常见的硬伤
+- title: 这行是不是巨头说了算
+  content: CR4 看头部四家占多少，HHI 看整体有多分散
+- title: 三个数凑一起，说明这门生意什么样
+  content: 规模大集中度低、增速高且集中度也升、规模小增速高，各说明什么
+- title: 四格数字，每一格都要说清是谁量的
+  content: 四格数字，每一格都要带口径
+data_cards: []

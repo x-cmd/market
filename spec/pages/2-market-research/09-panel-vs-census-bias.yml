@@ -1,0 +1,31 @@
+id: 09-panel-vs-census-bias
+series: 2-market-research
+stage: 数从哪来
+title: 调研数据和官方数据，哪个更可信
+value: 知道这两类数各自偏哪边，什么时候该信哪个
+sections:
+- title: 两个数打架，先别急着信一个
+  content: 两个数打架：不是谁更准，是谁漏了谁
+- title: 这类调研漏了谁
+  content: 同一批对象反复被问或被观测
+  subsections:
+  - title: 样本会老化
+    content: 老样本不再代表现在的人
+  - title: 样本会流失
+    content: 离开的人往往和留下的人不一样
+- title: 这类官方统计漏了谁
+  content: 普查或行政记录
+  subsections:
+  - title: 定义窄
+    content: 按行业、企业规模、雇员数划线
+  - title: 边缘漏掉
+    content: 线下小店、个体户常不在里面
+- title: 两个数不会一起偏
+  content: 面板高估活跃人群占比，全量低估正式经济份额，所以不会一起偏
+- title: 你的数是哪一类
+  content: 看数是怎么来的：抽样、登记、平台日志
+- title: 两种数一起错的时候
+  content: 样本老化又遇上定义窄，两个数一起错，而且方向相反看不出来
+- title: 先问谁数的、漏了谁，再问准不准
+  content: 先问谁数的、漏了谁，再问准不准
+data_cards: []

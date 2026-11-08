@@ -1,0 +1,21 @@
+id: 04-confidence-intervals
+series: 3-experiment-design
+stage: 怎么扰动
+title: 一个数，要配一个区间
+value: 不再只报一个数，习惯带上区间
+sections:
+- title: 为什么 4.0 后面要跟一个区间
+  content: ROI 4.0，那区间呢
+- title: 4.0 是最好猜的那个数，不是最靠得住的
+  content: 它是可能性最高的那个值，不是最靠得住的数
+- title: 区间在说什么
+  content: 重复同样的实验时，有多少比例的结果落在这个范围里
+- title: 区间有多宽，由什么决定
+  content: 样本量、变异程度、效应大小
+- title: 区间重叠了，能不能比
+  content: 能，差多少才是重点
+- title: ROI 4.0，区间从 1.2 到 6.8
+  content: 一个 ROI 点估计 4.0、区间从 1.2 到 6.8 的渠道
+- title: 报数带上区间
+  content: 报数带上区间
+data_cards: []

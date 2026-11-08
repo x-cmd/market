@@ -8,7 +8,17 @@
 
 ## 九个对得上号的
 
-['| 项目 | 定位 | 许可 | star | fork | 建库 | 最近推送 | 定价 |', '|---|---|---|---:|---:|---|---|---|', '| `posthog` | :hedgehog: PostHog is the leading platform… | NOASSERTION | 40,699 | 3,605 | 2020-01-23 | 2026-11-08 | 未抓到（定价页 JS 渲染） |', '| `umami` | Umami is a privacy-first web and product a… | MIT | 39,983 | 8,501 | 2020-07-17 | 2026-11-07 | $0 / $20 / $200 每月（10 万 / 100 万 / 1000 万 events） |', '| `analytics` | Open source, privacy-first web analytics. … | AGPL-3.0 | 29,794 | 1,931 | 2018-12-04 | 2026-11-08 | 未抓到（定价页 JS 渲染） |', '| `matomo` | Empowering People Ethically 🚀 — Matomo is … | GPL-3.0 | 22,012 | 2,928 | 2011-03-30 | 2026-11-08 | 免费自托管；云端从 €230 每月起 |', '| `fathom` | Fathom Lite. Simple, privacy-focused websi… | MIT | 8,034 | 388 | 2016-11-19 | 2026-03-18 | $15 / $25 / $45 / $60 / $100 每月（10 万～200 万 pageviews） |', '| `goatcounter` | Easy web analytics. No tracking of persona… | NOASSERTION | 6,150 | 286 | 2019-05-28 | 2026-09-27 | 未抓到（站点未返回可解析内容） |', '| `countly-server` | Countly is a privacy-first, AI-powered ana… | NOASSERTION | 5,926 | 985 | 2012-05-28 | 2026-11-06 | 从 $175 每月起（Flex），另有企业自托管版 |', '| `Ackee` | Self-hosted, Node.js based analytics tool … | MIT | 4,722 | 388 | 2014-04-16 | 2026-10-23 | 未抓到（站点未返回可解析内容） |', '| `pirsch` | Pirsch is a drop-in, server-side, no-cooki… | AGPL-3.0 | 1,033 | 51 | 2020-06-20 | 2026-11-06 | $6 / $12 每月（1 万 / 更多 events） |']
+| 项目 | 定位 | 许可 | star | fork | 建库 | 最近推送 | 定价 |
+|---|---|---|---:|---:|---|---|---|
+| `posthog` | :hedgehog: PostHog is the leading platform… | NOASSERTION | 40,699 | 3,605 | 2020-01-23 | 2026-11-08 | 未抓到（定价页 JS 渲染） |
+| `umami` | Umami is a privacy-first web and product a… | MIT | 39,983 | 8,501 | 2020-07-17 | 2026-11-07 | $0 / $20 / $200 每月（10 万 / 100 万 / 1000 万 events） |
+| `analytics` | Open source, privacy-first web analytics. … | AGPL-3.0 | 29,794 | 1,931 | 2018-12-04 | 2026-11-08 | 未抓到（定价页 JS 渲染） |
+| `matomo` | Empowering People Ethically 🚀 — Matomo is … | GPL-3.0 | 22,012 | 2,928 | 2011-03-30 | 2026-11-08 | 免费自托管；云端从 €230 每月起 |
+| `fathom` | Fathom Lite. Simple, privacy-focused websi… | MIT | 8,034 | 388 | 2016-11-19 | 2026-03-18 | $15 / $25 / $45 / $60 / $100 每月（10 万～200 万 pageviews） |
+| `goatcounter` | Easy web analytics. No tracking of persona… | NOASSERTION | 6,150 | 286 | 2019-05-28 | 2026-09-27 | 未抓到（站点未返回可解析内容） |
+| `countly-server` | Countly is a privacy-first, AI-powered ana… | NOASSERTION | 5,926 | 985 | 2012-05-28 | 2026-11-06 | 从 $175 每月起（Flex），另有企业自托管版 |
+| `Ackee` | Self-hosted, Node.js based analytics tool … | MIT | 4,722 | 388 | 2014-04-16 | 2026-10-23 | 未抓到（站点未返回可解析内容） |
+| `pirsch` | Pirsch is a drop-in, server-side, no-cooki… | AGPL-3.0 | 1,033 | 51 | 2020-06-20 | 2026-11-06 | $6 / $12 每月（1 万 / 更多 events） |
 
 **抓取时间**：2026 年 11 月 8 日，取自 GitHub 公开 API（`api.github.com/repos/<owner>/<repo>`）。star 与 fork 是抓取当时的快照，每天都在变。
 
@@ -32,7 +42,9 @@ umami 的 fork 是 **8,501**。第二名 PostHog 3,605，第二是它的 **2.4 �
 
 star 排第二、fork 排第一，这个组合的意思是：**用的人多，真的动手改的人也多。** 这是自托管选型里最实在的一个信号——你迟早要改点东西（接自己的事件、改看板、加一个内部指标），改的人多，踩过的坑就少。
 
-另一个格子值得看：许可。umami 是 MIT，star 39,983；Plausible 是 AGPL-3.0，star 29,794；Matomo 是 GPL-3.0，star 22,012。**star 数最高的 MIT 许可项目，就是 umami**——如果你公司法务对 AGPL 敏感，这一格直接决定选谁。
+## 许可那一格
+
+umami 是 MIT，star 39,983；Plausible 是 AGPL-3.0，star 29,794；Matomo 是 GPL-3.0，star 22,012。**star 数最高的 MIT 许可项目，就是 umami**——如果你公司法务对 AGPL 敏感，这一格直接决定选谁。
 
 ## 价格：九家里查到五家
 
@@ -58,4 +70,4 @@ star 排第二、fork 排第一，这个组合的意思是：**用的人多，�
 
 价格那一栏，九家里四家抓不到——不是数据不存在，是抓取方式不对。这件事要写进条目里，别装作查过。
 
-**数据**：GitHub 公开 API，2026-11-08 抓取；定价为各家官网定价页，2026-11-08 抓取。**复现**：`curl -s https://api.github.com/repos/umami-software/umami`
+**数据**：GitHub 公开 API，2026-11-08 抓取；定价为各家官网定价页，2026-11-08 抓取。**复现**：`curl -s -H "User-Agent: <you>" https://api.github.com/repos/umami-software/umami`

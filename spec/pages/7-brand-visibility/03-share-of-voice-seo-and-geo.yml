@@ -1,0 +1,19 @@
+id: 03-share-of-voice-seo-and-geo
+series: 7-brand-visibility
+stage: 看得见吗
+title: 搜索里和 AI 回答里，各占多少
+value: 分别算出搜索里和 AI 答案里的份额
+sections:
+- title: 搜索里第一，AI 答案里没影
+  content: 搜索里排第一，AI 答案里没影
+- title: 搜索里的份额，怎么算
+  content: 一批品类词下，各品牌在前若干条里出现的次数占比
+- title: AI 答案里的份额，怎么算
+  content: 同一批词去问 AI，答案里被提名的次数占比
+- title: 两个份额，不能混着比
+  content: 样本不同、时间窗不同、问法不同
+- title: 同一个问题，两种答案里的品牌
+  content: 同一个品类问题，搜索结果与三个 AI 答案里的品牌份额
+- title: 两种份额分开报，不要合成一个数
+  content: 两种份额分开报，不要合成一个「可见度」
+data_cards: []

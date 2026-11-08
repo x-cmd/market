@@ -1,0 +1,17 @@
+id: 04-geo-targeting-cost-map
+series: 5-campaign-analysis
+stage: 怎么投
+title: 不同地区投广告，贵的贵在哪
+value: 能读一张地域成本图，知道贵在哪儿
+sections:
+- title: 两地 CPM 差三倍，差在哪
+  content: 同一份预算，两地 CPM 差三倍
+- title: 一张地域图上，要看哪几样
+  content: CPM、转化率、竞争密度、库存
+- title: 便宜，不等于划算
+  content: CPM 低但转化也低；竞争密度高的地区贵但抢量快
+- title: 两地 CPM 差三倍的一份计划
+  content: 一份两地 CPM 差三倍的投放计划
+- title: 地域要连转化一起看，不能只比 CPM
+  content: 地域要连转化一起看，不能只比 CPM
+data_cards: []

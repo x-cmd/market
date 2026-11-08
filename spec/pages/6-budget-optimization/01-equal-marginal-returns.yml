@@ -1,0 +1,17 @@
+id: 01-equal-marginal-returns
+series: 6-budget-optimization
+stage: 怎么挪
+title: 钱怎么分，才不会白花
+value: 知道在什么条件下各渠道边际拉平就是最优
+sections:
+- title: 钱该加到哪
+  content: 这笔钱该加到哪
+- title: 各渠道最后一块钱赚得一样多
+  content: 各渠道再投一块钱带回的差不多
+- title: 什么时候不成立
+  content: 各渠道边际可估、总量固定、没有渠道有硬上限
+- title: 三个渠道拉平的那一点
+  content: 三个渠道的边际曲线拉平的那一点
+- title: 拉平是判据不是结果，还要看绝对值
+  content: 拉平是判据不是结果；拉平了还要看绝对值够不够
+data_cards: []

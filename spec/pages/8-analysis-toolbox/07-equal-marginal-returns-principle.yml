@@ -1,0 +1,19 @@
+id: 07-equal-marginal-returns-principle
+series: 8-analysis-toolbox
+stage: 查字典
+title: 等边际原则：最优分配的判据
+value: 知道这个原则说了什么、成立的条件是什么
+sections:
+- title: 等边际原则说了什么
+  content: 固定总量下，各渠道边际相等时总和最大
+- title: 它怎么推出来的
+  content: 一两句不等式直觉；举一个具体数字
+- title: 它什么时候不靠谱
+  content: 边际不可估、有硬约束、总量不固定、渠道互相影响
+- title: 拿到分配结论以后
+  content: 它是判据不是配方；差距大就挪，差距小就别动
+- title: 站内哪几篇讲过
+  content: 6-budget-optimization/01-equal-marginal-returns、6-budget-optimization/03-after-the-shift-what-goes-wrong
+data_cards:
+- equal_marginal_optimum_split
+- marginal_roi_floor

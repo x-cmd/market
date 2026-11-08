@@ -1,0 +1,17 @@
+id: 02-roi-ranking-vs-budget-allocation
+series: 4-performance-analysis
+stage: 怎么读
+title: ROI 最高的渠道，不该加最多钱
+value: 知道 ROI 排名和加钱顺序不是一回事
+sections:
+- title: ROI 排名，为什么不能当加钱顺序
+  content: ROI 最高的渠道该加钱吗
+- title: 平均 ROI 藏了什么
+  content: 总量最大的渠道可能早就过了饱和点
+- title: 该看的是最后一块钱
+  content: 加一块钱能多带回多少
+- title: 四个渠道，最高的那个已经撞到饱和
+  content: 四个渠道，ROI 最高那个已经撞到饱和
+- title: 排序看平均，加钱看最后一块钱
+  content: 排序看平均，加钱看边际
+data_cards: []

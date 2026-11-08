@@ -1,0 +1,22 @@
+id: 08-the-five-column-table
+series: 7-brand-visibility
+stage: 看得见吗
+title: 交过来的表，要看哪几列
+value: 知道交过来的表缺哪一列就不能用
+sections:
+- title: 拿到表，先看有没有缺列
+  content: 表到了，看不懂
+- title: 五列，各是什么
+  content: 词、渠道、日期、次数、情绪
+  subsections:
+  - title: 次数
+    content: 是出现次数还是提及次数
+  - title: 情绪
+    content: 谁打的标，打的什么标
+  - title: 日期
+    content: 是观测日还是统计窗
+- title: 没查到，不等于零
+  content: 没查到不等于零：空值、NA 与不写这一行是三件事
+- title: 缺一列这张表就不能用
+  content: 缺一列这张表就不能用，先补齐再分析
+data_cards: []

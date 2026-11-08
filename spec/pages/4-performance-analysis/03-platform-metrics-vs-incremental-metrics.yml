@@ -1,0 +1,19 @@
+id: 03-platform-metrics-vs-incremental-metrics
+series: 4-performance-analysis
+stage: 怎么读
+title: 平台报的数字，和真实效果不是一回事
+value: 手里有两套数时，知道怎么并列而不混用
+sections:
+- title: 两套数，该怎么并排放
+  content: 两套数并排放着，怎么并列而不混用
+- title: 两本账，各记什么
+  content: 平台记沾过广告的订单，增量记停投后少掉的单
+- title: 差是从哪来的
+  content: 曝光不随机、归因窗口、自然需求被认领
+- title: 并排写，别相加
+  content: 两列并排、标注口径与日期、不做加总
+- title: 什么时候用哪一套
+  content: 谈平台内的优化用平台口径，谈该不该继续花用增量口径
+- title: 两本账各自记，不要合并成一笔
+  content: 两本账各自记，不要合并成一笔
+data_cards: []

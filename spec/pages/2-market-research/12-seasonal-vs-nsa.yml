@@ -1,0 +1,19 @@
+id: 12-seasonal-vs-nsa
+series: 2-market-research
+stage: 数从哪来
+title: 季调数和不季调数，别混着用
+value: 知道两个口径为什么对不上，一张图上该用哪个
+sections:
+- title: 同一个月，为什么差一大截
+  content: 同一个月的两个数：一个涨 12%，一个涨 3%
+- title: 季调到底做了什么
+  content: 扣掉历史同月规律，看比通常水平高了多少
+- title: 什么时候用哪个
+  content: 看相对水平用季调，对账单用原始，看趋势用季调
+- title: 混着用，结论会反
+  content: 季调与原始放一张图；同比用原始、环比用季调
+- title: 同比环比，各用哪个数
+  content: 各自对应哪个口径，为什么旺季的环比跌是正常的
+- title: 一张图只用一种口径
+  content: 一张图只用一种口径，图注写明是哪种
+data_cards: []

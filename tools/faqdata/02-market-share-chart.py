@@ -1,0 +1,152 @@
+# -*- coding: utf-8 -*-
+
+DATA = {
+    'id': 'x-market-1-report-overview-02-market-share-chart',
+    'reference': 'docs/1-report-overview/02-market-share-chart/cn.md',
+    'groups': [
+        {
+            'name_en': 'reading a share',
+            'name_cn': '读一个份额',
+            'qa': [
+                {
+                    'id': 'same-number-two-meanings',
+                    'q_en': 'Two people both say "our share is 23%". Are they talking about the same thing?',
+                    'q_cn': '两个人都说「我们占 23%」，说的是同一件事吗？',
+                    'a_en': (
+                        'Not necessarily, and the gap between them can be large. A share is a ratio, and a ratio has two halves you choose '
+                        'independently. Eurostat asked the enterprises in scope how much of their turnover came from web sales. For the EU in 2024, '
+                        'counting all web sales gives 19.82% of turnover; counting only the web sales made to consumers gives 8.49%. Same denominator, '
+                        'same year, same enterprises — the whole 11.33-point difference sits in the numerator. Both numbers are correct. They just '
+                        'answer different questions, so quoting them side by side without saying which is which is how "the gap is a factor of two" '
+                        'gets said about a market where nothing doubled.'
+                    ),
+                    'a_cn': (
+                        '不一定，而且中间的差距可以很大。份额是个比值，而比值的两半是你各自独立选的。Eurostat 问范围内的企业：你的营业额里有多少来自网络销售。'
+                        '欧盟 2024 年，把所有网络销售都算上，是营业额的 19.82%；只算卖给消费者的那部分，是 8.49%。同一个分母、同一年、同一批企业，'
+                        '11.33 个点的差别全在分子上。两个数都没错，它们回答的是不同的问题。不说是哪一个就把两个数摆在一起比，就会得出「差了一倍」这种说法——'
+                        '而市场里其实什么都没翻倍。'
+                    ),
+                    'confidence': 10,
+                },
+                {
+                    'id': 'what-denominator-to-name',
+                    'q_en': 'What exactly should I name as the denominator when I publish a share?',
+                    'q_cn': '把份额报出去的时候，分母到底要说到什么程度？',
+                    'a_en': (
+                        'Far enough that somebody else could rebuild it. For the Eurostat series that means four things stated together: enterprises with ten '
+                        'or more employees, in NACE sections C to E (wholesale and retail, accommodation and food services, transport), the year, and '
+                        'the measure — turnover. "Our share of the market" names none of these. "Our share of the turnover of enterprises with ten or more '
+                        'employees in NACE C to E" names all four, and that is the version someone can check.'
+                    ),
+                    'a_cn': (
+                        '要说到别人能照着重建。对 Eurostat 这条序列，是四件事一起说：雇员十人及以上的企业，NACE C 到 E 行业（批发零售、住宿餐饮、交通），哪一年，'
+                        '以及量的是什么——营业额。「我们的市场份额」这四件事一件都没说。「我们在雇员十人及以上、NACE C 到 E 行业的营业额中占 X%」四件都说了，这才是别人能核对的说法。'
+                    ),
+                    'confidence': 10,
+                },
+                {
+                    'id': 'am-i-in-the-frame',
+                    'q_en': 'My company is not in the published statistic at all. What does that mean for my share?',
+                    'q_cn': '我的公司根本不在这个统计里，那我说的份额还有意义吗？',
+                    'a_en': (
+                        'It means the published figure is not your benchmark, and treating it as one is the most common way people get burned in a meeting. '
+                        'The Eurostat series covers enterprises with ten or more employees in NACE C to E. A company with eight people is not in it. '
+                        'A software company is not in it. A store whose category sells mostly offline barely appears. You can still describe your own share — '
+                        'against your own denominator. What you cannot do is put that number next to the published one and let a reader assume the two '
+                        'share a frame.'
+                    ),
+                    'a_cn': (
+                        '意思是那个公开的数不是你的参照物，而把它当参照物，是人在会上吃亏最常见的方式。Eurostat 这条序列覆盖的是雇员十人及以上、属于 NACE C 到 E 的企业。'
+                        '八个雇员的公司不在里面，做软件的不在，主要靠线下成交的品类几乎不出现。你当然还是可以讲自己的份额——拿你自己的分母。但你不能把这个数跟公开的那个数摆在一起，'
+                        '让读的人以为两者在同一个框里。'
+                    ),
+                    'confidence': 9,
+                },
+            ],
+        },
+        {
+            'name_en': 'when the number looks wrong',
+            'name_cn': '当这个数看着不对',
+            'qa': [
+                {
+                    'id': 'germany-jagged-line',
+                    'q_en': "Germany's online-sales share went from 27.69% to 15.96% to 42.01% in three years. Is that real?",
+                    'q_cn': '德国的网络销售占比三年里从 27.69% 掉到 15.96%，又冲到 42.01%。这是真的吗？',
+                    'a_en': (
+                        'No. A large national economy does not halve its online-sales share in a year and then overshoot the previous peak. The shape is a '
+                        'property of the survey, not the market: the sampling frame, the response rate and how many enterprises answered all move year to '
+                        'year, and Eurostat itself flags that the 2025 coverage differs from 2024. Compare with Spain, which climbed from 20.94% in 2019 to '
+                        '31.64% in 2023 and 31.81% in 2024, then slipped to 29.8% in 2025 — a single-year dip on a trend that kept its direction. '
+                        'That is what a real business line looks like. One year alone can be the shape of the frame rather than the shape of the market.'
+                    ),
+                    'a_cn': (
+                        '不是。一个大国的电商渗透率不会一年腰斩、再冲过头超过前一个高点。这条线的形状是调查的属性，不是市场的属性：抽样框、回收率、当年有多少企业填报，每一年都在动，'
+                        'Eurostat 自己也标注了 2025 年的覆盖范围与 2024 年不同。对照西班牙：从 2019 年的 20.94% 稳爬到 2023 年的 31.64%、2024 年的 31.81%，2025 年回落到 29.8%——'
+                        '前几年的方向没变，只是单年回落。这才是生意该有的线的形状。只看一年，那个形状可能是抽样框的形状，不是市场的形状。'
+                    ),
+                    'confidence': 9,
+                },
+                {
+                    'id': 'hungary-vs-cyprus',
+                    'q_en': 'Why does Hungary look like a retail economy when its web-sales share is high?',
+                    'q_cn': '匈牙利网络销售占比那么高，为什么看起来却不像零售经济？',
+                    'a_en': (
+                        'Because the high total is almost entirely wholesale. Hungary had 30.85% of enterprise turnover from web sales in 2024, but only 0.92% '
+                        'of that was web sales to consumers. Put in cash terms: of every 100 forints of turnover, 31 came in over the web, and only 3 of those '
+                        '31 went to end consumers — the rest was wholesalers supplying convenience stores and other businesses. Cyprus reached a similar '
+                        'web-sales share of 34.84%, but 31.62% of it was to consumers: retail shops that each built their own online storefront. Same statistic, '
+                        'two different businesses. Comparing the two totals compares unlike things.'
+                    ),
+                    'a_cn': (
+                        '因为那个高总数几乎全是批发。匈牙利 2024 年有 30.85% 的企业营业额来自网络销售，但其中只有 0.92% 是卖给消费者的。换成钱来看：每 100 元营业额里 31 元来自网络，'
+                        '而这 31 元里只有 3 元流向终端消费者，剩下的都是批发商在给便利店和其他企业供货。塞浦路斯的网络销售占比也到了 34.84%，但其中 31.62% 是卖给消费者的——'
+                        '一堆零售店各自做了个网店。同一个统计量，两种生意。拿两个总量比大小，比的是两件不同的事。'
+                    ),
+                    'confidence': 10,
+                },
+            ],
+        },
+        {
+            'name_en': 'turning a share into a chart',
+            'name_cn': '把份额变成一张图',
+            'qa': [
+                {
+                    'id': 'bars-versus-scatter',
+                    'q_en': 'Why do I need a second measure when a horizontal bar of shares already shows who leads?',
+                    'q_cn': '横条图已经看出谁领先了，为什么还要第二个数？',
+                    'a_en': (
+                        'Because the bars answer only one question — who is large. In the running-shoe category, a bar of fiscal-year revenue puts NIKE at '
+                        '46.40 billion dollars, Skechers at 8.97, Deckers at 5.47 and Wolverine at 1.87, and the chart is finished. Add year-on-year growth '
+                        'as a second axis and the picture splits: NIKE sits far right at +0.2% while Skechers, a fifth its size, sits top-left at +12.1%. '
+                        'Now "who leads" and "who is taking share" are two different questions with two different answers, and a single bar chart cannot hold both.'
+                    ),
+                    'a_cn': (
+                        '因为横条只回答一个问题——谁大。跑鞋品类里，一根按财年营收排的横条把 NIKE 放在 46.40 十亿美元，Skechers 8.97，Deckers 5.47，Wolverine 1.87，图就画完了。'
+                        '再把同比增速放到第二个轴上，画面就分开了：NIKE 挂在最右边，增速 +0.2%；Skechers 只有它五分之一的规模，却在左上角，增速 +12.1%。'
+                        '这时候「谁是龙头」和「谁在抢份额」是两个问题、两个答案，一根横条装不下两个。'
+                    ),
+                    'confidence': 9,
+                },
+                {
+                    'id': 'three-questions-to-publish',
+                    'q_en': 'What should a market-share chart let a reader answer before I publish it?',
+                    'q_cn': '一张市场份额图，在发出去之前要能让读者答出哪三句？',
+                    'a_en': (
+                        'Three. Who is the denominator — whose turnover, which year, which industries, which company sizes. What is in the numerator — do '
+                        'sales to businesses count, or only sales to consumers. And am I in the same frame as the number I am being compared against. '
+                        'If all three have clean answers, the chart is worth publishing. If any of them is a shrug, publish the number but drop the comparison. '
+                        'A share stated this way stops being "we have 23%" and becomes "in the frame of employees-ten-plus NACE-C-to-E consumer web sales, '
+                        'we have 23%" — the second half is wordy, and without it the first half is not a claim anyone can check.'
+                    ),
+                    'a_cn': (
+                        '三句。第一，分母是谁——谁的营业额、哪一年、哪些行业、哪些规模的企业。第二，分子里装了什么——卖给企业的算不算，还是只算卖给消费者的。'
+                        '第三，我跟要拿来对比的那个数，在同一个框里吗。三句都有干脆的答案，这张图才值得发；哪一句只能耸肩，就把数报出来，把比较撤掉。'
+                        '按这个说法，你的 23% 就从「我们占 23%」变成「在雇员十人以上、NACE C 到 E、面向消费者的网络销售这个框里，我们占 23%」。'
+                        '后半句是啰嗦的，但没了后半句，前半句就是一句没法验证的话。'
+                    ),
+                    'confidence': 10,
+                },
+            ],
+        },
+    ],
+}

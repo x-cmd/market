@@ -1,0 +1,125 @@
+id: x-market-8-analysis-toolbox-06-marginal-vs-average-roi
+
+data:
+  - name:
+      en: what the two numbers are
+      cn: 这两个数分别是什么
+    qa:
+      - id: average-vs-marginal-definition
+        question:
+          en: What is the difference between average ROI and marginal ROI?
+          cn: 平均 ROI 和边际 ROI 差在哪？
+        answer:
+          en: >
+            Average ROI is total return divided by total spend. It looks backwards: it describes how well the whole pot of money performed over the period. Marginal ROI is what the last unit of money brought back. It looks forwards, and it is computed per band of spend, so every band has a different value. Spending from zero to 500,000 and spending from 500,000 to 600,000 are two entirely different businesses, even though they sit under the same channel name.
+          cn: >
+            平均 ROI 是总回报除以总花费。它是回头看的数：这一整笔投入过去这段时间干得怎么样。边际 ROI 是最后一块钱换回了多少。它是往前看的数，而且按花费分档算，每一档的值都不一样。从 0 花到 50 万，和从 50 万花到 60 万，是两门完全不同的生意，哪怕它们都叫同一个渠道。
+        confidence: 10
+        reference:
+          - docs/8-analysis-toolbox/06-marginal-vs-average-roi/cn.md
+      - id: why-average-looks-fine
+        question:
+          en: Why does average ROI stay healthy while marginal ROI collapses?
+          cn: 为什么平均 ROI 一直好看，边际 ROI 却塌了？
+        answer:
+          en: >
+            Because average ROI is cumulative. The money earned in the early bands stays in the numerator and the denominator, propping up the later ones. That gives it a floor of one: as long as the channel is profitable overall, average ROI cannot fall below one. Marginal ROI has no such floor. It can be zero and it can be negative. A channel with an average ROI of 1.9 can have a marginal ROI of 0.2, and that is not a contradiction, it is just two different questions.
+          cn: >
+            因为平均 ROI 是累计的。前面几档赚的钱一直躺在分子分母里，替后面的档次垫着。这给了它一个 1 的下限：只要这个渠道整体还在赚，平均 ROI 就不会低于 1。边际 ROI 没有这个下限，它可以是 0，也可以是负的。一个渠道平均 ROI 还有 1.9、边际 ROI 已经掉到 0.2，这不是矛盾，只是两个不同的问题。
+        confidence: 10
+        reference:
+          - docs/8-analysis-toolbox/06-marginal-vs-average-roi/cn.md
+      - id: which-one-to-look-at
+        question:
+          en: Which of the two should you look at?
+          cn: 这两个数该看哪一个？
+        answer:
+          en: >
+            It depends on the decision. To judge how a channel has performed, use average ROI. To decide whether to put more money in next month, use marginal ROI. The two cannot substitute for each other, and the second is the one that carries the risk, because average ROI can never fall below one while marginal ROI is free to go negative.
+          cn: >
+            看你做的是哪一个决定。要评价这个渠道过去做得怎么样，看平均 ROI。要决定下个月加不加钱，看边际 ROI。这两个不能互相替代，而真正带风险的是第二个：平均 ROI 永远掉不到 1 以下，边际 ROI 却可以是负数。
+        confidence: 9
+        reference:
+          - docs/8-analysis-toolbox/06-marginal-vs-average-roi/cn.md
+
+  - name:
+      en: how to compute it
+      cn: 怎么算
+    qa:
+      - id: worked-example
+        question:
+          en: Can you show the two numbers computed from the same data?
+          cn: 能用同一份数据把两个数都算一遍吗？
+        answer:
+          en: >
+            Yes. Search advertising in one month, split into five bands of 100,000 each, returning 480,000, 310,000, 200,000, 110,000 and 40,000. Total spend is 500,000 and total return is 1,140,000, so average ROI is 2.28. Marginal ROI is read off the last band: 100,000 spent to return 40,000, so 0.4. Same channel, same month, two numbers 2.28 and 0.4. The banded marginal figures run 4.8, 3.1, 2.0, 1.1 and 0.4 from the first band to the last.
+          cn: >
+            可以。某月搜索广告分成五档，每档 10 万，分别换回 48 万、31 万、20 万、11 万和 4 万。总花费 50 万，总换回 114 万，平均 ROI 是 2.28。边际 ROI 看最后一档：40 万到 50 万这一段，10 万换回 4 万，所以是 0.4。同一个渠道，同一个月，两个数 2.28 和 0.4。分档的边际数从第一档到最后一档依次是 4.8、3.1、2.0、1.1、0.4。
+        confidence: 10
+        reference:
+          - docs/8-analysis-toolbox/06-marginal-vs-average-roi/cn.md
+      - id: roi-ranking-is-not-allocation-order
+        question:
+          en: Should the channel with the highest ROI get the most extra money?
+          cn: ROI 最高的渠道该不该加最多钱？
+        answer:
+          en: >
+            No. A high average ROI can mean the channel earned very well on its early money and has since saturated, while another channel with a slightly lower average still has a high marginal ROI and is where the next unit belongs. Average ROI cannot determine the order of allocation; marginal ROI can. That is what makes this a trap rather than a technicality: the ranking looks like an answer, and it is the wrong answer to the question being asked.
+          cn: >
+            不该。一个渠道平均 ROI 高，可能是因为它早期那批钱挣得特别好、现在已经饱和了；另一个渠道平均 ROI 稍低，但边际 ROI 还在高位，那才是下一块钱该去的地方。平均 ROI 决定不了加钱的顺序，边际 ROI 才能。所以这是个坑而不是细节：排名看起来像个答案，而它恰好答错了你问的那个问题。
+        confidence: 9
+        reference:
+          - docs/8-analysis-toolbox/06-marginal-vs-average-roi/cn.md
+
+  - name:
+      en: when it goes wrong
+      cn: 它什么时候不靠谱
+    qa:
+      - id: need-two-levels
+        question:
+          en: Why can you not compute marginal ROI from a single total?
+          cn: 为什么只有一个总数就算不出边际 ROI？
+        answer:
+          en: >
+            Because marginal ROI is a function, not a number. It answers what one more unit would do, so you need observations at more than one level of spend. With one total spend and one total return, all you have is an average. This is the most common situation in practice: a channel with a single monthly budget gives you only the average. The workaround is to cut the history into periods, compute an average for each, and watch whether it is trending down. That is a rough version of the marginal curve, but it gives you the direction.
+          cn: >
+            因为边际 ROI 是个函数，不是一个数。它答的是「再多一块会怎样」，所以你至少要有两个投入水平上的观测。只有一个总花费、一个总回报，你手上就只有一个平均数。实务上最常见的就是这种情况：一个渠道一个月就一个总预算，你只能看到平均。能做的补救是把数据按时间切成多段，每段算一次平均 ROI，然后看它在往下掉没有。这是边际曲线的粗糙版，但能看出方向。
+        confidence: 10
+        reference:
+          - docs/8-analysis-toolbox/06-marginal-vs-average-roi/cn.md
+      - id: too-fine-bands
+        question:
+          en: What happens if the spend bands are too fine?
+          cn: 花费分档分得太细会怎么样？
+        answer:
+          en: >
+            Each band's marginal ROI ends up buried in noise. Ten bands when each contains only a couple of weeks of data gives you ten noisy numbers. Finer is not better; what matters is that each band carries enough volume. The common rule is to have each band account for a decent share of total spend, say ten percent or more, and then check whether the resulting curve is trending down monotonically.
+          cn: >
+            每一档的边际 ROI 就埋在噪声里了。分十档而每档只有几周数据，你得到的是十个带噪声的数。分得更细不等于更好，要紧的是每档的量要够。常见的做法是让每档至少占总花费的一个可观比例，比如不低于 10%，然后看曲线是不是单调往下。
+        confidence: 8
+        reference:
+          - docs/8-analysis-toolbox/06-marginal-vs-average-roi/cn.md
+      - id: average-is-book-not-increment
+        question:
+          en: Is the average ROI computed on the platform the same as the incremental ROI?
+          cn: 平台报表里的 ROI 等于增量 ROI 吗？
+        answer:
+          en: >
+            No, and this is the most important of the caveats. The 2.28 above is what 500,000 spent returned 1,140,000. But some of that 1,140,000 would have arrived anyway. An ad that pulls in someone who was going to buy anyway gets the credit for the order, yet stopping the ad would not stop the order. The real incremental return can be far below 2.28. Platform ROI uses the platform's own attribution rule, not an incrementality measure, and the size of that gap is where the argument is.
+          cn: >
+            不等，这是所有注意事项里最要紧的一条。上面那个 2.28 是「花 50 万换回 114 万」。但那 114 万里有一部分本来就会来。一个广告把本来会买的人又吸引过来一次，这一单被算成广告的功劳，但停掉广告这一单照样成交。这个渠道的真实增量回报可能远低于 2.28。平台 ROI 用的是平台自己的归因口径，不是增量口径，而这两者差多少，正是问题所在。
+        confidence: 10
+        reference:
+          - docs/8-analysis-toolbox/06-marginal-vs-average-roi/cn.md
+      - id: marginal-changes-over-time
+        question:
+          en: Can you keep a marginal ROI number and reuse it later?
+          cn: 边际 ROI 这个数能存下来以后再用吗？
+        answer:
+          en: >
+            No. Marginal ROI moves with the market. The same channel may show a marginal ROI of 2.0 this month and 1.2 next month, because a competitor started bidding more. So it is not a number you can file away; it is something you have to recompute. A stale marginal ROI is worse than none, because it looks like a measurement while describing a market that no longer exists.
+          cn: >
+            不能。边际 ROI 随市场变。同一个渠道这个月的边际 ROI 是 2.0，下个月可能变成 1.2，因为竞争者加了竞价。所以它不是一个能存起来的数，是每天都要重算的东西。过期的边际 ROI 比没有还糟，因为它看着像个测量结果，说的却是一个已经不存在的市场。
+        confidence: 9
+        reference:
+          - docs/8-analysis-toolbox/06-marginal-vs-average-roi/cn.md

@@ -1,0 +1,19 @@
+id: 01-what-a-control-group-is
+series: 3-experiment-design
+stage: 怎么扰动
+title: 对照组该怎么定
+value: 知道对照组该长什么样，以及几种常见的错法
+sections:
+- title: 为什么切了一半城市，结果会作废
+  content: 切了一半城市，结果没法用
+- title: 对照组要满足四条
+  content: 随机可比、时间同步、其余无差别、样本够
+- title: 三种最常见的错对照
+  content: 拿停投前后比、拿隔壁城市比、把同期没投的人当对照
+- title: 两种样本对不齐
+  content: 两边投放密度不同；两边本来就不同源
+- title: 一次因为对照不合格作废的投放
+  content: 一次因样本不均衡作废的投放
+- title: 没有对照就没有增量；对照不合格比没有更糟
+  content: 没有对照就没有增量；对照不合格比没有更糟
+data_cards: []

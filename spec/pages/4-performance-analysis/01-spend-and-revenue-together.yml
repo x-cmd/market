@@ -1,0 +1,24 @@
+id: 01-spend-and-revenue-together
+series: 4-performance-analysis
+stage: 怎么读
+title: 收入减广告费，不等于赚
+value: 能把花费和收入放进同一张表，算出自己的真实账
+sections:
+- title: 流水好看，也可能没赚钱
+  content: 流水很好看
+- title: 三笔账要一起看
+  content: 收入、花费、成本
+  subsections:
+  - title: 收入
+    content: 成交额，注意有没有把退款算进去
+  - title: 花费
+    content: 投放、平台佣金、人力
+  - title: 成本
+    content: 货、履约、售后
+- title: 怎么放进同一张表
+  content: 按同一时间窗、同一口径对齐
+- title: 一家毛利被投放吃掉的店
+  content: 一家毛利被投放吃掉的独立站
+- title: 收入减花费不等于赚，还要再减成本
+  content: 收入减花费不等于赚，还要再减成本
+data_cards: []

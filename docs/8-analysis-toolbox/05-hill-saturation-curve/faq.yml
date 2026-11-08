@@ -1,0 +1,123 @@
+id: x-market-8-analysis-toolbox-05-hill-saturation-curve
+
+data:
+  - name:
+      en: what the hill curve does
+      cn: Hill 饱和曲线在做什么
+    qa:
+      - id: hill-curve-essence
+        question:
+          en: What does the Hill saturation curve actually do?
+          cn: Hill 饱和曲线到底在做什么？
+        answer:
+          en: >
+            It gives the idea that more spend buys less extra effect a mathematical shape, with the effect formula x^alpha divided by x^alpha plus k^alpha. The curve always rises and always flattens, approaching a horizontal ceiling that the channel cannot cross no matter how much is spent. The guarantee it provides is that input never runs past the limit, which is why almost every marketing mix model fits one: real channels have a ceiling and a linear model does not.
+          cn: >
+            它给「越多越少」这件事一个数学形状，效果的公式是 x^α 除以 x^α 加 k^α。这条曲线一直往上，也一直变平，逼近一条水平的天花板，这个渠道花多少钱都越不过去。它提供的保证是投入不会越界，这也是几乎所有营销组合模型都要装一条饱和曲线的原因：真实的渠道有上限，而线性模型没有。
+        confidence: 10
+        reference:
+          - docs/8-analysis-toolbox/05-hill-saturation-curve/cn.md
+      - id: why-not-linear
+        question:
+          en: Why not just use a straight line?
+          cn: 为什么不用一条直线？
+        answer:
+          en: >
+            A linear model says that doubling the spend doubles the effect, forever. That is why it hands back a number like a contribution that grows without limit, and why it tells you a saturated channel is still worth pouring money into. The Hill curve is not more accurate by construction, it is bounded, and the real bound is the point: a channel can only reach so many people, so its response has to flatten somewhere.
+          cn: >
+            线性模型等于说：花费翻倍，效果就翻倍，永远如此。这就是为什么它会给出一个没有上限的贡献数，也就是为什么它会告诉你一个已经饱和的渠道还值得继续砸钱。Hill 曲线不是天生更准，它是**有界**的，而真实的边界正是要点：一个渠道能触达的人就那么多，它的响应必然会在某处变平。
+        confidence: 9
+        reference:
+          - docs/8-analysis-toolbox/05-hill-saturation-curve/cn.md
+  - name:
+      en: what the two parameters do
+      cn: 两个参数各管什么
+    qa:
+      - id: k-is-the-saturation-point
+        question:
+          en: What does the parameter k control?
+          cn: 参数 k 管什么？
+        answer:
+          en: >
+            k sets where the ceiling sits in terms of spend. When the effect reaches 0.5, the input is exactly k, which is the easiest point to recognise on the curve: spend up to the saturation point and you get half the ceiling. A larger k pushes the ceiling further away. Different channels differ a lot here, because a new channel has a low ceiling by definition and even a large brand's main channel can only reach so many people.
+          cn: >
+            k 定天花板落在哪个投入量上。效果达到 0.5 的时候，投入恰好等于 k，这是曲线上最好认的一点：投到饱和点，就拿到一半天花板。k 越大，天花板越远。各渠道的 k 差很多，因为新渠道的天花板本来就低，一个大品牌的主渠道能触达的人也有限。
+        confidence: 10
+        reference:
+          - docs/8-analysis-toolbox/05-hill-saturation-curve/cn.md
+      - id: alpha-is-the-elasticity
+        question:
+          en: What does the parameter alpha control?
+          cn: 参数 α 管什么？
+        answer:
+          en: >
+            alpha sets where the curve starts to flatten. At alpha equal to 1 the curve is the plainest one: double the input and the effect doubles, though it never reaches 1. At alpha equal to 2 the curve is flatter at low spend, so a small budget earns back less, and the effect only becomes visible near k. The two parameters answer different questions and have to be set separately: k says how big this channel can get, alpha says how hard it is to get there.
+          cn: >
+            α 定曲线在什么位置上开始变平。α 等于 1 是最朴素的一条：投入翻倍，效果翻倍，但永远到不了 1。α 等于 2 时曲线在低投入段更平，小额投入回报更低，要投到 k 附近才明显起来。两个参数回答的是两个问题，所以要分别定：k 说这个渠道最多能做多大，α 说从零走到那里有多难。
+        confidence: 9
+        reference:
+          - docs/8-analysis-toolbox/05-hill-saturation-curve/cn.md
+      - id: alpha-above-one-flips-the-intuition
+        question:
+          en: Does alpha above one change what you should do?
+          cn: α 大于 1 会不会改变你的做法？
+        answer:
+          en: >
+            Yes. A curve with alpha above one has unit return that is low at first and high in the middle, with an inflection partway along. For alpha equal to 2 and k equal to 1000, unit return peaks at x equal to k times the alpha minus one to the power one over alpha, which is 1000, exactly half the ceiling. The steepest point on the curve sits slightly earlier, at x equal to k times alpha over alpha plus one to the power one over alpha, around 816, and that is where each extra unit of spend adds the most effect. The opening stretch is the flatter one. So the instinct that a small test should come before a large push does not hold for these channels. This is also why adding money to a channel that is already established can pay better than starting small.
+          cn: >
+            会。α 大于 1 的曲线，单位回报是开头低、中间高，中间有个拐点。α 等于 2、k 取 1000 时，单位回报最高的位置在 x 等于 k 乘 α 减 1 再开 α 次方，正好是 1000，是天花板的一半。曲线最陡的位置比这个更靠前，在 x 等于 k 乘 α 除以 α 加 1 再开 α 次方，大约是 816，那里多花一块钱带来的效果增量最大。开头那一段反而偏平。所以「先小规模试试再放大」这个直觉，对这些渠道不成立。这也是为什么一个已经铺开的渠道加钱可能比从头起步更划算。
+        confidence: 8
+        reference:
+          - docs/8-analysis-toolbox/05-hill-saturation-curve/cn.md
+  - name:
+      en: when it goes wrong
+      cn: 它什么时候不靠谱
+    qa:
+      - id: new-channel-cannot-estimate-k
+        question:
+          en: Why can a new channel not have its k estimated?
+          cn: 为什么新渠道估不出 k？
+        answer:
+          en: >
+            Because estimating the ceiling requires having climbed near the ceiling. A channel that has only ever spent 200 cannot distinguish a k of 500 from a k of 5000, since the point 200 sits far from both candidates and the curve looks almost the same. The parameter is a guess, and a guessed k goes straight into the contribution: if k is guessed too large, the model believes the channel has lots of room left and assigns it more contribution. So a new channel's contribution should always be discounted, and the industry practice of borrowing a prior from a similar channel should be read with that in mind.
+          cn: >
+            因为要估天花板，你得先爬到接近天花板的地方。一个只花到 200 的渠道，它的 k 是 500 还是 5000 分不出来——200 这个点离两个候选值都远得很，曲线看起来几乎一样。这个参数是猜的，而猜出来的 k 会直接进到贡献计算里：k 猜大了，模型会觉得这个渠道还有很大空间，多分给它贡献。所以新渠道的贡献一律要打折看，行业里借同类渠道先验的做法，也要知道那个数是借来的。
+        confidence: 9
+        reference:
+          - docs/8-analysis-toolbox/05-hill-saturation-curve/cn.md
+      - id: alpha-unstable-on-sparse-data
+        question:
+          en: Why is alpha unstable when the data is thin?
+          cn: 数据稀疏的时候 α 为什么会不稳？
+        answer:
+          en: >
+            Two parameters estimated together can easily collide. When most of the data sits below a tenth of k, the curve is nearly a straight line over that stretch and a great many combinations of k and alpha fit it well. The fitting software picks one, but a different set can support the opposite conclusion. The way to check is the uncertainty interval: if the 95% interval for k runs from 300 to 3000, then k was not really estimated and the contribution carries no information either.
+          cn: >
+            两个参数一起估，本身就容易撞车。当数据大部分集中在 k 的 10% 以下，曲线在那段几乎是直线，k 和 α 的组合有一大堆都能拟合得很好。拟合软件会挑一组，换一组结论可能完全相反。判断办法是看参数的不确定性区间：如果 k 的 95% 区间是 300 到 3000，那这个 k 基本等于没估出来，贡献数也就等于没信息。
+        confidence: 9
+        reference:
+          - docs/8-analysis-toolbox/05-hill-saturation-curve/cn.md
+      - id: curve-shape-is-not-unique
+        question:
+          en: Is the Hill curve the only curve people use?
+          cn: Hill 曲线是唯一用的曲线吗？
+        answer:
+          en: >
+            No. It is the most common, not the only one and not always the right one. Common alternatives include the logistic curve, which adds a parameter and can fit an S shape, Michaelis-Menten, which comes from biochemistry and looks much like Hill, and plain piecewise linear, one slope below a breakpoint and another above. On large samples these produce similar numbers. The difference shows up when data is thin, and thin data is exactly when there is most to be uncertain about. So the useful question about an MMM output is not which curve was used but how well the fit is and how wide the parameter intervals are.
+          cn: >
+            不是。它是最常用的一条，不是唯一一条，也不总是最合适的一条。常见的替代形状还有 logistic 曲线（多一个参数，能拟合 S 形）、Michaelis-Menten（来自生物化学，形状和 Hill 很像）、以及直接用分段线性（断点前后两个斜率）。在大样本上它们给出的数差不多，差别在数据少的时候，而数据少恰恰是最该担心的时候。所以看一份 MMM 产出，该问的不是「用的什么曲线」，而是「拟合优度怎么样、参数区间有多宽」。
+        confidence: 8
+        reference:
+          - docs/8-analysis-toolbox/05-hill-saturation-curve/cn.md
+      - id: saturation-point-moves
+        question:
+          en: Does the saturation point stay put?
+          cn: 饱和点会不会变？
+        answer:
+          en: >
+            No. It is not a fixed property of the channel. A competitor enters and takes part of the same audience and k falls. The channel opens in new cities or new age groups and k rises. A k estimated a year ago and used for a budget decision today is already out of date. This is the same point made about not extrapolating beyond the observed spend level: a saturation curve is about performance at a given level of investment, not a permanent property of the channel.
+          cn: >
+            会变。k 不是渠道的固有属性。竞争者进来抢同一批人，k 就降了。渠道铺到了新的城市、新的年龄层，k 就升了。一年前估的 k，用在今天的预算决策上，本身就过期了。这跟 MMM 那页说的投放水平不能外推是同一件事：饱和曲线说的是「在某个投入水平上」的表现，不是渠道的永久属性。
+        confidence: 8
+        reference:
+          - docs/8-analysis-toolbox/05-hill-saturation-curve/cn.md

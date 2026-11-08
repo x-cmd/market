@@ -1,0 +1,17 @@
+id: 02-state-constraints-first
+series: 6-budget-optimization
+stage: 怎么挪
+title: 算最优之前，先把限制列出来
+value: 动优化之前先把约束列全
+sections:
+- title: 为什么算出来的最优做不到
+  content: 算出来的最优根本做不到
+- title: 先把这五类限制列出来
+  content: 最低投放量、合同、库存、人手、法规
+- title: 约束没列全，会算出什么
+  content: 解算器会给你一个违反现实的最优解
+- title: 一个算出来、做不到的最优解
+  content: 一个最优解在现实里做不到的预算方案
+- title: 先列约束，再解
+  content: 先列约束，再解
+data_cards: []

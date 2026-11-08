@@ -1,0 +1,17 @@
+id: 03-multiple-testing
+series: 3-experiment-design
+stage: 怎么扰动
+title: 测的组合太多，会看到假效果
+value: 知道测了一堆组合以后该怎么读结果
+sections:
+- title: 三个「显著」是怎么来的
+  content: 测了二十个组合，三个看着显著
+- title: 假阳性从哪来
+  content: 测得越多，纯靠运气就越容易出现「显著」
+- title: 组数翻倍，假阳性跟着涨
+  content: 组数翻几倍，假阳性的个数跟着涨
+- title: 三种收拾办法
+  content: 预先定好要看哪几个、校正、用统一分组的检验
+- title: 先定要问的问题，再决定测多少组
+  content: 先定要问的问题，再决定测多少组
+data_cards: []

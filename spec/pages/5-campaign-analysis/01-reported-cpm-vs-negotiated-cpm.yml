@@ -1,0 +1,17 @@
+id: 01-reported-cpm-vs-negotiated-cpm
+series: 5-campaign-analysis
+stage: 怎么投
+title: 渠道报的 CPM，和你谈下来的，为什么不一样
+value: 能问对渠道报价里那个 CPM 是怎么算的
+sections:
+- title: 报表四十五，谈到六十，差在哪
+  content: 报表四十五，谈到六十
+- title: CPM 有三个口径
+  content: 按展示算、按可见算、按实际可见时长算；再对上千次曝光还是万次
+- title: 谈价之前，先问这三样
+  content: 口径、折扣位置、返点还是价外返、有效期
+- title: 同一个渠道的两种 CPM
+  content: 同一个渠道，报表与议价 CPM 差三成
+- title: 先问口径，再谈价
+  content: 先问口径，再谈价
+data_cards: []

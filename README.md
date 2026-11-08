@@ -21,8 +21,8 @@ The site is a sequence of stages, not a pile of topics. Each stage answers the q
 | Stage | Series | You are stuck because | Pages |
 |---|---|---|---|
 
-| 入口 | `1-report-overview` — The five charts a market report has to deliver, and how to make each one right | 要交一份报告，先弄清楚交哪几张图 | 7 |
-| 数从哪来 | `2-market-research` — Where the numbers come from — how to measure them, and who is in this market | 手上一堆数，不确定能不能信 | 12 |
+| 入口 | `1-report-overview` — The runbook, the five charts a market report has to deliver, and how to make each one right | 要交一份报告，先弄清楚交哪几张图 | 7 |
+| 数从哪来 | `2-market-research` — Where the numbers come from — how to measure them, and who is in this market | 手上一堆数，不确定能不能信 | 14 |
 | 怎么扰动 | `3-experiment-design` — How to perturb the world without designing a broken test | 想知道是不是广告干的，一测就出问题 | 4 |
 | 怎么读 | `4-performance-analysis` — How to read what the platforms tell you | 数字到手了，读不出意思 | 5 |
 | 怎么投 | `5-campaign-analysis` — The numbers of this campaign or promotion | 这一笔投放本身的数不对劲 | 5 |
@@ -71,7 +71,7 @@ Changing one field changes the whole report. That is the difference between this
 
 ## 中文页
 
-正文目前只有中文版。**全站 53 页的阶段、标题、价值、章节与每节装什么，在 [OUTLINE.yml](OUTLINE.yml)**。
+正文目前只有中文版。**全站 55 页的阶段、标题、价值、章节与每节装什么，在 [OUTLINE.yml](OUTLINE.yml)**。
 
 ### 你今天卡在哪，从这儿进
 
@@ -91,8 +91,8 @@ Changing one field changes the whole report. That is the difference between this
 
 - **[一份市场报告怎么跑出来](docs/1-report-overview/01-report-runbook/cn.md)** — 知道一份报告怎么从零跑出来，每步谁做、做完怎么验  
   <sub>`docs/1-report-overview/01-report-runbook/`</sub>
-- 你说的 23%，跟别人说的 23%，是一回事吗 — 做出一张别人不会误读的市场份额图  
-  <sub>`docs/1-report-overview/02-market-share-chart/` · 待写</sub>
+- **[你说的 23%，跟别人说的 23%，是一回事吗](docs/1-report-overview/02-market-share-chart/cn.md)** — 做出一张别人不会误读的市场份额图  
+  <sub>`docs/1-report-overview/02-market-share-chart/`</sub>
 - 这门生意还值不值得进 — 判断这门生意还值不值得进  
   <sub>`docs/1-report-overview/03-growth-chart/` · 待写</sub>
 - 你的价格，在品类里站得住吗 — 看出自己的价格在品类里站不站得住  
@@ -204,22 +204,22 @@ Changing one field changes the whole report. That is the difference between this
 
 ### 查字典 · 工具箱
 
-- 归因：把功劳分给各个接触点 — 看懂归因在做什么，它什么时候会骗你  
-  <sub>`docs/8-analysis-toolbox/01-attribution/` · 待写</sub>
-- 增量实验：拿一块地方做对照 — 看懂增量实验的读法与代价  
-  <sub>`docs/8-analysis-toolbox/02-incrementality-testing/` · 待写</sub>
-- MMM 贡献分解：把长期贡献拆开 — 看懂 MMM 拆出来的贡献是怎么来的  
-  <sub>`docs/8-analysis-toolbox/03-mmm-contribution/` · 待写</sub>
-- Adstock 衰减：广告的效果会拖多久 — 看懂广告效果随时间衰减的形状  
-  <sub>`docs/8-analysis-toolbox/04-adstock-decay/` · 待写</sub>
-- Hill 饱和曲线：效果怎么撞天花板 — 看懂饱和曲线两个参数各管什么  
-  <sub>`docs/8-analysis-toolbox/05-hill-saturation-curve/` · 待写</sub>
-- 边际 ROI 和平均 ROI：两个不同的数 — 不会再把这两个数搞混  
-  <sub>`docs/8-analysis-toolbox/06-marginal-vs-average-roi/` · 待写</sub>
-- 等边际原则：最优分配的判据 — 知道这个原则说了什么、成立的条件是什么  
-  <sub>`docs/8-analysis-toolbox/07-equal-marginal-returns-principle/` · 待写</sub>
-- 置信区间和拟合度：模型能信几分 — 知道一个模型的两个可信度指标各管什么  
-  <sub>`docs/8-analysis-toolbox/08-confidence-intervals-and-fit/` · 待写</sub>
+- **[归因：把功劳分给各个接触点](docs/8-analysis-toolbox/01-attribution/cn.md)** — 看懂归因在做什么，它什么时候会骗你  
+  <sub>`docs/8-analysis-toolbox/01-attribution/`</sub>
+- **[增量实验：拿一块地方做对照](docs/8-analysis-toolbox/02-incrementality-testing/cn.md)** — 看懂增量实验的读法与代价  
+  <sub>`docs/8-analysis-toolbox/02-incrementality-testing/`</sub>
+- **[MMM 贡献分解：把长期贡献拆开](docs/8-analysis-toolbox/03-mmm-contribution/cn.md)** — 看懂 MMM 拆出来的贡献是怎么来的  
+  <sub>`docs/8-analysis-toolbox/03-mmm-contribution/`</sub>
+- **[Adstock 衰减：广告的效果会拖多久](docs/8-analysis-toolbox/04-adstock-decay/cn.md)** — 看懂广告效果随时间衰减的形状  
+  <sub>`docs/8-analysis-toolbox/04-adstock-decay/`</sub>
+- **[Hill 饱和曲线：效果怎么撞天花板](docs/8-analysis-toolbox/05-hill-saturation-curve/cn.md)** — 看懂饱和曲线两个参数各管什么  
+  <sub>`docs/8-analysis-toolbox/05-hill-saturation-curve/`</sub>
+- **[边际 ROI 和平均 ROI：两个不同的数](docs/8-analysis-toolbox/06-marginal-vs-average-roi/cn.md)** — 不会再把这两个数搞混  
+  <sub>`docs/8-analysis-toolbox/06-marginal-vs-average-roi/`</sub>
+- **[等边际原则：最优分配的判据](docs/8-analysis-toolbox/07-equal-marginal-returns-principle/cn.md)** — 知道这个原则说了什么、成立的条件是什么  
+  <sub>`docs/8-analysis-toolbox/07-equal-marginal-returns-principle/`</sub>
+- **[置信区间和拟合度：模型能信几分](docs/8-analysis-toolbox/08-confidence-intervals-and-fit/cn.md)** — 知道一个模型的两个可信度指标各管什么  
+  <sub>`docs/8-analysis-toolbox/08-confidence-intervals-and-fit/`</sub>
 
 ---
 

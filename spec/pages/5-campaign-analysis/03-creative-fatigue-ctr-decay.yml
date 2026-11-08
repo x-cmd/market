@@ -1,0 +1,19 @@
+id: 03-creative-fatigue-ctr-decay
+series: 5-campaign-analysis
+stage: 怎么投
+title: 素材什么时候该换
+value: 知道素材的疲劳曲线，以及什么时候该换
+sections:
+- title: CTR 为什么会自己往下掉
+  content: 同一张图，CTR 一路掉
+- title: 疲劳是怎么发生的
+  content: 反复曝光同一批人，注意力耗掉
+- title: 疲劳的曲线长什么样
+  content: 陡降后趋缓，跟饱和曲线不是一回事
+- title: 什么时候该换素材
+  content: CTR 掉到素材初期的一半以下
+- title: 同一张素材跑了六周
+  content: 同一张素材跑了六周
+- title: 按素材的寿命排期，别一个投到底
+  content: 按素材的寿命排期，不要一个素材投到底
+data_cards: []

@@ -1,0 +1,19 @@
+id: 04-marginal-roi-decay
+series: 4-performance-analysis
+stage: 怎么读
+title: 再多加一块钱，还赚得回来吗
+value: 能画出自己渠道的边际曲线，读出拐点
+sections:
+- title: 平均数好看，不代表还能加
+  content: 平均 ROI 稳定在 4，很好看
+- title: 再加一块，能多赚回多少
+  content: 再往这个渠道加一块钱，这一块能带回多少
+- title: 这条线怎么画
+  content: 把花费分段，看每段的单位回报
+- title: 从哪一块开始不值
+  content: 差分转平或转负的那一点
+- title: 平均数什么时候会骗人
+  content: 总量涨、平均稳，边缘已经不值了
+- title: 加不加量，看最后一块钱
+  content: 画自己的边际曲线，读拐点
+data_cards: []

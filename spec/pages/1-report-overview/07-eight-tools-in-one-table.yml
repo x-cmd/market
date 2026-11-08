@@ -1,0 +1,13 @@
+id: 07-eight-tools-in-one-table
+series: 1-report-overview
+stage: 入口
+title: 八个工具，一张表
+value: 知道八个工具各管什么、什么时候查哪个
+sections:
+- title: 八个工具各管什么
+  content: 工具、干什么、输入、输出、在哪篇用过
+- title: 每个工具管哪一步
+  content: 哪一步解决哪个问题
+- title: 哪几篇讲过
+  content: 每篇列出用了哪几个
+data_cards: []

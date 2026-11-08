@@ -1,0 +1,18 @@
+id: 04-adstock-decay
+series: 8-analysis-toolbox
+stage: 查字典
+title: Adstock 衰减：广告的效果会拖多久
+value: 看懂广告效果随时间衰减的形状
+sections:
+- title: Adstock 在做什么
+  content: 把过去的投放效果按衰减曲线累积到今天
+- title: 衰减的几何形状
+  content: 效果逐日打折，打折快慢由参数定
+- title: 它什么时候不靠谱
+  content: 衰减太快会低估长尾渠道；形状未必是指数；系数与单位效果不可直接对照
+- title: 什么时候值得用 Adstock
+  content: 自己搭 MMM 时要过这一步；判断一个渠道的效果期有多长
+- title: 站内哪几篇讲过
+  content: 8-analysis-toolbox/03-mmm-contribution、8-analysis-toolbox/05-hill-saturation-curve
+data_cards:
+- mmm_adstock_rate_by_channel

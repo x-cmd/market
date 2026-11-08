@@ -1,0 +1,125 @@
+id: x-market-8-analysis-toolbox-01-attribution
+
+data:
+  - name:
+      en: what attribution does
+      cn: 归因在做什么
+    qa:
+      - id: what-attribution-actually-does
+        question:
+          en: What does attribution actually do?
+          cn: 归因到底在做什么？
+        answer:
+          en: >
+            It splits one conversion's credit across the touchpoints that preceded it. It decides three things: the observation window (how far back a touch may sit and still count, and which actions qualify at all), the ordering of the touchpoints, and the rule that distributes the credit. The ordering is never in doubt, since every rule is a correct way to cut the same cake. But the ranking that falls out of the cut is decided by the cut, not by the data.
+          cn: >
+            它把一单成交的功劳，分给成交之前碰过的那些接触点。它要定三件事：观察范围多宽（归因窗口多长、哪些动作算数）、接触点按什么顺序排、功劳按哪条规则分。顺序从来不是问题，每一条规则都是切同一块蛋糕的正确切法。但切完剩下的排名，是切法定的，不是数据定的。
+        confidence: 10
+        reference:
+          - docs/8-analysis-toolbox/01-attribution/cn.md
+      - id: credit-is-not-revenue
+        question:
+          en: Does the credit attribution gives a channel equal the revenue that channel brought in?
+          cn: 归因分给一个渠道的分数，等于这个渠道带来的收入吗？
+        answer:
+          en: >
+            No. Attribution divides the credit of an order among the touchpoints on the path to it. It does not say how much revenue would have arrived without the ad. Attribution counts the orders that touched an ad, and what you want to buy is the orders that would disappear if you stopped running it. Those are two different numbers, and the gap between them is exactly what an experiment measures.
+          cn: >
+            不等于。归因分的是一单的功劳，不是那一单本身，也不说如果没有广告会少来多少收入。归因数的是沾过广告的订单，而你真正想买的是停投之后会消失的那些订单。这是两个数，它们之间的差，正是实验量出来的东西。
+        confidence: 10
+        reference:
+          - docs/8-analysis-toolbox/01-attribution/cn.md
+
+  - name:
+      en: the common rules
+      cn: 常见几种分法
+    qa:
+      - id: the-five-rules
+        question:
+          en: What are the common attribution rules and how do they differ?
+          cn: 常见的几种归因分法分别是什么，差在哪？
+        answer:
+          en: >
+            Five rules cover most of what you will meet. Last click gives everything to the final touchpoint and is the most common platform default. First click gives everything to the first touchpoint and answers the question of who brought this person in. Linear divides the credit evenly, so four touches give 25% each. Time decay gives more to the touches closest to the conversion. Position-based, sometimes called U-shaped, gives 40% to the first touch, 40% to the last, and splits the remaining 20% among the middle touches.
+          cn: >
+            五种规则覆盖了你会遇到的大多数情况。末次点击把功劳全给最后一次接触，多数平台默认用它。首次点击全给第一次接触，回答的是谁把人带进了门。线性是四个点各 25%。时间衰减给越靠近成交的点越多。位置法又叫 U 形，首尾各 40%，中间剩下的 20% 分掉。
+        confidence: 10
+        reference:
+          - docs/8-analysis-toolbox/01-attribution/cn.md
+      - id: same-path-different-split
+        question:
+          en: How far apart can two rules push the numbers on the same path?
+          cn: 同一条路径，换条规则能差多远？
+        answer:
+          en: >
+            Far enough to reverse a channel ranking. On one four-touch path, brand search ads take 40% under first click and 0% under last click. Social ads take 33.3% under time decay and 10% under position-based. So a report that says brand search drove 30% of conversions is missing half the sentence: which rule was used. If the ranking flips when the rule changes, the conclusion came from the rule and not from the data.
+          cn: >
+            远到能把渠道排名翻过来。同一条四个接触点的路径，品牌词广告在首触规则下拿 40%，在末触规则下拿 0%。社交广告在时间衰减下拿 33.3%，在位置法下拿 10%。所以报表上写「品牌搜索贡献了 30% 的转化」是少了一半的话：用的哪条规则。规则一换排名就翻，说明那个结论是规则给的，不是数据给的。
+        confidence: 9
+        reference:
+          - docs/8-analysis-toolbox/01-attribution/cn.md
+      - id: cheap-cross-check
+        question:
+          en: What is a cheap way to test whether a channel ranking is solid?
+          cn: 有没有不花钱的办法检验一个渠道排名牢不牢？
+        answer:
+          en: >
+            Run the same data twice under two different rules, first click and last click, and see whether the ranking moves. If it moves, the ranking is sensitive to the rule and the conclusion built on it is not safe. If it holds, the ranking is more likely to be real. It costs ten minutes and no budget, and it catches most reports that flip when someone changes the model.
+          cn: >
+            同一份数据换两条规则跑一遍，首触和末触，然后看排名动不动。动了，说明这个排名对规则敏感，架在它上面的结论就不牢。不动，排名才算稳。十分钟，不花钱，能挡掉大部分「换个模型结论就翻盘」的报告。
+        confidence: 9
+        reference:
+          - docs/8-analysis-toolbox/01-attribution/cn.md
+
+  - name:
+      en: when it misleads
+      cn: 它什么时候不靠谱
+    qa:
+      - id: invisible-exposures
+        question:
+          en: Why do invisible exposures distort attribution?
+          cn: 看不见的曝光为什么会扭曲归因？
+        answer:
+          en: >
+            A user who sees your ad in a feed and scrolls past leaves no click record, so that touchpoint never enters the path. The person is then credited to whatever the first recorded touchpoint was, often a search. The exposure that actually introduced the customer is missing from the path entirely, so the recorded channels divide a cake with a slice already taken away, and each of them gets a slightly larger share than it earned.
+          cn: >
+            一个人在信息流里刷到你的广告，划走了，没点。这件事不留记录，这次接触就从来不进路径。他于是被记在第一条有记录的接触上，往往是搜索。真正把他带进门的那次曝光整段不在路径里，剩下的渠道分的是少了一块的那块蛋糕，每一家都多分到一点。
+        confidence: 9
+        reference:
+          - docs/8-analysis-toolbox/01-attribution/cn.md
+      - id: natural-demand-claimed
+        question:
+          en: How does attribution credit demand that would have existed anyway?
+          cn: 归因怎么把本来就会有的需求算成自己的功劳？
+        answer:
+          en: >
+            Someone who searches for your brand name and then buys was going to buy. Under last click, the entire order goes to that brand keyword ad, because on his path it was the final click. The rule is being faithful, since the order really did end with that click, but the number it produces is not new demand the ad created. In eBay's 2015 random experiment, brand keyword ads had no measurable short-term benefit on purchases, and the paper estimated that about 99.5% of the clicks lost when the ads were turned off were immediately recaptured by natural search, so those clicks still happened without the ad. That 99.5% is specific to eBay, which held the top organic result for its own name with no competing bidder on the term.
+          cn: >
+            搜了你的品牌名然后下单的人，本来就会下单。在末次点击规则下，这一整单记给了品牌词广告，因为他那条路径上最后一下就是它。规则是忠实的，这一单确实以那次点击收尾，但它算出来的数不是广告创造出来的新需求。eBay 2015 年那次随机实验里，品牌词广告对短期成交没有可测量的好处，论文估计，关掉广告后少掉的点击里约 99.5% 被自然搜索接了回去，那些点击不投也会发生。这个 99.5% 是 eBay 特有的条件下的数——它自家品牌词的自然搜索就排第一，那个词上也几乎没有对手竞价。
+        confidence: 10
+        reference:
+          - docs/8-analysis-toolbox/01-attribution/cn.md
+      - id: attribution-window
+        question:
+          en: What does the attribution window change?
+          cn: 归因窗口会影响什么？
+        answer:
+          en: >
+            It sets how far back a touch may sit and still count. A user who first saw you on social media three weeks before buying is outside a 7-day window and inside a 30-day one. A longer window puts more touchpoints on the path, so each recorded channel receives a smaller share. The same data under a 7-day window and a 30-day window gives two different numbers. Together with which actions qualify and which rule is used, the window is one of the three things that determine the N orders a channel brought in any report.
+          cn: >
+            它决定一次接触可以往前放多久还算数。一个三周前在社交平台第一次看见你、这周才下单的人，在 7 天窗口外面，在 30 天窗口里面。窗口越长，路径上的接触点越多，每家分到的就越少。同一份数据，7 天窗口和 30 天窗口是两个数。跟哪些动作算数、用哪条规则一起，窗口是决定报表里「某渠道带来 N 单」这个 N 的三样东西之一。
+        confidence: 9
+        reference:
+          - docs/8-analysis-toolbox/01-attribution/cn.md
+      - id: where-attribution-is-usable
+        question:
+          en: When is attribution the right tool to reach for?
+          cn: 什么时候用归因是对的？
+        answer:
+          en: >
+            Inside one platform, when the question is which setting to change in your own account. Platform numbers apply one consistent rule across all channels, so they compare horizontally, and that is exactly what that question needs. What attribution cannot answer is whether a channel deserves more money, because that asks for the orders that would vanish if you stopped spending, and counting the orders that touched an ad does not tell you that. For that question, keep a control and measure the difference.
+          cn: >
+            在同一个平台内部，当问题是「自己账户里该改哪个设置」的时候。平台的数对所有渠道用同一套规则，能横着比，这正是那个问题要的。归因答不了的是某个渠道值不值得加钱，因为那个问题要的是停投之后会消失的订单，而数沾过广告的订单给不出这个数。要回答它，得留一块对照，把差量出来。
+        confidence: 9
+        reference:
+          - docs/8-analysis-toolbox/01-attribution/cn.md

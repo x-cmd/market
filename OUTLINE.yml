@@ -148,7 +148,7 @@ series:
     title: 没有广告，这些单会成交吗
     value: 分清广告赚到的和本来就有的
     sections:
-    - title: 先分清平台算的和广告真带来的
+    - title: 对照的那一半
       content: 对照组与投放组并排，差的那一块就是增量
       subsections:
       - title: 谁会要这张图
@@ -169,7 +169,7 @@ series:
         content: study 4 的真值 73%，观测口径 316%，精确匹配 222%
     - title: 316% 是怎么算出来的
       content: 四个转化率摆开：真效果差 0.012，观测口径差 0.042
-    - title: 没有对照组，就拿不到增量
+    - title: 没有对照组就拿不到增量
       content: 留一小块对照：几个城市、一块区域、一段时段就够
       subsections:
       - title: 对照组要满足什么
@@ -317,10 +317,10 @@ series:
     value: 报任何一个份额之前，能说清分母是谁、分子装了什么
     group: 方法论
     sections:
-    - title: 同一句话，能指四件事
+    - title: 同一句话，能指四件不同的事
       content: 「我们线上占比 23%」——投资人问：在什么的 23%
-    - title: 一个占比，由三处不同造成
-      content: 同一句话能指四个不同的数，差别全在这三处
+    - title: 一个份额由三样东西决定
+      content: 同一句话能指四个不同的数，差别全在分子、分母、跳法这三处
       subsections:
       - title: 分母
         content: 谁的规模：你的公司销售额、品类规模、还是全网零售
@@ -328,21 +328,21 @@ series:
         content: 算什么：含不含 B2B，只算成交还是连浏览也算
       - title: 框
         content: 覆盖了谁：雇员十人以上、NACE C-E 的企业调查
-    - title: 同一批企业，换个算法差一倍
+    - title: 换个分子能差一倍
       content: 同分母、同年、同企业，两个数差一倍
       subsections:
       - title: 全口径 19.82%
         content: 所有网络销售 ÷ 企业总营业额
       - title: 只算 B2C 8.49%
         content: 卖给消费者的部分 ÷ 企业总营业额
-    - title: 同一个「电商」，可能是两种生意
+    - title: 同一个「电商」可能是两种生意
       content: 同一批网络销售里，卖给消费者的占几成
       subsections:
       - title: 塞浦路斯 91%
         content: 一堆零售店各自做网店
       - title: 匈牙利 3%
         content: 一批批发商给便利店供货；剩下 30 个点全是 B2B
-    - title: 同一条线，跳法不一样
+    - title: 同一条指标跳法不一样
       content: 生意不会一年掉十二个点，这种起落装的是口径变动
       subsections:
       - title: 德国
@@ -353,7 +353,7 @@ series:
         content: 在中间，19.82% → 28.5%
     - title: 三句话，让这个数站得住
       content: 分母是谁、分子装了什么、我跟它在同一个框里吗
-    - title: 你报的其实是「某个框里的 23%」
+    - title: 你报的是「某个框里的 23%」
       content: 你报出去的是「在某个框里的 23%」
   - id: 09-panel-vs-census-bias
     title: 调研数据和官方数据，哪个更可信
@@ -447,7 +447,7 @@ series:
     - title: 五年营收曲线
       content: 四种命运：巨头横盘、新贵翻倍、挑战者猛涨、老牌后退
     - title: 价格这一格，用 CPI 顶上
-      content: 鞋类 CPI 十年 +12%，但整体涨价不等于每个品牌都涨
+      content: 鞋类 CPI 十年 +6%，但整体涨价不等于每个品牌都涨
     - title: 拿不到的格子
       content: Adidas / ASICS / New Balance / On 不在 SEC XBRL 库里，留空不填推算值
     - title: 结论
@@ -916,9 +916,13 @@ series:
     - title: 常见几种分法
       content: 末次点击、首次点击、线性、时间衰减、位置
     - title: 它什么时候不靠谱
-      content: 自然需求被认领；曝光不可见
+      content: 自然需求被认领；曝光不可见；归因窗口
+    - title: 拿归因的两个用法
+      content: 平台内部调账户可以用；决定加不加钱要用对照
+    - title: 分的是功劳，不是因果
+      content: 归因数的是「谁碰过这一单」，不是「谁创造了这一单」
     - title: 站内哪几篇讲过
-      content: 1-overview/01、4-analytics/03
+      content: 1-report-overview/01-report-runbook、1-report-overview/06-incrementality-chart
   - id: 02-incrementality-testing
     title: 增量实验：拿一块地方做对照
     value: 看懂增量实验的读法与代价
@@ -927,10 +931,14 @@ series:
       content: 停投后少掉的单就是增量
     - title: 三种做法
       content: 地理切分、时间切分、幽灵广告
+    - title: 它测出来的数长什么样
+      content: CPC 2.40 对 CPIC 3.00；观测 416% 对实验 77%
     - title: 它什么时候不靠谱
-      content: 两块地方本来就不一样；样本太小
+      content: 两块地方本来就不一样；样本太小；时间不够长
+    - title: 什么时候值得做
+      content: 决定钱往哪放，或者校准观测口径
     - title: 站内哪几篇讲过
-      content: 1-overview/01、1-overview/05、3-experiment/01
+      content: 1-report-overview/06-incrementality-chart、3-experiment-design/01-what-a-control-group-is
   - id: 03-mmm-contribution
     title: MMM 贡献分解：把长期贡献拆开
     value: 看懂 MMM 拆出来的贡献是怎么来的
@@ -940,9 +948,11 @@ series:
     - title: 贡献是怎么拆的
       content: 跟基线、广告饱和、时滞一起看
     - title: 它什么时候不靠谱
-      content: 变量之间高度相关时贡献分不开
+      content: 变量之间高度相关时贡献分不开；基线吃掉了大部分；外推到没见过的花费水平
+    - title: 拿到贡献数以后
+      content: 基线是多少；样本多长几个渠道；adstock 参数是多少；渠道相关性多高
     - title: 站内哪几篇讲过
-      content: 4-analytics/04
+      content: 4-performance-analysis/04-marginal-roi-decay、8-analysis-toolbox/06-marginal-vs-average-roi
   - id: 04-adstock-decay
     title: Adstock 衰减：广告的效果会拖多久
     value: 看懂广告效果随时间衰减的形状
@@ -952,9 +962,11 @@ series:
     - title: 衰减的几何形状
       content: 效果逐日打折，打折快慢由参数定
     - title: 它什么时候不靠谱
-      content: 衰减太快会低估长尾渠道
+      content: 衰减太快会低估长尾渠道；形状未必是指数；系数与单位效果不可直接对照
+    - title: 什么时候值得用 Adstock
+      content: 自己搭 MMM 时要过这一步；判断一个渠道的效果期有多长
     - title: 站内哪几篇讲过
-      content: 4-analytics/05、3-mmm-contribution
+      content: 8-analysis-toolbox/03-mmm-contribution、8-analysis-toolbox/05-hill-saturation-curve
   - id: 05-hill-saturation-curve
     title: Hill 饱和曲线：效果怎么撞天花板
     value: 看懂饱和曲线两个参数各管什么
@@ -964,9 +976,11 @@ series:
     - title: 两个参数各管什么
       content: 饱和点定天花板在哪，弹性定靠近天花板的速度
     - title: 它什么时候不靠谱
-      content: 刚起步的渠道用历史数据估不出饱和点
+      content: 刚起步的渠道用历史数据估不出饱和点；弹性在数据稀疏时极不稳定；曲线不止一条
+    - title: 一个便宜的检查
+      content: 花得多贡献不涨；边际回报往下掉；残差有系统性
     - title: 站内哪几篇讲过
-      content: 1-overview/03、4-analytics/04
+      content: 8-analysis-toolbox/03-mmm-contribution、8-analysis-toolbox/06-marginal-vs-average-roi
   - id: 06-marginal-vs-average-roi
     title: 边际 ROI 和平均 ROI：两个不同的数
     value: 不会再把这两个数搞混
@@ -974,11 +988,11 @@ series:
     - title: 这两个数分别是什么
       content: 平均是总回报除以总花费，边际是最后一块钱带来的
     - title: 怎么算
-      content: 举一个具体数字算两遍
+      content: 举一个具体数字算两遍；ROI 排名不等于加钱顺序
     - title: 它什么时候不靠谱
-      content: 花费没分档时算不出边际
+      content: 花费没分档时算不出边际；分档太细样本不够；平均 ROI 算的是账面不是增量
     - title: 站内哪几篇讲过
-      content: 4-analytics/04、6-optimization/01
+      content: 1-report-overview/06-incrementality-chart、4-performance-analysis/04-marginal-roi-decay
   - id: 07-equal-marginal-returns-principle
     title: 等边际原则：最优分配的判据
     value: 知道这个原则说了什么、成立的条件是什么
@@ -986,11 +1000,13 @@ series:
     - title: 等边际原则说了什么
       content: 固定总量下，各渠道边际相等时总和最大
     - title: 它怎么推出来的
-      content: 一两句不等式直觉
+      content: 一两句不等式直觉；举一个具体数字
     - title: 它什么时候不靠谱
-      content: 边际不可估、有硬约束、总量不固定时
+      content: 边际不可估、有硬约束、总量不固定、渠道互相影响
+    - title: 拿到分配结论以后
+      content: 它是判据不是配方；差距大就挪，差距小就别动
     - title: 站内哪几篇讲过
-      content: 6-optimization/01、6-optimization/03
+      content: 6-budget-optimization/01-equal-marginal-returns、6-budget-optimization/03-after-the-shift-what-goes-wrong
   - id: 08-confidence-intervals-and-fit
     title: 置信区间和拟合度：模型能信几分
     value: 知道一个模型的两个可信度指标各管什么
@@ -1000,6 +1016,8 @@ series:
     - title: 为什么不能互相替代
       content: 量的是不同的东西，不能互相替代
     - title: 它什么时候不靠谱
-      content: 拟合度高不等于因果成立；外推会崩
+      content: 拟合度高不等于因果成立；外推会崩；区间算了什么进去要看清
+    - title: 拿到这两个数以后
+      content: 先问区间宽度与是否跨过门槛，再问不确定性算了什么，最后问适用数据范围
     - title: 站内哪几篇讲过
-      content: 3-experiment/02、3-experiment/04
+      content: 3-experiment-design/02-sample-size-and-power、3-experiment-design/04-confidence-intervals

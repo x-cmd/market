@@ -1,0 +1,24 @@
+id: 02-visibility-three-measures
+series: 7-brand-visibility
+stage: 看得见吗
+title: 品牌有多响，用三把尺子量
+value: 知道品牌有多响该看哪三个数
+sections:
+- title: 排名第一，却没人买
+  content: 排名第一，却没人买
+- title: 量品牌，用三把尺子
+  content: 份额占了多少、排在第几、被怎么评价
+  subsections:
+  - title: 份额
+    content: 有没有被看见
+  - title: 位次
+    content: 多容易被看见
+  - title: 情绪
+    content: 看见的人喜不喜欢
+- title: 每把尺子，各说明什么
+  content: 三把尺子量的是三件事，不能互相替代
+- title: 搜索第一，AI 答案里没人提
+  content: 搜索排第一、AI 答案里几乎不被提起的品牌
+- title: 可见度不是一个数，是三个
+  content: 可见度不是一个数，是三个
+data_cards: []

@@ -1,0 +1,19 @@
+id: 02-promotion-pulls-demand-forward
+series: 5-campaign-analysis
+stage: 怎么投
+title: 促销带来的增长，有多少是真的
+value: 促销结束后能看出真实影响，而不是把提前的量算成增量
+sections:
+- title: 促销周涨的四成，有多少是真的
+  content: 促销周涨了四成
+- title: 促销把后面的单挪到了前面
+  content: 促销期的量有一部分是从后面挪过来的
+- title: 要看促销后的三周
+  content: 促销后的三周，和前面对应的三周
+- title: 真的那部分，怎么拆出来
+  content: 把两段一起看，找有没有回补
+- title: 促销周涨四成，三周后掉回原位
+  content: 促销周涨四成，接下来三周掉回原位
+- title: 促销的钱，要用促销后的账算
+  content: 促销的钱，要用促销后的账算
+data_cards: []

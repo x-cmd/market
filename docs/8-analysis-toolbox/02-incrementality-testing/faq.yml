@@ -1,0 +1,168 @@
+id: x-market-8-analysis-toolbox-02-incrementality-testing
+data:
+- name:
+    en: what incrementality testing does
+    cn: 增量实验在做什么
+  qa:
+  - id: what-is-incrementality
+    question:
+      en: What exactly does an incrementality test measure?
+      cn: 增量实验到底量的是什么？
+    answer:
+      en: It measures the orders that stop happening once the advertising stops. Orders that would have happened anyway do not count as increment, because those people were going to buy anyway and merely saw the ad while searching. What counts is the set of orders that would have been lost if you turned the campaign off. To know that set, you need somewhere that was not advertised to, which is why every version of this method is built around a control.
+      cn: 它量的是停掉广告之后不再成交的那些单。本来就会成交的单不算增量，因为那些人本来就要买，只是搜的时候顺手看见了你。算增量的是「停投之后会消失的那批单」。要算出这批单，你手里必须有一块没投过的地方，所以这个方法的各种做法都围着一块对照转。
+    confidence: 10
+    reference:
+    - docs/8-analysis-toolbox/02-incrementality-testing/cn.md
+  - id: three-requirements
+    question:
+      en: What has to be true for an incrementality test to be valid?
+      cn: 增量实验成立需要哪三样东西？
+    answer:
+      en: Three things. The split must be random, so the two groups are not chosen by you and do not differ to begin with. The control must genuinely be unexposed, not merely under-exposed, because in a half-treated place you cannot tell whether the lost orders were pulled away by your ad or picked up by a competitor's. And the test must run long enough to capture the response lag. Miss any one of the three and the result is a guess that happens to look professional.
+      cn: 三样。第一，分组必须随机，两边不能是你挑的，也不能本来就差着。第二，对照组要真的没被投到，不是「投得少一点」——在投了一半的地方，你分不清少掉的那些单是被你的广告拽走的，还是被隔壁的广告接走了。第三，测试期要长到能覆盖响应滞后。三样少一样，出来的数就是个看起来很专业的猜测。
+    confidence: 9
+    reference:
+    - docs/8-analysis-toolbox/02-incrementality-testing/cn.md
+  - id: why-invisible-exposure-matters
+    question:
+      en: Why does advertising make randomisation harder than it sounds?
+      cn: 为什么广告这件事让随机分配比听起来难？
+    answer:
+      en: Because you cannot see who was exposed. Comparing stores, you know which city each one is in. Running a price A/B test, you know which group each person was assigned to. With advertising you hold the orders and you do not hold a record of who saw the ad. Every method below therefore has to guarantee that the control group really was left alone, whether the unit of randomisation is a region, a person or a period.
+      cn: 因为你看不见谁被投到了。比门店，你知道哪家店在哪座城。做价格 A/B 测试，你知道谁分到了哪组。做广告，你手里只有订单，没有「谁看到了广告」的记录。所以下面每一种做法都得自己保证：对照组真的被单独留出来了——不管随机分的单位是地区、是人，还是一段时间。
+    confidence: 9
+    reference:
+    - docs/8-analysis-toolbox/02-incrementality-testing/cn.md
+- name:
+    en: the three designs
+    cn: 三种做法
+  qa:
+  - id: geo-split
+    question:
+      en: What is a geo split and when does it work?
+      cn: 地理切分是什么，什么时候用得上？
+    answer:
+      en: 'Regions are randomly assigned to control or treatment, and ads are served or withheld by geography. It is the design Google described in Measuring Ad Effectiveness Using Geo Experiments in 2011, and it is what most platforms now sell as geo-lift. It needs two things: the ability to target ads by geography, and a response metric that can be counted per region. In the United States the standard unit is the 210 Nielsen DMAs; postal codes are generally too small. The cost of this design is granularity: smaller regions mean fewer randomised units and wider intervals, larger regions mean more of your spend is sitting in the control group.'
+      cn: 把地区随机分成对照组和实验组，按地理投或者不投广告。这是 Google 在 2011 年《Measuring Ad Effectiveness Using Geo Experiments》里写的设计，也是现在各家平台卖的 geo-lift。它需要两样东西：能按地理投广告，以及结果指标能按地区统计。美国常用的单位是 210 个 Nielsen DMA，邮编一般太小。这套设计的代价是粒度：地区越小，随机分配的样本越少、区间越宽；地区越大，越多预算留在对照组里。
+    confidence: 9
+    reference:
+    - docs/8-analysis-toolbox/02-incrementality-testing/cn.md
+  - id: ghost-ads
+    question:
+      en: How do ghost ads work and what do they cost?
+      cn: 幽灵广告怎么做，代价是什么？
+    answer:
+      en: 'The control group still enters the auction, but its bids are designed never to win, so those users stay unexposed. This is the design behind Google''s and Meta''s Conversion Lift products, and it is finer than a geo split because the randomised unit is the person, so the sample can be large and the interval narrow. The cost is money: the platform still bills for the control group''s impressions. You pay and the ad does not run. It also leaves a loose end, because with fewer ads competing, the auction around the control group changes and their CPM may move.'
+      cn: 对照组照样参与竞价，只是他们的出价永远抢不到位置，所以这些人始终没被投到。这是 Google 与 Meta 的 Conversion Lift 背后的做法，比地理切分细，因为随机分的单位是人，样本可以很大，区间可以很窄。代价是钱：对照组那部分曝光，平台照样收费。你付了钱，广告没投出去。它还留了个尾巴：对照组少了这些广告位，竞价环境变了，他们的 CPM 可能被抬高。
+    confidence: 9
+    reference:
+    - docs/8-analysis-toolbox/02-incrementality-testing/cn.md
+  - id: time-split
+    question:
+      en: Why is a before-and-after comparison the weakest option?
+      cn: 为什么拿前后两段比是最弱的一种做法？
+    answer:
+      en: Because it is not random. The two periods differ in season, competitor activity, weather, promotions and holidays, all of which can move the metric on their own. The difference you measure is half the ad and half the fact that the two periods were not alike. It is the cheapest option and it ranks last. Use it only when the other two are unavailable.
+      cn: 因为它不是随机的。前后两段在季节、竞品活动、天气、促销、节假日上都可能差一截，这些都会自己动那个指标。你测出来的差，一半是广告，一半是这两段本来就不一样。它是最便宜的一种，所以排最后——前两种都做不了时才用它。
+    confidence: 9
+    reference:
+    - docs/8-analysis-toolbox/02-incrementality-testing/cn.md
+  - id: shared-prerequisite
+    question:
+      en: What do all three designs need in order to work at all?
+      cn: 三种做法都有哪个前提？
+    answer:
+      en: You need to be able to read the response metric per unit of randomisation. A channel that reports clicks and conversions but no sales can have its click increment measured, but not its revenue increment.
+      cn: 你得能按随机分配的每一个单位读到结果指标。只有点击和转化、没有销售的渠道，能测出点击的增量，测不出钱的增量。
+    confidence: 9
+    reference:
+    - docs/8-analysis-toolbox/02-incrementality-testing/cn.md
+- name:
+    en: what the numbers look like
+    cn: 它测出来的数长什么样
+  qa:
+  - id: cpc-versus-cpic
+    question:
+      en: How far off can the platform's cost figure be from the real incremental cost?
+      cn: 平台报的成本跟真实的增量成本能差多少？
+    answer:
+      en: In the advertiser example in Google's 2011 geo experiments paper, the AdWords bill showed a CPC of 2.40 dollars. The experiment measured a cost per incremental click of 3.00 dollars. The platform figure understates the true incremental cost by 20%, which is to say one paid click in five was taken from organic search rather than added to it. The paper calls the fraction of paid clicks that are incremental 80% in that case. The number is small, but it is the same kind of gap as the ones that matter much more.
+      cn: Google 2011 年那篇 geo 实验论文里的广告主案例：AdWords 账单显示 CPC 是 2.40 美元，实验测出来的 CPIC 是 3.00 美元。平台那个数把真实的增量成本低估了 20%，也就是付费点击里有五分之一是从自然搜索那里抢来的，不是多出来的。论文里管这个叫「付费点击的 80% 是增量的」。这个数不大，但它跟那些更要命的差距是同一类。
+    confidence: 9
+    reference:
+    - docs/8-analysis-toolbox/02-incrementality-testing/cn.md
+  - id: observed-versus-random
+    question:
+      en: How much bigger is the observational estimate than the experimental one?
+      cn: 观测口径算出来的，比随机实验大多少？
+    answer:
+      en: Much bigger. In one of the 15 Facebook field experiments, a checkout campaign, the naive comparison of exposed against unexposed users gave 416% while the randomised experiment gave 77%. The paper's broader conclusion is that observational methods often fail to recover the effect that a randomised experiment measures. Matching, regression adjustment and propensity scoring were all tried and none of them won consistently.
+      cn: 大得多。Facebook 那 15 个实地实验里有一个结账活动，广告主最常用的口径（曝光的 vs 未曝光的）算出 416%，随机实验测出来是 77%。论文更总的结论是：观测口径常常根本恢复不出随机实验测出来的效果。匹配、回归校正、倾向得分都试过，没有一个稳定赢。
+    confidence: 9
+    reference:
+    - docs/8-analysis-toolbox/02-incrementality-testing/cn.md
+- name:
+    en: when it goes wrong
+    cn: 它什么时候不靠谱
+  qa:
+  - id: pre-existing-differences
+    question:
+      en: What if the two groups were not really alike?
+      cn: 如果两组本来就不一样呢？
+    answer:
+      en: 'Then part of what you measure is the difference, not the ad. Geo splits are the most exposed to this, with a treatment region full of university towns against a control region full of industrial ones. Randomisation handles most of it, because it spreads known differences evenly, but it cannot promise that unknown differences are absent. Google''s paper gives a concrete remedy: rank the DMAs by size, cut the ranked list into blocks of equal size, and draw one treatment geo from each block. The paper reports that this tightens the confidence interval by around 10%.'
+      cn: 那你测到的一部分是这两边的差别，不是广告。地理切分最容易撞上这个：实验组是大学城，对照组是工业区。随机分配能解决大部分，因为它把已知的差别均匀分开了，但它不能保证未知的差别不存在。Google 那篇论文给了一个具体做法：先按规模把 DMA 排好序，再切成一样大的组，每组随机挑一个进实验组。论文报告说这样能把置信区间收窄约 10%。
+    confidence: 9
+    reference:
+    - docs/8-analysis-toolbox/02-incrementality-testing/cn.md
+  - id: sample-size-and-power
+    question:
+      en: How do you know before running a test whether it can measure anything?
+      cn: 怎么在开跑之前就知道这套设计测不测得出东西？
+    answer:
+      en: 'Use the paper''s method: take historical data from the pretest period, construct pseudo pretest and pseudo test periods, and plug them into the variance formula to compute the width of the confidence interval. Then do it again for a different design and compare. This costs nothing and runs before any budget is committed. A geo split in the United States has 210 DMAs, so 105 randomised units per arm, which is the whole sample you get.'
+      cn: 用论文里的办法：拿前测期的历史数据，造出「假的前测期」和「假的测试期」，代入方差公式算出置信区间的宽度。换一个设计方案再算一遍，比一比。这一步不花钱，而且是在预算花出去之前就能做的。美国的地理切分是 210 个 DMA，分成两组每组 105 个，这就是你能有的全部随机样本。
+    confidence: 9
+    reference:
+    - docs/8-analysis-toolbox/02-incrementality-testing/cn.md
+  - id: response-lag
+    question:
+      en: Why does the test period have to outlast the spend change?
+      cn: 为什么测试期要长于花费变化的那段时间？
+    answer:
+      en: 'Because the response metric can lag behind the spend. Google clicks stop the moment the spend stops: the paper shows incremental clicks flattening as soon as spend returns to its pretest level. Offline sales do not. The paper''s figure shows incremental sales still climbing for a while after that point, because buying offline takes time: researching, deciding, going to the shop, paying. So the test period has to cover the whole response lag. Stop early and you get a truncated number, and a truncated number here is a small one, which is the direction that looks good on a dashboard.'
+      cn: 因为结果指标会落在花费后面。Google 的点击是即时的：花费一停，增量点击立刻停住——论文的图显示花费回到前测水平时，增量点击就平了。线下销售不会。论文的图显示在那之后增量销售还在继续往上走，因为买线下商品要花时间：做功课、做决定、去店里、付钱。所以测试期得覆盖整个响应滞后期。测一半就收工，出来的是被截断的数，而这里被截断的偏偏是偏小的那个方向——看报表还挺高兴。
+    confidence: 9
+    reference:
+    - docs/8-analysis-toolbox/02-incrementality-testing/cn.md
+  - id: leakage
+    question:
+      en: What if the control group was not really left alone?
+      cn: 如果对照组其实没被完全隔离呢？
+    answer:
+      en: 'Every design has this hole. A geo split suffers from limited ad delivery accuracy and from people crossing regional boundaries. Ghost ads can have the platform deliver some other advertiser''s ad to the control group. A time split suffers from different competitor activity in the two periods. This is the hardest of the failure modes to check, because you cannot check it at all: you do not know who saw what.'
+      cn: 每种做法都有这个洞。地理切分是投放精度有限，加上人会跨着地区边界跑。幽灵广告是平台可能还是给对照组投了别人的广告。时间切分是前后两段的竞品活动不同。这是最难查的一个失败模式，因为压根查不出来：你不知道谁看到了什么。
+    confidence: 8
+    reference:
+    - docs/8-analysis-toolbox/02-incrementality-testing/cn.md
+  - id: one-off-number
+    question:
+      en: Can the measured lift be carried over to next month's budget?
+      cn: 测出来的增量能搬到下个月的预算上吗？
+    answer:
+      en: 'No. The test measures the increment at that stretch of time, that spend level and that population. It is not a permanent property of the channel: change the budget, the creative, the season or the audience and the increment changes with it. So a measured 77% cannot simply be multiplied by next month''s spend. That is extrapolation, and extrapolation is far less reliable than the experiment it came from.'
+      cn: 不能。实验量的是「在这段时间、这个投放水平、这一批人」上的增量，不是这个渠道的永久属性：预算变了、素材变了、季节变了、人群变了，增量就跟着变。所以测出来的 77% 不能直接乘到下个月的花费上。那叫外推，外推的可靠性远低于实验本身。
+    confidence: 9
+    reference:
+    - docs/8-analysis-toolbox/02-incrementality-testing/cn.md
+  - id: when-worth-it
+    question:
+      en: When is running an incrementality test worth the cost?
+      cn: 什么时候值得花这个钱做增量实验？
+    answer:
+      en: 'Two situations. One, when the number will decide where money goes next: if a channel takes 300,000 a month and you think it could take 500,000, you need a number for the extra 200,000, and no other source provides it. Two, when you want to calibrate an observational method you rely on daily, such as MMM or an attribution report. Facebook''s 15 experiments served exactly that purpose, and the paper''s point is not to abandon observational data but to calibrate it against experimental results. A channel taking a few tens of thousands a month, a question whose answer you already know, or a question of whether the channel is good rather than whether it deserves more money, are all cases not worth doing.'
+      cn: 两种情况。一，这个数要用来决定钱往哪放：这个渠道一个月花 30 万，你觉得能加到 50 万，那这 20 万该不该花需要有个数，除了实验没有别的来源。二，拿它去校准你天天在用的那套观测口径，比如 MMM 或归因报表。Facebook 那 15 个实验就是干这个用的——论文的意思不是放弃观测数据，而是用实验结果去校准它。一个月只投几万、答案你本来就知道、或者你只想知道「这个渠道好不好」而不是「值不值得加钱」，这些情况都不值得做。
+    confidence: 9
+    reference:
+    - docs/8-analysis-toolbox/02-incrementality-testing/cn.md

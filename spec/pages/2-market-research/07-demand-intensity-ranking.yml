@@ -1,0 +1,19 @@
+id: 07-demand-intensity-ranking
+series: 2-market-research
+stage: 数从哪来
+title: 五个卖点只能做一个，按什么排
+value: 给需求排序时用对的方法，说得清依据
+sections:
+- title: 为什么五个不能都做
+  content: 五个卖点都说自己重要，只能选一个先做
+- title: 平均分为什么用不了
+  content: 「重要」不是能平均的量，平均之后每个数都没信息量
+- title: 三个能用的强度指标
+  content: 优先级排序、强度分布、支付意愿
+- title: 想要得急，和想要的人多，是两回事
+  content: 大需求可能强度低，小需求可能强度高
+- title: 五个卖点排出来的第一名反了
+  content: 五个卖点用平均分排出的第一名，与验证后不是同一个
+- title: 排序先说清按什么排
+  content: 排序先说清按什么排：强度、规模、支付意愿是三把尺
+data_cards: []

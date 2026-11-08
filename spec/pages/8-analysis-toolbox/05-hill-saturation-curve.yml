@@ -1,0 +1,18 @@
+id: 05-hill-saturation-curve
+series: 8-analysis-toolbox
+stage: 查字典
+title: Hill 饱和曲线：效果怎么撞天花板
+value: 看懂饱和曲线两个参数各管什么
+sections:
+- title: Hill 饱和曲线在做什么
+  content: 效果随投入增加但增速递减
+- title: 两个参数各管什么
+  content: 饱和点定天花板在哪，弹性定靠近天花板的速度
+- title: 它什么时候不靠谱
+  content: 刚起步的渠道用历史数据估不出饱和点；弹性在数据稀疏时极不稳定；曲线不止一条
+- title: 一个便宜的检查
+  content: 花得多贡献不涨；边际回报往下掉；残差有系统性
+- title: 站内哪几篇讲过
+  content: 8-analysis-toolbox/03-mmm-contribution、8-analysis-toolbox/06-marginal-vs-average-roi
+data_cards:
+- hill_saturation_ceiling_ratio

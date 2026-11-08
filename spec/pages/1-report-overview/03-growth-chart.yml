@@ -1,0 +1,28 @@
+id: 03-growth-chart
+series: 1-report-overview
+stage: 入口
+title: 这门生意还值不值得进
+value: 判断这门生意还值不值得进
+sections:
+- title: 先看哪两个数
+  content: 一条规模曲线加一条增速线
+  subsections:
+  - title: 谁会要这张图
+    content: 「这门生意还在不在长」——每份报告的第一个问题
+- title: 「行业多大」有三种算法
+  content: 产值、收入、增加值，在有零售批发的行业里能差一倍
+- title: 涨的是真东西，还是只是涨价
+  content: 把名义增速当实际增速讲，是行业报告最常见的硬伤
+  subsections:
+  - title: 两种增速各管什么
+    content: 名义对账单，实际看出了多少东西
+- title: 这行是不是巨头说了算
+  content: 规模大但集中度低，说明谁进来都能分一杯羹
+  subsections:
+  - title: CR4 看头部四家
+    content: HHI 看整体有多分散
+- title: 同一个行业，两种算法差一倍
+  content: 一个用行业产出份额算集中度的市场
+- title: 先看这三个数，再决定进不进
+  content: 规模、增速、集中度三格数字，每一格都要带口径
+data_cards: []

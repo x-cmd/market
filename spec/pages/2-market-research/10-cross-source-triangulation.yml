@@ -1,0 +1,22 @@
+id: 10-cross-source-triangulation
+series: 2-market-research
+stage: 数从哪来
+title: 一个数敢不敢用，先找第二个来源对一遍
+value: 会给关键数字配第二个来源，知道不一致时先查什么
+sections:
+- title: 两个数差三成，先查什么
+  content: 第三方说一个数，公司后台说另一个数，差三成
+- title: 两个数一样，也可能错
+  content: 两个数很接近也可能是分母悄悄不同
+- title: 第二个来源怎么选
+  content: 口径独立、时间窗能对齐、已知它偏哪边
+- title: 对不上，先查哪一样
+  content: 先口径、再时点、最后才查谁算错
+  subsections:
+  - title: 查口径
+    content: 分母、覆盖范围、统计对象
+  - title: 查时点
+    content: 季末快照还是月均
+- title: 第二个来源是纠错工具，不是装饰
+  content: 第二个来源是纠错工具，不是装饰
+data_cards: []

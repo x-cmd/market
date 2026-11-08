@@ -1,0 +1,22 @@
+id: 06-incrementality-chart
+series: 1-report-overview
+stage: 入口
+title: 没有广告，这些单会成交吗
+value: 分清广告赚到的和本来就有的
+sections:
+- title: 对照的那一半
+  content: 对照组与投放组并排，差的那一块就是增量
+- title: 两本账差在哪
+  content: 平台记沾过广告的订单，增量记停投后少掉的单
+- title: 这差距能有多大
+  content: eBay 与 Facebook 的随机实验，都比观测口径靠谱
+- title: 316% 是怎么算出来的
+  content: 四个转化率摆开：真效果差 0.012，观测口径差 0.042
+- title: 没有对照组就拿不到增量
+  content: 留一小块对照：几个城市、一块区域、一段时段就够
+- title: 别把收割当成创造
+  content: 两个数都是真的，错的是当成同一个数
+data_cards:
+- paid_search_roi_observed_vs_randomized
+- ad_lift_observed_vs_rct
+- brand_keyword_click_substitution

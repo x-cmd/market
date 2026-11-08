@@ -1,0 +1,19 @@
+id: 05-did-it-work-three-weeks-later
+series: 4-performance-analysis
+stage: 怎么读
+title: 效果多久才出来，别急着下结论
+value: 知道效果什么时候才算完，以及怎么判断
+sections:
+- title: 效果没出来，不等于没效果
+  content: 第三周的数字回来了
+- title: 效果为什么会晚到
+  content: 决策周期、审批、进货、复购
+- title: 窗口太短，看到的只是还没发生
+  content: 窗口太短看到的只是还没发生
+- title: 怎么查这次到底有没有效
+  content: 同期对照、时间序列、把别的动作排掉
+- title: 一次大促，第三周才显形
+  content: 一次大促的效果，第三周才显形
+- title: 效果什么时候算完，要先定窗口
+  content: 效果什么时候才算完，要先定窗口
+data_cards: []

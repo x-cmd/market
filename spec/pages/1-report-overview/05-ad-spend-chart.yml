@@ -1,0 +1,27 @@
+id: 05-ad-spend-chart
+series: 1-report-overview
+stage: 入口
+title: 再花一块钱，能多换回多少
+value: 知道再花一块钱能多换回多少
+sections:
+- title: 一眼看出加量还赚不赚
+  content: 花费与回报并排，外加一条边际曲线
+  subsections:
+  - title: 谁会要这张图
+    content: 「还能加量吗」「这个渠道该加还是该减」
+- title: 平均数好看，不代表还能加
+  content: 总量最大的渠道可能早就过了饱和点
+  subsections:
+  - title: 边际是什么
+    content: 再往这个渠道加一块钱，这一块能带回多少
+  - title: 拐点在哪
+    content: 差分转平或转负的那一点
+- title: 换成钱，是多少
+  content: 一个月搜索广告 30 万，三成是接本来就会下单的人，那 9 万对应销售额原来就拿得到
+- title: 一个账号的实际曲线
+  content: 预算从每天 2000 加到 8000 的独立站，第三周起单量不涨，第四周回落
+- title: 今天算出来的这条线，明天可能就变了
+  content: 人群变大、素材变好会右移；竞争加剧、疲劳会左移
+- title: 加不加量，看最后一块钱
+  content: 排序看平均，加钱看边际；「还能加量」要有数支撑
+data_cards: []

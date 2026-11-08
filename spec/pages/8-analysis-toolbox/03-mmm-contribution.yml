@@ -1,0 +1,20 @@
+id: 03-mmm-contribution
+series: 8-analysis-toolbox
+stage: 查字典
+title: MMM 贡献分解：把长期贡献拆开
+value: 看懂 MMM 拆出来的贡献是怎么来的
+sections:
+- title: MMM 贡献分解在做什么
+  content: 在多个渠道的回归里拆出各自贡献
+- title: 贡献是怎么拆的
+  content: 跟基线、广告饱和、时滞一起看
+- title: 它什么时候不靠谱
+  content: 变量之间高度相关时贡献分不开；基线吃掉了大部分；外推到没见过的花费水平
+- title: 拿到贡献数以后
+  content: 基线是多少；样本多长几个渠道；adstock 参数是多少；渠道相关性多高
+- title: 站内哪几篇讲过
+  content: 4-performance-analysis/04-marginal-roi-decay、8-analysis-toolbox/06-marginal-vs-average-roi
+data_cards:
+- brand_keyword_click_substitution
+- mmm_adstock_rate_by_channel
+- mmm_baseline_share_range

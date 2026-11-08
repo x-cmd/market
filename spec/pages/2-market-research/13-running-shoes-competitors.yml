@@ -1,0 +1,23 @@
+id: 13-running-shoes-competitors
+series: 2-market-research
+stage: 数从哪来
+title: 跑鞋这行，Nike 的营收三年没长，Hoka 的母公司五年翻了一倍
+value: 看清跑鞋品类里几家品牌的真实位置，以及比之前必须对齐的那一格
+sections:
+- title: 先把「跑鞋」框住
+  content: 跑鞋没有官方统计口径，只能从品牌财报口径往上走
+- title: 四家能查到财报的
+  content: Nike / Skechers / Deckers / Wolverine 的营收，各家财年结束日不同
+- title: 这张图有个陷阱，先说
+  content: 财年不对齐，横向比会得出相反的结论
+- title: 五年营收曲线
+  content: 四种命运：巨头横盘、新贵翻倍、挑战者猛涨、老牌后退
+- title: 价格这一格，用 CPI 顶上
+  content: 鞋类 CPI 十年 +6%，但整体涨价不等于每个品牌都涨
+- title: 拿不到的格子
+  content: Adidas / ASICS / New Balance / On 不在 SEC XBRL 库里，留空不填推算值
+- title: 结论
+  content: 比之前先把财年对齐；留空本身也是信息
+data_cards:
+- shoe_brand_revenue
+- us_footwear_cpi

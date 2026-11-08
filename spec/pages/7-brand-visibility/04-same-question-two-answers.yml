@@ -1,0 +1,19 @@
+id: 04-same-question-two-answers
+series: 7-brand-visibility
+stage: 看得见吗
+title: 问 AI 同一个问题，答案会变
+value: 知道 GEO 的数该怎么测才算数
+sections:
+- title: 同一道题，为什么三个答案
+  content: 同一道「推荐跑鞋」问了三次，三个答案
+- title: 答案为什么会变
+  content: 生成是抽样的，模型每次会挑不同的起点说
+- title: 要问多少次才够
+  content: 看你要的精度与成本的平衡
+- title: 一堆答案，怎么变成一个数
+  content: 多次提问后统计提及次数与位次分布，要报区间
+- title: 同一道题问五次，五个答案
+  content: 同一道题问五次出来的五个答案
+- title: 这个数必须重复问，单次不算数
+  content: GEO 的数必须重复测，单次不算数
+data_cards: []

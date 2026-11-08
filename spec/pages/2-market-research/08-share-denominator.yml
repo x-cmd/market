@@ -1,0 +1,24 @@
+id: 08-share-denominator
+series: 2-market-research
+stage: 数从哪来
+title: 同样一个占比，能有四种算法
+value: 报任何一个份额之前，能说清分母是谁、分子装了什么
+sections:
+- title: 同一句话，能指四件不同的事
+  content: 「我们线上占比 23%」——投资人问：在什么的 23%
+- title: 一个份额由三样东西决定
+  content: 同一句话能指四个不同的数，差别全在分子、分母、跳法这三处
+- title: 换个分子能差一倍
+  content: 同分母、同年、同企业，两个数差一倍
+- title: 同一个「电商」可能是两种生意
+  content: 同一批网络销售里，卖给消费者的占几成
+- title: 同一条指标跳法不一样
+  content: 生意不会一年掉十二个点，这种起落装的是口径变动
+- title: 三句话，让这个数站得住
+  content: 分母是谁、分子装了什么、我跟它在同一个框里吗
+- title: 你报的是「某个框里的 23%」
+  content: 你报出去的是「在某个框里的 23%」
+data_cards:
+- ecom_share_of_turnover
+- ecom_share_of_turnover_b2c
+- ecom_b2c_mix

@@ -1,0 +1,22 @@
+id: 02-incrementality-testing
+series: 8-analysis-toolbox
+stage: 查字典
+title: 增量实验：拿一块地方做对照
+value: 看懂增量实验的读法与代价
+sections:
+- title: 增量实验在做什么
+  content: 停投后少掉的单就是增量
+- title: 三种做法
+  content: 地理切分、时间切分、幽灵广告
+- title: 它测出来的数长什么样
+  content: CPC 2.40 对 CPIC 3.00；观测 416% 对实验 77%
+- title: 它什么时候不靠谱
+  content: 两块地方本来就不一样；样本太小；时间不够长
+- title: 什么时候值得做
+  content: 决定钱往哪放，或者校准观测口径
+- title: 站内哪几篇讲过
+  content: 1-report-overview/06-incrementality-chart、3-experiment-design/01-what-a-control-group-is
+data_cards:
+- fb_observed_vs_random_lift
+- geo_experiment_design
+- geo_incremental_click_cost

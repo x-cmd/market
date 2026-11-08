@@ -1,0 +1,19 @@
+id: 11-coverage-gaps
+series: 2-market-research
+stage: 数从哪来
+title: 这个数漏了谁，用之前先看一眼
+value: 看出一个数覆盖了谁、没覆盖谁，并在图上标出来
+sections:
+- title: 这个数漏了谁
+  content: 一张看起来很全的图，图里没画的那部分才是问题
+- title: 它说的不是「所有人」，是「被算进去的那部分」
+  content: 这个数说的是「所有人」，实际说的是被算进去的那部分
+- title: 最常漏的四类
+  content: 规模、行业、地区、渠道
+- title: 漏了之后，数字会偏哪边
+  content: 漏的多是小和边缘的：份额类被高估，增长类被低估
+- title: 怎么把漏掉的部分标出来
+  content: 加注释说明覆盖范围；缺口大就断开，别用直线连过去
+- title: 留白是信息，不是缺陷
+  content: 留白是信息，不是缺陷
+data_cards: []

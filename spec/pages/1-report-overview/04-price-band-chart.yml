@@ -1,0 +1,25 @@
+id: 04-price-band-chart
+series: 1-report-overview
+stage: 入口
+title: 你的价格，在品类里站得住吗
+value: 看出自己的价格在品类里站不站得住
+sections:
+- title: 一眼看出你的价格在哪一档
+  content: 价格从低到高排开，每一档里有多少销量
+  subsections:
+  - title: 谁会要这张图
+    content: 「我这个价定得对不对」「要不要往上走一档」
+- title: 先把「这个品类」框住
+  content: 按卖什么算还是按怎么卖算；含不含服务与安装
+- title: 价格带按销量切，不按感觉切
+  content: 按销量的四分位切，不拍脑袋定三档
+- title: 促销打多狠，你自己心里有数
+  content: 一年几次、每次多久、力度多大；要能被预测
+  subsections:
+  - title: 价格带和促销的关系
+    content: 促销多在中间档清库存；最高档少打折，免得伤定位
+- title: 一个品类的实际价格带
+  content: 一个价格带从 30 到 300 的家居品类
+- title: 你站不站得住，看你落在哪一档
+  content: 边界、价格带、促销节奏、季节性四件事
+data_cards: []

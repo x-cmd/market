@@ -1,0 +1,44 @@
+id: 02-market-share-chart
+series: 1-report-overview
+stage: 入口
+title: 你说的 23%，跟别人说的 23%，是一回事吗
+value: 做出一张别人不会误读的市场份额图
+sections:
+- title: 一眼看出谁领先
+  content: 谁占多少的横条图，谁多谁少一眼看见
+  subsections:
+  - title: 谁会要这张图
+    content: 老板问「我们排第几」；投资人问「这个市场谁说了算」
+  - title: 它回答什么
+    content: 这个市场里各家各占多少，你在哪一档
+- title: 这个占比是跟谁比的
+  content: 同一份分子，除以不同的总体，能差出一倍
+  subsections:
+  - title: 欧盟 2024 的两个分子
+    content: 全口径 19.82%，只算卖给消费者的 8.49%
+  - title: 匈牙利那 30 个点
+    content: 网络销售占营业额的 30.85%，其中只有 0.92% 是卖给消费者的
+- title: 同一个「电商」，可能是两种生意
+  content: 同一批网络销售里卖给消费者的占几成
+  subsections:
+  - title: 塞浦路斯 91%
+    content: 一堆零售店各自做网店
+  - title: 匈牙利 3%
+    content: 一批批发商给便利店供货
+- title: 这个数可能在骗你
+  content: 分母是别人定的，你只看见分子
+  subsections:
+  - title: 框的边界
+    content: 雇员十人以上、NACE C-E；不在框里的公司没法跟这个数比
+  - title: 同一条线三种形状
+    content: 德国 27.69→15.96→42.01，西班牙一路爬，欧盟在中间
+- title: 两家公司的实际对照
+  content: 两家在同一品类里，一家份额大一家增速快——并排一画就清楚了
+- title: 三句话，让这个数站得住
+  content: 分母是谁、分子装了什么、我跟它在同一个框里吗
+- title: 你报的其实是「某个框里的 23%」
+  content: 你报出去的是「在某个框里的 23%」
+data_cards:
+- ecom_share_of_turnover
+- ecom_share_of_turnover_b2c
+- ecom_b2c_mix

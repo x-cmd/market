@@ -12,7 +12,12 @@
 
 ## 四家能查到财报的
 
-['| 品牌 | 母公司 | 财年结束 | 最近财年营收 | 上一财年 | 同比 |', '|---|---|---|---:|---:|---:|', '| NIKE | NIKE, Inc.（自营） | 5 月底 | 2026 年 46.40 十亿美元 | 46.31 | +0.2% |', '| Skechers | Skechers USA（自营） | 12 月底 | 2024 年 8.97 十亿美元 | 8.00 | +12.1% |', '| Deckers | Deckers Outdoor（UGG / HOKA） | 3 月底 | 2026 年 5.47 十亿美元 | 4.99 | +9.6% |', '| Wolverine | Wolverine World Wide（Brooks / Saucony） | 1 月初（52/53 周） | 2026 年 1.87 十亿美元 | 1.75 | +6.9% |']
+| 品牌 | 母公司 | 财年结束 | 最近财年营收 | 上一财年 | 同比 |
+|---|---|---|---:|---:|---:|
+| NIKE | NIKE, Inc.（自营） | 5 月底 | 2026 年 46.40 十亿美元 | 46.31 | +0.2% |
+| Skechers | Skechers USA（自营） | 12 月底 | 2024 年 8.97 十亿美元 | 8.00 | +12.1% |
+| Deckers | Deckers Outdoor（UGG / HOKA） | 3 月底 | 2026 年 5.47 十亿美元 | 4.99 | +9.6% |
+| Wolverine | Wolverine World Wide（Brooks / Saucony） | 1 月初（52/53 周） | 2026 年 1.87 十亿美元 | 1.75 | +6.9% |
 
 ```text
 https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E8%B7%91%E9%9E%8B%E7%9B%B8%E5%85%B3%E5%93%81%E7%89%8C%EF%BC%9A%E6%9C%80%E8%BF%91%E4%B8%80%E4%B8%AA%E8%B4%A2%E5%B9%B4%E8%90%A5%E6%94%B6%22%7D%2C%22color%22%3A%5B%22%232563eb%22%5D%2C%22grid%22%3A%7B%22left%22%3A130%2C%22right%22%3A130%2C%22top%22%3A60%2C%22bottom%22%3A50%7D%2C%22xAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%22%E5%8D%81%E4%BA%BF%E7%BE%8E%E5%85%83%22%2C%22axisLabel%22%3A%7B%22formatter%22%3A%22%7Bvalue%7D%22%7D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%22Wolverine%22%2C%22Deckers%22%2C%22Skechers%22%2C%22NIKE%22%5D%2C%22axisLabel%22%3A%7B%22fontSize%22%3A11%7D%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%2C%22axisPointer%22%3A%7B%22type%22%3A%22shadow%22%7D%7D%2C%22series%22%3A%5B%7B%22type%22%3A%22bar%22%2C%22data%22%3A%5B1.87%2C5.47%2C8.97%2C46.4%5D%2C%22label%22%3A%7B%22show%22%3Atrue%2C%22position%22%3A%22right%22%2C%22formatter%22%3A%22%7Bc%7D%22%7D%7D%5D%7D&w=760&h=420
@@ -56,7 +61,7 @@ https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E7%BE%8E%E
 
 <a href="https://x-cmd.com/draw/explore/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E7%BE%8E%E5%9B%BD%E9%9E%8B%E7%B1%BB%E4%BB%B7%E6%A0%BC%E6%8C%87%E6%95%B0%EF%BC%88%E5%B9%B4%E5%9D%87%EF%BC%8C%E5%AD%A3%E8%B0%83%EF%BC%8C1982-84%3D100%EF%BC%89%22%7D%2C%22color%22%3A%5B%22%232563eb%22%5D%2C%22grid%22%3A%7B%22left%22%3A70%2C%22right%22%3A30%2C%22top%22%3A60%2C%22bottom%22%3A50%7D%2C%22xAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%222015%22%2C%222016%22%2C%222017%22%2C%222018%22%2C%222019%22%2C%222020%22%2C%222021%22%2C%222022%22%2C%222023%22%2C%222024%22%2C%222025%22%5D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%22%E6%8C%87%E6%95%B0%22%2C%22axisLabel%22%3A%7B%22formatter%22%3A%22%7Bvalue%7D%22%7D%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22%E9%9E%8B%E7%B1%BB%20CPI%22%2C%22type%22%3A%22line%22%2C%22smooth%22%3Atrue%2C%22data%22%3A%5B136.8%2C137.3%2C136.7%2C136.1%2C136.7%2C133.2%2C138.2%2C144.5%2C144.9%2C145.8%2C145.5%5D%2C%22itemStyle%22%3A%7B%22color%22%3A%22%232563eb%22%7D%2C%22areaStyle%22%3A%7B%22color%22%3A%22%23dbeafe%22%7D%7D%5D%7D&w=760&h=420"><img src="https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E7%BE%8E%E5%9B%BD%E9%9E%8B%E7%B1%BB%E4%BB%B7%E6%A0%BC%E6%8C%87%E6%95%B0%EF%BC%88%E5%B9%B4%E5%9D%87%EF%BC%8C%E5%AD%A3%E8%B0%83%EF%BC%8C1982-84%3D100%EF%BC%89%22%7D%2C%22color%22%3A%5B%22%232563eb%22%5D%2C%22grid%22%3A%7B%22left%22%3A70%2C%22right%22%3A30%2C%22top%22%3A60%2C%22bottom%22%3A50%7D%2C%22xAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%222015%22%2C%222016%22%2C%222017%22%2C%222018%22%2C%222019%22%2C%222020%22%2C%222021%22%2C%222022%22%2C%222023%22%2C%222024%22%2C%222025%22%5D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%22%E6%8C%87%E6%95%B0%22%2C%22axisLabel%22%3A%7B%22formatter%22%3A%22%7Bvalue%7D%22%7D%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22%E9%9E%8B%E7%B1%BB%20CPI%22%2C%22type%22%3A%22line%22%2C%22smooth%22%3Atrue%2C%22data%22%3A%5B136.8%2C137.3%2C136.7%2C136.1%2C136.7%2C133.2%2C138.2%2C144.5%2C144.9%2C145.8%2C145.5%5D%2C%22itemStyle%22%3A%7B%22color%22%3A%22%232563eb%22%7D%2C%22areaStyle%22%3A%7B%22color%22%3A%22%23dbeafe%22%7D%7D%5D%7D&w=760&h=420" width="760" alt="shoe_cpi"></a>
 
-2015 年约 130，2022 年跳到 144.5，之后三年基本平在 145 上下。**十年涨了约 12%，其中大部分集中在 2021–2022 那两年。**
+2015 年约 137，2022 年跳到 144.5，之后三年基本平在 145 上下。**十年涨了约 6%，其中大部分集中在 2021–2022 那两年。**
 
 这条线跟营收那条线放一起看有意思：2021–2022 鞋价涨得凶，同期 Nike 的营收在 51 十亿美元（约 510 亿美元）上下横盘、Deckers 在涨。**鞋类整体在涨价，不等于每个品牌都在涨价。**
 
@@ -77,6 +82,6 @@ https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E7%BE%8E%E
 
 **比之前先把财年对齐**——Skechers 的 8.97 是 2024 财年，Deckers 的 5.47 是 2026 财年，放一起比会得出相反的结论。
 
-价格用鞋类 CPI 顶替（十年 +12%），Adidas、ASICS、New Balance、On 四格留空，原因是它们不在 SEC 的 XBRL 库里。
+价格用鞋类 CPI 顶替（十年 +6%），Adidas、ASICS、New Balance、On 四格留空，原因是它们不在 SEC 的 XBRL 库里。
 
 **数据**：营收取自 SEC EDGAR XBRL（`data.sec.gov/api/xbrl/companyconcept/CIK<cik>/us-gaap/RevenueFromContractWithCustomerExcludingAssessedTax.json`），2026-11-08 抓取；CPI 取自 BLS 经 DBnomics（`BLS/cu/CUSR0000SEAE`），2026-11-08 抓取。**复现**：`x dbnomics data BLS/cu/CUSR0000SEAE`

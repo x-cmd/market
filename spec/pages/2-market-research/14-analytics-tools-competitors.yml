@@ -1,0 +1,19 @@
+id: 14-analytics-tools-competitors
+series: 2-market-research
+stage: 数从哪来
+title: 网站分析开源项目里，umami 的 fork 数排第一，star 排第二
+value: 选自托管网站分析时，知道该看哪个数，以及哪些格子抓不到
+sections:
+- title: 九个对得上号的
+  content: star、fork、许可、建库时间、最近推送、定价
+- title: fork 是另一样东西
+  content: fork 第一是 umami，是第二名的 2.4 倍；用的人多、动手改的人也多
+- title: 许可那一格
+  content: star 最高的 MIT 许可项目就是 umami
+- title: 价格：九家里查到五家
+  content: 四家抓不到就留空；计费单位不同，$20 和 $20 不是一个东西
+- title: 结论
+  content: star 看热度，fork 看有多少人真的在改
+data_cards:
+- gh_stars_umami
+- gh_forks_umami

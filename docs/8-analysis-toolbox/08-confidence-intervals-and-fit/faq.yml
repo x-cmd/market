@@ -1,0 +1,142 @@
+id: x-market-8-analysis-toolbox-08-confidence-intervals-and-fit
+
+data:
+  - name:
+      en: what the two measures are
+      cn: 这两把尺子各量什么
+    qa:
+      - id: ci-vs-fit-definition
+        question:
+          en: What does a confidence interval measure, and what does fit measure?
+          cn: 置信区间量什么，拟合度又量什么？
+        answer:
+          en: >
+            A confidence interval measures the uncertainty in a parameter: if you resampled the data and refit the model many times, the interval is the range that a given share of those refits falls into. Fit measures how much of the variation in the outcome the model explains overall, most often as R squared. The first is about one number's precision. The second is a score for the whole model. Fit does not attach to any particular parameter, so a model can fit very well and still have one contribution whose interval is uselessly wide.
+          cn: >
+            置信区间量的是参数的不确定性：把数据反复重抽、反复重跑模型，区间就是这些重跑结果里有多大比例落在的范围。拟合度量的是模型对结果变化的整体解释力，最常用的是 R²。一个说的是某个数有多准，另一个是整份模型的总分。拟合度不针对任何单个参数，所以一个模型可以拟合得很好，同时某个具体贡献的区间宽到没用。
+        confidence: 10
+        reference:
+          - docs/8-analysis-toolbox/08-confidence-intervals-and-fit/cn.md
+      - id: why-not-substitutes
+        question:
+          en: Why can a high fit not stand in for a narrow interval?
+          cn: 为什么拟合度高替代不了区间窄？
+        answer:
+          en: >
+            They answer different questions, and a model can be good at one and useless at the other. Take three models: one fits at 95 percent with tight parameters, one fits at 88 percent with tight parameters, one fits at 99 percent with very wide parameters. If you only look at fit, you pick the third and end up making a decision on a number the model itself is not confident about. If you only look at intervals, you pick the first and accept a model that explains sales noticeably worse. You need both, and you need to look at each for what it is about.
+          cn: >
+            它们回答的是不同的问题，而一个模型可以一样好、一样坏。举三个模型：一个拟合到 95%、参数很紧，一个拟合到 88%、参数很紧，一个拟合到 99%、参数很宽。只看拟合度，你会选第三个，然后拿着一个模型自己都没把握的数去做决定；只看区间，你会选第一个，接受一个对销售的解释力明显更差的模型。两个都要看，而且各看各的。
+        confidence: 9
+        reference:
+          - docs/8-analysis-toolbox/08-confidence-intervals-and-fit/cn.md
+
+  - name:
+      en: how to read an interval
+      cn: 区间怎么读
+    qa:
+      - id: what-95-percent-means
+        question:
+          en: What does a 95 percent confidence interval actually mean?
+          cn: 95% 置信区间到底是什么意思？
+        answer:
+          en: >
+            It is a statement about your own method, not about the world. It says that if you resampled the data and refit the model many times, 95 percent of those refits would land inside this range. It does not say there is a 95 percent probability the true value is in there, because that would require a prior over the truth and the interval does not contain one. The wording matters because the first is a property of the procedure you can check, and the second is a claim you cannot verify from the data at hand.
+          cn: >
+            它是一句关于你自己方法的话，不是关于世界的话。意思是：把数据反复重抽、反复重跑模型，95% 的重跑结果会落在这段区间里。它不是「真值有 95% 的概率在这个区间里」，因为那句话需要对真值有一个先验分布，而区间里没有这个。先验这件事要紧，因为前者是你能检验的方法的性质，后者是一个你没法用手上数据验证的断言。
+        confidence: 9
+        reference:
+          - docs/8-analysis-toolbox/08-confidence-intervals-and-fit/cn.md
+      - id: width-decides-usefulness
+        question:
+          en: What does the width of an interval tell you?
+          cn: 区间的宽度告诉你什么？
+        answer:
+          en: >
+            Whether the number can carry a decision. An estimate of 12 percent with an interval from 8 to 16 says the model is fairly sure the channel contributed something in the teens. The same 12 percent with an interval from 4 to 20 says the model has not really pinned it down. Width is set by two things: how much data you have, since more data narrows it, and how clean the model is, because highly correlated variables or parameters that cannot be pinned down keep it wide no matter how much data you add.
+          cn: >
+            告诉你这个数能不能撑起一个决定。12% 这个估计，区间 8% 到 16%，说明模型对「这个渠道贡献了百分之十几」比较有把握；同样 12%，区间 4% 到 20%，说明模型其实没把它定下来。宽度由两样东西决定：数据量，越多越窄；模型本身的干净程度，变量高度相关或参数根本定不下来时，再加数据也宽。
+        confidence: 9
+        reference:
+          - docs/8-analysis-toolbox/08-confidence-intervals-and-fit/cn.md
+      - id: what-the-interval-excludes
+        question:
+          en: Why does it matter whether the interval crosses zero?
+          cn: 为什么区间跨不跨 0 这么要紧？
+        answer:
+          en: >
+            Because it decides whether the effect is distinguishable from no effect at all. An interval running from 8 to 16 excludes zero, so the channel's contribution is separated from nothing. An interval running from minus 4 to 20 includes zero, and in that case the contribution and the absence of a contribution cannot be told apart statistically. The same logic applies to a return on investment: if the interval for ROI crosses one, the question of whether the money came back has no answer either. Crossing a threshold you care about is what makes an interval actionable.
+          cn: >
+            因为它决定了这个效果跟「没有效果」能不能区分开。区间从 8 到 16，不含 0，说明这个渠道的贡献跟零是分得开的。区间从 −4 到 20，含 0，那么「有贡献」和「没贡献」在统计上分不开。同样的逻辑对 ROI 也成立：如果 ROI 的区间跨过 1，那「这笔钱有没有赚回来」这个问题同样没有答案。跨过你真正在意的那个门槛，才是区间能派上用场的地方。
+        confidence: 10
+        reference:
+          - docs/8-analysis-toolbox/08-confidence-intervals-and-fit/cn.md
+
+  - name:
+      en: when it goes wrong
+      cn: 它什么时候不靠谱
+    qa:
+      - id: fit-is-not-causality
+        question:
+          en: Does a good fit tell you advertising caused the sales?
+          cn: 拟合度高，能说明广告造成了这些销售吗？
+        answer:
+          en: >
+            No. A high R squared says this set of variables explains the history of sales. It says nothing about whether advertising caused those sales, because causal inference is a separate step and R squared knows nothing about it. eBay's 2015 field experiment is the sharpest case: observational methods put the return on brand keyword advertising above 1,400 percent, while the randomised experiment measured minus 63 percent with a 95 percent interval from minus 124 to minus 3. An observational method can fit sales beautifully and still get the causal direction backwards. Fit is a statement about the model, causality is a statement about the world.
+          cn: >
+            不能。R² 高说明这堆变量能解释销售的历史，对广告有没有造成这些销售一个字都没说，因为因果推断是另一步，R² 对此一无所知。eBay 2015 年那场地实验是最锋利的例子：观测口径把品牌词广告的回报算成 1400% 以上，而随机实验测出来是 −63%，95% 区间从 −124 到 −3。一个观测方法可以把销售拟合得很漂亮，同时把因果方向搞反。拟合度是关于模型的陈述，因果是关于世界的陈述。
+        confidence: 10
+        reference:
+          - docs/8-analysis-toolbox/08-confidence-intervals-and-fit/cn.md
+      - id: extrapolation-breaks
+        question:
+          en: What happens to these measures when you use the model outside its training range?
+          cn: 把模型用到训练范围之外，这两把尺子会怎么样？
+        answer:
+          en: >
+            They stop describing what you are doing. Fit and interval are both statements about the data the model was fitted on. A model with an R squared of 0.95 on 2024 data is telling you about 2024, and that 0.95 does not travel forward. The interval has the same problem: it measures how much the answer moves when you resample within that range, not how wrong you will be in the future, where the error compounds well beyond the interval's width. This is the same point as not extrapolating a contribution beyond spend levels the model has seen.
+          cn: >
+            它们就不再描述你正在做的事了。拟合度和区间都是关于模型拟合时那段数据的陈述。在 2024 年数据上 R² 0.95 的模型，说的是 2024 年，那个 0.95 不会跟着往前走。区间有同样的问题：它量的是「在这段范围里重抽一次，答案会动多少」，不是「往未来推会错多少」，而未来的误差会累积得远超区间的宽度。这跟「贡献不能外推到模型没见过的投放水平」是同一件事。
+        confidence: 9
+        reference:
+          - docs/8-analysis-toolbox/08-confidence-intervals-and-fit/cn.md
+      - id: interval-depends-on-assumptions
+        question:
+          en: Why should you ask what a reported interval actually includes?
+          cn: 为什么拿到一个区间要问它到底算了什么进去？
+        answer:
+          en: >
+            Because many tools will hand you an interval that is narrower than the real uncertainty, and the usual reasons are worth knowing. One is treating uncertain inputs as known, for instance fixing the baseline to a single number instead of letting it vary. Another is having no estimable source of variance in the model at all and supplying a default narrow interval. Both produce a number that looks precise and carries little information. So ask what the uncertainty covers before you trust the width.
+          cn: >
+            因为很多工具给你的区间比真实的不确定性窄，而常见的两个原因是值得知道的。一个是把不确定的输入当成已知的，比如把基线固定成一个数而不让它变动。另一个是模型里根本没有可估的方差来源，就给了一个默认的窄区间。两者产出的数都是看着精确、其实没什么信息。所以要问清楚这个不确定性里到底包含了什么，再决定信不信它的宽度。
+        confidence: 8
+        reference:
+          - docs/8-analysis-toolbox/08-confidence-intervals-and-fit/cn.md
+      - id: fit-can-be-faked
+        question:
+          en: In what ways can a high fit be misleading?
+          cn: 高拟合度有哪几种骗人的方式？
+        answer:
+          en: >
+            Several, and they look identical on the score. The model may have captured a genuine advertising effect. Or it may simply have learned the seasonality and promotion calendar, which is a real pattern but has nothing to do with advertising. Or the variables may be highly correlated and the model has found a combination that fits the history perfectly while meaning nothing for the future. So do not judge on the R squared alone: look at whether the residuals are systematic. A one-sided residual pattern across the range means the shape does not match, however high the score.
+          cn: >
+            有好几种，而且在这个分数上长得一模一样。模型可能真的抓住了广告的效果；也可能只是把季节和促销的日历学进去了，那是真规律，但跟广告没关系；也可能变量高度相关，模型找到了一组把历史拟合得完美、对未来却毫无意义的组合。所以别只看 R² 高低，要看残差有没有系统性。整段范围里残差朝一个方向偏，说明形状没对上，分数再高也是假的。
+        confidence: 8
+        reference:
+          - docs/8-analysis-toolbox/08-confidence-intervals-and-fit/cn.md
+
+  - name:
+      en: how to use them
+      cn: 怎么用这两把尺子
+    qa:
+      - id: three-questions-order
+        question:
+          en: In what order should you ask your questions about a model?
+          cn: 拿到一个模型，问题该按什么顺序问？
+        answer:
+          en: >
+            Three questions, in this order. First, how wide is the interval on this number, and does it cross the threshold you care about, such as zero for a contribution or one for a return? If the interval is too wide to exclude that threshold, the number cannot carry a decision. Second, what does the interval actually include, so you can compare it against the width on the page. Third, what data was the model fitted on, and is that the range you intend to use it in. Only once all three pass do you look at fit, which is the last confirmation rather than the first filter.
+          cn: >
+            三个问题，按这个顺序。第一，这个数的区间有多宽，跨没跨过你在意的那个门槛——贡献看 0，ROI 看 1。区间宽到跨不过去，这个数就不能撑起一个决定。第二，这个区间里到底算了什么进去，好拿它跟纸面上的宽度对一下。第三，模型是在哪段数据上拟合的，你打算用到的那段范围在不在里面。三问都过了，才轮到看拟合度，它是最后一道确认，不是第一个筛子。
+        confidence: 9
+        reference:
+          - docs/8-analysis-toolbox/08-confidence-intervals-and-fit/cn.md

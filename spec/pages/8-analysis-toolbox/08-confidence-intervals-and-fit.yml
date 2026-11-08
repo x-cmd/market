@@ -1,0 +1,18 @@
+id: 08-confidence-intervals-and-fit
+series: 8-analysis-toolbox
+stage: 查字典
+title: 置信区间和拟合度：模型能信几分
+value: 知道一个模型的两个可信度指标各管什么
+sections:
+- title: 这两把尺子各量什么
+  content: 区间说参数的不确定性，拟合度说模型整体的解释力
+- title: 为什么不能互相替代
+  content: 量的是不同的东西，不能互相替代
+- title: 它什么时候不靠谱
+  content: 拟合度高不等于因果成立；外推会崩；区间算了什么进去要看清
+- title: 拿到这两个数以后
+  content: 先问区间宽度与是否跨过门槛，再问不确定性算了什么，最后问适用数据范围
+- title: 站内哪几篇讲过
+  content: 3-experiment-design/02-sample-size-and-power、3-experiment-design/04-confidence-intervals
+data_cards:
+- ci_width_vs_sample_size

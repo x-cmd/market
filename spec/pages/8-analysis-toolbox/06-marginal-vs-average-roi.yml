@@ -1,0 +1,16 @@
+id: 06-marginal-vs-average-roi
+series: 8-analysis-toolbox
+stage: 查字典
+title: 边际 ROI 和平均 ROI：两个不同的数
+value: 不会再把这两个数搞混
+sections:
+- title: 这两个数分别是什么
+  content: 平均是总回报除以总花费，边际是最后一块钱带来的
+- title: 怎么算
+  content: 举一个具体数字算两遍；ROI 排名不等于加钱顺序
+- title: 它什么时候不靠谱
+  content: 花费没分档时算不出边际；分档太细样本不够；平均 ROI 算的是账面不是增量
+- title: 站内哪几篇讲过
+  content: 1-report-overview/06-incrementality-chart、4-performance-analysis/04-marginal-roi-decay
+data_cards:
+- marginal_roi_floor

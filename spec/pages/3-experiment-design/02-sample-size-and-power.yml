@@ -1,0 +1,19 @@
+id: 02-sample-size-and-power
+series: 3-experiment-design
+stage: 怎么扰动
+title: 样本太少，结论会反着
+value: 知道差多少算够，为什么小样本会把方向搞反
+sections:
+- title: 小实验的漂亮数字，为什么可能是反的
+  content: 小实验得了个漂亮的数
+- title: 要多大的差别，才需要多少人
+  content: 差别越小要看得越准，样本就得越大
+- title: 方向为什么会反
+  content: 小样本下估计值的随机波动可以盖过真效果
+- title: 事前算，还是事后算
+  content: 事后算的区间通常宽到没用
+- title: 跑了三天的小实验，数字是反的
+  content: 跑了三天的小实验
+- title: 先估样本量，再开跑
+  content: 先估样本量，再开跑
+data_cards: []
