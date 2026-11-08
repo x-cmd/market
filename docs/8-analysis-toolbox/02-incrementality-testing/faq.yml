@@ -97,8 +97,8 @@ data:
       en: How much bigger is the observational estimate than the experimental one?
       cn: 观测口径算出来的，比随机实验大多少？
     answer:
-      en: Much bigger. In one of the 15 Facebook field experiments, a checkout campaign, the naive comparison of exposed against unexposed users gave 416% while the randomised experiment gave 77%. The paper's broader conclusion is that observational methods often fail to recover the effect that a randomised experiment measures. Matching, regression adjustment and propensity scoring were all tried and none of them won consistently.
-      cn: 大得多。Facebook 那 15 个实地实验里有一个结账活动，广告主最常用的口径（曝光的 vs 未曝光的）算出 416%，随机实验测出来是 77%。论文更总的结论是：观测口径常常根本恢复不出随机实验测出来的效果。匹配、回归校正、倾向得分都试过，没有一个稳定赢。
+      en: Much bigger. In one of the 15 Facebook field experiments, a checkout campaign, the naive comparison of exposed against unexposed users gave 316% while the randomised experiment gave 73%. The paper's broader conclusion is that observational methods often fail to recover the effect that a randomised experiment measures. Matching, regression adjustment and propensity scoring were all tried and none of them won consistently.
+      cn: 大得多。Facebook 那 15 个实地实验里有一个结账活动，广告主最常用的口径（曝光的 vs 未曝光的）算出 316%，随机实验测出来是 73%。论文更总的结论是：观测口径常常根本恢复不出随机实验测出来的效果。匹配、回归校正、倾向得分都试过，没有一个稳定赢。
     confidence: 9
     reference:
     - docs/8-analysis-toolbox/02-incrementality-testing/cn.md
@@ -151,8 +151,8 @@ data:
       en: Can the measured lift be carried over to next month's budget?
       cn: 测出来的增量能搬到下个月的预算上吗？
     answer:
-      en: 'No. The test measures the increment at that stretch of time, that spend level and that population. It is not a permanent property of the channel: change the budget, the creative, the season or the audience and the increment changes with it. So a measured 77% cannot simply be multiplied by next month''s spend. That is extrapolation, and extrapolation is far less reliable than the experiment it came from.'
-      cn: 不能。实验量的是「在这段时间、这个投放水平、这一批人」上的增量，不是这个渠道的永久属性：预算变了、素材变了、季节变了、人群变了，增量就跟着变。所以测出来的 77% 不能直接乘到下个月的花费上。那叫外推，外推的可靠性远低于实验本身。
+      en: 'No. The test measures the increment at that stretch of time, that spend level and that population. It is not a permanent property of the channel: change the budget, the creative, the season or the audience and the increment changes with it. So a measured 73% cannot simply be multiplied by next month''s spend. That is extrapolation, and extrapolation is far less reliable than the experiment it came from.'
+      cn: 不能。实验量的是「在这段时间、这个投放水平、这一批人」上的增量，不是这个渠道的永久属性：预算变了、素材变了、季节变了、人群变了，增量就跟着变。所以测出来的 73% 不能直接乘到下个月的花费上。那叫外推，外推的可靠性远低于实验本身。
     confidence: 9
     reference:
     - docs/8-analysis-toolbox/02-incrementality-testing/cn.md

@@ -137,8 +137,9 @@ metric_cards:
       citation: Gordon, Zettelmeyer, Bhargava & Chapsky, Marketing Science 38(2), 2019
       url: https://pubsonline.informs.org/doi/pdf/10.1287/mksc.2018.1135
     caveats:
-    - 实验组 2550 万人，只有 37% 真看到广告；曝光折算后真值 73%（95% CI 49–103%）
-    - 四个转化率：对照组 0.033、实验组 0.045、未曝光 0.019、已曝光 0.061
+    - 实验组 2550 万人，只有 25% 真看到广告；随机实验测出的真值 73%
+    - 三个转化率：对照组 0.059%、实验组已曝光 0.104%、实验组未曝光 0.020%
+    - 观测口径（曝光 vs 未曝光）算出 316%；只按年龄性别精确匹配降到 222%
     chart:
       page: 1-report-overview/06-incrementality-chart
       template: echarts
@@ -316,8 +317,8 @@ metric_cards:
     label: 结账实验：观测口径算出的提升 vs 随机实验真值
     unit: '%'
     value:
-      exposed_vs_unexposed: 416
-      randomized_experiment: 77
+      exposed_vs_unexposed: 316
+      randomized_experiment: 73
     as_of: 2019
     geography: Facebook（15 个实地实验中的一个结账实验）
     denominator: 转化率
@@ -327,13 +328,13 @@ metric_cards:
       citation: Gordon, Zettelmeyer, Bhargava & Chapsky, Marketing Science 38(2), 2019
       url: https://pubsonline.informs.org/doi/pdf/10.1287/mksc.2018.1135
     caveats:
-    - 观测口径在这次实验里高估了五倍多
+    - 观测口径在这次实验里高估了四倍多
     - 论文的结论不是观测方法一律没用，而是恢复不出实验效果；匹配、回归校正、倾向得分都试过
     - 曝光不是随机的，平台会把广告投给本来就更可能买的人，这是高估的根源
     chart:
       page: 8-analysis-toolbox/02-incrementality-testing
       template: echarts
-      alt: fb_checkout_416_vs_77
+      alt: fb_checkout_316_vs_73
     used_in:
     - 8-analysis-toolbox/02-incrementality-testing
     - 1-report-overview/06-incrementality-chart
@@ -476,7 +477,9 @@ metric_cards:
     unit: 倍
     value:
       half_ceiling_at: 1.0
-      ninety_percent_ceiling_at: 3.0
+      ninety_percent_ceiling_at_alpha_1: 9.0
+      ninety_percent_ceiling_at_alpha_2: 3.0
+      ninety_percent_ceiling_at_alpha_3: 2.1
     as_of: 2026
     geography: 通用（Hill 曲线的数学性质，与渠道无关）
     denominator: null
@@ -486,7 +489,8 @@ metric_cards:
       citation: Hill 函数 效果(x) = x^α / (x^α + k^α) 的代数性质
       url: https://en.wikipedia.org/wiki/Hill_equation
     caveats:
-    - 3 倍这个关系对任何 α 都成立，因为 3^α / (3^α + 1) = 0.9
+    - 拿到 90% 天花板要投到 k 的 9^(1/α) 倍，这个倍数跟着 α 走，不是固定值
+    - 半衰点（效果 0.5）落在 x = k，这个对任何 α 都成立
     - k 本身估不准的时候，这个倍数关系救不了你
     - α 大于 1 时曲线在低投入段更平，小额试水的回报被压扁
     used_in:

@@ -1,0 +1,125 @@
+id: x-market-1-report-overview-07-eight-tools-in-one-table
+
+data:
+  - name:
+      en: what the eight tools are
+      cn: 八个工具各管什么
+    qa:
+      - id: what-the-eight-tools-are
+        question:
+          en: What are the eight tools covered on this page?
+          cn: 这一页讲的八个工具是哪八个？
+        answer:
+          en: >
+            They are the eight analysis tools in the toolbox section of the site. Attribution, which splits the credit for a conversion across the touchpoints that touched it. Incrementality testing, which measures what happens to sales in a place you stop advertising to. MMM contribution decomposition, which spreads a period's sales change back across channels. Adstock decay, which carries past spend forward with a decay curve. The Hill saturation curve, which describes how returns taper as spend rises. Marginal versus average ROI, which separates the last unit of spend from the whole bill. The equal marginal returns principle, which tells you how to split a budget. And confidence intervals with model fit, which say how much of a number to believe. No one of them replaces another; they sit on different links of the same chain.
+          cn: >
+            是站内工具箱那一节的八样分析工具。归因，把一次转化的功劳分给碰过它的各个接触点。增量实验，测一块不投广告的地方销售会掉多少。MMM 贡献分解，把一段时间的销售变化摊回各渠道。Adstock 衰减，把过去的花费按衰减曲线累积到今天。Hill 饱和曲线，描述投入变大时回报怎么递减。边际 ROI 与平均 ROI，把最后一块钱的回报和整笔账分开。等边际原则，讲预算怎么分。置信区间与拟合度，讲一个数该信几分。它们之间没有谁取代谁，各自占链条上的一环。
+        confidence: 10
+        reference:
+          - docs/1-report-overview/07-eight-tools-in-one-table/cn.md
+      - id: why-the-table-lists-input-and-output
+        question:
+          en: Why does the table list inputs and outputs rather than just names?
+          cn: 这张表为什么列输入和输出，而不是只列名字？
+        answer:
+          en: >
+            Because the output column is what stops you from mixing numbers. The first two tools output money and orders, MMM outputs a percentage, the curve tools output a shape, and the ROI tools output a multiple. Those quantities do not share a unit, so they cannot be substituted for one another or added together. A channel with a 21 percent contribution, a 1.8 times marginal ROI and a 73 percent increment is three different measurements, and reporting only one of them without saying which is what creates the disagreement this page is about.
+          cn: >
+            因为输出那一列是防止你把数混起来的关键。前两个工具输出的是钱和单，MMM 输出的是百分比，两个曲线工具输出的是形状，ROI 那两个输出的是倍数。这些量纲不同，不能互相替代，也不能加在一起。一个渠道贡献占 21%、边际 ROI 是 1.8 倍、增量回报是 73%，这是三把不同的尺子量的三样东西，只报其中一个而不说清是哪个，这页要解决的分歧就是这么来的。
+        confidence: 9
+        reference:
+          - docs/1-report-overview/07-eight-tools-in-one-table/cn.md
+      - id: which-tool-answers-how-many-questions
+        question:
+          en: Does one tool cover most of the questions, or are they spread out?
+          cn: 是一个工具能答大部分问题，还是各管一段？
+        answer:
+          en: >
+            They are spread out. Across the five questions the site cares about, the observational tools (attribution, MMM, marginal ROI) cover the most, the experimental tool (incrementality testing) covers one and does it best, and the mathematical tools (Adstock, Hill, equal marginal returns, confidence intervals) cover two or three each. The shape of that coverage is the practical answer to when to reach for which tool: if the question is about incremental sales, only the experiment can answer it; if it is about where the next unit of money goes, three tools have to be chained.
+          cn: >
+            各管一段。在站内关心的五个问题上，观测类工具（归因、MMM、边际 ROI）覆盖最多，实验类工具（增量实验）只覆盖一个，但覆盖得最好；数学类工具（Adstock、Hill、等边际、置信区间）各覆盖两到三个。这个分布形状就是「什么时候查哪个」的实用答案：问增量销售，只有实验答得了；问下一笔钱放哪，得三个工具接力。
+        confidence: 9
+        reference:
+          - docs/1-report-overview/07-eight-tools-in-one-table/cn.md
+
+  - name:
+      en: which step each tool handles
+      cn: 每个工具管哪一步
+    qa:
+      - id: looking-back-step
+        question:
+          en: Which tool answers "which touchpoint got credit for this order"?
+          cn: 「这一单算在哪个接触点头上」该查哪个工具？
+        answer:
+          en: >
+            Attribution. It takes the touchpoint sequence on a single order and splits it by a rule, such as last click, first click, linear, or time decay. The number you get is a rule's output, not a fact: change the rule and the same batch of orders splits differently. What attribution counts is who touched the order, not who created it, so it can answer where orders came from but it cannot answer whether a channel earned its money.
+          cn: >
+            归因。它拿到一单上的接触点序列，按一条规则分摊，比如末次点击、首次点击、线性、时间衰减。分出来的数是规则的产物，不是事实：换一条规则，同一批单就分出另一个数。它数的是「谁碰过这一单」，不是「谁创造了这一单」，所以它能回答单从哪来，回答不了这个渠道的钱值不值。
+        confidence: 10
+        reference:
+          - docs/1-report-overview/07-eight-tools-in-one-table/cn.md
+      - id: stopping-step
+        question:
+          en: Which tool answers "how many of these orders would we have had anyway"?
+          cn: 「这些单本来就会有多少」该查哪个工具？
+        answer:
+          en: >
+            Only incrementality testing. It holds back a place where you do not advertise and compares it to a place where you do, so the difference is what advertising created. The gap between the observational answer and the experimental answer can be enormous and can even reverse sign. In eBay's 2015 field experiment, brand keyword advertising measured minus 63 percent return with a 95 percent confidence interval of minus 124 to minus 3 percent, and 99.5 percent of the lost clicks were immediately recaptured by organic search, while the same data read through an observational method implied more than 1,400 percent. In one Facebook checkout experiment the observational method gave 316 percent and the randomized experiment gave 73 percent. Both papers report that matching, regression adjustment and propensity scores all failed to recover the experimental effect.
+          cn: >
+            只有增量实验。它扣住一块不投广告的地方，跟照投的地方比，多出来的那部分就是广告造出来的。观测口径和实验口径的差距可以大得离谱，甚至反号。eBay 2015 年那场地实验，品牌词广告测出的回报是 −63%，95% 置信区间 −124% 到 −3%，少掉的点击有 99.5% 被自然搜索立即接了回去；同一份数据用观测口径读，回报高于 1400%。Facebook 有一个结账实验，观测口径给出 316%，随机实验给出 73%。两篇论文都报告：匹配、回归校正、倾向得分都试过，恢复不出实验效果。
+        confidence: 10
+        reference:
+          - docs/1-report-overview/07-eight-tools-in-one-table/cn.md
+      - id: looking-ahead-step
+        question:
+          en: Which tools answer "where should the next unit of budget go"?
+          cn: 「下一笔钱该放哪」该查哪几个工具？
+        answer:
+          en: >
+            Three in sequence. Marginal ROI first, because the average ROI is a backward-looking total while the decision is about the last unit of spend. The equal marginal returns principle second, because the criterion for a good split is that every channel's marginal return ends up equal. Confidence intervals third, because a marginal gap of 0.2 is worthless if the interval half-width around it is thirty points. In the worked example, putting the whole one million on search returns 1.14, splitting it so marginals are level returns 2.30, and capping social at 40 percent drops it to 1.97.
+          cn: >
+            三个接力。先是边际 ROI，因为平均 ROI 是回头看的总数，而决策问的是最后一块钱。然后是等边际原则，因为分得好的判据是各渠道的边际回报最后拉平。最后是置信区间，因为边际差 0.2 而区间半宽三十个点的时候，这个差别等于零。站内那个算例里，100 万全给搜索总回报 1.14，按边际拉平是 2.30，社交加上不超 40% 的约束后掉到 1.97。
+        confidence: 9
+        reference:
+          - docs/1-report-overview/07-eight-tools-in-one-table/cn.md
+      - id: where-math-tools-fit
+        question:
+          en: Do the four mathematical tools produce any numbers of their own?
+          cn: 那四个数学类工具自己给数吗？
+        answer:
+          en: >
+            No, and that is their job. Adstock, Hill, equal marginal returns and confidence intervals do not measure anything. They set the rules by which the other tools are computed. Without Adstock, an MMM decomposition matches this week's spend to this week's sales and misfiles the effect of last week's money. Without Hill, the model assumes returns keep growing with spend and reports contributions that are too high at high levels. So when you see a contribution number, what you are really looking at is four sets of assumptions underneath it.
+          cn: >
+            不给，这正是它们的用处。Adstock、Hill、等边际、置信区间自己什么都不量，它们规定别的工具该怎么算。没有 Adstock，MMM 会拿这周的花费配这周的销售，把上周那笔钱的效应当成没生效。没有 Hill，模型会以为投多少赚多少，在高投入段给出虚胖的贡献。所以看到一个贡献数的时候，你真正看的是它底下四套设定。
+        confidence: 9
+        reference:
+          - docs/1-report-overview/07-eight-tools-in-one-table/cn.md
+
+  - name:
+      en: which pages use these tools
+      cn: 哪几篇讲过
+    qa:
+      - id: where-the-tools-are-used
+        question:
+          en: Where else on the site are these tools used?
+          cn: 这些工具在站内别的地方用在哪几篇？
+        answer:
+          en: >
+            The incrementality overview and the report runbook use attribution, incrementality testing and marginal ROI. The marginal ROI decay page and the budget allocation pages use marginal ROI, equal marginal returns and confidence intervals. The experiment design pages use incrementality testing and confidence intervals. The toolbox section itself has one page per tool, each explaining what the tool does, what it needs, and the conditions under which it stops working. This page is an index over that set rather than a ninth topic.
+          cn: >
+            增量那一篇和报告跑法那一篇用到了归因、增量实验、边际 ROI。边际回报衰减那一篇和预算分配那几篇用到了边际 ROI、等边际原则、置信区间。实验设计那几篇用到了增量实验和置信区间。工具箱那一节本身是一页讲一个工具，各讲它干什么、要什么、什么时候会不灵。本页是对那一组页的索引，不是第九个话题。
+        confidence: 9
+        reference:
+          - docs/1-report-overview/07-eight-tools-in-one-table/cn.md
+      - id: when-to-go-back-to-the-table
+        question:
+          en: If two numbers from two tools disagree, which one do you believe?
+          cn: 两个工具给出两个不一样的数，信哪个？
+        answer:
+          en: >
+            Ask what each one was measuring before asking which is right. If one number is a contribution percentage from an MMM and the other is a measured increment from a holdout test, they are not in conflict, they are answers to different questions, and the one that can support a decision about spend is the measured increment. The tie-break is not which tool is more sophisticated but which one held something back. If neither tool held anything back, the honest answer is that the number is not known yet, and the next move is to reserve a slice of traffic or geography to find out.
+          cn: >
+            先问每个数在量什么，再问谁对。如果一个是 MMM 拆出来的贡献百分比，另一个是扣住一块地方实测出来的增量，这两个数不冲突，它们回答的是两个问题，而能支撑投放决策的是实测增量。判据不是哪个工具更高级，而是哪个扣住了什么。要是两个工具都没扣住任何东西，老实说这个数现在还不知道，下一步是留一块流量或者一块地方去把它问出来。
+        confidence: 9
+        reference:
+          - docs/1-report-overview/07-eight-tools-in-one-table/cn.md

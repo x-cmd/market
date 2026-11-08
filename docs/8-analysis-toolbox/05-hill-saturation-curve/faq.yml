@@ -63,9 +63,9 @@ data:
           cn: α 大于 1 会不会改变你的做法？
         answer:
           en: >
-            Yes. A curve with alpha above one has unit return that is low at first and high in the middle, with an inflection partway along. For alpha equal to 2 and k equal to 1000, unit return peaks at x equal to k times the alpha minus one to the power one over alpha, which is 1000, exactly half the ceiling. The steepest point on the curve sits slightly earlier, at x equal to k times alpha over alpha plus one to the power one over alpha, around 816, and that is where each extra unit of spend adds the most effect. The opening stretch is the flatter one. So the instinct that a small test should come before a large push does not hold for these channels. This is also why adding money to a channel that is already established can pay better than starting small.
+            Yes. A curve with alpha above one has unit return that is low at first and high in the middle, with an inflection partway along. For alpha equal to 2 and k equal to 1000, unit return peaks at x equal to k times the alpha minus one to the power one over alpha, which is 1000, exactly half the ceiling. The steepest point on the curve sits slightly earlier, at x equal to k times alpha minus one over alpha plus one, to the power one over alpha, around 577, and that is where each extra unit of spend adds the most effect. The opening stretch is the flatter one. So the instinct that a small test should come before a large push does not hold for these channels. This is also why adding money to a channel that is already established can pay better than starting small.
           cn: >
-            会。α 大于 1 的曲线，单位回报是开头低、中间高，中间有个拐点。α 等于 2、k 取 1000 时，单位回报最高的位置在 x 等于 k 乘 α 减 1 再开 α 次方，正好是 1000，是天花板的一半。曲线最陡的位置比这个更靠前，在 x 等于 k 乘 α 除以 α 加 1 再开 α 次方，大约是 816，那里多花一块钱带来的效果增量最大。开头那一段反而偏平。所以「先小规模试试再放大」这个直觉，对这些渠道不成立。这也是为什么一个已经铺开的渠道加钱可能比从头起步更划算。
+            会。α 大于 1 的曲线，单位回报是开头低、中间高，中间有个拐点。α 等于 2、k 取 1000 时，单位回报最高的位置在 x 等于 k 乘 α 减 1 再开 α 次方，正好是 1000，是天花板的一半。曲线最陡的位置比这个更靠前，在 x 等于 k 乘 α 减 1 再除以 α 加 1、再开 α 次方，大约是 577，那里多花一块钱带来的效果增量最大。开头那一段反而偏平。所以「先小规模试试再放大」这个直觉，对这些渠道不成立。这也是为什么一个已经铺开的渠道加钱可能比从头起步更划算。
         confidence: 8
         reference:
           - docs/8-analysis-toolbox/05-hill-saturation-curve/cn.md

@@ -932,7 +932,7 @@ series:
     - title: 三种做法
       content: 地理切分、时间切分、幽灵广告
     - title: 它测出来的数长什么样
-      content: CPC 2.40 对 CPIC 3.00；观测 416% 对实验 77%
+      content: CPC 2.40 对 CPIC 3.00；观测 316% 对实验 73%
     - title: 它什么时候不靠谱
       content: 两块地方本来就不一样；样本太小；时间不够长
     - title: 什么时候值得做
