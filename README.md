@@ -2,7 +2,7 @@
 
 **A manual for writing a market and marketing report.** Every figure is an [x-cmd draw](https://github.com/x-cmd/draw) URL: the data lives in the link, server-rendered as SVG. Open any chart and you see its full parameters; paste it anywhere markdown images work.
 
-> The full outline — every stage, every page's title, what it gives you, its sections and what each section covers — is in **[OUTLINE.yml](OUTLINE.yml)**.
+> The full outline — every stage, every page's title, what it gives you, its sections and what each section covers — is in **[OUTLINE.yml](OUTLINE.yml)**. The machine-readable metric definitions an agent needs are in **[spec/metric-cards.yml](spec/metric-cards.yml)**.
 
 ## The idea
 
@@ -21,7 +21,7 @@ The site is a sequence of stages, not a pile of topics. Each stage answers the q
 | Stage | Series | You are stuck because | Pages |
 |---|---|---|---|
 
-| 入口 | `1-report-overview` — The five charts a market report has to deliver, and how to make each one right | 要交一份报告，先弄清楚交哪几张图 | 6 |
+| 入口 | `1-report-overview` — The five charts a market report has to deliver, and how to make each one right | 要交一份报告，先弄清楚交哪几张图 | 7 |
 | 数从哪来 | `2-market-research` — Where the numbers come from — how to measure them, and who is in this market | 手上一堆数，不确定能不能信 | 12 |
 | 怎么扰动 | `3-experiment-design` — How to perturb the world without designing a broken test | 想知道是不是广告干的，一测就出问题 | 4 |
 | 怎么读 | `4-performance-analysis` — How to read what the platforms tell you | 数字到手了，读不出意思 | 5 |
@@ -29,6 +29,12 @@ The site is a sequence of stages, not a pile of topics. Each stage answers the q
 | 怎么挪 | `6-budget-optimization` — How to move the money between channels | 几个渠道之间，不知道钱往哪放 | 3 |
 | 看得见吗 | `7-brand-visibility` — How many people see you, in search, on social, and inside AI answers | 想知道品牌被多少人看见、被怎么评价 | 9 |
 | 查字典 | `8-analysis-toolbox` — Eight tools, one page each | 遇到一个不认识的词 | 8 |
+
+## Running a report
+
+[docs/1-report-overview/01-report-runbook.md](docs/1-report-overview/01-report-runbook.md) is the runbook: eight steps from brief to delivery, each with who does it, what comes out, and how to check it. It also holds the ten-item QA checklist and the prompt shape to hand a step to an AI agent.
+
+The division of labour is short: **a human decides the question, the scope, the definition and signs off; an agent fetches, computes, draws, drafts and cross-links.**
 
 ## How the charts work
 
@@ -48,7 +54,7 @@ Three ways, all small:
 
 - **Fill in a missing field** on an entry page and send a pull request. Every page that links to that entry benefits at the same time.
 - **Redraw a chart** with your own numbers — the data is in the URL.
-- **Add one public series** to the data source list, and the whole site gains one more number it can look up.
+- **Add one public series** to `spec/metric-cards.yml` and to the data source list, and the whole site gains one more number it can look up.
 
 Changing one field changes the whole report. That is the difference between this and a pile of articles.
 
@@ -57,14 +63,15 @@ Changing one field changes the whole report. That is the difference between this
 | Data | How to fetch it |
 |---|---|
 | EU retail and e-commerce turnover | `x dbnomics data Eurostat/isoc_ec_evaln2/…` |
-| US industry gross output and concentration | `x dbnomics data BEA/GDPbyIndustry-26/…` |
+| EU retail turnover index | `x dbnomics data Eurostat/sts_trtu_m/…` |
+| US industry gross output | `x dbnomics data BEA/GDPbyIndustry-26/…` |
 | US consumer sentiment | `x dbnomics data SCSMICH/MICS/…` |
 | US prices, unemployment | `x dbnomics data bls.cpi` / `bls.unemployment` |
 | Advertising measurement, published experiments | cited by paper and journal in the page's data line |
 
 ## 中文页
 
-正文目前只有中文版。**全站 52 页的阶段、标题、价值、章节与每节装什么，在 [OUTLINE.yml](OUTLINE.yml)**。
+正文目前只有中文版。**全站 53 页的阶段、标题、价值、章节与每节装什么，在 [OUTLINE.yml](OUTLINE.yml)**。
 
 ### 你今天卡在哪，从这儿进
 
@@ -82,18 +89,20 @@ Changing one field changes the whole report. That is the difference between this
 
 ### 入口 · 概览
 
+- 一份市场报告怎么跑出来 — 知道一份报告怎么从零跑出来，每步谁做、做完怎么验  
+  <sub>`docs/1-report-overview/01-report-runbook/` · 待写</sub>
 - 你说的 23%，跟别人说的 23%，是一回事吗 — 做出一张别人不会误读的市场份额图  
-  <sub>`docs/1-report-overview/01-market-share-chart/` · 待写</sub>
+  <sub>`docs/1-report-overview/02-market-share-chart/` · 待写</sub>
 - 这门生意还值不值得进 — 判断这门生意还值不值得进  
-  <sub>`docs/1-report-overview/02-growth-chart/` · 待写</sub>
+  <sub>`docs/1-report-overview/03-growth-chart/` · 待写</sub>
 - 你的价格，在品类里站得住吗 — 看出自己的价格在品类里站不站得住  
-  <sub>`docs/1-report-overview/03-price-band-chart/` · 待写</sub>
+  <sub>`docs/1-report-overview/04-price-band-chart/` · 待写</sub>
 - 再花一块钱，能多换回多少 — 知道再花一块钱能多换回多少  
-  <sub>`docs/1-report-overview/04-ad-spend-chart/` · 待写</sub>
-- **[没有广告，这些单会成交吗](docs/1-report-overview/05-incrementality-chart/cn.md)** — 分清广告赚到的和本来就有的  
-  <sub>`docs/1-report-overview/05-incrementality-chart/`</sub>
+  <sub>`docs/1-report-overview/05-ad-spend-chart/` · 待写</sub>
+- **[没有广告，这些单会成交吗](docs/1-report-overview/06-incrementality-chart/cn.md)** — 分清广告赚到的和本来就有的  
+  <sub>`docs/1-report-overview/06-incrementality-chart/`</sub>
 - 八个工具，一张表 — 知道八个工具各管什么、什么时候查哪个  
-  <sub>`docs/1-report-overview/06-eight-tools-in-one-table/` · 待写</sub>
+  <sub>`docs/1-report-overview/07-eight-tools-in-one-table/` · 待写</sub>
 
 ### 数从哪来 · 市场调研
 

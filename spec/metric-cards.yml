@@ -1,0 +1,174 @@
+# 口径卡 · metric cards
+#
+# 这是给 AI agent 直接吃的机器可读规格。
+# 人读的版本在 docs/ 各页正文里；这里只有 agent 要用的字段。
+#
+# 一张卡 = 一个指标。一个指标只能有一个出处，别处引的数都得能追回它。
+#
+# 用法：agent 拿到 id，照 command 取数，照 chart 画图，照 caveats 写提醒。
+
+version: 1
+updated: 2025-11
+
+metric_cards:
+  # ── 电商渗透率 ──────────────────────────────────────────────
+  - id: ecom_share_of_turnover
+    label: 网络销售占企业总营业额
+    unit: "%"
+    value: 19.82
+    as_of: 2024
+    geography: EU27_2020
+    denominator: 企业总营业额（雇员 10 人及以上，NACE C-E 行业：批发零售、住宿餐饮、交通）
+    numerator: 企业来自网络销售的营业额
+    source:
+      type: dataset
+      provider: Eurostat
+      dataset: isoc_ec_evaln2
+      series: A.GE10.C-E.E_AWSVAL.PC_ETURN.EU27_2020
+      command: x dbnomics data Eurostat/isoc_ec_evaln2/A.GE10.C-E.E_AWSVAL.PC_ETURN.EU27_2020
+      published: 2025-11
+    caveats:
+      - 只覆盖雇员 10 人及以上的企业，小店与个体户不在里面
+      - 只覆盖 NACE C-E 行业
+      - 2025 年的调查覆盖范围有变，跟 2024 不能直接比
+    chart:
+      page: 1-report-overview/02-market-share-chart
+      template: echarts
+      alt: eu2024_two_numerators
+    used_in:
+      - 1-report-overview/02-market-share-chart
+      - 2-market-research/08-share-denominator
+
+  - id: ecom_share_of_turnover_b2c
+    label: 网络销售中卖给消费者的部分占企业总营业额
+    unit: "%"
+    value: 8.49
+    as_of: 2024
+    geography: EU27_2020
+    denominator: 企业总营业额（雇员 10 人及以上，NACE C-E）
+    numerator: 企业卖给消费者的网络销售营业额
+    source:
+      type: dataset
+      provider: Eurostat
+      dataset: isoc_ec_evaln2
+      series: A.GE10.C-E.E_AWSVAL_B2C.PC_ETURN.EU27_2020
+      command: x dbnomics data Eurostat/isoc_ec_evaln2/A.GE10.C-E.E_AWSVAL_B2C.PC_ETURN.EU27_2020
+      published: 2025-11
+    caveats:
+      - 与 ecom_share_of_turnover 的差别只在分子：剔掉了 B2B
+      - 匈牙利这类批发占比高的国家，两个数会差得极远
+    chart:
+      page: 1-report-overview/02-market-share-chart
+      template: echarts
+      alt: eu2024_two_numerators
+    used_in:
+      - 1-report-overview/02-market-share-chart
+      - 2-market-research/08-share-denominator
+
+  - id: ecom_b2c_mix
+    label: 网络销售里卖给消费者的占几成
+    unit: "%"
+    value:
+      CY: 90.8
+      HU: 3.0
+      LT: 46.2
+      ES: 57.8
+    as_of: 2024
+    geography: 各国
+    denominator: 全部网络销售
+    numerator: 卖给消费者的网络销售
+    source:
+      type: dataset
+      provider: Eurostat
+      dataset: isoc_ec_evaln2
+      series: A.GE10.C-E.E_AWSVAL{_B2C}.PC_ETURN.{CY,HU,LT,ES,…}
+      command: x dbnomics series Eurostat isoc_ec_evaln2
+      published: 2025-11
+    caveats:
+      - 这是两个卡相除得出的，别当成原始序列引
+      - 塞浦路斯 91% 是零售电商，匈牙利 3% 几乎全是批发电商
+    chart:
+      page: 1-report-overview/02-market-share-chart
+      template: echarts
+      alt: b2c_share_of_web_sales
+    used_in:
+      - 2-market-research/08-share-denominator
+
+  # ── 投放回报：平台口径 vs 增量口径 ──────────────────────────
+  - id: paid_search_roi_observed_vs_randomized
+    label: 非品牌词搜索广告的回报率，三种算法三个数
+    unit: "%"
+    value:
+      regression_no_controls: 4100
+      regression_with_time_and_geo_controls: 1400
+      randomized_experiment: -63
+    as_of: 2015
+    geography: eBay
+    denominator: 搜索广告花费
+    numerator: 实验或模型归到的增量销售额
+    source:
+      type: published_finding
+      citation: Blake, Nosko & Tadelis, Econometrica 83(1), 2015 — NBER w20171
+      url: https://www.nber.org/papers/w20171
+    caveats:
+      - 回归的 4100% 是「惯例算法」，不是真值
+      - 随机实验的 −63% 置信区间是 −124% 到 −3%
+      - 这批数据来自 eBay 2015，方法学的结论比数字本身耐用
+    chart:
+      page: 1-report-overview/06-incrementality-chart
+      template: echarts
+      alt: ebay_roi_three_ways
+    used_in:
+      - 1-report-overview/06-incrementality-chart
+      - 4-performance-analysis/03-platform-metrics-vs-incremental-metrics
+
+  - id: ad_lift_observed_vs_rct
+    label: 同一个广告活动，观测口径算出的提升 vs 实验真值
+    unit: "%"
+    value:
+      randomized_experiment: 73
+      exact_match_age_gender: 222
+      exposed_vs_unexposed: 316
+    as_of: 2015
+    geography: 美国，某全渠道零售商（Facebook 广告）
+    denominator: 转化率
+    numerator: 有广告与无广告的转化率差
+    source:
+      type: published_finding
+      citation: Gordon, Zettelmeyer, Bhargava & Chapsky, Marketing Science 38(2), 2019
+      url: https://pubsonline.informs.org/doi/pdf/10.1287/mksc.2018.1135
+    caveats:
+      - 实验组 2550 万人，只有 37% 真看到广告；曝光折算后真值 73%（95% CI 49–103%）
+      - 四个转化率：对照组 0.033、实验组 0.045、未曝光 0.019、已曝光 0.061
+    chart:
+      page: 1-report-overview/06-incrementality-chart
+      template: echarts
+      alt: facebook_study4_lift
+    used_in:
+      - 1-report-overview/06-incrementality-chart
+
+  # ── 可直接复现的公开序列 ────────────────────────────────────
+  - id: eu_retail_turnover_index
+    label: 欧盟零售营业额指数
+    unit: "index"
+    value: null
+    as_of: 2025
+    geography: DE / EU27_2020 / 各国
+    denominator: 2015 = 100
+    numerator: 营业额指数
+    source:
+      type: dataset
+      provider: Eurostat
+      dataset: sts_trtu_m
+      series: M.NETTUR.G.CA.I10.{DE,EU27_2020,…}
+      command: x dbnomics data Eurostat/sts_trtu_m/M.NETTUR.G.CA.I10.DE
+      published: 2025-11
+    caveats:
+      - 序列码 M.… 是月度，后面跟国家码
+      - 起点 1994-01
+    chart:
+      page: 2-market-research/01-industry-entry-scale-growth-concentration
+      template: echarts
+      alt: eu_turnover_index
+    used_in:
+      - 2-market-research/01-industry-entry-scale-growth-concentration
