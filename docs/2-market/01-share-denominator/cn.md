@@ -1,10 +1,12 @@
-# 份额的分母，先定清楚再说
+# 你的份额和别人比之前，先说清分母
 
 「我们线上占比 23%。」
 
 准备这么跟投资人说的时候，他问了一句：在什么的 23%？
 
 这个问题不好答，因为同一句话能指四个不同的数。
+
+## 同一句话，能指四件不同的事
 
 **一个份额，拆开是三个选择。**
 
@@ -14,11 +16,13 @@ https://x-cmd.com/draw/mindmap?title=%E4%B8%80%E4%B8%AA%E4%BB%BD%E9%A2%9D%E7%9A%
 
 <a href="https://x-cmd.com/draw/explore/mindmap?title=%E4%B8%80%E4%B8%AA%E4%BB%BD%E9%A2%9D%E7%9A%84%E4%B8%89%E4%B8%AA%E9%80%89%E6%8B%A9&n=%E4%B8%80%E4%B8%AA%E4%BB%BD%E9%A2%9D%2F%E5%88%86%E6%AF%8D%EF%BC%9A%E8%B0%81%E7%9A%84%E8%A7%84%E6%A8%A1%2F%E4%BD%A0%E7%9A%84%E5%85%AC%E5%8F%B8%E6%80%BB%E9%94%80%E5%94%AE%E9%A2%9D%E2%86%92%E6%B8%97%E9%80%8F%E7%8E%87&n=%E4%B8%80%E4%B8%AA%E4%BB%BD%E9%A2%9D%2F%E5%88%86%E6%AF%8D%EF%BC%9A%E8%B0%81%E7%9A%84%E8%A7%84%E6%A8%A1%2F%E5%93%81%E7%B1%BB%E6%80%BB%E8%A7%84%E6%A8%A1%E2%86%92%E4%BB%BD%E9%A2%9D&n=%E4%B8%80%E4%B8%AA%E4%BB%BD%E9%A2%9D%2F%E5%88%86%E6%AF%8D%EF%BC%9A%E8%B0%81%E7%9A%84%E8%A7%84%E6%A8%A1%2F%E5%85%A8%E7%BD%91%E9%9B%B6%E5%94%AE%E5%A4%A7%E7%9B%98%E2%86%92%E6%B8%97%E9%80%8F%E7%8E%87&n=%E4%B8%80%E4%B8%AA%E4%BB%BD%E9%A2%9D%2F%E5%88%86%E5%AD%90%EF%BC%9A%E7%AE%97%E4%BB%80%E4%B9%88%2FB2B%20%E7%AE%97%E4%B8%8D%E7%AE%97%2FB2C%20%E8%BF%98%E6%98%AF%E5%85%A8%E9%83%BD%E7%AE%97%2F%E5%8F%AA%E7%AE%97%E6%88%90%E4%BA%A4%E8%BF%98%E6%98%AF%E8%BF%9E%E6%B5%8F%E8%A7%88%E4%B9%9F%E7%AE%97&n=%E4%B8%80%E4%B8%AA%E4%BB%BD%E9%A2%9D%2F%E6%A1%86%EF%BC%9A%E8%A6%86%E7%9B%96%E8%B0%81%2F%E9%9B%87%E5%91%98%2010%20%E4%BA%BA%E4%BB%A5%E4%B8%8A%2F%E8%A1%8C%E4%B8%9A%20NACE%20C-E%2F%E4%BD%A0%E7%9A%84%E5%85%AC%E5%8F%B8%E5%9C%A8%E4%B8%8D%E5%9C%A8%E9%87%8C%E9%9D%A2&w=760&h=420"><img src="https://x-cmd.com/draw/mindmap?title=%E4%B8%80%E4%B8%AA%E4%BB%BD%E9%A2%9D%E7%9A%84%E4%B8%89%E4%B8%AA%E9%80%89%E6%8B%A9&n=%E4%B8%80%E4%B8%AA%E4%BB%BD%E9%A2%9D%2F%E5%88%86%E6%AF%8D%EF%BC%9A%E8%B0%81%E7%9A%84%E8%A7%84%E6%A8%A1%2F%E4%BD%A0%E7%9A%84%E5%85%AC%E5%8F%B8%E6%80%BB%E9%94%80%E5%94%AE%E9%A2%9D%E2%86%92%E6%B8%97%E9%80%8F%E7%8E%87&n=%E4%B8%80%E4%B8%AA%E4%BB%BD%E9%A2%9D%2F%E5%88%86%E6%AF%8D%EF%BC%9A%E8%B0%81%E7%9A%84%E8%A7%84%E6%A8%A1%2F%E5%93%81%E7%B1%BB%E6%80%BB%E8%A7%84%E6%A8%A1%E2%86%92%E4%BB%BD%E9%A2%9D&n=%E4%B8%80%E4%B8%AA%E4%BB%BD%E9%A2%9D%2F%E5%88%86%E6%AF%8D%EF%BC%9A%E8%B0%81%E7%9A%84%E8%A7%84%E6%A8%A1%2F%E5%85%A8%E7%BD%91%E9%9B%B6%E5%94%AE%E5%A4%A7%E7%9B%98%E2%86%92%E6%B8%97%E9%80%8F%E7%8E%87&n=%E4%B8%80%E4%B8%AA%E4%BB%BD%E9%A2%9D%2F%E5%88%86%E5%AD%90%EF%BC%9A%E7%AE%97%E4%BB%80%E4%B9%88%2FB2B%20%E7%AE%97%E4%B8%8D%E7%AE%97%2FB2C%20%E8%BF%98%E6%98%AF%E5%85%A8%E9%83%BD%E7%AE%97%2F%E5%8F%AA%E7%AE%97%E6%88%90%E4%BA%A4%E8%BF%98%E6%98%AF%E8%BF%9E%E6%B5%8F%E8%A7%88%E4%B9%9F%E7%AE%97&n=%E4%B8%80%E4%B8%AA%E4%BB%BD%E9%A2%9D%2F%E6%A1%86%EF%BC%9A%E8%A6%86%E7%9B%96%E8%B0%81%2F%E9%9B%87%E5%91%98%2010%20%E4%BA%BA%E4%BB%A5%E4%B8%8A%2F%E8%A1%8C%E4%B8%9A%20NACE%20C-E%2F%E4%BD%A0%E7%9A%84%E5%85%AC%E5%8F%B8%E5%9C%A8%E4%B8%8D%E5%9C%A8%E9%87%8C%E9%9D%A2&w=760&h=420" width="760" alt="share_three_choices"></a>
 
+## 一个份额由三样东西决定
+
 **分母：拿谁的规模去除。分子：算什么。这个数覆盖了谁。**
 
 这三个选择，每一个都能让同一个数翻倍。而绝大多数人在会上吵架，吵的正是其中两个，却以为在吵第三个。
 
-**分子好懂，分母才是麻烦。**
+### 分子好懂，分母才是麻烦。
 
 「线上占比 23%」这句话，至少能指四个不同的数：
 
@@ -28,6 +32,8 @@ https://x-cmd.com/draw/mindmap?title=%E4%B8%80%E4%B8%AA%E4%BB%BD%E9%A2%9D%E7%9A%
 - 加上线下之后，全渠道里线上那一块占 23%
 
 四个数都是真的。把它们放一张表里比大小，就是把四件事说成一件。
+
+## 换个分子能差一倍
 
 **一个现成的例子：欧盟 2024 年的电商占比。**
 
@@ -46,7 +52,7 @@ https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E6%AC%A7%E
 
 <a href="https://x-cmd.com/draw/explore/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E6%AC%A7%E7%9B%9F%202024%EF%BC%9A%E5%90%8C%E4%B8%80%E4%B8%AA%E5%88%86%E6%AF%8D%EF%BC%8C%E6%8D%A2%E4%B8%AA%E5%88%86%E5%AD%90%EF%BC%8C%E5%B7%AE%E4%B8%80%E5%80%8D%22%7D%2C%22color%22%3A%5B%22%232563eb%22%2C%22%23dc2626%22%5D%2C%22grid%22%3A%7B%22left%22%3A80%2C%22right%22%3A30%2C%22top%22%3A60%2C%22bottom%22%3A70%7D%2C%22legend%22%3A%7B%22data%22%3A%5B%22%E5%85%A8%E9%83%A8%E7%BD%91%E7%BB%9C%E9%94%80%E5%94%AE%22%2C%22%E5%85%B6%E4%B8%AD%E5%8D%96%E7%BB%99%E6%B6%88%E8%B4%B9%E8%80%85%EF%BC%88B2C%EF%BC%89%22%5D%2C%22top%22%3A30%7D%2C%22xAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%22%E5%B8%8C%E8%85%8A%22%2C%22%E6%B3%A2%E9%BB%91%22%2C%22%E5%85%8B%E7%BD%97%E5%9C%B0%E4%BA%9A%22%2C%22%E4%BF%9D%E5%8A%A0%E5%88%A9%E4%BA%9A%22%2C%22%E5%A1%9E%E6%B5%A6%E8%B7%AF%E6%96%AF%22%2C%22%E7%AB%8B%E9%99%B6%E5%AE%9B%22%2C%22%E6%96%AF%E6%B4%9B%E4%BC%90%E5%85%8B%22%2C%22%E8%A5%BF%E7%8F%AD%E7%89%99%22%2C%22%E7%88%B1%E5%B0%94%E5%85%B0%22%2C%22Hungary%22%5D%2C%22axisLabel%22%3A%7B%22interval%22%3A0%2C%22rotate%22%3A30%2C%22fontSize%22%3A11%7D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%22%E5%8D%A0%E4%BC%81%E4%B8%9A%E6%80%BB%E8%90%A5%E4%B8%9A%E9%A2%9D%EF%BC%88%25%EF%BC%89%22%2C%22axisLabel%22%3A%7B%22formatter%22%3A%22%7Bvalue%7D%25%22%7D%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%2C%22axisPointer%22%3A%7B%22type%22%3A%22shadow%22%7D%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22%E5%85%A8%E9%83%A8%E7%BD%91%E7%BB%9C%E9%94%80%E5%94%AE%22%2C%22type%22%3A%22bar%22%2C%22data%22%3A%5B81.0%2C68.8%2C46.9%2C36.7%2C34.8%2C33.0%2C32.3%2C31.8%2C31.2%2C30.9%5D%7D%2C%7B%22name%22%3A%22%E5%85%B6%E4%B8%AD%E5%8D%96%E7%BB%99%E6%B6%88%E8%B4%B9%E8%80%85%EF%BC%88B2C%EF%BC%89%22%2C%22type%22%3A%22bar%22%2C%22data%22%3A%5B42.2%2C40.5%2C10.6%2C6.9%2C31.6%2C15.2%2C7.3%2C18.4%2C18.5%2C0.9%5D%7D%5D%7D&w=760&h=420"><img src="https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E6%AC%A7%E7%9B%9F%202024%EF%BC%9A%E5%90%8C%E4%B8%80%E4%B8%AA%E5%88%86%E6%AF%8D%EF%BC%8C%E6%8D%A2%E4%B8%AA%E5%88%86%E5%AD%90%EF%BC%8C%E5%B7%AE%E4%B8%80%E5%80%8D%22%7D%2C%22color%22%3A%5B%22%232563eb%22%2C%22%23dc2626%22%5D%2C%22grid%22%3A%7B%22left%22%3A80%2C%22right%22%3A30%2C%22top%22%3A60%2C%22bottom%22%3A70%7D%2C%22legend%22%3A%7B%22data%22%3A%5B%22%E5%85%A8%E9%83%A8%E7%BD%91%E7%BB%9C%E9%94%80%E5%94%AE%22%2C%22%E5%85%B6%E4%B8%AD%E5%8D%96%E7%BB%99%E6%B6%88%E8%B4%B9%E8%80%85%EF%BC%88B2C%EF%BC%89%22%5D%2C%22top%22%3A30%7D%2C%22xAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%22%E5%B8%8C%E8%85%8A%22%2C%22%E6%B3%A2%E9%BB%91%22%2C%22%E5%85%8B%E7%BD%97%E5%9C%B0%E4%BA%9A%22%2C%22%E4%BF%9D%E5%8A%A0%E5%88%A9%E4%BA%9A%22%2C%22%E5%A1%9E%E6%B5%A6%E8%B7%AF%E6%96%AF%22%2C%22%E7%AB%8B%E9%99%B6%E5%AE%9B%22%2C%22%E6%96%AF%E6%B4%9B%E4%BC%90%E5%85%8B%22%2C%22%E8%A5%BF%E7%8F%AD%E7%89%99%22%2C%22%E7%88%B1%E5%B0%94%E5%85%B0%22%2C%22Hungary%22%5D%2C%22axisLabel%22%3A%7B%22interval%22%3A0%2C%22rotate%22%3A30%2C%22fontSize%22%3A11%7D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%22%E5%8D%A0%E4%BC%81%E4%B8%9A%E6%80%BB%E8%90%A5%E4%B8%9A%E9%A2%9D%EF%BC%88%25%EF%BC%89%22%2C%22axisLabel%22%3A%7B%22formatter%22%3A%22%7Bvalue%7D%25%22%7D%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%2C%22axisPointer%22%3A%7B%22type%22%3A%22shadow%22%7D%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22%E5%85%A8%E9%83%A8%E7%BD%91%E7%BB%9C%E9%94%80%E5%94%AE%22%2C%22type%22%3A%22bar%22%2C%22data%22%3A%5B81.0%2C68.8%2C46.9%2C36.7%2C34.8%2C33.0%2C32.3%2C31.8%2C31.2%2C30.9%5D%7D%2C%7B%22name%22%3A%22%E5%85%B6%E4%B8%AD%E5%8D%96%E7%BB%99%E6%B6%88%E8%B4%B9%E8%80%85%EF%BC%88B2C%EF%BC%89%22%2C%22type%22%3A%22bar%22%2C%22data%22%3A%5B42.2%2C40.5%2C10.6%2C6.9%2C31.6%2C15.2%2C7.3%2C18.4%2C18.5%2C0.9%5D%7D%5D%7D&w=760&h=420" width="760" alt="eu2024_two_numerators"></a>
 
-**匈牙利那一行值得停一下。**
+### 匈牙利那一行值得停一下。
 
 匈牙利企业 30.85% 的营业额来自网络销售，其中只有 0.92% 是卖给消费者的。
 
@@ -55,6 +61,8 @@ https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E6%AC%A7%E
 所以「匈牙利电商占比 31%」这句话，跟「匈牙利人都在网上买东西」之间，隔着一整个批发业。
 
 顺带说一句：这个坑不是 Eurostat 特有的。你去查任何一个「电商渗透率」的说法，第一件事都是问清楚——算的是卖给消费者的，还是卖给公司的。
+
+## 同一个「电商」可能是两种生意
 
 **同样一批网络销售，成分可以差十倍。**
 
@@ -70,6 +78,8 @@ https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E5%90%8C%E
 
 这两个数摆在一起，谁也不会觉得自己跟对方在比同一件事——但报表上它们并排躺着，都写着「线上占比」。
 
+## 同一条指标跳法不一样
+
 **分母还有第二层：你可能根本不在里面。**
 
 把刚才那个分母的边界再看一遍：
@@ -82,7 +92,7 @@ https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E5%90%8C%E
 
 这一条最容易在开会时吃亏：你在会上说「我们线上占比 40%，比行业高不少」，但你不知道那个「行业 19.82%」的框里，连你这种体量的公司都没有。
 
-**还有一种更常见的错：拿两拨不同种类的数放一起比。**
+### 还有一种更常见的错：拿两拨不同种类的数放一起比。
 
 「我们线上占比 40%，行业 25%，我们领先。」
 
@@ -92,7 +102,7 @@ https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E5%90%8C%E
 
 这跟分母是不是同一个总体无关，跟它是不是同一个**种类**有关。
 
-**第三层：同一条线，跳的地方不一样。**
+### 第三层：同一条线，跳的地方不一样。
 
 ```text
 https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E5%90%8C%E4%B8%80%E6%9D%A1%E6%8C%87%E6%A0%87%EF%BC%8C%E4%B8%89%E4%B8%AA%E5%9B%BD%E5%AE%B6%EF%BC%8C%E4%B8%89%E7%A7%8D%E5%BD%A2%E7%8A%B6%22%7D%2C%22color%22%3A%5B%22%232563eb%22%2C%22%23dc2626%22%2C%22%2364748b%22%5D%2C%22grid%22%3A%7B%22left%22%3A70%2C%22right%22%3A30%2C%22top%22%3A60%2C%22bottom%22%3A50%7D%2C%22legend%22%3A%7B%22data%22%3A%5B%22%E5%BE%B7%E5%9B%BD%22%2C%22%E8%A5%BF%E7%8F%AD%E7%89%99%22%2C%22%E6%AC%A7%E7%9B%9F%E6%95%B4%E4%BD%93%22%5D%2C%22top%22%3A30%7D%2C%22xAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%222013%22%2C%222014%22%2C%222015%22%2C%222016%22%2C%222017%22%2C%222018%22%2C%222019%22%2C%222020%22%2C%222021%22%2C%222022%22%2C%222023%22%2C%222024%22%2C%222025%22%5D%2C%22axisLabel%22%3A%7B%22interval%22%3A1%7D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%22%E7%BD%91%E7%BB%9C%E9%94%80%E5%94%AE%E5%8D%A0%E4%BC%81%E4%B8%9A%E6%80%BB%E8%90%A5%E4%B8%9A%E9%A2%9D%EF%BC%88%25%EF%BC%89%22%2C%22axisLabel%22%3A%7B%22formatter%22%3A%22%7Bvalue%7D%25%22%7D%2C%22max%22%3A50%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22%E5%BE%B7%E5%9B%BD%22%2C%22type%22%3A%22line%22%2C%22smooth%22%3Atrue%2C%22connectNulls%22%3Atrue%2C%22data%22%3A%5B12.63%2C17.6%2C22.39%2C16.53%2C12.92%2C19.01%2C16.76%2C13.66%2C16.34%2C18.35%2C27.69%2C15.96%2C42.01%5D%7D%2C%7B%22name%22%3A%22%E8%A5%BF%E7%8F%AD%E7%89%99%22%2C%22type%22%3A%22line%22%2C%22smooth%22%3Atrue%2C%22connectNulls%22%3Atrue%2C%22data%22%3A%5B16.51%2C16.75%2C14.43%2C16.51%2C22.27%2C27.3%2C20.94%2C24.69%2C27.1%2C28.66%2C31.64%2C31.81%2C29.8%5D%7D%2C%7B%22name%22%3A%22%E6%AC%A7%E7%9B%9F%E6%95%B4%E4%BD%93%22%2C%22type%22%3A%22line%22%2C%22smooth%22%3Atrue%2C%22connectNulls%22%3Atrue%2C%22data%22%3A%5B14.44%2C17.08%2C19.15%2C18.16%2C19.61%2C24.86%2C21.39%2C20.15%2C21.16%2C18.57%2C21.99%2C19.82%2C28.5%5D%7D%5D%7D&w=760&h=420
@@ -112,11 +122,13 @@ https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E5%90%8C%E
 
 这种幅度的起落，装的往往不只是生意——企业填报的样本范围、问卷版本、覆盖了多少家企业，都在里面。要确认某一段到底是生意还是口径，去查这条序列的元数据标记，别猜。
 
-**还有一种分子上的差别，比 B2B/B2C 更日常：算不算没买的人。**
+### 还有一种分子上的差别，比 B2B/B2C 更日常：算不算没买的人。
 
 有些平台报的「广告带来的转化」，把加购、留资、页面浏览都算进去；另一些只认最后那笔成交。前者的分子大得多。
 
 同一个后台里，「转化数」和「转化价值」还可能来自两个不同的口径。看报表的时候，把这一层的定义翻出来，别只盯着数。
+
+## 三句话，让这个数站得住
 
 **报出去之前问三句。**
 
@@ -135,6 +147,8 @@ https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E5%90%8C%E
 我在框里吗？做批发零售、雇员超过 10 人的，在。做软件的，哪怕卖的是企业服务，不在。雇 8 个人的，不在。
 
 三句都答得上，这个 19.82% 才能拿去跟别人比。
+
+## 你报的是「某个框里的 23%」
 
 **结论。**
 

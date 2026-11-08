@@ -1,4 +1,4 @@
-# 回归算出来赚 41 倍，实验测出来倒亏六成
+# 没有广告，这些单会成交吗
 
 后台那个 ROAS 4.0，是平台算的。它算的是：沾过广告的订单，除以广告费。
 
@@ -7,6 +7,8 @@
 你要买的却是另一个数：**这 3 万停掉，那 12 万还剩多少？**
 
 这两个数不是一回事。第一个问题，后台给你答案。第二个问题的答案，才是你买广告时真正想买的东西。
+
+## 对照的那一半
 
 **增量，说白了就是：停掉广告之后，不再成交的那些单。**
 
@@ -17,6 +19,8 @@ https://x-cmd.com/draw/archmap?title=%E4%B8%80%E7%AC%94%E5%B9%BF%E5%91%8A%E8%B4%
 ```
 
 <a href="https://x-cmd.com/draw/explore/archmap?title=%E4%B8%80%E7%AC%94%E5%B9%BF%E5%91%8A%E8%B4%B9%EF%BC%8C%E4%B8%A4%E6%9C%AC%E8%B4%A6&n=imp%3Bfe%3B%E6%9B%9D%E5%85%89%3B%3Br0c0&n=clk%3Bfe%3B%E7%82%B9%E5%87%BB%3B%3Br0c1&n=cart%3Bfe%3B%E5%8A%A0%E8%B4%AD%3B%3Br0c2&n=buy%3Bfe%3B%E6%88%90%E4%BA%A4%3B%3Br0c3&n=plat%3Bbe%3B%E5%B9%B3%E5%8F%B0%E9%82%A3%E6%9C%AC%E8%B4%A6%3B%E6%B2%BE%E8%BF%87%E5%B9%BF%E5%91%8A%E7%9A%84%E8%AE%A2%E5%8D%95%E9%83%BD%E7%AE%97%E4%BD%A0%E7%9A%84%3Br1c0w2&n=ctrl%3Bfe%3B%E5%AF%B9%E7%85%A7%E7%BB%84%3B%E5%81%9C%E6%8A%95%E7%9A%84%E4%B8%80%E5%B0%8F%E7%89%87%3Br1c3&n=inc%3Bbe%3B%E5%A2%9E%E9%87%8F%E9%82%A3%E6%9C%AC%E8%B4%A6%3B%E5%81%9C%E6%8A%95%E4%B9%8B%E5%90%8E%E4%B8%8D%E5%86%8D%E6%88%90%E4%BA%A4%E7%9A%84%E5%8D%95%3Br2c1w2&e=imp%3Bclk%3Bmain&e=clk%3Bcart%3Bmain&e=cart%3Bbuy%3Bmain&e=buy%3Bplat%3B%E5%85%A8%E7%AE%97%E4%BD%A0%E7%9A%84%3Bmain&e=imp%3Bctrl%3B%E5%81%9C%E6%8A%95%E8%BF%99%E4%B8%80%E7%89%87%3Bdash&e=ctrl%3Binc%3B%E5%B0%91%E6%8E%89%E7%9A%84%E9%82%A3%E4%BA%9B%E5%8D%95%3Bmain&b=%E6%8A%95%E6%94%BE%E6%BC%8F%E6%96%97%3Bimp%20clk%20cart%20buy&b=%E4%B8%A4%E6%9C%AC%E8%B4%A6%3Bplat%20inc&w=760&h=420"><img src="https://x-cmd.com/draw/archmap?title=%E4%B8%80%E7%AC%94%E5%B9%BF%E5%91%8A%E8%B4%B9%EF%BC%8C%E4%B8%A4%E6%9C%AC%E8%B4%A6&n=imp%3Bfe%3B%E6%9B%9D%E5%85%89%3B%3Br0c0&n=clk%3Bfe%3B%E7%82%B9%E5%87%BB%3B%3Br0c1&n=cart%3Bfe%3B%E5%8A%A0%E8%B4%AD%3B%3Br0c2&n=buy%3Bfe%3B%E6%88%90%E4%BA%A4%3B%3Br0c3&n=plat%3Bbe%3B%E5%B9%B3%E5%8F%B0%E9%82%A3%E6%9C%AC%E8%B4%A6%3B%E6%B2%BE%E8%BF%87%E5%B9%BF%E5%91%8A%E7%9A%84%E8%AE%A2%E5%8D%95%E9%83%BD%E7%AE%97%E4%BD%A0%E7%9A%84%3Br1c0w2&n=ctrl%3Bfe%3B%E5%AF%B9%E7%85%A7%E7%BB%84%3B%E5%81%9C%E6%8A%95%E7%9A%84%E4%B8%80%E5%B0%8F%E7%89%87%3Br1c3&n=inc%3Bbe%3B%E5%A2%9E%E9%87%8F%E9%82%A3%E6%9C%AC%E8%B4%A6%3B%E5%81%9C%E6%8A%95%E4%B9%8B%E5%90%8E%E4%B8%8D%E5%86%8D%E6%88%90%E4%BA%A4%E7%9A%84%E5%8D%95%3Br2c1w2&e=imp%3Bclk%3Bmain&e=clk%3Bcart%3Bmain&e=cart%3Bbuy%3Bmain&e=buy%3Bplat%3B%E5%85%A8%E7%AE%97%E4%BD%A0%E7%9A%84%3Bmain&e=imp%3Bctrl%3B%E5%81%9C%E6%8A%95%E8%BF%99%E4%B8%80%E7%89%87%3Bdash&e=ctrl%3Binc%3B%E5%B0%91%E6%8E%89%E7%9A%84%E9%82%A3%E4%BA%9B%E5%8D%95%3Bmain&b=%E6%8A%95%E6%94%BE%E6%BC%8F%E6%96%97%3Bimp%20clk%20cart%20buy&b=%E4%B8%A4%E6%9C%AC%E8%B4%A6%3Bplat%20inc&w=760&h=420" width="760" alt="ledger_archmap"></a>
+
+## 两本账差在哪
 
 **两本账长这个样子。**
 
@@ -43,6 +47,8 @@ https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22eBay%20%E9%
 ```
 
 <a href="https://x-cmd.com/draw/explore/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22eBay%20%E9%9D%9E%E5%93%81%E7%89%8C%E8%AF%8D%E6%90%9C%E7%B4%A2%E5%B9%BF%E5%91%8A%EF%BC%9A%E4%B8%89%E7%A7%8D%E7%AE%97%E6%B3%95%EF%BC%8C%E4%B8%89%E4%B8%AA%E6%95%B0%22%7D%2C%22color%22%3A%5B%22%232563eb%22%2C%22%23dc2626%22%2C%22%2364748b%22%5D%2C%22grid%22%3A%7B%22left%22%3A90%2C%22right%22%3A30%2C%22top%22%3A60%2C%22bottom%22%3A40%7D%2C%22xAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%22%E5%9B%9E%E5%BD%92%5Cn%EF%BC%88%E6%97%A0%E6%8E%A7%E5%88%B6%E5%8F%98%E9%87%8F%EF%BC%89%22%2C%22%E5%9B%9E%E5%BD%92%5Cn%EF%BC%88%E6%97%B6%E9%97%B4%2B%E5%9C%B0%E5%9F%9F%E6%8E%A7%E5%88%B6%EF%BC%89%22%2C%22%E9%9A%8F%E6%9C%BA%E5%AE%9E%E9%AA%8C%5Cn%EF%BC%88%E6%9C%89%E5%AF%B9%E7%85%A7%E7%BB%84%EF%BC%89%22%5D%2C%22axisLabel%22%3A%7B%22interval%22%3A0%2C%22fontSize%22%3A11%7D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%22ROI%EF%BC%88%E6%AF%8F%201%20%E7%BE%8E%E5%85%83%E5%B9%BF%E5%91%8A%E8%B4%B9%E5%B8%A6%E6%9D%A5%E7%9A%84%E5%A2%9E%E9%87%8F%E9%94%80%E5%94%AE%EF%BC%89%22%2C%22axisLabel%22%3A%7B%22formatter%22%3A%22%7Bvalue%7D%25%22%7D%2C%22max%22%3A4500%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%2C%22axisPointer%22%3A%7B%22type%22%3A%22shadow%22%7D%7D%2C%22series%22%3A%5B%7B%22type%22%3A%22bar%22%2C%22data%22%3A%5B4100%2C1400%2C-63%5D%2C%22label%22%3A%7B%22show%22%3Atrue%2C%22position%22%3A%22top%22%2C%22formatter%22%3A%22%7Bc%7D%25%22%7D%7D%5D%7D&w=760&h=420"><img src="https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22eBay%20%E9%9D%9E%E5%93%81%E7%89%8C%E8%AF%8D%E6%90%9C%E7%B4%A2%E5%B9%BF%E5%91%8A%EF%BC%9A%E4%B8%89%E7%A7%8D%E7%AE%97%E6%B3%95%EF%BC%8C%E4%B8%89%E4%B8%AA%E6%95%B0%22%7D%2C%22color%22%3A%5B%22%232563eb%22%2C%22%23dc2626%22%2C%22%2364748b%22%5D%2C%22grid%22%3A%7B%22left%22%3A90%2C%22right%22%3A30%2C%22top%22%3A60%2C%22bottom%22%3A40%7D%2C%22xAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%22%E5%9B%9E%E5%BD%92%5Cn%EF%BC%88%E6%97%A0%E6%8E%A7%E5%88%B6%E5%8F%98%E9%87%8F%EF%BC%89%22%2C%22%E5%9B%9E%E5%BD%92%5Cn%EF%BC%88%E6%97%B6%E9%97%B4%2B%E5%9C%B0%E5%9F%9F%E6%8E%A7%E5%88%B6%EF%BC%89%22%2C%22%E9%9A%8F%E6%9C%BA%E5%AE%9E%E9%AA%8C%5Cn%EF%BC%88%E6%9C%89%E5%AF%B9%E7%85%A7%E7%BB%84%EF%BC%89%22%5D%2C%22axisLabel%22%3A%7B%22interval%22%3A0%2C%22fontSize%22%3A11%7D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%22ROI%EF%BC%88%E6%AF%8F%201%20%E7%BE%8E%E5%85%83%E5%B9%BF%E5%91%8A%E8%B4%B9%E5%B8%A6%E6%9D%A5%E7%9A%84%E5%A2%9E%E9%87%8F%E9%94%80%E5%94%AE%EF%BC%89%22%2C%22axisLabel%22%3A%7B%22formatter%22%3A%22%7Bvalue%7D%25%22%7D%2C%22max%22%3A4500%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%2C%22axisPointer%22%3A%7B%22type%22%3A%22shadow%22%7D%7D%2C%22series%22%3A%5B%7B%22type%22%3A%22bar%22%2C%22data%22%3A%5B4100%2C1400%2C-63%5D%2C%22label%22%3A%7B%22show%22%3Atrue%2C%22position%22%3A%22top%22%2C%22formatter%22%3A%22%7Bc%7D%25%22%7D%7D%5D%7D&w=760&h=420" width="760" alt="ebay_roi_three_ways"></a>
+
+## 这差距能有多大
 
 **Facebook 也给自己做过同样的体检。**
 
@@ -82,13 +88,15 @@ https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E5%90%8C%E
 
 真实效果是 0.012，这里算出来是 0.042。三倍多就是这么来的：**没被曝光的那部分人和对照组之间的差别，被你当成广告的效果收了进去。**
 
+## 316% 是怎么算出来的
+
 **问题出在曝光上。曝光不是随机的。**
 
 看到广告的人，本来就更可能买。他们更可能用手机，更可能已婚，更可能是女性。在广告主的后台里，这些差异你看不见——你不知道谁看到了广告。
 
 回归能纠正一部分。纠正不了的那部分，留在数里了。
 
-**那这笔账差在哪？**
+### 那这笔账差在哪？
 
 eBay 那个 −63%，不是说搜索广告没用。
 
@@ -104,7 +112,7 @@ eBay 那个 −63%，不是说搜索广告没用。
 
 不测，你只能靠猜。猜错代价不是少赚一点——是**把下一笔钱投到本来就会成交的订单上，还以为自己在拉新**。
 
-**这不只是广告的事。**
+### 这不只是广告的事。
 
 任何时候你拿两拨人比，都会撞上同一件事：这两拨人本来就不一样。
 
@@ -116,17 +124,19 @@ eBay 那个 −63%，不是说搜索广告没用。
 
 线下比门店，你知道谁在哪座城。价格 A/B 测试，你知道谁分到了哪组。只有广告：你手里有订单，没有「谁看到了」。
 
-**平台为什么把这么要紧的事放在另一个菜单里？**
+### 平台为什么把这么要紧的事放在另一个菜单里？
 
 Google 有 geo-lift，Meta 有 Conversion Lift，都不假。但它们都不在你每天看的那张表里。要另外设计、另外设对照、另外等一段时间、另外接受一个可能很难看的结论。
 
 这不是平台藏你。数据在平台手里，恰恰是因为平台知道谁看到了广告——而这正是你做不了实验的原因。
 
-**先说清楚：平台没骗你。**
+### 先说清楚：平台没骗你。
 
 它报的那个数回答的是「哪些订单沾过广告」。这个问题它答得又准又快，因为数据就在它手里。
 
 而「广告创造了多少」是另一个问题，要另一套办法。
+
+## 没有对照组就拿不到增量
 
 **三件不费钱的事。**
 
@@ -135,6 +145,8 @@ Google 有 geo-lift，Meta 有 Conversion Lift，都不假。但它们都不在�
 第二，**别把两套账混着看**。平台报表里的那个 ROI，和你自己测出来的那个 ROI，不是一个数。详见 [→ 平台口径和增量口径，是两套账](../../4-analytics/03-platform-metrics-vs-incremental-metrics/cn.md)。
 
 第三，**记住每种口径的偏向方向**。观测法——平台报表、最后点击归因——是**高估**。不是「稍微夸大」，是系统性地往大了算。品牌词那一块，它能把负的算成正的。
+
+## 别把收割当成创造
 
 **结论。**
 
