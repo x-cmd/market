@@ -1,0 +1,55 @@
+id: x-market-2-market-research-13-running-shoes-competitors
+
+data:
+  - name:
+      en: running shoe competitors
+      cn: 跑鞋竞品调研
+    qa:
+      - id: why-no-official-number
+        question:
+          en: Is there an official market size for running shoes?
+          cn: 跑鞋品类有官方市场规模吗？
+        answer:
+          en: >
+            No. Industry statistics break out footwear, apparel and sporting goods, but nothing labelled running shoes. So the research starts one layer down, from what each brand reports in its own audited accounts. That gives every number a traceable source, at the cost that each company counts on its own fiscal calendar.
+          cn: >
+            没有。行业统计给的是鞋类、服装鞋类、运动用品，没有一档叫「跑鞋」。所以这次调研从下一层起步——品牌自己审计过的财报。每个数都能追回原文，代价是各家按自己的财年算。
+        confidence: 9
+        reference:
+          - docs/2-market-research/13-running-shoes-competitors/cn.md
+      - id: fiscal-year-trap
+        question:
+          en: Why can two brands not be compared directly?
+          cn: 为什么两家不能直接比？
+        answer:
+          en: >
+            Because their fiscal years end on different dates. Nike closes in May, Deckers in March, Skechers in December, Wolverine in early January on a 52 or 53 week year. Skechers at 8.97 billion is fiscal 2024; Deckers at 5.47 billion is fiscal 2026 — a year and a half apart. Read across, you would conclude Skechers is the larger of the two, which is the wrong answer.
+          cn: >
+            因为财年结束日不一样。Nike 五月底、Deckers 三月底、Skechers 十二月底、Wolverine 一月初（52/53 周财年）。Skechers 的 89.7 亿是 2024 财年，Deckers 的 54.7 亿是 2026 财年，中间隔了一年半。横着一读，就会得出「Skechers 比 Deckers 大」的错误结论。
+        confidence: 10
+        reference:
+          - docs/2-market-research/13-running-shoes-competitors/cn.md
+      - id: blank-cells
+        question:
+          en: Which brands could not be found, and why?
+          cn: 哪几家没查到，为什么？
+        answer:
+          en: >
+            Adidas, ASICS, New Balance and On Holding. The first three are not in the SEC XBRL database at all, and On files under IFRS tags with no us-gaap equivalent. Their cells are left empty rather than filled with an estimate — an estimate in a competitor table quietly becomes a fact the next time somebody quotes it.
+          cn: >
+            Adidas、ASICS、New Balance、On Holding。前三家根本不在 SEC 的 XBRL 库里，On 报的是 IFRS 标签，us-gaap 下没有对应项。这些格子留空，不填推算值——竞品表里一个推算值，下次被人引用的时候，它就悄悄变成事实了。
+        confidence: 9
+        reference:
+          - docs/2-market-research/13-running-shoes-competitors/cn.md
+      - id: cpi-substitute
+        question:
+          en: Why use footwear CPI instead of brand prices?
+          cn: 为什么用鞋类 CPI 代替品牌零售价？
+        answer:
+          en: >
+            Brand price lists run by model and change constantly, so tracking them means maintaining your own series. Footwear CPI is official, continuous and reproducible with one command. It covers all footwear rather than running shoes specifically, which is the trade: less precise in scope, far more usable over time.
+          cn: >
+            品牌价目表按型号走、天天变，要跟就得自己维护一套序列。鞋类 CPI 是官方的、连续的、一条命令就能复现。它覆盖的是全部鞋类，不是只跑鞋——这是取舍：范围粗一点，但时间上能用得多。
+        confidence: 9
+        reference:
+          - docs/2-market-research/13-running-shoes-competitors/cn.md

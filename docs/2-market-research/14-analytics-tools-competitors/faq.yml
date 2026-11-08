@@ -1,0 +1,55 @@
+id: x-market-2-market-research-14-analytics-tools-competitors
+
+data:
+  - name:
+      en: website analytics competitors
+      cn: 网站分析竞品调研
+    qa:
+      - id: stars-or-forks
+        question:
+          en: Why look at forks when stars are easier to find?
+          cn: 为什么看 fork，不看更好找的 star？
+        answer:
+          en: >
+            For self-hosted software the two answer different questions. A star is a bookmark, meaning somebody might use it later. A fork is somebody copying it to change it now. Since you will end up modifying whatever you pick — adding your own events, changing a dashboard — the number of people who have already done that work tells you how much of the work is already done.
+          cn: >
+            对自托管的软件，这两个数回答的不是同一个问题。star 是收藏，说明「以后可能用」；fork 是复制下来在改，说明「我现在就在改」。你迟早要改选中的那个——接自己的事件、改看板——那么已经在改的人有多少，就等于有多少活已经被人干完了。
+        confidence: 9
+        reference:
+          - docs/2-market-research/14-analytics-tools-competitors/cn.md
+      - id: pricing-not-comparable
+        question:
+          en: Can the prices be compared across these tools?
+          cn: 这几家的价格能直接比吗？
+        answer:
+          en: >
+            Not even when the numbers match. Umami prices by events, Fathom by pageviews, Countly by seats. Two 20 dollar plans are not the same thing. Before comparing, align what is being counted — and note that four of the nine pricing pages could not be read by a script at all, which is itself a cost of running the tool yourself.
+          cn: >
+            就算数字一样也不能直接比。umami 按 events 计费，Fathom 按 pageviews，Countly 按席位。两个「20 美元」不是一个东西。要比，先对齐「数的是什么」——另外九家里有四家的定价页脚本根本读不到，这本身就是自托管的一个隐性成本。
+        confidence: 9
+        reference:
+          - docs/2-market-research/14-analytics-tools-competitors/cn.md
+      - id: which-licence
+        question:
+          en: What does the licence column change?
+          cn: 许可那一列改变什么？
+        answer:
+          en: >
+            Whether your legal team will let you use it. umami is MIT with the most stars of any MIT project in the set. Plausible is AGPL-3.0 and Matomo is GPL-3.0. For a company that has to hand the code to a hosting provider or keep it in-house, that column can decide the shortlist on its own.
+          cn: >
+            决定你们法务会不会放行。umami 是 MIT，而且是这组里 star 最多的 MIT 项目。Plausible 是 AGPL-3.0，Matomo 是 GPL-3.0。对一家要把代码交给托管方、或者干脆自己养着的公司来说，这一列就能单独定下候选名单。
+        confidence: 8
+        reference:
+          - docs/2-market-research/14-analytics-tools-competitors/cn.md
+      - id: when-to-trust-stars
+        question:
+          en: When is a GitHub star a good enough signal on its own?
+          cn: 什么时候只看 star 就够了？
+        answer:
+          en: >
+            When you are not going to change it. If a tool will run as is and someone else maintains it, stars and recent commits tell you whether it is alive and popular. If you will modify it, add your own events or wire it into your own stack, forks are the number that matters.
+          cn: >
+            当你不会改它的时候。如果一个工具装上就用、别人维护，star 和最近提交足够告诉你它活不活跃、受欢迎不受欢迎。如果你要改——加自己的事件、接进自己的栈——那该看的是 fork。
+        confidence: 9
+        reference:
+          - docs/2-market-research/14-analytics-tools-competitors/cn.md

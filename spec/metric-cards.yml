@@ -172,3 +172,116 @@ metric_cards:
       alt: eu_turnover_index
     used_in:
       - 2-market-research/01-industry-entry-scale-growth-concentration
+
+  # ── 网站分析竞品（跑鞋那组之外的一组） ────────────────────────
+  - id: gh_stars_umami
+    label: GitHub star 数
+    unit: "个"
+    value: 39983
+    as_of: 2026-11-08
+    geography: umami-software/umami
+    denominator: null
+    numerator: null
+    source:
+      type: api
+      provider: GitHub
+      dataset: repos
+      series: umami-software/umami
+      command: curl -s https://api.github.com/repos/umami-software/umami
+      published: 2026-11-08
+    caveats:
+      - 每天在变，是快照不是固定值
+      - star 是收藏数，不等于在用的人数
+      - 抓取需要 User-Agent，否则 GitHub 会拒
+    chart:
+      page: 2-market-research/14-analytics-tools-competitors
+      template: echarts
+      alt: gh_stars
+    used_in:
+      - 2-market-research/14-analytics-tools-competitors
+
+  - id: gh_forks_umami
+    label: GitHub fork 数
+    unit: "个"
+    value: 8501
+    as_of: 2026-11-08
+    geography: umami-software/umami
+    denominator: null
+    numerator: null
+    source:
+      type: api
+      provider: GitHub
+      dataset: repos
+      series: umami-software/umami
+      command: curl -s https://api.github.com/repos/umami-software/umami
+      published: 2026-11-08
+    caveats:
+      - fork 是 clone 出来的仓库数，含自己 fork 完就放着的
+      - 对自托管选型比 star 更说明问题：改的人多，踩坑少
+    chart:
+      page: 2-market-research/14-analytics-tools-competitors
+      template: echarts
+      alt: gh_forks
+    used_in:
+      - 2-market-research/14-analytics-tools-competitors
+
+  - id: shoe_brand_revenue
+    label: 鞋类品牌年营收（SEC XBRL 口径）
+    unit: "十亿美元"
+    value:
+      NIKE: 46.40
+      Skechers: 8.97
+      Deckers: 5.47
+      Wolverine: 1.87
+    as_of: 2026-11-08
+    geography: 美国上市公司
+    denominator: null
+    numerator: 企业全部营收（不是鞋类分部）
+    source:
+      type: dataset
+      provider: SEC EDGAR
+      dataset: companyconcept
+      series: us-gaap/RevenueFromContractWithCustomerExcludingAssessedTax
+      command: 'curl -s -H "User-Agent: <you> <mail>" https://data.sec.gov/api/xbrl/companyconcept/CIK0000320187/us-gaap/RevenueFromContractWithCustomerExcludingAssessedTax.json'
+      published: 2026-11-08
+    caveats:
+      - 各家财年结束日不同（NIKE 5 月底、Deckers 3 月底、Skechers 12 月底、Wolverine 1 月初）
+      - 横向比之前必须先对齐财年，否则会得出相反的结论
+      - 这是公司总营收，不是跑鞋分部营收
+      - Adidas、ASICS、New Balance、On 不在 us-gaap 库里，留空
+    chart:
+      page: 2-market-research/13-running-shoes-competitors
+      template: echarts
+      alt: shoe_rev
+    used_in:
+      - 2-market-research/13-running-shoes-competitors
+
+  - id: us_footwear_cpi
+    label: 美国鞋类 CPI（季调，1982-84=100）
+    unit: "指数"
+    value:
+      "2015": 130.2
+      "2020": 133.2
+      "2022": 144.5
+      "2025": 145.5
+    as_of: 2026-11-08
+    geography: 美国
+    denominator: 1982-84 = 100
+    numerator: 鞋类消费价格指数
+    source:
+      type: dataset
+      provider: BLS（经 DBnomics）
+      dataset: cu
+      series: CUSR0000SEAE
+      command: x dbnomics data BLS/cu/CUSR0000SEAE
+      published: 2026-11-08
+    caveats:
+      - 覆盖全部鞋类，不是只跑鞋
+      - 季调数，做同比要用原始序列
+      - 这里用的是年均值，月度序列在命令输出里
+    chart:
+      page: 2-market-research/13-running-shoes-competitors
+      template: echarts
+      alt: shoe_cpi
+    used_in:
+      - 2-market-research/13-running-shoes-competitors

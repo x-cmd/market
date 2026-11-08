@@ -1,0 +1,55 @@
+id: x-market-1-report-overview-01-report-runbook
+
+data:
+  - name:
+      en: running a report
+      cn: 跑一份报告
+    qa:
+      - id: who-does-what
+        question:
+          en: What does the human do and what does the agent do?
+          cn: 人做什么，agent 做什么？
+        answer:
+          en: >
+            The human decides four things: what question to answer, what the scope is, which definition applies to each number, and whether the conclusion is safe to take outside. The agent does everything with a defined input and output — fetching, computing, drawing, drafting, cross-linking. The reason the split sits there is that a wrong definition produces a beautifully wrong number, and only a person can catch that.
+          cn: >
+            人做四件事：定问题、框范围、给每个数定口径、决定结论能不能拿出去讲。其余有明确输入输出的活交给 agent——取数、算数、画图、起草、挂引用。分界线画在这儿，是因为口径错了会算出一个漂亮的错数，而只有人拦得住。
+        confidence: 10
+        reference:
+          - docs/1-report-overview/01-report-runbook/cn.md
+      - id: what-is-a-metric-card
+        question:
+          en: What is a metric card?
+          cn: 口径卡是什么？
+        answer:
+          en: >
+            One card per metric, holding the value, the unit, the date it refers to, the denominator, where it came from, the command that fetches it, and the caveats. It lives in spec/metric-cards.yml so an agent can read it without reading Chinese prose. The command on the card is the point: if the command does not reproduce the number on the card, the card is wrong.
+          cn: >
+            一个指标一张卡，写着值、单位、对应哪一年、分母、来源、取数命令、注意事项。放在 spec/metric-cards.yml 里，agent 不用读散文就能吃。卡上那条命令是关键：命令跑不出卡上写的数，卡就是错的。
+        confidence: 10
+        reference:
+          - docs/1-report-overview/01-report-runbook/cn.md
+      - id: what-to-hand-an-agent
+        question:
+          en: What do you give an agent so it does the right thing?
+          cn: 交给 agent 什么，它才做得对？
+        answer:
+          en: >
+            Three things: what this step is for, in one sentence; which metric card to use, so it does not go find numbers on its own; and how to check the result. The third one is the one people skip, and it is the one that matters — without an acceptance test you get a deliverable that looks right rather than one that is right.
+          cn: >
+            三样：这一步要干什么，一句话说清；照哪张口径卡，别让它自己找数；做完怎么验。第三样最常被跳过，也最要紧——没有验收标准，你拿到的是一份长得像的交付物，不是一份对的交付物。
+        confidence: 10
+        reference:
+          - docs/1-report-overview/01-report-runbook/cn.md
+      - id: what-to-ship
+        question:
+          en: What has to ship with a report?
+          cn: 一份报告要连着什么一起交？
+        answer:
+          en: >
+            Three things: the report, a data appendix listing every number with its source, command and date, and the scripts that reproduce them. Ship only the report and nobody can check it. The test is simple — hand the scripts to someone who was not involved; if they get the same numbers, it holds.
+          cn: >
+            三样：报告本身、数据附录（每个数的来源、命令、截至日期）、能跑出这些数的复现脚本。只交报告，谁都核不了。检验很简单：把脚本交给一个没参与过的人，他跑出同一批数，这事就立住了。
+        confidence: 9
+        reference:
+          - docs/1-report-overview/01-report-runbook/cn.md

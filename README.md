@@ -32,7 +32,7 @@ The site is a sequence of stages, not a pile of topics. Each stage answers the q
 
 ## Running a report
 
-[docs/1-report-overview/01-report-runbook.md](docs/1-report-overview/01-report-runbook.md) is the runbook: eight steps from brief to delivery, each with who does it, what comes out, and how to check it. It also holds the ten-item QA checklist and the prompt shape to hand a step to an AI agent.
+[docs/1-report-overview/01-report-runbook](docs/1-report-overview/01-report-runbook/cn.md) is the runbook: eight steps from brief to delivery, each with who does it, what comes out, and how to check it. It also holds the ten-item QA checklist and the prompt shape to hand a step to an AI agent.
 
 The division of labour is short: **a human decides the question, the scope, the definition and signs off; an agent fetches, computes, draws, drafts and cross-links.**
 
@@ -89,8 +89,8 @@ Changing one field changes the whole report. That is the difference between this
 
 ### 入口 · 概览
 
-- 一份市场报告怎么跑出来 — 知道一份报告怎么从零跑出来，每步谁做、做完怎么验  
-  <sub>`docs/1-report-overview/01-report-runbook/` · 待写</sub>
+- **[一份市场报告怎么跑出来](docs/1-report-overview/01-report-runbook/cn.md)** — 知道一份报告怎么从零跑出来，每步谁做、做完怎么验  
+  <sub>`docs/1-report-overview/01-report-runbook/`</sub>
 - 你说的 23%，跟别人说的 23%，是一回事吗 — 做出一张别人不会误读的市场份额图  
   <sub>`docs/1-report-overview/02-market-share-chart/` · 待写</sub>
 - 这门生意还值不值得进 — 判断这门生意还值不值得进  
@@ -130,6 +130,10 @@ Changing one field changes the whole report. That is the difference between this
   <sub>`docs/2-market-research/11-coverage-gaps/` · 待写</sub>
 - 季调数和不季调数，别混着用 — 知道两个口径为什么对不上，一张图上该用哪个  
   <sub>`docs/2-market-research/12-seasonal-vs-nsa/` · 待写</sub>
+- **[跑鞋这行，Nike 的营收三年没长，Hoka 的母公司五年翻了一倍](docs/2-market-research/13-running-shoes-competitors/cn.md)** — 看清跑鞋品类里几家品牌的真实位置，以及比之前必须对齐的那一格  
+  <sub>`docs/2-market-research/13-running-shoes-competitors/`</sub>
+- **[网站分析开源项目里，umami 的 fork 数排第一，star 排第二](docs/2-market-research/14-analytics-tools-competitors/cn.md)** — 选自托管网站分析时，知道该看哪个数，以及哪些格子抓不到  
+  <sub>`docs/2-market-research/14-analytics-tools-competitors/`</sub>
 
 ### 怎么扰动 · 实验设计
 
