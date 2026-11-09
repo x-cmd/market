@@ -1,6 +1,7 @@
 import os,re,glob,yaml,json,subprocess,sys,urllib.request,urllib.parse
 
 NET = '--net' in sys.argv
+REPRO = '--repro' in sys.argv
 ROOT='/Users/l/.x-repo/github.com/x-cmd/market'
 os.chdir(ROOT)
 BAN=['底层驱动','底层逻辑','值得注意的是','综上','总体来看','机制','框架','维度','抓手','从而','进行','方面',
@@ -83,38 +84,40 @@ for f in sorted(glob.glob('docs/**/*.md',recursive=True)):
             ok = code=='200' and ('<metadata>' in svg or '<svg' in svg)
             print(f'    HTTP {code} svg={len(svg)}B {"OK" if ok else "BAD"}'); fail+= not ok
     # 复现命令：只有写成反引号包着的命令行才真跑
-    m=re.search(r'\*\*复现\*\*：(.+)',t)
-    if m:
-        raw=m.group(1).strip()
-        cm=re.search(r'`([^`]+)`',raw)
-        if not cm:
-            print(f'  复现说明 {raw[:60]} → ✓ (非命令行)')
-        else:
-            cmd=cm.group(1).strip()
-            c=subprocess.run(['zsh','-c',cmd+' 2>&1 | head -3'],capture_output=True,text=True)
-            ok='E|' not in c.stdout and 'error' not in c.stdout.lower()
-            print(f'  复现命令 {cmd[:70]} → {"✓" if ok else "△"}')
-            for ln in c.stdout.strip().splitlines()[:2]: print('    ', ln[:160])
-for f in sorted(glob.glob('docs/*/*/faq.yml')):
-    d=yaml.safe_load(open(f))
-    print(f'\n=== {f} ===')
-    print('  id:', d['id'], '✓' if d['id']=="x-market-"+"-".join(f.split('/')[1:3]) else '✗')
-    total=0
-    for s in d['data']:
-        for qa in s['qa']:
-            total+=1
-            assert set(qa['question'])=={'en','cn'}, qa['id']
-            assert set(qa['answer'])=={'en','cn'}, qa['id']
-            assert 0<=qa['confidence']<=10
-            for r in qa['reference']: assert os.path.exists(r), r
-    print(f"  {total} 条 QA（{len(d['data'])} 组）· en/cn 齐全 ✓ · reference 路径存在 ✓")
+    if REPRO:
+        m=re.search(r'\*\*复现\*\*：(.+)',t)
+        if m:
+            raw=m.group(1).strip()
+            cm=re.search(r'`([^`]+)`',raw)
+            if not cm:
+                print(f'  复现说明 {raw[:60]} → ✓ (非命令行)')
+            else:
+                cmd=cm.group(1).strip()
+                c=subprocess.run(['zsh','-c',cmd+' 2>&1 | head -3'],capture_output=True,text=True)
+                ok='E|' not in c.stdout and 'error' not in c.stdout.lower()
+                print(f'  复现命令 {cmd[:70]} → {"✓" if ok else "△"}')
+                for ln in c.stdout.strip().splitlines()[:2]: print('    ', ln[:160])
+    for f in sorted(glob.glob('docs/*/*/faq.yml')):
+        d=yaml.safe_load(open(f))
+        print(f'\n=== {f} ===')
+        print('  id:', d['id'], '✓' if d['id']=="x-market-"+"-".join(f.split('/')[1:3]) else '✗')
+        total=0
+        for s in d['data']:
+            for qa in s['qa']:
+                total+=1
+                assert set(qa['question'])=={'en','cn'}, qa['id']
+                assert set(qa['answer'])=={'en','cn'}, qa['id']
+                assert 0<=qa['confidence']<=10
+                for r in qa['reference']: assert os.path.exists(r), r
+        print(f"  {total} 条 QA（{len(d['data'])} 组）· en/cn 齐全 ✓ · reference 路径存在 ✓")
 
-# ── spec 页与口径卡：互相引用的都得在 ─────────────────────────────
+    # ── spec 页与口径卡：互相引用的都得在 ─────────────────────────────
 print('\n=== spec 页 / 口径卡 交叉引用 ===')
 CARDS={c['id'] for c in yaml.safe_load(open('spec/metric-cards.yml'))['metric_cards']}
 OUTL={f"{s['id']}/{a['id']}":a for s in OUT['series'] for a in s['articles']}
 specfail=0
 for f in sorted(glob.glob('spec/pages/*/*.yml')):
+    if f.endswith('.en.yml'): continue
     rel=os.path.relpath(f,'spec/pages')[:-4]
     d=yaml.safe_load(open(f))
     for cond,msg in [(d['id']!=os.path.basename(rel),'id 与路径不符'),
@@ -141,6 +144,13 @@ for c in yaml.safe_load(open('spec/metric-cards.yml'))['metric_cards']:
     for u in (c.get('used_in') or [])+[ (c.get('chart') or {}).get('page') ]:
         if u and not os.path.exists(os.path.join('spec/pages',u+'.yml')):
             print(f'  ✗ 口径卡 {c["id"]}: 引用的页没有 spec 文件 {u}'); specfail+=1
+for f in sorted(glob.glob('spec/pages/*/*.en.yml')):
+    rel=os.path.relpath(f,'spec/pages')[:-7]
+    d=yaml.safe_load(open(f))
+    if d.get('id')!=os.path.basename(rel):
+        print(f'  ✗ {rel}.en: id 与路径不符'); specfail+=1
+    if rel not in OUTL:
+        print(f'  ✗ {rel}.en: 不在 OUTLINE.yml 里'); specfail+=1
 print(f'  {len(glob.glob("spec/pages/*/*.yml"))} 个 spec 页 · {len(CARDS)} 张口径卡 · 交叉引用 {"✓" if not specfail else "✗"}')
 fail+=specfail
 
@@ -187,6 +197,7 @@ for s in OUT['series']:
     for a in s['articles']:
         check_xref(f"{s['id']}/{a['id']}", a.get('sections'))
 for f in sorted(glob.glob('spec/pages/*/*.yml')):
+    if f.endswith('.en.yml'): continue
     rel=os.path.relpath(f,'spec/pages')[:-4]
     check_xref(f'spec {rel}', (yaml.safe_load(open(f)) or {}).get('sections'))
 print(f'  站内互引 {"✓" if not xrefbad else "✗"}')

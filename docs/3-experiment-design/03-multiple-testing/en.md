@@ -1,4 +1,4 @@
-# Twenty combinations, three "winners", and at least one fake
+# Twenty combinations, three "significant" hits, and at least one fake
 
 **A team tested twenty combinations in one round. Three came back significant. At least one of those three is fake.**
 
@@ -50,7 +50,7 @@ https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E8%B7%91%2
 
 That is the likely case, not the rare one. Twenty draws at a 5% win rate and you will almost certainly get one winning message, and it says nothing about whether that combination works.
 
-The other side of the coin: **among twenty combinations, the biggest significant effect has already been selected.** You are not looking at twenty independent p-values, you are looking at the smallest of twenty, and the smallest of twenty is biased low. **Picking creates the effect, not necessarily the change.**
+The other side of the coin: **among twenty combinations, the biggest significant effect has already been selected.** You are not looking at twenty independent p-values, you are looking at the smallest of twenty, and the smallest of twenty is biased low. **Picking creates the effect, not necessarily the change itself.**
 
 ## More groups means more false positives
 

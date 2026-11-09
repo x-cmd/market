@@ -1,15 +1,13 @@
 id: 02-sample-size-and-power
-title: "A small sample can invert the answer, not only blur it"
+title: "A small sample can flip the answer, not just blur it"
 sections:
   - title: One dataset, three answers
     content: "The same Facebook campaign yields 73%, 222% or 316% depending on how the groups are formed, and the randomised figure is the only one that isolates what the ad did"
   - title: How big a difference needs how many people
-    content: "Sample size sets the standard error and the standard error sets the interval width, and the interval shrinks at square-root scale, so a 1-point effect needs nearly 4,000 people"
+    content: "Sample size sets the standard error and the standard error sets the interval width, the interval shrinks at square-root scale, and a 1-point effect needs nearly 4,000 people"
   - title: How the direction flips
     content: "With 200 users per arm and a true +2 point effect, the measurement wanders across ±9.1 points, so 38% of the time the number comes out zero or negative"
   - title: Size the run before it starts, not after
-    content: "After the data is in you hold one number and cannot see the truth, so sizing beforehand fixes the smallest effect worth acting on and the traffic it costs"
+    content: "After the data is in you hold one number and cannot see the truth, so sizing beforehand fixes the smallest effect worth acting on, the traffic it costs, and how you will read the result"
   - title: A three-day test that came back negative
     content: "A redesign measured at -32.8% on three days of traffic crossed a weekend promotion, and the real error was the three-day deadline rather than the sample size"
-  - title: Write three lines down before you launch
-    content: "The smallest difference that matters, the people per arm and the days, and how you will read the result, and the answer can legitimately be that the test is not worth running"

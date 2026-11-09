@@ -1,13 +1,13 @@
 id: 14-analytics-tools-competitors
-title: "Umami leads on forks among open-source web analytics tools, and sits second on stars"
+title: "Forks, Not Stars, Tell You Which Web Analytics Tools People Actually Change"
 sections:
-  - title: Nine projects, one table
+  - title: What the nine tools look like side by side
     content: "Stars, forks, license, creation date, last push and pricing for umami, PostHog, Matomo, Plausible, Fathom, GoatCounter, Countly, Ackee and Pirsch, with umami second on stars less than seven hundred behind PostHog"
-  - title: Forks measure something different
-    content: "umami's 8,501 forks are 2.4 times PostHog's second place and over one hundred sixty times Pirsch's last place, so many people run it and many people change it"
-  - title: The license column decides for some teams
+  - title: The fork count separates umami from everything else
+    content: "umami's 8,501 forks are 2.4 times PostHog's second place and over one hundred sixty times Pirsch's last place, so many people run it and many people have already changed it"
+  - title: The license column can end the search on its own
     content: "umami is MIT and carries the highest star count of any MIT-licensed project in the list, which settles the shortlist when legal is uncomfortable with AGPL"
-  - title: Five of nine pricing pages came back
+  - title: Five of nine pricing pages came back; four did not
     content: "Four rows stay blank rather than filled with estimates, and billing units differ across vendors, so a dollar twenty for events is not a dollar twenty for pageviews"
-  - title: What the numbers say about choosing
+  - title: Which number to look at, and what to write down when a cell is empty
     content: "Stars measure attention while forks measure how many people actually change the code, and four unretrieved pricing pages should be recorded as a retrieval failure rather than smoothed over"

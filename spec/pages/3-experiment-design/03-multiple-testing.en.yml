@@ -1,5 +1,5 @@
 id: 03-multiple-testing
-title: "Twenty combinations, three winners, and at least one fake"
+title: "Twenty combinations, three significant hits, and at least one fake"
 sections:
   - title: How three "significant" results appeared
     content: "A SaaS company split one landing page redesign into five variant tests, three came back significant, and the report said to ship them together — but all five drew from the same pool of visitors"
