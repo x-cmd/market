@@ -1,18 +1,17 @@
-# The 14% your TV ads "produced" is a setting, not a measurement
+# The 14% in your TV attribution is a model setting, not a measurement
 
 "TV advertising drove 14% of sales this quarter."
 
-That 14% came out of a regression. **There is more than one way to pull it apart, and the numbers can land far apart.**
+That 14% came out of a regression, and the way you pull it apart changes the answer. **Two analysts can split the same data and land on numbers far apart.**
 
-MMM (Marketing Mix Modeling) — a statistical model that estimates how much each marketing input contributes to sales — takes several years of weekly sales and sets them next to ad spend, seasonality, price, and promotions. Then it asks: how much of the change does each channel explain?
+## What the contribution split measures
 
-The split itself is not hard. **The hard part is the three settings in front of it: baseline, saturation, and lag.** Those decide whether the number means "this channel earned that much" or "this channel claims that much of the model's explanatory power."
+**In one line: a contribution split spreads the change in sales back across the variables that explain it.**
 
-## What the contribution split actually measures
+MMM (Marketing Mix Modeling) puts several years of weekly sales next to ad spend, seasonality, price, and promotions, and asks how much of the sales change each channel explains. Once the model is fitted, each channel's coefficient times its actual spend gives that channel's contribution. Add up the channels, add the baseline, and you get the sales the model predicts.
 
-**In one line: it spreads the change in sales back across the variables that explain it.**
+The split itself is not hard. **The hard part is the three settings that sit in front of it: baseline, saturation, and lag.** Those decide whether a number means "this channel earned that much" or "this channel claims that much of what the model explains."
 
-Once the model is fitted, each channel's coefficient times its actual spend gives that channel's contribution. Add them up, add the baseline, and you get the sales the model predicts.
 ```text
 https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E5%90%8C%E4%B8%80%E4%B8%AA%E5%AD%A3%E5%BA%A6%E9%87%8C%EF%BC%8C%E5%90%84%E6%B8%A0%E9%81%93%E5%AF%B9%E9%94%80%E5%94%AE%E7%9A%84%E8%B4%A1%E7%8C%AE%22%7D%2C%22color%22%3A%5B%22%232563eb%22%2C%22%23dc2626%22%2C%22%23f59e0b%22%2C%22%2364748b%22%2C%22%230891b2%22%5D%2C%22xAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%22%E6%90%9C%E7%B4%A2%E5%B9%BF%E5%91%8A%22%2C%22%E7%A4%BE%E4%BA%A4%E5%B9%BF%E5%91%8A%22%2C%22%E7%94%B5%E8%A7%86%22%2C%22%E8%87%AA%E7%84%B6%E6%90%9C%E7%B4%A2%22%2C%22%E5%9F%BA%E7%BA%BF%22%5D%2C%22axisLabel%22%3A%7B%22interval%22%3A0%7D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%22%E8%B4%A1%E7%8C%AE%E5%8D%A0%E9%94%80%E5%94%AE%E7%9A%84%E6%AF%94%E4%BE%8B%EF%BC%88%25%EF%BC%89%22%7D%2C%22grid%22%3A%7B%22left%22%3A90%2C%22right%22%3A50%2C%22top%22%3A60%2C%22bottom%22%3A60%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%2C%22axisPointer%22%3A%7B%22type%22%3A%22shadow%22%7D%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22%22%2C%22type%22%3A%22bar%22%2C%22data%22%3A%5B38%2C21%2C14%2C9%2C18%5D%2C%22label%22%3A%7B%22show%22%3Atrue%2C%22position%22%3A%22top%22%2C%22formatter%22%3A%22%7Bc%7D%22%7D%2C%22stack%22%3Anull%7D%5D%7D&w=760&h=430
 ```
@@ -21,11 +20,11 @@ https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E5%90%8C%E
 
 **Baseline takes 18% here.** That 18% is the sales that would have happened with no ads at all. The other 82% is what the channels split.
 
-**An MMM contribution is the model's contribution, not advertising's merit.** Those are different claims, and the gap between them is the subject of this page.
+**An MMM contribution is what the model credits, not what advertising earned.** Those are different claims, and the gap between them is what this page is about.
 
-**The other difference from attribution is time scale.** Attribution reads a chain of touchpoints inside one week. MMM reads several hundred weeks across several years. It answers "over the long run, where should the money go," not "who brought the last order."
+**The biggest difference from attribution is time scale.** Attribution reads a chain of touchpoints inside one week. MMM reads several hundred weeks across several years. It answers "over the long run, where should the money go," not "who brought the last order."
 
-## Three settings decide the split
+## The three settings decide what the split says
 
 **Three things have to be settled before any contribution gets split out. Get all three wrong and the split is wrong.**
 
@@ -33,7 +32,8 @@ https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E5%90%8C%E
 
 **Baseline is the sales that happen with no spend at all.** Seasonality, trend, price changes, promotion cycles — anything that occurs without advertising — lands in the baseline.
 
-How you draw the baseline changes the split directly. Set it low and the channels add up to more; set it high and they add up to less.
+How you set the baseline changes the split directly. Set it low and the channels add up to more; set it high and they add up to less.
+
 ```text
 https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E5%9F%BA%E7%BA%BF%E8%AE%BE%E5%BE%97%E4%B8%8D%E5%90%8C%EF%BC%8C%E5%90%84%E6%B8%A0%E9%81%93%E8%B4%A1%E7%8C%AE%E8%B7%9F%E7%9D%80%E5%8F%98%22%7D%2C%22color%22%3A%5B%22%232563eb%22%2C%22%23dc2626%22%2C%22%23f59e0b%22%2C%22%2364748b%22%2C%22%230891b2%22%5D%2C%22xAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%22%E5%9F%BA%E7%BA%BF%20A%5Cn%EF%BC%88%E5%8D%A0%E9%94%80%E5%94%AE%2020%25%EF%BC%89%22%2C%22%E5%9F%BA%E7%BA%BF%20B%5Cn%EF%BC%88%E5%8D%A0%E9%94%80%E5%94%AE%2040%25%EF%BC%89%22%5D%2C%22axisLabel%22%3A%7B%22interval%22%3A0%7D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%22%22%2C%22axisLabel%22%3A%7B%22formatter%22%3A%22%7Bvalue%7D%22%7D%7D%2C%22grid%22%3A%7B%22left%22%3A80%2C%22right%22%3A40%2C%22top%22%3A80%2C%22bottom%22%3A60%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%7D%2C%22legend%22%3A%7B%22data%22%3A%5B%22%E6%90%9C%E7%B4%A2%E5%B9%BF%E5%91%8A%22%2C%22%E7%A4%BE%E4%BA%A4%E5%B9%BF%E5%91%8A%22%2C%22%E7%94%B5%E8%A7%86%22%2C%22%E8%87%AA%E7%84%B6%E6%90%9C%E7%B4%A2%22%5D%2C%22top%22%3A30%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22%E6%90%9C%E7%B4%A2%E5%B9%BF%E5%91%8A%22%2C%22data%22%3A%5B38%2C29%5D%2C%22type%22%3A%22bar%22%2C%22stack%22%3A%22total%22%7D%2C%7B%22name%22%3A%22%E7%A4%BE%E4%BA%A4%E5%B9%BF%E5%91%8A%22%2C%22data%22%3A%5B21%2C16%5D%2C%22type%22%3A%22bar%22%2C%22stack%22%3A%22total%22%7D%2C%7B%22name%22%3A%22%E7%94%B5%E8%A7%86%22%2C%22data%22%3A%5B14%2C11%5D%2C%22type%22%3A%22bar%22%2C%22stack%22%3A%22total%22%7D%2C%7B%22name%22%3A%22%E8%87%AA%E7%84%B6%E6%90%9C%E7%B4%A2%22%2C%22data%22%3A%5B9%2C7%5D%2C%22type%22%3A%22bar%22%2C%22stack%22%3A%22total%22%7D%5D%7D&w=760&h=430
 ```
@@ -48,7 +48,7 @@ So the first question to ask about any MMM report is how the baseline was set.
 
 **More spend keeps working, but it works less and less.** Every channel has this shape, like a phone line losing capacity as more people dial in at once.
 
-The model has to hold this curve. Without it, the model assumes more spend equals more revenue, straight-line, and hands back contributions that are too high at the top end. For the shape of that curve, see [→ The Hill saturation curve: where the effect hits the ceiling](../05-hill-saturation-curve/en.md).
+The model has to carry that curve. Without it, the model assumes more spend equals more revenue, straight-line, and hands back contributions that run too high once spend runs high. For the shape of that curve, see [→ The Hill saturation curve: where the effect hits the ceiling](../05-hill-saturation-curve/en.md).
 
 **Saturation has a second meaning: the same channel is not equally efficient at every price point.** The first 10% of a search budget might buy back 20% of the sales; the last 10% might buy back 2%.
 
@@ -62,7 +62,7 @@ For how that spreading works, see [→ Adstock decay: how long an ad's effect la
 
 **Without these three settled, a contribution split amounts to reading the model's settings back out.** And no two analysts pick the same three.
 
-## Where the numbers break down
+## Where the split stops meaning anything
 
 **MMM has one assumption it cannot do without: the channel spends have to be separable.**
 
@@ -74,17 +74,17 @@ https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E6%90%9C%E
 
 <a href="https://x-cmd.com/draw/explore/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E6%90%9C%E7%B4%A2%E5%B9%BF%E5%91%8A%E4%B8%8E%E7%A4%BE%E4%BA%A4%E5%B9%BF%E5%91%8A%E7%9A%84%E8%8A%B1%E8%B4%B9%EF%BC%9A%E5%90%8C%E6%B6%A8%E5%90%8C%E8%90%BD%22%7D%2C%22color%22%3A%5B%22%232563eb%22%2C%22%23dc2626%22%2C%22%2364748b%22%2C%22%23f59e0b%22%2C%22%230891b2%22%2C%22%238b5cf6%22%2C%22%2365a30d%22%2C%22%23db2777%22%5D%2C%22xAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%221%E6%9C%88%22%2C%222%E6%9C%88%22%2C%223%E6%9C%88%22%2C%224%E6%9C%88%22%2C%225%E6%9C%88%22%2C%226%E6%9C%88%22%2C%227%E6%9C%88%22%2C%228%E6%9C%88%22%5D%2C%22axisLabel%22%3A%7B%22interval%22%3A0%7D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%22%22%2C%22axisLabel%22%3A%7B%22formatter%22%3A%22%7Bvalue%7D%22%7D%7D%2C%22grid%22%3A%7B%22left%22%3A80%2C%22right%22%3A40%2C%22top%22%3A80%2C%22bottom%22%3A60%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%7D%2C%22legend%22%3A%7B%22data%22%3A%5B%22%E6%90%9C%E7%B4%A2%E5%B9%BF%E5%91%8A%E8%8A%B1%E8%B4%B9%22%2C%22%E7%A4%BE%E4%BA%A4%E5%B9%BF%E5%91%8A%E8%8A%B1%E8%B4%B9%22%5D%2C%22top%22%3A30%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22%E6%90%9C%E7%B4%A2%E5%B9%BF%E5%91%8A%E8%8A%B1%E8%B4%B9%22%2C%22data%22%3A%5B100%2C112%2C124%2C118%2C131%2C140%2C133%2C146%5D%2C%22type%22%3A%22line%22%2C%22smooth%22%3Atrue%2C%22connectNulls%22%3Atrue%7D%2C%7B%22name%22%3A%22%E7%A4%BE%E4%BA%A4%E5%B9%BF%E5%91%8A%E8%8A%B1%E8%B4%B9%22%2C%22data%22%3A%5B98%2C108%2C121%2C115%2C128%2C138%2C130%2C142%5D%2C%22type%22%3A%22line%22%2C%22smooth%22%3Atrue%2C%22connectNulls%22%3Atrue%7D%5D%7D&w=760&h=430"><img src="https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E6%90%9C%E7%B4%A2%E5%B9%BF%E5%91%8A%E4%B8%8E%E7%A4%BE%E4%BA%A4%E5%B9%BF%E5%91%8A%E7%9A%84%E8%8A%B1%E8%B4%B9%EF%BC%9A%E5%90%8C%E6%B6%A8%E5%90%8C%E8%90%BD%22%7D%2C%22color%22%3A%5B%22%232563eb%22%2C%22%23dc2626%22%2C%22%2364748b%22%2C%22%23f59e0b%22%2C%22%230891b2%22%2C%22%238b5cf6%22%2C%22%2365a30d%22%2C%22%23db2777%22%5D%2C%22xAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%221%E6%9C%88%22%2C%222%E6%9C%88%22%2C%223%E6%9C%88%22%2C%224%E6%9C%88%22%2C%225%E6%9C%88%22%2C%226%E6%9C%88%22%2C%227%E6%9C%88%22%2C%228%E6%9C%88%22%5D%2C%22axisLabel%22%3A%7B%22interval%22%3A0%7D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%22%22%2C%22axisLabel%22%3A%7B%22formatter%22%3A%22%7Bvalue%7D%22%7D%7D%2C%22grid%22%3A%7B%22left%22%3A80%2C%22right%22%3A40%2C%22top%22%3A80%2C%22bottom%22%3A60%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%7D%2C%22legend%22%3A%7B%22data%22%3A%5B%22%E6%90%9C%E7%B4%A2%E5%B9%BF%E5%91%8A%E8%8A%B1%E8%B4%B9%22%2C%22%E7%A4%BE%E4%BA%A4%E5%B9%BF%E5%91%8A%E8%8A%B1%E8%B4%B9%22%5D%2C%22top%22%3A30%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22%E6%90%9C%E7%B4%A2%E5%B9%BF%E5%91%8A%E8%8A%B1%E8%B4%B9%22%2C%22data%22%3A%5B100%2C112%2C124%2C118%2C131%2C140%2C133%2C146%5D%2C%22type%22%3A%22line%22%2C%22smooth%22%3Atrue%2C%22connectNulls%22%3Atrue%7D%2C%7B%22name%22%3A%22%E7%A4%BE%E4%BA%A4%E5%B9%BF%E5%91%8A%E8%8A%B1%E8%B4%B9%22%2C%22data%22%3A%5B98%2C108%2C121%2C115%2C128%2C138%2C130%2C142%5D%2C%22type%22%3A%22line%22%2C%22smooth%22%3Atrue%2C%22connectNulls%22%3Atrue%7D%5D%7D&w=760&h=430" width="760" alt="mmm_channel_corr"></a>
 
-The two lines sit almost on top of each other. That means **the regression cannot tell these two columns apart either.** It splits them anyway: a share to you, a share to me, totals that add up. **That split is the only solution the mathematics allows. It is not a fact.**
+The two lines sit almost on top of each other. That means **the regression cannot tell these two columns apart either.** It splits them anyway: some of it to search, some to social, totals that add up. **That split is the only solution the mathematics allows. It is not a fact.**
 
 **Worse, the model does not tell you it cannot tell them apart.** It hands you a clean contribution table regardless.
 
-### Two cheap ways to catch it yourself
+### Two checks that catch this before the report arrives
 
 **Look at the correlation between two columns.** Before the split runs, compute the correlations between channel spends. For any pair above 0.7, do not take the contribution at face value.
 
-**There is an easier check: measure how stable the model is.** Same data, different sample window, different baseline, different saturation curve. If the ranking moves, that channel is the one the model cannot separate.
+**There is an easier check: see how stable the model is.** Same data, different sample window, different baseline, different saturation curve. If the ranking moves, that channel is the one the model cannot separate.
 
-### Contribution rank and money-adding order are not the same thing
+### Contribution rank is not the order to add money in
 
 **MMM gives you a share of contribution, not a marginal return.**
 
@@ -98,12 +98,11 @@ The horizontal axis is share of spend, the vertical axis is share of contributio
 
 Social ads took 35% of the money and returned 21% of the contribution, so it sits below the line. Search ads took 28% and returned 38%, so it sits above.
 
-**So the most direct use of an MMM contribution split is not "who contributed most." It is "who contributed least."** Compare contribution share against spend share and the channel that overspent its own money shows up on its own.
-
+**So the most direct use of an MMM contribution split is not "who contributed most." It is "who contributed least."** Line up contribution share against spend share, and any channel that took more than it gave back shows up on its own.
 
 **But going from this chart to "cut social ads" skips a step.** Contribution share is a historical average; what you are deciding is next month's allocation. Between those two sits marginal ROI and the equal-marginal principle. See [→ Marginal ROI and average ROI: two different numbers](../06-marginal-vs-average-roi/en.md) and [→ The equal marginal principle: the test for an optimal split](../07-equal-marginal-returns-principle/en.md).
 
-## What to do with the contribution numbers
+## What to check before you act on the numbers
 
 **MMM contribution splitting spreads the change in sales back across the variables that explain it. The numbers depend on three settings: baseline, saturation, and lag.** No two analysts pick the same three, so the same channel showing different numbers in two reports is normal.
 

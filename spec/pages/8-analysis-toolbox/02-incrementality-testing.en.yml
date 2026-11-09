@@ -1,15 +1,13 @@
 id: 02-incrementality-testing
-title: "Incrementality is measured by withholding a slice of the map"
+title: A channel is worth what it adds, and only a holdout can tell you
 sections:
   - title: Incrementality is the orders that stop happening
-    content: "The orders that no longer happen once the ads stop are the increment, and computing how many go missing requires a slice of the map where no ads ran"
-  - title: Three ways to run one
-    content: "Geographic splits, ghost ads and timeline splits all randomise something, and each trades away sample size, money or validity"
+    content: "The orders that no longer happen once the ads stop are the increment, and counting how many go missing requires a slice of the map where no ads ran at all"
+  - title: Three ways to hold back a slice
+    content: "Geographic splits need no individual tracking but pay in granularity, ghost ads buy a narrow interval but cost money, and a timeline split is cheapest and weakest because it is not random"
   - title: The numbers it produces
-    content: "CPC 2.40 dollars against CPIC 3.00 dollars, and 316% from the observational method against 73% from the randomised experiment"
+    content: "CPC 2.40 dollars against CPIC 3.00 dollars in one geo experiment, and 316% from the observational method against 73% from the randomised experiment in one Facebook checkout test"
   - title: Four ways it goes wrong
-    content: "Two sides that were different to begin with, a sample too small, a test that ended too early, and treatment that leaked into the control group"
-  - title: When it is worth running
-    content: "The number has to move money or calibrate the observational method, otherwise the cost of the gap is not worth it"
-  - title: What to do with the number
-    content: "The platform's number is not fake, it answers a different question, and a single run does not extrapolate to next month's budget"
+    content: "Two sides that were different to begin with, a sample too small, a test that ended before the response lag passed, and treatment that leaked into the control group"
+  - title: When it is worth running, and what the number is good for
+    content: "The number has to move money or calibrate the observational method, and it describes one period, spend level and population, so it does not carry into next month's budget"

@@ -1,11 +1,11 @@
 id: 01-reported-cpm-vs-negotiated-cpm
 title: Two CPM numbers, one budget, and no one is cheating
 sections:
-  - title: Where the 15 yuan gap comes from
+  - title: The 15 yuan gap is a denominator gap, not a price gap
     content: A report CPM of 45 and a negotiated CPM of 60 cover the same spend, because one divides by delivered impressions and the other by billable viewable ones
   - title: One metric, three ways to count an impression
     content: Delivered, viewable and duration-weighted impressions each produce a different CPM, and the MRC worked example shows how far apart they land
-  - title: One channel, two CPMs, and where the third comes from
-    content: What the 250,000 yuan gap is worth, how the 92-yuan duration-weighted figure is built, and how count-on-decision and unfiltered invalid traffic flatter a report
-  - title: Four questions before you sign, and what to do with the answers
+  - title: One channel, two CPMs, and where the third number comes from
+    content: What the 250,000 yuan gap is worth, how the 130-yuan duration-weighted figure is built, and how count-on-decision and unfiltered invalid traffic flatter a report
+  - title: Four questions to ask before you sign, and what to do with the answers
     content: Caliber, discount position, rebate structure and validity period, plus the MRC reconciliation route when the two sides disagree

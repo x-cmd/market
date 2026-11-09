@@ -1,8 +1,8 @@
 id: 04-adstock-decay
-title: Your ads keep working after you stop paying for them
+title: Your ads keep working long after you stop paying for them
 sections:
-  - title: An ad's effect is not spent in a day
-    content: "Ad effect fades but does not vanish overnight, so the model accumulates past spend along a decay curve and pairs the Adstock value with today's outcome instead of pairing spend with the same week's sales"
+  - title: An ad's effect is not used up in a day
+    content: "An ad's effect fades but does not vanish overnight, so the model accumulates past spend along a decay curve and pairs the Adstock value with today's outcome instead of pairing this week's spend with this week's sales"
   - title: One number sets the whole curve
     content: "A decay curve has one parameter, the half-life, and a 7-day half-life channel accumulates to 580.36 after seven days, so each channel gets its own curve because media fade at different speeds and cover for each other"
   - title: Where the estimate breaks

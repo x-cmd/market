@@ -2,7 +2,7 @@ id: 01-brand-entry-public-signals
 title: Every brand number comes with a receipt, or it does not count
 sections:
   - title: Where a brand's position actually comes from
-    content: "Where a brand stands is five separate questions, and each one has a public number with its own definition behind it"
+    content: "A brand's standing breaks into five questions, each with a public number and its own definition, and visibility alone already ranks eight competitors differently from revenue"
   - title: The seven fields a brand entry has to fill
     content: "Company and brand, category, share, price premium, search and volume, public financials, source and date — an empty field must say why"
   - title: Company and brand are not the same thing
@@ -15,5 +15,5 @@ sections:
     content: "Wikipedia article views as the reproducible substitute for brand-term search volume, and the three separate fields it must not be mixed with"
   - title: What the filings give you
     content: "Company revenue, marketing spend and regional splits are available and auditable; single-brand granularity and the latest fiscal year for some companies are not"
-  - title: A catalogue of public signals, not a scorecard
+  - title: What the catalogue is for
     content: "Each number says what was recorded under one definition, and naming the fields that could not be filled beats a tidy-looking set of numbers"

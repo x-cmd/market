@@ -2,9 +2,9 @@
 
 Search ads ran at 2.4x ROI last month. Social at 2.1x. Video at 1.5x. There is 1,000,000 left to spend next month. Who gets it?
 
-Ranking by ROI and handing the money to the winner is the standard answer, and it is wrong.
+Ranking the channels by ROI and giving the money to the winner is the usual answer. It is also the wrong one.
 
-**ROI is a backward-looking number.** The 2.4x on search came from spending 1,200,000 in the past, and the last slice of that spend returns only 0.5x. Social ads rank second on average ROI, yet their last slice returns 2.9x. **The same data, ranked by average ROI and by the return on the final dollar, gives two opposite orderings.**
+**ROI looks backward.** That 2.4x on search came from 1,200,000 already spent, and the last slice of it returns only 0.5x. Social ranks second on average ROI, yet its last slice returns 2.9x. **The same data, sorted by average ROI and by the return on the final dollar, gives two opposite orderings.**
 
 ```text
 https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E5%9B%9B%E4%B8%AA%E6%B8%A0%E9%81%93%EF%BC%9A%E6%8C%89%E5%B9%B3%E5%9D%87%20ROI%20%E6%8E%92%EF%BC%8C%E5%92%8C%E6%8C%89%E6%9C%80%E5%90%8E%E4%B8%80%E6%A1%A3%E8%BE%B9%E9%99%85%20ROI%20%E6%8E%92%EF%BC%8C%E6%98%AF%E4%B8%A4%E4%B8%AA%E9%A1%BA%E5%BA%8F%22%7D%2C%22color%22%3A%5B%22%232563eb%22%2C%22%23dc2626%22%2C%22%2364748b%22%2C%22%23f59e0b%22%2C%22%230891b2%22%2C%22%238b5cf6%22%2C%22%2365a30d%22%2C%22%23db2777%22%5D%2C%22xAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%22%E6%90%9C%E7%B4%A2%E5%B9%BF%E5%91%8A%22%2C%22%E7%A4%BE%E4%BA%A4%E5%B9%BF%E5%91%8A%22%2C%22%E8%A7%86%E9%A2%91%E5%B9%BF%E5%91%8A%22%2C%22%E9%9B%B6%E5%94%AE%E5%AA%92%E4%BD%93%22%5D%2C%22axisLabel%22%3A%7B%22interval%22%3A0%7D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%22%E6%AF%8F%201%20%E5%9D%97%E9%92%B1%E6%8D%A2%E5%9B%9E%E7%9A%84%E9%92%B1%22%2C%22axisLabel%22%3A%7B%22formatter%22%3A%22%7Bvalue%7D%22%7D%7D%2C%22grid%22%3A%7B%22left%22%3A80%2C%22right%22%3A40%2C%22top%22%3A80%2C%22bottom%22%3A60%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%7D%2C%22legend%22%3A%7B%22data%22%3A%5B%22%E5%B9%B3%E5%9D%87%20ROI%EF%BC%88%E5%9B%9E%E5%A4%B4%E7%9C%8B%EF%BC%89%22%2C%22%E8%BE%B9%E9%99%85%20ROI%EF%BC%88%E5%BE%80%E5%89%8D%E7%9C%8B%EF%BC%89%22%5D%2C%22top%22%3A30%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22%E5%B9%B3%E5%9D%87%20ROI%EF%BC%88%E5%9B%9E%E5%A4%B4%E7%9C%8B%EF%BC%89%22%2C%22data%22%3A%5B2.4%2C2.1%2C1.5%2C1.75%5D%2C%22type%22%3A%22bar%22%7D%2C%7B%22name%22%3A%22%E8%BE%B9%E9%99%85%20ROI%EF%BC%88%E5%BE%80%E5%89%8D%E7%9C%8B%EF%BC%89%22%2C%22data%22%3A%5B0.5%2C2.9%2C2.0%2C2.6%5D%2C%22type%22%3A%22bar%22%7D%5D%7D&w=760&h=430
@@ -12,23 +12,23 @@ https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E5%9B%9B%E
 
 <a href="https://x-cmd.com/draw/explore/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E5%9B%9B%E4%B8%AA%E6%B8%A0%E9%81%93%EF%BC%9A%E6%8C%89%E5%B9%B3%E5%9D%87%20ROI%20%E6%8E%92%EF%BC%8C%E5%92%8C%E6%8C%89%E6%9C%80%E5%90%8E%E4%B8%80%E6%A1%A3%E8%BE%B9%E9%99%85%20ROI%20%E6%8E%92%EF%BC%8C%E6%98%AF%E4%B8%A4%E4%B8%AA%E9%A1%BA%E5%BA%8F%22%7D%2C%22color%22%3A%5B%22%232563eb%22%2C%22%23dc2626%22%2C%22%2364748b%22%2C%22%23f59e0b%22%2C%22%230891b2%22%2C%22%238b5cf6%22%2C%22%2365a30d%22%2C%22%23db2777%22%5D%2C%22xAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%22%E6%90%9C%E7%B4%A2%E5%B9%BF%E5%91%8A%22%2C%22%E7%A4%BE%E4%BA%A4%E5%B9%BF%E5%91%8A%22%2C%22%E8%A7%86%E9%A2%91%E5%B9%BF%E5%91%8A%22%2C%22%E9%9B%B6%E5%94%AE%E5%AA%92%E4%BD%93%22%5D%2C%22axisLabel%22%3A%7B%22interval%22%3A0%7D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%22%E6%AF%8F%201%20%E5%9D%97%E9%92%B1%E6%8D%A2%E5%9B%9E%E7%9A%84%E9%92%B1%22%2C%22axisLabel%22%3A%7B%22formatter%22%3A%22%7Bvalue%7D%22%7D%7D%2C%22grid%22%3A%7B%22left%22%3A80%2C%22right%22%3A40%2C%22top%22%3A80%2C%22bottom%22%3A60%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%7D%2C%22legend%22%3A%7B%22data%22%3A%5B%22%E5%B9%B3%E5%9D%87%20ROI%EF%BC%88%E5%9B%9E%E5%A4%B4%E7%9C%8B%EF%BC%89%22%2C%22%E8%BE%B9%E9%99%85%20ROI%EF%BC%88%E5%BE%80%E5%89%8D%E7%9C%8B%EF%BC%89%22%5D%2C%22top%22%3A30%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22%E5%B9%B3%E5%9D%87%20ROI%EF%BC%88%E5%9B%9E%E5%A4%B4%E7%9C%8B%EF%BC%89%22%2C%22data%22%3A%5B2.4%2C2.1%2C1.5%2C1.75%5D%2C%22type%22%3A%22bar%22%7D%2C%7B%22name%22%3A%22%E8%BE%B9%E9%99%85%20ROI%EF%BC%88%E5%BE%80%E5%89%8D%E7%9C%8B%EF%BC%89%22%2C%22data%22%3A%5B0.5%2C2.9%2C2.0%2C2.6%5D%2C%22type%22%3A%22bar%22%7D%5D%7D&w=760&h=430"><img src="https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E5%9B%9B%E4%B8%AA%E6%B8%A0%E9%81%93%EF%BC%9A%E6%8C%89%E5%B9%B3%E5%9D%87%20ROI%20%E6%8E%92%EF%BC%8C%E5%92%8C%E6%8C%89%E6%9C%80%E5%90%8E%E4%B8%80%E6%A1%A3%E8%BE%B9%E9%99%85%20ROI%20%E6%8E%92%EF%BC%8C%E6%98%AF%E4%B8%A4%E4%B8%AA%E9%A1%BA%E5%BA%8F%22%7D%2C%22color%22%3A%5B%22%232563eb%22%2C%22%23dc2626%22%2C%22%2364748b%22%2C%22%23f59e0b%22%2C%22%230891b2%22%2C%22%238b5cf6%22%2C%22%2365a30d%22%2C%22%23db2777%22%5D%2C%22xAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%22%E6%90%9C%E7%B4%A2%E5%B9%BF%E5%91%8A%22%2C%22%E7%A4%BE%E4%BA%A4%E5%B9%BF%E5%91%8A%22%2C%22%E8%A7%86%E9%A2%91%E5%B9%BF%E5%91%8A%22%2C%22%E9%9B%B6%E5%94%AE%E5%AA%92%E4%BD%93%22%5D%2C%22axisLabel%22%3A%7B%22interval%22%3A0%7D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%22%E6%AF%8F%201%20%E5%9D%97%E9%92%B1%E6%8D%A2%E5%9B%9E%E7%9A%84%E9%92%B1%22%2C%22axisLabel%22%3A%7B%22formatter%22%3A%22%7Bvalue%7D%22%7D%7D%2C%22grid%22%3A%7B%22left%22%3A80%2C%22right%22%3A40%2C%22top%22%3A80%2C%22bottom%22%3A60%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%7D%2C%22legend%22%3A%7B%22data%22%3A%5B%22%E5%B9%B3%E5%9D%87%20ROI%EF%BC%88%E5%9B%9E%E5%A4%B4%E7%9C%8B%EF%BC%89%22%2C%22%E8%BE%B9%E9%99%85%20ROI%EF%BC%88%E5%BE%80%E5%89%8D%E7%9C%8B%EF%BC%89%22%5D%2C%22top%22%3A30%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22%E5%B9%B3%E5%9D%87%20ROI%EF%BC%88%E5%9B%9E%E5%A4%B4%E7%9C%8B%EF%BC%89%22%2C%22data%22%3A%5B2.4%2C2.1%2C1.5%2C1.75%5D%2C%22type%22%3A%22bar%22%7D%2C%7B%22name%22%3A%22%E8%BE%B9%E9%99%85%20ROI%EF%BC%88%E5%BE%80%E5%89%8D%E7%9C%8B%EF%BC%89%22%2C%22data%22%3A%5B0.5%2C2.9%2C2.0%2C2.6%5D%2C%22type%22%3A%22bar%22%7D%5D%7D&w=760&h=430" width="760" alt="avg_roi_vs_marginal_roi_four_channels"></a>
 
-**Search leads the blue bars. Social leads the red ones. Search falls from first on average ROI to last on marginal ROI.**
+**Search leads the blue bars. Social leads the red ones. Search drops from first on average ROI to last on marginal ROI.**
 
 ## Why an ROI ranking cannot tell you where to add money
 
-Sorting the four channels by ROI each month answers "which channel performed most efficiently last month." **The trouble starts when that ranking drives the next decision.** A ranking is a **list**: it says nothing about how much more volume each channel can absorb. "Search 2.4, social 2.1" reads as "search is stronger," but the numbers describe channels in very different positions.
+Sorting the four channels by ROI each month answers one question: which channel worked most efficiently last month. **The trouble starts when that ranking drives the next decision.** A ranking is a **list**. It says nothing about how much more volume each channel can still absorb. "Search 2.4, social 2.1" reads as "search is stronger," but the two numbers describe channels in very different positions.
 
-**The difference comes from averaging across levels.** ROI is total return ÷ total spend. Search ads spent 1,200,000 and returned 2,880,000, so ROI is 288 ÷ 120 = **2.4x**. **Most of that 2.4 came from the first four levels**: the first returned 4.6x, the last only 0.5x. The 960,000 earned earlier hides the fact that the final level gets back less than half of what it costs.
+**The gap comes from averaging across levels.** ROI is total return ÷ total spend. Search ads spent 1,200,000 and returned 2,880,000, so ROI is 288 ÷ 120 = **2.4x**. **Most of that 2.4 came from the first four levels**: the first returned 4.6x, the last only 0.5x. The 960,000 earned earlier buries the fact that the final level gets back less than half of what it costs.
 
-**So the channel with the highest average ROI is often the one you have already pushed hardest.** More spend means the early, high-return levels ran first, so the cumulative average looks good, and you have driven that channel near saturation. **Treating a saturated channel as the winner means the money you add goes in at a 0.5x marginal return.**
+**So the channel with the highest average ROI is often the one you have already pushed hardest.** Heavy spend means the high-return levels ran first, so the cumulative average looks good, and you have driven that channel close to saturation. **Treating a saturated channel as the winner means your next dollar goes in at a 0.5x marginal return.**
 
-**The number that should drive the ranking is one most teams never compute: marginal ROI, how much an extra dollar buys back.** The last 240,000 of search spend returned 120,000, a marginal 0.5; the last 160,000 of social spend returned 464,000, a marginal 2.9. See [→ Marginal ROI and average ROI are two different numbers](../../8-analysis-toolbox/06-marginal-vs-average-roi/en.md).
+**The number that should drive the ranking is one most teams never compute: marginal ROI, what an extra dollar buys back.** The last 240,000 of search spend returned 120,000, a marginal 0.5. The last 160,000 of social spend returned 464,000, a marginal 2.9. See [→ Marginal ROI and average ROI are two different numbers](../../8-analysis-toolbox/06-marginal-vs-average-roi/en.md).
 
 ## What average ROI hides
 
-**Average ROI hides two things: how much volume the channel absorbed, and how well it performed on that volume. Neither tells you what more money will do.**
+**Average ROI hides two things: how much volume the channel took, and how well it did on that volume. Neither one tells you what more money will do.**
 
-### The biggest channel on the market is already near its ceiling
+### The biggest channel in the market is already near its ceiling
 
 **The US market shows this plainly.** In 2024, US search ad revenue was $102.9B, the largest block of digital advertising at 39.8% of the total. Social was $88.8B.
 
@@ -38,19 +38,19 @@ https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E7%BE%8E%E
 
 <a href="https://x-cmd.com/draw/explore/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E7%BE%8E%E5%9B%BD%E6%95%B0%E5%AD%97%E5%B9%BF%E5%91%8A%E6%94%B6%E5%85%A5%EF%BC%9A%E6%90%9C%E7%B4%A2%E5%92%8C%E7%A4%BE%E4%BA%A4%EF%BC%882024%E2%80%942025%EF%BC%8CIAB%2FPwC%EF%BC%89%22%7D%2C%22color%22%3A%5B%22%232563eb%22%2C%22%23dc2626%22%2C%22%2364748b%22%2C%22%23f59e0b%22%2C%22%230891b2%22%2C%22%238b5cf6%22%2C%22%2365a30d%22%2C%22%23db2777%22%5D%2C%22xAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%222024%22%2C%222025%22%5D%2C%22axisLabel%22%3A%7B%22interval%22%3A0%7D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%22%E5%8D%81%E4%BA%BF%E7%BE%8E%E5%85%83%22%2C%22axisLabel%22%3A%7B%22formatter%22%3A%22%7Bvalue%7D%22%7D%7D%2C%22grid%22%3A%7B%22left%22%3A80%2C%22right%22%3A40%2C%22top%22%3A80%2C%22bottom%22%3A60%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%7D%2C%22legend%22%3A%7B%22data%22%3A%5B%22%E6%90%9C%E7%B4%A2%22%2C%22%E7%A4%BE%E4%BA%A4%22%5D%2C%22top%22%3A30%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22%E6%90%9C%E7%B4%A2%22%2C%22data%22%3A%5B102.9%2C114.2%5D%2C%22type%22%3A%22bar%22%7D%2C%7B%22name%22%3A%22%E7%A4%BE%E4%BA%A4%22%2C%22data%22%3A%5B88.8%2C117.7%5D%2C%22type%22%3A%22bar%22%7D%5D%7D&w=760&h=430"><img src="https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E7%BE%8E%E5%9B%BD%E6%95%B0%E5%AD%97%E5%B9%BF%E5%91%8A%E6%94%B6%E5%85%A5%EF%BC%9A%E6%90%9C%E7%B4%A2%E5%92%8C%E7%A4%BE%E4%BA%A4%EF%BC%882024%E2%80%942025%EF%BC%8CIAB%2FPwC%EF%BC%89%22%7D%2C%22color%22%3A%5B%22%232563eb%22%2C%22%23dc2626%22%2C%22%2364748b%22%2C%22%23f59e0b%22%2C%22%230891b2%22%2C%22%238b5cf6%22%2C%22%2365a30d%22%2C%22%23db2777%22%5D%2C%22xAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%222024%22%2C%222025%22%5D%2C%22axisLabel%22%3A%7B%22interval%22%3A0%7D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%22%E5%8D%81%E4%BA%BF%E7%BE%8E%E5%85%83%22%2C%22axisLabel%22%3A%7B%22formatter%22%3A%22%7Bvalue%7D%22%7D%7D%2C%22grid%22%3A%7B%22left%22%3A80%2C%22right%22%3A40%2C%22top%22%3A80%2C%22bottom%22%3A60%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%7D%2C%22legend%22%3A%7B%22data%22%3A%5B%22%E6%90%9C%E7%B4%A2%22%2C%22%E7%A4%BE%E4%BA%A4%22%5D%2C%22top%22%3A30%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22%E6%90%9C%E7%B4%A2%22%2C%22data%22%3A%5B102.9%2C114.2%5D%2C%22type%22%3A%22bar%22%7D%2C%7B%22name%22%3A%22%E7%A4%BE%E4%BA%A4%22%2C%22data%22%3A%5B88.8%2C117.7%5D%2C%22type%22%3A%22bar%22%7D%5D%7D&w=760&h=430" width="760" alt="us_digital_ad_revenue_search_vs_social"></a>
 
-**In 2025, social ad revenue reached $117.7B and passed search at $114.2B for the first time.** Search's year-over-year growth fell from 15.9% in 2024 to 11%; social grew 32.6%.
+**In 2025, social ad revenue hit $117.7B and passed search at $114.2B for the first time.** Search's year-over-year growth fell from 15.9% in 2024 to 11%; social grew 32.6%.
 
-**This is what saturation looks like at market scale.** The channel did not shrink; it grew more slowly, while a channel with only 85% of its size grew two and a half times faster. **By the revenue structure of the whole market, search ads fell from first to second.** Every advertiser's budget table is a smaller version.
+**This is what saturation looks like at market scale.** Search did not shrink. It grew more slowly, while a channel with only 85% of its size grew two and a half times faster. **Across the whole market, search ads fell from first to second.** Every advertiser's budget table tells the same story.
 
 ### A high average ROI can also mean the cheapest traffic got picked first
 
-**There is a second layer, and it is harder to see.** Search ads early on bought the keywords with the strongest search intent, and those convert well by nature, so ROI looked good. **As volume grew, what got added was long-tail intent that converts worse and costs more per click, and that traffic is now the bulk of the campaign.**
+**There is a second layer, and it is harder to see.** Search ads early on bought the keywords with the strongest search intent, and those convert well by nature, so ROI looked good. **As volume grew, what got added was long-tail intent, which converts worse and costs more per click. That traffic is now the bulk of the campaign.**
 
-**So a channel's current average ROI describes the traffic it once landed, not how it converts new traffic today.**
+**So a channel's current average ROI describes the traffic it once landed, not how well it converts new traffic today.**
 
 ## What matters is the last dollar
 
-**Marginal ROI is how much an extra dollar buys back, computed by level: split the spend into slices and see what each returned.** One company, one month, four channels:
+**Marginal ROI is what an extra dollar buys back, and you compute it one level at a time: split the spend into slices, then see what each slice returned.** One company, one month, four channels:
 
 | Channel | Spend | Return | Average ROI | Marginal ROI on the last slice |
 |---|---|---|---|---|
@@ -85,15 +85,15 @@ https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E5%90%8C%E
 
 **Ranked by average ROI, the 200,000 goes to search and returns 100,000. Ranked by marginal ROI, the same 200,000 goes to social and returns 580,000.** Same money, same month, 480,000 apart.
 
-**The 2.4 and the 0.5 come from the same data, the same month, the same channel. They are not in conflict — they answer different questions.** The 2.4 answers "how did those 1,200,000 perform?" The 0.5 answers "is the next 200,000 worth spending?" **The channel you treat as the champion is the one whose marginal return is falling.**
+**The 2.4 and the 0.5 come from the same data, the same month, the same channel. They do not conflict. They answer different questions.** The 2.4 answers "how did those 1,200,000 perform?" The 0.5 answers "is the next 200,000 worth spending?" **The channel you treat as the champion is the one whose marginal return is falling.**
 
 ## Rank on average, allocate on the last dollar
 
-**An ROI ranking is a retrospective. The order you add money in follows marginal ROI — what the last dollar returns.**
+**An ROI ranking is a retrospective. The order you add money in follows marginal ROI: what the last dollar returns.**
 
 ### Three steps from ranking to allocation
 
-**First, split each channel's spend into levels**, by spend from low to high or by time. **Each level should hold at least a tenth of total spend; finer than that is noise.**
+**First, split each channel's spend into levels** — by amount, from low to high, or by time. **Give each level at least a tenth of total spend; anything finer is noise.**
 
 **Second, compute marginal ROI for every level:** how much it spent, how much it returned, divide. **You want a curve, not a single number.**
 
@@ -101,9 +101,9 @@ https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E5%90%8C%E
 
 ### Keep both numbers
 
-**Do not delete ROI from the table.** It has its own uses: reporting to your boss, comparing efficiency against peers, tracking growth over time. **Set it aside when you decide where the money goes, and keep the marginal ROI column close.**
+**Do not delete ROI from the table.** It has its own jobs: reporting to your boss, comparing efficiency against peers, tracking growth over time. **Set it aside when you decide where the money goes, and keep the marginal ROI column close.**
 
-**One more thing before you act: confirm both ROI figures are incremental.** The ROI in a platform report uses that platform's own attribution model — see [→ Without the ads, would these orders have happened anyway](../../1-report-overview/06-incrementality-chart/en.md). **Book ROI and incremental ROI do not always produce the same ordering.**
+**One more thing before you act: confirm both ROI figures are incremental.** The ROI in a platform report uses that platform's own attribution model — see [→ Without the ads, would these orders have happened anyway](../../1-report-overview/06-incrementality-chart/en.md). **Book ROI and incremental ROI do not always rank the channels the same way.**
 
 [→ Marginal ROI and average ROI are two different numbers](../../8-analysis-toolbox/06-marginal-vs-average-roi/en.md) · [→ Equal marginal returns: the test for an optimal split](../../8-analysis-toolbox/07-equal-marginal-returns-principle/en.md) · [→ Hill saturation curve: how effects hit a ceiling](../../8-analysis-toolbox/05-hill-saturation-curve/en.md) · [→ One more dollar, does it still earn its keep?](../04-marginal-roi-decay/en.md) · [→ Revenue minus ad spend is not profit](../01-spend-and-revenue-together/en.md)
 

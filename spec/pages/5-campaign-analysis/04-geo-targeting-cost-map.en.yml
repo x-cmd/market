@@ -1,9 +1,9 @@
 id: 04-geo-targeting-cost-map
-title: "The same budget buys three times as many impressions in Germany as in the United States"
+title: "The United States costs 3.46 times Germany's CPM, and almost all of that gap is not a price difference"
 sections:
-  - title: "Where the three-times gap comes from"
+  - title: "A three-times CPM gap hides a much smaller cost-per-conversion gap"
     content: "Germany's CPM is 29% of America's but its cost per conversion is only 9.6% lower, and four things hold up that gap: bidding density, conversion density, inventory variety and purchasing power"
-  - title: "Four numbers a geographic report has to carry"
+  - title: "What a geographic report has to carry beyond CPM"
     content: "A geographic report gives you CPM and clicks; add conversion density, bidding density and inventory, and take only the rows for people living in the region rather than people interested in it"
   - title: "Cheap is not the same as good value"
     content: "The same $100,000 buys 1,503,759 impressions in Germany and 435,199 in the United States, but only 10% more conversions, so cheap markets deliver faster and expensive markets convert better"

@@ -4,10 +4,10 @@ sections:
   - title: The Hill curve never lets spend run past the ceiling
     content: "Effect rises with spend while the rate of increase falls, and the curve approaches a horizontal ceiling it can never cross, which is why marketing mix models fit one and a linear model does not"
   - title: k sets the ceiling, α sets how fast you get there
-    content: "k is the spend level where half the ceiling lands and 90% of it takes 9^(1/α) times k, while α decides where the curve bends over, so for α = 2 with k = 1000 the steepest point is 577 and the best unit price is at 1000"
+    content: "k is the spend level where half the ceiling lands and 90% of it takes 9^(1/α) times k, while α decides where the curve bends over, so for α = 2 with k = 1000 the steepest point is 577 and the best unit price is at 1000, and k has to be settled before α"
   - title: Where the Hill curve stops being trustworthy
     content: "A channel that has only spent 200 cannot tell you whether its ceiling is 500 or 5000, α and k become unstable together when the data sits below 10% of k, and the Hill curve is only one of several shapes that fit large samples equally well"
   - title: Three checks that cost nothing
     content: "Spend rising while contribution stalls, marginal return falling while average ROI still looks healthy, and residuals leaning one way in the high-spend range all read off the existing data without a rerun"
-  - title: The Hill curve draws a line where the ceiling is, and nothing goes past it
-    content: "The curve gives the idea that more spend buys less extra effect a mathematical shape, with k fixing where the ceiling is and α how fast you approach it"
+  - title: What the curve actually buys you
+    content: "The curve turns the idea that more spend buys less extra effect into a mathematical shape, with k fixing where the ceiling is and α how fast you approach it, and both are more trustworthy once you can see how far the data reached"

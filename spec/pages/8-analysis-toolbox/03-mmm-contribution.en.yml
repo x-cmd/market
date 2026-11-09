@@ -1,11 +1,11 @@
 id: 03-mmm-contribution
-title: The 14% your TV ads "produced" is a setting, not a measurement
+title: The 14% in your TV attribution is a model setting, not a measurement
 sections:
-  - title: What the contribution split actually measures
-    content: "The split spreads the change in sales back across the variables that explain it, so the baseline takes 18% and the channels divide the remaining 82%, and what you get is the model's contribution rather than advertising's merit"
-  - title: Three settings decide the split
+  - title: What the contribution split measures
+    content: "The split spreads the change in sales back across the variables that explain it, so the baseline takes 18% and the channels divide the remaining 82%, and what you get is what the model credits rather than what advertising earned"
+  - title: The three settings decide what the split says
     content: "Baseline, saturation and lag are settled before anything is split, and changing the baseline from 20% to 40% moves search ads from 38% to 29% on the same data and the same model"
-  - title: Where the numbers break down
+  - title: Where the split stops meaning anything
     content: "Channels whose spends move together cannot be told apart, the model splits them anyway without warning, contribution rank is not a marginal return, and the fastest read on a report is comparing contribution share against spend share"
-  - title: What to do with the contribution numbers
+  - title: What to check before you act on the numbers
     content: "The numbers depend on three settings that differ between analysts, so two reports disagreeing is normal, and the three things to check are the baseline, the correlation between channel spends, and whether the ranking survives a change of settings"

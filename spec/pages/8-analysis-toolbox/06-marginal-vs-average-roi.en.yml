@@ -1,11 +1,11 @@
 id: 06-marginal-vs-average-roi
-title: Your channel's ROI is 2.28x. That number cannot tell you whether to spend more
+title: A 2.28x ROI tells you nothing about whether the next yuan pays
 sections:
   - title: One number looks backward, the other looks forward
     content: "Average ROI is total return divided by total spend, marginal ROI is what the last slice of money returned, and because marginal ROI is computed per spend band the first band can return 4.8x while the last returns 0.4x"
   - title: Working the numbers
     content: "The same month of search ads gives an average ROI of 2.28x and a marginal ROI of 0.4x, and the right number depends on the decision, since average ROI cannot set the order money gets spent in"
   - title: Four ways this breaks down
-    content: "Spend that was never split into bands yields no marginal ROI at all, bands too fine leave every marginal figure in the noise, average ROI measures booked rather than incremental return, and marginal ROI moves week to week"
+    content: "Spend that was never split into bands yields no marginal ROI at all, bands too fine leave every marginal figure in the noise, average ROI measures booked rather than incremental return, and marginal ROI moves month to month"
   - title: One rule to carry away
     content: "Average ROI has a floor of 1 and always looks acceptable, while marginal ROI can be 0 or negative, so the question of whether to spend more is answered by marginal ROI alone"

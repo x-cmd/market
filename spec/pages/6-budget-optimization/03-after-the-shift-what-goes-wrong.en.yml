@@ -1,13 +1,13 @@
 id: 03-after-the-shift-what-goes-wrong
-title: "A flat report after a budget shift usually means you read it too early"
+title: "A flat report after a budget shift means you read it too early"
 sections:
-  - title: "A flat report after a shift means the ratio moved, not the revenue"
-    content: "Watch ad spend as a share of revenue rather than total revenue, because the ratio divides out the market; Wayfair's ad ratio fell from 12.1% to 10.0% while it scaled, then climbed back to 12.42% while revenue fell 13.5%"
+  - title: "Watch the ad ratio, not total revenue"
+    content: "Ad spend as a share of revenue, not revenue itself, is the number that separates a market downturn from a media problem: Wayfair's ad ratio fell from 12.1% to 10.0% while it scaled, then climbed back to 12.42% while revenue fell 13.5%"
   - title: "The saturation point moved without telling you"
     content: "The saturation point k is not a constant: competing bids and internal cannibalisation push it up without showing up in the report, and reaching 90% of the ceiling takes 9^(1/alpha) times k, so it cannot be discovered by re-estimating k"
-  - title: "The window was too short, and the report punishes both sides"
+  - title: "A short window punishes both sides of the shift"
     content: "Adstock decay rates differ by channel (search 0.1-0.3, social around 0.7, television 0.7-0.9), so an early read shows the cut channel's effect already gone and the funded channel's effect not yet arrived; set the window by the slowest-decaying channel and mind the seasonal calendar"
   - title: "The total did not change, so only the structure can"
     content: "A budget shift is zero-sum, so only a better structure raises total return; average ROI hides a saturated channel, and the marginal ROI of the last band in the worked example is 0.4 against an average of 2.28"
-  - title: "The two checks that come right after a shift"
+  - title: "Two checks to run right after a shift"
     content: "Test whether volume still rises after adding 5-10% and set the observation window by the decay tail of the channel funded into, so a structural claim is never judged on a report that has not settled"

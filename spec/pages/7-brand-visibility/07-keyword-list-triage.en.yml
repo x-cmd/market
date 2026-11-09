@@ -1,11 +1,11 @@
 id: 07-keyword-list-triage
 title: "A keyword list is only worth the rows you can defend"
 sections:
-  - title: "A list that keeps growing is a list that stops working"
-    content: "Keyword lists fail from being too long, not too short: 42 running-shoe terms span a twelve-thousand-fold volume gap, adding a row is free while removing one costs a person, and most added terms answer four different questions at once"
-  - title: "Sorting a keyword list takes three looks, not a scorecard"
-    content: "Label each term as brand, category or competitor, then rank by whether it can tell you apart from every other brand on the results page, then check both halves of freshness: is anyone still searching it, and does it still mean the same thing"
-  - title: "Twelve terms survive, and the other 288 become a record of why"
+  - title: "A keyword list fails from being too long, not too short"
+    content: "42 running-shoe terms span a twelve-thousand-fold volume gap, adding a row is free while removing one costs a person, and most added terms answer four different questions at once"
+  - title: "Three checks decide what stays in the list"
+    content: "Label each term as brand, category or competitor, then ask whether it can tell you apart from every other brand on the results page, then check both halves of freshness: is anyone still searching it, and does it still mean the same thing"
+  - title: "Twelve terms survive, and the other 288 record why"
     content: "300 collected terms cut to 12 by three steps — bucket by type, drop the 241 that cannot tell you apart, then freshness-check the remaining 59 — with the 288 excluded terms moved to a second sheet carrying their reasons"
-  - title: "Sorting takes longer than collecting"
+  - title: "Sorting costs forty times what collecting does"
     content: "Sorting 300 terms takes 4 minutes each, 20 hours in total, against half an hour to bulk-import them, and stale terms are the expensive kind because they quietly contaminate the share figure and cost real money at Deckers"
