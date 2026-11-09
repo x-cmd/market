@@ -1,0 +1,15 @@
+id: 04-marginal-roi-decay
+title: One more dollar on that channel, will it still earn its keep
+sections:
+  - title: A good average tells you nothing about the next dollar
+    content: "Cumulative average ROI stays respectable while marginal ROI collapses, and the average can never fall below 1 while the marginal number can"
+  - title: What one more dollar actually buys
+    content: "Marginal ROI is one band's return over that band's spend, and it is not the same as incremental return once substitution is taken out"
+  - title: How to build the curve
+    content: "Cut the spend into equal-width bands, align time so ad effects land in the right band, then take the difference band by band"
+  - title: Where the extra money stops paying
+    content: "The turning point is where the marginal curve crosses 1.0, and a Hill curve puts it at a specific spend level"
+  - title: Three ways the average misleads
+    content: "The total can grow while efficiency falls, organic search can be booked to paid search, and new customers can flatter the average that later collapses"
+  - title: Decide on the last dollar, not the total
+    content: "Draw the curve for the channel that matters, read off the turning point, and stop the budget there"

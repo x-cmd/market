@@ -2,13 +2,11 @@
 
 "Customers say they're very satisfied. The interviews agree. Repeat purchase in the backend is one third."
 
-None of those three numbers is lying. They measure different things. A survey measures what people say. An interview measures what people say after someone leans on them. A backend log measures what actually happened. Each source leans in its own direction, by an amount you can estimate. That is what makes them useful together and useless apart.
+None of those three numbers is lying. They measure different things. A survey measures what people say. An interview measures what people say after someone leans on them. A backend log measures what actually happened. Each leans in its own direction, by an amount you can estimate — which is what makes them useful together and useless apart.
 
 ## One question, three incompatible answers
 
-Ask "would you buy from me" and the three sources point in different directions.
-
-Start with the hardest number. Every year the EU runs a household survey on internet use, asking each person when they last bought something online:
+Ask "would you buy from me" and the three sources point in different directions. Start with the hardest number. Every year the EU runs a household survey on internet use, asking each person when they last bought online:
 
 ```text
 https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E6%AC%A7%E7%9B%9F%202025%EF%BC%9A%E5%90%8C%E4%B8%80%E4%B8%AA%E9%97%AE%E9%A2%98%E3%80%8C%E4%BD%A0%E7%BD%91%E8%B4%AD%E8%BF%87%E5%90%97%E3%80%8D%EF%BC%8C%E6%8D%A2%E4%B8%AA%E6%97%B6%E9%97%B4%E7%AA%97%E5%B0%B1%E6%8D%A2%E4%B8%80%E4%B8%AA%E6%95%B0%22%7D%2C%22color%22%3A%5B%22%232563eb%22%2C%22%23f59e0b%22%2C%22%2364748b%22%2C%22%2394a3b8%22%2C%22%23dc2626%22%5D%2C%22xAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%22%E6%9C%80%E8%BF%91%203%20%E4%B8%AA%E6%9C%88%22%2C%223%20%E5%88%B0%2012%20%E4%B8%AA%E6%9C%88%E5%89%8D%22%2C%223%20%E4%B8%AA%E6%9C%88%E4%BB%A5%E4%B8%8A%22%2C%221%20%E5%B9%B4%E4%BB%A5%E4%B8%8A%22%2C%22%E4%BB%8E%E6%9D%A5%E6%B2%A1%E4%B9%B0%E8%BF%87%22%5D%2C%22axisLabel%22%3A%7B%22interval%22%3A0%7D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%22%E5%8D%A0%E4%B8%AA%E4%BA%BA%E6%AF%94%E9%87%8D%EF%BC%88%25%EF%BC%89%22%7D%2C%22grid%22%3A%7B%22left%22%3A90%2C%22right%22%3A50%2C%22top%22%3A60%2C%22bottom%22%3A60%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%2C%22axisPointer%22%3A%7B%22type%22%3A%22shadow%22%7D%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22%22%2C%22type%22%3A%22bar%22%2C%22data%22%3A%5B62.35%2C11.21%2C16.85%2C5.64%2C15.25%5D%2C%22label%22%3A%7B%22show%22%3Atrue%2C%22position%22%3A%22top%22%2C%22formatter%22%3A%22%7Bc%7D%22%7D%2C%22stack%22%3Anull%7D%5D%7D&w=760&h=420
@@ -24,9 +22,7 @@ Sixty-two versus seventy-four, an eleven-point gap with no change in population 
 
 ## Surveys lean toward the polite answer
 
-**A survey has two kinds of bias. One you can look up. One you cannot.**
-
-The one you can look up is **how the sample was drawn**. Spain's national statistics office (INE) broke down who did not answer its 2025 household ICT survey:
+**A survey has two kinds of bias. One you can look up. One you cannot.** The one you can look up is **how the sample was drawn**. Spain's statistics office (INE) broke down who did not answer its 2025 household ICT survey:
 
 ```text
 https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E8%A5%BF%E7%8F%AD%E7%89%99%202025%20%E5%AE%B6%E5%BA%AD%20ICT%20%E8%B0%83%E6%9F%A5%EF%BC%9A%E6%A0%B7%E6%9C%AC%E9%87%8C%E7%9A%84%E8%80%81%E4%BA%BA%EF%BC%8C%E6%8B%92%E7%AD%94%E6%97%B6%E6%9B%B4%E8%80%81%22%7D%2C%22color%22%3A%5B%22%232563eb%22%2C%22%23dc2626%22%2C%22%2364748b%22%2C%22%23f59e0b%22%2C%22%230891b2%22%2C%22%238b5cf6%22%2C%22%2365a30d%22%2C%22%23db2777%22%5D%2C%22xAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%2275%20%E5%B2%81%E4%BB%A5%E4%B8%8A%22%2C%2226-35%20%E5%B2%81%22%2C%22%E6%9C%89%E5%A4%96%E5%9B%BD%E4%BA%BA%E4%BD%8F%E6%88%B7%22%5D%2C%22axisLabel%22%3A%7B%22interval%22%3A0%7D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%22%E5%8D%A0%E8%AF%A5%E7%BB%84%E6%AF%94%E9%87%8D%EF%BC%88%25%EF%BC%89%22%2C%22axisLabel%22%3A%7B%22formatter%22%3A%22%7Bvalue%7D%22%7D%7D%2C%22grid%22%3A%7B%22left%22%3A80%2C%22right%22%3A40%2C%22top%22%3A80%2C%22bottom%22%3A60%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%7D%2C%22legend%22%3A%7B%22data%22%3A%5B%22%E5%8F%AF%E8%B0%83%E6%9F%A5%E4%BD%8F%E6%88%B7%E5%8F%A3%E5%BE%84%E9%87%8C%E5%8D%A0%E5%87%A0%E6%88%90%22%2C%22%E6%8B%92%E7%AD%94%20%2F%20%E7%BC%BA%E5%B8%AD%E7%9A%84%E4%BA%BA%E9%87%8C%E5%8D%A0%E5%87%A0%E6%88%90%22%5D%2C%22top%22%3A30%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22%E5%8F%AF%E8%B0%83%E6%9F%A5%E4%BD%8F%E6%88%B7%E5%8F%A3%E5%BE%84%E9%87%8C%E5%8D%A0%E5%87%A0%E6%88%90%22%2C%22type%22%3A%22bar%22%2C%22data%22%3A%5B16.13%2C10.93%2C9.41%5D%7D%2C%7B%22name%22%3A%22%E6%8B%92%E7%AD%94%20%2F%20%E7%BC%BA%E5%B8%AD%E7%9A%84%E4%BA%BA%E9%87%8C%E5%8D%A0%E5%87%A0%E6%88%90%22%2C%22type%22%3A%22bar%22%2C%22data%22%3A%5B32.81%2C12.45%2C39.46%5D%7D%5D%7D&w=760&h=420
@@ -36,13 +32,11 @@ https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E8%A5%BF%E
 
 Over-75s are **16.13%** of the eligible households but **32.81%** of the people who refused or were never reached. That is a doubling. Ages 26 to 35 are 10.93% of the sample and 12.45% of the absentees — young workers on trips or overtime, hard to reach.
 
-Valid responses came to **63.07%** of the theoretical sample. First contact: **50.42%**. Follow-up: **69.86%**. So **the older respondents were thinned out by refusals and missed contacts** — and older people are precisely the group that buys online least.
+Valid responses came to **63.07%** of the theoretical sample. First contact: **50.42%**. Follow-up: **69.86%**. So **the older respondents were thinned out by refusals and missed contacts** — and older people buy online least.
 
-### The kind you cannot look up: people answering to look good
+The second bias is **social desirability bias** — some things are hard to say out loud when someone is listening. France's statistics office (INSEE) has compared the two collection modes: with an interviewer present, respondents give an answer that makes them look better or fits social norms, sharpest on questions about alcohol, drugs, and sex. With self-completed questionnaires, the opposite bias appears — **satisficing**, where the respondent stops thinking and picks something easy. Both ends lean, in opposite directions.
 
-This is **social desirability bias**. In plain terms: some things are hard to say out loud when someone is listening. France's national statistics office (INSEE) has compared the two collection modes: with an interviewer present, the respondent gives an answer that makes them look better or fits social norms, and the effect is sharpest on questions about alcohol, drugs, and sex. With self-completed questionnaires, the opposite bias appears — **satisficing**, where the respondent stops thinking and picks something easy: the first option, the middle one, a round number, or nothing at all. Both ends lean, in opposite directions.
-
-### And one more layer: age decides the answer on its own
+### Age decides the answer on its own
 
 ```text
 https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E6%AC%A7%E7%9B%9F%202025%EF%BC%9A%E9%97%AE%E5%8D%B7%E9%87%8C%E3%80%8C%E6%9C%80%E8%BF%91%203%20%E4%B8%AA%E6%9C%88%E7%BD%91%E8%B4%AD%E8%BF%87%E3%80%8D%E7%9A%84%E6%AF%94%E4%BE%8B%EF%BC%8C%E6%8C%89%E5%B9%B4%E9%BE%84%22%7D%2C%22color%22%3A%5B%22%232563eb%22%5D%2C%22xAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%2216-24%20%E5%B2%81%22%2C%2225-34%20%E5%B2%81%22%2C%2235-44%20%E5%B2%81%22%2C%2245-54%20%E5%B2%81%22%2C%2255-64%20%E5%B2%81%22%2C%2265-74%20%E5%B2%81%22%5D%2C%22axisLabel%22%3A%7B%22interval%22%3A0%7D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%22%E5%8D%A0%E4%B8%AA%E4%BA%BA%E6%AF%94%E9%87%8D%EF%BC%88%25%EF%BC%89%22%7D%2C%22grid%22%3A%7B%22left%22%3A90%2C%22right%22%3A50%2C%22top%22%3A60%2C%22bottom%22%3A60%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%2C%22axisPointer%22%3A%7B%22type%22%3A%22shadow%22%7D%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22%22%2C%22type%22%3A%22bar%22%2C%22data%22%3A%5B69.48%2C77.92%2C75.06%2C65.26%2C52.02%2C35.06%5D%2C%22label%22%3A%7B%22show%22%3Atrue%2C%22position%22%3A%22top%22%2C%22formatter%22%3A%22%7Bc%7D%22%7D%2C%22stack%22%3Anull%7D%5D%7D&w=760&h=420
@@ -52,32 +46,24 @@ https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E6%AC%A7%E
 
 In the EU in 2025, 69.48% of 16-to-24-year-olds said they bought online in the last 3 months, against 35.06% for 65-to-74-year-olds. Half the rate. "Never bought" is starker still: 11.77% among 16-to-24s versus **29.17%** among 65-to-74s. Sample younger people and the penetration rate inflates on its own.
 
-### Light buyers who never show up in your logs
+The same survey asked those buyers how many orders they placed: **34.17%** placed only 1 to 2, 33.47% placed 3 to 5, 16.87% placed 6 to 10, and 15.30% placed more than 10. One in three "online shoppers" placed one or two orders — they count as buyers in the survey, but in your logs they may have one record, or none.
 
-The same EU ICT survey asked those buyers how many orders they placed: **34.17%** placed only 1 to 2, 33.47% placed 3 to 5, 16.87% placed 6 to 10, and 15.30% placed more than 10.
-
-One in three "online shoppers" placed one or two orders. They count as buyers in the survey. In your logs they may have one record, or none — they switched devices or cleared cookies and never entered your data.
-
-**The user count a survey produces and the user count your logs produce are two different numbers.** The gap is not error. It is a definition.
+**The user count a survey produces and the user count your logs produce are two different numbers.** The gap is not error, it is a definition.
 
 ## Interviews get led by whoever is sitting there
 
 **A survey's bias comes from memory and from the sample. An interview's bias comes from the person across the table.**
 
-The US National Survey of Family Growth (NSFG) ran an experiment on sensitive questions: audio computer-assisted self-interviewing (ACASI), where the respondent wears headphones and answers alone and the interviewer is not supposed to see the answers. The interviewer was still in the room.
-
-Researchers later asked interviewers how often they sat right next to the respondent, could see the screen, or reached over to help. The share who helped ranged from **under 5% to 50%** — a tenfold spread. Put "did the interviewer help" into the model and control for age, sex, race, and education:
+The US National Survey of Family Growth (NSFG) ran an experiment on sensitive questions: the respondent wears headphones and answers alone, and the interviewer is not supposed to see the answers. The interviewer was still in the room. Researchers later asked interviewers how often they sat right next to the respondent, could see the screen, or reached over to help. The share who helped ranged from **under 5% to 50%** — a tenfold spread. Put "did the interviewer help" into the model, controlling for demographics:
 
 - When the interviewer reached over to help, respondents were **less likely to report frequent marijuana use** (logit coefficient −0.21, p<0.01) and **less likely to report heavy drinking** (−0.14, p<0.10)
 - When the interviewer **sat right next to the respondent**, female respondents were less likely to say their first sexual intercourse was voluntary (−0.42, p<0.10)
 
 Sit closer, lend a hand, and the answer changes — and the difference survives controlling for every demographic. So when a customer says "your product is really good," how much is their own view, and how much did the interviewer's presence put there?
 
-### Interviews are the priciest and smallest, but they hold one thing no survey has
+Interviews are also the priciest and smallest: one "extremely satisfied" customer in a sample of a few dozen sets the tone of the whole report. But nobody shields the respondent from the interviewer's attention, or from a partner, a child, or a colleague. A questionnaire has nobody watching, so it drifts toward indifference; an interview has somebody watching, so it drifts toward enthusiasm. **The two biases point in opposite ways** — one conservative, one warm.
 
-A single "extremely satisfied" customer in a sample of a few dozen sets the tone of the whole report. And interviews are one-on-one: nobody shields the respondent from the interviewer's attention, or from a partner, a child, or a colleague. A questionnaire has nobody watching, so it drifts toward indifference; an interview has somebody watching, so it drifts toward enthusiasm. **The two biases point in opposite directions** — one conservative, one warm.
-
-What only interviews can do is **follow up**. A survey asks "why did you buy" and hands you preset options. An interview can press on: "you said it's good — good in what specific way?"
+What only interviews can do is **follow up**. A survey asks "why did you buy" and hands you preset options. An interview presses on: "good in what specific way?"
 
 ## Backend logs record the purchase but not the reason
 
@@ -85,7 +71,7 @@ What only interviews can do is **follow up**. A survey asks "why did you buy" an
 
 **Viewed, not bought. Compared, not bought.** A user opens three products, adds two to the cart, and never checks out. The log holds one session, two add-to-cart events, and zero revenue. Whether the denominator is "views" or "purchases" changes the number entirely.
 
-**Why they bought, and whether they would have bought anyway.** The backend knows the order, not the motive. Did the user arrive from search, from an ad, or from a colleague's share? The same "direct" visit can be an active search or a returning customer who bounced back. And "would they have bought without seeing this" is not in the data at all.
+**Why they bought, and whether they would have bought anyway.** The backend knows the order, not the motive. Did the user arrive from search, from an ad, or from a colleague's share? And "would they have bought anyway" is not there at all.
 
 Gordon, Zettelmeyer and Bhargava ran field experiments on Facebook to measure the real effect of the same ad campaign:
 
@@ -97,32 +83,30 @@ https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E5%90%8E%E
 
 The Facebook ad lift: comparing people who saw the ad against people who did not gives **316%**. Matching on every variable Facebook has gives **222%**. The randomized experiment says **73%**. The observational number overstates by more than four times, for a plain reason: **the ads were served to people who were already more likely to buy.** That is the trap in every "attribute this using the logs" exercise.
 
-The eBay experiment is more extreme. Blake, Nosko and Tadelis turned off brand-keyword search ads at random in their 2015 *Econometrica* paper. The observational return came out above **1400%**. The randomized truth was **−63%**, 95% confidence interval [−124%, −3%]. The ad produced no incremental sales; it took searches that were going to happen anyway. The paper also tried matching, regression correction, and propensity scores. None recovered the answer. **Observational methods cannot recover an experimental effect.**
+The eBay experiment is more extreme. Blake, Nosko and Tadelis turned off brand-keyword search ads at random in their 2015 *Econometrica* paper. The observational return came out above **1400%**. The randomized truth was **−63%**, 95% confidence interval [−124%, −3%]. The ad produced no incremental sales; it took searches that were going to happen anyway. The paper tried matching, regression correction, and propensity scores; none recovered the answer. **Observational methods cannot recover an experimental effect.**
 
-So backend data is not the source closest to the truth. It is the source that **records most precisely what happened** — precisely recording something already contaminated.
+So backend data is not the source closest to the truth. It is the one that **records most precisely what happened** — precisely recording something already contaminated.
 
 ## Three biases pointing opposite ways are what make them fit together
 
 **Lay the three biases side by side and they are not random noise. They are three systematic pulls in three different directions.**
 
-A survey remembers what was said plus a stretch of memory: it leans conservative, recent, and sample-shaped. An interview remembers what was said after being led: it leans warm and small-sample. A backend remembers what actually happened: it is missing the motive and the counterfactual.
+A survey remembers what was said plus a stretch of memory: it leans conservative, recent, and sample-shaped. An interview remembers what was said after being led: it leans warm. A backend remembers what actually happened: it is missing motive and counterfactual.
 
 Opposite directions are the useful part. The survey says "average," the interview says "excellent," the backend says repeat purchase is 34%. Where the three pull against each other is closer to the truth than any one alone.
 
 **But fitting together does not mean substituting.** The survey's age skew: the backend cannot fix it, because it only has the people who came to your store. The interview's tiny sample: the backend cannot fix it, because it cannot tell you why. The backend's inflated attribution: neither survey nor interview can fix it, because they ask about intent, not behavior.
 
-One class of question all three fail: **"why did they buy from us and not from someone else."** That needs an experiment, not another data source.
+One question all three fail: **"why did they buy from us and not from someone else."** That needs an experiment, not another data source.
 
 ## Ask four questions about any number before you believe it
-
-**Take any number and ask four questions.**
 
 | Question | Survey | Interview | Backend |
 |---|---|---|---|
 | **Who said it** | A sampled person, speaking | Someone speaking with company | A machine, recording |
-| **Time window** | "Last 3 months" or "past 12 months" — 11 points apart | The moment of the interview | Order timestamp, and you get to set it |
-| **Who is missing** | Over-75s are 16.13% of the sample and 32.81% of the refusers | Whoever was never invited, and you do not know who they are | Nobody logged in, switched device, was blocked by a cookie, or went offline |
-| **What shaped it** | Questionnaire design and sample frame | The interviewer, who helped between 5% and 50% of the time | Attribution assumptions: 1400% against −63% |
+| **Time window** | "Last 3 months" or "past 12 months" — 11 points apart | The moment of the interview | Order timestamp, and you set it |
+| **Who is missing** | Over-75s: 16.13% of the sample, 32.81% of the refusers | Whoever was never invited | Nobody logged in, switched device, was blocked by a cookie, or went offline |
+| **What shaped it** | Questionnaire design and sample frame | The interviewer, who helped 5% to 50% of the time | Attribution assumptions: 1400% against −63% |
 
 Four questions tell you how far to trust the number, and why it disagrees with the others.
 

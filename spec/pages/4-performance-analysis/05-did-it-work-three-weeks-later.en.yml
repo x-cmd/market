@@ -1,0 +1,15 @@
+id: 05-did-it-work-three-weeks-later
+title: A 1% lift three weeks in is not a verdict
+sections:
+  - title: The report shows a running total, not a campaign result
+    content: Why the dashboard number is everything that has happened so far rather than what the campaign produced, and how 4% of natural noise in a single category makes a real 3% lift impossible to see
+  - title: Three reasons the effect arrives late
+    content: The ad's own Adstock decay with its lambda parameter, the buyer's decision cycle that varies by category, and B2B budget approval — three different reasons a window that fits one channel and one category does not fit another
+  - title: A short window turns seasonality into your result
+    content: The 17.8% gap between February and December in EU retail turnover, how a promotion moves demand forward in time, and why a window that is too short makes waiting and stopping look identical
+  - title: How to find out whether the campaign worked
+    content: A contemporaneous control that waits as long as the campaign does, the time series instead of a single point, ruling out what else ran at the same time, and how the sample size a window buys you caps the precision
+  - title: A promotion that only shows up in week three
+    content: A worked example where the season and the campaign land in the same cell of the dashboard, and the same 260,000 of spend shows an ROI of 0.8 in week three and 1.78 in week eight
+  - title: Fix the window before you start, not after
+    content: The three things that set the window length, writing it into the brief before the spend, and why an effect that never arrives is also an answer rather than a reason to wait forever

@@ -17,14 +17,15 @@ data:
               on its own terms. It cannot answer whether the business is profitable, because
               the cost of the goods, the fulfilment, the salaries and the after-sales cost
               have not been deducted yet. In the worked example on this page, the 610,000 was
-              left over to pay 48,000 of goods, 30,000 of platform commission, 30,000 of
-              delivery and 75,000 of people — and the business was still 112,240 in the red.
+              left over to pay 48,000 of goods, 45,000 of platform commission, 30,000 of
+              delivery and 95,000 of people and after-sales — and the business was still
+              112,240 in the red.
           cn:
             >
               不是。你手上的是毛利减广告费，行业里叫贡献毛益，它只回答一个问题：
               这单生意本身值不值得做。它回答不了这家店赚不赚，因为货、履约、人力和售后
-              还没扣。这一页的算例里，那 61 万还要拿去付 4.8 万的货、3 万的佣金、
-              3 万的物流和 7.5 万的人——付完之后这家店还亏 11.22 万。
+              还没扣。这一页的算例里，那 61 万还要拿去付 4.8 万的货、4.5 万的佣金、
+              3 万的物流和 9.5 万的人与售后——付完之后这家店还亏 11.22 万。
         confidence: 10
         reference:
           - docs/4-performance-analysis/01-spend-and-revenue-together/cn.md
@@ -221,28 +222,28 @@ data:
           - docs/4-performance-analysis/01-spend-and-revenue-together/cn.md
       - id: how-much-warning-you-get
         question:
-          en: "How much warning does the table give you if it is kept every month?"
-          cn: "这张表要是每个月都在，能提前多久发现问题？"
+          en: "How much warning does the table give you if it is kept every period?"
+          cn: "这张表要是每期都在，能提前多久发现问题？"
         answer:
           en:
             >
-              About a month, in the example. The refund rate rose to 7% in the first quarter of
-              2025 while net profit was still positive. In April the share of gross profit
-              going to advertising crossed 70%. In May net profit turned negative for the
-              first time. So the sequence is: a leading indicator (ad spend as a share of
-              gross profit) crosses a line, then the lagging result follows. If the table
-              only ever appears once a quarter, that sequence is invisible — you would
-              see the negative number and nothing that explains it. The warning does not
+              The table turns a loss into a trend you can act on, because it splits the
+              result into lines that move at different speeds. On this page's example, the
+              leading line is ad spend per order: it went from 67 to 129 while revenue per
+              order barely moved. That is visible well before the net profit line turns
+              negative. The second leading line is the refund rate, which doubled from 4%
+              to 8% and cost 48,000 — and refund rates surface in the data before the money
+              does, because the return happens weeks after the order. The warning does not
               require better data. It requires the same three lines to be written down
-              every month, on the same definitions.
+              every period, on the same definitions.
           cn:
             >
-              在算例里大概是一个月。2025 年第一季度退款率涨到 7%，
-              净利还是正的；4 月广告占毛利越过 70%；5 月净利第一次为负。
-              顺序是：一个先行指标（广告占毛利）越线，然后结果指标才跟上。
-              如果这张表一个季度才出一次，这个顺序就看不见了
-              ——你只会看到一个负数，和一个解释不了它的原因。
-              提前量不需要更好的数据，需要的是同样那三行、每个月按同样的口径写下来。
+              这张表能把一个亏损变成一条可以提前看到的趋势线，因为它把结果拆成了
+              速度不同的几行。这一页的算例里，最先动的是每单广告成本：从 67 涨到 129，
+              而每单收入几乎没变。这一行在净利变负之前很久就能看出来。第二行是退款率，
+              从 4% 翻倍到 8%，值 4.8 万——退款率总是比钱先出现，因为退货发生在下单
+              几周之后。提前量不需要更好的数据，需要的是同样那三行、每期按同样的
+              口径写下来。
         confidence: 8
         reference:
           - docs/4-performance-analysis/01-spend-and-revenue-together/cn.md

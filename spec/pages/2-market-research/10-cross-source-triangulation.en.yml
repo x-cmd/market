@@ -1,0 +1,16 @@
+id: 10-cross-source-triangulation
+title: "Two numbers that disagree tell you more than one number that looks right"
+sections:
+  - title: A gap of several points usually means the definition changed
+    content: "NIKE says revenue was flat and down 2% at once, because the reported and constant-currency bases answer different questions, and EMEA reads +1% on one and −5% on the other"
+    subsections:
+      - title: When the gap is a factor, the denominator changed
+        content: "US retail is $8,351.0 billion in Census sales, $2,945.2 billion in BEA gross output and $1,810.4 billion in BEA value added, and the largest is 4.6 times the smallest"
+  - title: Two matching numbers can still be wrong
+    content: "Two sources that agree may share an upstream, and a number that appears twice may not be the same number, as in Amazon's $201.9 billion headline against $202.0 billion of segments"
+  - title: Pick a second source that fails differently
+    content: "The same method fails together, so the second source has to differ in method, and three criteria decide it: independent definition, alignable time window and known direction of bias"
+  - title: When they do not match, check the definition first, then the timing
+    content: "Denominator, coverage and population first, then end-of-period versus period average and cumulative versus current-period, and only afterwards ask who made the error"
+  - title: The second source tells you how the number can be wrong
+    content: "Predict the expected gap and its direction before looking, because a smaller gap means the source is not independent and a larger one means something is still unseen"

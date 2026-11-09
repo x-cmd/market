@@ -1,0 +1,23 @@
+id: 12-seasonal-vs-nsa
+title: "One month, two numbers, opposite stories"
+sections:
+  - title: The same month, a wide gap
+    content: "The same December and January read 127.1 against 122.9 and 110.6 against 119.9 across the two Eurostat conventions, because one number answers how much we sold and the other answers how far above normal we are"
+    subsections:
+      - title: How wide the seasonal swing gets
+        content: "December's raw-to-adjusted ratio is 1.161 and February's is 0.879, so the raw number alone can swing 32% on the calendar"
+      - title: US CPI comes in two versions too
+        content: "BLS marks the convention in the series ID itself, and the December 2022 CPI reads minus 0.31% unadjusted against plus 0.03% adjusted because the sale season sits inside the decline"
+  - title: What the adjustment actually does
+    content: "Seasonal factors divide the raw value by the month's recurring pattern, so the adjusted number answers how an ordinary month would have looked, and the official series is the one to use"
+  - title: Which one to use and when
+    content: "Adjusted for level and trend, raw for the books, and the July-versus-June case shows the same business reading as better on one number and worse on the other"
+  - title: Mixing them flips the conclusion
+    content: "Raw month-on-month bars swing from plus 12.7% to minus 3.9% while the adjusted bars hug zero, so one chart with both conventions reverses the conclusion"
+    subsections:
+      - title: Change the comparison and the story reverses
+        content: "The same December gives plus 12.8% raw and plus 0.4% adjusted, and the same January gives minus 20.3% raw against plus 0.3% adjusted"
+  - title: Year on year, month on month
+    content: "Year on year cancels the seasonal factor and works on either convention, while month on month divides by a December-to-January difference of 26% and therefore has to use the adjusted number"
+  - title: One chart, one convention
+    content: "One convention per chart, a caption naming the indicator, the convention and the cutoff date, and two charts rather than one when both have to appear"

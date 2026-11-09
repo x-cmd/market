@@ -56,6 +56,30 @@ data:
         confidence: 9
         reference:
           - docs/3-experiment-design/04-confidence-intervals/cn.md
+      - id: sample-size-doubling
+        question:
+          en: "I doubled the sample size and the interval barely moved. Did I do it wrong?"
+          cn: 我把样本量翻了一倍，区间几乎没收窄。是算错了吗？
+        answer:
+          en:
+            >
+              No, you ran into the square root. The standard error falls with the square
+              root of the sample size, so doubling the sample shrinks the interval to about
+              0.71 of its former width — roughly a 29% narrowing, not a halving. On this
+              page's own example, the half-width is 56 percentage points at 50 people per
+              arm, 29 at 200, and 9 at 2,000: 40 times the sample buys a sixfold narrower
+              interval. Buying certainty with traffic is a square root business, and the
+              last few points of precision are the most expensive ones.
+          cn:
+            >
+              没算错，你撞上的是平方根。标准误跟样本量的平方根成反比，所以样本翻一倍，
+              区间只收到原来的 0.71 倍——大约收三成，不是收一半。这一页自己的算例是：
+              每组 50 人时区间半宽 56 个百分点，200 人时 29 个，2000 人时 9 个。
+              **样本量翻 40 倍，区间宽度只收到六分之一。** 用流量换确定性是平方根级别的生意，
+              最后那一点精度是最贵的。
+        confidence: 9
+        reference:
+          - docs/3-experiment-design/04-confidence-intervals/cn.md
       - id: narrow-interval-wrong-model
         question:
           en: "The interval is narrow. Does that mean the conclusion is right?"
@@ -95,19 +119,20 @@ data:
             >
               Yes — you compare them by the difference, not by the two point estimates.
               With A at 4.0 (95% interval [1.2, 6.8], half-width 2.8) and B at 3.4
-              ([2.1, 4.7], half-width 1.3), the difference is 0.6. The standard error of
-              the difference is the two standard errors combined in quadrature, and 1.96
-              times that gives ±3.09, so the difference has a 95% interval of [−2.5, 3.7].
-              That interval straddles zero, which means the existing data cannot separate
-              the two channels. Two further points: a wider interval on A does not mean A
-              is worse, it means A's experiment was sloppier; and if the two channels were
-              measured as arms of the same experiment, you can compute the difference
-              directly instead of stacking two independent experiments' uncertainty.
+              ([2.1, 4.7], half-width 1.3), the difference is 0.6. Put the two standard
+              errors in quadrature and you get the standard error of the difference;
+              1.96 times that is ±3.09, so the difference has a 95% interval of
+              [−2.5, 3.7]. That interval straddles zero, which means the existing data
+              cannot separate the two channels. Two further points: a wider interval on A
+              does not mean A is worse, it means A's experiment was sloppier; and if the
+              two channels were measured as arms of the same experiment, you can compute
+              the difference directly instead of stacking two independent experiments'
+              uncertainty.
           cn:
             >
               能，但要比的是差值，不是两个点估计各自的值。A 是 4.0（95% 区间 [1.2, 6.8]，
-              半宽 2.8），B 是 3.4（[2.1, 4.7]，半宽 1.3），差值 0.6。差值的标准误是两个标准误
-              平方和再开根，1.96 倍是 ±3.09，所以差值的 95% 区间是 [−2.5, 3.7]。
+              半宽 2.8），B 是 3.4（[2.1, 4.7]，半宽 1.3），差值 0.6。两个标准误平方和再开根
+              是差值的标准误，1.96 倍是 ±3.09，所以差值的 95% 区间是 [−2.5, 3.7]。
               这个区间跨过零，意味着以现有数据分不出两个渠道的高下。另外两点：
               A 的区间更宽不代表 A 更差，只代表 A 那场实验设计得更糙；
               如果两个渠道本来就是同一场实验的两个组，差值可以直接算，
@@ -139,6 +164,30 @@ data:
         confidence: 9
         reference:
           - docs/3-experiment-design/04-confidence-intervals/cn.md
+      - id: wide-interval-not-bad-channel
+        question:
+          en: "Channel A's interval is much wider than channel B's. Does that make A the worse channel?"
+          cn: 渠道 A 的区间比渠道 B 宽得多。是不是说明 A 更差？
+        answer:
+          en:
+            >
+              No. The width of an interval says how much information you spent, not how
+              good the channel is. A wide interval means the experiment was noisy, the
+              sample was small, or the effect was hard to resolve — it says nothing about
+              the direction or size of the underlying effect. In this page's example, A
+              has ROI 4.0 with a half-width of 2.8 and B has 3.4 with a half-width of 1.3:
+              A's point estimate is higher and its interval is wider, and neither fact
+              makes A worse. Read the width as a verdict on the experiment, never as a
+              verdict on the channel.
+          cn:
+            >
+              不是。区间宽度说的是你花了多少信息，不是渠道好不好。区间宽说明实验吵、
+              样本小、或者效果难分辨，跟效果的方向和大小没关系。这一页的算例里，
+              A 的 ROI 4.0、半宽 2.8，B 的 3.4、半宽 1.3：A 的点估计更高，区间也更宽，
+              这两件事都不说明 A 更差。**把宽度当成对实验的评价，别当成对渠道的评价。**
+        confidence: 9
+        reference:
+          - docs/3-experiment-design/04-confidence-intervals/cn.md
       - id: picking-winner-from-many
         question:
           en: "I tested five cuts of the data and only one came out significant. Is that interval trustworthy?"
@@ -159,6 +208,32 @@ data:
               得到的区间会远窄于实际存在的不确定性，因为落选的那些切面从来没参与过宽度计算。
               **一个被筛选过的结果上的窄区间，说明不了真效果有多可能是真的。**
               要么把整族区间一起报出来，要么按比较次数做校正，要么在开跑前就把切哪个切面定下来。
+        confidence: 8
+        reference:
+          - docs/3-experiment-design/04-confidence-intervals/cn.md
+      - id: what-the-third-line-is-for
+        question:
+          en: "Why do I have to report the sample size and the metric definition too?"
+          cn: 为什么样本量和指标口径也得一起报？
+        answer:
+          en:
+            >
+              Because the interval alone is not self-contained. Two numbers can both be
+              "ROI 4.0, 95% interval [1.2, 6.8]" and still come from completely different
+              experiments: one might be six weeks of randomised assignment measuring
+              incremental order value within 14 days, the other two weeks of non-random
+              targeting measuring last-click revenue. The point estimate and the width
+              look identical on the page, but the second one does not mean the same thing.
+              The third line — n per arm, duration, assignment method, metric definition —
+              is what tells a reader six months later whether the number is comparable
+              to the one they already have.
+          cn:
+            >
+              因为光有区间不成话。两个数都写着「ROI 4.0，95% 区间 [1.2, 6.8]」，也可能
+              来自完全不同的实验：一个可能是六周随机分流、指标为 14 天内增量订单金额，
+              另一个是两周非随机定向、指标为末次点击收入。**点估计和区间宽度写在纸上
+              一模一样，第二个数的意思却不一样。** 第三行——每组样本量、实验时长、
+              分流方式、指标定义——是半年后别人判断这个数能不能跟自己手上的数放在一起比的依据。
         confidence: 8
         reference:
           - docs/3-experiment-design/04-confidence-intervals/cn.md
@@ -240,6 +315,32 @@ data:
               扣掉投放本身，可能只是持平。** 只读 4.0，「看起来稳赚」会变成更大的赌注；
               读 [1.2, 6.8]，它变成一个先小步试的决定。区间也有代价：
               实验跑了六周，10% 的流量被扣住，**严谨是有账单的。**
+        confidence: 8
+        reference:
+          - docs/3-experiment-design/04-confidence-intervals/cn.md
+      - id: what-the-third-line-is-for
+        question:
+          en: "Why do I have to report the sample size and the metric definition too?"
+          cn: 为什么样本量和指标口径也得一起报？
+        answer:
+          en:
+            >
+              Because the interval alone is not self-contained. Two numbers can both be
+              "ROI 4.0, 95% interval [1.2, 6.8]" and still come from completely different
+              experiments: one might be six weeks of randomised assignment measuring
+              incremental order value within 14 days, the other two weeks of non-random
+              targeting measuring last-click revenue. The point estimate and the width
+              look identical on the page, but the second one does not mean the same thing.
+              The third line — n per arm, duration, assignment method, metric definition —
+              is what tells a reader six months later whether the number is comparable
+              to the one they already have.
+          cn:
+            >
+              因为光有区间不成话。两个数都写着「ROI 4.0，95% 区间 [1.2, 6.8]」，也可能
+              来自完全不同的实验：一个可能是六周随机分流、指标为 14 天内增量订单金额，
+              另一个是两周非随机定向、指标为末次点击收入。**点估计和区间宽度写在纸上
+              一模一样，第二个数的意思却不一样。** 第三行——每组样本量、实验时长、
+              分流方式、指标定义——是半年后别人判断这个数能不能跟自己手上的数放在一起比的依据。
         confidence: 8
         reference:
           - docs/3-experiment-design/04-confidence-intervals/cn.md

@@ -4,13 +4,13 @@ Five selling points sit on the table. Everyone says theirs matters most. If you 
 
 ## Five that all claim first place is zero that made first
 
-**When every selling point claims to be important, none of them is.** "All important" in a meeting means nobody will agree to delete any of them, because each one has buyers behind it. But buyer memory and patience are not infinite: put five selling points side by side and people remember one. Half-built, all five show their seams. So there has to be a first, not "the best one" but "the one built first".
+**When every selling point claims to be important, none of them is.** "All important" in a meeting means nobody will agree to delete any, because each has buyers behind it. But buyer memory and patience are not infinite: put five selling points side by side and people remember one. Half-built, all five show their seams. So there has to be a first, not "the best one" but "the one built first".
 
 ## Averaging the scores destroys the information you need
 
 **"Important" is not a quantity you can average. Once you average it, no number carries any information.** The problem is the scoring act itself: five people score five selling points from 1 to 5, and the averages get taken.
 
-A 5 means "I care most", a 1 means "I do not care at all". When someone gives battery life a 3, they are thinking "battery life is third", not "60% importance". That is an **order**, not a **quantity**, and averaging an order gives back second-decimal-place differences that mean nothing in the original scores.
+A 5 means "I care most", a 1 means "I do not care at all". When someone gives battery life a 3, they are thinking "battery life is third", not "60% importance". That is an **order**, not a **quantity** — averaging an order gives back second-decimal-place differences that mean nothing in the original scores.
 
 A second problem hides underneath: **the denominator of an average is headcount, but the weights are all equal.** If four of your five people come from one segment and the fifth is the only dissenting voice, averaging washes that voice out, even though that fifth person may represent a funded segment. Say not "the average score ranks X first" but "the average score did not rank X first at all."
 
@@ -24,13 +24,13 @@ Scores convert into a number anyone can read: a selling point's share is the sha
 
 ### Intensity distribution: read the shape, not the average
 
-**Intensity distribution measures how badly the people who want it want it. You read the shape, not the mean.** It can be read off behaviour data. The EU ICT survey asks every year how many times people bought something online in the past three months. For EU 27 in 2025: 1–2 times took 21.31%, 3–5 times 20.87%, 6–10 times 10.52%, more than 10 times 9.54%. **Close to two thirds of people buy a handful of times a year, and the truly frequent 20% is only a third of the total.** Whether your first selling point aims at that 20% or the 40% who buy once changes everything.
+**Intensity distribution measures how badly the people who want it want it. You read the shape, not the mean.** It can be read off behaviour data. The EU ICT survey asks every year how many times people bought online in the past three months. For EU 27 in 2025: 1–2 times took 21.31%, 3–5 times 20.87%, 6–10 times 10.52%, more than 10 times 9.54%. **Close to two thirds of people buy a handful of times a year, and the truly frequent 20% is only a third of the total.** Whether your first selling point aims at that 20% or the 40% who buy once changes everything.
 
 ### Willingness to pay: how much money moves
 
-**Willingness to pay is the only measure that turns "I want it" into money.** Two groups can want the same selling point equally and still pay differently.
+**Willingness to pay is the only measure that turns "I want it" into money.** Two groups can want it equally and still pay differently.
 
-The **Van Westendorp price sensitivity meter**, from a 1976 ESOMAR conference, is a mature technique: ask four prices — so cheap it looks cheap, cheap, expensive, so expensive I would not buy. Crossing them yields an acceptable price range and an ideal price point. One detail gets skipped: **when "so cheap it looks cheap" lands far from the ideal price, that group is not very interested.**
+The **Van Westendorp price sensitivity meter**, from a 1976 ESOMAR conference, is a mature technique: ask four prices — so cheap it looks cheap, cheap, expensive, so expensive I would not buy. Crossing them yields an acceptable price range and an ideal price. One detail gets skipped: **when "so cheap it looks cheap" lands far from the ideal price, that group is not very interested.**
 
 Harder evidence comes from prices actually rising. **US furniture and home furnishings stores** (BEA retail sales): in 2019 the price index was 100 and implied volume was 100; in 2023 price was 116.1 and volume was 96.6.
 
@@ -64,15 +64,15 @@ https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E5%BC%BA%E
 
 **Ireland has the fattest shape**: 87.47% bought something, and 20.71% bought more than 10 times in three months, the highest of these nine. **Italy has the thinnest**: only 3.81% bought more than 10 times. **Hungary is the odd one**: 26.99% bought 1–2 times, plenty of buyers, most only once or twice.
 
-If your selling point maps to a deep, high-frequency need — subscriptions, replenishment, repeat purchase — the shape of Ireland and Greece supports it. If it maps to a one-off need, Italy and Spain support it. **The wrong shape does not become repeat purchase no matter how wide the base.**
+If your selling point maps to a deep, high-frequency need — subscriptions, replenishment, repeat purchase — the shape of Ireland and Greece supports it. A one-off need looks more like Italy and Spain. **The wrong shape does not become repeat purchase no matter how wide the base.**
 
 ## The top spot picked by average score ends up reversed
 
 **The first place an average score produces is not the first place you get after validation.** Averaging errs by converging: people give orders, not quantities, so all five selling points often land within a whisker of 4. Bunched up, first and second can differ by 0.1 and sit inside the noise. Worse, **averaging rewards whatever everybody finds acceptable.**
 
-A selling point that matters to 15% of people but enormously to those 15% scores "15% gave it a 5, 85% gave it a 1", averaging 1.6. One that matters a bit to 70% of people, with nobody caring much, averages 3.7. Averaging puts the second first, because the first gets dragged down by 85% of cold respondents. **But that 70% is where its value lives.** The 85% indifference is padding, not signal.
+A selling point that matters to 15% of people but enormously to those 15% scores "15% gave it a 5, 85% gave it a 1", averaging 1.6. One that matters a bit to 70% of people, with nobody caring much, averages 3.7. Averaging puts the second first: the first gets dragged down by 85% of cold respondents. **But that 70% is where its value lives.** The 85% indifference is padding, not signal.
 
-**Validation has to check behaviour, not ask the same question again.** Running the same "which do you value more" survey on a fresh group recomputes the average. Validation either means **shipping one selling point and not the other, then comparing the conversion gap** (see [experiment design](../../3-experiment-design/01-what-a-control-group-is/en.md)), or **looking at how the people behind this selling point behave differently**, like the frequency chart above.
+**Validation has to check behaviour, not ask the same question again.** Running the same survey on a fresh group recomputes the average. Validation either means **shipping one selling point and not the other, then comparing the conversion gap** (see [experiment design](../../3-experiment-design/01-what-a-control-group-is/en.md)), or **looking at how the people behind this selling point behave differently**, like the chart above.
 
 ## Say out loud which ruler you ranked by
 
@@ -84,6 +84,6 @@ A selling point that matters to 15% of people but enormously to those 15% scores
 
 **Sentence three: what would change the first place.** A ranking is not a verdict, it is a list with conditions. "If you rank by intensity instead of size, the first place becomes Z" beats "the first place is X".
 
-Where these three measures come from, and where each one breaks, is covered in [surveys, interviews and backend data, and which one gets closer to the truth](../06-survey-interview-behavior-bias/en.md).
+Where these three measures come from, and where each breaks, is covered in [surveys, interviews and backend data, and which one gets closer to the truth](../06-survey-interview-behavior-bias/en.md).
 
 **Data**: Eurostat `isoc_ec_ib20` individual internet purchase survey (EU 27 and each country, 2025); BEA retail sales `NIUnderlyingDetail-U00500` (sales T05008-M) and `NIUnderlyingDetail-U00700` (price index T07008-M), 2019–2023. Implied volume = sales ÷ price index, 2019 = 100, computed here. Van Westendorp: P. van Westendorp, 1976 ESOMAR. Data as of 2026-11-09. **Reproduce**: `x dbnomics data Eurostat/isoc_ec_ib20/A.IND_TOTAL.I_BF_GT10.PC_IND.EU27_2020`

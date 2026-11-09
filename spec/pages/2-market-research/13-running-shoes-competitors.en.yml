@@ -1,0 +1,17 @@
+id: 13-running-shoes-competitors
+title: "Nike's revenue has not grown in three years, and HOKA's parent doubled in five"
+sections:
+  - title: There is no official count of the running shoe market
+    content: "Running shoes have no official statistical definition, so the research starts from brand filings, where every number traces back to an audited statement"
+  - title: Four brands file with the SEC
+    content: "Nike, Skechers, Deckers and Wolverine revenue, with the fiscal year end date for each"
+  - title: The trap in that chart sits in the fiscal year column
+    content: "The four fiscal years end on four different dates, so comparing Skechers FY2024 with Deckers FY2026 reverses the conclusion"
+  - title: Four different trajectories over five years
+    content: "An incumbent going sideways, a challenger doubling, a contender climbing fast and an old brand retreating, visible only when the lines are read separately"
+  - title: The price cell falls back to CPI
+    content: "US footwear CPI rose about 6% over the decade, but footwear prices rising as a category does not mean every brand raised its prices"
+  - title: Four cells that stay empty
+    content: "Adidas, ASICS, New Balance and On are not in the SEC XBRL database, so the cells stay empty rather than filled with estimates"
+  - title: Align the years before you compare, and let the gaps stay gaps
+    content: "Four fates at once in the filings, fiscal years aligned before comparing, and the empty cells themselves carrying information"

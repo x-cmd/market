@@ -1,0 +1,15 @@
+id: 03-platform-metrics-vs-incremental-metrics
+title: Two numbers on the same ad spend answer two different questions
+sections:
+  - title: Putting the two side by side without mixing them
+    content: "Platform numbers and incremental numbers belong in separate columns, and the common mistake is adding them rather than picking the wrong one"
+  - title: What each ledger actually records
+    content: "The platform ledger books every order that touched an ad and is bounded by the attribution window; the incrementality ledger books only the orders that stop happening when the spend stops"
+  - title: Where the gap comes from
+    content: "Exposure is not random, a longer attribution window claims more orders, and demand that already existed gets credited to the ad"
+  - title: Put them in separate columns and never add them
+    content: "The header must name the method and the data cutoff, and adding the two numbers produces a meaningless total and an invented channel contribution"
+  - title: Which one to use, and when
+    content: "Platform method for optimization inside the platform, incremental method for whether the spend continues, and neither one works without a control"
+  - title: Two ledgers, each kept separate
+    content: "The two numbers are not competing on accuracy but answering different questions, so put them side by side, label method and date, and add nothing"

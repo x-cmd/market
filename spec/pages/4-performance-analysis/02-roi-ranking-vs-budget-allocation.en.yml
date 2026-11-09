@@ -1,0 +1,13 @@
+id: 02-roi-ranking-vs-budget-allocation
+title: "The highest-ROI channel is not the one that deserves the next dollar"
+sections:
+  - title: Why an ROI ranking cannot tell you where to add money
+    content: "ROI is computed on money already spent, so it answers a retrospective question; the average blends four spend levels together, and the channel with the best average is often the one you have already pushed closest to saturation"
+  - title: What average ROI hides
+    content: "Average ROI hides how much volume a channel absorbed and how well it performed on that volume; US search ad revenue falling behind social in 2025 shows what market-level saturation looks like, and picking up the cheapest traffic first explains the rest"
+  - title: What matters is the last dollar
+    content: "Marginal ROI, computed per spend level, gives a second and opposite ordering of the same four channels, and the winner of the average-ROI ranking is the loser of the marginal-ROI ranking"
+  - title: Of the four channels, the top one has already hit its ceiling
+    content: "Search ads are the only channel whose marginal return falls all the way down, and adding the same 200,000 to search returns 100,000 while the same 200,000 to social returns 580,000"
+  - title: Rank on average, allocate on the last dollar
+    content: "Three steps turn a ranking into an allocation — split spend into levels, compute marginal ROI per level, then add money to the highest marginal return; keep average ROI for reporting, and confirm both numbers are incremental before acting"

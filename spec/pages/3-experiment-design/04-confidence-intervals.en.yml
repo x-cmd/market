@@ -1,0 +1,17 @@
+id: 04-confidence-intervals
+title: "A number without its interval is half an answer"
+sections:
+  - title: Why ROI 4.0 needs a range attached
+    content: "The same eBay campaign gave ROI of 4100%, 1400%, and −63% depending on how it was measured, and the randomized interval [−124%, −3%] says the ads lost money"
+  - title: A point estimate is the best guess, not the most reliable number
+    content: "The gap between two point estimates is usually smaller than either interval's width, and the interval only covers the assumption that the model form is right, never that the model form itself is right"
+  - title: What the interval actually claims
+    content: "A 95% confidence interval means the true value falls inside it 95% of the time across repeated runs, not that this particular run is 95% certain, and an interval crossing zero only means the effect is undetectable"
+  - title: What sets the width
+    content: "Sample size, variability, and effect size decide it — 40 times the sample buys a sixth of the width, and halving the effect size requires four times the sample"
+  - title: Overlapping intervals do not block a comparison
+    content: "Compare the difference rather than the two point estimates: a 0.6 ROI gap with a difference interval of [−2.5, 3.7] is worth resolving only when the business volume makes it worth 600,000 a month"
+  - title: ROI 4.0, and an interval running from 1.2 to 6.8
+    content: "A consumer brand's search-ads test showed a point estimate of 4.0 and an interval of [1.2, 6.8], and that interval killed a planned 2,000,000 increase in spend"
+  - title: Report every number with its interval
+    content: "Say the point estimate, the interval width, and the sample size and setup the interval came from, and report the interval even when it is the number that argues against your own plan"

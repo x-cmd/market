@@ -1,0 +1,15 @@
+id: 02-promotion-pulls-demand-forward
+title: "A promotion that lifts the report by 40% may have added nothing at all"
+sections:
+  - title: How much of the November spike was ever new
+    content: "The November 2024 index jumped 3.6% on Black Friday but fell back over the next three months, and the same December reads +39.1% raw against minus 1.8% seasonally adjusted, so seasonality has to come off first"
+  - title: A promotion pulls future orders into the present
+    content: "Some buyers brought December purchases forward, so the extra November volume is exactly the December volume that went missing, and a November peak followed by three lower months is the signature of demand pull-forward rather than new demand"
+  - title: Align three windows, and read the three months after
+    content: "Align a three-month baseline, the promotion month and a three-month observation window, which for 2024 gives 112.53, 116.6 and 113.67, so a 3.6% promotion month leaves only 1.0% behind"
+  - title: Splitting out the part that was real
+    content: "The pull-forward share changes every year and has to be measured each time, and the four-month average ranges from +1.7% for cultural and entertainment goods to minus 0.4% for information and communication equipment"
+  - title: A 40% week that lands back where it started
+    content: "The promotion month column and the four-month net increment column diverge most for the categories with a promotion spike, which means the lift in the promotion month carries almost no information about whether the promotion worked"
+  - title: Price the promotion on the post-promotion books
+    content: "The ROI denominator has to be the post-promotion net increment, the baseline has to exclude promotion months, the observation window has to be free of the next promotion, and the test is that net increment at margin minus discount cost and operating cost"
