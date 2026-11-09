@@ -1,0 +1,15 @@
+id: 02-incrementality-testing
+title: "Incrementality is measured by withholding a slice of the map"
+sections:
+  - title: Incrementality is the orders that stop happening
+    content: "The orders that no longer happen once the ads stop are the increment, and computing how many go missing requires a slice of the map where no ads ran"
+  - title: Three ways to run one
+    content: "Geographic splits, ghost ads and timeline splits all randomise something, and each trades away sample size, money or validity"
+  - title: The numbers it produces
+    content: "CPC 2.40 dollars against CPIC 3.00 dollars, and 316% from the observational method against 73% from the randomised experiment"
+  - title: Four ways it goes wrong
+    content: "Two sides that were different to begin with, a sample too small, a test that ended too early, and treatment that leaked into the control group"
+  - title: When it is worth running
+    content: "The number has to move money or calibrate the observational method, otherwise the cost of the gap is not worth it"
+  - title: What to do with the number
+    content: "The platform's number is not fake, it answers a different question, and a single run does not extrapolate to next month's budget"

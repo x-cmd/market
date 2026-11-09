@@ -2,7 +2,7 @@
 
 In the same month, EU retail turnover fell 20.3% on the raw figure and rose 0.3% on the seasonally adjusted one. Same business. One number says it collapsed, the other says nothing happened.
 
-The data did not change. The definition did. The **raw figure** (NSA, not seasonally adjusted) records what actually happened: this is what we sold this month. The **adjusted figure** (SA) removes the recurring seasonal pattern of that month first, then shows what is left. Retail always peaks in December with Christmas and Black Friday and always dips in February after the holiday, so flattening those two ends is what makes the underlying business visible.
+The data did not change. The definition did. The **raw figure** (NSA, not seasonally adjusted) records what happened: this is what we sold this month. The **adjusted figure** (SA) strips out the seasonal pattern of that month first, and shows what is left. Retail always peaks in December with Christmas and Black Friday, and always dips in February after the holiday. Flattening those two ends is what makes the business visible.
 
 **Two things are covered here: why the two definitions disagree, and which one belongs on a chart.**
 
@@ -16,7 +16,7 @@ https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E6%AC%A7%E
 
 **Put the two numbers side by side and the gap explains itself.**
 
-Eurostat publishes one retail turnover series in three versions: not seasonally adjusted, calendar-adjusted but not seasonally adjusted (CA), and seasonally and calendar adjusted (SCA). The two used here are CA and SCA, both indexed to 2021 = 100.
+Eurostat publishes one retail turnover series in three versions: unadjusted, calendar-adjusted but not seasonally adjusted (CA), and seasonally and calendar adjusted (SCA). The two used here are CA and SCA, both indexed to 2021 = 100.
 
 In December 2025, CA reads **127.1** and SCA reads **122.9**, a gap of 4.2 points. In January, CA is **110.6** and SCA is **119.9**, a gap of 9.3 points.
 
@@ -32,23 +32,23 @@ https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E6%AC%A7%E
 
 <a href="https://x-cmd.com/draw/explore/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E6%AC%A7%E7%9B%9F%E9%9B%B6%E5%94%AE%E4%B8%9A%202022%E2%80%932025%20%E5%B9%B4%E5%B9%B3%E5%9D%87%E5%AD%A3%E8%8A%82%E5%BD%A2%E7%8A%B6%EF%BC%9A%E5%8E%9F%E5%A7%8B%E6%95%B0%20%C3%B7%20%E5%AD%A3%E8%B0%83%E6%95%B0%22%7D%2C%22color%22%3A%5B%22%232563eb%22%2C%22%23dc2626%22%2C%22%2364748b%22%2C%22%23f59e0b%22%2C%22%230891b2%22%2C%22%238b5cf6%22%2C%22%2365a30d%22%2C%22%23db2777%22%5D%2C%22xAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%221%E6%9C%88%22%2C%222%E6%9C%88%22%2C%223%E6%9C%88%22%2C%224%E6%9C%88%22%2C%225%E6%9C%88%22%2C%226%E6%9C%88%22%2C%227%E6%9C%88%22%2C%228%E6%9C%88%22%2C%229%E6%9C%88%22%2C%2210%E6%9C%88%22%2C%2211%E6%9C%88%22%2C%2212%E6%9C%88%22%5D%2C%22axisLabel%22%3A%7B%22interval%22%3A0%7D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%22%E5%80%8D%22%7D%2C%22grid%22%3A%7B%22left%22%3A90%2C%22right%22%3A50%2C%22top%22%3A60%2C%22bottom%22%3A60%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%2C%22axisPointer%22%3A%7B%22type%22%3A%22shadow%22%7D%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22%E5%8E%9F%E5%A7%8B%E6%95%B0%20%C3%B7%20%E5%AD%A3%E8%B0%83%E6%95%B0%22%2C%22type%22%3A%22bar%22%2C%22data%22%3A%5B0.9221%2C0.879%2C0.9898%2C0.9783%2C1.0048%2C1.0102%2C0.9912%2C1.0171%2C0.9753%2C1.0151%2C1.0329%2C1.161%5D%2C%22label%22%3A%7B%22show%22%3Afalse%2C%22position%22%3A%22top%22%2C%22formatter%22%3A%22%7Bc%7D%22%7D%2C%22stack%22%3Anull%7D%5D%7D&w=760&h=420"><img src="https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E6%AC%A7%E7%9B%9F%E9%9B%B6%E5%94%AE%E4%B8%9A%202022%E2%80%932025%20%E5%B9%B4%E5%B9%B3%E5%9D%87%E5%AD%A3%E8%8A%82%E5%BD%A2%E7%8A%B6%EF%BC%9A%E5%8E%9F%E5%A7%8B%E6%95%B0%20%C3%B7%20%E5%AD%A3%E8%B0%83%E6%95%B0%22%7D%2C%22color%22%3A%5B%22%232563eb%22%2C%22%23dc2626%22%2C%22%2364748b%22%2C%22%23f59e0b%22%2C%22%230891b2%22%2C%22%238b5cf6%22%2C%22%2365a30d%22%2C%22%23db2777%22%5D%2C%22xAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%221%E6%9C%88%22%2C%222%E6%9C%88%22%2C%223%E6%9C%88%22%2C%224%E6%9C%88%22%2C%225%E6%9C%88%22%2C%226%E6%9C%88%22%2C%227%E6%9C%88%22%2C%228%E6%9C%88%22%2C%229%E6%9C%88%22%2C%2210%E6%9C%88%22%2C%2211%E6%9C%88%22%2C%2212%E6%9C%88%22%5D%2C%22axisLabel%22%3A%7B%22interval%22%3A0%7D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%22%E5%80%8D%22%7D%2C%22grid%22%3A%7B%22left%22%3A90%2C%22right%22%3A50%2C%22top%22%3A60%2C%22bottom%22%3A60%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%2C%22axisPointer%22%3A%7B%22type%22%3A%22shadow%22%7D%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22%E5%8E%9F%E5%A7%8B%E6%95%B0%20%C3%B7%20%E5%AD%A3%E8%B0%83%E6%95%B0%22%2C%22type%22%3A%22bar%22%2C%22data%22%3A%5B0.9221%2C0.879%2C0.9898%2C0.9783%2C1.0048%2C1.0102%2C0.9912%2C1.0171%2C0.9753%2C1.0151%2C1.0329%2C1.161%5D%2C%22label%22%3A%7B%22show%22%3Afalse%2C%22position%22%3A%22top%22%2C%22formatter%22%3A%22%7Bc%7D%22%7D%2C%22stack%22%3Anull%7D%5D%7D&w=760&h=420" width="760" alt="eu_retail_seasonal_shape"></a>
 
-December's ratio is **1.161**: on average the raw number runs 16.1% above the adjusted one, because Christmas and Black Friday inflate that month. February is **0.879**, running 12.1% below. Every other month sits near 1.00.
+December's ratio is **1.161**: the raw number runs 16.1% above the adjusted one on average, because Christmas and Black Friday inflate that month. February is **0.879**, running 12.1% below. Every other month sits near 1.00.
 
 **The gap between peak and trough is 32%.** For this business, an unadjusted month-on-month number can be nothing but the calendar.
 
 ### US CPI comes in two versions too
 
-The US Bureau of Labor Statistics (BLS) puts the marker in the series ID itself: `CUUR` is not seasonally adjusted, `CUSR` is seasonally adjusted, and both are called "US city average CPI".
+The US Bureau of Labor Statistics (BLS) puts the marker in the series ID itself: `CUUR` is unadjusted, `CUSR` is adjusted, and both are called "US city average CPI".
 
-In December 2022, not-adjusted CPI moved **−0.31%** month on month while adjusted CPI moved **+0.03%**. One release, one month: one version says prices fell, the other says prices held. November is starker still: not adjusted **−0.10%**, adjusted **+0.24%**. **Those two unadjusted declines carry the sale season inside them: October is the price peak of the year, November opens with Christmas promotions and pushes the average price down, and December is still running them. The adjusted series strips that stretch out and leaves the line where prices were actually going.**
+In December 2022, unadjusted CPI moved **−0.31%** month on month while adjusted CPI moved **+0.03%**. One release, one month: one version says prices fell, the other says prices held. November is starker still: unadjusted **−0.10%**, adjusted **+0.24%**. **Both unadjusted declines carry the sale season inside them: October is the price peak of the year, November opens with Christmas promotions and pushes the average price down, and December is still running them. The adjusted series strips that out and leaves the line where prices were going.**
 
 ## What the adjustment actually does
 
 **One line: it subtracts the recurring pattern of that month and keeps "how far above normal".**
 
-The adjustment is not a guess. It looks at how much each month historically averaged above or below the annual average, producing a set of **seasonal factors**, then divides the raw value for that month by that month's factor. The quotient is the normal level, so the adjusted number answers: if this month had been an ordinary month, how would this business have looked, and are we above or below that?
+The adjustment is not a guess. It looks at how much each month historically averaged above or below the annual average, producing a set of **seasonal factors**, then divides the raw value for that month by that month's factor. The quotient is the normal level: it answers how this business would have looked had this been an ordinary month.
 
-Two cautions. **The adjusted number is deliberately not equal to the raw number in December.** Dividing the raw value by an average factor reproduces the rough shape only; the official series also handles moving holidays and leap years, so **use the official adjusted series rather than computing your own**. **The adjusted number moves.** The factors are recomputed each year, and the history moves with them.
+Two cautions. **The adjusted number is deliberately not equal to the raw number in December.** Dividing by an average factor reproduces the rough shape only; the official series also handles moving holidays and leap years, so **use the official adjusted series rather than computing your own**. **The adjusted number moves.** The factors are recomputed each year, and the history moves with them.
 
 ## Which one to use and when
 
@@ -70,11 +70,11 @@ https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%222025%20%E5%
 
 Look at the month-on-month bars for 2025: the raw series swings up and down, March **+12.7%**, September **−3.9%**, October **+4.4%**. The adjusted series hugs the zero line, topping out at +0.8% in April and bottoming at −0.3% in May.
 
-**The standard deviation of the raw month-on-month change is more than ten times that of the adjusted one.** All of that extra movement is calendar. February is a trough month, March gets lifted by that low base and jumps to +12.7%. September falls back to −3.9%, October returns to +4.4%. Put both sets of bars on one chart and a reader concludes the industry is wildly volatile. **It is not. The whole year runs as straight as a line.**
+**The standard deviation of the raw month-on-month change is more than ten times that of the adjusted one.** All of that extra movement is calendar. February is a trough month, so March gets lifted by that low base and jumps to +12.7%. Put both sets of bars on one chart and a reader concludes the industry is wildly volatile. **It is not. The whole year runs as straight as a line.**
 
 ### Change the comparison and the story reverses
 
-December 2025 offers two candidate headlines. Raw month on month: **+12.8%** (138.8 against 123.1). Adjusted: **+0.4%**. The raw number supports a title like "peak-season sales jump 12.8%, demand is strong". That title is wrong. Christmas lifts the number 12.8% every year, which has nothing to do with how strong demand is. January 2025 supports "retail collapses": raw month on month **−20.3%**, adjusted **+0.3%**.
+December 2025 offers two candidate headlines. Raw month on month: **+12.8%** (138.8 against 123.1). Adjusted: **+0.4%**. The raw number supports a title like "peak-season sales jump 12.8%, demand is strong". That title is wrong. Christmas lifts the number 12.8% every year, which says nothing about demand. January 2025 supports "retail collapses": raw month on month **−20.3%**, adjusted **+0.3%**.
 
 **January is always about a fifth below December. That is not a collapse, it is the Christmas bill coming due. Same business, same month, two candidate headlines — one says boom, one says crash — and the real answer is a third one: nothing much happened.**
 
@@ -82,7 +82,7 @@ December 2025 offers two candidate headlines. Raw month on month: **+12.8%** (13
 
 **Raw for year on year, adjusted for month on month.** This is arithmetic, not preference.
 
-**Year on year** compares this month with the same month last year. Last December was peak too, so the seasonal factor is the same on both sides and roughly cancels. **Year on year works on either convention.** One condition: the comparison has to use **the same calendar month**. Comparing December against January and calling it year on year is an error, not a year-on-year change. It is also unreliable when the same month a year earlier was itself unusually high or low.
+**Year on year** compares this month with the same month last year. Last December was peak too, so the seasonal factor is the same on both sides and roughly cancels. **Year on year works on either convention.** One condition: the comparison has to use **the same calendar month**. Comparing December against January and calling it year on year is an error, and the comparison is unreliable when that same month a year earlier was unusually high or low.
 
 ```text
 https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%222025%20%E5%B9%B4%E5%90%8C%E6%AF%94%EF%BC%9A%E5%8E%9F%E5%A7%8B%E5%8F%A3%E5%BE%84%E4%B8%8E%E5%AD%A3%E8%B0%83%E5%8F%A3%E5%BE%84%E5%87%A0%E4%B9%8E%E9%87%8D%E5%90%88%EF%BC%88%25%EF%BC%89%22%7D%2C%22color%22%3A%5B%22%232563eb%22%2C%22%23dc2626%22%2C%22%2364748b%22%2C%22%23f59e0b%22%2C%22%230891b2%22%2C%22%238b5cf6%22%2C%22%2365a30d%22%2C%22%23db2777%22%5D%2C%22xAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%221%E6%9C%88%22%2C%222%E6%9C%88%22%2C%223%E6%9C%88%22%2C%224%E6%9C%88%22%2C%225%E6%9C%88%22%2C%226%E6%9C%88%22%2C%227%E6%9C%88%22%2C%228%E6%9C%88%22%2C%229%E6%9C%88%22%2C%2210%E6%9C%88%22%2C%2211%E6%9C%88%22%5D%2C%22axisLabel%22%3A%7B%22interval%22%3A0%7D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%22%25%22%2C%22axisLabel%22%3A%7B%22formatter%22%3A%22%7Bvalue%7D%22%7D%7D%2C%22grid%22%3A%7B%22left%22%3A80%2C%22right%22%3A40%2C%22top%22%3A80%2C%22bottom%22%3A60%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%7D%2C%22legend%22%3A%7B%22data%22%3A%5B%22%E6%9C%AA%E5%AD%A3%E8%B0%83%E5%90%8C%E6%AF%94%22%2C%22%E5%AD%A3%E8%B0%83%E5%90%8C%E6%AF%94%22%5D%2C%22top%22%3A30%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22%E6%9C%AA%E5%AD%A3%E8%B0%83%E5%90%8C%E6%AF%94%22%2C%22data%22%3A%5B3.5%2C3.1%2C2.8%2C3.9%2C3.1%2C4.6%2C3.7%2C2.8%2C2.9%2C3.1%2C3.2%5D%2C%22type%22%3A%22bar%22%7D%2C%7B%22name%22%3A%22%E5%AD%A3%E8%B0%83%E5%90%8C%E6%AF%94%22%2C%22data%22%3A%5B3.5%2C3.1%2C3.0%2C3.8%2C3.2%2C4.7%2C3.7%2C2.9%2C2.9%2C3.2%2C3.2%5D%2C%22type%22%3A%22bar%22%7D%5D%7D&w=760&h=420
@@ -92,13 +92,13 @@ https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%222025%20%E5%
 
 From January to November 2025 the two conventions almost overlap: January 3.5% against 3.5%, June 4.6% against 4.7%, August 2.8% against 2.9%. The largest gap is 0.1 of a point. **That is why year on year can use the raw number.** It does not make the raw number more correct, only immune to the calendar in this comparison.
 
-**Month on month** compares this month with the one before. December and January sit far apart in seasonal terms (a ratio of 1.161 against 0.922, December 26% above January), and dividing by that difference pulls the whole seasonal pattern into the change. So month on month has to use the adjusted number. A negative month-on-month reading in peak season is normal: December's adjusted change already carries the high level it is supposed to have.
+**Month on month** compares this month with the one before. December and January sit far apart in seasonal terms (a ratio of 1.161 against 0.922, December 26% above January), and dividing by that difference pulls the seasonal pattern into the change. So month on month has to use the adjusted number. A negative month-on-month reading in peak season is normal: December's adjusted change already carries the high level it is supposed to have.
 
 ## One chart, one convention
 
 **A chart carries one convention, and the caption says which.**
 
-In practice: **the caption names all three things** — the indicator, the convention, and the source with the cutoff date. Something like "Eurostat retail turnover index, seasonally adjusted, 2021=100, Eurostat, through November 2025". **If both conventions have to appear, make it two charts**, and put the difference in the body text: "raw 127.1 in December, adjusted 122.9, a gap of 4.2 points, and the gap is Christmas." **Year on year and month on month do not belong on the same chart either**, because the denominators and their seasonal sensitivity differ.
+In practice: **the caption names all three things** — the indicator, the convention, and the source with the cutoff date. Something like "Eurostat retail turnover index, seasonally adjusted, 2021=100, Eurostat, through November 2025". **If both conventions have to appear, make it two charts**, and put the difference in the body text: "raw 127.1 in December, adjusted 122.9, a gap of 4.2 points, and the gap is Christmas." **Year on year and month on month do not belong on the same chart either**, because their denominators and seasonal sensitivity differ.
 
 **Before drawing a line, name the question it answers.** "Is the business getting better or worse" gets an adjusted line. "How much did we sell this month" gets a raw line, on a separate chart or table. The cost of mixing them is not a calculation error. **It is a conclusion that reverses.**
 

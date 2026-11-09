@@ -1,0 +1,267 @@
+id: x-market-4-performance-analysis-03-platform-metrics-vs-incremental-metrics
+
+data:
+  - name:
+      en: the two numbers you cannot add up
+      cn: 加不到一起的两个数
+    qa:
+      - id: platform-roas-vs-experiment-roas
+        question:
+          en: "My ad dashboard says ROAS 4.0. An experiment says 0.3. Which one do I report?"
+          cn: "广告后台显示 ROAS 4.0，实验测出来是 0.3，我该报哪个？"
+        answer:
+          en:
+            >
+              Both, side by side, each labelled. They are not competing estimates of one
+              number — they answer different questions. The platform figure counts every order
+              whose session touched the ad, divided by the spend. The experimental figure
+              counts only the orders that would not have happened without the ad. Reporting
+              one of them as "the" number throws away information; adding them together is
+              worse, because the incrementality orders are already inside the platform
+              count. The platform number ranks creative and bids against each other. The
+              incremental number decides whether the channel earns its money. If you have
+              to write one figure on a slide, say which question the slide is answering.
+          cn:
+            >
+              两个都写，并排放，各自标上口径。它们不是同一个数的两个估计，是两个问题的
+              两个答案。平台那个数是「这次会话碰过广告的订单」除以花费；实验那个数是
+              「没有这笔广告就不会发生」的订单。挑一个当"the number"是把信息扔掉，
+              加起来更糟——增量那部分订单本来就在平台那本账里。平台那个数用来在素材和
+              出价之间排序，增量那个数用来决定这条渠道值不值得投。必须在幻灯片上写一个
+              数的时候，说明这张幻灯片在回答哪个问题。
+        confidence: 10
+        reference:
+          - docs/4-performance-analysis/03-platform-metrics-vs-incremental-metrics/cn.md
+      - id: why-not-corrrect-platform-with-increment
+        question:
+          en: "Can I just divide the platform number by the incrementality number to correct it?"
+          cn: "我能不能用增量那个数去校正平台那个数？"
+        answer:
+          en:
+            >
+              No. There is no stable ratio between them, because the gap is created by three
+              different things that move independently. Exposure is not random — the platform
+              picks the people most likely to buy, and the observed method then reads that
+              selection as evidence of the ad. The attribution window sets how many orders get
+              claimed, and a 7-day window and a 30-day window give different answers for the
+              same spend. And existing demand gets credited to the ad even when the
+              customer would have arrived anyway. In eBay's non-brand search experiment the
+              observed ROI was 4100%, 1400% with time and geography controls, and minus 63%
+              under randomisation — three different gaps, not one multiplier.
+          cn:
+            >
+              不能。两个数之间没有固定比例，因为差距是三件各自独立的事造成的。曝光不是
+              随机的——平台挑的正是最可能买的人，观测口径把这个挑选读成了广告的功劳。
+              归因窗口决定认领多少单，7 天和 30 天窗口对同一笔花费给出不同的答案。
+              另外本来就要来的需求也会被算到广告头上。eBay 非品牌词实验里，观测口径
+              算出 4100%，加时间和地域控制变量是 1400%，随机实验测出 −63%——是三个
+              不同的差距，不是一个可以拿来做系数的倍数。
+        confidence: 9
+        reference:
+          - docs/4-performance-analysis/03-platform-metrics-vs-incremental-metrics/cn.md
+      - id: containment-not-parallel
+        question:
+          en: "Are platform-reported orders and incremental orders two separate buckets?"
+          cn: "平台报的订单和增量的订单，是两批不同的单吗？"
+        answer:
+          en:
+            >
+              No, they are nested. Every order that disappears when you stop the ads is also
+              an order that the platform counted, because that customer did touch the ad.
+              So the incremental figure is a subset of the platform figure, not a sibling of
+              it. Treat them as parallel and you double-count. In the worked example on this
+              page, the platform book records 1,000 orders and the incremental book records
+              250 of those same orders — adding them gives 1,250, of which 250 have been
+              counted twice. The correct picture is a big box with a smaller box inside it.
+          cn:
+            >
+              不是，是套在一起的。停投之后消失的那些单，同时也在平台那本账里，因为那个
+              客户确实碰过广告。所以增量那个数是平台那个数的子集，不是并列的另一批。
+              当成两批来算就会重复计数。这一页的算例里，平台那本账记 1000 单，增量
+              那本账记的是其中 250 单——加起来 1250 单，其中 250 单被数了两遍。
+              正确的画法是一个大盒子里装着一个小盒子。
+        confidence: 9
+        reference:
+          - docs/4-performance-analysis/03-platform-metrics-vs-incremental-metrics/cn.md
+  - name:
+      en: where the gap comes from
+      cn: 差距从哪来
+    qa:
+      - id: exposure-not-random
+        question:
+          en: "How much can the observed method overstate the real effect?"
+          cn: "观测口径能把真实效果高估多少？"
+        answer:
+          en:
+            >
+              Enough to change a decision. In Facebook's 2019 study of one retailer's
+              campaigns, the randomised experiment measured a 73% lift in conversion. The
+              observed comparison of exposed against unexposed users returned 316%, and
+              even matching on age and gender only brought it down to 222%. That is a
+              four-fold overstatement from a method most advertisers use by default. The
+              cause is straightforward: the ad system delivers to people who were already
+              going to buy, and the comparison attributes that prior intent to the ad. The
+              experiment group was 25.5 million people and only a quarter of them actually
+              saw the ad.
+          cn:
+            >
+              多到能改变决策。Facebook 2019 年那篇论文研究一个零售商的广告活动，随机
+              实验测出的转化率提升是 73%，而广告主常用的「曝光 vs 未曝光」算出来是 316%，
+              就算按年龄性别精确匹配也只降到 222%。这是默认方法造成四倍高估。原因是
+              明的：广告系统把广告投给本来就要买的人，而这种对比把那份先有的购买意向
+              算到了广告头上。实验组有 2550 万人，其中只有 25% 真看到了广告。
+        confidence: 10
+        reference:
+          - docs/4-performance-analysis/03-platform-metrics-vs-incremental-metrics/cn.md
+      - id: attribution-window-size
+        question:
+          en: "Does the attribution window change the number the platform shows?"
+          cn: "归因窗口会不会改变平台报出来的数？"
+        answer:
+          en:
+            >
+              Yes, substantially, and without a single extra yuan of spend. The window
+              defines the time limit after a click within which a purchase still counts as
+              the ad's. An order placed 25 days after the click belongs to the ad under a
+              30-day window and belongs to nobody under a 7-day window. Because attribution
+              tends to claim orders that were drifting toward a purchase anyway, the
+              longer the window the more orders get pulled in and the higher the reported
+              return goes. This is also why two advertisers' numbers are not comparable
+              out of the box: they may be running different windows without either of them
+              saying so on the report.
+          cn:
+            >
+              会，而且幅度不小，一分钱多花都不需要。窗口定义了点击之后多长时间内的购买
+              还算这笔广告的。点击后第 25 天下的单，在 30 天窗口里归给广告，在 7 天
+              窗口里就谁都不归。由于归因倾向于认领那些本来就在往成交走的订单，窗口越长
+              认领越多，报出来的回报也越高。这也是两个广告主的数不能直接比的原因：
+              他们可能在用不同的窗口，而报告上谁都不会写这件事。
+        confidence: 9
+        reference:
+          - docs/4-performance-analysis/03-platform-metrics-vs-incremental-metrics/cn.md
+      - id: negative-incremental-roi
+        question:
+          en: "Can the incrementality number actually be negative?"
+          cn: "增量的数还能是负的吗？"
+        answer:
+          en:
+            >
+              Yes, and it does not mean the ads did nothing. It means the ads captured
+              orders that would have happened anyway. In eBay's 2015 experiment on
+              non-brand search advertising, the observed ROI was 4100%, 1400% once time
+              and geography controls were added, and minus 63% under randomisation, with a
+              95% confidence interval from minus 124% to minus 3%. The spend did not create
+              new business; it partly intercepted customers who were already coming, and
+              they paid a price for it. A negative incrementality number is the clearest
+              possible signal that the channel is being paid for demand it did not produce.
+          cn:
+            >
+              能，而且负数不等于广告没起作用，而是广告截走了本来也会来的单。eBay 2015
+              年非品牌词搜索广告的实验里，观测口径算出 4100%，加时间和地域控制变量是
+              1400%，随机实验测出 −63%，95% 置信区间从 −124% 到 −3%。这笔钱没有带来
+              新生意，而是把一部分本来就会来的客户拦下来收了费。增量为负是最清楚的
+              信号：这个渠道是在为一笔它没创造出来的需求收钱。
+        confidence: 9
+        reference:
+          - docs/4-performance-analysis/03-platform-metrics-vs-incremental-metrics/cn.md
+  - name:
+      en: writing both down
+      cn: 两套数怎么写
+    qa:
+      - id: what-to-write-in-the-header
+        question:
+          en: "What exactly should go in the column header of a two-ledger table?"
+          cn: "两列并排的表头到底要写什么？"
+        answer:
+          en:
+            >
+              Three things: which measure each column holds, and the date the data runs to.
+              Say "platform report, 7-day click attribution" rather than "platform", and
+              "geo holdout test" rather than "incrementality", then give the same cut-off
+              date for both columns. Without the window in the header, a reader cannot tell
+              whether two columns are comparable at all. And if a column has no measurement
+              behind it, write that it has none. Leaving it blank invites someone to
+              multiply the platform number by an invented factor.
+          cn:
+            >
+              三件事：这一列装的是什么口径，数据截至哪天。写"平台报表，7 天点击归因"
+              而不是"平台"，写"geo 随机对照实验"而不是"增量"，两列给同一个数据截止日。
+              表头里没有窗口，别人就没法判断两列到底能不能比。某一列背后没有实测，
+              就写明没有，留空会招来有人拿平台那个数乘个编出来的系数。
+        confidence: 10
+        reference:
+          - docs/4-performance-analysis/03-platform-metrics-vs-incremental-metrics/cn.md
+      - id: which-ledger-for-which-question
+        question:
+          en: "I want to compare two creatives. Which number do I use?"
+          cn: "我要比较两个素材，用哪个数？"
+        answer:
+          en:
+            >
+              The platform number, and that is what it is good at. Bidding, targeting,
+              creative and audience decisions all happen inside the platform's own rules,
+              so the platform's report is the scoreboard for those actions — and it is fast
+              and free compared with running an experiment. What it cannot do is tell you
+              whether the channel as a whole is worth continuing to fund, because that
+              question needs a counterfactual and the platform does not have one. The
+              incrementality test is for the money question, not for the creative question.
+          cn:
+            >
+              用平台那个数，而这正是它擅长的事。出价、定向、创意、人群包这些动作都发生在
+              平台自己的规则里，平台的报表就是这些动作的评分板，而且比做实验快得多、
+              不用花钱。它做不到的是告诉你这条渠道整体该不该继续投，因为那个问题需要
+              一个反事实，而平台手里没有。增量测试是回答钱的那个问题，不是回答素材的
+              那个问题。
+        confidence: 9
+        reference:
+          - docs/4-performance-analysis/03-platform-metrics-vs-incremental-metrics/cn.md
+      - id: geo-cpc-vs-cpic
+        question:
+          en: "How big is the gap between reported cost per click and cost per incremental click?"
+          cn: "平台报的每次点击成本和每次增量点击成本，差多少？"
+        answer:
+          en:
+            >
+              In one Google geo experiment, the reported CPC was 2.40 dollars and the
+              measured cost per incremental click was 3.00 dollars — the platform number
+              understates the real cost by 20%. The reason is substitution: 20% of the paid
+              clicks were taken from organic search on the same site, so the advertiser
+              paid for clicks that were going to happen anyway. Note that this is a
+              click-level substitution rate, not a conversion-level one, and it comes from
+              a single advertiser's experiment, not an industry average.
+          cn:
+            >
+              在一次 Google 的 geo 实验里，平台报的 CPC 是 2.40 美元，测出来的每次增量
+              点击成本是 3.00 美元——平台那个数把真实成本低估了 20%。原因是替代：付费
+              点击里有 20% 是从同站自然搜索抢来的，广告主为本来就会发生的点击付了钱。
+              要注意的是，这是点击层面的替代率，不是成交层面的，而且来自单个广告主的
+              实验，不是行业平均。
+        confidence: 9
+        reference:
+          - docs/4-performance-analysis/03-platform-metrics-vs-incremental-metrics/cn.md
+      - id: no-holdout-no-increment
+        question:
+          en: "Can I estimate the incremental number from the platform number if I have never run a test?"
+          cn: "从来没做过实验，能不能用平台那个数估一个增量出来？"
+        answer:
+          en:
+            >
+              No. Without a control group you do not have an incremental number, only a
+              platform one. The gap between them depends on how the ad was targeted, how
+              long the attribution window is, and how much of the demand was already there
+              — none of which you can read off a dashboard. The one thing the geo
+              experiment gives you is a feel for the size of the gap: 20% of paid clicks
+              turned out to be substituted organic clicks for that advertiser. Treat that
+              as a reminder that the platform figure is systematically optimistic, not as
+              a coefficient you can apply to your own numbers. What you can do this month
+              is put a holdout in place so that the second ledger exists next quarter.
+          cn:
+            >
+              不能。没有对照组，你手里只有平台那本账，没有增量那本账。两者的差距取决于
+              广告怎么投、归因窗口多长、需求本来就有多少，这些都读不出来。geo 实验能
+              告诉你的是差距大概在什么量级：那个广告主的付费点击里有 20% 是被抢走的
+              自然点击。把它当成「平台那个数系统性偏乐观」的提醒，而不是一个可以套在
+              自己数字上的系数。这个月能做的是先把对照组安排上，让下一季度有第二本账。
+        confidence: 8
+        reference:
+          - docs/4-performance-analysis/03-platform-metrics-vs-incremental-metrics/cn.md

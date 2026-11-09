@@ -35,6 +35,39 @@ series:
       content: 固定形状的数字每周换：3 张图、1 张表、5 句话、1 条重跑命令
     - title: 交给 agent 的时候，给它三样东西
       content: 干什么、照哪张口径卡、做完怎么验。第三样最要紧——没验收标准，拿到的是长得像的交付物
+    title_en: Eight steps turn a market question into a report you can defend
+    sections_en:
+    - title: Write down the question
+      content: 'The trade word is brief: one sentence of question, one deliverable, one audience, one
+        deadline. A human decides; an agent can propose candidate questions'
+    - title: Draw the boundary around what counts
+      content: 'The trade word is scope: which territory, which time window, whether you count yourself.
+        Scope decides whether later numbers can be compared at all'
+    - title: Pick the one number that counts
+      content: 'The trade word is source of truth: one metric has one authoritative origin, and the metric
+        card is its machine-readable form'
+    - title: Compute
+      content: 'The trade word is compute: follow the formula on the card. The usual failure is not a
+        wrong calculation but computing a different thing'
+    - title: Draw
+      content: 'The trade word is visualize: one chart per section, one point per chart, and the data
+        carried inside the draw URL'
+    - title: Write
+      content: 'The trade word is narrative: a plain-language paragraph per section plus a takeaway, the
+        one line the reader keeps'
+    - title: Check
+      content: 'The trade word is QA: a ten-item checklist to work through before filing, with the agent
+        checking once and a human checking again'
+    - title: Ship
+      content: 'The trade word is deliver: report plus data appendix plus reproduction scripts, all three
+        together, and the report is not credible without them'
+    - title: One run through, end to end
+      content: A real run on EU e-commerce penetration, with one excerpt from each of the eight steps
+    - title: The one you rerun every week
+      content: 'Same shape, new numbers: 3 charts, 1 table, 5 sentences, 1 rerun command'
+    - title: Three things to hand an agent
+      content: What the step is for, which metric card to follow, how to check the result. The third one
+        matters most, because without an acceptance test you get a deliverable that only looks right
   - id: 02-market-share-chart
     title: 你说的 23%，跟别人说的 23%，是一回事吗
     value: 做出一张别人不会误读的市场份额图
@@ -73,6 +106,22 @@ series:
       content: 分母是谁、分子装了什么、我跟它在同一个框里吗
     - title: 你报的其实是「某个框里的 23%」
       content: 你报出去的是「在某个框里的 23%」
+    title_en: Two Numbers Called 23% May Not Be the Same Number
+    sections_en:
+    - title: A bar chart answers who leads — and hides what it divides by
+      content: Why the denominator, not the bar length, is the hard part of a market share chart
+    - title: What the share is measured against
+      content: One denominator and two numerators, 11.33 points apart in the EU and 30 points in Hungary
+    - title: The Same "Ecommerce" Can Be Two Different Businesses
+      content: The B2C share of web sales separates Cyprus retail from Hungarian wholesale
+    - title: Where the number can mislead you
+      content: The frame boundary you cannot see, and why Germany's series looks nothing like Spain's
+    - title: Four companies, one chart
+      content: Revenue against growth shows who leads and who is taking share as different questions
+    - title: Three sentences that make the number defensible
+      content: The denominator, the numerator, and the frame — the three answers a share chart must give
+    - title: The number you publish is a 23% inside some frame
+      content: How to answer a challenge from a different 23% without changing your own number
   - id: 03-growth-chart
     title: 这门生意还值不值得进
     value: 判断这门生意还值不值得进
@@ -98,6 +147,20 @@ series:
       content: 一个用行业产出份额算集中度的市场
     - title: 先看这三个数，再决定进不进
       content: 规模、增速、集中度三格数字，每一格都要带口径
+    title_en: Is This Market Still Worth Entering
+    sections_en:
+    - title: Read these two numbers first
+      content: A scale line and a growth line on one chart, and why a bars-only chart misleads
+    - title: '"How big is this market" has three answers'
+      content: Gross output, intermediate inputs, and value added, and why only value added compares across
+        industries
+    - title: Is It Real Growth, or Only Higher Prices
+      content: The difference between nominal and real growth, and the EU retail case that flips the reading
+    - title: Does a Few Giants Call the Shots
+      content: CR4 and HHI, and why the HHI number here is a floor rather than a true value
+    - title: Read These Three Numbers Before Deciding
+      content: Scale, growth, and concentration side by side, with the measurement basis attached to each
+        cell
   - id: 04-price-band-chart
     title: 你的价格，在品类里站得住吗
     value: 看出自己的价格在品类里站不站得住
@@ -120,6 +183,27 @@ series:
       content: 一个价格带从 30 到 300 的家居品类
     - title: 你站不站得住，看你落在哪一档
       content: 边界、价格带、促销节奏、季节性四件事
+    title_en: Your price only holds up if the category agrees
+    sections_en:
+    - title: Find your band before you read anything else
+      content: Bands are ordered by price with each one's volume share, so you can locate your own position
+        in the category
+    - title: Draw the category boundary before you draw the bands
+      content: Frame the category by product or by channel type, and decide whether service and installation
+        are included
+    - title: Cut the bands by volume, not by instinct
+      content: Find the prices where cumulative volume hits 25%, 50%, and 75% instead of hand-picking
+        tiers
+    - title: What a real category's bands look like
+      content: Run the method on US furniture and home furnishings stores, and see volume share diverge
+        from revenue share
+    - title: Promotion runs deepest in the middle, and never at the top
+      content: Why the middle bands clear inventory with discounts while the top band protects its positioning
+    - title: How hard you discount has to be predictable
+      content: How many sale events per year, how deep, which kind of promotion, and how far peak sits
+        from trough
+    - title: Four boxes decide whether your position holds
+      content: Boundaries, bands, promotion rhythm, and seasonality all have to be filled in
   - id: 05-ad-spend-chart
     title: 再花一块钱，能多换回多少
     value: 知道再花一块钱能多换回多少
@@ -144,6 +228,24 @@ series:
       content: 人群变大、素材变好会右移；竞争加剧、疲劳会左移
     - title: 加不加量，看最后一块钱
       content: 排序看平均，加钱看边际；「还能加量」要有数支撑
+    title_en: How much does one more dollar of ad spend buy back
+    sections_en:
+    - title: Read the curve to see if more budget still pays
+      content: Marginal ROI by spend band, so you can see at what point extra budget stops paying
+    - title: A good average does not mean there is room to add
+      content: Average ROI stays above 1 while marginal ROI falls through it and turns negative
+    - title: Put it in money
+      content: A month of search ads costing 300,000 where three tenths of the sales would have happened
+        anyway, leaving 1.4x real ROI instead of 2x
+    - title: One account's actual curve
+      content: A DTC store going from 2,000 to 8,000 a day, where orders flatten in week three and fall
+        in week four
+    - title: The line you compute today can move tomorrow
+      content: A bigger audience and better creative shift the curve right; competition, fatigue, and
+        season shift it left
+    - title: The last yuan decides whether you scale
+      content: Rank channels on average ROI but allocate budget on marginal ROI, and back any scaling
+        decision with a number
   - id: 06-incrementality-chart
     title: 没有广告，这些单会成交吗
     value: 分清广告赚到的和本来就有的
@@ -178,6 +280,32 @@ series:
         content: 看总差不逐个解释；五问一起问会抬高假阳性
     - title: 别把收割当成创造
       content: 两个数都是真的，错的是当成同一个数
+    title_en: The ROAS on your dashboard is not the return on your next dollar
+    sections_en:
+    - title: Two ledgers, and where they part
+      content: The platform ledger counts every order that touched an ad; the incrementality ledger counts
+        only the orders that vanish when the spend stops, and the eBay experiment shows the difference
+        — regression said 4100%, randomization said -63%
+    - title: The gap can be enormous
+      content: Facebook's own 15 field experiments put the true lift at 73% while the platform's usual
+        method reported 316%, and the three conversion rates side by side show where the extra 243 points
+        come from
+    - title: Exposure is not random, and that is the source of the gap
+      content: People who see an ad are already likelier to buy, and you cannot see who saw what, so every
+        unmeasured difference between the two piles gets credited to the ad
+    - title: So where exactly do the two ledgers differ?
+      content: Brand keyword ads have almost no measurable short-term return while non-brand ads help
+        new and infrequent users, which is why the question is which ads create demand and which harvest
+        it
+    - title: The platform is not lying to you
+      content: The platform answers which orders touched an ad, and it answers well; how much the ads
+        created is a different question needing a different set of tools
+    - title: No control group, no incrementality
+      content: Hold back a few cities or one stretch of time, keep the two ledgers apart, and remember
+        that observational methods overstate, sometimes turning a negative into a positive
+    - title: Do not read harvesting as creating
+      content: Both numbers are real; the mistake is treating them as the same number, and without a measurement
+        the floor is to stop calling harvested demand created
   - id: 07-eight-tools-in-one-table
     title: 八个工具，一张表
     value: 知道八个工具各管什么、什么时候查哪个
@@ -188,6 +316,26 @@ series:
       content: 哪一步解决哪个问题
     - title: 哪几篇讲过
       content: 每篇列出用了哪几个
+    title_en: 'Eight tools, one table: pick by the question, not by the number'
+    sections_en:
+    - title: What each tool owns
+      content: 'One table for all eight tools: what each does, what goes in, what comes out, where on
+        the site it is covered, and why the differing output units stop them being interchangeable'
+    - title: Which link in the chain each one answers
+      content: 'Three kinds of tools with three sources of confidence, then the three steps they answer
+        in order: who touched the order, how many orders disappear if you stop, and where the next dollar
+        goes'
+    - title: 'Looking back: who touched this order'
+      content: Attribution answers it, and it counts who touched an order rather than who created one
+    - title: 'Stopping: how many orders disappear if you stop'
+      content: Incrementality testing answers it, and eBay and Facebook show the observational reading
+        overstating the experimental effect by four times or more
+    - title: 'Looking forward: where the next dollar goes'
+      content: Marginal ROI, equal marginal returns and confidence intervals answer it in sequence, from
+        the last dollar of a channel to whether the gap between channels survives its own error bar
+    - title: Where each one is covered again
+      content: A cross-reference table of every other page on the site that uses each tool, showing that
+        the toolbox tools arrive in pairs rather than alone
 - id: 2-market-research
   stage: 数从哪来
   title: 市场调研
@@ -212,6 +360,31 @@ series:
       content: 规模大集中度低、增速高且集中度也升、规模小增速高，各说明什么
     - title: 四格数字，每一格都要说清是谁量的
       content: 四格数字，每一格都要带口径
+    title_en: Three numbers decide whether an industry is worth entering
+    sections_en:
+    - title: The eight cells a usable industry entry fills
+      content: 'Size, growth and concentration come in a fixed order, and the entry itself needs eight
+        cells: definition and boundary, size, growth, concentration, price bands, seasonality, and sources'
+    - title: '"How big is the industry" has three answers'
+      content: Turnover, combined wholesale and retail turnover, and value added all size EU retail correctly,
+        and the three differ by a factor of 19
+    - title: Growth in euros or growth in goods
+      content: EU retail grew 19.5% nominally from 2021 to 2025 and 1.6% in real terms; the same gap is
+        far wider country by country
+    - title: How much of the industry the giants decide
+      content: 94.9% of EU retail enterprises take 21.5% of turnover while 0.11% take 50.7%, and the CR4
+        and HHI cells stay empty for lack of company-level data
+    - title: What the three numbers say about the business
+      content: Three combinations of size, growth and concentration, and why the direction of change matters
+        more than the level
+    - title: Every number needs to name who measured it
+      content: 'The four-grid entry: size, growth, concentration and definitions, where the fourth grid
+        decides whether the first three can be used'
+    - title: The seasonality cell is the easiest one to get wrong
+      content: December 2024 reads 138.8 on the calendar-adjusted index and 119.6 on the seasonally adjusted
+        one, and the 19-point gap is Christmas
+    - title: The number you publish carries its own definitions
+      content: The value of an industry entry is the sentence behind the number, not the number itself
   - id: 02-category-entry-price-bands-promo-cadence
     title: 这个品类，价格怎么排，促销打多狠
     value: 写出一份品类条目，画出价格带和促销节奏
@@ -230,6 +403,30 @@ series:
       content: 从月度序列里读出来，季调数在这里有用
     - title: 这四件事：边界、价格带、促销节奏、季节性
       content: 边界、价格带、促销节奏、季节性四件事
+    title_en: The cheapest beef sells 45% of the volume and the priciest sells 26%
+    sections_en:
+    - title: Settle the boundary before anything else
+      content: 'Raw retail beef in four cut bands, and the three questions that fix the boundary: group
+        by what is sold or by how it is sold, whether services and installation count, and whether tax
+        counts'
+    - title: Place yourself in the category before you analyze it
+      content: Household spend divided by unit price gives pounds per band, and the resulting table shows
+        the cheapest band sells the most volume while the priciest band earns 1.8 times more per pound
+    - title: Cut the price bands by volume, not by instinct
+      content: Named tiers can hold two bands whose volume differs tenfold; cut at volume quartiles instead,
+        and note that band order by volume is not band order by price
+    - title: How hard the discounts land, in numbers you can predict
+      content: How many events a year, how long each runs, and how deep it goes, computed from the CPI
+        price index with the 1% moving-average rule, and what that computation cannot tell you
+    - title: Where the discounts concentrate tells you what each band is made of
+      content: 'Deepest discounts land in the upper middle: the cheapest band is pinned by cost, the priciest
+        protects its price, and the middle band lives on promotions'
+    - title: How far peak season sits from the trough
+      content: Not-seasonally-adjusted divided by seasonally-adjusted index gives the monthly seasonal
+        factors, with a 2.72 point category spread and 6.8 points band by band
+    - title: The four cells, and the four you cannot fill
+      content: Boundary, price bands, promo cadence and seasonality, plus the cells that have no public
+        source and the reproduce command behind every number
   - id: 03-competitor-entry-schema
     title: 对手的资料，要经得起别人查
     value: 写出一份别人能核、也能更新的竞品条目
@@ -247,6 +444,26 @@ series:
       content: 宁可写「公开渠道查不到」，也不用一个推算值填进去
     - title: 别人查得动、也改得动，靠的就是来源、算法和日期
       content: 能被别人查、别人改，靠的是来源、口径、时间
+    title_en: A competitor profile nobody can check is worth nothing
+    sections_en:
+    - title: A half-filled sheet fails because its cells do not agree
+      content: A missing cell is not the problem — cells with no source, no date and no shared convention
+        are, and they leave the whole sheet unusable
+    - title: What goes in each cell, and what it says
+      content: 'The eight cells filled for umami, Matomo, PostHog and Plausible, and the two that get
+        misread: the growth proxy that is not revenue growth, and the empty price cell'
+    - title: Every cell has to name where it came from
+      content: 'Share needs a denominator, price bands need a date and a product form, and the three cells
+        that go muddy fastest: size, ad intensity and share of voice'
+    - title: Every cell carries the date it was current as of
+      content: Every cell carries an as-of date, stale cells stay visible, and the price bands span a
+        factor of 25 once product form, region and billing unit are stated
+    - title: Leave it empty rather than fill in an estimate
+      content: A blank says nobody looked; an estimate says nothing, and a borrowed market share gets
+        read as this company's number
+    - title: Sources, definitions and dates are what make a profile checkable
+      content: The value, source, definition and as-of columns, and why deleting the last three leaves
+        the table scrap while the values alone still work
   - id: 04-head-to-head-share-and-growth
     title: 两家公司怎么比，才不算比错
     value: 把两家公司放进一张表比，而且比的是同一件事
@@ -263,6 +480,23 @@ series:
       content: 一家份额大一家增速快：份额大与增长快是两回事
     - title: 先对齐再比，对不齐的不是比较
       content: 先对齐再比；对不齐的数字不是比较，是对照
+    title_en: Two companies cannot be compared until their numbers mean the same thing
+    sections_en:
+    - title: Every company leads by the measure it picked
+      content: Each company holds a filing that flatters it, and the size column alone has more than one
+        conversion, so "which one is bigger" has no single answer
+    - title: Mismatched definitions make two numbers incomparable
+      content: Amazon has no revenue line called e-commerce, so one company and one year produce three
+        different "online" figures that differ by more than a factor of two
+    - title: Growth only counts when both sides cover the same months
+      content: The two fiscal years overlap for only 11 of 12 months, and the base year decides the answer,
+        so the same data gives 17.8% against 4.9% or 24.4% against 9.0%
+    - title: One company leads on share, the other on growth
+      content: Walmart has the faster growth and Amazon the bigger online business, and the two questions
+        answer where a company stands today versus where it is heading
+    - title: Align first, then compare, and call the leftovers what they are
+      content: The final table, where two cells stay empty because Walmart and Amazon do not disclose
+        them, and an estimate left in a competitor table becomes fact
   - id: 05-survey-sampling
     title: 问卷结果可信不可信，先看样本怎么抽的
     value: 判断一份调研的样本能不能代表你想问的人
@@ -280,6 +514,29 @@ series:
       content: 低于一成要高度警惕：是来的人不是那些人
     - title: 先看「抽到的是谁」「多少人愿意答」，再看结果
       content: 先看样本框和响应率，再看结果
+    title_en: A survey's credibility is decided by how the sample was drawn
+    sections_en:
+    - title: A flattering result can mean the sampler hid something
+      content: 'A clean chart can hide an empty frame: the Eurostat ICT survey reports 19.82% of EU turnover
+        from online sales while its frame excludes the 94.12% of enterprises with 0 to 9 employees'
+    - title: Four ways to draw a sample, four different populations
+      content: Simple random, stratified, systematic and convenience sampling, who each one reaches, and
+        what each one costs in bias
+    - title: The two traps that catch almost everyone
+      content: Coverage bias, where the frame misses people, and self-selection bias, where the people
+        who answer differ from the people who do not
+    - title: A bigger sample is not a more representative one
+      content: Sample size controls precision, the frame controls representativeness, and multiplying
+        the sample by ten shrinks the interval only to a third
+    - title: Too few people willing to answer is an alarm
+      content: Response rate is returns over sends, a low rate means respondents and non-respondents drift
+        apart, and the sent list is the only way to check
+    - title: Ask who was drawn and who answered before reading the result
+      content: Two questions settle whether a study is usable, and the difference between a sampling frame
+        and sampling error is the difference between bias and precision
+    - title: Fix the frame first, then talk about sample size
+      content: A number that only speaks for the people who answered is a communication tool, not a market
+        fact
   - id: 06-survey-interview-behavior-bias
     title: 问卷、访谈、后台数据，哪个更接近真相
     value: 知道三种数据各自偏哪边、怎么互补
@@ -296,6 +553,27 @@ series:
       content: 问卷偏保守、访谈偏热情、行为数据缺动机，所以能互相补，但不能互相替代
     - title: 先看每个数从哪来、偏哪边
       content: 先看每个数从哪来、偏哪边，再决定信谁
+    title_en: Surveys, interviews, and logs each measure something different
+    sections_en:
+    - title: One question, three incompatible answers
+      content: 'The same question returns 62% or 74% depending on whether the survey asks about the last
+        3 months or the last 12, which is the first layer of survey bias: a survey reports a stretch of
+        memory'
+    - title: Surveys lean toward the polite answer
+      content: Non-response thins out the oldest and least online-shopping group, self-reporting adds
+        social desirability bias and satisficing, and age itself decides the answer
+    - title: Interviews get led by whoever is sitting there
+      content: Interviewers who help or sit too close change sensitive answers even after controlling
+        for demographics, but only an interview can follow up on why
+    - title: Backend logs record the purchase but not the reason
+      content: Logs cannot see views that never converted, cannot tell motive from coincidence, and observational
+        attribution overstated the eBay ad return at 1400% against a randomized truth of −63%
+    - title: Three biases pointing opposite ways are what make them fit together
+      content: Survey, interview, and backend lean in different directions, which is what lets them cross-check
+        each other, though none can fill the specific gap the other two leave
+    - title: Ask four questions about any number before you believe it
+      content: Who said it, what time window, who is missing, and what shaped it decide how far a number
+        can be trusted
   - id: 07-demand-intensity-ranking
     title: 五个卖点只能做一个，按什么排
     value: 给需求排序时用对的方法，说得清依据
@@ -312,6 +590,26 @@ series:
       content: 五个卖点用平均分排出的第一名，与验证后不是同一个
     - title: 排序先说清按什么排
       content: 排序先说清按什么排：强度、规模、支付意愿是三把尺
+    title_en: 'Five selling points, one priority: the yardstick decides the winner'
+    sections_en:
+    - title: Five that all claim first place is zero that made first
+      content: 'When every selling point claims to be important, none of them is, so a first has to be
+        named: not the best one, but the one built first'
+    - title: Averaging the scores destroys the information you need
+      content: Importance is an order, not a quantity, and an average of headcount with equal weights
+        erases the dissenting segment
+    - title: Three measures of demand that actually work
+      content: MaxDiff priority ranking, intensity distribution read as a shape, and willingness to pay
+        converted into money
+    - title: Many buyers and intense buyers are two different things
+      content: Breadth and intensity are independent numbers, and Greece, the Czech Republic, Hungary
+        and Poland each sit in a different place on the two axes
+    - title: The top spot picked by average score ends up reversed
+      content: Averaging rewards whatever everybody finds acceptable, so the validated first place is
+        often not the average's first place
+    - title: Say out loud which ruler you ranked by
+      content: 'A ranking handed over has to carry three sentences: which ruler you used, where each number
+        came from, and what would change the first place'
   - id: 08-share-denominator
     title: 同样一个占比，能有四种算法
     value: 报任何一个份额之前，能说清分母是谁、分子装了什么
@@ -355,6 +653,28 @@ series:
       content: 分母是谁、分子装了什么、我跟它在同一个框里吗
     - title: 你报的是「某个框里的 23%」
       content: 你报出去的是「在某个框里的 23%」
+    title_en: One percentage, four different numbers
+    sections_en:
+    - title: A share is three decisions, not one
+      content: Online is 23% of our sales can mean four different numbers, and each one is decided by
+        the denominator, the numerator and the population covered
+    - title: Change the numerator and the number doubles
+      content: 'Same denominator, same year, same enterprises: 19.82% for all web sales against 8.49%
+        for the part sold to consumers'
+    - title: Hungary is the row worth stopping on
+      content: 30.85% of Hungarian enterprise turnover comes from web sales, but only 0.92% of it reaches
+        consumers, so the rest is wholesale
+    - title: The same "e-commerce" can be two different businesses
+      content: Cyprus sells 91% of its web sales to consumers and Hungary 3%, so one is retail e-commerce
+        and the other wholesale
+    - title: The same metric can jump for different reasons
+      content: Germany falls from 27.69% to 15.96% in a year, which is a change in definition rather than
+        in business
+    - title: Three questions that make a share defensible
+      content: Whose denominator, what is in the numerator, and am I inside the same box, run against
+        the EU figure
+    - title: What you report is "23% inside a box"
+      content: A correct number can still be uncomparable, and the box it sits in is yours to name
   - id: 09-panel-vs-census-bias
     title: 调研数据和官方数据，哪个更可信
     value: 知道这两类数各自偏哪边，什么时候该信哪个
@@ -383,6 +703,29 @@ series:
       content: 样本老化又遇上定义窄，两个数一起错，而且方向相反看不出来
     - title: 先问谁数的、漏了谁，再问准不准
       content: 先问谁数的、漏了谁，再问准不准
+    title_en: A survey and an official statistic each miss a different half of the market
+    sections_en:
+    - title: When two numbers disagree, find out who each one dropped
+      content: 'Two numbers conflict: the question is not which is more accurate but what each one failed
+        to cover, so draw both frames on one page and measure the overlap'
+    - title: Who a survey leaves out
+      content: Three ways a survey misses people, from a narrow frame to an ageing sample to non-random
+        dropout
+    - title: Who official statistics leave out
+      content: A census or administrative record looks complete, but its frame is drawn by hand from industry
+        codes, size thresholds and tax registration
+    - title: The two numbers do not lean the same way
+      content: Surveys overstate the share of people who buy and official statistics understate the informal
+        economy, so the two biases point in opposite directions
+    - title: Which kind of number you are holding
+      content: Sampled surveys, registers and platform logs each lean a different way, and the test is
+        whether a number was asked, counted or recorded
+    - title: When both numbers are wrong at once
+      content: An ageing sample meeting a narrow definition, or one survey counted as two numbers, leaves
+        a wide strip of the market uncovered
+    - title: Ask who counted it and who was missed, then ask how accurate it is
+      content: Four questions settle whether a number is usable, and what you publish is a number inside
+        a frame, not the number itself
   - id: 10-cross-source-triangulation
     title: 一个数敢不敢用，先找第二个来源对一遍
     value: 会给关键数字配第二个来源，知道不一致时先查什么
@@ -402,6 +745,23 @@ series:
         content: 季末快照还是月均
     - title: 第二个来源是纠错工具，不是装饰
       content: 第二个来源是纠错工具，不是装饰
+    title_en: A number is worth nothing until a second source has tried to break it
+    sections_en:
+    - title: A gap of several points usually means the definition changed
+      content: NIKE says revenue was flat and down 2% at once, because the reported and constant-currency
+        bases answer different questions, and EMEA reads +1% on one and −5% on the other
+    - title: Two matching numbers can still be wrong
+      content: Two sources that agree may share an upstream, and a number that appears twice may not be
+        the same number, as in Amazon's $201.9 billion headline against $202.0 billion of segments
+    - title: Pick a second source that fails differently
+      content: 'The same method fails together, so the second source has to differ in method, and three
+        criteria decide it: independent definition, alignable time window and known direction of bias'
+    - title: When they do not match, check the definition first, then the timing
+      content: Denominator, coverage and population first, then end-of-period versus period average and
+        cumulative versus current-period, and only afterwards ask who made the error
+    - title: The second source tells you how the number can be wrong
+      content: Predict the expected gap and its direction before looking, because a smaller gap means
+        the source is not independent and a larger one means something is still unseen
   - id: 11-coverage-gaps
     title: 这个数漏了谁，用之前先看一眼
     value: 看出一个数覆盖了谁、没覆盖谁，并在图上标出来
@@ -418,6 +778,26 @@ series:
       content: 加注释说明覆盖范围；缺口大就断开，别用直线连过去
     - title: 留白是信息，不是缺陷
       content: 留白是信息，不是缺陷
+    title_en: Every percentage comes from a frame, and the frame is not everything
+    sections_en:
+    - title: The firms this number never reaches
+      content: The GE10 size class covers 5.17% of EU retail firms but 77.18% of turnover, so the 94.8%
+        outside the frame is a different business
+    - title: It describes the counted, not everyone
+      content: 'The denominator is what gets misread: four frame restrictions, a parallel B2C-only numerator
+        of 8.49%, and a frame that changes between 2024 and 2025'
+    - title: The four gaps that get missed most
+      content: Size, sector, geography and channel each move the same penetration number, from 9.66% in
+        France to 90.45% in accommodation and food
+    - title: Which way a gap bends the number
+      content: Share figures come out too big and growth rates too small, while the excluded 605,562 million
+        euros of turnover is understated
+    - title: Two ways to mark what you left out
+      content: Write the coverage into the title and note, and break the line where a real judgement sits
+        between two data points
+    - title: Whitespace is information, not a defect
+      content: What a chart leaves out is worth more than what it draws, so publish the number inside
+        its frame rather than the number alone
   - id: 12-seasonal-vs-nsa
     title: 季调数和不季调数，别混着用
     value: 知道两个口径为什么对不上，一张图上该用哪个
@@ -434,6 +814,29 @@ series:
       content: 各自对应哪个口径，为什么旺季的环比跌是正常的
     - title: 一张图只用一种口径
       content: 一张图只用一种口径，图注写明是哪种
+    title_en: One month, two numbers, opposite stories
+    sections_en:
+    - title: The same month, a wide gap
+      content: The same December and January read 127.1 against 122.9 and 110.6 against 119.9 across the
+        two Eurostat conventions, because one number answers how much we sold and the other answers how
+        far above normal we are
+    - title: What the adjustment actually does
+      content: Seasonal factors divide the raw value by the month's recurring pattern, so the adjusted
+        number answers how an ordinary month would have looked, and the official series is the one to
+        use
+    - title: Which one to use and when
+      content: Adjusted for level and trend, raw for the books, and the July-versus-June case shows the
+        same business reading as better on one number and worse on the other
+    - title: Mixing them flips the conclusion
+      content: Raw month-on-month bars swing from plus 12.7% to minus 3.9% while the adjusted bars hug
+        zero, so one chart with both conventions reverses the conclusion
+    - title: Year on year, month on month
+      content: Year on year cancels the seasonal factor and works on either convention, while month on
+        month divides by a December-to-January difference of 26% and therefore has to use the adjusted
+        number
+    - title: One chart, one convention
+      content: One convention per chart, a caption naming the indicator, the convention and the cutoff
+        date, and two charts rather than one when both have to appear
   - id: 13-running-shoes-competitors
     title: 跑鞋这行，Nike 的营收三年没长，Hoka 的母公司五年翻了一倍
     value: 看清跑鞋品类里几家品牌的真实位置，以及比之前必须对齐的那一格
@@ -453,6 +856,28 @@ series:
     - title: 结论
       content: 比之前先把财年对齐；留空本身也是信息
     group: 竞品调研
+    title_en: Nike's revenue has not grown in three years. HOKA's parent doubled in five
+    sections_en:
+    - title: Nobody counts the running shoe market
+      content: Running shoes have no official statistical definition, so the research starts from brand
+        filings, where every number traces back to an audited statement
+    - title: Four brands file with the SEC
+      content: Nike, Skechers, Deckers and Wolverine revenue, with the fiscal year end date for each
+    - title: Read the fiscal year column before you read the bars
+      content: The four fiscal years end on four different dates, so comparing Skechers FY2024 with Deckers
+        FY2026 reverses the conclusion
+    - title: Four different trajectories over five years
+      content: An incumbent going sideways, a newcomer doubling, a contender climbing fast and an old
+        brand retreating, visible only when the lines are read separately
+    - title: Shoe prices come from the CPI
+      content: US footwear CPI rose about 6% over the decade, but footwear prices rising as a category
+        does not mean every brand raised its prices
+    - title: The brands you cannot pull
+      content: Adidas, ASICS, New Balance and On are not in the SEC XBRL database, so the cells stay empty
+        rather than filled with estimates
+    - title: Align the years, and let the gaps stay gaps
+      content: Four fates at once in the filings, fiscal years aligned before comparing, and the empty
+        cells themselves carrying information
   - id: 14-analytics-tools-competitors
     title: 网站分析开源项目里，umami 的 fork 数排第一，star 排第二
     value: 选自托管网站分析时，知道该看哪个数，以及哪些格子抓不到
@@ -468,6 +893,25 @@ series:
     - title: 结论
       content: star 看热度，fork 看有多少人真的在改
     group: 竞品调研
+    title_en: Umami leads on forks among open-source web analytics tools, and sits second on stars
+    sections_en:
+    - title: Nine projects, one table
+      content: Stars, forks, license, creation date, last push and pricing for umami, PostHog, Matomo,
+        Plausible, Fathom, GoatCounter, Countly, Ackee and Pirsch, with umami second on stars less than
+        seven hundred behind PostHog
+    - title: Forks measure something different
+      content: umami's 8,501 forks are 2.4 times PostHog's second place and over one hundred sixty times
+        Pirsch's last place, so many people run it and many people change it
+    - title: The license column decides for some teams
+      content: umami is MIT and carries the highest star count of any MIT-licensed project in the list,
+        which settles the shortlist when legal is uncomfortable with AGPL
+    - title: Five of nine pricing pages came back
+      content: Four rows stay blank rather than filled with estimates, and billing units differ across
+        vendors, so a dollar twenty for events is not a dollar twenty for pageviews
+    - title: What the numbers say about choosing
+      content: Stars measure attention while forks measure how many people actually change the code, and
+        four unretrieved pricing pages should be recorded as a retrieval failure rather than smoothed
+        over
 - id: 3-experiment-design
   stage: 怎么扰动
   title: 实验设计
@@ -489,6 +933,30 @@ series:
       content: 一次因样本不均衡作废的投放
     - title: 没有对照就没有增量；对照不合格比没有更糟
       content: 没有对照就没有增量；对照不合格比没有更糟
+    title_en: A bad control group is worse than no control group
+    sections_en:
+    - title: Why cutting cities in half can void the result
+      content: Before the split, the treatment cities already converted 1.3 points better, so a hand-picked
+        half turns the baseline gap into the measured ad effect, and only a random draw fixes what you
+        can see
+    - title: Four conditions a control group has to meet
+      content: Random and comparable, the same period on both sides, nothing else changed, and enough
+        sample — the first three make the number meaningful and the last decides whether it is worth reading
+    - title: Three ways to build the wrong control group
+      content: Comparing before and after the pause, comparing against the neighbouring city, and using
+        people who did not buy as the control — one campaign, four ways to split, 18.2% against 26.5%,
+        41.7% and 33.4%
+    - title: Two ways the two sides fail to line up
+      content: The two sides can get very different exposure per capita under the same total spend, and
+        they can come from different populations entirely, which is grouped observation rather than an
+        experiment
+    - title: A campaign destroyed by its own control group
+      content: A boss hand-picked two cities of similar size but different basket mix, a local promotion
+        hit both, and a reported 31% drop turned out to hide a 1.3-point baseline gap
+    - title: No control group, no lift — and a bad one is worse than none
+      content: The control group is the only thing that separates the ads from everything else, so a lift
+        without one is a before-and-after difference in disguise, and the pre-test period is what proves
+        the control was valid
   - id: 02-sample-size-and-power
     title: 样本太少，结论会反着
     value: 知道差多少算够，为什么小样本会把方向搞反
@@ -505,6 +973,26 @@ series:
       content: 跑了三天的小实验
     - title: 先估样本量，再开跑
       content: 先估样本量，再开跑
+    title_en: A small sample can invert the answer, not only blur it
+    sections_en:
+    - title: One dataset, three answers
+      content: The same Facebook campaign yields 73%, 222% or 316% depending on how the groups are formed,
+        and the randomised figure is the only one that isolates what the ad did
+    - title: How big a difference needs how many people
+      content: Sample size sets the standard error and the standard error sets the interval width, and
+        the interval shrinks at square-root scale, so a 1-point effect needs nearly 4,000 people
+    - title: How the direction flips
+      content: With 200 users per arm and a true +2 point effect, the measurement wanders across ±9.1
+        points, so 38% of the time the number comes out zero or negative
+    - title: Size the run before it starts, not after
+      content: After the data is in you hold one number and cannot see the truth, so sizing beforehand
+        fixes the smallest effect worth acting on and the traffic it costs
+    - title: A three-day test that came back negative
+      content: A redesign measured at -32.8% on three days of traffic crossed a weekend promotion, and
+        the real error was the three-day deadline rather than the sample size
+    - title: Write three lines down before you launch
+      content: The smallest difference that matters, the people per arm and the days, and how you will
+        read the result, and the answer can legitimately be that the test is not worth running
   - id: 03-multiple-testing
     title: 测的组合太多，会看到假效果
     value: 知道测了一堆组合以后该怎么读结果
@@ -519,6 +1007,27 @@ series:
       content: 预先定好要看哪几个、校正、用统一分组的检验
     - title: 先定要问的问题，再决定测多少组
       content: 先定要问的问题，再决定测多少组
+    title_en: Twenty combinations, three winners, and at least one fake
+    sections_en:
+    - title: How three "significant" results appeared
+      content: A SaaS company split one landing page redesign into five variant tests, three came back
+        significant, and the report said to ship them together — but all five drew from the same pool
+        of visitors
+    - title: Where the false positives come from
+      content: A false positive is a test calling an effect that is not there, and at a 0.05 significance
+        level each of twenty zero-effect combinations has a 5% chance of being called significant, which
+        makes the chance of at least one false hit 1 − 0.95^20 ≈ 64%
+    - title: More groups means more false positives
+      content: The expected count of false positives is the group count times 0.05, so 100 groups means
+        5 false positives, and doubling the groups also pushes real effects out of view behind a run of
+        fakes
+    - title: Three ways to handle it
+      content: Pre-specify the comparisons before the data arrives, tighten the threshold with Bonferroni
+        or Holm or Benjamini-Hochberg, or replace the pairwise tests with a single omnibus test
+    - title: Decide the question first, then the number of groups
+      content: The number of groups is set by the number of questions you need answered, and running the
+        tests first and hunting for the question afterwards always lands on the brightest number in the
+        pile
   - id: 04-confidence-intervals
     title: 一个数，要配一个区间
     value: 不再只报一个数，习惯带上区间
@@ -537,6 +1046,32 @@ series:
       content: 一个 ROI 点估计 4.0、区间从 1.2 到 6.8 的渠道
     - title: 报数带上区间
       content: 报数带上区间
+    title_en: A number without its interval is half an answer
+    sections_en:
+    - title: Why ROI 4.0 needs a range attached
+      content: The same eBay campaign gave ROI of 4100%, 1400%, and −63% depending on how it was measured,
+        and the randomized interval [−124%, −3%] says the ads lost money
+    - title: A point estimate is the best guess, not the most reliable number
+      content: The gap between two point estimates is usually smaller than either interval's width, and
+        the interval only covers the assumption that the model form is right, never that the model form
+        itself is right
+    - title: What the interval actually claims
+      content: A 95% confidence interval means the true value falls inside it 95% of the time across repeated
+        runs, not that this particular run is 95% certain, and an interval crossing zero only means the
+        effect is undetectable
+    - title: What sets the width
+      content: Sample size, variability, and effect size decide it — 40 times the sample buys a sixth
+        of the width, and halving the effect size requires four times the sample
+    - title: Overlapping intervals do not block a comparison
+      content: 'Compare the difference rather than the two point estimates: a 0.6 ROI gap with a difference
+        interval of [−2.5, 3.7] is worth resolving only when the business volume makes it worth 600,000
+        a month'
+    - title: ROI 4.0, and an interval running from 1.2 to 6.8
+      content: A consumer brand's search-ads test showed a point estimate of 4.0 and an interval of [1.2,
+        6.8], and that interval killed a planned 2,000,000 increase in spend
+    - title: Report every number with its interval
+      content: Say the point estimate, the interval width, and the sample size and setup the interval
+        came from, and report the interval even when it is the number that argues against your own plan
 - id: 4-performance-analysis
   stage: 怎么读
   title: 效果分析
@@ -563,6 +1098,21 @@ series:
       content: 一家毛利被投放吃掉的独立站
     - title: 收入减花费不等于赚，还要再减成本
       content: 收入减花费不等于赚，还要再减成本
+    title_en: Revenue minus ad spend is not profit
+    sections_en:
+    - title: Good-looking turnover can hide no profit at all
+      content: Why booked sales flatter a store, and the Wayfair and Chewy gross-profit figures that compare
+        honestly
+    - title: Three accounts have to be read together
+      content: Revenue, spend, and cost, and why leaving any one of them out produces a number that is
+        not profit
+    - title: Getting all three onto one table
+      content: Aligning the time window and the definitions so the rows actually mean the same thing
+    - title: A store whose gross profit got eaten by ad spend
+      content: An independent store where booked sales rose 50% while net profit went from +21,920 to
+        -112,240
+    - title: Revenue minus spend is not profit, and cost comes off as well
+      content: Why contribution margin cannot answer whether a store earns money, and what to do instead
   - id: 02-roi-ranking-vs-budget-allocation
     title: ROI 最高的渠道，不该加最多钱
     value: 知道 ROI 排名和加钱顺序不是一回事
@@ -577,6 +1127,26 @@ series:
       content: 四个渠道，ROI 最高那个已经撞到饱和
     - title: 排序看平均，加钱看最后一块钱
       content: 排序看平均，加钱看边际
+    title_en: The highest-ROI channel is not the one that deserves the next dollar
+    sections_en:
+    - title: Why an ROI ranking cannot tell you where to add money
+      content: ROI is computed on money already spent, so it answers a retrospective question; the average
+        blends four spend levels together, and the channel with the best average is often the one you
+        have already pushed closest to saturation
+    - title: What average ROI hides
+      content: Average ROI hides how much volume a channel absorbed and how well it performed on that
+        volume; US search ad revenue falling behind social in 2025 shows what market-level saturation
+        looks like, and picking up the cheapest traffic first explains the rest
+    - title: What matters is the last dollar
+      content: Marginal ROI, computed per spend level, gives a second and opposite ordering of the same
+        four channels, and the winner of the average-ROI ranking is the loser of the marginal-ROI ranking
+    - title: Of the four channels, the top one has already hit its ceiling
+      content: Search ads are the only channel whose marginal return falls all the way down, and adding
+        the same 200,000 to search returns 100,000 while the same 200,000 to social returns 580,000
+    - title: Rank on average, allocate on the last dollar
+      content: Three steps turn a ranking into an allocation — split spend into levels, compute marginal
+        ROI per level, then add money to the highest marginal return; keep average ROI for reporting,
+        and confirm both numbers are incremental before acting
   - id: 03-platform-metrics-vs-incremental-metrics
     title: 平台报的数字，和真实效果不是一回事
     value: 手里有两套数时，知道怎么并列而不混用
@@ -593,6 +1163,26 @@ series:
       content: 谈平台内的优化用平台口径，谈该不该继续花用增量口径
     - title: 两本账各自记，不要合并成一笔
       content: 两本账各自记，不要合并成一笔
+    title_en: Two numbers on the same ad spend answer two different questions
+    sections_en:
+    - title: Putting the two side by side without mixing them
+      content: Platform numbers and incremental numbers belong in separate columns, and the common mistake
+        is adding them rather than picking the wrong one
+    - title: What each ledger actually records
+      content: The platform ledger books every order that touched an ad and is bounded by the attribution
+        window; the incrementality ledger books only the orders that stop happening when the spend stops
+    - title: Where the gap comes from
+      content: Exposure is not random, a longer attribution window claims more orders, and demand that
+        already existed gets credited to the ad
+    - title: Put them in separate columns and never add them
+      content: The header must name the method and the data cutoff, and adding the two numbers produces
+        a meaningless total and an invented channel contribution
+    - title: Which one to use, and when
+      content: Platform method for optimization inside the platform, incremental method for whether the
+        spend continues, and neither one works without a control
+    - title: Two ledgers, each kept separate
+      content: The two numbers are not competing on accuracy but answering different questions, so put
+        them side by side, label method and date, and add nothing
   - id: 04-marginal-roi-decay
     title: 再多加一块钱，还赚得回来吗
     value: 能画出自己渠道的边际曲线，读出拐点
@@ -609,6 +1199,26 @@ series:
       content: 总量涨、平均稳，边缘已经不值了
     - title: 加不加量，看最后一块钱
       content: 画自己的边际曲线，读拐点
+    title_en: One more dollar on that channel, will it still earn its keep
+    sections_en:
+    - title: A good average tells you nothing about the next dollar
+      content: Cumulative average ROI stays respectable while marginal ROI collapses, and the average
+        can never fall below 1 while the marginal number can
+    - title: What one more dollar actually buys
+      content: Marginal ROI is one band's return over that band's spend, and it is not the same as incremental
+        return once substitution is taken out
+    - title: How to build the curve
+      content: Cut the spend into equal-width bands, align time so ad effects land in the right band,
+        then take the difference band by band
+    - title: Where the extra money stops paying
+      content: The turning point is where the marginal curve crosses 1.0, and a Hill curve puts it at
+        a specific spend level
+    - title: Three ways the average misleads
+      content: The total can grow while efficiency falls, organic search can be booked to paid search,
+        and new customers can flatter the average that later collapses
+    - title: Decide on the last dollar, not the total
+      content: Draw the curve for the channel that matters, read off the turning point, and stop the budget
+        there
   - id: 05-did-it-work-three-weeks-later
     title: 效果多久才出来，别急着下结论
     value: 知道效果什么时候才算完，以及怎么判断
@@ -625,6 +1235,29 @@ series:
       content: 一次大促的效果，第三周才显形
     - title: 效果什么时候算完，要先定窗口
       content: 效果什么时候才算完，要先定窗口
+    title_en: A 1% lift three weeks in is not a verdict
+    sections_en:
+    - title: The report shows a running total, not a campaign result
+      content: Why the dashboard number is everything that has happened so far rather than what the campaign
+        produced, and how 4% of natural noise in a single category makes a real 3% lift impossible to
+        see
+    - title: Three reasons the effect arrives late
+      content: The ad's own Adstock decay with its lambda parameter, the buyer's decision cycle that varies
+        by category, and B2B budget approval — three different reasons a window that fits one channel
+        and one category does not fit another
+    - title: A short window turns seasonality into your result
+      content: The 17.8% gap between February and December in EU retail turnover, how a promotion moves
+        demand forward in time, and why a window that is too short makes waiting and stopping look identical
+    - title: How to find out whether the campaign worked
+      content: A contemporaneous control that waits as long as the campaign does, the time series instead
+        of a single point, ruling out what else ran at the same time, and how the sample size a window
+        buys you caps the precision
+    - title: A promotion that only shows up in week three
+      content: A worked example where the season and the campaign land in the same cell of the dashboard,
+        and the same 260,000 of spend shows an ROI of 0.8 in week three and 1.78 in week eight
+    - title: Fix the window before you start, not after
+      content: The three things that set the window length, writing it into the brief before the spend,
+        and why an effect that never arrives is also an answer rather than a reason to wait forever
 - id: 5-campaign-analysis
   stage: 怎么投
   title: 投放分析
@@ -644,6 +1277,20 @@ series:
       content: 同一个渠道，报表与议价 CPM 差三成
     - title: 先问口径，再谈价
       content: 先问口径，再谈价
+    title_en: Two CPM numbers, one budget, and no one is cheating
+    sections_en:
+    - title: Where the 15 yuan gap comes from
+      content: A report CPM of 45 and a negotiated CPM of 60 cover the same spend, because one divides
+        by delivered impressions and the other by billable viewable ones
+    - title: One metric, three ways to count an impression
+      content: Delivered, viewable and duration-weighted impressions each produce a different CPM, and
+        the MRC worked example shows how far apart they land
+    - title: One channel, two CPMs, and where the third comes from
+      content: What the 250,000 yuan gap is worth, how the 92-yuan duration-weighted figure is built,
+        and how count-on-decision and unfiltered invalid traffic flatter a report
+    - title: Four questions before you sign, and what to do with the answers
+      content: Caliber, discount position, rebate structure and validity period, plus the MRC reconciliation
+        route when the two sides disagree
   - id: 02-promotion-pulls-demand-forward
     title: 促销带来的增长，有多少是真的
     value: 促销结束后能看出真实影响，而不是把提前的量算成增量
@@ -660,6 +1307,31 @@ series:
       content: 促销周涨四成，接下来三周掉回原位
     - title: 促销的钱，要用促销后的账算
       content: 促销的钱，要用促销后的账算
+    title_en: A promotion that lifts the report by 40% may have added nothing at all
+    sections_en:
+    - title: How much of the November spike was ever new
+      content: The November 2024 index jumped 3.6% on Black Friday but fell back over the next three months,
+        and the same December reads +39.1% raw against minus 1.8% seasonally adjusted, so seasonality
+        has to come off first
+    - title: A promotion pulls future orders into the present
+      content: Some buyers brought December purchases forward, so the extra November volume is exactly
+        the December volume that went missing, and a November peak followed by three lower months is the
+        signature of demand pull-forward rather than new demand
+    - title: Align three windows, and read the three months after
+      content: Align a three-month baseline, the promotion month and a three-month observation window,
+        which for 2024 gives 112.53, 116.6 and 113.67, so a 3.6% promotion month leaves only 1.0% behind
+    - title: Splitting out the part that was real
+      content: The pull-forward share changes every year and has to be measured each time, and the four-month
+        average ranges from +1.7% for cultural and entertainment goods to minus 0.4% for information and
+        communication equipment
+    - title: A 40% week that lands back where it started
+      content: The promotion month column and the four-month net increment column diverge most for the
+        categories with a promotion spike, which means the lift in the promotion month carries almost
+        no information about whether the promotion worked
+    - title: Price the promotion on the post-promotion books
+      content: The ROI denominator has to be the post-promotion net increment, the baseline has to exclude
+        promotion months, the observation window has to be free of the next promotion, and the test is
+        that net increment at margin minus discount cost and operating cost
   - id: 03-creative-fatigue-ctr-decay
     title: 素材什么时候该换
     value: 知道素材的疲劳曲线，以及什么时候该换
@@ -676,6 +1348,31 @@ series:
       content: 同一张素材跑了六周
     - title: 按素材的寿命排期，别一个投到底
       content: 按素材的寿命排期，不要一个素材投到底
+    title_en: Your creative is not getting worse. Your audience is getting tired of it.
+    sections_en:
+    - title: A CTR that slides down on its own
+      content: Yahoo's Gemini native delivery logs bucket every impression by how many times that user
+        already saw the campaign, and CTR loses 20% on the first repeat exposure and half by the seventh,
+        with nothing changed on the creative side
+    - title: Fatigue is made of repetition
+      content: The same person sees the same ad set over and over, so most of the decay lands in the first
+        three to five exposures, age matters more than gender, and similarity between creatives lets fatigue
+        spread from one to the next
+    - title: The curve drops hard and then flattens
+      content: Fatigue is steep first and flat later, the opposite of a saturation curve, which means
+        mixing the two reverses the conclusion about a falling CTR
+    - title: Replace the creative when CTR falls below half of its first week
+      content: Use the creative's own first-week CTR as the denominator, not an industry average, wait
+        for the flat stretch rather than swapping too early, and check whether frequency per person held
+        steady before blaming the creative
+    - title: One creative, six weeks, 600,000 yuan
+      content: A 600,000 yuan six-week run on one creative leaves cost per click up 31%, and swapping
+        in a new one in week 4 would have bought 10,894 more clicks at 1.84 yuan each, less than half
+        the fatigued cost
+    - title: Schedule by creative lifespan, not by one creative to the end
+      content: Convert frequency into weeks to get the lifespan, launch the replacement before the old
+        creative halves, size the library at rotation period times concurrent creatives, and keep the
+        new creative visually distinct from the old
   - id: 04-geo-targeting-cost-map
     title: 不同地区投广告，贵的贵在哪
     value: 能读一张地域成本图，知道贵在哪儿
@@ -690,6 +1387,27 @@ series:
       content: 一份两地 CPM 差三倍的投放计划
     - title: 地域要连转化一起看，不能只比 CPM
       content: 地域要连转化一起看，不能只比 CPM
+    title_en: The same budget buys three times as many impressions in Germany as in the United States
+    sections_en:
+    - title: Where the three-times gap comes from
+      content: 'Germany''s CPM is 29% of America''s but its cost per conversion is only 9.6% lower, and
+        four things hold up that gap: bidding density, conversion density, inventory variety and purchasing
+        power'
+    - title: Four numbers a geographic report has to carry
+      content: A geographic report gives you CPM and clicks; add conversion density, bidding density and
+        inventory, and take only the rows for people living in the region rather than people interested
+        in it
+    - title: Cheap is not the same as good value
+      content: The same $100,000 buys 1,503,759 impressions in Germany and 435,199 in the United States,
+        but only 10% more conversions, so cheap markets deliver faster and expensive markets convert better
+    - title: A plan for running two markets three times apart
+      content: Fix the reporting scope, run a $5,000-per-market baseline, split budget on cost per conversion,
+        set a 30% stop-loss, verify with a geo experiment, and separate price effects from country mix
+        effects
+    - title: Read geography with conversions attached, never on CPM alone
+      content: 'No number on a geographic cost map decides anything alone, and four actions follow: filter
+        to the people-here rows, compute cost per conversion against CPM, strip out country mix, and verify
+        with a held-back market'
   - id: 05-budget-pacing-even-vs-weekend
     title: 同样的钱，每天花和周末花不一样
     value: 知道花钱的节奏本身会改结果
@@ -704,6 +1422,27 @@ series:
       content: 两周同样预算，两种节奏
     - title: 节奏是变量，不是执行细节
       content: 节奏是变量，不是执行细节
+    title_en: The same budget buys 14,286 more impressions when you spread it out
+    sections_en:
+    - title: Why the shape of the spend changes the outcome
+      content: A bidding system prices supply and demand right now rather than your monthly average, and
+        the UK internet sales share shows demand itself runs from 26.1% in August to 32.4% in November
+        and back down to 29.6% in December, a shape that repeats every year
+    - title: Three shapes you can pick from
+      content: Even spending gives stable volume and clean learning data, concentration buys peak traffic
+        at the most crowded prices, and the option that gets missed is following the real shape of demand,
+        which Etsy's buyer frequency data shows is highly concentrated
+    - title: Three layers turn pacing into a different outcome
+      content: The auction environment, the scattered rhythm of when buyers actually purchase, and the
+        inventory and support capacity behind a volume spike all change the result, and none of them appear
+        in the bid column
+    - title: The same 14,000 yuan over two weeks, two ways
+      content: Even spending buys 223,810 impressions at a blended CPM of 62.55 yuan against 209,524 at
+        66.82 yuan for the weekend-heavy plan, so the same money buys 14,286 more impressions spread out
+    - title: Pacing is a variable, not an execution detail
+      content: Etsy credits more efficient seller budget pacing for part of its 62.2 million dollar ad
+        revenue gain, and Marin Software ships budget pacing as a named product, so measure demand first,
+        mark the holidays, and test pacing as a variable of its own
 - id: 6-budget-optimization
   stage: 怎么挪
   title: 预算优化
@@ -723,6 +1462,26 @@ series:
       content: 三个渠道的边际曲线拉平的那一点
     - title: 拉平是判据不是结果，还要看绝对值
       content: 拉平是判据不是结果；拉平了还要看绝对值够不够
+    title_en: The best split is the one where every channel's last dollar earns the same
+    sections_en:
+    - title: The next dollar goes wherever it buys the most
+      content: Marginal return is what one more dollar buys back, not what an average dollar buys back;
+        each channel's curve, not its average, is the input to the allocation
+    - title: Stop when every channel's last dollar earns the same
+      content: With a fixed total, total return is maximized when every channel's marginal return is equal,
+        and that shared number is the shadow price
+    - title: 'A worked example: 1,000,000 across three channels'
+      content: The equalized split is search 300,000, social 400,000, content 300,000 at a marginal of
+        2.0 and total return 2.52, more than double the 1.17 from putting everything into search
+    - title: Four conditions, and any one of them breaks the rule
+      content: The principle needs estimable marginals, a fixed total, no hard channel limits, and no
+        cross-effects between channels
+    - title: What the equalized point says about your estimates
+      content: The equalized point is a set of numbers rather than one figure, is unique for monotonic
+        curves, and is less sensitive to estimation error where the curves are flat
+    - title: Equalizing is a test, not an answer, and the absolute value matters
+      content: Equalizing guarantees you do not waste, not that you earn; the shared marginal must also
+        be above 1, and equalizing does not mean spending the same amount in every channel
   - id: 02-state-constraints-first
     title: 算最优之前，先把限制列出来
     value: 动优化之前先把约束列全
@@ -737,6 +1496,20 @@ series:
       content: 一个最优解在现实里做不到的预算方案
     - title: 先列约束，再解
       content: 先列约束，再解
+    title_en: A solver cannot check reality for you
+    sections_en:
+    - title: Five limits to write down before solving
+      content: Committed volume, minimum spend you owe, what inventory supports, the people available
+        to execute, and regulation and platform rules
+    - title: What a missing constraint produces
+      content: A solution you cannot execute, a hand-patched fix that is executable but not optimal, and
+        a solution that quietly violates a constraint nobody knew existed
+    - title: The optimal split that nobody can execute
+      content: With all three constraints in place the split becomes 35/30/35 rather than 30/40/30 and
+        total return falls to 2.32, which is worth more than the unconstrained 2.52
+    - title: List the constraints, then solve
+      content: Fixed order of list, solve, verify; every constraint must answer who set it, where it is
+        written, and when it expires
   - id: 03-after-the-shift-what-goes-wrong
     title: 挪完预算，要复查两件事
     value: 挪完预算以后能自己查一遍
@@ -751,6 +1524,28 @@ series:
       content: 一次挪钱之后，总量没变、只有结构变了
     - title: 挪完预算先查这两件事
       content: 挪完预算要自查这两件事
+    title_en: A flat report after a budget shift usually means you read it too early
+    sections_en:
+    - title: A flat report after a shift means the ratio moved, not the revenue
+      content: Watch ad spend as a share of revenue rather than total revenue, because the ratio divides
+        out the market; Wayfair's ad ratio fell from 12.1% to 10.0% while it scaled, then climbed back
+        to 12.42% while revenue fell 13.5%
+    - title: The saturation point moved without telling you
+      content: 'The saturation point k is not a constant: competing bids and internal cannibalisation
+        push it up without showing up in the report, and reaching 90% of the ceiling takes 9^(1/alpha)
+        times k, so it cannot be discovered by re-estimating k'
+    - title: The window was too short, and the report punishes both sides
+      content: Adstock decay rates differ by channel (search 0.1-0.3, social around 0.7, television 0.7-0.9),
+        so an early read shows the cut channel's effect already gone and the funded channel's effect not
+        yet arrived; set the window by the slowest-decaying channel and mind the seasonal calendar
+    - title: The total did not change, so only the structure can
+      content: A budget shift is zero-sum, so only a better structure raises total return; average ROI
+        hides a saturated channel, and the marginal ROI of the last band in the worked example is 0.4
+        against an average of 2.28
+    - title: The two checks that come right after a shift
+      content: Test whether volume still rises after adding 5-10% and set the observation window by the
+        decay tail of the channel funded into, so a structural claim is never judged on a report that
+        has not settled
 - id: 7-brand-visibility
   stage: 看得见吗
   title: 品牌可见度
@@ -776,6 +1571,32 @@ series:
       content: 财报里能拿到什么（广告支出、销售额、区域拆分），拿不到什么（单品牌颗粒度不够）
     - title: 它是公开信号的目录，不是评价表
       content: 品牌条目是公开信号的目录，不是评价表
+    title_en: Every brand number comes with a receipt, or it does not count
+    sections_en:
+    - title: Where a brand's position actually comes from
+      content: Where a brand stands is five separate questions, and each one has a public number with
+        its own definition behind it
+    - title: The seven fields a brand entry has to fill
+      content: Company and brand, category, share, price premium, search and volume, public financials,
+        source and date — an empty field must say why
+    - title: Company and brand are not the same thing
+      content: One company can own several brands and one brand can sit inside several companies, and
+        the wrong article name turns measured visibility into zero
+    - title: Three public routes to a share number
+      content: Official statistics, third-party estimates and figures backed out of the filings, and why
+        a derived share has to travel with its arithmetic
+    - title: How to price a premium so it does not mislead
+      content: 'Three choices decide the answer: who you compare against, list price or transaction price,
+        and what you price off'
+    - title: What search and volume can actually show
+      content: Wikipedia article views as the reproducible substitute for brand-term search volume, and
+        the three separate fields it must not be mixed with
+    - title: What the filings give you
+      content: Company revenue, marketing spend and regional splits are available and auditable; single-brand
+        granularity and the latest fiscal year for some companies are not
+    - title: A catalogue of public signals, not a scorecard
+      content: Each number says what was recorded under one definition, and naming the fields that could
+        not be filled beats a tidy-looking set of numbers
   - id: 02-visibility-three-measures
     title: 品牌有多响，用三把尺子量
     value: 知道品牌有多响该看哪三个数
@@ -797,6 +1618,24 @@ series:
       content: 搜索排第一、AI 答案里几乎不被提起的品牌
     - title: 可见度不是一个数，是三个
       content: 可见度不是一个数，是三个
+    title_en: Three numbers decide how visible a brand is, and none of them covers the others
+    sections_en:
+    - title: A share above 100% points at the denominator, not at bad data
+      content: NIKE's FY2023 revenue of $51.217B over the $41.557B BEA US shoe store total gives 123.2%,
+        which shows the numerator and the denominator cover different scopes, and the two ways out of
+        that mismatch
+    - title: What each of the three rulers measures, and where each one breaks
+      content: Share measures how much of the market, rank measures how easily the brand gets found, sentiment
+        measures whether readers like it, and each ruler has its own failure mode
+    - title: Each ruler breaks on the question the other two answer
+      content: Share cannot say whether a brand gets seen, rank cannot say whether people buy it, and
+        sentiment cannot say how much it sells
+    - title: Top of the search results is not the same as named in an AI answer
+      content: Retrieval returns a list and generation returns a summary, corpus density decides what
+        gets named, and brand mention share inside AI answers has no reproducible public series
+    - title: Visibility is three numbers, not one
+      content: Each ruler has its own scope, date and failure mode, so report the three numbers separately
+        rather than blending them into a score nobody can inspect
   - id: 03-share-of-voice-seo-and-geo
     title: 搜索里和 AI 回答里，各占多少
     value: 分别算出搜索里和 AI 答案里的份额
@@ -813,6 +1652,29 @@ series:
       content: 同一个品类问题，搜索结果与三个 AI 答案里的品牌份额
     - title: 两种份额分开报，不要合成一个数
       content: 两种份额分开报，不要合成一个「可见度」
+    title_en: On leads search and disappears from AI; Saucony does the reverse
+    sections_en:
+    - title: The search leader is the one AI mentions least
+      content: On holds 90% of search top-10 slots but only 62.5% of AI answers, while Saucony is 0% in
+        search and 97.5% in AI, because search rewards a standalone article and AI rewards a recommendation
+    - title: How the search share is counted
+      content: English Wikipedia full-text search over 10 brand-free category terms, top 10 results each,
+        with the share defined as the fraction of queries mentioning the brand and the boundary that it
+        measures one corpus rather than search engines
+    - title: How the AI share is counted
+      content: The same 10 terms asked 4 times each for 40 answers under a fixed prompt, with the share
+        defined as the fraction of answers mentioning the brand, and the reason a single run measures
+        a sample rather than a share
+    - title: Why the two shares cannot share one axis
+      content: Different samples, different time windows and different questions, plus brand names that
+        have to be fixed before the pull, each of which alone makes a direct comparison meaningless
+    - title: One question, two sets of brands
+      content: For trail running shoes the search top 10 names 5 brands while the AI answers name 22,
+        which is a difference in capacity rather than quality, and being listed is still not being ranked
+        first
+    - title: Report the two shares apart, never as one number
+      content: A blended visibility score lets the weight decide the conclusion, so report the two shares
+        separately with their corpus, term list and date attached
   - id: 04-same-question-two-answers
     title: 问 AI 同一个问题，答案会变
     value: 知道 GEO 的数该怎么测才算数
@@ -829,6 +1691,30 @@ series:
       content: 同一道题问五次出来的五个答案
     - title: 这个数必须重复问，单次不算数
       content: GEO 的数必须重复测，单次不算数
+    title_en: Ask the same question twice and the model gives two different answers
+    sections_en:
+    - title: The same prompt produced three different answers
+      content: Three runs of the same "recommend a running shoe" prompt returned brand lists of four,
+        seven and three brands, and one brand moved five positions between runs
+    - title: Why the answer moves at all
+      content: Generation samples one token at a time, so the same prompt can return contradictory answers
+        twice in a row, and two of the twenty runs asked clarifying questions instead of naming any brand
+    - title: How many runs it takes before the number counts
+      content: The half-width of the 95% interval at 1, 5, 20, 50, 100 and 200 runs, why one run cannot
+        separate a brand from one that was never mentioned, and why precision scales with the square root
+        of the sample
+    - title: Turning twenty answers into one number
+      content: Mention rate, interval and rank range travel together as the three numbers a reported figure
+        needs, plus the two runs out of twenty where no brand was named at all
+    - title: Five runs of the same prompt gave five answers
+      content: Five runs of the beginner long-distance prompt, where ASICS appears every time but Hoka
+        does not
+    - title: Change the prompt and you have changed the market
+      content: Nike goes from 90.0% to 6.7% and New Balance from 45.0% to 93.3% when the prompt changes,
+        so a number only holds for the exact sentence it came from
+    - title: One prompt is not a measurement
+      content: A single run is one sample, every reported figure needs its interval, and the prompt set
+        is the definition of what was measured
   - id: 05-volume-without-sentiment-is-blind
     title: 提到你的次数，和说的是好话坏话
     value: 知道声量为什么要带情绪一起出
@@ -843,6 +1729,20 @@ series:
       content: 一次提及量翻倍、评论全在骂的舆论
     - title: 声量必须带情绪一起出
       content: 声量必须带情绪一起出
+    title_en: Volume tells you how many people talked, not whether they were happy
+    sections_en:
+    - title: A fourfold spike that reads like bad news
+      content: Pokémon GO's daily US App Store reviews jump from a 12.3 baseline to 52 on 2026-10-19,
+        and 53.8% of those 52 carry 1 or 2 stars, so the volume spike is a complaint spike
+    - title: Three parties write the label, and their labels disagree
+      content: User stars, dictionary polarity (VADER), and Apple's model-written review summary are three
+        labelling schemes for the same fact, and they do not agree
+    - title: The same sentiment has three different numbers
+      content: Lifetime 4.00 stars, last-500 2.84, and W43 2.69, with the window, the region, and the
+        500-review RSS ceiling each stated as the boundary of the number
+    - title: Volume only counts when sentiment travels with it
+      content: 'The Pokémon GO case in full: a fourfold mention spike that turned into 200-plus complaints
+        aimed at Scopely, and the reporting rules that keep volume and sentiment together'
   - id: 06-brand-terms-vs-category-terms
     title: 品牌词和品类词，看的是两件事
     value: 分清品牌词和品类词各自说明什么
@@ -857,6 +1757,21 @@ series:
       content: 一个品牌词在涨、品类词在跌的季度
     - title: 两类词要分开看，分开报
       content: 两类词要分开看，分开报
+    title_en: A brand term and a category term answer two different questions
+    sections_en:
+    - title: One term rose 349% while the other two fell
+      content: Lululemon's brand term jumped 349% quarter over quarter while Yoga pants fell 35% and Athletic
+        shoe fell 2%, and plotting both kinds on one axis is what makes the split legible
+    - title: The two kinds of query sit at different points in the decision
+      content: A brand term names you and comes from buyers ready to purchase, a category term names the
+        product and comes from people still learning the market, and competitors can take category volume
+        away from you but never brand volume
+    - title: The quarter when one brand term rose and the category fell
+      content: The March 2025 SXSW pop-up lifted the brand term fourfold inside eight weeks while operating
+        income fell 22% and the CEO departed, so attention and business came apart
+    - title: Report the two kinds of terms separately
+      content: Never add the two into a total search volume, always label which kind each number is, and
+        tie every brand-term rise to a business line before it counts as good news
   - id: 07-keyword-list-triage
     title: 词表排对，后面的数才对
     value: 排出一张能用的关键词表
@@ -869,6 +1784,24 @@ series:
       content: 一张从三百个词开始、最后剩十二个的词表
     - title: 排词表的时间比加词的时间长
       content: 排词表的时间比加词的时间长
+    title_en: A keyword list is only worth the rows you can defend
+    sections_en:
+    - title: A list that keeps growing is a list that stops working
+      content: 'Keyword lists fail from being too long, not too short: 42 running-shoe terms span a twelve-thousand-fold
+        volume gap, adding a row is free while removing one costs a person, and most added terms answer
+        four different questions at once'
+    - title: Sorting a keyword list takes three looks, not a scorecard
+      content: 'Label each term as brand, category or competitor, then rank by whether it can tell you
+        apart from every other brand on the results page, then check both halves of freshness: is anyone
+        still searching it, and does it still mean the same thing'
+    - title: Twelve terms survive, and the other 288 become a record of why
+      content: 300 collected terms cut to 12 by three steps — bucket by type, drop the 241 that cannot
+        tell you apart, then freshness-check the remaining 59 — with the 288 excluded terms moved to a
+        second sheet carrying their reasons
+    - title: Sorting takes longer than collecting
+      content: Sorting 300 terms takes 4 minutes each, 20 hours in total, against half an hour to bulk-import
+        them, and stale terms are the expensive kind because they quietly contaminate the share figure
+        and cost real money at Deckers
   - id: 08-the-five-column-table
     title: 交过来的表，要看哪几列
     value: 知道交过来的表缺哪一列就不能用
@@ -888,6 +1821,21 @@ series:
       content: 没查到不等于零：空值、NA 与不写这一行是三件事
     - title: 缺一列这张表就不能用
       content: 缺一列这张表就不能用，先补齐再分析
+    title_en: A table with one missing column will hand you the wrong answer
+    sections_en:
+    - title: Count the columns before you read the numbers
+      content: The table needs term, channel, date, count, and sentiment; missing one changes the answer,
+        and the On-on-Nike cell (168 naive hits, 0 real brand mentions) shows why the headers come first
+    - title: What each of the five columns has to carry
+      content: Term, channel, date, count, and sentiment each have to hold a specific fact, and each one
+        fails in a characteristic way
+    - title: Not found is not zero
+      content: A 0 can mean no data in the window, a source that does not support the granularity, or
+        a genuine absence, so empty cells are written in three tiers with NA kept separate from 0
+    - title: Missing one column makes the table unusable
+      content: Attaching a 72% negative rate to a brand nobody mentioned reverses the conclusion, every
+        cell carries uncertainty, and the habit to build is count the columns first and say why a cell
+        is empty
   - id: 09-four-lines-side-by-side
     title: 把四个数放一起看，才知道哪个在动
     value: 把四条线索并排着读
@@ -902,6 +1850,25 @@ series:
       content: 四条线并排的一个季度
     - title: 单看一条线最容易看错
       content: 单看一条线最容易看错，四个放一起才知道哪个在动
+    title_en: Four numbers, one brand, and only one of them moved
+    sections_en:
+    - title: Each measure answers a different question
+      content: Search share counts slots, social mentions count people who already know you, AI mentions
+        count what a model has in mind, and direct traffic counts memory, so merging them into one brand
+        health score hides which line moved
+    - title: The four lines for On Holding AG
+      content: Search share, AI mentions, and social mentions for On Holding AG around the 2026-09-18
+        Mbappé signing, plus why the direct traffic cell is left empty rather than estimated
+    - title: Three questions to ask when the lines sit side by side
+      content: Which line moved first, whether the directions agree, and whether one line substituted
+        for another, with the 12-brand peer comparison showing the 8.74x spike was On's own and not the
+        category's
+    - title: One quarter of the four lines together
+      content: Monthly pageviews from 2026-07 to 2026-10 showing a one-off pulse rather than a trend,
+        plus the Q2 2026 DTC figures that predate the event
+    - title: Where a single line misleads
+      content: What each line read alone would have concluded, and how reading all four together identifies
+        social mentions as the only line that moved
 - id: 8-analysis-toolbox
   stage: 查字典
   title: 工具箱
@@ -923,6 +1890,25 @@ series:
       content: 归因数的是「谁碰过这一单」，不是「谁创造了这一单」
     - title: 站内哪几篇讲过
       content: 1-report-overview/01-report-runbook、1-report-overview/06-incrementality-chart
+    title_en: The 260 orders search ads "brought in" are a rule, not a finding
+    sections_en:
+    - title: Attribution splits touchpoints, not orders
+      content: Attribution divides one order's credit across the touchpoints it passed through, and the
+        three decisions behind it are the observation window, the touchpoint order, and the allocation
+        rule
+    - title: Five common rules, one path, five different answers
+      content: Last click, first click, linear, time decay and position based split the same four-touchpoint
+        path into 40/0, 25 each, and 33.3 versus 10 for the same channel, so any reported number is missing
+        the rule that produced it
+    - title: Three ways attribution breaks down
+      content: Unrecorded exposure removes a touchpoint from the pool, last click hands the whole order
+        to whoever searched your brand name, and the attribution window decides who qualifies at all
+    - title: Two uses where attribution earns its keep
+      content: The platform's own numbers work for reallocating inside one platform because every channel
+        shares a rule, but deciding whether a channel deserves more money needs a control group instead
+    - title: Attribution assigns credit, not causation
+      content: The number says who touched the order, not who created it, so attribution can rank channels
+        but cannot price one
   - id: 02-incrementality-testing
     title: 增量实验：拿一块地方做对照
     value: 看懂增量实验的读法与代价
@@ -939,6 +1925,26 @@ series:
       content: 决定钱往哪放，或者校准观测口径
     - title: 站内哪几篇讲过
       content: 1-report-overview/06-incrementality-chart、3-experiment-design/01-what-a-control-group-is
+    title_en: Incrementality is measured by withholding a slice of the map
+    sections_en:
+    - title: Incrementality is the orders that stop happening
+      content: The orders that no longer happen once the ads stop are the increment, and computing how
+        many go missing requires a slice of the map where no ads ran
+    - title: Three ways to run one
+      content: Geographic splits, ghost ads and timeline splits all randomise something, and each trades
+        away sample size, money or validity
+    - title: The numbers it produces
+      content: CPC 2.40 dollars against CPIC 3.00 dollars, and 316% from the observational method against
+        73% from the randomised experiment
+    - title: Four ways it goes wrong
+      content: Two sides that were different to begin with, a sample too small, a test that ended too
+        early, and treatment that leaked into the control group
+    - title: When it is worth running
+      content: The number has to move money or calibrate the observational method, otherwise the cost
+        of the gap is not worth it
+    - title: What to do with the number
+      content: The platform's number is not fake, it answers a different question, and a single run does
+        not extrapolate to next month's budget
   - id: 03-mmm-contribution
     title: MMM 贡献分解：把长期贡献拆开
     value: 看懂 MMM 拆出来的贡献是怎么来的
@@ -953,6 +1959,23 @@ series:
       content: 基线是多少；样本多长几个渠道；adstock 参数是多少；渠道相关性多高
     - title: 站内哪几篇讲过
       content: 4-performance-analysis/04-marginal-roi-decay、8-analysis-toolbox/06-marginal-vs-average-roi
+    title_en: The 14% your TV ads "produced" is a setting, not a measurement
+    sections_en:
+    - title: What the contribution split actually measures
+      content: The split spreads the change in sales back across the variables that explain it, so the
+        baseline takes 18% and the channels divide the remaining 82%, and what you get is the model's
+        contribution rather than advertising's merit
+    - title: Three settings decide the split
+      content: Baseline, saturation and lag are settled before anything is split, and changing the baseline
+        from 20% to 40% moves search ads from 38% to 29% on the same data and the same model
+    - title: Where the numbers break down
+      content: Channels whose spends move together cannot be told apart, the model splits them anyway
+        without warning, contribution rank is not a marginal return, and the fastest read on a report
+        is comparing contribution share against spend share
+    - title: What to do with the contribution numbers
+      content: The numbers depend on three settings that differ between analysts, so two reports disagreeing
+        is normal, and the three things to check are the baseline, the correlation between channel spends,
+        and whether the ranking survives a change of settings
   - id: 04-adstock-decay
     title: Adstock 衰减：广告的效果会拖多久
     value: 看懂广告效果随时间衰减的形状
@@ -967,6 +1990,23 @@ series:
       content: 自己搭 MMM 时要过这一步；判断一个渠道的效果期有多长
     - title: 站内哪几篇讲过
       content: 8-analysis-toolbox/03-mmm-contribution、8-analysis-toolbox/05-hill-saturation-curve
+    title_en: Your ads keep working after you stop paying for them
+    sections_en:
+    - title: An ad's effect is not spent in a day
+      content: Ad effect fades but does not vanish overnight, so the model accumulates past spend along
+        a decay curve and pairs the Adstock value with today's outcome instead of pairing spend with the
+        same week's sales
+    - title: One number sets the whole curve
+      content: A decay curve has one parameter, the half-life, and a 7-day half-life channel accumulates
+        to 580.36 after seven days, so each channel gets its own curve because media fade at different
+        speeds and cover for each other
+    - title: Where the estimate breaks
+      content: A half-life estimated too short undervalues slow channels, a better fit does not mean a
+        better parameter, the half-life and the saturation point compensate each other so a contribution
+        can shift 30% while the fit holds, and cutting spend lingers longer than adding it
+    - title: When Adstock is worth the trouble
+      content: Adstock is required for channels with a decision cycle or shifting budgets, optional when
+        purchases are same-day, and needs history long enough to support the half-life being estimated
   - id: 05-hill-saturation-curve
     title: Hill 饱和曲线：效果怎么撞天花板
     value: 看懂饱和曲线两个参数各管什么
@@ -981,6 +2021,27 @@ series:
       content: 花得多贡献不涨；边际回报往下掉；残差有系统性
     - title: 站内哪几篇讲过
       content: 8-analysis-toolbox/03-mmm-contribution、8-analysis-toolbox/06-marginal-vs-average-roi
+    title_en: The extra 100,000 buys you 0 orders, or 30, or 3. The Hill curve says which
+    sections_en:
+    - title: The Hill curve never lets spend run past the ceiling
+      content: Effect rises with spend while the rate of increase falls, and the curve approaches a horizontal
+        ceiling it can never cross, which is why marketing mix models fit one and a linear model does
+        not
+    - title: k sets the ceiling, α sets how fast you get there
+      content: k is the spend level where half the ceiling lands and 90% of it takes 9^(1/α) times k,
+        while α decides where the curve bends over, so for α = 2 with k = 1000 the steepest point is 577
+        and the best unit price is at 1000
+    - title: Where the Hill curve stops being trustworthy
+      content: A channel that has only spent 200 cannot tell you whether its ceiling is 500 or 5000, α
+        and k become unstable together when the data sits below 10% of k, and the Hill curve is only one
+        of several shapes that fit large samples equally well
+    - title: Three checks that cost nothing
+      content: Spend rising while contribution stalls, marginal return falling while average ROI still
+        looks healthy, and residuals leaning one way in the high-spend range all read off the existing
+        data without a rerun
+    - title: The Hill curve draws a line where the ceiling is, and nothing goes past it
+      content: The curve gives the idea that more spend buys less extra effect a mathematical shape, with
+        k fixing where the ceiling is and α how fast you approach it
   - id: 06-marginal-vs-average-roi
     title: 边际 ROI 和平均 ROI：两个不同的数
     value: 不会再把这两个数搞混
@@ -993,6 +2054,23 @@ series:
       content: 花费没分档时算不出边际；分档太细样本不够；平均 ROI 算的是账面不是增量
     - title: 站内哪几篇讲过
       content: 1-report-overview/06-incrementality-chart、4-performance-analysis/04-marginal-roi-decay
+    title_en: Your channel's ROI is 2.28x. That number cannot tell you whether to spend more
+    sections_en:
+    - title: One number looks backward, the other looks forward
+      content: Average ROI is total return divided by total spend, marginal ROI is what the last slice
+        of money returned, and because marginal ROI is computed per spend band the first band can return
+        4.8x while the last returns 0.4x
+    - title: Working the numbers
+      content: The same month of search ads gives an average ROI of 2.28x and a marginal ROI of 0.4x,
+        and the right number depends on the decision, since average ROI cannot set the order money gets
+        spent in
+    - title: Four ways this breaks down
+      content: Spend that was never split into bands yields no marginal ROI at all, bands too fine leave
+        every marginal figure in the noise, average ROI measures booked rather than incremental return,
+        and marginal ROI moves week to week
+    - title: One rule to carry away
+      content: Average ROI has a floor of 1 and always looks acceptable, while marginal ROI can be 0 or
+        negative, so the question of whether to spend more is answered by marginal ROI alone
   - id: 07-equal-marginal-returns-principle
     title: 等边际原则：最优分配的判据
     value: 知道这个原则说了什么、成立的条件是什么
@@ -1007,6 +2085,23 @@ series:
       content: 它是判据不是配方；差距大就挪，差距小就别动
     - title: 站内哪几篇讲过
       content: 6-budget-optimization/01-equal-marginal-returns、6-budget-optimization/03-after-the-shift-what-goes-wrong
+    title_en: A budget split is only optimal when every channel's next dollar earns the same
+    sections_en:
+    - title: The test, in one rule
+      content: With the budget total fixed, total return is largest when every channel's marginal return
+        is equal, and the crossing point of the two marginal curves is where each channel should sit
+    - title: Where the rule comes from
+      content: Shifting one unit from a channel with a lower marginal return to one with a higher marginal
+        return raises total return, so the original split was not optimal, and moving stops where the
+        two marginals match
+    - title: Where it stops holding
+      content: The rule breaks when the marginal cannot be estimated, when hard constraints pin a channel
+        and the equalized point becomes unreachable, when the budget total is flexible, and when channels
+        cannibalize or complement each other
+    - title: What to do with the allocation you get back
+      content: It is a test for how to split a fixed total, not for how much to spend or whether a channel
+        is worth funding on its own, and it only holds when marginals are estimable, constraints are written
+        down, and the total is fixed
   - id: 08-confidence-intervals-and-fit
     title: 置信区间和拟合度：模型能信几分
     value: 知道一个模型的两个可信度指标各管什么
@@ -1021,3 +2116,17 @@ series:
       content: 先问区间宽度与是否跨过门槛，再问不确定性算了什么，最后问适用数据范围
     - title: 站内哪几篇讲过
       content: 3-experiment-design/02-sample-size-and-power、3-experiment-design/04-confidence-intervals
+    title_en: A good fit does not mean a trustworthy number
+    sections_en:
+    - title: The interval grades one number, the fit grades the whole model
+      content: The interval says how precise a single estimate is, the fit says how well the model as
+        a whole explains history
+    - title: Neither one covers for the other
+      content: One grades a parameter and the other grades a model, so a high fit can sit alongside a
+        parameter interval so wide it says nothing
+    - title: Where both numbers stop holding up
+      content: A high fit is not a causal claim, the interval only covers the assumptions the model already
+        believes, extrapolation breaks, and reporting only the best model tried makes the interval dishonest
+    - title: How to use the two numbers
+      content: 'Look at both together: is the number precise, is the model sound, and what range of history
+        does it actually cover'

@@ -1,0 +1,15 @@
+id: 03-creative-fatigue-ctr-decay
+title: "Your creative is not getting worse. Your audience is getting tired of it."
+sections:
+  - title: A CTR that slides down on its own
+    content: "Yahoo's Gemini native delivery logs bucket every impression by how many times that user already saw the campaign, and CTR loses 20% on the first repeat exposure and half by the seventh, with nothing changed on the creative side"
+  - title: Fatigue is made of repetition
+    content: "The same person sees the same ad set over and over, so most of the decay lands in the first three to five exposures, age matters more than gender, and similarity between creatives lets fatigue spread from one to the next"
+  - title: The curve drops hard and then flattens
+    content: "Fatigue is steep first and flat later, the opposite of a saturation curve, which means mixing the two reverses the conclusion about a falling CTR"
+  - title: Replace the creative when CTR falls below half of its first week
+    content: "Use the creative's own first-week CTR as the denominator, not an industry average, wait for the flat stretch rather than swapping too early, and check whether frequency per person held steady before blaming the creative"
+  - title: One creative, six weeks, 600,000 yuan
+    content: "A 600,000 yuan six-week run on one creative leaves cost per click up 31%, and swapping in a new one in week 4 would have bought 10,894 more clicks at 1.84 yuan each, less than half the fatigued cost"
+  - title: Schedule by creative lifespan, not by one creative to the end
+    content: "Convert frequency into weeks to get the lifespan, launch the replacement before the old creative halves, size the library at rotation period times concurrent creatives, and keep the new creative visually distinct from the old"

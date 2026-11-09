@@ -118,28 +118,28 @@ data:
         confidence: 9
         reference:
           - docs/5-campaign-analysis/01-reported-cpm-vs-negotiated-cpm/cn.md
-      - id: duration-weighted-cpm-92
+      - id: duration-weighted-cpm-130
         question:
-          en: "How do you get to 92 yuan on the duration-weighted line? I do not recognise that number."
-          cn: "时长加权那一栏的 92 块是怎么算出来的？这个数我没见过。"
+          en: "How do you get to 130 yuan on the duration-weighted line? I do not recognise that number."
+          cn: "时长加权那一栏的 130 块是怎么算出来的？这个数我没见过。"
         answer:
           en:
             >
-              It is derived from the official worked example in the IAB/MRC Attention
-              Measurement Guidelines (November 2025), which is the source of the whole
-              100,000-impression funnel on this page. In that example the average visible
-              time is 5.2 seconds per impression and the visible time rate is 65.4% of ad
-              duration; with a 15-second creative, the time actually watched is roughly a
-              third of the time delivered. Taking the report CPM of 45 and dividing by that
-              one-third gives about 92. Read the 92 as a demonstration of how far the number
-              moves once you change denominator, not as a benchmark to plan against: the
-              guidelines explicitly warn against using duration weighting on its own.
+              It comes from the worked example in the IAB/MRC Attention Measurement
+              Guidelines (November 2025), the same source as the 100,000-impression funnel
+              earlier on this page. That example puts average visible time at 5.2 seconds.
+              Take a 15-second creative: only about a third of the time is actually being
+              watched, so buying a thousand impressions that were watched end to end means
+              buying 2885 delivered impressions. At the report CPM of 45, that is
+              2885 / 1000 x 45, or about 130 yuan. Read the 130 as a demonstration of how
+              far the number travels once you change the denominator, not as a benchmark:
+              the guidelines warn against using duration weighting on its own.
           cn:
             >
-              它是从 IAB/MRC《注意力衡量指引》2025 年 11 月版的官方算例推出来的，这一页那条
-              10 万次曝光的漏斗图用的也是同一个算例。算例里平均可见时长是每次曝光 5.2 秒，
-              可见时长占创意时长的比例是 65.4%；创意按 15 秒算，真正被看的时间大约是交付
-              时长的三分之一。用报表的 45 块除以这个三分之一，就得到 92 左右。请把 92 读成
+              它是从 IAB/MRC《注意力衡量指引》2025 年 11 月版的算例推出来的，这一页那条 10 万
+              次曝光的漏斗图用的是同一个算例。算例里平均可见时长是每次曝光 5.2 秒。创意按
+              15 秒算，真正有人看的时间只有三分之一左右，所以要买到一千次「被看完的曝光」，
+              得买 2885 次交付。按报表的 45 块算，2885 ÷ 1000 × 45 ≈ 130 块。请把 130 读成
               「换一个分母数能偏多远」的演示，而不是拿去规划的基准——指引里明确写了时长加权
               不建议单独使用。
         confidence: 8
@@ -152,21 +152,23 @@ data:
         answer:
           en:
             >
-              Not without three qualifiers, because "CPM" is not one number. In the same
-              DataBeat reporting month, display CPM was up 8.2% year over year while video
-              CPM was down 20.1%. One month earlier the same two measures ran in opposite
-              directions again, and a year before that both were down (display -29.5%,
-              video -19.4%). So the figure is only meaningful once you attach the format, the
-              inventory type, the measurement window and the denominator. Reporting "CPM up
-              8.2%" to someone who assumes you mean video is not a rounding error — it
-              reverses the sign of the news you are delivering.
+              Not without three qualifiers, because "CPM" is not one number. In the
+              September 2026 DataBeat statistical month, display CPM was up 8.2% year over
+              year while video CPM was down 20.1%. One month earlier the same two measures
+              ran in opposite directions again (display +12.9%, video +14.3%), and in June
+              2025 both were down (display -29.5%, video -19.4%). So the figure is only
+              meaningful once you attach the format, the inventory type, the measurement
+              window and the denominator. Reporting "CPM up 8.2%" to someone who assumes you
+              mean video is not a rounding error — it reverses the sign of the news you are
+              delivering.
           cn:
             >
-              不加三个限定词就不能这么报，因为 CPM 本来不是一个数。同一个 DataBeat 统计月份
-              里，展示广告 CPM 同比涨 8.2%，视频 CPM 同比跌 20.1%；往前一个月，这两个数又
-              往相反方向走；再往前一年，两个都在跌（展示 -29.5%，视频 -19.4%）。所以这个数
-              必须挂上图形、库存类型、统计窗口和分母口径才有意义。把「CPM 涨了 8.2%」报给
-              一个默认你指的是视频的人，不是四舍五入的误差，是把消息的正负号报反了。
+              不加三个限定词就不能这么报，因为 CPM 本来不是一个数。DataBeat 的 2026 年 9 月
+              统计月份里，展示广告 CPM 同比涨 8.2%，视频 CPM 同比跌 20.1%；往前一个月，
+              两个数又往相反方向走（展示 +12.9%，视频 +14.3%）；再往前到 2025 年 6 月，
+              两个都在跌（展示 -29.5%，视频 -19.4%）。所以这个数必须挂上图形、库存类型、
+              统计窗口和分母口径才有意义。把「CPM 涨了 8.2%」报给一个默认你指的是视频的人，
+              不是四舍五入的误差，是把消息的正负号报反了。
         confidence: 9
         reference:
           - docs/5-campaign-analysis/01-reported-cpm-vs-negotiated-cpm/cn.md

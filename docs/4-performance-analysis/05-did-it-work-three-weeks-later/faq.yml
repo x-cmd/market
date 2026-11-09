@@ -37,16 +37,17 @@ data:
             Enough to swamp a small effect. In US furniture and home furnishings stores, implied
             volume (sales divided by the chain-type price index) moved from 94.9 in September 2023
             to 92.4 in October and back to 96.3 in November. Nothing changed in the business
-            between those months, so a 4% swing is what this category does on its own. Across
-            2019 to 2023 the month-over-month change after removing seasonality has a standard
-            deviation of about 2%. A campaign effect of 3% is therefore not separable from noise
-            in a short window, and the same 3% would look like a real result if the window were
-            long enough and a control group were in place.
+            between those months, so a 4% swing is what this category does on its own. Over 2019
+            to 2023 the median month-over-month move in that implied volume is 1.4%, and in 2023
+            alone it is 1.9%. A campaign effect of 3% is therefore not separable from noise in a
+            short window, and the same 3% would look like a real result if the window were long
+            enough and a control group were in place.
           cn: >
             足够把一个小的效果淹掉。美国家具与家居用品专卖店的隐含销量（销售额除以连锁型价格指数），
             2023 年 9 月 94.9，10 月 92.4，11 月 96.3。这几个月中间生意上什么都没变，4% 的摆动就是
-            这个品类自己会做的事。2019 到 2023 年，去掉季节之后的月度环比变化，标准差约 2%。
-            所以 3% 的效果在短窗口里跟噪声分不开；同样的 3%，窗口够长、对照组到位，是能读出来的。
+            这个品类自己会做的事。2019 到 2023 年，这个隐含销量的月度环比变动中位数是 1.4%，只看
+            2023 年是 1.9%。所以 3% 的效果在短窗口里跟噪声分不开；同样的 3%，窗口够长、对照组到位，
+            是能读出来的。
         confidence: 9
         reference:
           - docs/4-performance-analysis/05-did-it-work-three-weeks-later/cn.md
@@ -90,13 +91,13 @@ data:
             calendar-adjusted EU retail turnover, February sits at 90.1 on a scale where the
             average month is 100, and December at 106.1. A campaign run in December therefore
             gets a 17.8% seasonal tailwind it did not earn, and a campaign run in February gets
-            a 13% headwind against it. Promotions do the same thing by pulling demand forward: a
+            a 14.3% headwind against it. Promotions do the same thing by pulling demand forward: a
             November sale makes November look like a triumph and December look like a collapse,
             and neither is real. This is why the seasonality of a category has to be removed
             before any campaign number is read.
           cn: >
             会，而且两个方向都会。日历调整后的欧盟零售营业额，二月是 90.1（全年月均=100），十二月是
-            106.1。十二月做的投放白拿 17.8% 的季节顺风，二月做的投放白挨 13% 的逆风。促销是把需求
+            106.1。十二月做的投放白拿 17.8% 的季节顺风，二月做的投放白挨 14.3% 的逆风。促销是把需求
             往前挪，效果一样：一场十一月大促让十一月像巨大的成功、十二月像巨大的失败，两边都不真。
             所以读任何一次投放的数字之前，季节得先剥掉。
         confidence: 9
@@ -107,30 +108,27 @@ data:
       en: how to check whether it worked
       cn: 怎么查这次到底有没有效
     qa:
-      - id: four-steps
+      - id: three-steps
         question:
           en: What do you actually do to find out whether a campaign worked?
           cn: 要做哪几步才能查清这次投放有没有效？
         answer:
           en: >
-            Four. Put a contemporaneous control group in place: not this month against last
+            Three. Put a contemporaneous control group in place: not this month against last
             month, but the group that did not get the campaign, measured over the same calendar
             days, and it has to be given the same amount of time. Plot the time series, with
             eight weeks before, the campaign weeks, and eight weeks after on one axis, because a
             real effect lifts, plateaus and then decays while a single point at week three
-            cannot tell you which of those you are looking at. Rule out whatever else ran in
+            cannot tell you which of those you are looking at. And rule out whatever else ran in
             the same period, since without a control group no single chart can separate a
             packaging change, a second platform, a livestream launch and a price change from
-            the campaign itself. And know in advance how small an effect you need to resolve,
-            because a 5% lift has a 95% confidence interval half-width of 9% at a sample of
-            2000, 29% at 200, and 56% at 50.
+            the campaign itself.
           cn: >
-            四步。第一，摆同期对照：不是这个月比上个月，是没拿到这次投放的那组人，在同样的日历日上
+            三步。第一，摆同期对照：不是这个月比上个月，是没拿到这次投放的那组人，在同样的日历日上
             当参照，而且对照也要给同样长的时间。第二，看时间序列，把投放前 8 周、投放期间、投放后 8 周
             画在同一条轴上——真效果会抬起来、维持平台、然后回落，只看第三周那个点你不知道自己在看哪一个。
             第三，把同期别的动作排掉：没有同期对照，换包装、上第二个平台、开直播、改价格，没有一张
-            单独的图能把它们分开。第四，事先知道自己要分辨多小的效果：同样一个 5% 的提升，样本量 2000
-            时 95% 置信区间半宽 9%，200 时 29%，50 时 56%。
+            单独的图能把它们分开。
         confidence: 9
         reference:
           - docs/4-performance-analysis/05-did-it-work-three-weeks-later/cn.md
@@ -143,13 +141,15 @@ data:
             It helps, but it is a slow way to buy precision. The width of a confidence interval
             shrinks with the square root of the sample size, so going from a 3-week window to
             a 12-week window multiplies the sample by four and narrows the interval by only
-            about half. Along the curve on this page, the effect is 89% arrived at week eight
-            and still not finished at week twelve. Lengthening the window is spending real
-            business opportunity to buy statistical certainty, and the return on that spend
-            falls quickly.
+            about half. A 5% lift has a 95% confidence interval half-width of 9% at a sample of
+            2000, 29% at 200, and 56% at 50. Along the curve on this page, the effect is 89%
+            arrived at week eight and still not finished at week twelve. Lengthening the window
+            is spending real business opportunity to buy statistical certainty, and the return
+            on that spend falls quickly.
           cn: >
             有用，但靠它买精度很慢。置信区间的宽度跟样本量的平方根成反比，所以窗口从 3 周拉到 12 周，
-            样本量涨 4 倍，区间只收窄一半左右。这一页那条曲线上，第 8 周效果到了 89%，第 12 周还没满。
+            样本量涨 4 倍，区间只收窄一半左右。同样一个 5% 的提升，样本量 2000 时 95% 置信区间半宽
+            9%，200 时 29%，50 时 56%。这一页那条曲线上，第 8 周效果到了 89%，第 12 周还没满。
             拉长窗口等于拿真实的业务机会去换统计上的确定性，这个换法的收益很快就变小了。
         confidence: 8
         reference:
@@ -188,19 +188,21 @@ data:
           cn: 在第三周把投放停掉，代价是什么？
         answer:
           en: >
-            In the worked example on this page, the campaign cost 260,000. Judged on the 130
-            incremental units that had arrived by week three, the return reads as 0.8 times the
-            spend, which looks like a loss. Judged on the 231 units that had arrived by week
-            eight, it reads as 1.78 times, which looks like a profit. Same money, same
-            campaign, two answers, and the difference is entirely the week you read the data.
-            Stopping in week three does not just forgo the second half of the return; it also
-            writes off the half that had already been earned, and because the mistake shows up
-            as "saved budget", it is very hard to spot in the numbers afterwards.
+            In the worked example on this page, the campaign cost 260,000 and each incremental
+            unit of furniture carried 1,600 of margin. Judged on the 130 incremental units that
+            had arrived by week three, the return reads as 0.8 times the spend, which looks like
+            a loss. Judged on the 231 units that had arrived by week eight, it reads as 1.42
+            times, which is still a loss; only the full 260 units by week twelve brings it back
+            to 1.6 times. Same money, same campaign, three answers, and the difference is
+            entirely the week you read the data. Stopping in week three does not just forgo the
+            rest of the return; it also writes off the half that had already been earned, and
+            because the mistake shows up as "saved budget", it is very hard to spot afterwards.
           cn: >
-            这一页的算例里，这次投放花了 26 万。按第 3 周已经到账的 130 件算，回报是 0.8 倍，看着像亏；
-            按第 8 周到账的 231 件算，是 1.78 倍，看着像赚。同一笔钱、同一次活动，两个答案，差别全在
-            你哪一周收数。第三周停手不只是少了后半段的回报，还把已经赚到的那一半也一笔勾销了；而这个
-            错误在报表上表现为「省下了预算」，事后很难发现。
+            这一页的算例里，这次投放花了 26 万，一件家具的增量毛利按 1600 块算。按第 3 周已经到账的
+            130 件算，回报是 0.8 倍，看着像亏；按第 8 周到账的 231 件算，是 1.42 倍，还是亏；到第 12
+            周 260 件全部到账才回到 1.6 倍。同一笔钱、同一次活动，三个答案，差别全在你哪一周收数。
+            第三周停手不只是少了后半段的回报，还把已经赚到的那一半也一笔勾销了；而这个错误在报表上
+            表现为「省下了预算」，事后很难发现。
         confidence: 9
         reference:
           - docs/4-performance-analysis/05-did-it-work-three-weeks-later/cn.md

@@ -81,7 +81,7 @@ data:
               ——客户搜到你就点了、就买了，跟你这次出价没关系——这叫替代，
               它不是你创造出来的收入。最硬的一个公开例子是 eBay 的品牌词实验：
               观测口径算出的回报在 1400% 以上，随机实验测出的真实增量回报是 −63%，
-              随机实验测出的真实增量是 −63%，置信区间 [−124%, −3%]。多花的那些钱
+              置信区间 [−124%, −3%]。多花的那些钱
               不但没带来新生意，还抢走了一部分本来也会发生的单。
         confidence: 10
         reference:
@@ -152,19 +152,22 @@ data:
               zero the band is pure waste. In the worked example on this page, band 7 has a
               marginal ROI of 0.9 and band 6 has 1.6, so the inflection sits between them:
               spend above roughly 600,000 on this channel in a month and the money stops
-              returning. Note that the curve is always downward-sloping and getting steeper —
-              that is a property of the shape, not a coincidence — so a marginal curve that
-              rises with spend is a sign that the measurement is wrong, not that the channel
-              has room to grow.
+              returning. One caveat on the shape: the marginal curve is downward-sloping
+              past its peak, but it is not monotonic from zero. With a steep Hill curve
+              (alpha = 2) the marginal return first rises from 2.77 to 4.0 before it starts
+              falling — the alpha = 1 case peaks at the origin. So a curve that rises at the
+              very start is not by itself a sign of a broken measurement; a curve that keeps
+              rising across most of its range is.
           cn:
             >
               找边际曲线穿过 1.0 的地方。在这条线之上，每多花的 1 块带回的比花出去的多；
               在下面，每多花 1 块就是净亏；等于 0 的话这一档纯粹白花。这一页的算例里，
               第 7 档的边际 ROI 是 0.9，第 6 档是 1.6，所以拐点夹在两档之间：
               这个渠道一个月花到 60 万左右，钱就开始不回来了。另外注意这条曲线的形状
-              ——它一定是往下走而且越来越陡，这是形状本身的性质，不是碰巧——
-              所以如果你画出来的边际曲线随着花费上升，那说明口径出了问题，
-              而不是这个渠道还有空间。
+              ——过了峰值之后它一路往下走，但起点那一段未必单调：陡一点的 Hill 曲线
+              （α=2）边际回报会先从 2.77 涨到 4.0 才开始跌，α=1 的峰值就在 x=0。
+              所以开头那段往上走本身不能说明口径出了问题，
+              整条曲线大部分区间都在往上走才是。
         confidence: 9
         reference:
           - docs/4-performance-analysis/04-marginal-roi-decay/cn.md
@@ -180,9 +183,10 @@ data:
           en:
             >
               Chewy, the US online pet retailer, is one. Its marketing and advertising expense
-              is disclosed separately in the filings, and over FY2020 to FY2025 the ratio of
-              that spend to revenue barely moved: it stayed between 6.4% and 6.8% from
-              FY2022 through FY2025. But the revenue returned per marketing dollar went from
+              is disclosed separately in the filings, and from FY2022 to FY2025 the ratio of
+              that spend to revenue barely moved: it stayed between 6.4% and 6.8% (7.18% in
+              FY2020 and 6.90% in FY2021, then it settled). But the revenue returned per
+              marketing dollar went from
               15.58 in FY2022 to 14.75 in FY2024. The share stays flat because the numerator
               and denominator grow together, while the edge keeps thinning. The hard number
               is FY2022 to FY2023: marketing spend rose from 649.4 million to 742.4 million
@@ -193,9 +197,10 @@ data:
           cn:
             >
               有一个，是美国宠物电商 Chewy。它的营销费在财报里单列，FY2020 到 FY2025
-              营销费占营收的比例几乎没动：FY2022 到 FY2025 一直稳在 6.4% 到 6.8% 之间。
+              营销费占营收的比例几乎没动：FY2020 是 7.18%，FY2021 落到 6.90%，
+              FY2022 之后一直稳在 6.4% 到 6.8% 之间。
               但每 1 元营销费换回的营收从 FY2022 的 15.58 倍退到 FY2024 的 14.75 倍。
-              占比之所以稳，是因为分子分母同步长大；效率之所以退，是因为多出来的钱买到的
+              占比之所以稳，是因为分子分母同步长大。效率之所以退，是因为多出来的钱买到的
               都是更薄、也更贵的量。更硬的一块证据是 FY2022 到 FY2023：营销费从 6.494 亿
               涨到 7.424 亿，营收从 101.19 亿涨到 111.477 亿，多花的 9300 万带回 10.287 亿，
               边际回报 11.06 倍，低于这一年平均的 15.02 倍。要加一句提醒：

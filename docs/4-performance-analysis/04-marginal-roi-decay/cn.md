@@ -1,25 +1,23 @@
 # 再多加一块钱，还赚得回来吗
 
-「这个渠道平均 ROI 4.0，很稳，下个月再加 20 万没问题。」
+**一个渠道的平均 ROI 停在 4.0，稳了很久。它不告诉你下一笔钱会带回什么，只告诉你过去那一整笔投入干得怎么样。** 这两件事经常往相反方向走。
 
-**这句话里的每个数都对，但那个「再加 20 万」没有任何依据。** 平均 ROI 说的是过去那一整笔投入干得怎么样，不告诉你下一笔钱会带回多少。想知道只有一个办法：把花费切开，看每一段各自带回了什么。
-
-**边际 ROI（也叫边际回报）就是最后那一笔钱本身的回报率**：多花 1 块，换回来几块。它跟平均 ROI 不是一回事，两个数会往相反方向走。
+**边际 ROI（也叫边际回报）就是最后那一笔钱本身的回报率**：多花 1 块，换回来几块。要知道自己渠道的下一个数，只有一个办法——把花费切开，看每段各自带回了什么。
 
 ## 平均数好看，不代表还能加
 
-先看一个算例：某电商品牌搜索广告一个月的结构（**算例，不是真实企业的数据**）。每档 10 万，每档单独记它带回了多少：
+先看一个算例：某电商品牌搜索广告一个月的结构（**算例，不是真实企业的数据**）。每档 10 万，各自记它带回了多少：
 
-| 花费档 | 该档花费 | 该档换回 | 边际 ROI |
-|---|---|---|---|
-| 0–10 万 | 10 万 | 66 万 | 6.6 |
-| 10–20 万 | 10 万 | 54 万 | 5.4 |
-| 20–30 万 | 10 万 | 43 万 | 4.3 |
-| 30–40 万 | 10 万 | 33 万 | 3.3 |
-| 40–50 万 | 10 万 | 24 万 | 2.4 |
-| 50–60 万 | 10 万 | 16 万 | 1.6 |
-| 60–70 万 | 10 万 | 9 万 | 0.9 |
-| 70–80 万 | 10 万 | 4 万 | 0.4 |
+| 花费档 | 该档换回 | 边际 ROI |
+|---|---|---|
+| 0–10 万 | 66 万 | 6.6 |
+| 10–20 万 | 54 万 | 5.4 |
+| 20–30 万 | 43 万 | 4.3 |
+| 30–40 万 | 33 万 | 3.3 |
+| 40–50 万 | 24 万 | 2.4 |
+| 50–60 万 | 16 万 | 1.6 |
+| 60–70 万 | 9 万 | 0.9 |
+| 70–80 万 | 4 万 | 0.4 |
 
 ```text
 https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E5%90%8C%E4%B8%80%E6%B8%A0%E9%81%93%EF%BC%9A%E7%B4%AF%E8%AE%A1%E5%B9%B3%E5%9D%87%20ROI%20%E7%A8%B3%E5%9C%A8%204%20%E5%B7%A6%E5%8F%B3%EF%BC%8C%E8%BE%B9%E9%99%85%20ROI%20%E4%B8%80%E8%B7%AF%E5%BE%80%E4%B8%8B%22%7D%2C%22color%22%3A%5B%22%232563eb%22%2C%22%23dc2626%22%2C%22%2364748b%22%2C%22%23f59e0b%22%2C%22%230891b2%22%2C%22%238b5cf6%22%2C%22%2365a30d%22%2C%22%23db2777%22%5D%2C%22xAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%22%E7%AC%AC1%E6%A1%A3%200%E2%80%9310%E4%B8%87%22%2C%22%E7%AC%AC2%E6%A1%A3%2010%E2%80%9320%E4%B8%87%22%2C%22%E7%AC%AC3%E6%A1%A3%2020%E2%80%9330%E4%B8%87%22%2C%22%E7%AC%AC4%E6%A1%A3%2030%E2%80%9340%E4%B8%87%22%2C%22%E7%AC%AC5%E6%A1%A3%2040%E2%80%9350%E4%B8%87%22%2C%22%E7%AC%AC6%E6%A1%A3%2050%E2%80%9360%E4%B8%87%22%2C%22%E7%AC%AC7%E6%A1%A3%2060%E2%80%9370%E4%B8%87%22%2C%22%E7%AC%AC8%E6%A1%A3%2070%E2%80%9380%E4%B8%87%22%5D%2C%22axisLabel%22%3A%7B%22interval%22%3A0%7D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%22%E5%80%8D%22%2C%22axisLabel%22%3A%7B%22formatter%22%3A%22%7Bvalue%7D%22%7D%7D%2C%22grid%22%3A%7B%22left%22%3A80%2C%22right%22%3A40%2C%22top%22%3A80%2C%22bottom%22%3A60%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%7D%2C%22legend%22%3A%7B%22data%22%3A%5B%22%E7%B4%AF%E8%AE%A1%E5%B9%B3%E5%9D%87%20ROI%22%2C%22%E8%BE%B9%E9%99%85%20ROI%EF%BC%88%E8%AF%A5%E6%A1%A3%E6%AF%8F%201%20%E5%85%83%E6%8D%A2%E5%9B%9E%EF%BC%89%22%5D%2C%22top%22%3A30%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22%E7%B4%AF%E8%AE%A1%E5%B9%B3%E5%9D%87%20ROI%22%2C%22data%22%3A%5B6.6%2C6.0%2C5.43%2C4.9%2C4.4%2C3.93%2C3.5%2C3.11%5D%2C%22type%22%3A%22line%22%2C%22smooth%22%3Atrue%2C%22connectNulls%22%3Atrue%7D%2C%7B%22name%22%3A%22%E8%BE%B9%E9%99%85%20ROI%EF%BC%88%E8%AF%A5%E6%A1%A3%E6%AF%8F%201%20%E5%85%83%E6%8D%A2%E5%9B%9E%EF%BC%89%22%2C%22data%22%3A%5B6.6%2C5.4%2C4.3%2C3.3%2C2.4%2C1.6%2C0.9%2C0.4%5D%2C%22type%22%3A%22line%22%2C%22smooth%22%3Atrue%2C%22connectNulls%22%3Atrue%7D%5D%7D&w=760&h=430
@@ -29,15 +27,15 @@ https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E5%90%8C%E
 
 **两条线之间的距离，就是这个问题的全部分量。**
 
-累计平均 ROI 从 6.6 滑到 3.11，掉了一半；边际 ROI 从 6.6 掉到 0.4，掉了 94%。平均数把 80 万全算了一遍，前面几档赚到的钱摊到每一块钱上，看起来永远体面。
+累计平均 ROI 从 6.6 滑到 3.11，掉了一半。边际 ROI 从 6.6 掉到 0.4，掉了 94%。平均数把 80 万全算了一遍，前面几档赚到的钱摊到每一块钱上，看起来永远体面。
 
-**平均 ROI 还有个下限：1。** 只要这个渠道整体还在赚，它就不可能低于 1——早先那几档赚到的钱会一直垫着。边际 ROI 没有这个垫子，它可以低于 1，可以是 0，可以是负的。**所以「平均 ROI 还有 3.11」永远推不出「再加钱划算」。**
+**平均 ROI 还有个下限：1。** 只要这个渠道整体还在赚，它就不可能低于 1——早先那几档赚到的钱会一直垫着。边际 ROI 没有这个垫子，可以低于 1，可以是 0，可以是负的。**所以「平均 ROI 还有 3.11」永远推不出「再加钱划算」。**
 
 ## 再加一块，能多赚回多少
 
-**边际 ROI 的定义只有一句：这一档花出去的钱，换回的钱除以这一档花出去的钱。** 分母只算这一档。翻回上面的表：第 8 档花了 10 万换回 4 万，边际 ROI 是 **0.4 倍**。
+**边际 ROI 的定义只有一句：这一档换回的钱，除以这一档花出去的钱。** 分母只算这一档。翻回上面的表：第 8 档花了 10 万换回 4 万，边际 ROI 是 **0.4 倍**。
 
-**还有一个容易混的地方：边际回报不等于增量回报。** 边际 ROI 是账面口径——这一档多花了 10 万，多回了 4 万。但那多出来的 4 万里，有一部分是本来也会来的单（客户搜到你就点了，跟你多花这笔钱没关系），那部分叫**替代**。eBay 的品牌词广告实验是最硬的例子：观测口径算出的回报在 1400% 以上，随机实验测出的真实增量是 **−63%**（[两种口径怎么并排放](../../4-performance-analysis/03-platform-metrics-vs-incremental-metrics/cn.md)）。
+**还有一个容易混的地方：边际回报不等于增量回报。** 边际 ROI 是账面口径——这一档多花了 10 万，多回了 4 万。但那多出来的 4 万里，有一部分是本来也会来的单（客户搜到你就点了，跟你多花这笔钱没关系），那部分叫**替代**。eBay 的品牌词广告实验最硬：观测口径算出的回报在 1400% 以上，随机实验测出的真实增量是 **−63%**（[两种口径怎么并排放](../../4-performance-analysis/03-platform-metrics-vs-incremental-metrics/cn.md)）。
 
 ## 这条线怎么画
 
@@ -45,7 +43,7 @@ https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E5%90%8C%E
 
 **第一步：把花费切成等宽的档。** 档越宽越稳，档越窄越能看出拐点，也越容易被噪声带偏。起点是均分成六到八档。
 
-**第二步：给每一档配上一笔对应的「换回」。** 这是最难的一步，难在**广告的效果会拖时间**：今天花的钱，明后天还在起作用。不能拿「这一档的花费」去对「这一档当天的销售额」，那样算出来的曲线会因为销售的自然波动而乱跳。做法是**在算差分之前先做一遍时间上的对齐**：把每一笔花费按它自己的衰减形状摊开，再按同样的窗口去取各档的换回（[Adstock 衰减](../../8-analysis-toolbox/04-adstock-decay/cn.md)）。
+**第二步：给每一档配上一笔对应的「换回」。** 这步最难，难在**广告的效果会拖时间**：今天花的钱，明后天还在起作用。拿「这一档的花费」去对「这一档当天的销售额」，曲线会因为销售的自然波动而乱跳。做法是**算差分之前先做一遍时间上的对齐**：把每笔花费按它自己的衰减形状摊开，再按同样的窗口去取各档的换回（[Adstock 衰减](../../8-analysis-toolbox/04-adstock-decay/cn.md)）。
 
 **第三步：算差分。** 边际 ROI = 该档换回 ÷ 该档花费，八档连起来就是边际曲线。
 
@@ -55,15 +53,15 @@ https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E6%8A%8A%E
 
 <a href="https://x-cmd.com/draw/explore/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E6%8A%8A%E8%8A%B1%E8%B4%B9%E5%88%87%E6%88%90%E5%85%AB%E6%A1%A3%EF%BC%9A%E6%AF%8F%E4%B8%80%E6%A1%A3%E8%87%AA%E5%B7%B1%E5%B8%A6%E5%9B%9E%E5%A4%9A%E5%B0%91%22%7D%2C%22color%22%3A%5B%22%232563eb%22%2C%22%232563eb%22%2C%22%232563eb%22%2C%22%232563eb%22%2C%22%23f59e0b%22%2C%22%23f59e0b%22%2C%22%23dc2626%22%2C%22%23dc2626%22%5D%2C%22xAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%22%E7%AC%AC1%E6%A1%A3%22%2C%22%E7%AC%AC2%E6%A1%A3%22%2C%22%E7%AC%AC3%E6%A1%A3%22%2C%22%E7%AC%AC4%E6%A1%A3%22%2C%22%E7%AC%AC5%E6%A1%A3%22%2C%22%E7%AC%AC6%E6%A1%A3%22%2C%22%E7%AC%AC7%E6%A1%A3%22%2C%22%E7%AC%AC8%E6%A1%A3%22%5D%2C%22axisLabel%22%3A%7B%22interval%22%3A0%7D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%22%E4%B8%87%E5%85%83%22%7D%2C%22grid%22%3A%7B%22left%22%3A90%2C%22right%22%3A50%2C%22top%22%3A60%2C%22bottom%22%3A60%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%2C%22axisPointer%22%3A%7B%22type%22%3A%22shadow%22%7D%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22%E8%AF%A5%E6%A1%A3%E6%8D%A2%E5%9B%9E%E7%9A%84%E9%92%B1%EF%BC%88%E4%B8%87%E5%85%83%EF%BC%89%22%2C%22type%22%3A%22bar%22%2C%22data%22%3A%5B66%2C54%2C43%2C33%2C24%2C16%2C9%2C4%5D%2C%22label%22%3A%7B%22show%22%3Atrue%2C%22position%22%3A%22top%22%2C%22formatter%22%3A%22%7Bc%7D%22%7D%2C%22stack%22%3Anull%7D%5D%7D&w=760&h=400"><img src="https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E6%8A%8A%E8%8A%B1%E8%B4%B9%E5%88%87%E6%88%90%E5%85%AB%E6%A1%A3%EF%BC%9A%E6%AF%8F%E4%B8%80%E6%A1%A3%E8%87%AA%E5%B7%B1%E5%B8%A6%E5%9B%9E%E5%A4%9A%E5%B0%91%22%7D%2C%22color%22%3A%5B%22%232563eb%22%2C%22%232563eb%22%2C%22%232563eb%22%2C%22%232563eb%22%2C%22%23f59e0b%22%2C%22%23f59e0b%22%2C%22%23dc2626%22%2C%22%23dc2626%22%5D%2C%22xAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%22%E7%AC%AC1%E6%A1%A3%22%2C%22%E7%AC%AC2%E6%A1%A3%22%2C%22%E7%AC%AC3%E6%A1%A3%22%2C%22%E7%AC%AC4%E6%A1%A3%22%2C%22%E7%AC%AC5%E6%A1%A3%22%2C%22%E7%AC%AC6%E6%A1%A3%22%2C%22%E7%AC%AC7%E6%A1%A3%22%2C%22%E7%AC%AC8%E6%A1%A3%22%5D%2C%22axisLabel%22%3A%7B%22interval%22%3A0%7D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%22%E4%B8%87%E5%85%83%22%7D%2C%22grid%22%3A%7B%22left%22%3A90%2C%22right%22%3A50%2C%22top%22%3A60%2C%22bottom%22%3A60%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%2C%22axisPointer%22%3A%7B%22type%22%3A%22shadow%22%7D%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22%E8%AF%A5%E6%A1%A3%E6%8D%A2%E5%9B%9E%E7%9A%84%E9%92%B1%EF%BC%88%E4%B8%87%E5%85%83%EF%BC%89%22%2C%22type%22%3A%22bar%22%2C%22data%22%3A%5B66%2C54%2C43%2C33%2C24%2C16%2C9%2C4%5D%2C%22label%22%3A%7B%22show%22%3Atrue%2C%22position%22%3A%22top%22%2C%22formatter%22%3A%22%7Bc%7D%22%7D%2C%22stack%22%3Anull%7D%5D%7D&w=760&h=400" width="760" alt="spend_band_returns"></a>
 
-**画的时候必须写上去：这是账面曲线，不是增量曲线。** 每一档的「换回」里有多少是真新增的，这份数据里没有。这些数字都只能当上限看。
+**画的时候必须写上去：这是账面曲线，不是增量曲线。** 每一档的「换回」里有多少是真新增的，这份数据里没有。这些数字只能当上限看。
 
 ## 从哪一块开始不值
 
-**找那条线穿过 1.0 的地方。** 这就是拐点。边际 ROI 大于 1，这一档还能带回来超过它自己的钱；小于 1，加这一档净亏；等于 0，这一档纯粹是白花。
+**找那条线穿过 1.0 的地方。** 这就是拐点。边际 ROI 大于 1，这一档还能带回来超过它自己的钱。小于 1，加这一档净亏。等于 0，这一档纯粹白花。
 
 **回到算例：第 7 档的边际 ROI 是 0.9，第 6 档是 1.6。拐点夹在两档之间，也就是这个渠道的花费从 60 万附近开始就不该再加。**
 
-用一条真实的饱和曲线看更清楚。Hill 曲线（形状固定的数学曲线，参数是饱和点 k 和陡度 α）的边际回报：
+用一条真实的饱和曲线看更清楚。Hill 曲线（形状固定的数学曲线，两个参数：饱和点 k 和陡度 α）的边际回报。下面这条取 k=1000、α=2，纵轴是「每多投 1 元换回几元」：
 
 ```text
 https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E9%A5%B1%E5%92%8C%E6%9B%B2%E7%BA%BF%E4%B8%8B%E7%9A%84%E8%BE%B9%E9%99%85%E5%9B%9E%E6%8A%A5%EF%BC%9A%E8%B6%8A%E8%BF%87%201.0%20%E4%B9%8B%E5%90%8E%EF%BC%8C%E5%86%8D%E5%8A%A0%E7%9A%84%E9%92%B1%E4%B8%8D%E5%86%8D%E5%9B%9E%E6%9C%AC%22%7D%2C%22color%22%3A%5B%22%232563eb%22%2C%22%23dc2626%22%2C%22%2364748b%22%2C%22%23f59e0b%22%2C%22%230891b2%22%2C%22%238b5cf6%22%2C%22%2365a30d%22%2C%22%23db2777%22%5D%2C%22xAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%220.25k%22%2C%220.5k%22%2C%220.75k%22%2C%221.0k%22%2C%221.25k%22%2C%221.5k%22%2C%221.75k%22%2C%222.0k%22%2C%222.5k%22%2C%223.0k%22%2C%224.0k%22%2C%225.0k%22%5D%2C%22axisLabel%22%3A%7B%22interval%22%3A0%7D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%22%E5%80%8D%22%2C%22axisLabel%22%3A%7B%22formatter%22%3A%22%7Bvalue%7D%22%7D%7D%2C%22grid%22%3A%7B%22left%22%3A80%2C%22right%22%3A40%2C%22top%22%3A80%2C%22bottom%22%3A60%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%7D%2C%22legend%22%3A%7B%22data%22%3A%5B%22%E8%BE%B9%E9%99%85%E5%9B%9E%E6%8A%A5%EF%BC%88%E6%AF%8F%201%20%E5%85%83%E6%8D%A2%E5%9B%9E%E5%A4%9A%E5%B0%91%E5%80%8D%EF%BC%89%22%2C%22%E5%9B%9E%E6%9C%AC%E7%BA%BF%EF%BC%881.0%20%E5%80%8D%EF%BC%89%22%5D%2C%22top%22%3A30%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22%E8%BE%B9%E9%99%85%E5%9B%9E%E6%8A%A5%EF%BC%88%E6%AF%8F%201%20%E5%85%83%E6%8D%A2%E5%9B%9E%E5%A4%9A%E5%B0%91%E5%80%8D%EF%BC%89%22%2C%22data%22%3A%5B2.77%2C4.0%2C3.84%2C3.13%2C2.38%2C1.78%2C1.33%2C1.0%2C0.6%2C0.38%2C0.17%2C0.09%5D%2C%22type%22%3A%22line%22%2C%22smooth%22%3Atrue%2C%22connectNulls%22%3Atrue%7D%2C%7B%22name%22%3A%22%E5%9B%9E%E6%9C%AC%E7%BA%BF%EF%BC%881.0%20%E5%80%8D%EF%BC%89%22%2C%22data%22%3A%5B1.0%2C1.0%2C1.0%2C1.0%2C1.0%2C1.0%2C1.0%2C1.0%2C1.0%2C1.0%2C1.0%2C1.0%5D%2C%22type%22%3A%22line%22%2C%22smooth%22%3Atrue%2C%22connectNulls%22%3Atrue%7D%5D%7D&w=760&h=430
@@ -71,7 +69,9 @@ https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E9%A5%B1%E
 
 <a href="https://x-cmd.com/draw/explore/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E9%A5%B1%E5%92%8C%E6%9B%B2%E7%BA%BF%E4%B8%8B%E7%9A%84%E8%BE%B9%E9%99%85%E5%9B%9E%E6%8A%A5%EF%BC%9A%E8%B6%8A%E8%BF%87%201.0%20%E4%B9%8B%E5%90%8E%EF%BC%8C%E5%86%8D%E5%8A%A0%E7%9A%84%E9%92%B1%E4%B8%8D%E5%86%8D%E5%9B%9E%E6%9C%AC%22%7D%2C%22color%22%3A%5B%22%232563eb%22%2C%22%23dc2626%22%2C%22%2364748b%22%2C%22%23f59e0b%22%2C%22%230891b2%22%2C%22%238b5cf6%22%2C%22%2365a30d%22%2C%22%23db2777%22%5D%2C%22xAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%220.25k%22%2C%220.5k%22%2C%220.75k%22%2C%221.0k%22%2C%221.25k%22%2C%221.5k%22%2C%221.75k%22%2C%222.0k%22%2C%222.5k%22%2C%223.0k%22%2C%224.0k%22%2C%225.0k%22%5D%2C%22axisLabel%22%3A%7B%22interval%22%3A0%7D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%22%E5%80%8D%22%2C%22axisLabel%22%3A%7B%22formatter%22%3A%22%7Bvalue%7D%22%7D%7D%2C%22grid%22%3A%7B%22left%22%3A80%2C%22right%22%3A40%2C%22top%22%3A80%2C%22bottom%22%3A60%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%7D%2C%22legend%22%3A%7B%22data%22%3A%5B%22%E8%BE%B9%E9%99%85%E5%9B%9E%E6%8A%A5%EF%BC%88%E6%AF%8F%201%20%E5%85%83%E6%8D%A2%E5%9B%9E%E5%A4%9A%E5%B0%91%E5%80%8D%EF%BC%89%22%2C%22%E5%9B%9E%E6%9C%AC%E7%BA%BF%EF%BC%881.0%20%E5%80%8D%EF%BC%89%22%5D%2C%22top%22%3A30%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22%E8%BE%B9%E9%99%85%E5%9B%9E%E6%8A%A5%EF%BC%88%E6%AF%8F%201%20%E5%85%83%E6%8D%A2%E5%9B%9E%E5%A4%9A%E5%B0%91%E5%80%8D%EF%BC%89%22%2C%22data%22%3A%5B2.77%2C4.0%2C3.84%2C3.13%2C2.38%2C1.78%2C1.33%2C1.0%2C0.6%2C0.38%2C0.17%2C0.09%5D%2C%22type%22%3A%22line%22%2C%22smooth%22%3Atrue%2C%22connectNulls%22%3Atrue%7D%2C%7B%22name%22%3A%22%E5%9B%9E%E6%9C%AC%E7%BA%BF%EF%BC%881.0%20%E5%80%8D%EF%BC%89%22%2C%22data%22%3A%5B1.0%2C1.0%2C1.0%2C1.0%2C1.0%2C1.0%2C1.0%2C1.0%2C1.0%2C1.0%2C1.0%2C1.0%5D%2C%22type%22%3A%22line%22%2C%22smooth%22%3Atrue%2C%22connectNulls%22%3Atrue%7D%5D%7D&w=760&h=430"><img src="https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E9%A5%B1%E5%92%8C%E6%9B%B2%E7%BA%BF%E4%B8%8B%E7%9A%84%E8%BE%B9%E9%99%85%E5%9B%9E%E6%8A%A5%EF%BC%9A%E8%B6%8A%E8%BF%87%201.0%20%E4%B9%8B%E5%90%8E%EF%BC%8C%E5%86%8D%E5%8A%A0%E7%9A%84%E9%92%B1%E4%B8%8D%E5%86%8D%E5%9B%9E%E6%9C%AC%22%7D%2C%22color%22%3A%5B%22%232563eb%22%2C%22%23dc2626%22%2C%22%2364748b%22%2C%22%23f59e0b%22%2C%22%230891b2%22%2C%22%238b5cf6%22%2C%22%2365a30d%22%2C%22%23db2777%22%5D%2C%22xAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%220.25k%22%2C%220.5k%22%2C%220.75k%22%2C%221.0k%22%2C%221.25k%22%2C%221.5k%22%2C%221.75k%22%2C%222.0k%22%2C%222.5k%22%2C%223.0k%22%2C%224.0k%22%2C%225.0k%22%5D%2C%22axisLabel%22%3A%7B%22interval%22%3A0%7D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%22%E5%80%8D%22%2C%22axisLabel%22%3A%7B%22formatter%22%3A%22%7Bvalue%7D%22%7D%7D%2C%22grid%22%3A%7B%22left%22%3A80%2C%22right%22%3A40%2C%22top%22%3A80%2C%22bottom%22%3A60%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%7D%2C%22legend%22%3A%7B%22data%22%3A%5B%22%E8%BE%B9%E9%99%85%E5%9B%9E%E6%8A%A5%EF%BC%88%E6%AF%8F%201%20%E5%85%83%E6%8D%A2%E5%9B%9E%E5%A4%9A%E5%B0%91%E5%80%8D%EF%BC%89%22%2C%22%E5%9B%9E%E6%9C%AC%E7%BA%BF%EF%BC%881.0%20%E5%80%8D%EF%BC%89%22%5D%2C%22top%22%3A30%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22%E8%BE%B9%E9%99%85%E5%9B%9E%E6%8A%A5%EF%BC%88%E6%AF%8F%201%20%E5%85%83%E6%8D%A2%E5%9B%9E%E5%A4%9A%E5%B0%91%E5%80%8D%EF%BC%89%22%2C%22data%22%3A%5B2.77%2C4.0%2C3.84%2C3.13%2C2.38%2C1.78%2C1.33%2C1.0%2C0.6%2C0.38%2C0.17%2C0.09%5D%2C%22type%22%3A%22line%22%2C%22smooth%22%3Atrue%2C%22connectNulls%22%3Atrue%7D%2C%7B%22name%22%3A%22%E5%9B%9E%E6%9C%AC%E7%BA%BF%EF%BC%881.0%20%E5%80%8D%EF%BC%89%22%2C%22data%22%3A%5B1.0%2C1.0%2C1.0%2C1.0%2C1.0%2C1.0%2C1.0%2C1.0%2C1.0%2C1.0%2C1.0%2C1.0%5D%2C%22type%22%3A%22line%22%2C%22smooth%22%3Atrue%2C%22connectNulls%22%3Atrue%7D%5D%7D&w=760&h=430" width="760" alt="hill_marginal_return_breakeven"></a>
 
-**这条线在投入量等于 2.0k 的地方正好穿过回本线 1.0。** 在那之前每多花 1 块带回的都超过 1 块，在那之后迅速掉到 0.6、0.38、0.17。
+**这条线在投入量等于 2000 元的地方正好穿过回本线 1.0。** 在那之前每多花 1 块带回的都超过 1 块，在那之后迅速掉到 0.6、0.38、0.17。
+
+**开头那一小段要留意：α=2 时边际回报不是一路往下走的，它从 2.77 涨到 4.0 才开始跌。** α 越大，起点那段爬升越明显（α=3 时峰值在 794 元附近）。这是曲线的性质，不是画错了。α=1 那条才是稳定下降的，峰值就在 x=0。
 
 Hill 曲线有个代数性质值得记住：**拿到 90% 的天花板，需要投到饱和点的 9 倍**（当 α=1），α=2 时是 3 倍，α=3 时是 2.1 倍。**「再冲一冲就能到顶」多数时候意味着你离顶还很远**。（见 [Hill 饱和曲线](../../8-analysis-toolbox/05-hill-saturation-curve/cn.md)）
 
@@ -80,31 +80,31 @@ Hill 曲线有个代数性质值得记住：**拿到 90% 的天花板，需要�
 **骗人的场景有三种，第一种最常见：总量在涨、平均数稳、边缘不值。** Chewy 是美国最大的宠物用品电商之一，财报把营销费单列出来。六年拉成一条线：
 
 ```text
-https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22Chewy%EF%BC%9A%E8%90%A5%E9%94%80%E8%B4%B9%E9%80%90%E5%B9%B4%E5%A2%9E%E5%8A%A0%EF%BC%8C%E6%AF%8F%201%20%E5%85%83%E8%90%A5%E9%94%80%E8%B4%B9%E6%8D%A2%E5%9B%9E%E7%9A%84%E8%90%A5%E6%94%B6%E5%8D%B4%E5%9C%A8%E9%80%80%22%7D%2C%22color%22%3A%5B%22%232563eb%22%2C%22%232563eb%22%2C%22%232563eb%22%2C%22%23f59e0b%22%2C%22%23dc2626%22%2C%22%232563eb%22%5D%2C%22xAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%22FY2020%22%2C%22FY2021%22%2C%22FY2022%22%2C%22FY2023%22%2C%22FY2024%22%2C%22FY2025%22%5D%2C%22axisLabel%22%3A%7B%22interval%22%3A0%7D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%22%E5%80%8D%22%7D%2C%22grid%22%3A%7B%22left%22%3A90%2C%22right%22%3A50%2C%22top%22%3A60%2C%22bottom%22%3A60%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%2C%22axisPointer%22%3A%7B%22type%22%3A%22shadow%22%7D%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22%E6%AF%8F%201%20%E5%85%83%E8%90%A5%E9%94%80%E8%B4%B9%E6%8D%A2%E5%9B%9E%E7%9A%84%E8%90%A5%E6%94%B6%EF%BC%88%E5%80%8D%EF%BC%89%22%2C%22type%22%3A%22bar%22%2C%22data%22%3A%5B13.92%2C14.49%2C15.58%2C15.02%2C14.75%2C15.28%5D%2C%22label%22%3A%7B%22show%22%3Atrue%2C%22position%22%3A%22top%22%2C%22formatter%22%3A%22%7Bc%7D%22%7D%2C%22stack%22%3Anull%7D%5D%7D&w=760&h=400
+https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22Chewy%EF%BC%9A%E8%90%A5%E9%94%80%E8%B4%B9%E5%8D%A0%E8%90%A5%E6%94%B6%E7%9A%84%E6%AF%94%E4%BE%8B%E5%87%A0%E4%B9%8E%E6%B2%A1%E5%8A%A8%EF%BC%8C%E6%AF%8F%201%20%E5%85%83%E8%90%A5%E9%94%80%E8%B4%B9%E6%8D%A2%E5%9B%9E%E7%9A%84%E8%90%A5%E6%94%B6%E5%8D%B4%E5%9C%A8%E9%80%80%22%7D%2C%22color%22%3A%5B%22%232563eb%22%2C%22%23dc2626%22%2C%22%2364748b%22%2C%22%23f59e0b%22%2C%22%230891b2%22%2C%22%238b5cf6%22%2C%22%2365a30d%22%2C%22%23db2777%22%5D%2C%22xAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%22FY2020%22%2C%22FY2021%22%2C%22FY2022%22%2C%22FY2023%22%2C%22FY2024%22%2C%22FY2025%22%5D%2C%22axisLabel%22%3A%7B%22interval%22%3A0%7D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%22%E5%80%8D%22%2C%22axisLabel%22%3A%7B%22formatter%22%3A%22%7Bvalue%7D%22%7D%7D%2C%22grid%22%3A%7B%22left%22%3A80%2C%22right%22%3A40%2C%22top%22%3A80%2C%22bottom%22%3A60%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%7D%2C%22legend%22%3A%7B%22data%22%3A%5B%22%E6%AF%8F%201%20%E5%85%83%E8%90%A5%E9%94%80%E8%B4%B9%E6%8D%A2%E5%9B%9E%E7%9A%84%E8%90%A5%E6%94%B6%EF%BC%88%E5%80%8D%EF%BC%89%22%5D%2C%22top%22%3A30%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22%E6%AF%8F%201%20%E5%85%83%E8%90%A5%E9%94%80%E8%B4%B9%E6%8D%A2%E5%9B%9E%E7%9A%84%E8%90%A5%E6%94%B6%EF%BC%88%E5%80%8D%EF%BC%89%22%2C%22data%22%3A%5B13.92%2C14.49%2C15.58%2C15.02%2C14.75%2C15.28%5D%2C%22type%22%3A%22line%22%2C%22smooth%22%3Atrue%2C%22connectNulls%22%3Atrue%7D%5D%7D&w=760&h=400
 ```
 
-<a href="https://x-cmd.com/draw/explore/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22Chewy%EF%BC%9A%E8%90%A5%E9%94%80%E8%B4%B9%E9%80%90%E5%B9%B4%E5%A2%9E%E5%8A%A0%EF%BC%8C%E6%AF%8F%201%20%E5%85%83%E8%90%A5%E9%94%80%E8%B4%B9%E6%8D%A2%E5%9B%9E%E7%9A%84%E8%90%A5%E6%94%B6%E5%8D%B4%E5%9C%A8%E9%80%80%22%7D%2C%22color%22%3A%5B%22%232563eb%22%2C%22%232563eb%22%2C%22%232563eb%22%2C%22%23f59e0b%22%2C%22%23dc2626%22%2C%22%232563eb%22%5D%2C%22xAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%22FY2020%22%2C%22FY2021%22%2C%22FY2022%22%2C%22FY2023%22%2C%22FY2024%22%2C%22FY2025%22%5D%2C%22axisLabel%22%3A%7B%22interval%22%3A0%7D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%22%E5%80%8D%22%7D%2C%22grid%22%3A%7B%22left%22%3A90%2C%22right%22%3A50%2C%22top%22%3A60%2C%22bottom%22%3A60%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%2C%22axisPointer%22%3A%7B%22type%22%3A%22shadow%22%7D%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22%E6%AF%8F%201%20%E5%85%83%E8%90%A5%E9%94%80%E8%B4%B9%E6%8D%A2%E5%9B%9E%E7%9A%84%E8%90%A5%E6%94%B6%EF%BC%88%E5%80%8D%EF%BC%89%22%2C%22type%22%3A%22bar%22%2C%22data%22%3A%5B13.92%2C14.49%2C15.58%2C15.02%2C14.75%2C15.28%5D%2C%22label%22%3A%7B%22show%22%3Atrue%2C%22position%22%3A%22top%22%2C%22formatter%22%3A%22%7Bc%7D%22%7D%2C%22stack%22%3Anull%7D%5D%7D&w=760&h=400"><img src="https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22Chewy%EF%BC%9A%E8%90%A5%E9%94%80%E8%B4%B9%E9%80%90%E5%B9%B4%E5%A2%9E%E5%8A%A0%EF%BC%8C%E6%AF%8F%201%20%E5%85%83%E8%90%A5%E9%94%80%E8%B4%B9%E6%8D%A2%E5%9B%9E%E7%9A%84%E8%90%A5%E6%94%B6%E5%8D%B4%E5%9C%A8%E9%80%80%22%7D%2C%22color%22%3A%5B%22%232563eb%22%2C%22%232563eb%22%2C%22%232563eb%22%2C%22%23f59e0b%22%2C%22%23dc2626%22%2C%22%232563eb%22%5D%2C%22xAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%22FY2020%22%2C%22FY2021%22%2C%22FY2022%22%2C%22FY2023%22%2C%22FY2024%22%2C%22FY2025%22%5D%2C%22axisLabel%22%3A%7B%22interval%22%3A0%7D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%22%E5%80%8D%22%7D%2C%22grid%22%3A%7B%22left%22%3A90%2C%22right%22%3A50%2C%22top%22%3A60%2C%22bottom%22%3A60%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%2C%22axisPointer%22%3A%7B%22type%22%3A%22shadow%22%7D%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22%E6%AF%8F%201%20%E5%85%83%E8%90%A5%E9%94%80%E8%B4%B9%E6%8D%A2%E5%9B%9E%E7%9A%84%E8%90%A5%E6%94%B6%EF%BC%88%E5%80%8D%EF%BC%89%22%2C%22type%22%3A%22bar%22%2C%22data%22%3A%5B13.92%2C14.49%2C15.58%2C15.02%2C14.75%2C15.28%5D%2C%22label%22%3A%7B%22show%22%3Atrue%2C%22position%22%3A%22top%22%2C%22formatter%22%3A%22%7Bc%7D%22%7D%2C%22stack%22%3Anull%7D%5D%7D&w=760&h=400" width="760" alt="chewy_revenue_per_marketing_dollar"></a>
+<a href="https://x-cmd.com/draw/explore/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22Chewy%EF%BC%9A%E8%90%A5%E9%94%80%E8%B4%B9%E5%8D%A0%E8%90%A5%E6%94%B6%E7%9A%84%E6%AF%94%E4%BE%8B%E5%87%A0%E4%B9%8E%E6%B2%A1%E5%8A%A8%EF%BC%8C%E6%AF%8F%201%20%E5%85%83%E8%90%A5%E9%94%80%E8%B4%B9%E6%8D%A2%E5%9B%9E%E7%9A%84%E8%90%A5%E6%94%B6%E5%8D%B4%E5%9C%A8%E9%80%80%22%7D%2C%22color%22%3A%5B%22%232563eb%22%2C%22%23dc2626%22%2C%22%2364748b%22%2C%22%23f59e0b%22%2C%22%230891b2%22%2C%22%238b5cf6%22%2C%22%2365a30d%22%2C%22%23db2777%22%5D%2C%22xAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%22FY2020%22%2C%22FY2021%22%2C%22FY2022%22%2C%22FY2023%22%2C%22FY2024%22%2C%22FY2025%22%5D%2C%22axisLabel%22%3A%7B%22interval%22%3A0%7D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%22%E5%80%8D%22%2C%22axisLabel%22%3A%7B%22formatter%22%3A%22%7Bvalue%7D%22%7D%7D%2C%22grid%22%3A%7B%22left%22%3A80%2C%22right%22%3A40%2C%22top%22%3A80%2C%22bottom%22%3A60%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%7D%2C%22legend%22%3A%7B%22data%22%3A%5B%22%E6%AF%8F%201%20%E5%85%83%E8%90%A5%E9%94%80%E8%B4%B9%E6%8D%A2%E5%9B%9E%E7%9A%84%E8%90%A5%E6%94%B6%EF%BC%88%E5%80%8D%EF%BC%89%22%5D%2C%22top%22%3A30%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22%E6%AF%8F%201%20%E5%85%83%E8%90%A5%E9%94%80%E8%B4%B9%E6%8D%A2%E5%9B%9E%E7%9A%84%E8%90%A5%E6%94%B6%EF%BC%88%E5%80%8D%EF%BC%89%22%2C%22data%22%3A%5B13.92%2C14.49%2C15.58%2C15.02%2C14.75%2C15.28%5D%2C%22type%22%3A%22line%22%2C%22smooth%22%3Atrue%2C%22connectNulls%22%3Atrue%7D%5D%7D&w=760&h=400"><img src="https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22Chewy%EF%BC%9A%E8%90%A5%E9%94%80%E8%B4%B9%E5%8D%A0%E8%90%A5%E6%94%B6%E7%9A%84%E6%AF%94%E4%BE%8B%E5%87%A0%E4%B9%8E%E6%B2%A1%E5%8A%A8%EF%BC%8C%E6%AF%8F%201%20%E5%85%83%E8%90%A5%E9%94%80%E8%B4%B9%E6%8D%A2%E5%9B%9E%E7%9A%84%E8%90%A5%E6%94%B6%E5%8D%B4%E5%9C%A8%E9%80%80%22%7D%2C%22color%22%3A%5B%22%232563eb%22%2C%22%23dc2626%22%2C%22%2364748b%22%2C%22%23f59e0b%22%2C%22%230891b2%22%2C%22%238b5cf6%22%2C%22%2365a30d%22%2C%22%23db2777%22%5D%2C%22xAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%22FY2020%22%2C%22FY2021%22%2C%22FY2022%22%2C%22FY2023%22%2C%22FY2024%22%2C%22FY2025%22%5D%2C%22axisLabel%22%3A%7B%22interval%22%3A0%7D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%22%E5%80%8D%22%2C%22axisLabel%22%3A%7B%22formatter%22%3A%22%7Bvalue%7D%22%7D%7D%2C%22grid%22%3A%7B%22left%22%3A80%2C%22right%22%3A40%2C%22top%22%3A80%2C%22bottom%22%3A60%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%7D%2C%22legend%22%3A%7B%22data%22%3A%5B%22%E6%AF%8F%201%20%E5%85%83%E8%90%A5%E9%94%80%E8%B4%B9%E6%8D%A2%E5%9B%9E%E7%9A%84%E8%90%A5%E6%94%B6%EF%BC%88%E5%80%8D%EF%BC%89%22%5D%2C%22top%22%3A30%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22%E6%AF%8F%201%20%E5%85%83%E8%90%A5%E9%94%80%E8%B4%B9%E6%8D%A2%E5%9B%9E%E7%9A%84%E8%90%A5%E6%94%B6%EF%BC%88%E5%80%8D%EF%BC%89%22%2C%22data%22%3A%5B13.92%2C14.49%2C15.58%2C15.02%2C14.75%2C15.28%5D%2C%22type%22%3A%22line%22%2C%22smooth%22%3Atrue%2C%22connectNulls%22%3Atrue%7D%5D%7D&w=760&h=400" width="760" alt="chewy_revenue_per_marketing_dollar"></a>
 
-**看两条线。** 营销费占营收的比例稳定在 6.4% 到 6.8% 之间，几乎没动。每 1 元营销费换回的营收却从 FY2022 的 15.58 倍退到 FY2024 的 14.75 倍。占比稳，是因为分子分母同步长大；效率退，是因为多出来的钱买到的都是更贵、边际更薄的量。
+**图上是效率这一条线，占比要自己算。** 营销费占营收的比例，FY2022 之后稳定在 6.4% 到 6.8% 之间，几乎没动（FY2020 是 7.18%，FY2021 是 6.90%，之后落进这个区间）。每 1 元营销费换回的营收却从 FY2022 的 15.58 倍退到 FY2024 的 14.75 倍。占比稳，是因为分子分母同步长大。效率退，是因为多出来的钱买到的都是更贵、边际更薄的量。
 
 **还有更硬的一块证据。** FY2022 到 FY2023，营销费从 6.494 亿涨到 7.424 亿，营收从 101.19 亿涨到 111.477 亿。这一年多花的 9300 万带回 10.287 亿，边际回报 11.06 倍，低于这年平均的 15.02 倍。
 
-**要提醒一句：这是上市公司财报的混合口径，不是分档边际**，只能当方向看。**所以只能自己画自己的曲线**。
+**要提醒一句：这是上市公司财报的混合口径，不是分档边际**，只能当方向看。真要决定下一笔钱给谁，得自己画自己渠道的曲线。
 
-**第二种：平均数里混了别的东西。** 品牌自然搜索的量被算进了付费搜索的账上，ROI 看着很稳。实际关掉付费品牌词之后，大部分点击被自然搜索接走了——eBay 那次实验里是 99.5%，真正丢掉的只有 0.5%。
+**第二种：平均数里混了别的东西。** 品牌自然搜索的量被算进了付费搜索的账上，ROI 看着很稳。关掉付费品牌词之后，大部分点击被自然搜索接走了——eBay 那次实验里是 99.5%，真正丢掉的只有 0.5%。
 
-**第三种：平均数里混了新老客。** 新客单价高、复购低，把他们拉进来的钱拉高了平均 ROI；可他们第二年不再买，第二年的平均 ROI 就会塌下来。**所以看边际曲线，看的是同一条队列的完整生命周期**，不是当月。
+**第三种：平均数里混了新老客。** 新客单价高、复购低，把他们拉进来的钱拉高了平均 ROI。可他们第二年不再买，第二年的平均 ROI 就塌下来。**读边际曲线要跟着同一批客户走完整个生命周期**，不是只看完当月。
 
-**还有一件事会让这条曲线不可信：样本太少。** 最后几档只有少量投放和订单，算出的边际 ROI 波动很大。区间宽度跟样本量的平方根成反比，样本量差 40 倍，区间宽度差 6 倍（[样本量与区间半宽](../../8-analysis-toolbox/08-confidence-intervals-and-fit/cn.md)）。**所以最靠近拐点的那一档，恰恰是估得最不准的那一档。**
+**还有一件事会让这条曲线不可信：样本太少。** 最后几档只有少量投放和订单，算出的边际 ROI 波动很大。区间宽度跟样本量的平方根成反比，样本量差 40 倍，区间宽度差 6 倍（[样本量与区间半宽](../../8-analysis-toolbox/08-confidence-intervals-and-fit/cn.md)）。**最靠近拐点的那一档，恰恰估得最不准。**
 
 ## 加不加量，看最后一块钱
 
-**给你最重要的那个渠道，画出它自己的边际曲线，读出拐点，把预算停在那里。** 上面那三步就是全部动作，做完那条线的第 6、7 档之间就是天花板。
+**判断加不加量，看的是最后一笔钱，不是平均数。** 上面那三步切出来的曲线，拐点落在第 6 档和第 7 档之间，那里就是天花板。
 
-**这条曲线的用处比「ROI 排名」大得多。** ROI 排名告诉你哪个渠道过去赚得多，不告诉你下一笔钱该给谁。那个答案在 [ROI 最高的渠道，不该加最多钱](../../4-performance-analysis/02-roi-ranking-vs-budget-allocation/cn.md)；两个渠道边际回报一样的那一点该分两边，见 [等边际原则](../../8-analysis-toolbox/07-equal-marginal-returns-principle/cn.md)。
+**这条曲线的用处比「ROI 排名」大得多。** ROI 排名告诉你哪个渠道过去赚得多，不告诉你下一笔钱该给谁。那个答案在 [ROI 最高的渠道，不该加最多钱](../../4-performance-analysis/02-roi-ranking-vs-budget-allocation/cn.md)。两个渠道边际回报一样的那一点该分两边，见 [等边际原则](../../8-analysis-toolbox/07-equal-marginal-returns-principle/cn.md)。
 
 **一句话带走：平均 ROI 回答「过去这钱花得怎么样」，边际 ROI 回答「下一块钱还赚不赚得回来」。**
 
-**数据**：Chewy（CIK 0001766502）的营销费用（`us-gaap/MarketingAndAdvertisingExpense`）与营收（`us-gaap/RevenueFromContractWithCustomerExcludingAssessedTax`），取自 SEC EDGAR XBRL，财年截至 2026-02-01，2026-11-08 抓取。八个花费档的表格、两条 ROI 曲线、Hill 曲线那张图都是**算例，不是真实投放数据**。Hill 曲线的 9^(1/α) 倍数关系见 [Hill 饱和曲线](../../8-analysis-toolbox/05-hill-saturation-curve/cn.md)；eBay 的 −63% 增量回报来自 Blake, Nosko & Tadelis, *Econometrica* 83(1), 2015。
+**数据**：Chewy（CIK 0001766502）的营销费用与营收，取自 SEC EDGAR XBRL，财年截至 2026-02-01，2026-11-08 抓取。八个花费档的表格、两条 ROI 曲线、Hill 那张图都是**算例，不是真实投放数据**，Hill 取 k=1000、α=2。9^(1/α) 倍数关系见 [Hill 饱和曲线](../../8-analysis-toolbox/05-hill-saturation-curve/cn.md)。eBay 的 −63% 增量回报来自 Blake, Nosko & Tadelis, *Econometrica* 83(1), 2015。
 
-**复现**：`curl -s -H 'User-Agent: <你> <邮箱>' https://data.sec.gov/api/xbrl/companyconcept/CIK0001766502/us-gaap/MarketingAndAdvertisingExpense.json`（营收换标签 `RevenueFromContractWithCustomerExcludingAssessedTax`）。
+**复现**：`curl -s -H 'User-Agent: <你> <邮箱>' https://data.sec.gov/api/xbrl/companyconcept/CIK0001766502/us-gaap/MarketingAndAdvertisingExpense.json`，营收换标签 `RevenueFromContractWithCustomerExcludingAssessedTax`。

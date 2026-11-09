@@ -94,7 +94,7 @@ for f in sorted(glob.glob('docs/**/*.md',recursive=True)):
             c=subprocess.run(['zsh','-c',cmd+' 2>&1 | head -3'],capture_output=True,text=True)
             ok='E|' not in c.stdout and 'error' not in c.stdout.lower()
             print(f'  复现命令 {cmd[:70]} → {"✓" if ok else "△"}')
-            print('    ', c.stdout.strip().splitlines()[:3])
+            for ln in c.stdout.strip().splitlines()[:2]: print('    ', ln[:160])
 for f in sorted(glob.glob('docs/*/*/faq.yml')):
     d=yaml.safe_load(open(f))
     print(f'\n=== {f} ===')

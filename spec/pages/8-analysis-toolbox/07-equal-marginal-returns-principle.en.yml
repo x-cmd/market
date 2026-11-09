@@ -1,0 +1,11 @@
+id: 07-equal-marginal-returns-principle
+title: A budget split is only optimal when every channel's next dollar earns the same
+sections:
+  - title: The test, in one rule
+    content: "With the budget total fixed, total return is largest when every channel's marginal return is equal, and the crossing point of the two marginal curves is where each channel should sit"
+  - title: Where the rule comes from
+    content: "Shifting one unit from a channel with a lower marginal return to one with a higher marginal return raises total return, so the original split was not optimal, and moving stops where the two marginals match"
+  - title: Where it stops holding
+    content: "The rule breaks when the marginal cannot be estimated, when hard constraints pin a channel and the equalized point becomes unreachable, when the budget total is flexible, and when channels cannibalize or complement each other"
+  - title: What to do with the allocation you get back
+    content: "It is a test for how to split a fixed total, not for how much to spend or whether a channel is worth funding on its own, and it only holds when marginals are estimable, constraints are written down, and the total is fixed"

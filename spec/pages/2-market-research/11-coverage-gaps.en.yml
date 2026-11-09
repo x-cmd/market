@@ -1,5 +1,5 @@
 id: 11-coverage-gaps
-title: Before you quote a number, find out who it leaves out
+title: Every percentage comes from a frame, and the frame is not everything
 sections:
   - title: The firms this number never reaches
     content: "The GE10 size class covers 5.17% of EU retail firms but 77.18% of turnover, so the 94.8% outside the frame is a different business"
@@ -9,7 +9,7 @@ sections:
     content: "Size, sector, geography and channel each move the same penetration number, from 9.66% in France to 90.45% in accommodation and food"
   - title: Which way a gap bends the number
     content: "Share figures come out too big and growth rates too small, while the excluded 605,562 million euros of turnover is understated"
-  - title: How to mark what you left out
+  - title: Two ways to mark what you left out
     content: "Write the coverage into the title and note, and break the line where a real judgement sits between two data points"
   - title: Whitespace is information, not a defect
     content: "What a chart leaves out is worth more than what it draws, so publish the number inside its frame rather than the number alone"

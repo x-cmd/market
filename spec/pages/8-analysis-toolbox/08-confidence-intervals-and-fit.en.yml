@@ -1,0 +1,11 @@
+id: 08-confidence-intervals-and-fit
+title: "A good fit does not mean a trustworthy number"
+sections:
+  - title: The interval grades one number, the fit grades the whole model
+    content: "The interval says how precise a single estimate is, the fit says how well the model as a whole explains history"
+  - title: Neither one covers for the other
+    content: "One grades a parameter and the other grades a model, so a high fit can sit alongside a parameter interval so wide it says nothing"
+  - title: Where both numbers stop holding up
+    content: "A high fit is not a causal claim, the interval only covers the assumptions the model already believes, extrapolation breaks, and reporting only the best model tried makes the interval dishonest"
+  - title: How to use the two numbers
+    content: "Look at both together: is the number precise, is the model sound, and what range of history does it actually cover"

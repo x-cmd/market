@@ -1,0 +1,20 @@
+id: 02-visibility-three-measures
+title: "Three numbers decide how visible a brand is, and none of them covers the others"
+sections:
+  - title: "A share above 100% points at the denominator, not at bad data"
+    content: "NIKE's FY2023 revenue of $51.217B over the $41.557B BEA US shoe store total gives 123.2%, which shows the numerator and the denominator cover different scopes, and the two ways out of that mismatch"
+  - title: "What each of the three rulers measures, and where each one breaks"
+    content: "Share measures how much of the market, rank measures how easily the brand gets found, sentiment measures whether readers like it, and each ruler has its own failure mode"
+    subsections:
+      - title: "Share answers how much of the market"
+        content: "Official statistics and share backed out from SEC XBRL revenue, with the formula published next to the number, because the same numerator gives 123.2% or 15.4% depending on the denominator"
+      - title: "Rank answers how easily the brand gets found"
+        content: "Wikipedia search positions across six category terms, which change completely with the query, plus share of voice from pageviews for eleven brands, from Nike at 25.15% down to Deckers Outdoor at 0.002%"
+      - title: "Sentiment answers whether readers like it"
+        content: "Conflict-word density per 10,000 words across seven Wikipedia articles, where Skechers runs three times Nike's rate, and the boundary that keeps it from being quoted as a score"
+  - title: "Each ruler breaks on the question the other two answer"
+    content: "Share cannot say whether a brand gets seen, rank cannot say whether people buy it, and sentiment cannot say how much it sells"
+  - title: "Top of the search results is not the same as named in an AI answer"
+    content: "Retrieval returns a list and generation returns a summary, corpus density decides what gets named, and brand mention share inside AI answers has no reproducible public series"
+  - title: "Visibility is three numbers, not one"
+    content: "Each ruler has its own scope, date and failure mode, so report the three numbers separately rather than blending them into a score nobody can inspect"

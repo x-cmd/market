@@ -38,23 +38,24 @@ data:
           en:
             >
               The UK's Office for National Statistics publishes, every month, internet sales
-              as a percentage of total retail sales. In 2025 that share moved between 26.1%
-              and 32.4%. August 2025 was the low at 26.1%, October was 28.0%, November jumped
+              as a percentage of total retail sales. In 2025 that share moved between 25.9%
+              and 32.4%. February 2025 was the low at 25.9%, October was 28.0%, November jumped
               to 32.4% — the year's high — and December fell back to 29.6%. The same shape
-              repeats: November 2024 was 30.3% and also the annual peak, while August and
-              January are the troughs. That peak is not demand being created out of nothing.
-              It is shoppers who would otherwise have browsed in physical stores moving
-              online for the promotions, and moving back once the promotions end. Plan a
-              budget against the average of the year and you will under-buy in November and
-              over-buy in August.
+              repeats: November 2024 was 30.3% and also that year's peak, and the troughs sit
+              in the early months and late summer — February 2024 25.9%, March 25.8%, August
+              25.5%. That peak is not demand being created out of nothing. It is shoppers who
+              would otherwise have browsed in physical stores moving online for the
+              promotions, and moving back once the promotions end. Plan a budget against the
+              average of the year and you will under-buy in November and over-buy in February
+              and August.
           cn:
             >
               英国国家统计局（ONS）每个月公布网络零售额占零售总额的比重。2025 年这个比重在
-              26.1% 到 32.4% 之间摆动：八月 26.1% 是全年最低，十月 28.0%，十一月冲到 32.4%
+              25.9% 到 32.4% 之间摆动：二月 25.9% 是全年最低，十月 28.0%，十一月冲到 32.4%
               是全年最高，十二月回落到 29.6%。这个形状年年重复，2024 年十一月 30.3% 同样是
-              全年最高点，八月和一月都是谷底。这个峰不是凭空多出来的需求，是一批本来会去
-              线下逛的人为了促销改成了在网上下单，促销一过又回去。拿全年平均需求去排预算，
-              十一月会买少了，八月会买多了。
+              那年最高点，而谷底落在年初和夏末——2024 年二月 25.9%、三月 25.8%、八月 25.5%。
+              这个峰不是凭空多出来的需求，是一批本来会去线下逛的人为了促销改成了在网上下单，
+              促销一过又回去。拿全年平均需求去排预算，十一月会买少了，二月和八月会买多了。
         confidence: 9
         reference:
           - docs/5-campaign-analysis/05-budget-pacing-even-vs-weekend/cn.md
@@ -130,8 +131,8 @@ data:
           en:
             >
               The budget is 14,000 yuan over two weeks: ten weekdays plus four weekend
-              days, weekday CPM at 60 yuan and weekend CPM at 70 yuan because weekend
-              inventory is more crowded. Spreading evenly, 1,000 yuan a day on both weekday
+              days, weekday CPM at 60 yuan and weekend CPM at 70 yuan because the weekend
+              auction is more crowded. Spreading evenly, 1,000 yuan a day on both weekday
               and weekend, spends 10,000 on weekdays and 4,000 at the weekend, buying
               166,667 plus 57,143 impressions for 223,810 in total — a blended CPM of
               62.55 yuan. Loading toward the weekend, 400 yuan a day on weekdays and 2,500
@@ -144,7 +145,7 @@ data:
           cn:
             >
               预算是 14000 元、两周：10 个工作日加 4 个周末日。工作日 CPM 60 元，周末 CPM
-              70 元，因为周末的库存更挤。均匀花的话，工作日和周末都是每天 1000 元，工作日
+              70 元，因为周末竞价更挤。均匀花的话，工作日和周末都是每天 1000 元，工作日
               花掉 10000 买到 166667 次曝光，周末花掉 4000 买到 57143 次，合计 223810 次，
               混下来实际 CPM 62.55 元。往周末压的话，工作日每天 400 元、周末每天 2500 元，
               两边分别花掉 4000 和 10000，买到 66667 次和 142857 次，合计 209524 次，混下来

@@ -1,0 +1,15 @@
+id: 03-share-of-voice-seo-and-geo
+title: "Search rank and AI recommendation are two different scores, and they rarely agree"
+sections:
+  - title: "The search leader is the one AI mentions least"
+    content: "On takes 9 of 10 category terms on search but only 62.5% of AI answers, while Saucony is 0% in search and 97.5% in AI, because search rewards a standalone article and AI rewards a recommendation"
+  - title: "How the search share is counted"
+    content: "English Wikipedia full-text search over 10 brand-free category terms, top 10 results each, with the share defined as the fraction of queries mentioning the brand and the boundary that it measures one corpus rather than search engines"
+  - title: "How the AI share is counted"
+    content: "The same 10 terms asked 4 times each for 40 answers under a fixed prompt, with the share defined as the fraction of answers mentioning the brand, and the reason a single run measures a sample rather than a share"
+  - title: "Why the two numbers cannot share one axis"
+    content: "Different samples, different time windows and different questions, plus brand names that have to be fixed before the pull, each of which alone makes a direct comparison meaningless"
+  - title: "One question, two sets of brands"
+    content: "For trail running shoes the search top 10 names 5 brands while the AI answers name 22, which is a difference in capacity rather than quality, and being listed is still not being ranked first"
+  - title: "Report the two shares apart, never as one number"
+    content: "A blended visibility score lets the weight decide the conclusion, so report the two shares separately with their corpus, term list and date attached"

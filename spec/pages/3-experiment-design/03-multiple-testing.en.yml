@@ -1,18 +1,18 @@
 id: 03-multiple-testing
-title: "Twenty combinations tested, and three of them are noise"
+title: "Twenty combinations, three winners, and at least one fake"
 sections:
-  - title: Where three "significant" results came from
-    content: "A SaaS company split one landing page redesign into five separate variant tests, three of them came back significant, and the report said to ship them together — but all five drew from the same pool of visitors"
-  - title: Where false positives come from
+  - title: How three "significant" results appeared
+    content: "A SaaS company split one landing page redesign into five variant tests, three came back significant, and the report said to ship them together — but all five drew from the same pool of visitors"
+  - title: Where the false positives come from
     content: "A false positive is a test calling an effect that is not there, and at a 0.05 significance level each of twenty zero-effect combinations has a 5% chance of being called significant, which makes the chance of at least one false hit 1 − 0.95^20 ≈ 64%"
-  - title: Double the number of tests, double the false positives
+  - title: More groups means more false positives
     content: "The expected count of false positives is the group count times 0.05, so 100 groups means 5 false positives, and doubling the groups also pushes real effects out of view behind a run of fakes"
-  - title: Three ways to fix it
+  - title: Three ways to handle it
     content: "Pre-specify the comparisons before the data arrives, tighten the threshold with Bonferroni or Holm or Benjamini-Hochberg, or replace the pairwise tests with a single omnibus test"
     subsections:
       - title: Decide which comparisons to look at before the data arrives
         content: "Writing the hypotheses down first removes the picking step from the procedure, and the cost is missing an effect you never thought to ask about"
-      - title: "Correct: let the threshold move with the number of groups"
+      - title: "Correct: let the threshold move with the group count"
         content: "Bonferroni drops the significance level from 0.05 to 0.05/m, Holm relaxes the bar step by step across the sorted p-values, and Benjamini-Hochberg controls the false-positive proportion instead of the family-wise error rate"
       - title: Test all the groups in one pass
         content: "ANOVA and Kruskal-Wallis ask whether any group differs rather than whether each pair does, and the pairwise comparisons only happen after the overall test comes back significant"

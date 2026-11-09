@@ -122,6 +122,6 @@ https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E7%BE%8E%E
 
 ---
 
-[→ How a market report gets built](../01-report-runbook/en.md) · [→ How a category sorts by price, and how hard it discounts](../../2-market-research/02-category-entry-price-bands-promo-cadence/en.md) · [→ What one more yuan of ad spend buys back](../../05-ad-spend-chart/en.md)
+[→ How a market report gets built](../01-report-runbook/en.md) · [→ How a category sorts by price, and how hard it discounts](../../2-market-research/02-category-entry-price-bands-promo-cadence/en.md) · [→ What one more yuan of ad spend buys back](../05-ad-spend-chart/en.md)
 
 **Data**: US furniture and home furnishings stores' nominal sales and chain-type price index come from BEA NIPA underlying detail tables 5U and 7U, via DBnomics (`BEA/NIUnderlyingDetail-U00500/T05008-M`, `BEA/NIUnderlyingDetail-U00700/T07008-M`); implied volume is computed on this page as sales ÷ price index, retrieved 2026-11-09. Sales figures are **monthly**, so 10.71 and 12.02 on the chart are average monthly amounts, not annual totals (128.56 and 144.24 billion dollars for the full years). The four price bands (30–60 / 60–100 / 100–200 / 200–300 yuan), their volume distribution, and their revenue shares are a **worked example on this page**, used to show quartile cutting and the difference between the volume and revenue definitions — **not one company's actual transaction data**. **Reproduce**: `x dbnomics data BEA/NIUnderlyingDetail-U00500/T05008-M`; `x dbnomics data BEA/NIUnderlyingDetail-U00700/T07008-M`

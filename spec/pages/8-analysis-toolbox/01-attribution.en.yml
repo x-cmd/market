@@ -1,0 +1,13 @@
+id: 01-attribution
+title: The 260 orders search ads "brought in" are a rule, not a finding
+sections:
+  - title: Attribution splits touchpoints, not orders
+    content: "Attribution divides one order's credit across the touchpoints it passed through, and the three decisions behind it are the observation window, the touchpoint order, and the allocation rule"
+  - title: Five common rules, one path, five different answers
+    content: "Last click, first click, linear, time decay and position based split the same four-touchpoint path into 40/0, 25 each, and 33.3 versus 10 for the same channel, so any reported number is missing the rule that produced it"
+  - title: Three ways attribution breaks down
+    content: "Unrecorded exposure removes a touchpoint from the pool, last click hands the whole order to whoever searched your brand name, and the attribution window decides who qualifies at all"
+  - title: Two uses where attribution earns its keep
+    content: "The platform's own numbers work for reallocating inside one platform because every channel shares a rule, but deciding whether a channel deserves more money needs a control group instead"
+  - title: Attribution assigns credit, not causation
+    content: "The number says who touched the order, not who created it, so attribution can rank channels but cannot price one"

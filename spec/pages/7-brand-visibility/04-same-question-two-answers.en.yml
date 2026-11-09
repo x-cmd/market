@@ -1,0 +1,17 @@
+id: 04-same-question-two-answers
+title: "Ask the same question twice and the model gives two different answers"
+sections:
+  - title: "The same prompt produced three different answers"
+    content: "Three runs of the same \"recommend a running shoe\" prompt returned brand lists of four, seven and three brands, and one brand moved five positions between runs"
+  - title: "Why the answer moves at all"
+    content: "Generation samples one token at a time, so the same prompt can return contradictory answers twice in a row, and two of the twenty runs asked clarifying questions instead of naming any brand"
+  - title: "How many runs it takes before the number counts"
+    content: "The half-width of the 95% interval at 1, 5, 20, 50, 100 and 200 runs, why one run cannot separate a brand from one that was never mentioned, and why precision scales with the square root of the sample"
+  - title: "Turning twenty answers into one number"
+    content: "Mention rate, interval and rank range travel together as the three numbers a reported figure needs, plus the two runs out of twenty where no brand was named at all"
+  - title: "Five runs of the same prompt gave five answers"
+    content: "Five runs of the beginner long-distance prompt, where ASICS appears every time but Hoka does not"
+  - title: "Change the prompt and you have changed the market"
+    content: "Nike goes from 90.0% to 6.7% and New Balance from 45.0% to 93.3% when the prompt changes, so a number only holds for the exact sentence it came from"
+  - title: "One prompt is not a measurement"
+    content: "A single run is one sample, every reported figure needs its interval, and the prompt set is the definition of what was measured"

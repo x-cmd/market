@@ -1,0 +1,17 @@
+id: 05-volume-without-sentiment-is-blind
+title: "Volume tells you how many people talked, not whether they were happy"
+sections:
+  - title: "A fourfold spike that reads like bad news"
+    content: "Pokémon GO's daily US App Store reviews jump from a 12.3 baseline to 52 on 2026-10-19, and 53.8% of those 52 carry 1 or 2 stars, so the volume spike is a complaint spike"
+    subsections:
+      - title: "The spike lines up with a release"
+        content: "Grouping reviews by app version shows 0.433.1 shipping on 10-16 with 223 reviews, more than double any other version, and the 1-star titles on 10-19 name the update as the cause"
+  - title: "Three parties write the label, and their labels disagree"
+    content: "User stars, dictionary polarity (VADER), and Apple's model-written review summary are three labelling schemes for the same fact, and they do not agree"
+    subsections:
+      - title: "Catching a mislabelled review by sampling 20 of them"
+        content: "Comparing 500 reviews' star ratings against their body text finds 6.6% of 1-2 star reviews praising the app and 2.8% of 4-5 star reviews complaining, so labels have to be spot-checked against content"
+  - title: "The same sentiment has three different numbers"
+    content: "Lifetime 4.00 stars, last-500 2.84, and W43 2.69, with the window, the region, and the 500-review RSS ceiling each stated as the boundary of the number"
+  - title: "Volume only counts when sentiment travels with it"
+    content: "The Pokémon GO case in full: a fourfold mention spike that turned into 200-plus complaints aimed at Scopely, and the reporting rules that keep volume and sentiment together"

@@ -1,0 +1,11 @@
+id: 04-adstock-decay
+title: Your ads keep working after you stop paying for them
+sections:
+  - title: An ad's effect is not spent in a day
+    content: "Ad effect fades but does not vanish overnight, so the model accumulates past spend along a decay curve and pairs the Adstock value with today's outcome instead of pairing spend with the same week's sales"
+  - title: One number sets the whole curve
+    content: "A decay curve has one parameter, the half-life, and a 7-day half-life channel accumulates to 580.36 after seven days, so each channel gets its own curve because media fade at different speeds and cover for each other"
+  - title: Where the estimate breaks
+    content: "A half-life estimated too short undervalues slow channels, a better fit does not mean a better parameter, the half-life and the saturation point compensate each other so a contribution can shift 30% while the fit holds, and cutting spend lingers longer than adding it"
+  - title: When Adstock is worth the trouble
+    content: "Adstock is required for channels with a decision cycle or shifting budgets, optional when purchases are same-day, and needs history long enough to support the half-life being estimated"

@@ -1,0 +1,11 @@
+id: 02-state-constraints-first
+title: "A solver cannot check reality for you"
+sections:
+  - title: "Five limits to write down before solving"
+    content: "Committed volume, minimum spend you owe, what inventory supports, the people available to execute, and regulation and platform rules"
+  - title: "What a missing constraint produces"
+    content: "A solution you cannot execute, a hand-patched fix that is executable but not optimal, and a solution that quietly violates a constraint nobody knew existed"
+  - title: "The optimal split that nobody can execute"
+    content: "With all three constraints in place the split becomes 35/30/35 rather than 30/40/30 and total return falls to 2.32, which is worth more than the unconstrained 2.52"
+  - title: "List the constraints, then solve"
+    content: "Fixed order of list, solve, verify; every constraint must answer who set it, where it is written, and when it expires"
