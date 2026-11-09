@@ -14,19 +14,21 @@ data:
             >
               There is no single threshold, because the threshold depends on the effect you are
               trying to detect and on the baseline rate. The rule of thumb is that the 95%
-              confidence interval must not straddle zero. For the same effect, the half-width of
-              the interval is 56 percentage points at 50 users per arm, 29 at 200, and 9 at 2,000.
-              So if the effect you expect is 5 points, 50 users per arm gives you an interval
-              that spans roughly plus or minus 56 points — you cannot distinguish a good result
-              from a bad one. The sample size needed for a given detectable effect is quadratic
-              in the effect size: halving the effect you want to detect quadruples the sample
-              you need.
+              confidence interval must not straddle zero. Take a 32% baseline conversion rate —
+              the usual magnitude for an e-commerce checkout — and hold the true effect fixed.
+              The half-width of the interval, expressed as a percentage of the relative lift, is
+              56% at 50 users per arm, 29% at 200, and 9% at 2,000. So at 50 users per arm the
+              interval spans roughly plus or minus 56% of the effect — you cannot tell a good
+              result from a bad one. The sample size needed for a given detectable effect is
+              quadratic in the effect size: halving the effect you want to detect quadruples the
+              sample you need.
           cn:
             >
               没有一个统一的门槛，因为门槛取决于你想测出的效果有多大，以及基线转化率是多少。
-              判据是 95% 置信区间不能跨过零。同一个效应量下，区间半宽在每组 50 人时是 56 个百分点，
-              每组 200 人时是 29 个百分点，每组 2000 人时是 9 个百分点。所以如果你期待的效果是 5 个点，
-              每组 50 人给出的区间大约是上下 56 个点——你分不清这个结果是好是坏。
+              判据是 95% 置信区间不能跨过零。拿 32% 的基线转化率（电商结账页的常见量级），
+              真实效果固定不变，区间半宽（用相对提升的百分比表示）在每组 50 人时是 56%，
+              每组 200 人时是 29%，每组 2000 人时是 9%。所以每组 50 人给出的区间
+              大约是上下 56%——你分不清这个结果是好是坏。
               另外，所需样本量跟效应量的大小是平方关系：你想测出的效果减半，
               需要的样本要翻两番。
         confidence: 9
@@ -39,19 +41,19 @@ data:
         answer:
           en:
             >
-              Not necessarily — and this is where small samples do their damage. With 200 users
-              per arm, the confidence interval for a small effect is roughly 29 percentage points
-              wide on each side. If the truth is a 2-point improvement, the point estimate comes
-              out negative about 45% of the time, purely by chance. A negative result from
-              a small experiment is not evidence of absence; it is evidence that the experiment
-              could not resolve the effect. Before acting on a negative number, check the width of
-              the interval. If it spans zero and also spans a value large enough to matter in
-              business terms, the correct conclusion is "we could not tell", not "it does not work".
+              Not necessarily — and this is where small samples do their damage. Take a 32%
+              baseline and 200 users per arm. The standard error of the difference is 4.66
+              percentage points, so a true 2-point improvement comes out negative roughly 38% of
+              the time, purely by chance. A negative result from a small experiment is not
+              evidence of absence; it is evidence that the experiment could not resolve the
+              effect. Before acting on a negative number, check the width of the interval. If it
+              spans zero and also spans a value large enough to matter in business terms, the
+              correct conclusion is "we could not tell", not "it does not work".
           cn:
             >
-              不一定，小样本正是伤害发生的地方。每组 200 人的时候，小效应的 95% 置信区间
-              每侧大约有 29 个百分点宽。如果真值是 2 个百分点的提升，
-              纯靠运气测出负数的概率大约是 45%。小实验测出负数，不是「没有效果」的证据，
+              不一定，小样本正是伤害发生的地方。基线 32%、每组 200 人的时候，
+              差值的标准误是 4.66 个百分点。如果真值是 2 个百分点的提升，
+              纯靠运气测出零或负数的概率大约是 38%。小实验测出负数，不是「没有效果」的证据，
               而是「这个实验分辨不出这个效果」的证据。对着负数做决定之前，先看区间有多宽：
               如果它既跨过零、又把业务上够大的正效果也包了进去，
               正确的结论是「测不出来」，不是「没用」。
@@ -89,15 +91,16 @@ data:
             >
               Because the standard error falls with the square root of the sample size, not with
               the sample size itself. Going from 200 to 2,000 users per arm is a tenfold increase
-              and shrinks the confidence interval from 29 percentage points to 9 — a factor of
-              about three, which is the square root of ten. This is why you cannot buy precision
-              cheaply: quadrupling the sample buys you half the interval width, and if that is
-              still not enough to resolve the effect, the honest answer is that the experiment is
-              not worth running rather than that you need to buy eight times the traffic.
+              and shrinks the confidence interval half-width from 29% to 9% of the relative lift —
+              a factor of about three, which is the square root of ten. This is why you cannot buy
+              precision cheaply: quadrupling the sample buys you half the interval width, and if
+              that is still not enough to resolve the effect, the honest answer is that the
+              experiment is not worth running rather than that you need to buy eight times the
+              traffic.
           cn:
             >
               因为标准误跟样本量的平方根成反比，不是跟样本量成反比。每组从 200 人加到 2,000 人
-              是十倍，置信区间从 29 个百分点收到 9 个点位，收到三分之一左右——正是十倍的平方根。
+              是十倍，置信区间半宽从相对提升的 29% 收到 9%——正好是三分之一，正是十倍的平方根。
               这就是精度买不便宜：样本翻两番只换来一半的区间宽度，如果这还不够分辨效果，
               诚实的说法是这个实验不值得做，而不是说你得买八倍的流量。
         confidence: 10
@@ -212,32 +215,34 @@ data:
           - docs/3-experiment-design/02-sample-size-and-power/cn.md
       - id: three-day-test
         question:
-          en: "My test ran for three days and showed a 14.6% drop. Should I roll it back?"
-          cn: 实验跑了三天，测出掉了 14.6%，要回滚吗？
+          en: "My test ran for three days and showed a 32.8% drop. Should I roll it back?"
+          cn: 实验跑了三天，测出掉了 32.8%，要回滚吗？
         answer:
           en:
             >
               Not on that number alone. At 600 users per arm per day for three days, each arm has
-              1,800 users, which at a 2% baseline resolves effects of about 1.6 percentage points —
-              so a design this thin cannot distinguish a 2-point real gain from no change. The
-              measured 14.6% drop sits far outside that resolution band, so its interval does not
-              straddle zero and it looks "certain"; that is a statement about the precision of the
-              estimate, not about the cause of it. Two further
-              problems: three days crosses a weekend, and daily conversion rates are not flat.
-              The real mistake in that setup was the ordering — the three days came from the boss
-              wanting an answer quickly, not from the size of the effect. If the change was worth
-              5 points, three days was more than enough; if it was worth 1 point, it needed 6.4
-              days and the schedule should have been renegotiated.
+              1,800 users, which at a 2.5% baseline resolves effects of about 1.7 percentage points.
+              The standard error of the difference is 0.53 points, so the measured 1.00-point drop
+              lands right at the edge of significance (z ≈ -1.9) and the interval barely avoids
+              straddling zero. It looks "certain", but that is a statement about the precision of
+              the estimate, not about the cause of it. Two further problems: those three days
+              cross a weekend promotion, and daily conversion rates are not flat — on day four the
+              rates were 2.38% against 2.40% and the whole 32.8% evaporated. The real mistake in
+              that setup was the ordering: the three days came from the boss wanting an answer
+              quickly, not from the size of the effect. If the change was worth 5 points, three
+              days was more than enough; if it was worth 1 point, it needed far more traffic and
+              the schedule should have been renegotiated.
           cn:
             >
-              不能只凭那个数。每组每天 600 人跑三天，每组一共 1,800 人，在基线 2% 的情况下，
-              这个样本量只能分辨大约 1.6 个百分点的效果——连 2 个百分点的真实提升都跟「没有变化」分不开。
-              而测出来的 14.6% 降幅远在这个分辨范围之外，所以它的区间不跨零、看起来「很确定」；
-              这说的是估计值有多精确，不是说这个偏离是谁造成的。
-              还有两个问题：三天跨了一个周末，日转化率本身不平。
+              不能只凭那个数。每组每天 600 人跑三天，每组一共 1,800 人，在基线 2.5% 的情况下，
+              这个样本量只能分辨大约 1.7 个百分点的效果。差值的标准误是 0.53 个点，
+              测出来的 1.00 个百分点降幅刚好压在显著线边缘（z ≈ -1.9），区间勉强不跨零。
+              看上去「很确定」，但这说的是估计值有多精确，不是说这个偏离是谁造成的。
+              还有两个问题：这三天跨了一个周末促销，日转化率本身不平——第四天继续跑，
+              转化率回到 2.38% 对 2.40%，那 32.8% 全部消失。
               那个设置里真正的错误是顺序——三天这个数来自老板想快点看到结果，
               不是来自效果有多大。如果改版真值 5 个点，三天绰绰有余；如果是 1 个点，
-              每组要 3,830 人，是 6.4 天，日程得重新谈。
+              每组要 3,830 人，日程得重新谈。
         confidence: 9
         reference:
           - docs/3-experiment-design/02-sample-size-and-power/cn.md
@@ -254,14 +259,14 @@ data:
               if it were a finding is the actual failure — it puts a number with a standard error
               on it into a report and lets someone make a budget decision on it. The distinction
               to hold onto: an underpowered experiment that says "we could not tell" has done its
-              job; the same experiment that says "the effect is -14.6%" has lied.
+              job; the same experiment that says "the effect is -32.8%" has lied.
           cn:
             >
               不算。「我们测不出来」是一个正当、有用的结论，很多时候还是这次测算最有价值的产出。
               一个从没做过样本量测算的实验，分不清 2 个百分点的提升和 12 个百分点的下滑，
               而把它的点估计当成发现报出去才是真正的失败——那等于给一个数配了个标准误放进报告，
               再让人拿它做预算决定。要分清的是：样本不够但老实说「测不出来」的实验，尽到了它的本分；
-              同一个实验说「效果是 -14.6%」，那是在骗人。
+              同一个实验说「效果是 -32.8%」，那是在骗人。
         confidence: 9
         reference:
           - docs/3-experiment-design/02-sample-size-and-power/cn.md

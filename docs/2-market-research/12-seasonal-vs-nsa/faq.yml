@@ -64,14 +64,17 @@ data:
               series are. Both are labelled "U.S. city average, all items". In December 2022 the
               unadjusted index fell 0.31 percent month on month while the adjusted one rose 0.03
               percent. In November the gap was wider: minus 0.10 percent against plus 0.24
-              percent. The unadjusted move is the November discount season; the adjusted series
-              removes it and leaves the underlying climb in prices.
+              percent. The unadjusted series carries the discount season: October is normally
+              the peak of the year, and heavy holiday promotions then pull the average price
+              level down through November and December. The adjusted series removes that
+              stretch and leaves the climb in prices underneath.
           cn:
             >
               有，而且序列编号就能看出是哪个。美国劳工统计局把 CPI-U 发两遍：`CUUR` 开头的是未季调，
               `CUSR` 开头的是季调，两个都标着「美国城市平均、全部项目」。2022 年 12 月，
               未季调环比 **−0.31%**，季调环比 **+0.03%**。11 月差得更大：−0.10% 对 +0.24%。
-              未季调那个动量说的是 11 月的打折季，季调数把它挪走，留下的是物价往上走的那条趋势。
+              未季调那两个跌幅里装着打折季：每年 10 月是物价的高点，11 月圣诞促销开跑，
+              均价被压下去，12 月促销还没结束。季调数把这一整段拿掉，留下的是物价往上走的那条线。
         confidence: 10
         reference:
           - docs/2-market-research/12-seasonal-vs-nsa/cn.md
@@ -109,16 +112,16 @@ data:
           en:
             >
               The adjusted one. On the unadjusted EU retail series, every December peak and
-              every following January trough is an artefact: those two points swing by about
-              28 percentage points of seasonal factor every single year, so the unadjusted
-              line looks like a heartbeat that never shows the real turning points. Strip the
-              season out and the underlying direction becomes visible. Ask what the line is
-              for: "is the business improving" takes the adjusted series, "how much did we
-              sell" takes the unadjusted one.
+              every following January trough is an artefact: those two months sit about 26
+              percent apart in seasonal factor every single year, so the unadjusted line looks
+              like a heartbeat that never shows the real turning points. Strip the season out
+              and the underlying direction becomes visible. Ask what the line is for: "is the
+              business improving" takes the adjusted series, "how much did we sell" takes the
+              unadjusted one.
           cn:
             >
               用季调数。在欧盟零售业的原始序列上，每个 12 月的高点和次年 1 月的低点都是假的：
-              这两个月之间的季节因子每年差约 28 个百分点，原始曲线看着像心电图，真实的拐点
+              这两个月在季节因子上每年差约 26%，原始曲线看着像心电图，真实的拐点
               根本看不见。把季节剥掉，方向才浮出来。先问这条线要回答什么：「生意在变好还是
               变坏」用季调，「这个月卖了多少」用原始。
         confidence: 9
@@ -135,7 +138,7 @@ data:
               in December 2025 was up 12.8 percent on the unadjusted series and up 0.4 percent
               on the adjusted one. The first number supports a headline about booming demand;
               it is wrong, because Christmas lifts retail by about that much every year.
-              January 2025 went the other way: minus 20.5 percent unadjusted against plus 0.1
+              January 2025 went the other way: minus 20.3 percent unadjusted against plus 0.3
               percent adjusted, so "retail collapsed" and "nothing happened" describe the same
               month. Putting both lines on one chart compounds it: the unadjusted series has a
               standard deviation more than ten times the adjusted one, and a reader concludes
@@ -144,8 +147,8 @@ data:
             >
               会，而且用的是同一个月、同一门生意。欧盟零售业 2025 年 12 月原始环比 **+12.8%**，
               季调环比 **+0.4%**。第一个数能撑起「需求强劲」的标题，这个标题是错的，
-              因为圣诞季每年都把零售抬高这么多。2025 年 1 月反过来：原始 **−20.5%**，
-              季调 **+0.1%**，「零售崩塌」和「什么都没发生」说的是同一个月。
+              因为圣诞季每年都把零售抬高这么多。2025 年 1 月反过来：原始 **−20.3%**，
+              季调 **+0.3%**，「零售崩塌」和「什么都没发生」说的是同一个月。
               把两条线放在一张图上更糟：原始环比的标准差是季调口径的十几倍，
               读者会以为这行业在剧烈波动，而它一整年稳得像直线。
         confidence: 10
@@ -185,19 +188,19 @@ data:
           en:
             >
               Because the two months being compared have different seasonal factors, and the
-              difference is huge. December and January differ by about 28 percentage points
-              of seasonal factor in EU retail. Dividing December by November therefore loads
-              the entire holiday season into the answer. On the adjusted series the same
-              comparison gives plus 0.4 percent for December 2025 and plus 0.1 percent for
-              January 2025, against minus 20.5 percent on the unadjusted one for January.
+              difference is huge. December and January sit about 26 percent apart in seasonal
+              factor in EU retail. Dividing December by November therefore loads the entire
+              holiday season into the answer. On the adjusted series the same comparison gives
+              plus 0.4 percent for December 2025 and plus 0.3 percent for January 2025, against
+              minus 20.3 percent on the unadjusted one for January.
               Month on month measures change between adjacent months, so the season has to
               come out first.
           cn:
             >
               因为被比较的两个月季节因子不一样，而且差得很大。欧盟零售业 12 月和 1 月的季节因子
-              差约 28 个百分点，拿 12 月除 11 月，整个圣诞季就被塞进了答案里。季调口径下，
-              2025 年 12 月环比 **+0.4%**、1 月环比 **+0.1%**，而原始口径下 1 月环比是
-              **−20.5%**。环比量的是相邻两个月之间的变化，所以季节必须先拿掉。
+              差约 26%，拿 12 月除 11 月，整个圣诞季就被塞进了答案里。季调口径下，
+              2025 年 12 月环比 **+0.4%**、1 月环比 **+0.3%**，而原始口径下 1 月环比是
+              **−20.3%**。环比量的是相邻两个月之间的变化，所以季节必须先拿掉。
         confidence: 10
         reference:
           - docs/2-market-research/12-seasonal-vs-nsa/cn.md
@@ -213,7 +216,7 @@ data:
               usual high. A small negative reading means December came in a little below the
               norm that November implied, which might be a softer promotional push or
               purchases pulled forward into November. The unadjusted counterpart of minus
-              20.5 percent says nothing beyond "Christmas is over". Watch for a base effect
+              20.3 percent says nothing beyond "Christmas is over". Watch for a base effect
               before reading anything into either rate: if the same month last year was
               unusually high or unusually low, the year-on-year comparison is distorted too.
           cn:
@@ -221,7 +224,7 @@ data:
               单看一个数不能下结论。季调环比比的是这个月的常态跟上个月的常态，
               所以 12 月的环比本来就隐含了 12 月该有的高位。轻微转负，意思是 12 月比 11 月
               推算的常态低了一点，可能是促销力度不够，或者采购提前挪到了 11 月。
-              原始口径那个 −20.5% 只说明「圣诞过完了」。看任何一个数之前先查基数效应：
+              原始口径那个 −20.3% 只说明「圣诞过完了」。看任何一个数之前先查基数效应：
               去年同月本身异常高或异常低时，同比也会被扭曲。
         confidence: 8
         reference:

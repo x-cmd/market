@@ -63,9 +63,9 @@ data:
           cn: 排完交出去，那张表上必须写清哪几件事？
         answer:
           en: >
-            Three sentences. First, which ruler was used: intensity, size, or willingness to pay — the three give different winners, so naming the one you used is what makes the ranking legible. Second, where every number came from: who the sample frame was, how many, whether the question was about intention or behaviour, what year, which people. The same answers collected a year apart can flip, because both the people and the cycle changed. Third, under what condition the winner changes: write "if we rank by intensity rather than size, the winner becomes X" rather than "the winner is X". And one line that is usually left out: if the gap between first and second sits inside the measurement error, they are tied and you should not pretend otherwise.
+            Three sentences. First, which ruler was used: intensity, size, or willingness to pay — the three give different winners, so naming the one you used is what makes the ranking legible. Second, where every number came from: who the sample frame was, how many, whether the question was about intention or behaviour, what year. The same answers collected a year apart can flip, because both the people and the cycle changed. Third, under what condition the winner changes: write "if we rank by intensity rather than size, the winner becomes X" rather than "the winner is X".
           cn: >
-            三句话。第一句，这次按哪把尺子排：强度、规模、支付意愿——三把尺子给出的第一名经常不同，说清用的是哪一把，这张表才读得懂。第二句，每个数是怎么来的：样本框是谁、样本量多少、问的是意愿还是行为、哪一年、覆盖哪些人。同一批人的答案隔一年再问就可能翻盘，因为人换了一批，周期也换了一轮。第三句，什么情况下第一名会变：写「如果按强度而不是规模排，第一名会换成谁」，而不是写「第一名是 X」。还有一句常被漏掉的：如果第一和第二的差距落在测量误差以内，它们就是并列的，不该假装有一个第一。
+            三句话。第一句，这次按哪把尺子排：强度、规模、支付意愿——三把尺子给出的第一名经常不同，说清用的是哪一把，这张表才读得懂。第二句，每个数是怎么来的：样本框是谁、样本量多少、问的是意愿还是行为、哪一年。同一批人的答案隔一年再问就可能翻盘，因为人换了一批，周期也换了一轮。第三句，什么情况下第一名会变：写「如果按强度而不是规模排，第一名会换成谁」，而不是写「第一名是 X」。
         confidence: 9
         reference:
           - docs/2-market-research/07-demand-intensity-ranking/cn.md

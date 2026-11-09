@@ -2,43 +2,45 @@
 
 **小样本最危险的不是「看不清」，是「看反」。**
 
-真实效果是正的，测出来是负的；真实效果是不存在的，测出来是显著的。这两种错误看起来不一样，根子却是同一个：人太少时，数字的随机波动比真效果还大。而且它不会提醒你——测出来的是「-8.3%」这样一个规规矩矩的数字，带着标准误和 p 值，看上去比什么都正经。
+真实效果是正的，测出来是负的。真实效果是不存在的，测出来是显著的。两种错误看起来不一样，根子却是同一个：人太少时，数字的随机波动比真效果还大。而且它不提醒你。测出来的是「-8.3%」这样一个规规矩矩的数字，带着标准误和 p 值，看上去比什么都正经。
 
 ## 小实验的漂亮数字，为什么可能是反的
 
-Facebook 找一家全渠道零售商做了一次广告实验，一共 2550 万用户。随机分组：25% 的人真看到广告，其余的人虽在实验组但没看到。结果是三个转化率：
+Facebook 找一家全渠道零售商做了一次广告实验，一共 2550 万用户。随机分成实验组和对照组，实验组里只有 25% 的人真的看到了广告，其余的人进了实验组但没被曝光。结果是三个转化率：
 
 ```text
-https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E5%90%8C%E4%B8%80%E6%89%B9%20Facebook%20%E7%94%A8%E6%88%B7%EF%BC%8C%E4%B8%89%E4%B8%AA%E8%BD%AC%E5%8C%96%E7%8E%87%EF%BC%88%E9%9A%8F%E6%9C%BA%E5%AE%9E%E9%AA%8C%EF%BC%89%22%7D%2C%22color%22%3A%5B%22%232563eb%22%2C%22%23dc2626%22%2C%22%2364748b%22%2C%22%23f59e0b%22%2C%22%230891b2%22%2C%22%238b5cf6%22%2C%22%2365a30d%22%2C%22%23db2777%22%5D%2C%22xAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%22%E5%AF%B9%E7%85%A7%E7%BB%84%EF%BC%88%E6%B2%A1%E7%9C%8B%E5%88%B0%E5%B9%BF%E5%91%8A%EF%BC%89%22%2C%22%E5%AE%9E%E9%AA%8C%E7%BB%84%C2%B7%E7%9C%9F%E7%9C%8B%E5%88%B0%E5%B9%BF%E5%91%8A%22%2C%22%E5%AE%9E%E9%AA%8C%E7%BB%84%C2%B7%E6%B2%A1%E7%9C%8B%E5%88%B0%E5%B9%BF%E5%91%8A%22%5D%2C%22axisLabel%22%3A%7B%22interval%22%3A0%7D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%22%E8%BD%AC%E5%8C%96%E7%8E%87%EF%BC%88%25%EF%BC%89%22%7D%2C%22grid%22%3A%7B%22left%22%3A90%2C%22right%22%3A50%2C%22top%22%3A60%2C%22bottom%22%3A60%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%2C%22axisPointer%22%3A%7B%22type%22%3A%22shadow%22%7D%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22%22%2C%22type%22%3A%22bar%22%2C%22data%22%3A%5B0.059%2C0.104%2C0.02%5D%2C%22label%22%3A%7B%22show%22%3Atrue%2C%22position%22%3A%22top%22%2C%22formatter%22%3A%22%7Bc%7D%22%7D%2C%22stack%22%3Anull%7D%5D%7D&w=760&h=420
+https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E5%90%8C%E4%B8%80%E6%89%B9%20Facebook%20%E7%94%A8%E6%88%B7%EF%BC%8C%E4%B8%89%E4%B8%AA%E8%BD%AC%E5%8C%96%E7%8E%87%EF%BC%88%E9%9A%8F%E6%9C%BA%E5%AE%9E%E9%AA%8C%EF%BC%89%22%7D%2C%22color%22%3A%5B%22%232563eb%22%2C%22%23dc2626%22%2C%22%2364748b%22%2C%22%23f59e0b%22%2C%22%230891b2%22%2C%22%238b5cf6%22%2C%22%2365a30d%22%2C%22%23db2777%22%5D%2C%22xAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%22%E5%AF%B9%E7%85%A7%E7%BB%84%5Cn%EF%BC%88%E6%B2%A1%E7%9C%8B%E5%88%B0%E5%B9%BF%E5%91%8A%EF%BC%89%22%2C%22%E5%AE%9E%E9%AA%8C%E7%BB%84%C2%B7%E7%9C%9F%E7%9C%8B%E5%88%B0%E5%B9%BF%E5%91%8A%22%2C%22%E5%AE%9E%E9%AA%8C%E7%BB%84%C2%B7%E6%B2%A1%E7%9C%8B%E5%88%B0%E5%B9%BF%E5%91%8A%22%5D%2C%22axisLabel%22%3A%7B%22interval%22%3A0%7D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%22%E7%BB%93%E8%B4%A6%E9%A1%B5%E8%BD%AC%E5%8C%96%E7%8E%87%EF%BC%88%25%EF%BC%89%22%7D%2C%22grid%22%3A%7B%22left%22%3A90%2C%22right%22%3A50%2C%22top%22%3A60%2C%22bottom%22%3A60%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%2C%22axisPointer%22%3A%7B%22type%22%3A%22shadow%22%7D%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22%22%2C%22type%22%3A%22bar%22%2C%22data%22%3A%5B0.059%2C0.104%2C0.02%5D%2C%22label%22%3A%7B%22show%22%3Atrue%2C%22position%22%3A%22top%22%2C%22formatter%22%3A%22%7Bc%7D%22%7D%2C%22stack%22%3Anull%7D%5D%7D&w=760&h=420
 ```
 
-<a href="https://x-cmd.com/draw/explore/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E5%90%8C%E4%B8%80%E6%89%B9%20Facebook%20%E7%94%A8%E6%88%B7%EF%BC%8C%E4%B8%89%E4%B8%AA%E8%BD%AC%E5%8C%96%E7%8E%87%EF%BC%88%E9%9A%8F%E6%9C%BA%E5%AE%9E%E9%AA%8C%EF%BC%89%22%7D%2C%22color%22%3A%5B%22%232563eb%22%2C%22%23dc2626%22%2C%22%2364748b%22%2C%22%23f59e0b%22%2C%22%230891b2%22%2C%22%238b5cf6%22%2C%22%2365a30d%22%2C%22%23db2777%22%5D%2C%22xAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%22%E5%AF%B9%E7%85%A7%E7%BB%84%EF%BC%88%E6%B2%A1%E7%9C%8B%E5%88%B0%E5%B9%BF%E5%91%8A%EF%BC%89%22%2C%22%E5%AE%9E%E9%AA%8C%E7%BB%84%C2%B7%E7%9C%9F%E7%9C%8B%E5%88%B0%E5%B9%BF%E5%91%8A%22%2C%22%E5%AE%9E%E9%AA%8C%E7%BB%84%C2%B7%E6%B2%A1%E7%9C%8B%E5%88%B0%E5%B9%BF%E5%91%8A%22%5D%2C%22axisLabel%22%3A%7B%22interval%22%3A0%7D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%22%E8%BD%AC%E5%8C%96%E7%8E%87%EF%BC%88%25%EF%BC%89%22%7D%2C%22grid%22%3A%7B%22left%22%3A90%2C%22right%22%3A50%2C%22top%22%3A60%2C%22bottom%22%3A60%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%2C%22axisPointer%22%3A%7B%22type%22%3A%22shadow%22%7D%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22%22%2C%22type%22%3A%22bar%22%2C%22data%22%3A%5B0.059%2C0.104%2C0.02%5D%2C%22label%22%3A%7B%22show%22%3Atrue%2C%22position%22%3A%22top%22%2C%22formatter%22%3A%22%7Bc%7D%22%7D%2C%22stack%22%3Anull%7D%5D%7D&w=760&h=420"><img src="https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E5%90%8C%E4%B8%80%E6%89%B9%20Facebook%20%E7%94%A8%E6%88%B7%EF%BC%8C%E4%B8%89%E4%B8%AA%E8%BD%AC%E5%8C%96%E7%8E%87%EF%BC%88%E9%9A%8F%E6%9C%BA%E5%AE%9E%E9%AA%8C%EF%BC%89%22%7D%2C%22color%22%3A%5B%22%232563eb%22%2C%22%23dc2626%22%2C%22%2364748b%22%2C%22%23f59e0b%22%2C%22%230891b2%22%2C%22%238b5cf6%22%2C%22%2365a30d%22%2C%22%23db2777%22%5D%2C%22xAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%22%E5%AF%B9%E7%85%A7%E7%BB%84%EF%BC%88%E6%B2%A1%E7%9C%8B%E5%88%B0%E5%B9%BF%E5%91%8A%EF%BC%89%22%2C%22%E5%AE%9E%E9%AA%8C%E7%BB%84%C2%B7%E7%9C%9F%E7%9C%8B%E5%88%B0%E5%B9%BF%E5%91%8A%22%2C%22%E5%AE%9E%E9%AA%8C%E7%BB%84%C2%B7%E6%B2%A1%E7%9C%8B%E5%88%B0%E5%B9%BF%E5%91%8A%22%5D%2C%22axisLabel%22%3A%7B%22interval%22%3A0%7D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%22%E8%BD%AC%E5%8C%96%E7%8E%87%EF%BC%88%25%EF%BC%89%22%7D%2C%22grid%22%3A%7B%22left%22%3A90%2C%22right%22%3A50%2C%22top%22%3A60%2C%22bottom%22%3A60%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%2C%22axisPointer%22%3A%7B%22type%22%3A%22shadow%22%7D%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22%22%2C%22type%22%3A%22bar%22%2C%22data%22%3A%5B0.059%2C0.104%2C0.02%5D%2C%22label%22%3A%7B%22show%22%3Atrue%2C%22position%22%3A%22top%22%2C%22formatter%22%3A%22%7Bc%7D%22%7D%2C%22stack%22%3Anull%7D%5D%7D&w=760&h=420" width="760" alt="facebook_three_rates"></a>
+<a href="https://x-cmd.com/draw/explore/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E5%90%8C%E4%B8%80%E6%89%B9%20Facebook%20%E7%94%A8%E6%88%B7%EF%BC%8C%E4%B8%89%E4%B8%AA%E8%BD%AC%E5%8C%96%E7%8E%87%EF%BC%88%E9%9A%8F%E6%9C%BA%E5%AE%9E%E9%AA%8C%EF%BC%89%22%7D%2C%22color%22%3A%5B%22%232563eb%22%2C%22%23dc2626%22%2C%22%2364748b%22%2C%22%23f59e0b%22%2C%22%230891b2%22%2C%22%238b5cf6%22%2C%22%2365a30d%22%2C%22%23db2777%22%5D%2C%22xAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%22%E5%AF%B9%E7%85%A7%E7%BB%84%5Cn%EF%BC%88%E6%B2%A1%E7%9C%8B%E5%88%B0%E5%B9%BF%E5%91%8A%EF%BC%89%22%2C%22%E5%AE%9E%E9%AA%8C%E7%BB%84%C2%B7%E7%9C%9F%E7%9C%8B%E5%88%B0%E5%B9%BF%E5%91%8A%22%2C%22%E5%AE%9E%E9%AA%8C%E7%BB%84%C2%B7%E6%B2%A1%E7%9C%8B%E5%88%B0%E5%B9%BF%E5%91%8A%22%5D%2C%22axisLabel%22%3A%7B%22interval%22%3A0%7D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%22%E7%BB%93%E8%B4%A6%E9%A1%B5%E8%BD%AC%E5%8C%96%E7%8E%87%EF%BC%88%25%EF%BC%89%22%7D%2C%22grid%22%3A%7B%22left%22%3A90%2C%22right%22%3A50%2C%22top%22%3A60%2C%22bottom%22%3A60%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%2C%22axisPointer%22%3A%7B%22type%22%3A%22shadow%22%7D%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22%22%2C%22type%22%3A%22bar%22%2C%22data%22%3A%5B0.059%2C0.104%2C0.02%5D%2C%22label%22%3A%7B%22show%22%3Atrue%2C%22position%22%3A%22top%22%2C%22formatter%22%3A%22%7Bc%7D%22%7D%2C%22stack%22%3Anull%7D%5D%7D&w=760&h=420"><img src="https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E5%90%8C%E4%B8%80%E6%89%B9%20Facebook%20%E7%94%A8%E6%88%B7%EF%BC%8C%E4%B8%89%E4%B8%AA%E8%BD%AC%E5%8C%96%E7%8E%87%EF%BC%88%E9%9A%8F%E6%9C%BA%E5%AE%9E%E9%AA%8C%EF%BC%89%22%7D%2C%22color%22%3A%5B%22%232563eb%22%2C%22%23dc2626%22%2C%22%2364748b%22%2C%22%23f59e0b%22%2C%22%230891b2%22%2C%22%238b5cf6%22%2C%22%2365a30d%22%2C%22%23db2777%22%5D%2C%22xAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%22%E5%AF%B9%E7%85%A7%E7%BB%84%5Cn%EF%BC%88%E6%B2%A1%E7%9C%8B%E5%88%B0%E5%B9%BF%E5%91%8A%EF%BC%89%22%2C%22%E5%AE%9E%E9%AA%8C%E7%BB%84%C2%B7%E7%9C%9F%E7%9C%8B%E5%88%B0%E5%B9%BF%E5%91%8A%22%2C%22%E5%AE%9E%E9%AA%8C%E7%BB%84%C2%B7%E6%B2%A1%E7%9C%8B%E5%88%B0%E5%B9%BF%E5%91%8A%22%5D%2C%22axisLabel%22%3A%7B%22interval%22%3A0%7D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%22%E7%BB%93%E8%B4%A6%E9%A1%B5%E8%BD%AC%E5%8C%96%E7%8E%87%EF%BC%88%25%EF%BC%89%22%7D%2C%22grid%22%3A%7B%22left%22%3A90%2C%22right%22%3A50%2C%22top%22%3A60%2C%22bottom%22%3A60%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%2C%22axisPointer%22%3A%7B%22type%22%3A%22shadow%22%7D%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22%22%2C%22type%22%3A%22bar%22%2C%22data%22%3A%5B0.059%2C0.104%2C0.02%5D%2C%22label%22%3A%7B%22show%22%3Atrue%2C%22position%22%3A%22top%22%2C%22formatter%22%3A%22%7Bc%7D%22%7D%2C%22stack%22%3Anull%7D%5D%7D&w=760&h=420" width="760" alt="fb_three_rates"></a>
 
 对照组（没看到广告）0.059%，实验组里真看到广告的 0.104%，实验组里没看到的 0.020%。
 
-实验组整体比对照组高 73%，**这是真值**：广告确实有用。但同一批数据换个算法：只按「看到 vs 没看到广告」比，算出提升 **316%**；按年龄性别匹配降到 **222%**；回到随机分组，73%。
+随机分组测出的提升是 **73%**，这是真值，广告确实有用。可同一批数据换个算法答案就变了。只按「看到 vs 没看到广告」比，算出 **316%**。按年龄性别精确匹配之后降到 **222%**。
 
 **同一份数据，三个数，差了四倍多。** 差别不在数据，在分组方式和样本。最刺眼的是 0.104% 和 0.020% 这组：两拨人一个看到广告、一个没看到，但「看到广告」不是随机分配的。平台会把广告投给本来就更可能买的人，这拨人转化率天生就高。放一起比，算出的是「本来更会买的人有多会买」，不是「广告多买了多少」。
 
-**随机分组的 73% 是真值。** 316% 是把选择偏差当成了广告效果。而随机分组还顺便回答了本页的问题：那 2550 万人的样本量，区间是能用的。
+**73% 是真值，316% 是把选择偏差当成了广告效果。** 随机分组还顺便回答了本页的问题：那 2550 万人的样本量，区间够用。
 
 ## 要多大的差别，才需要多少人
 
 **标准误**（standard error）：算出来的那个数离真值有多可能的偏离，样本越大它越小。**置信区间**（confidence interval）：把估计值和标准误合起来，给一个「真值大概落在这一带」的说法，默认 95%。
 
-**样本量决定标准误，标准误决定区间宽度。** 区间太宽，你就分不清「广告有效果」和「广告没效果」——真值零也在里面。同一个真实效果，样本量不同，区间半宽：
+**样本量决定标准误，标准误决定区间宽度。** 区间太宽，你就分不清「广告有效果」和「广告没效果」，真值零也在里面。
+
+下面这组数最能说明问题。基线转化率 32%（电商结账页常见量级），真实效果不变，只改样本量，看 95% 区间半宽（相对提升的百分比）：
 
 ```text
-https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E5%90%8C%E4%B8%80%E4%B8%AA%E6%95%88%E5%BA%94%EF%BC%8C%E6%A0%B7%E6%9C%AC%E9%87%8F%E4%B8%8D%E5%90%8C%E7%BB%99%E5%87%BA%E7%9A%84%2095%25%20%E7%BD%AE%E4%BF%A1%E5%8C%BA%E9%97%B4%E5%8D%8A%E5%AE%BD%22%7D%2C%22color%22%3A%5B%22%232563eb%22%2C%22%23dc2626%22%2C%22%2364748b%22%2C%22%23f59e0b%22%2C%22%230891b2%22%2C%22%238b5cf6%22%2C%22%2365a30d%22%2C%22%23db2777%22%5D%2C%22xAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%22%E5%8C%BA%E9%97%B4%E5%8D%8A%E5%AE%BD%EF%BC%88%E7%99%BE%E5%88%86%E7%82%B9%EF%BC%89%22%2C%22axisLabel%22%3A%7B%22formatter%22%3A%22%7Bvalue%7D%22%7D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%22%E6%AF%8F%E7%BB%84%2050%20%E4%BA%BA%22%2C%22%E6%AF%8F%E7%BB%84%20200%20%E4%BA%BA%22%2C%22%E6%AF%8F%E7%BB%84%202000%20%E4%BA%BA%22%5D%2C%22axisLabel%22%3A%7B%22interval%22%3A0%7D%7D%2C%22grid%22%3A%7B%22left%22%3A90%2C%22right%22%3A60%2C%22top%22%3A60%2C%22bottom%22%3A50%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%2C%22axisPointer%22%3A%7B%22type%22%3A%22shadow%22%7D%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22%22%2C%22type%22%3A%22bar%22%2C%22data%22%3A%5B56%2C29%2C9%5D%2C%22label%22%3A%7B%22show%22%3Atrue%2C%22position%22%3A%22right%22%2C%22formatter%22%3A%22%7Bc%7D%22%7D%2C%22stack%22%3Anull%7D%5D%7D&w=760&h=420
+https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E5%90%8C%E4%B8%80%E4%B8%AA%E6%95%88%E6%9E%9C%EF%BC%8C%E6%A0%B7%E6%9C%AC%E9%87%8F%E4%B8%8D%E5%90%8C%E7%BB%99%E5%87%BA%E7%9A%84%2095%25%20%E7%BD%AE%E4%BF%A1%E5%8C%BA%E9%97%B4%E5%8D%8A%E5%AE%BD%22%7D%2C%22color%22%3A%5B%22%232563eb%22%2C%22%23dc2626%22%2C%22%2364748b%22%2C%22%23f59e0b%22%2C%22%230891b2%22%2C%22%238b5cf6%22%2C%22%2365a30d%22%2C%22%23db2777%22%5D%2C%22xAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%22%E6%AF%8F%E7%BB%84%2050%20%E4%BA%BA%22%2C%22%E6%AF%8F%E7%BB%84%20200%20%E4%BA%BA%22%2C%22%E6%AF%8F%E7%BB%84%202000%20%E4%BA%BA%22%5D%2C%22axisLabel%22%3A%7B%22interval%22%3A0%7D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%22%E5%8C%BA%E9%97%B4%E5%8D%8A%E5%AE%BD%EF%BC%88%E7%9B%B8%E5%AF%B9%E6%8F%90%E5%8D%87%E7%9A%84%20%25%EF%BC%89%22%7D%2C%22grid%22%3A%7B%22left%22%3A90%2C%22right%22%3A50%2C%22top%22%3A60%2C%22bottom%22%3A60%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%2C%22axisPointer%22%3A%7B%22type%22%3A%22shadow%22%7D%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22%22%2C%22type%22%3A%22bar%22%2C%22data%22%3A%5B56%2C29%2C9%5D%2C%22label%22%3A%7B%22show%22%3Atrue%2C%22position%22%3A%22top%22%2C%22formatter%22%3A%22%7Bc%7D%22%7D%2C%22stack%22%3Anull%7D%5D%7D&w=760&h=420
 ```
 
-<a href="https://x-cmd.com/draw/explore/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E5%90%8C%E4%B8%80%E4%B8%AA%E6%95%88%E5%BA%94%EF%BC%8C%E6%A0%B7%E6%9C%AC%E9%87%8F%E4%B8%8D%E5%90%8C%E7%BB%99%E5%87%BA%E7%9A%84%2095%25%20%E7%BD%AE%E4%BF%A1%E5%8C%BA%E9%97%B4%E5%8D%8A%E5%AE%BD%22%7D%2C%22color%22%3A%5B%22%232563eb%22%2C%22%23dc2626%22%2C%22%2364748b%22%2C%22%23f59e0b%22%2C%22%230891b2%22%2C%22%238b5cf6%22%2C%22%2365a30d%22%2C%22%23db2777%22%5D%2C%22xAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%22%E5%8C%BA%E9%97%B4%E5%8D%8A%E5%AE%BD%EF%BC%88%E7%99%BE%E5%88%86%E7%82%B9%EF%BC%89%22%2C%22axisLabel%22%3A%7B%22formatter%22%3A%22%7Bvalue%7D%22%7D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%22%E6%AF%8F%E7%BB%84%2050%20%E4%BA%BA%22%2C%22%E6%AF%8F%E7%BB%84%20200%20%E4%BA%BA%22%2C%22%E6%AF%8F%E7%BB%84%202000%20%E4%BA%BA%22%5D%2C%22axisLabel%22%3A%7B%22interval%22%3A0%7D%7D%2C%22grid%22%3A%7B%22left%22%3A90%2C%22right%22%3A60%2C%22top%22%3A60%2C%22bottom%22%3A50%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%2C%22axisPointer%22%3A%7B%22type%22%3A%22shadow%22%7D%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22%22%2C%22type%22%3A%22bar%22%2C%22data%22%3A%5B56%2C29%2C9%5D%2C%22label%22%3A%7B%22show%22%3Atrue%2C%22position%22%3A%22right%22%2C%22formatter%22%3A%22%7Bc%7D%22%7D%2C%22stack%22%3Anull%7D%5D%7D&w=760&h=420"><img src="https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E5%90%8C%E4%B8%80%E4%B8%AA%E6%95%88%E5%BA%94%EF%BC%8C%E6%A0%B7%E6%9C%AC%E9%87%8F%E4%B8%8D%E5%90%8C%E7%BB%99%E5%87%BA%E7%9A%84%2095%25%20%E7%BD%AE%E4%BF%A1%E5%8C%BA%E9%97%B4%E5%8D%8A%E5%AE%BD%22%7D%2C%22color%22%3A%5B%22%232563eb%22%2C%22%23dc2626%22%2C%22%2364748b%22%2C%22%23f59e0b%22%2C%22%230891b2%22%2C%22%238b5cf6%22%2C%22%2365a30d%22%2C%22%23db2777%22%5D%2C%22xAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%22%E5%8C%BA%E9%97%B4%E5%8D%8A%E5%AE%BD%EF%BC%88%E7%99%BE%E5%88%86%E7%82%B9%EF%BC%89%22%2C%22axisLabel%22%3A%7B%22formatter%22%3A%22%7Bvalue%7D%22%7D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%22%E6%AF%8F%E7%BB%84%2050%20%E4%BA%BA%22%2C%22%E6%AF%8F%E7%BB%84%20200%20%E4%BA%BA%22%2C%22%E6%AF%8F%E7%BB%84%202000%20%E4%BA%BA%22%5D%2C%22axisLabel%22%3A%7B%22interval%22%3A0%7D%7D%2C%22grid%22%3A%7B%22left%22%3A90%2C%22right%22%3A60%2C%22top%22%3A60%2C%22bottom%22%3A50%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%2C%22axisPointer%22%3A%7B%22type%22%3A%22shadow%22%7D%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22%22%2C%22type%22%3A%22bar%22%2C%22data%22%3A%5B56%2C29%2C9%5D%2C%22label%22%3A%7B%22show%22%3Atrue%2C%22position%22%3A%22right%22%2C%22formatter%22%3A%22%7Bc%7D%22%7D%2C%22stack%22%3Anull%7D%5D%7D&w=760&h=420" width="760" alt="ci_width_vs_n"></a>
+<a href="https://x-cmd.com/draw/explore/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E5%90%8C%E4%B8%80%E4%B8%AA%E6%95%88%E6%9E%9C%EF%BC%8C%E6%A0%B7%E6%9C%AC%E9%87%8F%E4%B8%8D%E5%90%8C%E7%BB%99%E5%87%BA%E7%9A%84%2095%25%20%E7%BD%AE%E4%BF%A1%E5%8C%BA%E9%97%B4%E5%8D%8A%E5%AE%BD%22%7D%2C%22color%22%3A%5B%22%232563eb%22%2C%22%23dc2626%22%2C%22%2364748b%22%2C%22%23f59e0b%22%2C%22%230891b2%22%2C%22%238b5cf6%22%2C%22%2365a30d%22%2C%22%23db2777%22%5D%2C%22xAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%22%E6%AF%8F%E7%BB%84%2050%20%E4%BA%BA%22%2C%22%E6%AF%8F%E7%BB%84%20200%20%E4%BA%BA%22%2C%22%E6%AF%8F%E7%BB%84%202000%20%E4%BA%BA%22%5D%2C%22axisLabel%22%3A%7B%22interval%22%3A0%7D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%22%E5%8C%BA%E9%97%B4%E5%8D%8A%E5%AE%BD%EF%BC%88%E7%9B%B8%E5%AF%B9%E6%8F%90%E5%8D%87%E7%9A%84%20%25%EF%BC%89%22%7D%2C%22grid%22%3A%7B%22left%22%3A90%2C%22right%22%3A50%2C%22top%22%3A60%2C%22bottom%22%3A60%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%2C%22axisPointer%22%3A%7B%22type%22%3A%22shadow%22%7D%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22%22%2C%22type%22%3A%22bar%22%2C%22data%22%3A%5B56%2C29%2C9%5D%2C%22label%22%3A%7B%22show%22%3Atrue%2C%22position%22%3A%22top%22%2C%22formatter%22%3A%22%7Bc%7D%22%7D%2C%22stack%22%3Anull%7D%5D%7D&w=760&h=420"><img src="https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E5%90%8C%E4%B8%80%E4%B8%AA%E6%95%88%E6%9E%9C%EF%BC%8C%E6%A0%B7%E6%9C%AC%E9%87%8F%E4%B8%8D%E5%90%8C%E7%BB%99%E5%87%BA%E7%9A%84%2095%25%20%E7%BD%AE%E4%BF%A1%E5%8C%BA%E9%97%B4%E5%8D%8A%E5%AE%BD%22%7D%2C%22color%22%3A%5B%22%232563eb%22%2C%22%23dc2626%22%2C%22%2364748b%22%2C%22%23f59e0b%22%2C%22%230891b2%22%2C%22%238b5cf6%22%2C%22%2365a30d%22%2C%22%23db2777%22%5D%2C%22xAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%22%E6%AF%8F%E7%BB%84%2050%20%E4%BA%BA%22%2C%22%E6%AF%8F%E7%BB%84%20200%20%E4%BA%BA%22%2C%22%E6%AF%8F%E7%BB%84%202000%20%E4%BA%BA%22%5D%2C%22axisLabel%22%3A%7B%22interval%22%3A0%7D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%22%E5%8C%BA%E9%97%B4%E5%8D%8A%E5%AE%BD%EF%BC%88%E7%9B%B8%E5%AF%B9%E6%8F%90%E5%8D%87%E7%9A%84%20%25%EF%BC%89%22%7D%2C%22grid%22%3A%7B%22left%22%3A90%2C%22right%22%3A50%2C%22top%22%3A60%2C%22bottom%22%3A60%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%2C%22axisPointer%22%3A%7B%22type%22%3A%22shadow%22%7D%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22%22%2C%22type%22%3A%22bar%22%2C%22data%22%3A%5B56%2C29%2C9%5D%2C%22label%22%3A%7B%22show%22%3Atrue%2C%22position%22%3A%22top%22%2C%22formatter%22%3A%22%7Bc%7D%22%7D%2C%22stack%22%3Anull%7D%5D%7D&w=760&h=420" width="760" alt="ci_width_vs_n"></a>
 
-每组 50 人，区间半宽 **56 个百分点**；每组 200 人，**29 个百分点**；每组 2000 人，**9 个百分点**。
+每组 50 人，区间半宽是相对提升的 **56%**。每组 200 人是 **29%**。每组 2000 人是 **9%**。
 
 三档是同一个效应量。样本量从 50 加到 2000，翻了 40 倍，区间宽度只收到六分之一。
 
-**为什么收得这么慢？** 因为标准误跟样本量的平方根成反比，样本量翻一倍，区间只收窄约三成（1/√2 ≈ 0.707）。**想靠加样本量把区间收得很窄，代价是平方根级别。**
+**为什么收得这么慢？** 因为标准误跟样本量的平方根成反比，样本量翻一倍，区间只收窄约三成（1/√2 ≈ 0.707）。**想靠加样本量把区间收窄，代价是平方根级别。**
 
 另一件事是：**差别越小，需要的人越多。** 一个设计能测出的最小差别（叫「最小可检测效应」，英文 MDE）既跟效应量有关，也跟样本量有关。常用算例（基线转化率 2%，α=0.05，检验力 80%）：差 10 个点每组约 100 人，差 5 个约 270 人，差 2 个约 1,140 人，差 1 个约 3,830 人。
 
@@ -48,70 +50,70 @@ https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E5%90%8C%E
 
 回到最开头那句话：真实效果是正的，测出来是负了。这不是玄学，是算术。
 
-设真实效果是 +2 个百分点，你测了每组 200 人。这个样本量下 95% 区间半宽 29 个百分点，标准误约 14.8。测出来的数在 **+2% 附近 ± 29%** 的范围里晃：运气好测出 +18%，运气差测出 -12%。
+接着上面的设定。基线转化率 32%，真实效果 +2 个百分点，你只测了每组 200 人。差值的标准误是 4.66 个百分点，测出来的数在 **+2 附近 ± 9.1 个百分点** 里晃。运气好测出 +10，运气差测出 -7。
 
-**真值 +2%，但大约 45% 的概率你能测出一个负数。** 这就是「方向反了」。
+**真值明明是 +2，但大约 38% 的概率你能测出一个零或负数。** 这就是「方向反了」。
 
 ```text
-https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E7%9C%9F%E5%80%BC%20%2B2%20%E4%B8%AA%E7%99%BE%E5%88%86%E7%82%B9%EF%BC%8C%E6%AF%8F%E7%BB%84%20200%20%E4%BA%BA%EF%BC%9A400%20%E6%AC%A1%E9%87%8D%E8%B7%91%E6%B5%8B%E5%87%BA%E6%9D%A5%E7%9A%84%E6%95%B0%22%7D%2C%22color%22%3A%5B%22%232563eb%22%2C%22%23dc2626%22%2C%22%2364748b%22%2C%22%23f59e0b%22%2C%22%230891b2%22%2C%22%238b5cf6%22%2C%22%2365a30d%22%2C%22%23db2777%22%5D%2C%22xAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%22%E2%89%A4%20-20%22%2C%22-20%20~%200%22%2C%220%20~%2010%22%2C%2210%20~%2020%22%2C%2220%20~%2030%22%2C%22%3E%2030%22%5D%2C%22axisLabel%22%3A%7B%22interval%22%3A0%7D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%22%E5%87%BA%E7%8E%B0%E6%AC%A1%E6%95%B0%22%7D%2C%22grid%22%3A%7B%22left%22%3A90%2C%22right%22%3A50%2C%22top%22%3A60%2C%22bottom%22%3A60%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%2C%22axisPointer%22%3A%7B%22type%22%3A%22shadow%22%7D%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22%22%2C%22type%22%3A%22bar%22%2C%22data%22%3A%5B26%2C149%2C92%2C87%2C33%2C13%5D%2C%22label%22%3A%7B%22show%22%3Atrue%2C%22position%22%3A%22top%22%2C%22formatter%22%3A%22%7Bc%7D%22%7D%2C%22stack%22%3Anull%7D%5D%7D&w=760&h=420
+https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E7%9C%9F%E5%80%BC%20%2B2%20%E4%B8%AA%E7%99%BE%E5%88%86%E7%82%B9%EF%BC%8C%E6%AF%8F%E7%BB%84%20200%20%E4%BA%BA%EF%BC%9A400%20%E6%AC%A1%E9%87%8D%E5%A4%8D%E5%AE%9E%E9%AA%8C%E6%B5%8B%E5%87%BA%E7%9A%84%E5%B7%AE%E5%80%BC%22%7D%2C%22color%22%3A%5B%22%232563eb%22%2C%22%23dc2626%22%2C%22%2364748b%22%2C%22%23f59e0b%22%2C%22%230891b2%22%2C%22%238b5cf6%22%2C%22%2365a30d%22%2C%22%23db2777%22%5D%2C%22xAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%22%E2%89%A4%20-10%22%2C%22-10%20~%200%22%2C%220%20~%2010%22%2C%2210%20~%2020%22%2C%22%3E%2020%22%5D%2C%22axisLabel%22%3A%7B%22interval%22%3A0%7D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%22%E5%87%BA%E7%8E%B0%E6%AC%A1%E6%95%B0%22%7D%2C%22grid%22%3A%7B%22left%22%3A90%2C%22right%22%3A50%2C%22top%22%3A60%2C%22bottom%22%3A60%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%2C%22axisPointer%22%3A%7B%22type%22%3A%22shadow%22%7D%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22%22%2C%22type%22%3A%22bar%22%2C%22data%22%3A%5B15%2C137%2C205%2C40%2C3%5D%2C%22label%22%3A%7B%22show%22%3Atrue%2C%22position%22%3A%22top%22%2C%22formatter%22%3A%22%7Bc%7D%22%7D%2C%22stack%22%3Anull%7D%5D%7D&w=760&h=420
 ```
 
-<a href="https://x-cmd.com/draw/explore/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E7%9C%9F%E5%80%BC%20%2B2%20%E4%B8%AA%E7%99%BE%E5%88%86%E7%82%B9%EF%BC%8C%E6%AF%8F%E7%BB%84%20200%20%E4%BA%BA%EF%BC%9A400%20%E6%AC%A1%E9%87%8D%E8%B7%91%E6%B5%8B%E5%87%BA%E6%9D%A5%E7%9A%84%E6%95%B0%22%7D%2C%22color%22%3A%5B%22%232563eb%22%2C%22%23dc2626%22%2C%22%2364748b%22%2C%22%23f59e0b%22%2C%22%230891b2%22%2C%22%238b5cf6%22%2C%22%2365a30d%22%2C%22%23db2777%22%5D%2C%22xAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%22%E2%89%A4%20-20%22%2C%22-20%20~%200%22%2C%220%20~%2010%22%2C%2210%20~%2020%22%2C%2220%20~%2030%22%2C%22%3E%2030%22%5D%2C%22axisLabel%22%3A%7B%22interval%22%3A0%7D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%22%E5%87%BA%E7%8E%B0%E6%AC%A1%E6%95%B0%22%7D%2C%22grid%22%3A%7B%22left%22%3A90%2C%22right%22%3A50%2C%22top%22%3A60%2C%22bottom%22%3A60%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%2C%22axisPointer%22%3A%7B%22type%22%3A%22shadow%22%7D%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22%22%2C%22type%22%3A%22bar%22%2C%22data%22%3A%5B26%2C149%2C92%2C87%2C33%2C13%5D%2C%22label%22%3A%7B%22show%22%3Atrue%2C%22position%22%3A%22top%22%2C%22formatter%22%3A%22%7Bc%7D%22%7D%2C%22stack%22%3Anull%7D%5D%7D&w=760&h=420"><img src="https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E7%9C%9F%E5%80%BC%20%2B2%20%E4%B8%AA%E7%99%BE%E5%88%86%E7%82%B9%EF%BC%8C%E6%AF%8F%E7%BB%84%20200%20%E4%BA%BA%EF%BC%9A400%20%E6%AC%A1%E9%87%8D%E8%B7%91%E6%B5%8B%E5%87%BA%E6%9D%A5%E7%9A%84%E6%95%B0%22%7D%2C%22color%22%3A%5B%22%232563eb%22%2C%22%23dc2626%22%2C%22%2364748b%22%2C%22%23f59e0b%22%2C%22%230891b2%22%2C%22%238b5cf6%22%2C%22%2365a30d%22%2C%22%23db2777%22%5D%2C%22xAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%22%E2%89%A4%20-20%22%2C%22-20%20~%200%22%2C%220%20~%2010%22%2C%2210%20~%2020%22%2C%2220%20~%2030%22%2C%22%3E%2030%22%5D%2C%22axisLabel%22%3A%7B%22interval%22%3A0%7D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%22%E5%87%BA%E7%8E%B0%E6%AC%A1%E6%95%B0%22%7D%2C%22grid%22%3A%7B%22left%22%3A90%2C%22right%22%3A50%2C%22top%22%3A60%2C%22bottom%22%3A60%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%2C%22axisPointer%22%3A%7B%22type%22%3A%22shadow%22%7D%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22%22%2C%22type%22%3A%22bar%22%2C%22data%22%3A%5B26%2C149%2C92%2C87%2C33%2C13%5D%2C%22label%22%3A%7B%22show%22%3Atrue%2C%22position%22%3A%22top%22%2C%22formatter%22%3A%22%7Bc%7D%22%7D%2C%22stack%22%3Anull%7D%5D%7D&w=760&h=420" width="760" alt="flip_direction_sim"></a>
+<a href="https://x-cmd.com/draw/explore/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E7%9C%9F%E5%80%BC%20%2B2%20%E4%B8%AA%E7%99%BE%E5%88%86%E7%82%B9%EF%BC%8C%E6%AF%8F%E7%BB%84%20200%20%E4%BA%BA%EF%BC%9A400%20%E6%AC%A1%E9%87%8D%E5%A4%8D%E5%AE%9E%E9%AA%8C%E6%B5%8B%E5%87%BA%E7%9A%84%E5%B7%AE%E5%80%BC%22%7D%2C%22color%22%3A%5B%22%232563eb%22%2C%22%23dc2626%22%2C%22%2364748b%22%2C%22%23f59e0b%22%2C%22%230891b2%22%2C%22%238b5cf6%22%2C%22%2365a30d%22%2C%22%23db2777%22%5D%2C%22xAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%22%E2%89%A4%20-10%22%2C%22-10%20~%200%22%2C%220%20~%2010%22%2C%2210%20~%2020%22%2C%22%3E%2020%22%5D%2C%22axisLabel%22%3A%7B%22interval%22%3A0%7D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%22%E5%87%BA%E7%8E%B0%E6%AC%A1%E6%95%B0%22%7D%2C%22grid%22%3A%7B%22left%22%3A90%2C%22right%22%3A50%2C%22top%22%3A60%2C%22bottom%22%3A60%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%2C%22axisPointer%22%3A%7B%22type%22%3A%22shadow%22%7D%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22%22%2C%22type%22%3A%22bar%22%2C%22data%22%3A%5B15%2C137%2C205%2C40%2C3%5D%2C%22label%22%3A%7B%22show%22%3Atrue%2C%22position%22%3A%22top%22%2C%22formatter%22%3A%22%7Bc%7D%22%7D%2C%22stack%22%3Anull%7D%5D%7D&w=760&h=420"><img src="https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E7%9C%9F%E5%80%BC%20%2B2%20%E4%B8%AA%E7%99%BE%E5%88%86%E7%82%B9%EF%BC%8C%E6%AF%8F%E7%BB%84%20200%20%E4%BA%BA%EF%BC%9A400%20%E6%AC%A1%E9%87%8D%E5%A4%8D%E5%AE%9E%E9%AA%8C%E6%B5%8B%E5%87%BA%E7%9A%84%E5%B7%AE%E5%80%BC%22%7D%2C%22color%22%3A%5B%22%232563eb%22%2C%22%23dc2626%22%2C%22%2364748b%22%2C%22%23f59e0b%22%2C%22%230891b2%22%2C%22%238b5cf6%22%2C%22%2365a30d%22%2C%22%23db2777%22%5D%2C%22xAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%22%E2%89%A4%20-10%22%2C%22-10%20~%200%22%2C%220%20~%2010%22%2C%2210%20~%2020%22%2C%22%3E%2020%22%5D%2C%22axisLabel%22%3A%7B%22interval%22%3A0%7D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%22%E5%87%BA%E7%8E%B0%E6%AC%A1%E6%95%B0%22%7D%2C%22grid%22%3A%7B%22left%22%3A90%2C%22right%22%3A50%2C%22top%22%3A60%2C%22bottom%22%3A60%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%2C%22axisPointer%22%3A%7B%22type%22%3A%22shadow%22%7D%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22%22%2C%22type%22%3A%22bar%22%2C%22data%22%3A%5B15%2C137%2C205%2C40%2C3%5D%2C%22label%22%3A%7B%22show%22%3Atrue%2C%22position%22%3A%22top%22%2C%22formatter%22%3A%22%7Bc%7D%22%7D%2C%22stack%22%3Anull%7D%5D%7D&w=760&h=420" width="760" alt="flip_direction_sim"></a>
 
-这张图是把同一个实验重跑 400 次的模拟：真值始终是 +2，但 400 次里有 175 次测出了零或负数。**近一半的实验会告诉你「广告没用甚至有害」。**
+这张图是把同一个实验重跑 400 次的模拟：真值始终是 +2 个百分点，但 400 次里有 152 次测出了零或负数。**将近四成的实验会告诉你「广告没用甚至有害」。**
 
-**你不是在测效果，你是在挑运气。** 而且**负数不等于没效果，显著不等于有效果**——小样本下这两条都成立得吓人。
+**你不是在测效果，你是在挑运气。** 而且**负数不等于没效果，显著不等于有效果**，小样本下两条都成立。
 
 ## 事前算，还是事后算
 
-**先答结论：事前算。** 事后算的样子：数据跑完了，你看着屏幕上那个数，想——「这个数够不够？」问题在于，你手里只有一个数，而**你看不到真值**。能拿来对比的只有别的实验的样本量，效果量跟你不一样。
+**事前算。**
 
-真正的做法是**事前算**：在开跑之前用历史数据估出三样东西——基线转化率、你想测的最小差别、每天能进多少新用户。然后算出需要多少人、要跑几天。**算完了发现要 4 千人，你才知道这个实验做不了，或者做得了但要跑很久。**事前还有个好处：**它逼你写下「多小才值得」**，排除了大量「测半天测出个 0.3%」的实验。
+事后算的样子：数据跑完了，你盯着屏幕上那个数，心里问一句「这个数够不够」。可你手里只有一个数，看不到真值，能拿来对比的只有别的实验的样本量，效果量还跟你不一样。
+
+事前算是在开跑之前用历史数据估出三样东西：基线转化率、你想测的最小差别、每天能进多少新用户，然后算出需要多少人、要跑几天。**算完了发现要 4 千人，你才知道这实验做不了，或者做得了但要跑很久。**它还有个副作用：**逼你写下「多小才值得」**，顺手排掉一批「测半天测出个 0.3%」的实验。
 
 ## 跑了三天的小实验，数字是反的
 
 某消费品牌在自家 App 上做首页改版的 A/B 测试：首屏产品图放大，「加入购物车」按钮从灰色改成橙色。每天进 App 1,200 人，两边各一半。老板要三天出结果。
 
-第三天，改版组转化率 2.05%，对照组 2.41%。
+第三天，改版组转化率 2.05%，对照组 3.05%。
 
-**改版让转化率掉了 14.6%。** 老板看了直接说：改版砍掉，页面回滚。
+**改版让转化率掉了 32.8%。** 老板看了直接说：改版砍掉，页面回滚。
 
-但这个数可信吗？每组三天共 600 × 3 = **1,800 人**。按前面的算例，基线 2% 时每组 1,140 人刚好能测出 2 个百分点的差别，1,800 人只能测出 1.6 个百分点。**这个设计连 2 个百分点的提升都分辨不出来。**
+但这个数可信吗？每组三天共 600 × 3 = **1,800 人**，差值的标准误是 0.53 个百分点。1.00 个百分点的落差刚好压在显著线附近（z ≈ -1.9），**区间勉强不跨零，看上去「很确定」。**
 
-那 -14.6% 这个数呢？它远在可分辨范围之外，配上这个样本量区间不跨零，看起来「很确定」。
+**这里有个坑：区间不跨零不等于结论对。** 它只说明「-1.00 个百分点足够偏离零」，不说明这个偏离是你的改版造成的。真正的问题在后面：**这个 App 的日转化率本身在动**，而这三天的窗口恰好跨了周末促销。
 
-**这里有个坑：区间不跨零不等于结论对。** 它只说明「-14.6% 足够偏离零」，不说明这个偏离是你的改版造成的。真正的问题在后面：**这个 App 的日转化率本身在动**，三天里恰好跨了周末。
+**代价：**三天的流量和开发时间，一次已经发出去的「改版有害」的结论，还有**最贵的一项——回滚**。改版要是真有用，回滚丢掉的就是它的收益。老板后来发现第四天继续跑，转化率回到 2.38% 对 2.40%，那 32.8% 是周末促销把流量引到了旧版首页。
 
-**代价：**三天的流量和开发时间，一次已经发出去的「改版有害」的结论，还有**最贵的一项——回滚**。改版要是真有用，回滚丢掉的就是它的收益。老板后来发现第四天继续跑，转化率回到 2.38% 对 2.40%，那 14.6% 是周末效应。
+**这里真正的错误不是「样本太小」，是「三天出结果」这个要求。** 三天是从老板想快点看到结果算出来的，不是从效果大小算出来的。按前面的算例，基线 2.5% 时每组 1,800 人只能分辨出 1.7 个百分点的差别，而这次改版的真实效果连 1 个点都不到。**顺序反了：先算需要几天，再跟老板说几天，而不是先定三天拿三天去赌。**
 
-**这里真正的错误不是「样本太小」，是「三天出结果」这个要求。** 三天是从老板想快点看到结果算出来的，不是从效果大小算出来的。**顺序反了：先算需要几天，再去跟老板说几天，而不是先定三天拿三天去赌。**
-
-**同一个改版，效果是 5 个点还是 1 个点，决定了它是「三天出结果」还是「根本不该测」。而事前只有一个办法知道差多少：算。**
+**同一个改版，效果是 5 个点还是 1 个点，决定了它是「三天出结果」还是「根本不该测」。事前只有一个办法知道差多少：算。**
 
 ## 先估样本量，再开跑
 
-**把顺序摆对：先算，再开跑。** 开跑前把三行写下来：
+**先算，再开跑。** 开跑前写三行：
 
-**一、最小差别是多少。** 业务上多大的差别才值得你动预算。它同时决定样本量和这个实验值不值得做。
+**一、最小差别是多少。** 业务上多大的差别才值得动预算。它同时决定样本量和这实验值不值得做。
 
-**二、每组要多少人、要跑几天。** 用标准公式算，或者用交互式样本量计算器，输入基线转化率和最小差别出数字，再除以每天进的人数。
+**二、每组要多少人、要跑几天。** 用标准公式或交互式计算器，输入基线转化率和最小差别出数字，再除以每天进的人数。
 
-**三、结果怎么读。** 事前就说好什么算有效、什么算失败。**这条最容易漏，却是唯一挡住「数字反了还照着做」的护栏。**
+**三、结果怎么读。** 事前说好什么算有效、什么算失败。**这条最容易漏，却是唯一挡住「数字反了还照着做」的护栏。**
 
-算完之后有三种结果，每一种都是好结果：
+算完之后通常落在三种情况里，每一种都不算坏结果：
 
 - 负担得起就开跑
 - 周期能接受但人数太多，就换设计：提高分流比例、或用历史数据做准实验
 - 数字大到荒谬（比如要 4 千人跑一个季度），就**别测了**，这效果太小，改变不了任何决定
 
-**算出来的样本量不是「要花多少钱」，是「这个实验值不值得做」的判据。**
+**算出来的样本量不只是「要花多少钱」，它同时是「这个实验值不值得做」的判据。**
 
 [→ 对照组该怎么定](../01-what-a-control-group-is/cn.md) · [→ 测的组合太多](../03-multiple-testing/cn.md) · [→ 一个数配一个区间](../04-confidence-intervals/cn.md)
 
-**数据**：Facebook 那组转化率（0.059% / 0.104% / 0.020%，随机实验真值 +73%、观测口径 +316%）出自 Gordon, Zettelmeyer, Bhargava & Chapsky, *Marketing Science* 38(2), 2019（口径卡 `fb_observed_vs_random_lift`）。Google 的 210 个 DMA、每组 105 个，出自 Vaver & Koehler, Google Inc., 2011（口径卡 `geo_experiment_design`）。区间宽度取自口径卡 `ci_width_vs_sample_size`，截至 2026 年。样本量按两比例公式算得。「跑了三天」是算例。
+**数据**：Facebook 那组转化率（0.059% / 0.104% / 0.020%）和三个提升（真值 +73%、年龄性别精确匹配 +222%、曝光 vs 未曝光 +316%）出自 Gordon, Zettelmeyer, Bhargava & Chapsky, *Marketing Science* 38(2), 2019（口径卡 `fb_observed_vs_random_lift`）。区间半宽（每组 50 / 200 / 2000 人对应 56% / 29% / 9%）取自口径卡 `ci_width_vs_sample_size`，基线转化率按 32% 计，截至 2026 年。样本量表按两比例公式算得。「跑了三天」是算例。
 
-**复现**：样本量表这样重算（基线 2%，依次测 10 / 5 / 2 / 1 个点）：
+**复现**：区间半宽和样本量表都能重算：
 
 ```
-python3 -c "import math; z=(1.959964+0.841621)**2; n=lambda p1,p2: 2*z*((p1+p2)/2)*(1-(p1+p2)/2)/(p1-p2)**2; [print(d, round(n(0.02,0.02+d))) for d in (0.10,0.05,0.02,0.01)]"
+python3 -c "import math; base=0.32; n=200; se=math.sqrt(2*base*(1-base)/n)/base; print('每组 200 人的区间半宽（相对 %）:', round(1.96*se*100,1)); z=(1.959964+0.841621)**2; f=lambda p1,p2: 2*z*((p1+p2)/2)*(1-(p1+p2)/2)/(p1-p2)**2; [print(d, round(f(0.02,0.02+d))) for d in (0.10,0.05,0.02,0.01)]"
 ```

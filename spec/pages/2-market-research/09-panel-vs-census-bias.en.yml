@@ -1,0 +1,32 @@
+id: 09-panel-vs-census-bias
+title: "A survey and an official statistic each miss a different half of the market"
+sections:
+  - title: When two numbers disagree, find out who each one dropped
+    content: "Two numbers conflict: the question is not which is more accurate but what each one failed to cover, so draw both frames on one page and measure the overlap"
+  - title: Who a survey leaves out
+    content: "Three ways a survey misses people, from a narrow frame to an ageing sample to non-random dropout"
+    subsections:
+      - title: The frame is narrow to begin with
+        content: "The people who can get in and the people you care about are not the same people, and a 40-point education gap that holds for six years comes from the frame"
+      - title: The sample ages
+        content: "A panel keeps tracking the same people, and once run long enough the sample stops resembling today's population"
+      - title: The sample leaks
+        content: "The people who leave and the people who stay differ systematically, so a panel drifts toward the stayers"
+  - title: Who official statistics leave out
+    content: "A census or administrative record looks complete, but its frame is drawn by hand from industry codes, size thresholds and tax registration"
+    subsections:
+      - title: The definition is narrow
+        content: "The 10-employee floor is baked into the series code, so 5.2% of retail firms carry 77.4% of turnover"
+      - title: The margins fall out
+        content: "Sole traders, unregistered shops and cash businesses stay out of the register, and the boundary years can have breaks in them"
+  - title: The two numbers do not lean the same way
+    content: "Surveys overstate the share of people who buy and official statistics understate the informal economy, so the two biases point in opposite directions"
+    subsections:
+      - title: The bias on the population side can be measured
+        content: "The never-bought indicator makes the survey-side bias measurable, and it shows why weighting cannot repair an overweighted group"
+  - title: Which kind of number you are holding
+    content: "Sampled surveys, registers and platform logs each lean a different way, and the test is whether a number was asked, counted or recorded"
+  - title: When both numbers are wrong at once
+    content: "An ageing sample meeting a narrow definition, or one survey counted as two numbers, leaves a wide strip of the market uncovered"
+  - title: Ask who counted it and who was missed, then ask how accurate it is
+    content: "Four questions settle whether a number is usable, and what you publish is a number inside a frame, not the number itself"

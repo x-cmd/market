@@ -1,0 +1,17 @@
+id: 06-incrementality-chart
+title: "The ROAS on your dashboard is not the return on your next dollar"
+sections:
+  - title: Two ledgers, and where they part
+    content: "The platform ledger counts every order that touched an ad; the incrementality ledger counts only the orders that vanish when the spend stops, and the eBay experiment shows the difference — regression said 4100%, randomization said -63%"
+  - title: The gap can be enormous
+    content: "Facebook's own 15 field experiments put the true lift at 73% while the platform's usual method reported 316%, and the three conversion rates side by side show where the extra 243 points come from"
+  - title: Exposure is not random, and that is the source of the gap
+    content: "People who see an ad are already likelier to buy, and you cannot see who saw what, so every unmeasured difference between the two piles gets credited to the ad"
+  - title: So where exactly do the two ledgers differ?
+    content: "Brand keyword ads have almost no measurable short-term return while non-brand ads help new and infrequent users, which is why the question is which ads create demand and which harvest it"
+  - title: The platform is not lying to you
+    content: "The platform answers which orders touched an ad, and it answers well; how much the ads created is a different question needing a different set of tools"
+  - title: No control group, no incrementality
+    content: "Hold back a few cities or one stretch of time, keep the two ledgers apart, and remember that observational methods overstate, sometimes turning a negative into a positive"
+  - title: Do not read harvesting as creating
+    content: "Both numbers are real; the mistake is treating them as the same number, and without a measurement the floor is to stop calling harvested demand created"

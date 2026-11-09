@@ -1,0 +1,15 @@
+id: 06-survey-interview-behavior-bias
+title: "Surveys, interviews, and logs each measure something different"
+sections:
+  - title: One question, three incompatible answers
+    content: "The same question returns 62% or 74% depending on whether the survey asks about the last 3 months or the last 12, which is the first layer of survey bias: a survey reports a stretch of memory"
+  - title: Surveys lean toward the polite answer
+    content: "Non-response thins out the oldest and least online-shopping group, self-reporting adds social desirability bias and satisficing, and age itself decides the answer"
+  - title: Interviews get led by whoever is sitting there
+    content: "Interviewers who help or sit too close change sensitive answers even after controlling for demographics, but only an interview can follow up on why"
+  - title: Backend logs record the purchase but not the reason
+    content: "Logs cannot see views that never converted, cannot tell motive from coincidence, and observational attribution overstated the eBay ad return at 1400% against a randomized truth of −63%"
+  - title: Three biases pointing opposite ways are what make them fit together
+    content: "Survey, interview, and backend lean in different directions, which is what lets them cross-check each other, though none can fill the specific gap the other two leave"
+  - title: Ask four questions about any number before you believe it
+    content: "Who said it, what time window, who is missing, and what shaped it decide how far a number can be trusted"

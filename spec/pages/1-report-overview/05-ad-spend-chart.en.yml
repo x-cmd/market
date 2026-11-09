@@ -1,0 +1,15 @@
+id: 05-ad-spend-chart
+title: How much does one more dollar of ad spend buy back
+sections:
+  - title: Read the curve to see if more budget still pays
+    content: Marginal ROI by spend band, so you can see at what point extra budget stops paying
+  - title: A good average does not mean there is room to add
+    content: Average ROI stays above 1 while marginal ROI falls through it and turns negative
+  - title: Put it in money
+    content: A month of search ads costing 300,000 where three tenths of the sales would have happened anyway, leaving 1.4x real ROI instead of 2x
+  - title: One account's actual curve
+    content: A DTC store going from 2,000 to 8,000 a day, where orders flatten in week three and fall in week four
+  - title: The line you compute today can move tomorrow
+    content: A bigger audience and better creative shift the curve right; competition, fatigue, and season shift it left
+  - title: The last yuan decides whether you scale
+    content: Rank channels on average ROI but allocate budget on marginal ROI, and back any scaling decision with a number

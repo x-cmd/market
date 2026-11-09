@@ -1,0 +1,25 @@
+id: 01-report-runbook
+title: "Eight steps turn a market question into a report you can defend"
+sections:
+  - title: Write down the question
+    content: "The trade word is brief: one sentence of question, one deliverable, one audience, one deadline. A human decides; an agent can propose candidate questions"
+  - title: Draw the boundary around what counts
+    content: "The trade word is scope: which territory, which time window, whether you count yourself. Scope decides whether later numbers can be compared at all"
+  - title: Pick the one number that counts
+    content: "The trade word is source of truth: one metric has one authoritative origin, and the metric card is its machine-readable form"
+  - title: Compute
+    content: "The trade word is compute: follow the formula on the card. The usual failure is not a wrong calculation but computing a different thing"
+  - title: Draw
+    content: "The trade word is visualize: one chart per section, one point per chart, and the data carried inside the draw URL"
+  - title: Write
+    content: "The trade word is narrative: a plain-language paragraph per section plus a takeaway, the one line the reader keeps"
+  - title: Check
+    content: "The trade word is QA: a ten-item checklist to work through before filing, with the agent checking once and a human checking again"
+  - title: Ship
+    content: "The trade word is deliver: report plus data appendix plus reproduction scripts, all three together, and the report is not credible without them"
+  - title: One run through, end to end
+    content: "A real run on EU e-commerce penetration, with one excerpt from each of the eight steps"
+  - title: The one you rerun every week
+    content: "Same shape, new numbers: 3 charts, 1 table, 5 sentences, 1 rerun command"
+  - title: Three things to hand an agent
+    content: "What the step is for, which metric card to follow, how to check the result. The third one matters most, because without an acceptance test you get a deliverable that only looks right"

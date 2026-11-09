@@ -1,0 +1,15 @@
+id: 03-competitor-entry-schema
+title: "A competitor profile nobody can check is worth nothing"
+sections:
+  - title: A half-filled sheet fails because its cells do not agree
+    content: "A missing cell is not the problem — cells with no source, no date and no shared convention are, and they leave the whole sheet unusable"
+  - title: What goes in each cell, and what it says
+    content: "The eight cells filled for umami, Matomo, PostHog and Plausible, and the two that get misread: the growth proxy that is not revenue growth, and the empty price cell"
+  - title: Every cell has to name where it came from
+    content: "Share needs a denominator, price bands need a date and a product form, and the three cells that go muddy fastest: size, ad intensity and share of voice"
+  - title: Every cell carries the date it was current as of
+    content: "Every cell carries an as-of date, stale cells stay visible, and the price bands span a factor of 25 once product form, region and billing unit are stated"
+  - title: Leave it empty rather than fill in an estimate
+    content: "A blank says nobody looked; an estimate says nothing, and a borrowed market share gets read as this company's number"
+  - title: Sources, definitions and dates are what make a profile checkable
+    content: "The value, source, definition and as-of columns, and why deleting the last three leaves the table scrap while the values alone still work"

@@ -1,0 +1,17 @@
+id: 05-survey-sampling
+title: "A survey's credibility is decided by how the sample was drawn"
+sections:
+  - title: A flattering result can mean the sampler hid something
+    content: "A clean chart can hide an empty frame: the Eurostat ICT survey reports 19.82% of EU turnover from online sales while its frame excludes the 94.12% of enterprises with 0 to 9 employees"
+  - title: Four ways to draw a sample, four different populations
+    content: "Simple random, stratified, systematic and convenience sampling, who each one reaches, and what each one costs in bias"
+  - title: The two traps that catch almost everyone
+    content: "Coverage bias, where the frame misses people, and self-selection bias, where the people who answer differ from the people who do not"
+  - title: A bigger sample is not a more representative one
+    content: "Sample size controls precision, the frame controls representativeness, and multiplying the sample by ten shrinks the interval only to a third"
+  - title: Too few people willing to answer is an alarm
+    content: "Response rate is returns over sends, a low rate means respondents and non-respondents drift apart, and the sent list is the only way to check"
+  - title: Ask who was drawn and who answered before reading the result
+    content: "Two questions settle whether a study is usable, and the difference between a sampling frame and sampling error is the difference between bias and precision"
+  - title: Fix the frame first, then talk about sample size
+    content: "A number that only speaks for the people who answered is a communication tool, not a market fact"

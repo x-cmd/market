@@ -1,0 +1,15 @@
+id: 07-eight-tools-in-one-table
+title: "Eight tools, one table: pick by the question, not by the number"
+sections:
+  - title: "What each tool owns"
+    content: "One table for all eight tools: what each does, what goes in, what comes out, where on the site it is covered, and why the differing output units stop them being interchangeable"
+  - title: "Which link in the chain each one answers"
+    content: "Three kinds of tools with three sources of confidence, then the three steps they answer in order: who touched the order, how many orders disappear if you stop, and where the next dollar goes"
+  - title: "Looking back: who touched this order"
+    content: "Attribution answers it, and it counts who touched an order rather than who created one"
+  - title: "Stopping: how many orders disappear if you stop"
+    content: "Incrementality testing answers it, and eBay and Facebook show the observational reading overstating the experimental effect by four times or more"
+  - title: "Looking forward: where the next dollar goes"
+    content: "Marginal ROI, equal marginal returns and confidence intervals answer it in sequence, from the last dollar of a channel to whether the gap between channels survives its own error bar"
+  - title: "Where each one is covered again"
+    content: "A cross-reference table of every other page on the site that uses each tool, showing that the toolbox tools arrive in pairs rather than alone"

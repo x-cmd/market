@@ -1,0 +1,17 @@
+id: 02-category-entry-price-bands-promo-cadence
+title: "The cheapest beef sells 45% of the volume and the priciest sells 26%"
+sections:
+  - title: Settle the boundary before anything else
+    content: "Raw retail beef in four cut bands, and the three questions that fix the boundary: group by what is sold or by how it is sold, whether services and installation count, and whether tax counts"
+  - title: Place yourself in the category before you analyze it
+    content: "Household spend divided by unit price gives pounds per band, and the resulting table shows the cheapest band sells the most volume while the priciest band earns 1.8 times more per pound"
+  - title: Cut the price bands by volume, not by instinct
+    content: "Named tiers can hold two bands whose volume differs tenfold; cut at volume quartiles instead, and note that band order by volume is not band order by price"
+  - title: How hard the discounts land, in numbers you can predict
+    content: "How many events a year, how long each runs, and how deep it goes, computed from the CPI price index with the 1% moving-average rule, and what that computation cannot tell you"
+  - title: Where the discounts concentrate tells you what each band is made of
+    content: "Deepest discounts land in the upper middle: the cheapest band is pinned by cost, the priciest protects its price, and the middle band lives on promotions"
+  - title: How far peak season sits from the trough
+    content: "Not-seasonally-adjusted divided by seasonally-adjusted index gives the monthly seasonal factors, with a 2.72 point category spread and 6.8 points band by band"
+  - title: The four cells, and the four you cannot fill
+    content: "Boundary, price bands, promo cadence and seasonality, plus the cells that have no public source and the reproduce command behind every number"
