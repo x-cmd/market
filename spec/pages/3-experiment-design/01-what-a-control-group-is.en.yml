@@ -1,14 +1,12 @@
 id: 01-what-a-control-group-is
 title: "A bad control group is worse than no control group"
 sections:
-  - title: Why cutting cities in half can void the result
-    content: "Before the split, the treatment cities already converted 1.3 points better, so a hand-picked half turns the baseline gap into the measured ad effect, and only a random draw fixes what you can see"
+  - title: A hand-picked half of the cities voids the result
+    content: "Before the split the treatment cities already converted 1.3 points better, so subtracting the test-period numbers carries that gap straight into the ad effect — only a random draw fixes what you can see"
   - title: Four conditions a control group has to meet
     content: "Random and comparable, the same period on both sides, nothing else changed, and enough sample — the first three make the number meaningful and the last decides whether it is worth reading"
   - title: Three ways to build the wrong control group
     content: "Comparing before and after the pause, comparing against the neighbouring city, and using people who did not buy as the control — one campaign, four ways to split, 18.2% against 26.5%, 41.7% and 33.4%"
-  - title: Two ways the two sides fail to line up
-    content: "The two sides can get very different exposure per capita under the same total spend, and they can come from different populations entirely, which is grouped observation rather than an experiment"
   - title: A campaign destroyed by its own control group
     content: "A boss hand-picked two cities of similar size but different basket mix, a local promotion hit both, and a reported 31% drop turned out to hide a 1.3-point baseline gap"
   - title: No control group, no lift — and a bad one is worse than none

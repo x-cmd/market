@@ -67,8 +67,8 @@ Sizing beforehand means estimating three things from historical data: the baseli
 **Size first, launch second.** Write down three things before the run:
 
 - **The smallest difference that matters.** How large a difference has to be, in business terms, before anyone moves budget. This sets the sample size and decides whether the experiment is worth running.
-- **How many people per arm and how many days.** Feed the baseline conversion rate and the smallest difference into the standard formula or an interactive calculator, take the number, divide by users per day.
-- **How you will read the result.** Write down in advance what counts as a win and what counts as a failure. **This is the one most often skipped, and the only guardrail that stops a flipped number from turning into a decision.**
+- **How many people per arm and how many days.** Feed the baseline conversion rate and the smallest difference into the standard formula or a calculator, take the number, divide by users per day.
+- **How you will read the result.** Write down in advance what counts as a win and what counts as a failure. **This is the one most often skipped, and the only guardrail that stops a flipped number becoming a decision.**
 
 The answer lands in one of three places, and none is a bad outcome:
 

@@ -10,9 +10,7 @@ The worse problem: **a broken control group is worse than none.** With none, you
 
 ## A hand-picked half of the cities voids the result
 
-Run ads in half the cities, leave the other half alone, compare sales. That is the standard setup, and it is fine. The problem is the word *pick*.
-
-**The half you pick and the half you leave were never the same.**
+Run ads in half the cities, leave the other half alone, compare sales. That is the standard setup, and it is fine. The problem is the word *pick*: **the half you pick and the half you leave were never the same.**
 
 ```text
 https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E5%88%87%E4%BA%86%E4%B8%80%E5%8D%8A%E5%9F%8E%E5%B8%82%EF%BC%8C%E4%BD%86%E4%B8%A4%E8%BE%B9%E6%9C%AC%E6%9D%A5%E5%B0%B1%E4%B8%8D%E5%90%8C%EF%BC%9A%E5%AE%9E%E9%AA%8C%E5%89%8D%204%20%E5%91%A8%E7%9A%84%E5%91%A8%E8%BD%AC%E5%8C%96%E7%8E%87%22%7D%2C%22color%22%3A%5B%22%232563eb%22%2C%22%23dc2626%22%5D%2C%22xAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%22%E5%AE%9E%E9%AA%8C%E7%BB%84%EF%BC%88%E6%8A%95%EF%BC%89%22%2C%22%E5%AF%B9%E7%85%A7%E7%BB%84%EF%BC%88%E4%B8%8D%E6%8A%95%EF%BC%89%22%5D%2C%22axisLabel%22%3A%7B%22interval%22%3A0%7D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%22%E5%91%A8%E8%BD%AC%E5%8C%96%E7%8E%87%EF%BC%88%25%EF%BC%89%22%7D%2C%22grid%22%3A%7B%22left%22%3A90%2C%22right%22%3A50%2C%22top%22%3A60%2C%22bottom%22%3A60%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%2C%22axisPointer%22%3A%7B%22type%22%3A%22shadow%22%7D%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22%22%2C%22type%22%3A%22bar%22%2C%22data%22%3A%5B4.9%2C3.6%5D%2C%22label%22%3A%7B%22show%22%3Atrue%2C%22position%22%3A%22top%22%2C%22formatter%22%3A%22%7Bc%7D%22%7D%2C%22stack%22%3Anull%7D%5D%7D&w=760&h=420
@@ -36,7 +34,7 @@ Random does not fix everything. It cannot separate geographic isolation, custome
 
 **Any difference between the two sides should come from the randomisation and nothing else.**
 
-Without randomisation, get as close as you can to **comparability**: stratify by size, pair on past performance. But comparability has a ceiling. City size, historical sales and average order value are matchable; customer mix, brand awareness and offline foot traffic are not. **Random beats matching because matching fixes only the differences you thought of.**
+Without randomisation, get as close as you can to **comparability**: stratify by size, pair on past performance. But comparability has a ceiling. City size, historical sales and average order value are matchable; customer mix, brand awareness and offline foot traffic are not. **Random beats matching because matching only fixes the differences you thought of.**
 
 ### The same period on both sides
 
@@ -44,7 +42,7 @@ Without randomisation, get as close as you can to **comparability**: stratify by
 
 ### Nothing else differs
 
-**Change nothing except the ads.** This is the condition most often broken: prices changed during the test period, the control side ran out of stock, someone moved budget into another channel, the website was redesigned mid-test. **Any one of these puts something other than the ad into the gap**, and these biases are **one-sided**, so no statistical correction removes them.
+**Change nothing except the ads.** This is the condition most often broken: prices changed mid-test, the control side ran out of stock, someone moved budget to another channel, the website was redesigned. **Any one of these puts something other than the ad into the gap**, and these biases are **one-sided**, so no statistical correction removes them.
 
 ### Enough sample
 
@@ -96,7 +94,7 @@ A consumer brand ran a geo experiment on search ads, measuring how much sales fe
 
 **The value of a control group is not "one more number to compare". It is the only thing that separates the ads from everything else.**
 
-**One, do not report a lift without a control group.** Label the number as a before-and-after difference with no control behind it. **Two, a bad control group is worse than no control group** — it hands you a number that can go straight into a report and needs no explanation. **Three, do not skip the pre-test period.** It is what separates "the two sides were never alike" from "the ads caused this much"; without it, you never find out the control was invalid.
+**One, do not report a lift without a control group.** Label it as a before-and-after difference with no control behind it. **Two, a bad control group is worse than none** — it hands you a number that can go straight into a report, no explanation needed. **Three, do not skip the pre-test period.** It separates "the two sides were never alike" from "the ads caused this much"; without it, you never find out the control was invalid.
 
 Back to "sales dropped 18% after we paused the ads". That sentence is not wrong. The sentence after it is: "so the ads created 18% of growth."
 
@@ -104,6 +102,6 @@ Back to "sales dropped 18% after we paused the ads". That sentence is not wrong.
 
 [→ Incrementality testing: using one region as the control](../../8-analysis-toolbox/02-incrementality-testing/en.md) · [→ A small sample can invert the answer](../02-sample-size-and-power/en.md) · [→ A number without its interval is half an answer](../04-confidence-intervals/en.md)
 
-**Data**: The numbers come from a synthetic scenario built to show the gap between four ways of splitting the same campaign. The true lift is set at 18.2%, and the three wrong designs each run high because a baseline difference, a seasonal difference and a self-selection difference are mixed in. The ruined campaign uses the same numbers: inside the reported 31% drop sits a 1.3-point baseline difference.
+**Data**: The numbers come from a synthetic scenario built to show the gap between four ways of splitting the same campaign. The true lift is set at 18.2%, and the three wrong designs each run high because a baseline, seasonal and self-selection difference are mixed in. The ruined campaign uses the same numbers: inside the reported 31% drop sits a 1.3-point baseline difference.
 
-**Reproduce**: The numbers are a worked example and no x-cmd command reruns them. To swap in your own, replace the `series[].data` array in the `d=` parameter of the link. For the design side, see Vaver & Koehler, *Measuring Ad Effectiveness Using Geo Experiments*, Google Inc., 2011.
+**Reproduce**: The numbers are a worked example and no x-cmd command reruns them; to swap in your own, replace the `series[].data` array in the `d=` parameter of the link. For the design side, see Vaver & Koehler, *Measuring Ad Effectiveness Using Geo Experiments*, Google Inc., 2011.
