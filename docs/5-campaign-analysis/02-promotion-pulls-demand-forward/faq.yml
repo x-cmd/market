@@ -1,0 +1,220 @@
+id: x-market-5-campaign-analysis-02-promotion-pulls-demand-forward
+
+data:
+  - name:
+      en: what the promotion month actually shows
+      cn: 促销月的数字到底说明了什么
+    qa:
+      - id: promo-month-lift-is-not-increment
+        question:
+          en: "Our promo week was up 40% against the previous week. Is 40% our increment?"
+          cn: "我们的促销周比上一周涨了四成，这四成就是增量吗？"
+        answer:
+          en:
+            >
+              No. A promotion month mixes two different things: demand that is genuinely
+              new, and demand that would have arrived later anyway and got pulled forward
+              by the discount. The Eurostat monthly retail turnover series for specialised
+              stores selling cultural and recreation goods in the EU27 shows the shape.
+              In November 2024 that category rose 3.6% on the seasonally adjusted index,
+              then fell 1.8% in December and 2.4% below November by January 2025. The
+              same category, measured without seasonal adjustment, shows December
+              turnover jumping 39.1% month on month. So a promotion-month figure
+              carries almost no information about whether the promotion worked.
+          cn:
+            >
+              不是。促销月里混着两样东西：真正新增的需求，和本来后面才会到、被折扣提前
+              拉过来的需求。欧盟 27 国「文化与娱乐用品专营店」的月度零售额序列就是这个样子。
+              2024 年 11 月这个品类季调指数环比涨 3.6%，12 月跌 1.8%，到 2025 年 1 月比
+              11 月低 2.4%。同一个品类，未做季节调整的数显示 12 月环比暴涨 39.1%。所以促销
+              月那个数，几乎不携带关于促销好坏的任何信息。
+        confidence: 9
+        reference:
+          - docs/5-campaign-analysis/02-promotion-pulls-demand-forward/cn.md
+      - id: why-december-looks-like-a-boom-raw
+        question:
+          en: "Why does the unadjusted December figure say +39% while the adjusted one says -1.8%?"
+          cn: "为什么未季调的 12 月是 +39%，季调后却是 -1.8%？"
+        answer:
+          en:
+            >
+              Because December carries its own large seasonal component, and the two
+              versions differ in whether that component has been removed. The
+              calendar-adjusted but not seasonally adjusted series puts December 2024 at
+              163.4 against November's 117.5, a 39.1% jump. The seasonally and calendar
+              adjusted series, over the same months, gives -1.8%. The roughly forty
+              percentage point gap is not a data error and it is not the promotion
+              either; it is the ordinary December of every year. Seasonally adjusted
+              data is what lets you compare a promotion month against a non-promotion
+              month at all.
+          cn:
+            >
+              因为 12 月本身带着很大的季节成分，两种版本的区别就是这一个成分有没有被拿掉。
+              只做日历调整、没做季节调整的那一版，2024 年 12 月是 163.4，11 月是 117.5，环比
+              跳 39.1%。同一段时间，季节调整后的数是 -1.8%。这四十个百分点左右的差距不是
+              数据错误，也不是促销造成的，它就是每年都有的那个 12 月。要拿促销月跟非促销月
+              比，得用季调过的数。
+        confidence: 9
+        reference:
+          - docs/5-campaign-analysis/02-promotion-pulls-demand-forward/cn.md
+  - name:
+      en: reading the post-promotion window
+      cn: 促销后的那段时间怎么读
+    qa:
+      - id: three-segment-method
+        question:
+          en: "What exactly do I look at after a promotion ends?"
+          cn: "促销结束之后我具体该看哪几段？"
+        answer:
+          en:
+            >
+              Three aligned segments. The baseline is the three months before the
+              promotion, which gives the level this category sits at when no promotion
+              is running. The promotion segment is the promotion month itself. The
+              observation window is the three months after it, taken as an average
+              rather than a single month so that a crowded December or a quiet January
+              cannot dominate. Comparing the observation window against the baseline
+              tells you whether the volume was borrowed from later months. On the EU27
+              cultural and recreation goods series for 2024, the baseline average for
+              August to October 2024 is 112.53, November is 116.6, and the December to
+              February average is 113.67.
+          cn:
+            <>
+              三段对齐。基准段是促销前的三个月，给出这个品类在没有促销时本来待的水位。
+              促销段是促销月本身。观察段是促销后的三个月，取平均而不是单月，免得一个特别挤的
+              12 月或一个特别冷清的 1 月主导结论。拿观察段跟基准段比，就知道那部分量是不是
+              从后面借来的。欧盟 27 国文化与娱乐用品专营店 2024 年的数是：8 到 10 月均值
+              112.53，11 月 116.6，12 月到次年 2 月均值 113.67。
+        confidence: 9
+        reference:
+          - docs/5-campaign-analysis/02-promotion-pulls-demand-forward/cn.md
+      - id: how-to-compute-net-increment
+        question:
+          en: "How do I turn those three segments into one number?"
+          cn: "这三段怎么变成一个数？"
+        answer:
+          en:
+            >
+              Take the promotion month's excess over the baseline and the observation
+              window's deviation from the baseline, weight them by month count, and add
+              them together. On this page the formula is (promotion month minus baseline
+              plus 3 times the observation average minus baseline) divided by 4. The
+              result for EU27 cultural and recreation goods is plus 0.4% for 2023 and
+              plus 1.7% for 2024, against a promotion-month reading of plus 2.4% and
+              plus 3.6%. For information and communication equipment the same formula
+              returns minus 0.3% and minus 0.4%. That number, not the promotion month
+              figure, is what the promotion left behind.
+          cn:
+            <>
+              把促销月超出基准的部分，加上观察期相对基准的偏离，按月数加权并起来。这一页
+              用的公式是 (促销月 − 基准 + 3 × 观察期均值 − 基准) ÷ 4。欧盟 27 国文化与娱乐
+              用品专营店算出来 2023 年是 +0.4%、2024 年是 +1.7%，而促销月看到的是 +2.4%
+              和 +3.6%。同样的公式套到信息与通信设备上是 -0.3% 和 -0.4%。这个数，不是
+              促销月的数，才是促销真正留下的东西。
+        confidence: 9
+        reference:
+          - docs/5-campaign-analysis/02-promotion-pulls-demand-forward/cn.md
+      - id: why-the-pull-forward-share-changes
+        question:
+          en: "Is there a fixed rule for how much of a promotion is pull-forward?"
+          cn: "促销里有多大比例是需求前置，有固定的比例吗？"
+        answer:
+          en:
+            >
+              No, and that is the point. The pull-forward share moves with the category,
+              the year and the competitive environment, so it has to be measured each
+              time. EU27 cultural and recreation goods kept about a third of its
+              November 2024 lift by the February 2025 mark. In 2023 the same category
+              gave back almost all of it. Information and communication equipment gave
+              back everything and went slightly negative, at minus 0.3% and minus 0.4%
+              over the four-month window. Food, beverages and tobacco, the comparison
+              category with no coordinated discount peak, showed only 0.4% and 0.7% in
+              November and stayed positive afterwards. Assuming a pull-forward rate is
+              how a marketing report ends up claiming growth it did not produce.
+          cn:
+            <>
+              没有，而且这正是要点。需求前置的比例会随品类、年份和竞争环境变化，每一次都得
+              重新测。欧盟 27 国文化与娱乐用品专营店 2024 年 11 月的涨幅，到 2025 年 2 月
+              留下了约三分之一；同一个品类 2023 年几乎全部吐了回去。信息与通信设备专营店
+              全部吐回，四个月窗口后是 -0.3% 和 -0.4%。食品饮料烟草是那个没有统一折扣节点
+              的参照品类，11 月只有 0.4% 和 0.7%，之后一直是正的。假定一个需求前置比例，
+              就是营销报告声称了它没有挣到的增长的原因。
+        confidence: 9
+        reference:
+          - docs/5-campaign-analysis/02-promotion-pulls-demand-forward/cn.md
+  - name:
+      en: what this means for the promotion budget
+      cn: 这对促销预算意味着什么
+    qa:
+      - id: which-baseline-to-use
+        question:
+          en: "Should I use last year's promotion month as the baseline?"
+          cn: "基线可以用去年同期的促销月吗？"
+        answer:
+          en:
+            >
+              No, because last November was also a promotion month. Using it as the
+              baseline treats the promotion itself as the thing being measured, and any
+              baseline that already contains a discount will understate how much the
+              discount moved volume. The baseline has to come from a stretch with no
+              promotion running, such as the three months before the event, or the same
+              three months a year earlier. This is the same reasoning that sits behind
+              using seasonally adjusted data in the first place: strip out the regular
+              calendar before asking what the intervention did.
+          cn:
+            <>
+              不可以，因为去年 11 月也是促销月。拿它当基线，等于把「促销」这件事本身当成了被测
+              的对象，而任何已经含有折扣的基线都会低估折扣对销量的影响。基线要取没有促销在跑
+              的那段，比如活动前的三个月，或者去年同期的三个月。这跟一开始就用季调数是同一个
+              道理：先剥掉常规日历，再问干预做了什么。
+        confidence: 9
+        reference:
+          - docs/5-campaign-analysis/02-promotion-pulls-demand-forward/cn.md
+      - id: roi-denominator-should-change
+        question:
+          en: "My promo ROI uses promo-week revenue over promo spend. What should change?"
+          cn: "我的促销 ROI 是拿促销周收入除以促销投入，哪个地方要改？"
+        answer:
+          en:
+            >
+              The numerator. Promo-week revenue contains the borrowed volume, so dividing
+              it by promo spend produces a return figure that is systematically too
+              high. Replace it with the net increment over the post-promotion window
+              relative to the baseline, then compare that gross contribution against the
+              margin given up in the discount plus the cost of running the promotion.
+              If the result comes out negative, the promotion did not fail; it moved
+              next year's purchases into this quarter, and the balance sheet will show
+              it as a lower baseline for every month that follows.
+          cn:
+            <>
+              改分子。促销周收入里混着借来的量，拿它除以促销投入，得到的回报率会系统性地偏高。
+              把它换成促销后窗口相对基准的净增量，再拿这部分带来的毛利去减折扣让掉的毛利和
+              活动的操作成本。如果结果算出来是负的，那促销没有失败，它只是把明年的购买提前到了
+              这个季度，资产负债表上会表现成之后每个月基线都被压低一截。
+        confidence: 8
+        reference:
+          - docs/5-campaign-analysis/02-promotion-pulls-demand-forward/cn.md
+      - id: pull-forward-has-a-later-cost
+        question:
+          en: "Is there a cost to promotion that does not show up in the promotion month?"
+          cn: "促销有没有一种成本，是不会出现在促销月的报表里的？"
+        answer:
+          en:
+            >
+              Yes. Promo pull-forward teaches customers to wait. Once a discount date
+              becomes a habit, the conversion rate outside promotion windows drops
+              permanently, and that drop does not appear in the promotion month's
+              numbers at all. It shows up as a lower baseline for every month that
+              follows. It is also the reason the post-promotion observation window has
+              to stay clean: if another promotion lands in December, the volume that
+              gets pulled forward is indistinguishable from the volume the first
+              promotion created, and the measurement of the first one is lost.
+          cn:
+            <>
+              有。需求前置会训练用户等。折扣日一旦变成习惯，非促销期的转化就永久性地低一截，
+              而这个下降根本不出现在促销月的数字里，它体现在之后每个月的基线上。这也是观察段
+              必须保持干净的原因：如果 12 月又来一次促销，被第二次拉走的量和第一次促销创造的
+              量在数据上分不开，第一次促销的效果就测不出来了。
+        confidence: 8
+        reference:
+          - docs/5-campaign-analysis/02-promotion-pulls-demand-forward/cn.md

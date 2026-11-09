@@ -1,0 +1,71 @@
+id: x-market-2-market-research-07-demand-intensity-ranking
+
+data:
+  - name:
+      en: ranking five selling points by demand intensity
+      cn: 给五个卖点按需求强度排序
+    qa:
+      - id: why-not-average-the-scores
+        question:
+          en: Why can't I just average the importance scores of five selling points?
+          cn: 五个卖点的「重要程度」打分为什么不能直接取平均？
+        answer:
+          en: >
+            Because an importance rating is an order, not a quantity. When someone gives "battery life" a 3 out of 5, they are not saying they care about it to 60 percent — they are saying it ranks third. Averaging orders produces a number whose fractional part carries no meaning, and it also flattens the one difference that matters: a feature that is critical to 15 percent of people and irrelevant to the other 85 percent gets dragged down by the indifferent majority, while a feature that is mildly useful to 70 percent of people and precious to nobody in particular scores well above it. That second feature is often the better bet, because its 70 percent is real. The honest statement to write on the page is not "we ranked them and X came first" but "an average of importance ratings does not produce a first place at all."
+          cn: >
+            因为「重要程度」打分是一个序，不是一个量。一个人给「续航」打 3 分的时候，他不是在说自己对续航的重视程度有 60%，他是在说续航排第三。把序当量做平均，算出来的小数点后一位在原始评分里没有含义。更要紧的是它抹掉了唯一真正有区别的地方：一个只对 15% 的人重要、对另外 85% 的人完全无关的卖点，会被那 85% 的无所谓拖下去；一个对 70% 的人都有点用、但没谁特别在意的卖点，反而分数更高。后者往往才是更该押的那个，因为那 70% 是实的。所以那一格不该写「我按平均分排出了第一名」，该写「我按平均分排出来的第一名没有意义」。
+        confidence: 10
+        reference:
+          - docs/2-market-research/07-demand-intensity-ranking/cn.md
+
+      - id: three-intensity-metrics
+        question:
+          en: Which three metrics can actually turn "I want this" into a comparable number?
+          cn: 哪三个指标能把「我想要这个」变成能比较的数？
+        answer:
+          en: >
+            Three, and each measures a different layer. Priority ranking (MaxDiff) asks which of the five wins and which loses in each round, stripping the ranking down to pairwise choices; the result is a share, which is an order, not a scale. Intensity distribution asks how hard the wanting is among the people who want it — the shape of the distribution, not its mean. Willingness to pay asks how many extra euros it converts into, and is the only one of the three that reaches money. A survey gives you the first two cheaply. The third needs either a Van Westendorp price sensitivity meter in the questionnaire, or price behaviour read out of actual transactions.
+          cn: >
+            三个，量的是不同的层。优先级排序（MaxDiff）每一轮只逼出「谁最重要、谁最不重要」两两选择，最后折成一个份额——这是序，不是量。强度分布问的是在想要的人里面，想要得有多急，看的是分布的形状而不是平均值。支付意愿问的是它能换出多少额外的钱，这三个里只有它能落到钱上。前两个靠问卷就能拿到，第三个要么在问卷里放 Van Westendorp 价格敏感度计那四个问题，要么去真实交易里读价格行为。
+        confidence: 9
+        reference:
+          - docs/2-market-research/07-demand-intensity-ranking/cn.md
+
+      - id: breadth-vs-intensity
+        question:
+          en: How do I tell "lots of people want it" apart from "people really want it"?
+          cn: 怎么把「想要的人多」和「想要得急」分开量？
+        answer:
+          en: >
+            Ask two separate questions and read them off different columns. Breadth is the share of the population that wanted it at all. Intensity is how much of that group wanted it hard enough to act repeatedly. Eurostat's individual internet purchase survey asks both every year, and the two do not move together. Greece and the Czech Republic are the cleanest pair: Greece's breadth is 62.85 percent against the Czech Republic's 75.43, yet 12.79 percent of Greeks bought online more than ten times in three months versus 9.05 percent of Czechs. Hungary and Poland are even cleaner, because their breadth is nearly identical at 54.77 and 56.59 percent while their 6-or-more-purchases share is 11.60 versus 23.09 percent.
+          cn: >
+            问两个不同的问题，从不同的列里读出来。广度是想要过的人占全体人口的比例，强度是在这些想要的人里，有多少反复买。欧盟的个人网购调查每年同时问这两个数，两个数也不一起动。希腊和捷克是最干净的一对：广度希腊 62.85%、捷克 75.43%，但每 3 个月买 10 次以上的，希腊 12.79%、捷克 9.05%。匈牙利和波兰更干净，广度几乎一样（54.77% 对 56.59%），而每 3 个月买 6 次以上的，波兰 23.09%、匈牙利只有 11.60%。
+        confidence: 10
+        reference:
+          - docs/2-market-research/07-demand-intensity-ranking/cn.md
+
+      - id: average-score-flips-the-winner
+        question:
+          en: How does averaging end up putting the wrong feature first?
+          cn: 平均分怎么会把第一名排错？
+        answer:
+          en: >
+            It converges, and it rewards the feature nobody dislikes. Because ratings cluster near the middle, the top two usually end up separated by a tenth of a point, which sits inside the noise of the ratings themselves. The bigger effect is on the shape: a feature that matters intensely to 15 percent of people averages 1.6 (fifteen percent gave 5, eighty-five percent gave 1), while a feature that is mildly useful to 70 percent of people averages 3.7 (seventy percent gave 4, thirty percent gave 3). The average promotes the second one, because the first is dragged down by everyone who simply does not care. But the first feature's 15 percent is a concentrated, high-intensity group, and the second feature's 70 percent is diffuse and lukewarm. That is exactly the swap that averaging hides.
+          cn: >
+            它会收敛，而且会奖励「谁都不讨厌」的那个卖点。评分都挤在中间，前两名最后通常只差 0.1 分，这一点完全落在评分的噪声里。更大的影响在分布形状上：一个只对 15% 的人极其重要的卖点，平均 1.6 分（15% 给 5 分，85% 给 1 分）；一个对 70% 的人都有点用、但谁都不特别在意的卖点，平均 3.7 分（70% 给 4 分，30% 给 3 分）。平均分会提拔后者，因为前者被那 85% 的无所谓拖下去了。但前者的 15% 是集中且高强度的一群人，后者那 70% 是散而温的一群人——被平均分藏起来的正是这次调换。
+        confidence: 9
+        reference:
+          - docs/2-market-research/07-demand-intensity-ranking/cn.md
+
+      - id: what-to-write-on-the-page
+        question:
+          en: What has to be on the page when the ranking is handed to someone else?
+          cn: 排完交出去，那张表上必须写清哪几件事？
+        answer:
+          en: >
+            Three sentences. First, which ruler was used: intensity, size, or willingness to pay — the three give different winners, so naming the one you used is what makes the ranking legible. Second, where every number came from: who the sample frame was, how many, whether the question was about intention or behaviour, what year, which people. The same answers collected a year apart can flip, because both the people and the cycle changed. Third, under what condition the winner changes: write "if we rank by intensity rather than size, the winner becomes X" rather than "the winner is X". And one line that is usually left out: if the gap between first and second sits inside the measurement error, they are tied and you should not pretend otherwise.
+          cn: >
+            三句话。第一句，这次按哪把尺子排：强度、规模、支付意愿——三把尺子给出的第一名经常不同，说清用的是哪一把，这张表才读得懂。第二句，每个数是怎么来的：样本框是谁、样本量多少、问的是意愿还是行为、哪一年、覆盖哪些人。同一批人的答案隔一年再问就可能翻盘，因为人换了一批，周期也换了一轮。第三句，什么情况下第一名会变：写「如果按强度而不是规模排，第一名会换成谁」，而不是写「第一名是 X」。还有一句常被漏掉的：如果第一和第二的差距落在测量误差以内，它们就是并列的，不该假装有一个第一。
+        confidence: 9
+        reference:
+          - docs/2-market-research/07-demand-intensity-ranking/cn.md

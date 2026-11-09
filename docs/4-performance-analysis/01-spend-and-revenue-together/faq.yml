@@ -1,0 +1,274 @@
+id: x-market-4-performance-analysis-01-spend-and-revenue-together
+
+data:
+  - name:
+      en: the three lines that have to sit in one table
+      cn: 必须放进同一张表的三行
+    qa:
+      - id: revenue-minus-ad-spend
+        question:
+          en: "Revenue minus ad spend came to 610,000. Is that my profit?"
+          cn: "收入减广告费还剩 61 万，这是我的利润吗？"
+        answer:
+          en:
+            >
+              No. What you have is gross profit minus ad spend, which is called contribution
+              margin. It answers exactly one question: whether the transaction is worth doing
+              on its own terms. It cannot answer whether the business is profitable, because
+              the cost of the goods, the fulfilment, the salaries and the after-sales cost
+              have not been deducted yet. In the worked example on this page, the 610,000 was
+              left over to pay 48,000 of goods, 30,000 of platform commission, 30,000 of
+              delivery and 75,000 of people — and the business was still 112,240 in the red.
+          cn:
+            >
+              不是。你手上的是毛利减广告费，行业里叫贡献毛益，它只回答一个问题：
+              这单生意本身值不值得做。它回答不了这家店赚不赚，因为货、履约、人力和售后
+              还没扣。这一页的算例里，那 61 万还要拿去付 4.8 万的货、3 万的佣金、
+              3 万的物流和 7.5 万的人——付完之后这家店还亏 11.22 万。
+        confidence: 10
+        reference:
+          - docs/4-performance-analysis/01-spend-and-revenue-together/cn.md
+      - id: gross-vs-net-revenue
+        question:
+          en: "Why is reported revenue not the same as net revenue?"
+          cn: 报的成交额和净收入为什么不一样？
+        answer:
+          en:
+            >
+              Because some of what was ordered was returned. Revenue as reported by most
+              storefronts and marketplaces is gross merchandise value — the amount ordered.
+              Net revenue is that figure minus refunds and returns. On e-commerce the two
+              routinely differ by 8% to 10%, and by more in peak season when return rates
+              rise. A refund is not simply a negative line on the revenue side: the money
+              comes back, the return shipping is paid by the seller, and the goods have to be
+              re-stocked. That is also why the refund rate in the example on this page shows
+              up as a 48,000 difference between two periods whose gross revenue looked
+              perfectly healthy.
+          cn:
+            >
+              因为下单的东西里有一块后来退掉了。多数店铺和平台后台报的「成交额」是下单金额，
+              净收入是它减退款。线上这两个数经常差 8% 到 10%，旺季退货更多时差得更多。
+              退款也不只是收入行上的一个负数：钱退回来、退货运费自己出、货还得重新上架。
+              这一页的算例里，退款率从 4% 涨到 8%，在两期成交额看起来都很健康的情况下，
+              就是 4.8 万的差别。
+        confidence: 10
+        reference:
+          - docs/4-performance-analysis/01-spend-and-revenue-together/cn.md
+      - id: ad-spend-as-share-of-gross-profit
+        question:
+          en: "Why is ad spend as a share of gross profit more useful than ROAS?"
+          cn: "广告费占毛利，为什么比 ROAS 更好用？"
+        answer:
+          en:
+            >
+              Because ROAS improves on its own when revenue grows. A channel that returns 3
+              dollars per dollar looks like 3 at any volume, but the same channel at twice the
+              budget returns less per dollar, and ROAS on the blended total stays flattering
+              because the earlier, cheaper volume is still in the denominator. Ad spend as a
+              share of gross profit cannot be flattered this way, because gross profit is the
+              hard ceiling on what is available to pay for everything else. The two real
+              filings on this page sit far apart on that measure: Wayfair spent 37.8% of its
+              gross profit on advertising in FY2025, Chewy spent 22.0%.
+          cn:
+            >
+              因为 ROAS 会自己变好看。收入一涨，ROAS 就跟着涨：一个渠道一块钱换回 3 块，
+              看起来永远是 3，但同一个渠道加倍预算之后每块的回报会掉，而混在一起的 ROAS
+              因为分母里还留着早期便宜的那部分，依然好看。广告费占毛利不会被这么美化，
+              因为毛利是能拿去付所有其他东西的硬上限。这一页引的两份真实财报在这个数上
+              差得很远：Wayfair 2025 财年的广告费占毛利 37.8%，Chewy 是 22.0%。
+        confidence: 9
+        reference:
+          - docs/4-performance-analysis/01-spend-and-revenue-together/cn.md
+      - id: spend-versus-cost
+        question:
+          en: "What is the difference between spend and cost?"
+          cn: "花费和成本，区别在哪？"
+        answer:
+          en:
+            >
+              Spend is money you buy: advertising, platform commission, payment fees,
+              delivery, return shipping. Cost is what the business carries itself: the
+              goods, warehouse rent, the people, after-sales handling. The distinction
+              matters because they respond to different levers. Spend can be negotiated,
+              swapped or cut; cost is the price of being in the business at all, and cutting
+              the goods means there is nothing left to sell. Collapsing the two into one
+              "expenses" line is what lets a store treat commission and delivery as
+              unavoidable overhead while judging advertising only on its own ROI.
+          cn:
+            >
+              花费是买来的：广告、平台佣金、支付手续费、物流、退货运费。成本是自己扛的：
+              进货的货、仓租、人、售后处理。分开的理由是两者对应的处理方式不一样：
+              花费能谈、能换、能砍，成本是这门生意本身要付的代价，砍掉货就没有东西卖了。
+              把两者并成一行「费用」，就会出现这种局面：佣金和物流被当成「反正每个店都要付的」
+              ，而广告只被拿自己的 ROI 单独评判。
+        confidence: 9
+        reference:
+          - docs/4-performance-analysis/01-spend-and-revenue-together/cn.md
+  - name:
+      en: putting the table together
+      cn: 把表拼对
+    qa:
+      - id: same-time-window
+        question:
+          en: "What counts as the same time window across the ad platform and the storefront?"
+          cn: "广告平台和店铺后台，怎么才算同一个时间窗？"
+        answer:
+          en:
+            >
+              A full calendar month for both, and only then a reconciliation check. Ad
+              platforms bill by click date; marketplaces pay out by order settlement date;
+              bank transfers land on their own schedule. A few days' difference moves money
+              between months, and on a large order book that is enough to flip a month's
+              result. The check that catches it: pull the month's ad bill and the month's
+              order settlement into one table and see whether total revenue reconciles with
+              the bank statement. If it does not, look at refunds and unsettled amounts
+              first — those are the usual cause — and only then trust the rest of the sheet.
+          cn:
+            >
+              两边都取一个完整自然月，然后做一次对账。广告平台按点击日计费，
+              电商平台按订单结算日给钱，钱到银行又是另一套节奏。差几天就会把钱挪到别的月份，
+              单量一大就足以让一个月的正负翻面。查法是：把这个月的广告账单和订单结算
+              拉进同一张表，看总收入跟银行流水能不能对上。对不上，先查退款和未结算
+              ——通常就是这两个原因——确认之后这张表的其余部分才可信。
+        confidence: 9
+        reference:
+          - docs/4-performance-analysis/01-spend-and-revenue-together/cn.md
+      - id: same-definition
+        question:
+          en: "What belongs in the definition row at the top of the table?"
+          cn: "表格第一行要写什么？"
+        answer:
+          en:
+            >
+              For every line: how the number was derived, and which date it was booked on.
+              "Revenue" on the left as gross merchandise value and on the right as net revenue
+              is not a comparison, it is a subtraction. "Ad spend" as account consumption on
+              one side and media spend on the other is the same trap — account consumption
+              includes tax and platform service fees. The example on this page books revenue
+              on order date, ad spend on click date, commission and delivery on settlement
+              date, and cost of goods on ship date. When two lines cannot be put on the same
+              definition, leave the cell blank and say why. A blank means "not checked yet";
+              a filled-in estimate means "checked, but unsure" — and those two lead to very
+              different decisions.
+          cn:
+            >
+              每一行都要写：这个数是怎么来的、按哪一天记账。左边「收入」是成交额、
+              右边「收入」是净收入，那就不是比，是减。左边「广告费」是账户消耗、
+              右边是媒体花费，也是同一个坑——账户消耗含税和平台服务费。这一页的算例里，
+              收入按下单日、广告按点击日、佣金物流按结算日、货品成本按发货日记账。
+              两行口径对不上的时候，宁可留空并写清为什么：留空是「还没查」，
+              填个估的数是「查过了但不确定」，这两种在后续决策里差得很远。
+        confidence: 9
+        reference:
+          - docs/4-performance-analysis/01-spend-and-revenue-together/cn.md
+      - id: per-order-spread
+        question:
+          en: "Why is it worth spreading every line over the number of orders?"
+          cn: "为什么每一行都要摊到单数上？"
+        answer:
+          en:
+            >
+              Because a per-order figure is the unit the business actually runs on. Divide
+              net revenue by orders and you have the average basket; divide gross profit by
+              orders and you have the most you can possibly spend on everything else; subtract
+              the per-order ad spend, commission and delivery and you have per-order profit.
+              If that last number is negative, every additional order enlarges the loss. The
+              worked example on this page makes the point: gross profit per order only fell
+              from 161 to 155, but ad spend per order went from 67 to 129, so a store that
+              was making 15 per order started losing 50 — while order volume grew 50%.
+          cn:
+            >
+              因为每一单才是这门生意真正的单位。净收入除以单数是客单价，
+              毛利除以单数是你最多能拿去付所有费用的钱，再减掉每单的广告、佣金、物流，
+              就是每单净利。这个数如果是负的，每多卖一单就多亏一单。
+              这一页的算例说明了这件事：每单毛利只从 161 掉到 155，
+              但每单广告从 67 涨到 129，于是原来每单赚 15 块的店变成每单亏 50 块
+              ——同期单量还涨了 50%。
+        confidence: 9
+        reference:
+          - docs/4-performance-analysis/01-spend-and-revenue-together/cn.md
+  - name:
+      en: a store whose gross margin disappeared into the ad spend
+      cn: 一家毛利被投放吃掉的店
+    qa:
+      - id: revenue-up-profit-down
+        question:
+          en: "How can revenue grow 50% while the profit goes negative?"
+          cn: "收入涨了 50%，利润怎么就变成负的了？"
+        answer:
+          en:
+            >
+              Because the two costs that grew with volume grew faster than the volume did.
+              In the example, gross margin held steady at 42%, so gross profit rose 43.7% —
+              that part behaved normally. Ad spend, however, rose 190%, from 100,000 to
+              290,000, taking cost per order from 67 to 129. Part of that 62 is auction
+              inflation, and part is having to buy into more expensive inventory to keep
+              volume up. The refund rate also doubled from 4% to 8%, a further 48,000 that
+              never appears in the sales figure. Turned into per-order terms the store went
+              from making 15 per order to losing 50, so the 750 extra orders were all loss
+              makers.
+          cn:
+            >
+              因为跟着销量一起涨的那两笔成本，比销量涨得更凶。算例里毛利率稳在 42%，
+              毛利涨了 43.7%，这部分是正常的。广告费却涨了 190%，
+              从 10 万涨到 29 万，每单广告成本从 67 变成 129。多的那 62 块，
+              一部分是竞价变贵，一部分是为了拿量不得不往更贵的地方买。
+              退款率也从 4% 翻倍到 8%，又是 4.8 万，这笔钱根本不出现在销售额里。
+              换算成每单，这家店从每单赚 15 块变成每单亏 50 块，
+              所以多出来的 750 单全是亏钱的单。
+        confidence: 9
+        reference:
+          - docs/4-performance-analysis/01-spend-and-revenue-together/cn.md
+      - id: how-much-warning-you-get
+        question:
+          en: "How much warning does the table give you if it is kept every month?"
+          cn: "这张表要是每个月都在，能提前多久发现问题？"
+        answer:
+          en:
+            >
+              About a month, in the example. The refund rate rose to 7% in the first quarter of
+              2025 while net profit was still positive. In April the share of gross profit
+              going to advertising crossed 70%. In May net profit turned negative for the
+              first time. So the sequence is: a leading indicator (ad spend as a share of
+              gross profit) crosses a line, then the lagging result follows. If the table
+              only ever appears once a quarter, that sequence is invisible — you would
+              see the negative number and nothing that explains it. The warning does not
+              require better data. It requires the same three lines to be written down
+              every month, on the same definitions.
+          cn:
+            >
+              在算例里大概是一个月。2025 年第一季度退款率涨到 7%，
+              净利还是正的；4 月广告占毛利越过 70%；5 月净利第一次为负。
+              顺序是：一个先行指标（广告占毛利）越线，然后结果指标才跟上。
+              如果这张表一个季度才出一次，这个顺序就看不见了
+              ——你只会看到一个负数，和一个解释不了它的原因。
+              提前量不需要更好的数据，需要的是同样那三行、每个月按同样的口径写下来。
+        confidence: 8
+        reference:
+          - docs/4-performance-analysis/01-spend-and-revenue-together/cn.md
+      - id: refund-rate-ambiguity
+        question:
+          en: "A rising refund rate — is that a product problem or an ad-targeting problem?"
+          cn: "退款率涨了，是商品的问题还是投放的问题？"
+        answer:
+          en:
+            >
+              From the table alone you cannot tell, and that is the point worth internalising.
+              Two very different stories produce the same line: buyers who did not understand
+              the sizing, or ads that bought traffic from people who were never going to
+              keep what they ordered. They look identical in a table that records revenue,
+              spend and cost. Separating them requires data the table does not carry — whether
+              the refunded buyers are the ones the ads brought in. That is why the refund rate
+              belongs in the table at all: not because the table settles the question, but
+              because it puts the number where someone has to look at it.
+          cn:
+            >
+              只看这张表你分不出来，而这正是值得记住的一点。两种差别很大的情况
+              会写出同一条线：买家不懂尺寸，或者广告买来了本来就不打算留的人。
+              在只记收入、花费、成本三行的表里，它们长得一模一样。
+              要分清，得用表里没有的数据——退款的人是不是广告带来的那批。
+              所以退款率要进这张表，不是因为表能解决这个问题，
+              而是因为它把这个数放到了有人必须看一眼的位置上。
+        confidence: 8
+        reference:
+          - docs/4-performance-analysis/01-spend-and-revenue-together/cn.md

@@ -1,0 +1,228 @@
+id: x-market-2-market-research-12-seasonal-vs-nsa
+
+data:
+  - name:
+      en: the two numbers
+      cn: 两个数
+    qa:
+      - id: why-two-numbers-for-the-same-month
+        question:
+          en: "Why does the same month have two different numbers?"
+          cn: 为什么同一个月有两个不一样的数？
+        answer:
+          en:
+            >
+              Because there are two questions being asked of the same month. The unadjusted
+              figure (NSA) is the ledger: what was actually sold, billed and reported for tax.
+              The seasonally adjusted figure (SA) subtracts the pattern this month has shown
+              every year, so that what is left is "how much higher or lower than usual".
+              EU retail turnover in December 2025 is 127.1 unadjusted and 122.9 adjusted, and
+              in January it is 110.6 against 119.9. The unadjusted series says January fell off
+              a cliff from December; the adjusted series says business was flat. Both are
+              correct, because December is always a peak and January is always a trough.
+          cn:
+            >
+              因为同一个月被问了两个不同的问题。原始数是账本：实际卖了多少、开了多少票、报了多少税。
+              季调数把历年这个月表现出来的规律减掉，剩下的是「比平常高了多少还是低了多少」。
+              欧盟零售业 2025 年 12 月原始数 127.1、季调数 122.9，1 月是 110.6 对 119.9。
+              原始数说 1 月比 12 月塌了个大坑，季调数说生意基本没动。两个都没错，
+              因为 12 月本来就是旺季，1 月本来就是淡季。
+        confidence: 10
+        reference:
+          - docs/2-market-research/12-seasonal-vs-nsa/cn.md
+      - id: how-far-apart-can-the-peak-and-trough-be
+        question:
+          en: "How much can the seasonal swing be in a single industry?"
+          cn: 一门生意的季节落差能有多大？
+        answer:
+          en:
+            >
+              For EU retail trade it is about 32 percentage points across the year. Averaging
+              the ratio of the unadjusted to the adjusted index for each month over 2022 to 2025
+              gives December at 1.161 and February at 0.879. December therefore runs about 16
+              percent above the seasonal norm and February about 12 percent below it. In this
+              industry a month-on-month change computed on unadjusted numbers can be pure
+              calendar, with nothing at all about how the business is actually performing.
+          cn:
+            >
+              欧盟零售业一年大约 32 个百分点。把 2022 到 2025 年每个月「原始数 ÷ 季调数」的比值
+              平均下来，12 月是 1.161，2 月是 0.879。也就是说 12 月比季节常态高约 16%，
+              2 月比常态低约 12%。在这门生意上，用原始数算出来的环比可以纯粹是日历造成的，
+              跟经营水平一点关系都没有。
+        confidence: 9
+        reference:
+          - docs/2-market-research/12-seasonal-vs-nsa/cn.md
+      - id: does-the-us-cpi-have-the-same-split
+        question:
+          en: "Does the US CPI come with both versions too?"
+          cn: 美国的 CPI 也有两套吗？
+        answer:
+          en:
+            >
+              Yes, and the series IDs tell you which is which. The Bureau of Labor Statistics
+              publishes CPI-U twice: CUUR-prefixed series are not seasonally adjusted, CUSR-prefixed
+              series are. Both are labelled "U.S. city average, all items". In December 2022 the
+              unadjusted index fell 0.31 percent month on month while the adjusted one rose 0.03
+              percent. In November the gap was wider: minus 0.10 percent against plus 0.24
+              percent. The unadjusted move is the November discount season; the adjusted series
+              removes it and leaves the underlying climb in prices.
+          cn:
+            >
+              有，而且序列编号就能看出是哪个。美国劳工统计局把 CPI-U 发两遍：`CUUR` 开头的是未季调，
+              `CUSR` 开头的是季调，两个都标着「美国城市平均、全部项目」。2022 年 12 月，
+              未季调环比 **−0.31%**，季调环比 **+0.03%**。11 月差得更大：−0.10% 对 +0.24%。
+              未季调那个动量说的是 11 月的打折季，季调数把它挪走，留下的是物价往上走的那条趋势。
+        confidence: 10
+        reference:
+          - docs/2-market-research/12-seasonal-vs-nsa/cn.md
+  - name:
+      en: picking a number
+      cn: 挑数
+    qa:
+      - id: which-one-for-a-contract
+        question:
+          en: "Which figure do I use when money is involved?"
+          cn: 涉及钱的时候该用哪个数？
+        answer:
+          en:
+            >
+              The unadjusted one. Rent, commission calculated on turnover, franchise fees
+              tied to sales: the contract names a figure, and the figure is the one on the
+              ledger. A seasonally adjusted index is an estimate of what a month would have
+              looked like without its seasonal pattern, and it is never the number that
+              appears on an invoice. Using the adjusted series for settlement gets you a
+              wrong answer that nobody can reconcile with the paperwork.
+          cn:
+            >
+              用原始数。房租、按营业额算的销售提成、跟流水挂钩的加盟费——条款里写的是哪个数，
+              就得用哪个数，而那个数一定是账本上的数。季调指数是对「如果没有季节规律，
+              这个月大概什么样」的估计，它永远不会出现在发票上。拿季调数去结算，
+              得到的答案跟单据对不上，谁也解释不清。
+        confidence: 10
+        reference:
+          - docs/2-market-research/12-seasonal-vs-nsa/cn.md
+      - id: which-one-for-a-trend-line
+        question:
+          en: "Which one should the trend line on my chart use?"
+          cn: 图上那条趋势线该用哪个数？
+        answer:
+          en:
+            >
+              The adjusted one. On the unadjusted EU retail series, every December peak and
+              every following January trough is an artefact: those two points swing by about
+              28 percentage points of seasonal factor every single year, so the unadjusted
+              line looks like a heartbeat that never shows the real turning points. Strip the
+              season out and the underlying direction becomes visible. Ask what the line is
+              for: "is the business improving" takes the adjusted series, "how much did we
+              sell" takes the unadjusted one.
+          cn:
+            >
+              用季调数。在欧盟零售业的原始序列上，每个 12 月的高点和次年 1 月的低点都是假的：
+              这两个月之间的季节因子每年差约 28 个百分点，原始曲线看着像心电图，真实的拐点
+              根本看不见。把季节剥掉，方向才浮出来。先问这条线要回答什么：「生意在变好还是
+              变坏」用季调，「这个月卖了多少」用原始。
+        confidence: 9
+        reference:
+          - docs/2-market-research/12-seasonal-vs-nsa/cn.md
+      - id: when-does-mixing-them-flip-a-conclusion
+        question:
+          en: "Can using the wrong one actually reverse the conclusion?"
+          cn: 用错口径会不会把结论说反？
+        answer:
+          en:
+            >
+              Yes, and it does so with the same month and the same business. EU retail turnover
+              in December 2025 was up 12.8 percent on the unadjusted series and up 0.4 percent
+              on the adjusted one. The first number supports a headline about booming demand;
+              it is wrong, because Christmas lifts retail by about that much every year.
+              January 2025 went the other way: minus 20.5 percent unadjusted against plus 0.1
+              percent adjusted, so "retail collapsed" and "nothing happened" describe the same
+              month. Putting both lines on one chart compounds it: the unadjusted series has a
+              standard deviation more than ten times the adjusted one, and a reader concludes
+              the industry is wildly volatile when it is nearly flat all year.
+          cn:
+            >
+              会，而且用的是同一个月、同一门生意。欧盟零售业 2025 年 12 月原始环比 **+12.8%**，
+              季调环比 **+0.4%**。第一个数能撑起「需求强劲」的标题，这个标题是错的，
+              因为圣诞季每年都把零售抬高这么多。2025 年 1 月反过来：原始 **−20.5%**，
+              季调 **+0.1%**，「零售崩塌」和「什么都没发生」说的是同一个月。
+              把两条线放在一张图上更糟：原始环比的标准差是季调口径的十几倍，
+              读者会以为这行业在剧烈波动，而它一整年稳得像直线。
+        confidence: 10
+        reference:
+          - docs/2-market-research/12-seasonal-vs-nsa/cn.md
+  - name:
+      en: year on year versus month on month
+      cn: 同比环比
+    qa:
+      - id: why-yoy-is-insensitive-to-seasonality
+        question:
+          en: "Why does the year-on-year rate barely change between the two series?"
+          cn: 为什么同比在两个口径下几乎一样？
+        answer:
+          en:
+            >
+              Because the seasonal factor cancels. Year on year compares this December with
+              last December, and both are peaks, so dividing one by the other divides by a
+              factor of roughly one. Across January to November 2025 the largest gap between
+              the unadjusted and adjusted year-on-year rates for EU retail was 0.1 percentage
+              point: January 3.5 against 3.5, June 4.6 against 4.7, August 2.8 against 2.9.
+              That is why year-on-year figures are safe to quote from the unadjusted series.
+          cn:
+            >
+              因为季节因子自己抵消了。同比拿今年 12 月对去年 12 月，两个都是旺季，
+              一除就等于除以约等于 1 的东西。欧盟零售业 2025 年 1 月到 11 月，
+              原始同比和季调同比最大的一次差异是 0.1 个百分点：1 月 3.5% 对 3.5%，
+              6 月 4.6% 对 4.7%，8 月 2.8% 对 2.9%。这就是同比可以直接引用原始数的原因。
+        confidence: 10
+        reference:
+          - docs/2-market-research/12-seasonal-vs-nsa/cn.md
+      - id: why-mom-must-be-adjusted
+        question:
+          en: "Why does month-on-month have to use the adjusted series?"
+          cn: 为什么环比必须用季调数？
+        answer:
+          en:
+            >
+              Because the two months being compared have different seasonal factors, and the
+              difference is huge. December and January differ by about 28 percentage points
+              of seasonal factor in EU retail. Dividing December by November therefore loads
+              the entire holiday season into the answer. On the adjusted series the same
+              comparison gives plus 0.4 percent for December 2025 and plus 0.1 percent for
+              January 2025, against minus 20.5 percent on the unadjusted one for January.
+              Month on month measures change between adjacent months, so the season has to
+              come out first.
+          cn:
+            >
+              因为被比较的两个月季节因子不一样，而且差得很大。欧盟零售业 12 月和 1 月的季节因子
+              差约 28 个百分点，拿 12 月除 11 月，整个圣诞季就被塞进了答案里。季调口径下，
+              2025 年 12 月环比 **+0.4%**、1 月环比 **+0.1%**，而原始口径下 1 月环比是
+              **−20.5%**。环比量的是相邻两个月之间的变化，所以季节必须先拿掉。
+        confidence: 10
+        reference:
+          - docs/2-market-research/12-seasonal-vs-nsa/cn.md
+      - id: is-a-negative-adjusted-month-always-bad-news
+        question:
+          en: "Does a negative month-on-month rate on the adjusted series mean something went wrong?"
+          cn: 季调环比转负是不是就说明出问题了？
+        answer:
+          en:
+            >
+              Not by itself. The adjusted rate compares this month's seasonal norm with last
+              month's seasonal norm, so a December rate already assumes December sits at its
+              usual high. A small negative reading means December came in a little below the
+              norm that November implied, which might be a softer promotional push or
+              purchases pulled forward into November. The unadjusted counterpart of minus
+              20.5 percent says nothing beyond "Christmas is over". Watch for a base effect
+              before reading anything into either rate: if the same month last year was
+              unusually high or unusually low, the year-on-year comparison is distorted too.
+          cn:
+            >
+              单看一个数不能下结论。季调环比比的是这个月的常态跟上个月的常态，
+              所以 12 月的环比本来就隐含了 12 月该有的高位。轻微转负，意思是 12 月比 11 月
+              推算的常态低了一点，可能是促销力度不够，或者采购提前挪到了 11 月。
+              原始口径那个 −20.5% 只说明「圣诞过完了」。看任何一个数之前先查基数效应：
+              去年同月本身异常高或异常低时，同比也会被扭曲。
+        confidence: 8
+        reference:
+          - docs/2-market-research/12-seasonal-vs-nsa/cn.md

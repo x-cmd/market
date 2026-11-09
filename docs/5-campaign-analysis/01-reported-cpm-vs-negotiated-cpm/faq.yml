@@ -1,0 +1,263 @@
+id: x-market-5-campaign-analysis-01-reported-cpm-vs-negotiated-cpm
+
+data:
+  - name:
+      en: why the two CPMs differ
+      cn: 两个 CPM 为什么不一样
+    qa:
+      - id: same-money-different-denominator
+        question:
+          en: "The report says CPM 45, I negotiated 60. Same channel, same month, same budget. Where does the gap come from?"
+          cn: "报表说 CPM 45，我谈到 60。同一个渠道、同一个月、同一笔预算，差在哪儿？"
+        answer:
+          en:
+            >
+              From the denominator, not from the unit price. The report counts paid
+              impressions — the ad was delivered and began to render. The negotiated rate
+              counts billable viewable impressions, where the ad met the Media Rating
+              Council standard: at least 50% of its pixels in the viewable space of an
+              in-focus tab, held for at least one continuous second (two seconds for
+              video). On the worked example on this page, 1,000,000 against a report CPM of
+              45 implies 22,222,222 delivered impressions; against a negotiated CPM of 60
+              it implies 16,666,667 billable viewable ones. The ratio between them, 75%,
+              is the viewability rate. Nobody was overcharged and nothing was withheld —
+              the same delivery simply falls on different sides of two counting rules.
+          cn:
+            >
+              差在分母，不在单价。报表按付费曝光算——广告送出去、开始渲染就算一次。
+              谈下来的价按可计费可见曝光算，要满足 Media Rating Council 的标准：至少一半
+              像素在聚焦标签页的可视图区域里，连续停留至少 1 秒（视频 2 秒）。这一页的
+              算例里，100 万块按报表 CPM 45 反推是 22,222,222 次投放曝光，按议价 CPM 60
+              反推是 16,666,667 次可计费可见曝光。两者相除 75%，就是这个渠道的可见率。
+              没人多收钱，也没有谁藏量，同一批曝光在两套计数规则下的正常落点差就是那 15 块。
+        confidence: 9
+        reference:
+          - docs/5-campaign-analysis/01-reported-cpm-vs-negotiated-cpm/cn.md
+      - id: is-the-gap-a-hidden-fee
+        question:
+          en: "Is the 15-yuan gap just a fee the channel is hiding from me?"
+          cn: "那 15 块的差价，是渠道藏起来的一笔费用吗？"
+        answer:
+          en:
+            >
+              Not in the example on this page. If you spend 1,000,000 on 16,666,667 billable
+              viewable impressions, then valued at the report's 45-yuan rate those impressions
+              are worth 750,000. The 250,000 difference is the value of the 25% of delivery
+              that never met the viewability threshold. That is not a margin the channel
+              pocketed on the same impressions; it is a difference in what the two numbers
+              are measuring. It becomes a real cost only if something was sold to you as
+              viewable and was not — which is a separate question, and one the MRC
+              discrepancy-resolution process exists to answer.
+          cn:
+            >
+              在这一页的算例里不是。你花 100 万买到 16,666,667 次可计费可见曝光，这批曝光
+              按报表的 45 元口径只值 75 万。差的 25 万，是那 25% 没有达到可见门槛的交付
+              的价值。这不是渠道在同一批曝光上多赚的毛利，是两个数在量不同的东西。只有当
+              对方按「可见」卖给你、交付却没到可见时，那 25 万才变成实打实的亏空——那是另一
+              个问题，而 MRC 的差异处理流程就是为这个问题准备的。
+        confidence: 8
+        reference:
+          - docs/5-campaign-analysis/01-reported-cpm-vs-negotiated-cpm/cn.md
+      - id: what-counts-as-a-viewable-impression
+        question:
+          en: "What exactly counts as a billable viewable impression?"
+          cn: "什么才算一次可计费可见曝光？"
+        answer:
+          en:
+            >
+              Two conditions, and both have to hold. First, at least 50% of the ad's pixels
+              must be inside the viewable space of the browser page, on an in-focus tab.
+              Second, the time that pixel condition holds must be at least one continuous
+              second, measured after the ad rendered. The order matters: the clock on the
+              time requirement starts only once the 50% pixel threshold has been met. Video
+              has the same 50% pixel test but the time requirement is two continuous seconds
+              of playback, not necessarily the first two seconds of the ad. The MRC
+              guidelines also allow a legitimate click to substitute for the pixel and time
+              criteria, but they require such counts to be segregated in reporting, so you
+              can ask for the two buckets separately.
+          cn:
+            >
+              两个条件，缺一不可。第一，广告至少 50% 的像素处在浏览器页面的可视图区域里、
+              并且所在标签页处于聚焦状态。第二，达到这个像素条件之后，要连续维持至少 1 秒，
+              从广告渲染完成之后开始算。顺序不能颠倒：秒表是在 50% 像素门槛达成的那一刻才
+              启动的。视频的像素门槛一样是 50%，时间门槛是连续播放 2 秒，而且不要求是视频
+              开头的 2 秒。MRC 的指引还允许用一次有效点击来替代像素和时间条件，但要求这类
+              计数单独分开报，所以你开口索要这两个分开的数是合理的。
+        confidence: 10
+        reference:
+          - docs/5-campaign-analysis/01-reported-cpm-vs-negotiated-cpm/cn.md
+  - name:
+      en: the three ways to count an impression
+      cn: 一次曝光的三种数法
+    qa:
+      - id: three-cpm-calibers
+        question:
+          en: "You say there are three CPM calibers. Which three?"
+          cn: "你说 CPM 有三个口径，哪三个？"
+        answer:
+          en:
+            >
+              Counting by delivered impression, counting by viewable impression, and counting
+              by actual visible duration. Delivered counts the ad once it has been served and
+              begun to render, with no question of whether anyone saw it — this is the default
+              billing denominator. Viewable applies the MRC thresholds. Duration weighting,
+              defined in the IAB/MRC Retail Media Measurement Guidelines, is the share of
+              creative length actually watched across all billable viewable impressions, so
+              its denominator is seconds rather than impressions. The same guidelines state
+              plainly that duration weighting is not a measure of advertising effectiveness
+              and is not recommended for standalone use — which is exactly why a "duration
+              CPM" cannot be compared against another channel's CPM.
+          cn:
+            >
+              按投放曝光算、按可见曝光算、按实际可见时长算。投放曝光是广告送出去、开始
+              渲染就算，不问有没有人看见，这是默认的计费分母。可见曝光套用 MRC 的门槛。
+              时长加权在 IAB/MRC《零售媒体衡量指引》里的定义是：所有可计费可见曝光中实际
+              观看的时长占创意总长的比例，它的分母是秒，不是次。该指引同时写明，时长加权
+              不是广告效果的度量，不建议单独使用——这正是「时长加权 CPM」不能拿去跟别的
+              渠道 CPM 横向比的原因。
+        confidence: 9
+        reference:
+          - docs/5-campaign-analysis/01-reported-cpm-vs-negotiated-cpm/cn.md
+      - id: duration-weighted-cpm-92
+        question:
+          en: "How do you get to 92 yuan on the duration-weighted line? I do not recognise that number."
+          cn: "时长加权那一栏的 92 块是怎么算出来的？这个数我没见过。"
+        answer:
+          en:
+            >
+              It is derived from the official worked example in the IAB/MRC Attention
+              Measurement Guidelines (November 2025), which is the source of the whole
+              100,000-impression funnel on this page. In that example the average visible
+              time is 5.2 seconds per impression and the visible time rate is 65.4% of ad
+              duration; with a 15-second creative, the time actually watched is roughly a
+              third of the time delivered. Taking the report CPM of 45 and dividing by that
+              one-third gives about 92. Read the 92 as a demonstration of how far the number
+              moves once you change denominator, not as a benchmark to plan against: the
+              guidelines explicitly warn against using duration weighting on its own.
+          cn:
+            >
+              它是从 IAB/MRC《注意力衡量指引》2025 年 11 月版的官方算例推出来的，这一页那条
+              10 万次曝光的漏斗图用的也是同一个算例。算例里平均可见时长是每次曝光 5.2 秒，
+              可见时长占创意时长的比例是 65.4%；创意按 15 秒算，真正被看的时间大约是交付
+              时长的三分之一。用报表的 45 块除以这个三分之一，就得到 92 左右。请把 92 读成
+              「换一个分母数能偏多远」的演示，而不是拿去规划的基准——指引里明确写了时长加权
+              不建议单独使用。
+        confidence: 8
+        reference:
+          - docs/5-campaign-analysis/01-reported-cpm-vs-negotiated-cpm/cn.md
+      - id: is-cpm-yoy-comparable
+        question:
+          en: "I was told CPM rose 8.2% year over year. Is that a fair thing to report upward?"
+          cn: "有人告诉我 CPM 同比涨了 8.2%，这个数往上汇报合适吗？"
+        answer:
+          en:
+            >
+              Not without three qualifiers, because "CPM" is not one number. In the same
+              DataBeat reporting month, display CPM was up 8.2% year over year while video
+              CPM was down 20.1%. One month earlier the same two measures ran in opposite
+              directions again, and a year before that both were down (display -29.5%,
+              video -19.4%). So the figure is only meaningful once you attach the format, the
+              inventory type, the measurement window and the denominator. Reporting "CPM up
+              8.2%" to someone who assumes you mean video is not a rounding error — it
+              reverses the sign of the news you are delivering.
+          cn:
+            >
+              不加三个限定词就不能这么报，因为 CPM 本来不是一个数。同一个 DataBeat 统计月份
+              里，展示广告 CPM 同比涨 8.2%，视频 CPM 同比跌 20.1%；往前一个月，这两个数又
+              往相反方向走；再往前一年，两个都在跌（展示 -29.5%，视频 -19.4%）。所以这个数
+              必须挂上图形、库存类型、统计窗口和分母口径才有意义。把「CPM 涨了 8.2%」报给
+              一个默认你指的是视频的人，不是四舍五入的误差，是把消息的正负号报反了。
+        confidence: 9
+        reference:
+          - docs/5-campaign-analysis/01-reported-cpm-vs-negotiated-cpm/cn.md
+  - name:
+      en: what to ask before you sign
+      cn: 签字之前要问清的事
+    qa:
+      - id: three-questions-to-ask
+        question:
+          en: "What are the three things I have to nail down before I sign?"
+          cn: "签字之前必须问清哪三样？"
+        answer:
+          en:
+            >
+              The denominator, where the discount sits, and whether the rebate is in the
+              price or on top of it. Denominator: which impression counts, and what
+              threshold defines billable viewability. Discount position: is the lower number
+              a reduced unit price, or the same unit price with a rebate settled later —
+              because a rebate you collect in arrears never shows up in the platform report,
+              so the report keeps showing the higher CPM indefinitely. Rebate structure:
+              money returned into your account is a different arrangement from money the
+              channel pays out from its own budget, and only the first one lowers your
+              effective unit price. Validity period belongs on the same list: many
+              quoted CPMs are locked to a quarter and re-auctioned at the end of it.
+          cn:
+            >
+              口径、折扣位置、返点性质。口径：算的是哪种曝光，可计费可见的门槛定在哪。
+              折扣位置：是单价真的降了，还是单价没动、返点以后再结——后一种钱没到手之前
+              报表上永远是那个高 CPM，你拿它跟同行比单价会一直吃亏。返点性质：退回到你
+              账户里的钱，和渠道从自己预算里另外付给你的钱，合同归属和税务处理都不同，
+              而且只有前一种会真的压低你的实际单价。有效期也要一起问，很多谈下来的 CPM
+              是锁一个季度的，季度末重新竞价。
+        confidence: 9
+        reference:
+          - docs/5-campaign-analysis/01-reported-cpm-vs-negotiated-cpm/cn.md
+      - id: report-counting-method
+        question:
+          en: "Is the channel's own report even allowed to count impressions the way it counts them?"
+          cn: "渠道自己的报表那样计数，合规吗？"
+        answer:
+          en:
+            >
+              Often not, and this is a second reason the report CPM looks better than the
+              negotiated CPM. MRC's Desktop Display Impression Measurement Guidelines require
+              ad counting to be client-initiated and to happen only after the ad has loaded
+              and at minimum begun to render; they explicitly reject server-initiated
+              counting at page-serve time, known as count on decision, because it is the
+              furthest point in the delivery process from the user actually seeing the ad.
+              Separately, MRC's invalid traffic addendum requires prefetch and prerendered
+              traffic to be excluded from gross impression counts, and 0x0 and 1x1 client-side
+              placements to be treated as invalid. A report that skips either step is
+              carrying a padded denominator, which shows up as a CPM that is too low.
+          cn:
+            >
+              常常不合规，这也是报表 CPM 比议价 CPM 好看的第二个原因。MRC 的《桌面展示广告
+              曝光衡量指引》要求计数必须由客户端发起，并且要在广告加载完成、至少开始渲染
+              之后才发生；它明确不接受在页面返回时就计数的方式，也就是业界说的 count on
+              decision，理由是那是整个交付链条上离用户真正看到广告最远的一个时点。另外，
+              MRC 的无效流量增补要求预取和预渲染流量不计入总曝光数，客户端 0×0 和 1×1
+              这类不可见广告位要按无效处理。报表里少做了任何一步，分母就是虚的，CPM 就
+              虚低。
+        confidence: 8
+        reference:
+          - docs/5-campaign-analysis/01-reported-cpm-vs-negotiated-cpm/cn.md
+      - id: reconciliation-process
+        question:
+          en: "The numbers do not reconcile. What is the actual process for fixing it?"
+          cn: "两边的数对不上，按流程到底该怎么处理？"
+        answer:
+          en:
+            >
+              There is a written procedure, and it is worth using instead of emailing.
+              Section 4.4.1 of MRC's Invalid Traffic Detection and Filtration Standards
+              Addendum requires vendors to maintain a formal reconciliation process between
+              requestor and vendor: the parties agree a response and resolution SLA
+              (the guidelines suggest 30 days), the initial response states action items and
+              milestones, and before any data is exchanged the measurement organisations run
+              a measurement or tag review to find out whether the instrumentation itself is
+              broken — and if it is, they must follow their own reissuance policies. If the
+              disagreement survives, it can be escalated to MRC on a voluntary, non-binding
+              basis for MRC to judge whether the difference comes from non-compliance or
+              merely from differing conventions. One percent of impressions recovered through
+              that process usually beats a couple of percent of negotiated discount.
+          cn:
+            >
+              有成文流程，值得走，比发邮件有用。MRC《无效流量检测与过滤标准增补》第 4.4.1 节
+              要求供应商建立一套正式的对账流程：双方商定一个响应和解决时限，指引建议 30 天；
+              首次回复要列出行动项和时间节点；在交换任何数据之前，先由衡量机构做一次标签
+              或埋点复核，确认是不是计数环节本身坏了——如果坏了，必须按各自的数据重发政策
+              处理。分歧仍在，可以自愿、非约束性地升级到 MRC，由它判断差异来自不合规还是
+              只是口径不一致。一轮核对拉回 1% 的曝光，通常比谈价谈下来的 2% 折扣更值钱。
+        confidence: 9
+        reference:
+          - docs/5-campaign-analysis/01-reported-cpm-vs-negotiated-cpm/cn.md

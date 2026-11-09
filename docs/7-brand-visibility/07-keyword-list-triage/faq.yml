@@ -1,0 +1,67 @@
+id: x-market-7-brand-visibility-07-keyword-list-triage
+
+data:
+  - name:
+      en: triaging a keyword list before it produces any numbers
+      cn: 排一张关键词表，再让它开始出数
+    qa:
+      - id: long-list-why-useless
+        question:
+          en: Why does a keyword list that keeps growing become useless?
+          cn: 词表为什么越加越长，反而越没用？
+        answer:
+          en: >
+            Because adding a keyword is free and removing one is not. Terms arrive from asking around, from reading the comments people leave, from copying a competitor's keyword list. Adding one takes seconds. Removing one means somebody has to explain why that term is no longer being looked at. On top of that, most of the added terms answer different questions. Some are brand terms (the consumer already knows you), some are category terms (the consumer does not know you yet), some are competitor terms (the consumer is comparing you against a rival), and some have nothing to do with the business at all. Sum those four kinds of counts together and divide by the total, and what you get is an average of four different things. It looks like an answer and says nothing. The page measured 42 real terms: the biggest (Adidas, 410,887 pageviews in H1 2026) and the smallest (Gym shoe, 33) differ by a factor of 12,000. One 300-row list, triaged down to 12, leaves 288 rows that are not a reserve. They are contamination.
+          cn: >
+            因为加词不要钱，删词要有人。词可以从问朋友、翻评论、抄竞品词表里来，加一条几秒钟。删一条要有人解释「为什么不看这个词」。更麻烦的是，加进来的词大部分答的不是同一个问题。有人搜品牌名，有人搜品类，有人搜竞品名，还有人搜一句跟跑鞋生意毫无关系的话。这四种词的次数加在一起除以总量，得到的是四种东西的平均值。**看着像答案，其实什么都没说。** 这一页实测了 42 个词：最大的 Adidas 在 2026 上半年有 410,887 次浏览，最小的 Gym shoe 只有 33 次，**中间隔着一万两千倍**。一张 300 行的表排完剩 12 行，剩下 288 行不是「备查」，是污染。
+        confidence: 9
+        reference:
+          - docs/7-brand-visibility/07-keyword-list-triage/cn.md
+      - id: three-triage-tests
+        question:
+          en: What exactly do you check when you triage a keyword list?
+          cn: 排一张词表，具体看哪几样？
+        answer:
+          en: >
+            Three labels, not a score. First, who is the term asking about: brand, category or competitor. These three answer different questions and have to be reported separately, because a brand term rising means awareness is rising, a category term rising means the category is expanding, and a competitor term rising means you are being used as a reference point. Merge them into one "total search volume" number and you cannot tell which one moved. Second, whether the term can tell you apart from everybody else. Priority does not follow search volume. A term with ten thousand searches where every brand ranks first tells you nothing about you; a term with three hundred searches where you rank second tells you a lot. Third, whether the term is still alive, in two senses: is anyone still searching it, and does it still mean what it meant. The Marathon term ran 112,501 pageviews in April 2026 and fell to 64,266 in May, a 42% drop in one month, so an unlabelled seasonal term makes every month wrong.
+          cn: >
+            是贴三个标签，不是打分。第一，**这个词是问谁的**：品牌词、品类词还是竞品词。这三种回答的是不同的问题，得分开报。品牌词涨说明认知在涨，品类词涨说明品类在扩张，竞品词涨说明你被拿来当参照物。混成一个「总搜索量」，你根本不知道是哪一种在涨。第二，**这个词能不能区分出你**。优先级不按搜索量排。一个一万次但所有品牌都排第一的词，说明不了你是谁。一个三百次但你排第二的词，能。第三，**这个词还活着吗**，有两层：还有没有人搜，以及搜出来的结果还是不是那个意思。Marathon 这个词 2026 年 4 月有 112,501 次浏览，5 月掉到 64,266 次，一个月差 42%。**季节词不标出来，每个月都是错的。**
+        confidence: 9
+        reference:
+          - docs/7-brand-visibility/07-keyword-list-triage/cn.md
+      - id: volume-not-usefulness
+        question:
+          en: Does the biggest keyword on the list belong at the top of it?
+          cn: 词表里量最大的那个词，应该排在最前面吗？
+        answer:
+          en: >
+            No, and on the measured data the two rankings contradict each other. Brand terms are 4 of the 42 measured terms, 9.5% of the rows, but only 1.8% of total volume. Competitor terms are 16 rows, 38.1% of the rows, and 57.3% of the volume. Sort the three buckets by volume and you start with competitor terms. Sort them by row count and you start with category terms. Only one ordering is right, and it starts with brand terms, because they have the least volume and they are the only part you are directly responsible for. Volume measures how many people typed something. It says nothing about whether the result they got was you. A term where you sit third and the top two are not you separates you from everybody else, and a term where everyone sits first does not, no matter how big it is.
+          cn: >
+            不该。在实测数据上，这两种排法是打架的。品牌词在这 42 个词里只有 4 个，占行数 9.5%，但只占总量的 1.8%。竞品词 16 个，占行数 38.1%，占总量 57.3%。**按量排，你会先做竞品词。按行数排，你会先做品类词。只有一种排法是对的：先做品牌词。** 因为品牌词的量最小，可它是你唯一能直接负责的那部分。量衡量的是有多少人输入了某个东西，它不告诉你他搜完之后看到的是不是你。一个你排第三、前两名都不是你的词，能把你跟别人区分开。一个大家都在第一的词，量再大也区分不了。
+        confidence: 9
+        reference:
+          - docs/7-brand-visibility/07-keyword-list-triage/cn.md
+      - id: term-volume-jumped-33x
+        question:
+          en: How fast can the volume of a single brand term change?
+          cn: 一个品牌词的量，能在多短时间里变掉？
+        answer:
+          en: >
+            Very fast. The Hoka term on English Wikipedia ran 693 pageviews in June 2025 and 23,142 in June 2026, a 33-fold rise in a year. The daily series shows where it turned: 16 views on 2026-05-22, 73 on 05-23, 260 on 05-24, 350 on 05-26, 523 on 05-27, and 797 by 05-28, after which it held between 600 and 900 a day for the rest of the window. That is not a seasonal term and not a one-day news spike, because the elevated level persists. It is the term itself changing meaning, from a thick-soled running shoe to a mass-market brand. A keyword list sorted three months earlier would not contain a row for it, because at the time it was a 25-views-a-day term. That is the whole argument for re-checking the list every period rather than treating it as a fixed asset.
+          cn: >
+            很快。Hoka 这个词在英文维基百科上，2025 年 6 月整月 693 次浏览，2026 年 6 月整月 23,142 次，**一年涨了 33 倍**。日粒度能看出拐点在哪：2026 年 5 月 22 日 16 次，5 月 23 日 73 次，5 月 24 日 260 次，5 月 26 日 350 次，5 月 27 日 523 次，5 月 28 日就 797 次，之后整个窗口都维持在每天 600 到 900 次。**这不是季节词，也不是一天的新闻尖峰，因为高位持续下来了。** 是这个词本身的意思变了，从一双厚底跑鞋变成一个大众品牌。三个月前排的词表里根本不会有它这一行，那时候它一天才 25 次。这就是为什么词表要每期重核，不能当成一份固定资产。
+        confidence: 9
+        reference:
+          - docs/7-brand-visibility/07-keyword-list-triage/cn.md
+      - id: triage-time-vs-adding-time
+        question:
+          en: How much longer does sorting a keyword list take than filling one in?
+          cn: 排一张词表，比往里加词慢多少？
+        answer:
+          en: >
+            A lot longer, and the asymmetry is the point. Adding terms is a bulk import from three sources, about half an hour for 300 terms. Sorting them takes three things per term: assigning a type (about a minute), checking whether the term can tell you apart from competitors (about a minute), and checking whether it is still alive (about two minutes). That is four minutes a term, so 300 terms is 20 hours. What those 20 hours buy is concrete. The 241 terms cut at the "can it separate you from the field" stage were each contributing to a share number that was wrong. With 288 of 300 rows unusable, a reported "34% of category mentions" is contaminated in both numerator and denominator, and re-cutting the list moves that number. The money makes the same point. Hoka brand net sales grew 15.9% in FY2026, then 7.7% in FY2027 Q1, then 6.8% in FY2027 Q2. A list that still carries the old shape of that brand term cannot show you that deceleration.
+          cn: >
+            慢得多，而这个不对称正是重点。加词是三个来源批量导入，300 个词大约半小时。排词要给每个词做三件事：定类型（约 1 分钟）、核它能不能区分出你（约 1 分钟）、核它还活着吗（约 2 分钟）。**每词 4 分钟，300 个词就是 20 小时。** 这 20 小时买到的东西很具体：在「能不能区分出你」这一步砍掉的 241 个词，每一个都在往一个错的份额数里贡献分子和分母。300 行里有 288 行不该留，「我这个品类占 34% 提及」这个数就是被污染的，重排之后那个数会变。钱把同一件事讲得更清楚：Hoka 品牌净销售额 FY2026 增长 15.9%，FY2027 第一季度 7.7%，第二季度 6.8%。一份还留着这个品牌词旧形状的词表，看不出这个减速。
+        confidence: 9
+        reference:
+          - docs/7-brand-visibility/07-keyword-list-triage/cn.md

@@ -1,0 +1,347 @@
+id: x-market-6-budget-optimization-03-after-the-shift-what-goes-wrong
+
+data:
+  - name:
+      en: why the result did not improve
+      cn: 钱挪了，为什么结果没变好
+    qa:
+      - id: budget-shift-no-change
+        question:
+          en: "I moved money between channels and nothing changed. What is going on?"
+          cn: 挪完预算结果没变好，是哪里出了问题？
+        answer:
+          en:
+            >
+              Three different things can produce the same symptom, and no dashboard tells them
+              apart. The saturation point may have moved: the channel you funded was closer to
+              its ceiling than you thought, so the extra money bought the same people at a
+              higher price. The effect may not have matured: ad effects arrive over days or
+              weeks depending on the channel, so a two-week read is early for anything with a
+              long decay tail. Or there may have been no room at all, because a budget shift
+              moves money between channels without changing the total. The two checks on this
+              page separate the three.
+          cn:
+            >
+              有三件不同的事会产生同一个症状，而报表分不出来。饱和点可能变了：你加钱的那个渠道
+              比你想的更接近天花板，多出来的钱是在更高的价格上买同一批人。效果可能还没成熟：
+              广告效果按渠道不同，要几天甚至几周才陆续到账，对衰减尾巴长的渠道，两周就读早了。
+              也可能本来就没空间——挪预算只改钱在渠道之间的分布，总量没变。这一页给的两条检查，
+              就是用来把这三种分开的。
+        confidence: 9
+        reference:
+          - docs/6-budget-optimization/03-after-the-shift-what-goes-wrong/cn.md
+      - id: watch-the-ratio-not-revenue
+        question:
+          en: "What number should I look at after a budget shift instead of total sales?"
+          cn: 挪完预算该看哪个数，而不是看总销售额？
+        answer:
+          en:
+            >
+              The ratio of ad spend to revenue, not revenue itself. Revenue moves with the
+              market, so it cannot separate your change from a change in demand. Wayfair is
+              the example: between 2016 and 2020 ad spend rose from 409 million to 1.41
+              billion dollars while revenue rose from 3.38 to 14.15 billion, and the ad ratio
+              fell from 12.1 percent to 10.0 percent, which is what good scaling looks like.
+              From 2021 to 2024 ad spend was flat near 1.4 billion while revenue fell from
+              13.71 to 11.85 billion and the ratio climbed back to 12.4 percent. That climb
+              is the signal: each ad dollar was buying less revenue than it had.
+          cn:
+            >
+              看广告费占营收的比值，不看营收本身。营收跟着大盘走，分不清是投放变了还是需求变了。
+              Wayfair 就是例子：2016 到 2020 年广告费从 4.09 亿涨到 14.12 亿，营收从 33.80 亿涨到
+              141.45 亿，广告费率从 12.1% 降到 10.0%，这是投放生效的样子。2021 到 2024 年广告费
+              卡在 14 亿不动，营收从 137.08 亿掉到 118.51 亿，费率涨回 12.42%。这个涨幅就是信号：
+              每块广告费换回的营收比前几年少了。
+        confidence: 8
+        reference:
+          - docs/6-budget-optimization/03-after-the-shift-what-goes-wrong/cn.md
+      - id: not-just-the-advertising-account
+        question:
+          en: "Can I read the fall in Wayfair's revenue as the advertising failing?"
+          cn: Wayfair 那段营收下滑，能直接读成广告没起作用吗？
+        answer:
+          en:
+            >
+              No, and this distinction matters. Between 2021 and 2024 the US furniture industry
+              was contracting, with inflation squeezing discretionary spending, so a large part
+              of the revenue decline was not an advertising story. What the ad ratio still
+              tells you, because it divides out the market component, is that advertising
+              efficiency got worse over those years. A ratio is a weaker claim than a
+              causal one and it is the claim the data actually supports.
+          cn:
+            >
+              不能，这个区分要紧。2021 到 2024 年美国家具行业整体在下行，通胀压着可选消费，
+              营收下滑里有很大一块不是投放的账。广告费率还是能说明问题，因为它把大盘那部分除掉了：
+              那几年广告效率确实变差了。比率是个比因果更弱的主张，但它是这份数据真正支持的
+              那个主张。
+        confidence: 8
+        reference:
+          - docs/6-budget-optimization/03-after-the-shift-what-goes-wrong/cn.md
+
+  - name:
+      en: the saturation point does not move with you
+      cn: 饱和点没跟着变
+    qa:
+      - id: what-raises-the-saturation-point
+        question:
+          en: "What makes the saturation point move?"
+          cn: 是什么让饱和点移动了？
+        answer:
+          en:
+            >
+              Two things, and neither shows up in your own report. First, the auction: your
+              competitors bid on the same inventory, so when you add budget the clearing price
+              rises and you buy less than the old price implied. You have raised the saturation
+              point yourself, and the evidence is in the auction logs, not in the campaign
+              table. Second, internal cannibalisation: brand keyword search and non-brand
+              keyword search compete for the same people, so moving money from one to the other
+              produces less net volume than the two channel numbers suggest.
+          cn:
+            >
+              两件事，都不在你自己的报表里。第一是竞价：竞争对手抢同一批版位，你加预算，成交价
+              就往上抬，买到的量比按老价格算的少。饱和点是你自己抬上去的，证据在竞价日志里，
+              不在投放报表里。第二是内部抢量：品牌词搜索和非品牌词搜索抢同一批人，把钱从一边挪
+              到另一边，两个渠道的数字加起来也不是净增量。
+        confidence: 9
+        reference:
+          - docs/6-budget-optimization/03-after-the-shift-what-goes-wrong/cn.md
+      - id: ninety-percent-needs-nine-times
+        question:
+          en: "How much more than the saturation point does it take to reach most of the effect?"
+          cn: 要投到饱和点的几倍，才能拿到大部分效果？
+        answer:
+          en:
+            >
+              On a Hill curve, reaching 90 percent of the ceiling takes 9^(1/alpha) times the
+              saturation point, so the multiple depends entirely on alpha. With alpha = 1 you
+              need 9 times, with alpha = 2 you need 3 times, with alpha = 3 you need 2.1 times.
+              Alpha describes how the curve was built: a channel ramped up gradually tends to be
+              steep, a channel that was pushed hard at once tends to be flat. Since alpha and k
+              are estimated together and alpha is the harder of the two to pin down, a
+              re-estimated k is no more trustworthy than the old one.
+          cn:
+            >
+              在 Hill 曲线上，拿到 90% 天花板要投到饱和点的 9^(1/α) 倍，这个倍数完全跟着 α 走。
+              α=1 要 9 倍，α=2 要 3 倍，α=3 要 2.1 倍。α 描述的是曲线怎么长出来的：慢慢加投的渠道
+              形状陡，一口气砸上去的形状平。α 和 k 是一起估出来的，α 还是里头更难定的那个，
+              所以重新估出来的 k 并不比旧的更可信。
+        confidence: 9
+        reference:
+          - docs/6-budget-optimization/03-after-the-shift-what-goes-wrong/cn.md
+      - id: how-to-test-the-saturation-point
+        question:
+          en: "How do I check whether the saturation point moved after shifting budget?"
+          cn: 挪完预算，怎么查饱和点有没有被抬高？
+        answer:
+          en:
+            >
+              Do not re-estimate the saturation point. Add a small increment, 5 to 10 percent
+              of the channel's new budget, and watch what you get. If volume rises at roughly
+              the old rate, the ceiling has not moved and the shift was sound. If volume barely
+              moves, the channel is already full and further money only bids up the price.
+              Also check the clearing price on the same keyword and audience: a price above
+              what you paid before the shift tells you the same thing directly.
+          cn:
+            >
+              别去重新估饱和点。加一小笔（该渠道新预算的 5% 到 10%），看买到的量涨不涨。涨得跟
+              原来差不多，说明天花板没动，挪对了；几乎不涨，说明这个渠道已经满了，再加钱只是抬价。
+              顺便看一眼同一关键词、同一受众的成交价：比你挪之前高，说明的是同一件事。
+        confidence: 9
+        reference:
+          - docs/6-budget-optimization/03-after-the-shift-what-goes-wrong/cn.md
+
+  - name:
+      en: not enough time
+      cn: 时间没给够
+    qa:
+      - id: how-long-to-wait
+        question:
+          en: "How long should I wait before judging a budget shift?"
+          cn: 挪完预算要等多久再判断？
+        answer:
+          en:
+            >
+              As long as the slowest-decaying channel you funded into needs. Standard
+              adstock priors are 0.1 to 0.3 for search, about 0.7 for social, and 0.7 to 0.9 for
+              television, where lambda is the share of an effect that carries over to the next
+              day. In practice search clears in about two days, social needs a week, and
+              television with lambda = 0.9 needs more than three weeks. Judge the observation
+              window by the channel you added money to, not by the channel you took it from.
+          cn:
+            >
+              等到你在挪进去的那个渠道衰减完。通行的 adstock 先验是：搜索 0.1 到 0.3，社交约 0.7，
+              电视 0.7 到 0.9，λ 是当天效果留到第二天的比例。实际时间账：搜索两天，社交一周，
+              电视 λ=0.9 要三个多星期。观察期按你加钱的那个渠道定，不按你减钱的那个渠道定。
+        confidence: 9
+        reference:
+          - docs/6-budget-optimization/03-after-the-shift-what-goes-wrong/cn.md
+      - id: the-early-report-punishes-both-sides
+        question:
+          en: "Why does an early report look bad on both the channel you cut and the one you funded?"
+          cn: 为什么早读的报表上，减钱的和加钱的渠道看起来都差？
+        answer:
+          en:
+            >
+              Because the effect you removed is gone and the effect you added has not arrived
+              yet. Search effects land the same day, so cutting search spend shows up in the
+              report immediately. A social or television campaign funded on the same day is
+              still building its effect, and it will not show up for a week or more. You read
+              two bad numbers and conclude the shift failed, when the only thing that went wrong
+              was the date you looked. This is the single most common way a correct shift gets
+              reverted.
+          cn:
+            >
+              因为减掉的效果已经掉了，加上的效果还没到。搜索的效果当天就走完，搜索减钱，第三天
+              报表立刻就变差；同一天加钱的社交或电视，效果还在堆，要一周以后才看得见。你读到两个
+              坏数字，就得出「挪错了」的结论，其实错的只是你看的那一天。正确的挪动被退回去，
+              最常见的原因就是这个。
+        confidence: 9
+        reference:
+          - docs/6-budget-optimization/03-after-the-shift-what-goes-wrong/cn.md
+      - id: seasonality-hides-in-the-noise
+        question:
+          en: "Does the calendar season matter when comparing before and after?"
+          cn: 比较挪动前后的时候，日历季节有影响吗？
+        answer:
+          en:
+            >
+              Yes. Demand moves with the calendar on its own. US furniture and home
+              furnishings store volumes, indexed to the 2019 monthly average, ran from 107.1 in
+              January 2023 down to 92.4 in October, a 16 percent spread, before turning back up
+              in November. A two-week window that straddles that turn compares two different
+              seasons. Take equally long windows at the same point in the cycle on each side
+              of the shift, otherwise a seasonal swing reads as an effect of the reallocation.
+          cn:
+            >
+              有。需求自己会按日历走。美国家具与家居用品专卖店的销量，以 2019 年月均为 100，
+              2023 年一月是 107.1，十月是 92.4，差 16%，十一月再回头。横跨这个转折的两周对比，
+              是在比两个不同的季节。挪动前后各取一段同样长、季节位置相同的时间来比，
+              否则季节波动会被读成挪钱的效果。
+        confidence: 8
+        reference:
+          - docs/6-budget-optimization/03-after-the-shift-what-goes-wrong/cn.md
+
+  - name:
+      en: the total did not change, only the structure did
+      cn: 一次挪钱，总量没变、只有结构变了
+    qa:
+      - id: a-shift-is-not-more-money
+        question:
+          en: "What does a budget shift actually change?"
+          cn: 挪预算到底改变的是什么？
+        answer:
+          en:
+            >
+              Only the distribution, never the total. Taking 40 thousand a day out of search
+              and putting 40 thousand a day into social leaves daily spend at 80 thousand. So
+              any improvement in total return has to come from the structure being genuinely
+              better, not from more money being spent. If total return does not rise, either
+              the structure did not actually improve or something else took the gain away.
+              The tools on this page are what tell you which.
+          cn:
+            >
+              只改分布，不改总量。从搜索挪四万一天到社交，每天的总花费还是八万。所以总回报要涨，
+              只能来自结构真的变好，不是因为多花了钱。总回报没涨，要么是结构其实没变好，
+              要么是变好的那部分被别的东西吃掉了。这一页的两个检查，就是用来分这两种的。
+        confidence: 9
+        reference:
+          - docs/6-budget-optimization/03-after-the-shift-what-goes-wrong/cn.md
+      - id: average-roi-hides-the-end-of-a-channel
+        question:
+          en: "Why is average ROI the wrong number to judge a channel by?"
+          cn: 用平均 ROI 判断一个渠道，为什么会看错？
+        answer:
+          en:
+            >
+              Because average ROI is cumulative: it counts the return earned on all the money
+              already in that channel, so early profitable bands subsidise the late ones. In a
+              worked example with 500 thousand split into five bands of 100 thousand, returning
+              480, 310, 200, 110 and 40 thousand, the average ROI is still 2.28 in the last
+              band, which looks healthy. The marginal ROI of that band is 0.4: the last 100
+              thousand bought 40 thousand back. Average ROI tells you the channel was once
+              profitable, marginal ROI tells you what the next unit buys.
+          cn:
+            >
+              因为平均 ROI 是累计的，把已经投进去的钱挣的回报也算在分子里，前几档赚钱替后面的档次
+              垫着。一个 50 万分五档各 10 万、换回 48、31、20、11、4 万的算例里，最后一档的平均 ROI
+              还有 2.28，看着这个渠道很赚。但最后一档的边际 ROI 是 0.4：那 10 万只换回 4 万。
+              平均 ROI 告诉你这个渠道曾经赚钱，边际 ROI 告诉你下一块钱能换回什么。
+        confidence: 9
+        reference:
+          - docs/6-budget-optimization/03-after-the-shift-what-goes-wrong/cn.md
+      - id: shifting-channels-shifts-attribution-too
+        question:
+          en: "Can shifting money between channels change the reported contribution of each channel without any real change?"
+          cn: 渠道之间挪钱，会不会在没有任何真实变化的情况下改变各自的贡献占比？
+        answer:
+          en:
+            >
+              Yes, and this is a measurement artefact, not an outcome. Platforms attribute a
+              sale to the last touch, so moving money to a different channel moves part of the
+              credit with it. The channel contribution shares shift while true incrementality
+              stays where it was. Two other effects travel with the money as well: the newly
+              funded channel competes with the channels you left alone for the same people, and
+              a more aggressive bid on one side can squeeze exposure on the other. None of
+              these appear on the table you shifted from.
+          cn:
+            >
+              会，而且这是口径问题，不是结果变了。平台按最后一次点击归因，钱挪到另一个渠道，一部分
+              功劳跟着走。渠道贡献占比变了，真实增量还在原地。另外两件事也跟着钱走：新加钱的渠道会
+              和没动的渠道抢同一批人；一边出价更激进，另一边的曝光可能被挤掉。这些都不在你挪钱的
+              那张表里。
+        confidence: 8
+        reference:
+          - docs/6-budget-optimization/03-after-the-shift-what-goes-wrong/cn.md
+
+  - name:
+      en: the two checks
+      cn: 挪完预算先查这两件事
+    qa:
+      - id: the-two-checks
+        question:
+          en: "What are the two things to check after shifting budget?"
+          cn: 挪完预算要查哪两件事？
+        answer:
+          en:
+            >
+              Whether the saturation point got pushed up, and whether you gave it enough time.
+              For the first, add 5 to 10 percent on top of the new allocation and see whether
+              volume rises at the old rate, and check whether the clearing price on the same
+              keyword and audience went up. For the second, set the observation window by the
+              decay tail of the channel you funded into, search two days, social a week,
+              television three weeks, and either wait for the tail to finish or add the
+              unreleased portion back when you read the numbers. Neither check costs much, and
+              both avoid reverting a shift that was right.
+          cn:
+            >
+              一件是饱和点有没有被抬高，一件是时间给够了没有。第一件：在新分配的基础上再加 5% 到 10%，
+              看买到的量还涨不涨，再看一眼同一关键词、同一受众的成交价有没有变高。第二件：观察期按你
+              加钱那个渠道的衰减尾巴定——搜索两天，社交一周，电视三周；要么等到释放完再读，
+              要么读数时把没释放的部分补回来。两件都不花多少钱，而且都能避免把一次对的挪动退回去。
+        confidence: 9
+        reference:
+          - docs/6-budget-optimization/03-after-the-shift-what-goes-wrong/cn.md
+      - id: order-of-work
+        question:
+          en: "What order should the whole process be in?"
+          cn: 整个流程应该按什么顺序走？
+        answer:
+          en:
+            >
+              List the constraints first, then solve for the allocation, then run these two
+              checks on what you actually did. The failure mode that gets people is holding a
+              report that is too early to judge a structural question. The structure did not
+              improve and the report has not matured at the same time, so the shift looks like
+              a mistake and gets undone, which means you have just re-run the original
+              allocation and learned nothing.
+          cn:
+            >
+              List the constraints first, then solve for the allocation, then run these two
+              checks on what you actually did. The failure mode that gets people is holding a
+              report that is too early to judge a structural question. The structure did not
+              improve and the report has not matured at the same time, so the shift looks like
+              a mistake and gets undone, which means you have just re-run the original
+              allocation and learned nothing.
+        confidence: 9
+        reference:
+          - docs/6-budget-optimization/03-after-the-shift-what-goes-wrong/cn.md

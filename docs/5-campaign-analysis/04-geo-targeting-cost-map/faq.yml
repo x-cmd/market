@@ -1,0 +1,290 @@
+id: x-market-5-campaign-analysis-04-geo-targeting-cost-map
+
+data:
+  - name:
+      en: where the three-times price gap comes from
+      cn: 三倍的价差到底差在哪
+    qa:
+      - id: where-does-the-gap-come-from
+        question:
+          en: "Same budget, one market's CPM is 3.5 times the other's. What actually makes the expensive one expensive?"
+          cn: "同一份预算，一个地区的 CPM 是另一个的三倍半。贵的那边到底贵在什么上？"
+        answer:
+          en:
+            >
+              Four things, and they are not equally open to you. Auction density: how many
+              advertisers want the same person. In 2024 US search advertising alone was
+              $102.9 billion, 39.8% of the country's entire $258.6 billion internet ad
+              revenue, so more brands are bidding for the same impressions and the price
+              clears higher. Conversion density: how many impressions it takes to produce
+              one conversion — Germany's CPM is 29% of the US figure, but its cost per
+              conversion is only 9.6% lower, so most of the CPM advantage is consumed by
+              the fact that the same exposure converts worse. Inventory mix: what formats
+              you can actually buy in a market, and whether they are open-auction or
+              guaranteed — programmatic guaranteed deals commonly clear at 1.5 to 3 times
+              the open-auction CPM. And purchasing power, which shows up inside the bid
+              because advertisers price what a market can absorb. Only the third of these
+              four is something you can change at contract level.
+          cn:
+            >
+              四件事，而且你能改的只有一件。竞价密度：有多少广告主想买同一个人。2024 年
+              美国搜索广告一项就是 1,029 亿美元，占它全部网络广告收入 2,586 亿的 39.8%，
+              抢同一批曝光的品牌更多，价格就出得更高。转化密度：一次曝光能换来几个转化
+              ——德国的 CPM 是美国的 29%，但每次转化的成本只便宜 9.6%，CPM 上的优势大半
+              被转化密度吃掉了。库存种类：这个市场你能买到哪几种格式、是开放竞价还是保量
+              ——程序化保量合约的 CPM 通常是公开竞价的 1.5 到 3 倍。购买力：出价的人会估
+              这个市场能承受的获客成本。四条里只有第三条你能在合同层面动。
+        confidence: 9
+        reference:
+          - docs/5-campaign-analysis/04-geo-targeting-cost-map/cn.md
+      - id: is-the-expensive-market-ripping-you-off
+        question:
+          en: "Am I being overcharged in the expensive market, or is the price the market's?"
+          cn: "在贵的市场里，我是被多收钱了，还是这就是那个市场的价？"
+        answer:
+          en:
+            >
+              It is the market's price, and it moves for reasons that have nothing to do
+              with how hard you negotiated. But note what the industry averages do and do
+              not tell you: a 2026 study of 11 managed accounts and 38 campaign pairs found
+              that inside a single Search campaign the pricier of two countries paid 1.22
+              times the cheaper one's cost per click in the median account, with the middle
+              half between 1.12 and 1.42. Loosened to whole accounts the median ratio was
+              about 2.0. The same-campaign figure is the narrower and more honest one, and
+              it says something uncomfortable for the industry tables: campaign-level
+              differences — keywords, bid strategy, format — are larger than the country
+              gap. A 3.46x spread between two country averages in your own account is
+              probably not all geography. Only your own account's numbers settle it.
+          cn:
+            >
+              是市场的价，而且它动起来跟你谈没谈下来没关系。但行业平均能告诉你什么、不能
+              告诉你什么，得分清。2026 年一份针对 11 个账户、38 组活动配对的研究发现：
+              同一个搜索广告活动内部，两国中更贵的那国每次点击成本的中位比值是 1.22，中间
+              一半账户落在 1.12 到 1.42；把活动边界放开、按整个账户比，中位比值约 2.0。
+              同活动内那个数更窄也更诚实，而且它说了一件对行业表格不太舒服的话：活动层面的
+              差异（关键词、出价、格式）比国别差异还大。你账户内部那 3.46 倍，很可能不全
+              是地域造成的。只有你自己账户的数能定这件事。
+        confidence: 8
+        reference:
+          - docs/5-campaign-analysis/04-geo-targeting-cost-map/cn.md
+  - name:
+      en: what to read on a geo cost map
+      cn: 地域成本图上要看哪几样
+    qa:
+      - id: the-four-things-to-read
+        question:
+          en: "My geo report only gives me CPM and clicks. What am I missing?"
+          cn: "我的地域报表只有 CPM 和点击，还缺什么？"
+        answer:
+          en:
+            >
+              Three things, and none of them come labelled. Conversion density: how many
+              conversions a thousand impressions produce. It is not in the report, but you
+              can derive it — cost per conversion divided by CPM gives you conversions per
+              thousand impressions, and the inverse gives you the number of impressions it
+              takes to buy one conversion. On the published figures, that number runs from
+              299 impressions in Denmark to 2,383 in India, and Germany sits at 1,044
+              against the US's 334. Auction density: impression share, and the length of
+              the list of advertisers competing for the same query. Inventory: which
+              formats you can buy in that market, and whether those impressions are open
+              auction or guaranteed. And one thing that hides in the report's own
+              classification — platforms split "people are here" from "people are
+              interested in here", and mixing the two is what makes a geo report
+              unreadable.
+          cn:
+            >
+              三样，而且一样都不是报表直接给你的。转化密度：一千次曝光能换来几个转化。
+              这个数报表里没有，但能算——每次转化的成本 ÷ CPM 就是每千次曝光的转化数，
+              倒过来就是买一个转化要几次曝光。按公布的数算，这个数从丹麦的 299 次曝光到
+              印度的 2,383 次不等，德国是 1,044 次，美国是 334 次。竞价密度：展示份额，
+              以及跟同一条词抢位置的其他广告主名单有多长。库存：这个市场你能买到哪几种
+              格式，是开放竞价还是保量。还有一样藏在报表自己的分类里——平台把「人在这里」
+              和「对这里感兴趣」分成两行，混在一起看，地域报表就没法读。
+        confidence: 9
+        reference:
+          - docs/5-campaign-analysis/04-geo-targeting-cost-map/cn.md
+      - id: presence-vs-interest
+        question:
+          en: "What is the difference between 'people here' and 'people interested in here'?"
+          cn: "「人在这里」和「对这里感兴趣的人」，差别在哪？"
+        answer:
+          en:
+            >
+              "People here" means the ad was served to someone physically located in the
+              target area. "Interested in here" means the ad was served to someone outside
+              the area who showed interest in it — by search behaviour, by the content they
+              consume, by where they have been. The second group costs what it costs to
+              reach someone with that interest wherever they happen to be, and that is
+              frequently more expensive per impression than the same impression in the
+              target market itself. Because the platform report gives you both rows and
+              they average together, a geo report can end up describing an audience you
+              never targeted. The rule for a geo cost map is simple: take the presence
+              rows only, and rebuild every number from those.
+          cn:
+            >
+              「人在这里」是广告投给了物理位置就在目标地区的人。「对这里感兴趣」是投给了
+              地区外但表现出兴趣的人——靠搜索行为、靠他看的内容、靠他去过哪。第二类人的
+              成本，是「不管他在哪都要触达一个有这种兴趣的人」的成本，单次曝光往往比在
+              目标市场内买同样一次曝光更贵。平台报表把两行都给你，它们平均在一起，于是一
+              张地域报表最后描述的可能是你根本没投过的人群。地域成本图的规矩很简单：只
+              取「人在这里」那些行，所有数都从这里重算。
+        confidence: 8
+        reference:
+          - docs/5-campaign-analysis/04-geo-targeting-cost-map/cn.md
+  - name:
+      en: cheap is not the same as worthwhile
+      cn: 便宜不等于划算
+    qa:
+      - id: does-low-cpm-mean-good-value
+        question:
+          en: "Germany's CPM is 29% of the US figure. Why is it not the better deal?"
+          cn: "德国的 CPM 只有美国的 29%，为什么它不是更划算的那一边？"
+        answer:
+          en:
+            >
+              Because the cheap impressions convert worse, and the two effects nearly
+              cancel. Take $100,000 and split it evenly. $50,000 in the US at a $114.89 CPM
+              buys 435,199 impressions and, at $38.41 per conversion, 1,302 conversions.
+              $50,000 in Germany at a $33.25 CPM buys 1,503,759 impressions and, at $34.71
+              per conversion, 1,441 conversions. Germany delivers 3.5 times the
+              impressions and 10.6% more conversions. Shifting $10,000 toward the US
+              pushes the blended cost per conversion from $36.47 to $37.22 and the total
+              conversions from 2,742 down to 2,687. The cheap market is buying volume at a
+              conversion rate that gives most of it back.
+          cn:
+            >
+              因为便宜的曝光转出来的单也差，两头几乎抵消。拿 10 万块对半分：5 万块投美国，
+              CPM 114.89，买到 435,199 次曝光，按每次转化 38.41 美元算是 1,302 个转化；
+              5 万块投德国，CPM 33.25，买到 1,503,759 次曝光，按每次转化 34.71 美元算是
+              1,441 个转化。德国多给你三倍半的曝光，只多给 10.6% 的转化。把 1 万块挪向美国，
+              混合每次转化成本从 36.47 块涨到 37.22 块，总转化从 2,742 掉到 2,687。便宜
+              那个市场是在用更差的转化率买回它的量。
+        confidence: 9
+        reference:
+          - docs/5-campaign-analysis/04-geo-targeting-cost-map/cn.md
+      - id: when-cheap-is-the-right-answer
+        question:
+          en: "Is there a case where the cheap market is the right call?"
+          cn: "有没有便宜市场反而是对的那种情况？"
+        answer:
+          en:
+            >
+              Yes — when your binding constraint is speed rather than efficiency. The same
+              $50,000 buys 1.5 million impressions in Germany against 435,000 in the US, so
+              a fixed budget delivers roughly three and a half times the delivery rate
+              there. Quarter-end pushes, a launch window, a one-off burst of reach: those
+              jobs care about impressions delivered per week, not about what each
+              impression was worth. The expensive market wins on a different axis —
+              auction density is high there, so you can still hit your delivery target
+              while competing for the most motivated audience, and the extra price buys
+              you better buyers rather than more of the same. Choose between them by
+              asking which constraint binds this month: money or time.
+          cn:
+            >
+              有——当你的约束是速度而不是效率的时候。同样 5 万块，在德国买到 150 万次曝光，
+              在美国只买到 43.5 万次，固定预算在那边的交付速度是三倍半。季度末冲量、上新
+              的窗口期、一次性的曝光拉满，这类活儿要的是每周交付多少曝光，不是每次曝光值
+              多少钱。贵的市场在另一个维度上赢：那里的竞价密度高，你照样能跑满交付量，
+              抢到的是竞价最激烈的那批受众，多出来的钱买到的是更好的人，不是更多一样的人。
+              两者怎么选，看这个月卡住你的是钱还是时间。
+        confidence: 8
+        reference:
+          - docs/5-campaign-analysis/04-geo-targeting-cost-map/cn.md
+  - name:
+      en: putting the plan into practice
+      cn: 落到一份可执行的计划上
+    qa:
+      - id: six-steps-of-a-geo-plan
+        question:
+          en: "How do you actually run a two-market plan from scratch?"
+          cn: "两个地区从零开始跑，一份计划长什么样？"
+        answer:
+          en:
+            >
+              Six steps, in this order. Fix the definition first: switch the location report
+              to presence rows only, because everything downstream inherits that choice.
+              Run a baseline on a small budget in both markets with the same keywords and
+              the same creative, and pull three numbers per market — CPM, cost per
+              conversion, and impression share. Allocate budget by cost per conversion,
+              not by CPM, and read the impression share alongside it: a high impression
+              share in the cheap market means you have already bottomed out there and
+              extra money buys nothing. Set a stop-loss line, because regional costs move
+              on their own — the US average eCPM rose from $0.85 to $1.037 in H1 2025
+              while Europe's average only went from $0.36 to $0.39. Then verify with a
+              geo experiment, holding out a set of markets entirely. And read your own
+              account, not the industry table.
+          cn:
+            >
+              六步，按顺序走。先把口径定死：位置报表切到只看「人在这里」，后面每一步都建立
+              在这个选择上。然后跑基线：小预算在两个市场各跑，同一批关键词、同一个创意，
+              每地拿三个数——CPM、每次转化成本、展示份额。接着按每次转化成本分预算，不是
+              按 CPM，同时看展示份额：便宜市场展示份额已经很高，说明你已经在那里抢到底
+              了，再加钱也买不到更多。再设止损线，因为地域成本会自己动——2025 上半年美国
+              平均 eCPM 从 0.85 涨到 1.037，欧洲均值只从 0.36 涨到 0.39。然后做地域实验
+              验证：留一批地区完全不投。最后，看你自己的账户，不要看行业表格。
+        confidence: 9
+        reference:
+          - docs/5-campaign-analysis/04-geo-targeting-cost-map/cn.md
+      - id: why-the-report-overstates-what-you-bought
+        question:
+          en: "How do I know the conversions I bought in a new market are real?"
+          cn: "我怎么知道在一个新市场买到的转化是真的？"
+        answer:
+          en:
+            >
+              You do not, from the report alone. The report records what happened — who
+              saw the ad and who bought — and it credits every conversion to the ad,
+              including the ones that would have happened anyway. Google's 2011 geo
+              experiment paper has the number: the platform bill showed a $2.40 cost per
+              click while the experiment measured $3.00 per incremental click, so 20% of
+              paid clicks were people taken from organic search rather than additional
+              demand. That is why the plan has to include a holdout. The unit of random
+              assignment in that work was the market — 210 Nielsen DMAs in the US — and
+              the authors were explicit that postal-code geography does not work: delivery
+              is inaccurate and people cross the boundary anyway. Keep the geography coarse
+              and you keep the comparison honest.
+          cn:
+            >
+              只看报表你不知道。报表记的是发生过的事——谁看到了广告、谁买了单——它把每一个
+              转化都记在广告头上，包括那些本来就会发生的。Google 2011 年那篇地域实验论文
+              给了一个数：平台账单上的每次点击成本是 2.40 美元，实验测出的每次增量点击成本
+              是 3.00 美元，也就是说付费点击里有 20% 是从自然搜索抢来的人，不是多出来的需求。
+              这就是计划里必须有留空区的原因。那篇论文里的随机单位是市场——美国用 210 个
+              Nielsen DMA，作者明确说邮编这个粒度不行：投放不准，人也会跨着边界跑。地理粒度
+              放粗，比较才立得住。
+        confidence: 9
+        reference:
+          - docs/5-campaign-analysis/04-geo-targeting-cost-map/cn.md
+      - id: country-mix-moves-your-average
+        question:
+          en: "My campaign's CPM went up but I don't think any market got more expensive. What happened?"
+          cn: "我活动的 CPM 涨了，可我没觉得哪个市场变贵。发生了什么？"
+        answer:
+          en:
+            >
+              The country mix changed. Average CPC is cost divided by clicks across every
+              country the campaign serves, so it moves whenever the share of clicks
+              changes, even if no price moves. The worked example from the 2026 study:
+              one country priced at $1.00 per click and the other at $1.20. In March 80%
+              of clicks came from the cheaper country and the campaign average was $1.04.
+              In April the split went 50/50 and the average rose to $1.10 — a 6% increase
+              with not one price changing. Statisticians call that reversal Simpson's
+              paradox, and it can run the other way too: both prices can fall while the
+              average rises, if clicks shift toward the dearer country. To separate the
+              two, rebuild this period's average at last period's prices — multiply each
+              country's earlier CPC by its current click share and add them up. The
+              distance from last period's average to that figure is what the mix
+              explains; the rest is price.
+          cn:
+            >
+              国家结构变了。平均点击成本是全部国家的花费除以全部点击，所以点击的占比一变，
+              这个平均就变，哪怕一个价格都没动。那份 2026 年研究里的算例：一个国家每次
+              点击 1.00 美元，另一个 1.20 美元。3 月 80% 的点击来自便宜国家，活动平均
+              1.04 美元；4 月变成对半分，平均涨到 1.10 美元，涨了 6%，两个价格一分没动。
+              统计上这叫辛普森悖论，而且能反着来：两个价格都在跌，点击往贵的那边挪，平均
+              照样可以涨。要把两者分开，就拿上期的价格重算本期平均——每个国家上期的点击
+              成本乘以这期的点击占比，加起来。从上期平均到这个数之间的差，是结构解释掉的；
+              剩下的才是价格。
+        confidence: 9
+        reference:
+          - docs/5-campaign-analysis/04-geo-targeting-cost-map/cn.md

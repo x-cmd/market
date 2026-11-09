@@ -1,0 +1,67 @@
+id: x-market-7-brand-visibility-04-same-question-two-answers
+
+data:
+  - name:
+      en: repeated-question measurement of GEO visibility
+      cn: GEO 可见度的重复测量
+    qa:
+      - id: why-single-query-is-not-a-number
+        question:
+          en: Why is a single AI answer not a usable measurement?
+          cn: 为什么单次 AI 回答不能当数用？
+        answer:
+          en: >
+            Because the model samples rather than looks up. Generating an answer means picking the next token step by step, and each step carries randomness, so the same prompt on the same model on the same day can produce answers with different brand lists. In the experiment behind this page, the question "推荐跑鞋" was put to MiniMax-M3 twenty times on 2026-11-09. ASICS was named 18 times, Nike 18, Saucony 13, Hoka 11, New Balance 9, Brooks 8, 361° 7, Adidas 6, 特步 4, Salomon 4, 李宁 2, and 鸿星尔克 just 1. Ask once and you have drawn one of those twenty answers, not the answer. A single run also carries an interval that is wide enough to swallow "never mentioned": at one query, a 65% mention rate has a 95% Wilson interval of 20.7% to 100%.
+          cn: >
+            因为模型是采样出来的，不是查出来的。生成一个答案就是一步步选下一个词，每一步都有随机性，所以同一个模型、同一天、同一个问题，可以给出品牌名单完全不同的答案。这一页的实验把「推荐跑鞋」这句问题在 2026-11-09 问了 MiniMax-M3 二十次：ASICS 被点名 18 次，Nike 18 次，Saucony 13 次，Hoka 11 次，New Balance 9 次，Brooks 8 次，361° 7 次，Adidas 6 次，特步 4 次，Salomon 4 次，李宁 2 次，鸿星尔克只有 1 次。只问一次，你抽到的是这二十个答案里的一个，不是「那个答案」。单次的区间也宽到能把「从没被提过」包进去：只问 1 次时，65% 的真实提及率对应的 95% Wilson 区间是 20.7% 到 100%。
+        confidence: 10
+        reference:
+          - docs/7-brand-visibility/04-same-question-two-answers/cn.md
+      - id: how-many-repeats
+        question:
+          en: How many times do you have to ask before the number means something?
+          cn: 到底要问多少次，这个数才算数？
+        answer:
+          en: >
+            It depends on the precision you need, and the arithmetic is a square-root law, so the payoff for repeating falls off fast. For a brand with a true mention rate of 65% — Saucony's observed 13 mentions out of 20 — the half-width of the 95% Wilson interval is 39.7 percentage points at one query, 32.6 at five, 19.3 at twenty, 12.9 at fifty, 9.2 at a hundred, and 6.6 at two hundred. Doubling the sample only buys about a third narrower; it takes four times the queries to halve the interval. Twenty repetitions still leaves a spread wide enough that the 20-point gap between Saucony and New Balance cannot be separated, because their intervals overlap heavily. So there is no universal answer: pick the precision first, then the sample size that buys it.
+          cn: >
+            看你要多准，而且这件事按平方根走，所以重复的收益掉得很快。对一个真实提及率 65% 的品牌——实验里 Saucony 20 次被点名 13 次——95% Wilson 区间的半宽是：问 1 次 39.7 个百分点，5 次 32.6，20 次 19.3，50 次 12.9，100 次 9.2，200 次 6.6。样本翻倍只换来大约三成的收窄，要把区间缩一半得问 4 倍次数。问 20 次，区间还宽到分不出高下——Saucony 和 New Balance 差 20 个百分点，但两个区间大幅重叠。所以没有一个通用答案：先定精度，再定买这个精度要多少样本。
+        confidence: 10
+        reference:
+          - docs/7-brand-visibility/04-same-question-two-answers/cn.md
+      - id: clarifying-question-is-not-zero-mention
+        question:
+          en: What should you do with the answers where the model asked a clarifying question instead of recommending anything?
+          cn: 模型反问而没给推荐的那些答案，怎么算？
+        answer:
+          en: >
+            Do not score them as zero mentions. Two of the twenty runs in this experiment never named a brand: the model asked about budget, foot type, and distance instead of answering. Counting those as "the brand was not mentioned" is wrong in kind, because those rounds never entered a brand comparison at all. They are not evidence of low visibility; they are a different answer shape. Either report them separately — this page says "20 runs, 2 of which named no brand" — or drop them and say so and report the reduced denominator. Either way the denominator must be stated, because a silent choice between 18 out of 20 and 18 out of 18 changes the reported rate from 90% to 100%.
+          cn: >
+            不能当成零提及。这页实验的二十次里有两次没点名任何品牌：模型反问了预算、脚型和距离，没有给出推荐。把这类回答算成「品牌没被提到」，是性质上的错——这两轮压根没进入品牌比较。它们不是可见度低的证据，是另一种答案形状。要么单独列出来——这一页写的是「20 次，其中 2 次没点名任何品牌」——要么剔除，但剔除后要说，并报出剔除后的分母。无论选哪种，分母都得写明，因为在 20 里的 18 次和 18 里的 18 次之间悄悄换掉，报出去的数就从 90% 变成 100%。
+        confidence: 9
+        reference:
+          - docs/7-brand-visibility/04-same-question-two-answers/cn.md
+      - id: prompt-set-is-the-definition
+        question:
+          en: What happens to the ranking when you change the question?
+          cn: 换了问法，排名会怎么变？
+        answer:
+          en: >
+            It can invert. The same brands were put to the model under two questions: "推荐跑鞋" (20 runs) and "适合新手的长距离慢跑鞋" (15 runs). Nike was named in 18 of 20 answers under the broad question and in 1 of 15 under the narrow one — 90.0% versus 6.7%. New Balance moved the other way, from 45.0% to 93.3%, and Saucony from 65.0% to 93.3%. The narrow question is about one narrow use case, and the brands that dominate that use case are the ones that get named. The question set is therefore part of the definition: a GEO number is a statement about "how often these brands are named under this set of questions", not about how loud a brand is.
+          cn: >
+            可能整个翻过来。同一批品牌用了两道问题去问：「推荐跑鞋」（20 次）和「适合新手的长距离慢跑鞋」（15 次）。Nike 在宽问题里 20 次被点名 18 次，在窄问题里 15 次只被点名 1 次——90.0% 对 6.7%。New Balance 反着走，从 45.0% 涨到 93.3%，Saucony 从 65.0% 涨到 93.3%。窄问题问的是一个窄场景，主导这个场景的品牌自然被点名。所以问题集是定义的一部分：一个 GEO 的数说的是「在这组问题下，这批品牌被点名多少」，不是「这个牌子有多响」。
+        confidence: 10
+        reference:
+          - docs/7-brand-visibility/04-same-question-two-answers/cn.md
+      - id: what-to-report
+        question:
+          en: What should a GEO report actually contain?
+          cn: 一份 GEO 的报告到底该写什么？
+        answer:
+          en: >
+            Three numbers and a few labels, never a bare percentage. First, the mention rate with its interval — ASICS at 18 of 20 is reported as 90% with a 95% Wilson interval of 69.9% to 97.2%, because the interval is wider than the point estimate and that is the honest picture. Second, the rank distribution — ASICS sat between positions 1 and 5 across the twenty runs with a median of 1, while 361° ranged from 1 to 7 with a median of 5, so one brand's position can move six slots under one question. Third, the answer shape — how many runs named no brand at all. Alongside those, state the number of queries, the exact wording, the model, the date, and the denominator. The publication "Measuring GEO Visibility: Prompt Corpora Define the Answer Market" (Olivier Martinez, 2026) reaches the same conclusion from the measurement side: the prompt corpus and the weights together define the answer market, and when those choices are still open, the honest output is a set of admissible scores rather than one number.
+          cn: >
+            三个数加几项标注，绝不是光一个百分数。第一是带区间的提及率——ASICS 20 次里 18 次，报 90%，同时给出 95% Wilson 区间 69.9% 到 97.2%，因为区间比点估计宽，这才是实情。第二是位次分布——ASICS 在二十次里位次在 1 到 5 之间，中位 1；361° 从 1 到 7，中位 5，同一个问题下同一个品牌的位次能差六格。第三是答案形状——有多少次压根没点名任何品牌。此外还要写清：问了几次、问的哪句话、用哪个模型、哪一天问的、分母是多少。论文《Measuring GEO Visibility: Prompt Corpora Define the Answer Market》（Olivier Martinez，2026）从测量一侧得出同一个结论：提示语料和权重合在一起定义了「答案市场」，在这些选择还没定下来的时候，诚实的产出是一组可接受的分数区间，而不是一个数。
+        confidence: 9
+        reference:
+          - docs/7-brand-visibility/04-same-question-two-answers/cn.md

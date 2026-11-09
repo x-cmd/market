@@ -1,0 +1,259 @@
+id: x-market-4-performance-analysis-04-marginal-roi-decay
+
+data:
+  - name:
+      en: the two numbers that get confused
+      cn: 容易被混掉的两个数
+    qa:
+      - id: avg-roi-4-still-worth-it
+        question:
+          en: "This channel's average ROI is 4.0 and has been stable all quarter. Does that mean I can keep adding budget?"
+          cn: "这个渠道平均 ROI 一直是 4.0，整个季度都稳。这是不是说明还能继续加预算？"
+        answer:
+          en:
+            >
+              No. Average ROI answers a question about the past: over the whole spend you have
+              made so far, how much came back. It cannot answer the question you are actually
+              facing, which is what the next yuan will bring. The two can move in opposite
+              directions — the average can sit at 4 while the marginal has already fallen below
+              1. In the worked example on this page, cumulative average ROI slides from 6.6 to
+              3.11 across eight spend bands while marginal ROI falls from 6.6 all the way to
+              0.4. The last band spends 100,000 and returns 40,000: that money is a net loss
+              even though the channel as a whole is comfortably profitable.
+          cn:
+            >
+              不能。平均 ROI 回答的是过去的问题：你到目前为止花掉的全部钱，带回了多少。
+              它回答不了你现在真正面对的问题——下一块钱会带回多少。这两个数可以往相反
+              方向走：平均数稳在 4 的时候，边际可能早就跌破 1 了。这一页的算例里，
+              累计平均 ROI 从 6.6 滑到 3.11，八档一共掉了 80 万里的那一半；边际 ROI
+              从 6.6 掉到 0.4。最后一档花了 10 万带回 4 万，这笔钱是净亏的，
+              尽管整个渠道算下来还在赚钱。
+        confidence: 10
+        reference:
+          - docs/4-performance-analysis/04-marginal-roi-decay/cn.md
+      - id: marginal-roi-definition
+        question:
+          en: "How is marginal ROI actually calculated?"
+          cn: "边际 ROI 到底怎么算？"
+        answer:
+          en:
+            >
+              One division, with a narrow denominator: the money that particular band brought
+              back, divided by the money spent in that band alone. Not total revenue over
+              total spend. In the example on this page, band 8 spent 100,000 and returned
+              40,000, so its marginal ROI is 0.4. Take the eight bands in order and you get a
+              curve, not a number — which is the point. One blended figure hides the shape;
+              the band-by-band series shows where the money stops working. The reason average
+              ROI has a floor of 1 while marginal ROI has none is that the average is
+              cumulative: the money won in the early bands stays in the numerator forever.
+          cn:
+            >
+              一次除法，分母很窄：这一档带回来的钱，除以这一档花掉的钱。不是总收入除以
+              总花费。这一页的算例里，第 8 档花了 10 万带回 4 万，边际 ROI 就是 0.4。
+              把八档按顺序排出来，得到的是一条曲线而不是一个数——这正是重点。
+              一个混合数字会把形状藏起来，分档的序列能看出钱在哪一档开始不灵。
+              平均 ROI 有 1 的下限而边际 ROI 没有，原因在于平均数是累计的：
+              前面几档赚到的钱会永远留在分子里。
+        confidence: 10
+        reference:
+          - docs/4-performance-analysis/04-marginal-roi-decay/cn.md
+      - id: marginal-vs-incremental
+        question:
+          en: "Is marginal ROI the same as incremental return?"
+          cn: "边际 ROI 跟增量回报是一回事吗？"
+        answer:
+          en:
+            >
+              No, and the gap between them can be large. Marginal ROI is a bookkeeping figure:
+              spend a bit more, get a bit more back. Incremental return asks how much of that
+              extra was genuinely new. Some of it would have arrived anyway — the customer
+              searched, found you, and bought regardless of whether you bid for the click. That
+              is substitution, and it is not revenue you created. The sharpest published
+              example is eBay's brand keyword experiment: the observed method put the return
+              above 1,400%, while the randomised experiment measured a true incremental
+              return of minus 63%, with a confidence interval of minus 124% to minus 3%.
+              The extra money did not create new business; it partly took orders that would
+              have happened anyway.
+          cn:
+            >
+              不是，而且两者的差距可以很大。边际 ROI 是账面口径：多花一点，多回一点。
+              增量回报问的是多出来的这部分里，有多少是真正新增的。其中一部分本来也会来
+              ——客户搜到你就点了、就买了，跟你这次出价没关系——这叫替代，
+              它不是你创造出来的收入。最硬的一个公开例子是 eBay 的品牌词实验：
+              观测口径算出的回报在 1400% 以上，随机实验测出的真实增量回报是 −63%，
+              随机实验测出的真实增量是 −63%，置信区间 [−124%, −3%]。多花的那些钱
+              不但没带来新生意，还抢走了一部分本来也会发生的单。
+        confidence: 10
+        reference:
+          - docs/4-performance-analysis/04-marginal-roi-decay/cn.md
+  - name:
+      en: drawing the curve
+      cn: 把这条线画出来
+    qa:
+      - id: how-to-band-the-spend
+        question:
+          en: "How wide should the spend bands be?"
+          cn: "花费的档应该切多宽？"
+        answer:
+          en:
+            >
+              Wide bands give you a stable number; narrow bands resolve the kink but invite
+              noise. A sensible starting point is to split a month's spend into six to eight
+              equal bands. The trade-off is not free: the band nearest the inflection point is
+              also the one with the fewest impressions and orders behind it, so it is the least
+              reliable number on the chart. Interval width scales with the inverse square root
+              of sample size — forty times the sample buys about six times the precision. So
+              narrowing the bands to chase a sharper kink makes every estimate on the curve
+              noisier at exactly the point where you most need to trust it.
+          cn:
+            >
+              档宽了数稳，档窄了拐点清楚但容易跟噪声跑。一个稳妥的起点是把一个月的花费
+              均分成六到八档。这个取舍不是免费的：最靠近拐点的那一档，背后的曝光和订单
+              也最少，所以它是图上最不可信的数。区间宽度跟样本量的平方根成反比——
+              样本量翻 40 倍，精度才提高约 6 倍。也就是说，为了把拐点切得更细而缩窄档位，
+              恰好会让你最需要相信的那一档变得更不稳。
+        confidence: 9
+        reference:
+          - docs/4-performance-analysis/04-marginal-roi-decay/cn.md
+      - id: carryover-before-differencing
+        question:
+          en: "Why does the spend have to be time-aligned before you difference it?"
+          cn: "为什么算差分之前要先做时间上的对齐？"
+        answer:
+          en:
+            >
+              Because advertising effects do not stop at midnight. Money spent on Tuesday
+              keeps working on Wednesday and the week after, and different channels carry
+              different lengths of tail — a search click dies within hours, a TV spot keeps
+              running for weeks. If you match a band of spend against the sales of the very
+              same day, you are comparing a persistent effect against a noisy flow, and the
+              curve you get is mostly noise. The fix is to spread each spend point over its
+              own decay shape and then read revenue over a matching window, so that what you
+              difference against what you spent is actually the same effect.
+          cn:
+            >
+              因为广告的效果不会在午夜停掉。周二花的钱周三还在起作用，下一周也在，
+              不同渠道的尾巴长度还不一样——搜索点击几小时就衰减，电视广告能拖好几周。
+              如果拿一档花费去对同一天的销售额，你是在拿一个持续的效果去对一个抖动的
+              流量，算出来的曲线基本是噪声。做法是先把每一笔花费按它自己的衰减形状摊开，
+              再按同样的窗口去取营收，这样你做差分的两边才是同一个效果。
+        confidence: 9
+        reference:
+          - docs/4-performance-analysis/04-marginal-roi-decay/cn.md
+      - id: reading-the-inflection
+        question:
+          en: "How do I find the point where the channel stops being worth adding to?"
+          cn: "怎么找这个渠道「不值得再加」的那个点？"
+        answer:
+          en:
+            >
+              Find where the marginal curve crosses 1.0. Above that line each additional yuan
+              brings back more than it costs; below it, every extra yuan is a net loss; at
+              zero the band is pure waste. In the worked example on this page, band 7 has a
+              marginal ROI of 0.9 and band 6 has 1.6, so the inflection sits between them:
+              spend above roughly 600,000 on this channel in a month and the money stops
+              returning. Note that the curve is always downward-sloping and getting steeper —
+              that is a property of the shape, not a coincidence — so a marginal curve that
+              rises with spend is a sign that the measurement is wrong, not that the channel
+              has room to grow.
+          cn:
+            >
+              找边际曲线穿过 1.0 的地方。在这条线之上，每多花的 1 块带回的比花出去的多；
+              在下面，每多花 1 块就是净亏；等于 0 的话这一档纯粹白花。这一页的算例里，
+              第 7 档的边际 ROI 是 0.9，第 6 档是 1.6，所以拐点夹在两档之间：
+              这个渠道一个月花到 60 万左右，钱就开始不回来了。另外注意这条曲线的形状
+              ——它一定是往下走而且越来越陡，这是形状本身的性质，不是碰巧——
+              所以如果你画出来的边际曲线随着花费上升，那说明口径出了问题，
+              而不是这个渠道还有空间。
+        confidence: 9
+        reference:
+          - docs/4-performance-analysis/04-marginal-roi-decay/cn.md
+  - name:
+      en: when the average misleads
+      cn: 平均数骗人的时候
+    qa:
+      - id: steady-share-falling-efficiency
+        question:
+          en: "Is there a real example of total spend rising, the average staying flat, and the margin already gone?"
+          cn: "有真实的例子吗：总量在涨、平均数稳，但边缘已经不值了？"
+        answer:
+          en:
+            >
+              Chewy, the US online pet retailer, is one. Its marketing and advertising expense
+              is disclosed separately in the filings, and over FY2020 to FY2025 the ratio of
+              that spend to revenue barely moved: it stayed between 6.4% and 6.8% from
+              FY2022 through FY2025. But the revenue returned per marketing dollar went from
+              15.58 in FY2022 to 14.75 in FY2024. The share stays flat because the numerator
+              and denominator grow together, while the edge keeps thinning. The hard number
+              is FY2022 to FY2023: marketing spend rose from 649.4 million to 742.4 million
+              and revenue from 10.119 billion to 11.148 billion, so the 93.0 million of extra
+              spend brought back 1.029 billion — a marginal return of 11.06 against an average
+              of 15.02. One caveat: this is a mixed company-wide figure, not a banded marginal
+              return.
+          cn:
+            >
+              有一个，是美国宠物电商 Chewy。它的营销费在财报里单列，FY2020 到 FY2025
+              营销费占营收的比例几乎没动：FY2022 到 FY2025 一直稳在 6.4% 到 6.8% 之间。
+              但每 1 元营销费换回的营收从 FY2022 的 15.58 倍退到 FY2024 的 14.75 倍。
+              占比之所以稳，是因为分子分母同步长大；效率之所以退，是因为多出来的钱买到的
+              都是更薄、也更贵的量。更硬的一块证据是 FY2022 到 FY2023：营销费从 6.494 亿
+              涨到 7.424 亿，营收从 101.19 亿涨到 111.477 亿，多花的 9300 万带回 10.287 亿，
+              边际回报 11.06 倍，低于这一年平均的 15.02 倍。要加一句提醒：
+              这是全公司混合口径的数，不是分档边际回报，只能当方向看。
+        confidence: 9
+        reference:
+          - docs/4-performance-analysis/04-marginal-roi-decay/cn.md
+      - id: brand-search-credit
+        question:
+          en: "How can average ROI look fine when the channel is partly taking credit for free demand?"
+          cn: "渠道里有一部分是抢了自然需求的量，平均 ROI 怎么还会好看？"
+        answer:
+          en:
+            >
+              Because the average still rises when the free demand is counted twice. When
+              customers who would have found you anyway are attributed to the paid click, the
+              blended number goes up and nothing looks wrong. eBay's experiment on its own
+              brand keywords showed the scale of this: shutting the brand keyword ads off and
+              measuring the loss, 99.5% of the lost clicks were immediately picked up by
+              organic search on the same platform. That means the paid clicks were largely
+              substituting for clicks that were already going to happen. The report calls the
+              remaining 0.5% a lower bound, because some of it may have gone to a different
+              entry point, such as typing ebay.com directly.
+          cn:
+            >
+              因为本来就会来的那部分需求被算了两次，平均数照样往上走。当那些不投广告
+              也会找到你的客户被归到付费点击上，混合数字就会变好，看起来哪儿都没问题。
+              eBay 对自家品牌词做的实验给出了这件事的量级：把品牌词广告关掉再量损失，
+              失去的点击里有 99.5% 立刻被同平台的自然搜索接走。也就是说那些付费点击
+              很大程度上是在替代本来就会发生的点击。论文把剩下的 0.5% 称作保留下限，
+              因为其中可能还有人转去了别的入口，比如直接敲 ebay.com。
+        confidence: 9
+        reference:
+          - docs/4-performance-analysis/04-marginal-roi-decay/cn.md
+      - id: new-vs-returning-customers
+        question:
+          en: "Why does mixing new and returning customers distort the average?"
+          cn: "把新客和老客混在一起算，平均数怎么会失真？"
+        answer:
+          en:
+            >
+              Because the two cohorts behave differently on every side of the calculation.
+              Acquiring a new customer costs more and they spend more on the first order, which
+              lifts the average return per yuan spent. But a new customer bought with
+              acquisition spend on one side of the ledger and pays back over several years on
+              the other, and a cohort-heavy average flatters the period in which you bought
+              them. The month after you stop buying that cohort, the average drops even though
+              nothing about the channel changed. Reading a marginal curve is therefore a
+              question about cohorts: follow the same group of customers through its full
+              lifetime rather than mixing this month's buyers with last month's.
+          cn:
+            >
+              因为两类人在算式的每一边都不一样。拉一个新客成本更高，首单金额也更大，
+              平均每元花费换回的数被抬高了。但新客这一边是获客费用，
+              另一边要靠后面几年的复购才补得回来，重仓新客的平均数会让「买他的那个月」
+              显得特别好看。等到你不再买这批人，渠道什么都没变，平均数却掉下来了。
+              所以读边际曲线本质上是一个队列问题：跟着同一批客户走完整个生命周期，
+              而不是把这个月买的人和上个月买的人混在一起。
+        confidence: 8
+        reference:
+          - docs/4-performance-analysis/04-marginal-roi-decay/cn.md

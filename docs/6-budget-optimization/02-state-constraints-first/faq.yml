@@ -1,0 +1,55 @@
+id: x-market-6-budget-optimization-02-state-constraints-first
+
+data:
+  - name:
+      en: state the constraints first
+      cn: 先列约束
+    qa:
+      - id: why-constraints-change-the-answer
+        question:
+          en: Why does a constraint change the optimal split, not just shrink it?
+          cn: 为什么约束不是把方案缩小，而是把方案挪位？
+        answer:
+          en: >
+            Because the unconstrained optimum sits where the marginal curves cross. A wall cuts that crossing off, so the optimum slides to the corner of the feasible region. In the worked example, capping social at 300k moves 100k from social into content, whose marginal falls from 2.0 to 1.3 — that single move is where the drop in total return comes from.
+          cn: >
+            因为无约束的最优解停在三条边际曲线的交点上。墙把这个交点切掉了，最优解就滑到可行区域的墙角。算例里，社交封顶 30 万，10 万从社交挪到内容，内容的边际从 2.0 掉到 1.3——总回报那点差距就是这么来的。
+        confidence: 10
+        reference:
+          - docs/6-budget-optimization/02-state-constraints-first/cn.md
+      - id: five-kinds-of-constraints
+        question:
+          en: What constraints should be listed before solving?
+          cn: 解之前要列哪些约束？
+        answer:
+          en: >
+            Five kinds. Contractual floors and ceilings — money committed or capped by an agreement. Minimum spends that brand or platform rules require. What you can actually sell, which is usually set by inventory rather than by marketing. The people you have to execute with. And the rules, from regulators and from the platforms themselves. Each one should answer three questions: who set it, where it is written down, and when it stops applying.
+          cn: >
+            五类。合同锁死的上下限；品牌或平台规则要求的最低投放；你实际卖得出的量，这个通常由库存而不是市场部决定；执行的人手；以及法规和平台自己的规则。每一条都要答得出三个问题：谁定的、写在哪儿、什么时候失效。
+        confidence: 10
+        reference:
+          - docs/6-budget-optimization/02-state-constraints-first/cn.md
+      - id: is-a-fake-optimum-useful
+        question:
+          en: Is a lower but feasible answer better than a higher unconstrained one?
+          cn: 一个小但做得到的解，比一个大但做不到的解好吗？
+        answer:
+          en: >
+            Yes, and that is the whole point. The 2.52 in the example rests on an assumption nobody can satisfy, so it is not a number you can act on. The 2.32 is real: it fits inside the contract, the inventory and the daily budget cap. An answer you can execute is worth more than a larger answer you cannot, and the gap between them is usually the cost of forgetting to list something.
+          cn: >
+            是的，这正是要点。算例里那个 2.52 建立在一个没人能满足的假设上，它不是一个能拿来执行的数。2.32 才是真的：它落在合同、库存和日预算上限之内。做得出来的解比做不到的大解更值钱，而两者之间的差，通常就是「漏列了一条约束」的价钱。
+        confidence: 9
+        reference:
+          - docs/6-budget-optimization/02-state-constraints-first/cn.md
+      - id: constraints-go-stale
+        question:
+          en: How often do the constraints need rechecking?
+          cn: 约束要多久重看一次？
+        answer:
+          en: >
+            Every time you re-solve, and note the date. Inventory moves daily, contracts expire, people change, platform rules get rewritten. Solving with constraints from three months ago is solving a problem that no longer exists. The feasible region is not a constant, and a budget built on last quarter's walls is a budget nobody can run.
+          cn: >
+            每解一次就重看一次，并且记下日期。库存每天变，合同会到期，人会走，平台规则会被改写。拿三个月前的约束去解今天的预算，等于解了一个已经不存在的问题。可行区域不是常数，拿上个季度的墙算出来的预算，谁也跑不动。
+        confidence: 9
+        reference:
+          - docs/6-budget-optimization/02-state-constraints-first/cn.md

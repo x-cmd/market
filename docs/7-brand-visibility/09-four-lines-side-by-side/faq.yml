@@ -1,0 +1,92 @@
+id: x-market-7-brand-visibility-09-four-lines-side-by-side
+data:
+  - name:
+      en: Putting four brand-visibility numbers side by side
+      cn: 把四个品牌可见度数字并排看
+    qa:
+      - id: which-four-lines
+        question:
+          en: Which four metrics belong on a brand-visibility dashboard, and what does each one actually count?
+          cn: 品牌可见度看板上该放哪四个数？每个数到底在数什么？
+        answer:
+          en: |
+            Four metrics. Search share counts how many slots your brand holds in the results for
+            category queries, so it counts slots rather than people. Social mentions counts how many
+            people actively opened your brand page, so it counts people who already know you. AI
+            mentions counts whether a model names you when asked a category question, so it counts
+            what the model happens to have in mind. Direct traffic counts visitors who typed your
+            URL with no referrer, so it counts recall. These answer four different questions, so
+            none can substitute for another, and averaging them into one brand health score destroys
+            the information, because you can no longer tell which one moved.
+          cn: |
+            四个数。搜索份额数的是品类词结果里你占几个坑位，所以它数坑位而不是人。社媒提及数的是有多少人主动打开你的品牌条目，所以它数已经知道你的人。AI 提及数的是被问品类问题时模型会不会把你说出去，所以它数模型脑子里的印象。直接流量数的是没带来源、直接敲网址进来的访客，所以它数记性。四个数回答四个不同的问题，谁也替不了谁。合成一个品牌健康度分数会把信息毁掉，因为你从此不知道是哪一个在动。
+        confidence: 9
+        reference:
+          - docs/7-brand-visibility/09-four-lines-side-by-side/cn.md
+      - id: what-moved-on-sep-18
+        question:
+          en: In the On Holding case, which of the four lines actually moved after the September 18, 2026 Mbappe signing?
+          cn: On Holding 那个案子里，2026 年 9 月 18 日签下姆巴佩之后，四条线里到底哪条动了？
+        answer:
+          en: |
+            Only one, social mentions. On Wikipedia pageviews hit 14,912 on September 18 against a
+            1,705-per-day baseline for the previous 13 days, an 8.74x multiple. Every other line
+            stayed flat. Search share held 4 slots across 10 running-shoe category terms and 0 slots
+            across 4 football terms. AI mentions came back 29 out of 40 on running-shoe questions and
+            0 out of 20 on football questions. Direct traffic was not publicly available at all.
+          cn: |
+            只有一条，社媒提及。9 月 18 日 On 的维基条目浏览量冲到 14,912 次，而前 13 天的日均只有 1,705 次，是基线的 8.74 倍。别的线都没动。搜索份额在跑鞋 10 个品类词里占 4 个坑位，在足球 4 个词里占 0 个。AI 提及在跑鞋问题上 40 次里提 29 次，在足球问题上 20 次里提 0 次。直接流量公开完全取不到。
+        confidence: 9
+        reference:
+          - docs/7-brand-visibility/09-four-lines-side-by-side/cn.md
+      - id: ai-still-says-nike
+        question:
+          en: Seven weeks after the signing, what did the AI still say about Mbappe footwear brand?
+          cn: 签约七周之后，AI 说姆巴佩穿的是哪个牌子？
+        answer:
+          en: |
+            Nike. Asked which brand Mbappe wears for football boots, the model answered Nike every
+            one of four times; asked which brands Mbappe and Thierry Henry wear, it again answered
+            Nike four times out of four. That answer was already wrong on November 9, 2026, because
+            Mbappe signed with On on September 18. The model returns the answer that best matches the
+            question in its training data, not the current fact, which is why the AI line can look
+            healthy while being wrong.
+          cn: |
+            Nike。问姆巴佩穿什么牌子的球鞋，四次回答四次都说 Nike。问姆巴佩和亨利穿什么牌子，同样四次都说 Nike。这个回答在 2026 年 11 月 9 日已经是错的，因为姆巴佩 9 月 18 日签了 On。模型返回的是训练数据里最像这个问题的答案，不是现在的事实。所以 AI 这一条线可以看着很健康，同时是错的。
+        confidence: 9
+        reference:
+          - docs/7-brand-visibility/09-four-lines-side-by-side/cn.md
+      - id: why-peer-comparison
+        question:
+          en: How do you tell this one brand moving apart from the whole category moving?
+          cn: 怎么区分「这一个品牌在动」和「整个品类在动」？
+        answer:
+          en: |
+            Put the same metric on the same day for the same competitors, and compare multiples
+            against each brand own prior baseline. On September 18, 2026, On was 8.74x its baseline
+            while the other eleven running-shoe brands ranged from 0.73x for 361 Degrees to 1.08x for
+            Adidas, all hugging 1.0. Nike, Mbappe former sponsor, was 0.96x. If football footwear had
+            genuinely surged that day, Adidas, Nike and Puma would have risen too. They did not, so
+            the 8.74x belongs to On.
+          cn: |
+            把同一个指标、同一天、同样的口径算到竞争对手头上，再拿每个品牌自己的前期基线做分母比倍数。2026 年 9 月 18 日，On 是自己基线的 8.74 倍，另外十一个跑鞋品牌从 361° 的 0.73 倍到 Adidas 的 1.08 倍，全都贴着 1.0。Nike，姆巴佩的老东家，是 0.96 倍。如果那天足球鞋真的热起来了，Adidas、Nike、Puma 也该跟着涨。它们没涨，所以这 8.74 倍是 On 自己的。
+        confidence: 9
+        reference:
+          - docs/7-brand-visibility/09-four-lines-side-by-side/cn.md
+      - id: why-direct-traffic-blank
+        question:
+          en: Why is the direct-traffic cell left blank instead of filled with an estimate?
+          cn: 直接流量那一格为什么留空，而不是填个估算值？
+        answer:
+          en: |
+            Because per-brand direct traffic is published by nobody. It exists only inside a brand
+            own web analytics. The nearest public figure is the company own channel disclosure, and
+            for On that is Q2 2026 DTC net sales of CHF 388.4 million, up 26.0 percent, at 45.7
+            percent of net sales. But that quarter ended June 30, 2026, before the September 18
+            signing, so it cannot speak to the event. Leaving the cell blank and saying why is more
+            useful than a plausible-looking number that quietly answers a different question.
+          cn: |
+            因为单个品牌的直接流量谁都不公布，它只存在于品牌自己的网站分析工具里。最接近的公开数是公司自己披露的渠道数据，对 On 来说是 Q2 2026 的 DTC 净销售 388.4 百万瑞郎，同比涨 26.0%，占净销售 45.7%。但这个季度截至 2026 年 6 月 30 日，在 9 月 18 日签约之前，说不了这件事。那格留空并写清为什么，比填一个看着像样、实则回答了另一个问题的数有用。
+        confidence: 9
+        reference:
+          - docs/7-brand-visibility/09-four-lines-side-by-side/cn.md

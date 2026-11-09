@@ -1,0 +1,56 @@
+id: x-market-7-brand-visibility-06-brand-terms-vs-category-terms
+data:
+- name:
+    en: Brand terms vs category terms
+    cn: 品牌词与品类词
+  qa:
+  - id: what-is-a-brand-term
+    question:
+      en: What is a brand term, and how is it different from a category term?
+      cn: 品牌词是什么，跟品类词差在哪？
+    answer:
+      en: A brand term contains a company, product or brand name. Someone typing "lululemon" already knows who you are and is on the way to buying. A category term carries no brand name, so someone typing "yoga pants" may not know you exist. Brand-term searchers sit near the end of the decision path. Category-term searchers sit at the start, and they are the pool that feeds brand-term searches later.
+      cn: 品牌词里带着公司名、产品名或品牌名。搜「lululemon」的人已经知道你是谁，正在去买的路上。品类词里不带任何品牌名，搜「yoga pants」的人可能压根不知道你存在。品牌词的搜索者站在决策链的末端，品类词的搜索者站在开头，而后者正是以后会变成品牌词搜索的那批人。
+    confidence: 9
+    reference:
+    - docs/7-brand-visibility/06-brand-terms-vs-category-terms/cn.md
+  - id: why-not-combine-them
+    question:
+      en: Why shouldn't brand-term and category-term volume be reported as one number?
+      cn: 为什么品牌词和品类词的量不能合成一个数报？
+    answer:
+      en: Because they can move in opposite directions in the same quarter, and combining them hides that. In 2025 Q2 Lululemon brand-term pageviews rose 349% quarter over quarter while the Yoga pants category term fell 35%. A combined total would report a healthy brand in a shrinking category and hide the part that actually needed explaining, which in Lululemon's case was an operating profit that fell 22%.
+      cn: 因为同一个季度里两者可以朝相反方向走，合成之后这个事实就被抹掉了。2025 年第二季度，Lululemon 品牌词的季度浏览量环比涨 349%，同一时间 Yoga pants 品类词跌了 35%。合起来的总数会讲出一个「品牌健康、品类萎缩」的故事，同时把最需要解释的那一半藏起来——Lululemon 的营业利润跌了 22%。
+    confidence: 9
+    reference:
+    - docs/7-brand-visibility/06-brand-terms-vs-category-terms/cn.md
+  - id: what-brand-terms-tell-you
+    question:
+      en: What does a rising brand-term number actually tell you about the business?
+      cn: 品牌词在涨，到底说明了业务的什么？
+    answer:
+      en: It tells you how many people carry your name in their head, which is brand health, not how many customers you gained. Lululemon's brand term rose about 39-fold between February 2024 and April 2025 after a two-day SXSW pop-up in Austin, yet that fiscal year revenue grew only 5% and operating profit fell 22%. Visibility and revenue are separate readings, so a brand-term number needs a business number beside it.
+      cn: 它说明有多少人脑子里装着你的名字，这是品牌健康度，不是你多了多少客户。Lululemon 的品牌词从 2024 年 2 月到 2025 年 4 月涨了约 39 倍，起因是奥斯汀 SXSW 上一个两天的快闪，可那个财年收入只涨了 5%，营业利润跌了 22%。可见度和营收是两笔账，所以品牌词这个数旁边必须配一条业务线的数。
+    confidence: 8
+    reference:
+    - docs/7-brand-visibility/06-brand-terms-vs-category-terms/cn.md
+  - id: what-category-terms-tell-you
+    question:
+      en: What does a falling category term mean, is the market shrinking or is your share being taken?
+      cn: 品类词在跌，是市场在缩还是份额被抢？
+    answer:
+      en: You cannot tell from the category term alone, you need competitors' brand terms to separate the two. Lululemon's Yoga pants category term fell 22% in 2025 while Alo Yoga's and Vuori's brand terms both grew, which points to share being taken rather than the category shrinking. The two diagnoses point in opposite directions, so the category term has to be read alongside rival brand terms.
+      cn: 只看品类词分不出来，得把竞品的品牌词一起拉进来。Lululemon 的 Yoga pants 品类词在 2025 年跌了 22%，同期 Alo Yoga 和 Vuori 的品牌词都在涨，这更像份额被抢，而不是品类在缩。这两种诊断指向相反的方向，所以品类词必须对着竞品的品牌词一起读。
+    confidence: 8
+    reference:
+    - docs/7-brand-visibility/06-brand-terms-vs-category-terms/cn.md
+  - id: can-wikipedia-pageviews-stand-in-for-search-volume
+    question:
+      en: Can Wikipedia pageviews stand in for search volume, and what are the limits?
+      cn: 维基百科的浏览量能当搜索量用吗，边界在哪？
+    answer:
+      en: Only as a trend signal, never as a level. Pageviews count how many people looked the term up on Wikipedia, which is a free encyclopedia with a narrower, research-leaning readership than the search population, and some people search a term without opening the article. Google Trends could not be reached from this environment after three attempts, so Wikipedia pageviews were used as a reproducible proxy. The direction of the curves holds, the absolute values are not search volumes.
+      cn: 只能当趋势用，不能当数值用。浏览量数的是有多少人上维基百科查了这个词，而维基百科是免费百科，用户画像比真实搜索人群窄，也有人搜了词没点进维基百科。本环境三次尝试都没能连上 Google Trends，所以用维基百科浏览量当一个可复现的替代口径。曲线的方向站得住，绝对值不是搜索量。
+    confidence: 9
+    reference:
+    - docs/7-brand-visibility/06-brand-terms-vs-category-terms/cn.md

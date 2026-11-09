@@ -1,0 +1,272 @@
+id: x-market-5-campaign-analysis-05-budget-pacing-even-vs-weekend
+
+data:
+  - name:
+      en: what pacing is and why it changes the outcome
+      cn: 节奏是什么，为什么它能改结果
+    qa:
+      - id: what-pacing-means
+        question:
+          en: "In this page, what exactly is 'pacing'? Is it just a daily budget cap?"
+          cn: "这一页里说的「节奏」到底是什么？就是个每日预算上限吗？"
+        answer:
+          en:
+            >
+              No. Pacing here means the shape of the budget laid out on the timeline, not
+              the ceiling. Two plans can both be capped at 1,000 yuan a day and still have
+              completely different shapes: one spends 1,000 on every day of a fortnight, the
+              other spends 400 on weekdays and 2,500 at the weekend. Both total 14,000. The
+              shape matters because the auction prices each moment against the demand and
+              inventory present at that moment, so concentrating money into a crowded window
+              buys a worse unit price and, if the buyers there are not in a buying mood,
+              a worse conversion rate as well.
+          cn:
+            >
+              不是。这里的节奏指的是预算在时间轴上摊开的形状，不是天花板。两套方案都可以
+              卡在每天 1000 元的上限上，形状却完全不同：一套十四天每天花 1000，另一套工作日
+              花 400、周末花 2500，总额都是 14000。形状之所以要紧，是因为竞价系统是拿当下
+              这一刻的供需和库存给每一次曝光定价的。把钱集中压进一个拥挤的时段，买到的是更差
+              的单价；如果那批买家当下也没有购买的意思，转化率会更差。
+        confidence: 9
+        reference:
+          - docs/5-campaign-analysis/05-budget-pacing-even-vs-weekend/cn.md
+      - id: demand-is-not-flat
+        question:
+          en: "You say demand is not flat over the year. What public data shows that?"
+          cn: "你说需求一年到头不是平的。有什么公开数据能证明？"
+        answer:
+          en:
+            >
+              The UK's Office for National Statistics publishes, every month, internet sales
+              as a percentage of total retail sales. In 2025 that share moved between 26.1%
+              and 32.4%. August 2025 was the low at 26.1%, October was 28.0%, November jumped
+              to 32.4% — the year's high — and December fell back to 29.6%. The same shape
+              repeats: November 2024 was 30.3% and also the annual peak, while August and
+              January are the troughs. That peak is not demand being created out of nothing.
+              It is shoppers who would otherwise have browsed in physical stores moving
+              online for the promotions, and moving back once the promotions end. Plan a
+              budget against the average of the year and you will under-buy in November and
+              over-buy in August.
+          cn:
+            >
+              英国国家统计局（ONS）每个月公布网络零售额占零售总额的比重。2025 年这个比重在
+              26.1% 到 32.4% 之间摆动：八月 26.1% 是全年最低，十月 28.0%，十一月冲到 32.4%
+              是全年最高，十二月回落到 29.6%。这个形状年年重复，2024 年十一月 30.3% 同样是
+              全年最高点，八月和一月都是谷底。这个峰不是凭空多出来的需求，是一批本来会去
+              线下逛的人为了促销改成了在网上下单，促销一过又回去。拿全年平均需求去排预算，
+              十一月会买少了，八月会买多了。
+        confidence: 9
+        reference:
+          - docs/5-campaign-analysis/05-budget-pacing-even-vs-weekend/cn.md
+  - name:
+      en: how buyers actually purchase
+      cn: 买家实际是怎么买东西的
+    qa:
+      - id: three-purchases-a-year
+        question:
+          en: "Etsy says the average active buyer purchased about three times in 2025. Why does that matter for pacing?"
+          cn: "Etsy 说 2025 年活跃买家平均买了大约 3 次。这个数跟节奏有什么关系？"
+        answer:
+          en:
+            >
+              Because it tells you where the demand actually sits. If half the buyer base
+              makes one purchase in the whole year and the other half about five, then
+              demand is not a smooth daily curve — it is a small number of purchase
+              occasions for each person. Spending a flat budget across 365 days puts most
+              of it on people who were never going to buy that day. The frequency structure
+              also tells you which buyers are worth concentrating on: habitual buyers, who
+              spent at least 200 dollars and purchased on six or more days in the past
+              twelve months, were 5.9 million people — about 7% of active buyers — and
+              accounted for about 40% of 2025 GMS. Their purchase days are the days worth
+              watching, not the average day.
+          cn:
+            >
+              因为它告诉你需求到底落在哪里。如果一半的买家一整年只下一次单，另一半大概下五次，
+              需求就不是一条平缓的日曲线，而是每个人身上少数几个购买时刻。把预算平均撒在
+              三百六十五天里，大部分就撒在了当天根本不会买的人身上。频次结构还告诉你该盯谁：
+              习惯型买家（过去十二个月花了 200 美元以上、在六个以上日子里下过单）是 590 万人，
+              约占活跃买家的 7%，贡献了 2025 年约 40% 的成交额。他们的购买日才是该盯的日子，
+              不是平均的那一天。
+        confidence: 9
+        reference:
+          - docs/5-campaign-analysis/05-budget-pacing-even-vs-weekend/cn.md
+      - id: three-layers-of-pacing-effect
+        question:
+          en: "You list three ways pacing changes results. Which three?"
+          cn: "你说节奏通过三层影响结果。哪三层？"
+        answer:
+          en:
+            >
+              Auction environment, buyer readiness, and inventory. In the auction layer,
+              every advertiser chasing the same audience on the same concentrated days
+              bids against you, so the price rises and the same money buys fewer impressions
+              — a pure loss on the page. In the buyer layer, the majority of people do not
+              purchase continuously, so money concentrated on two days when your target's
+              intent is not at its peak buys two visits rather than a purchase. In the
+              inventory layer, a volume spike brings stockouts and slow fulfilment, which
+              pushes the conversion rate down and feeds refunds and negative feedback back
+              into your account quality. That third layer never shows up in the ad report;
+              it shows up in support tickets and refund rates.
+          cn:
+            <>
+              竞价环境、买家的购买意愿、库存。竞价这一层，所有想触达同一批人的对手在集中投的
+              那几天跟你一起出价，价格被推高，同样的钱买到更少的曝光，这一层是纯账面损失。
+              购买意愿那一层，绝大多数人的购买不是连续的，把预算压在两天而目标用户那两天的
+              意愿不在峰值上，买到的就是两次访问而不是一次成交。库存那一层，量一冲高，缺货
+              和延迟发货跟着上来，转化率掉下去，退款和差评再回来压账户表现。第三层不出现在投放
+              报表里，只出现在客服工单和退款率里。
+        confidence: 8
+        reference:
+          - docs/5-campaign-analysis/05-budget-pacing-even-vs-weekend/cn.md
+  - name:
+      en: the two-week comparison
+      cn: 两周两种花法的账
+    qa:
+      - id: two-weeks-two-plans
+        question:
+          en: "Walk me through the two-week example. Same budget, what did each plan buy?"
+          cn: "把那个两周的例子讲一遍。同样一笔预算，两种花法各买到什么？"
+        answer:
+          en:
+            >
+              The budget is 14,000 yuan over two weeks: ten weekdays plus four weekend
+              days, weekday CPM at 60 yuan and weekend CPM at 70 yuan because weekend
+              inventory is more crowded. Spreading evenly, 1,000 yuan a day on both weekday
+              and weekend, spends 10,000 on weekdays and 4,000 at the weekend, buying
+              166,667 plus 57,143 impressions for 223,810 in total — a blended CPM of
+              62.55 yuan. Loading toward the weekend, 400 yuan a day on weekdays and 2,500
+              a day at the weekend, spends 4,000 and 10,000 respectively and buys 66,667
+              plus 142,857 for 209,524 — a blended CPM of 66.82 yuan. Same money, evenly
+              spread buys 14,286 more impressions, 6.8% more, and this is before you count
+              any difference in conversion rate between weekends and weekdays. Note that
+              the 60 and 70 yuan CPMs and both budget splits are a worked demonstration
+              built on public data, not a real campaign.
+          cn:
+            >
+              预算是 14000 元、两周：10 个工作日加 4 个周末日。工作日 CPM 60 元，周末 CPM
+              70 元，因为周末的库存更挤。均匀花的话，工作日和周末都是每天 1000 元，工作日
+              花掉 10000 买到 166667 次曝光，周末花掉 4000 买到 57143 次，合计 223810 次，
+              混下来实际 CPM 62.55 元。往周末压的话，工作日每天 400 元、周末每天 2500 元，
+              两边分别花掉 4000 和 10000，买到 66667 次和 142857 次，合计 209524 次，混下来
+              实际 CPM 66.82 元。同样一万四，均匀花多买 14286 次曝光，多 6.8%，这还没算周末
+              和工作日转化率的差别。要说明的是，60 元和 70 元这两个 CPM 以及两套预算分配都是
+              按公开数据编的演示算例，不是真实投放。
+        confidence: 9
+        reference:
+          - docs/5-campaign-analysis/05-budget-pacing-even-vs-weekend/cn.md
+      - id: when-concentrating-wins
+        question:
+          en: "So is concentrating the budget always worse? When does it win?"
+          cn: "那集中花是不是一定更差？什么时候它能赢？"
+        answer:
+          en:
+            >
+              When the demand genuinely rises in that window. Concentrating into a period
+              that is more expensive only makes sense if the extra demand there is worth
+              more than the premium you pay. Etsy's own 10-K documents this: sellers see
+              increased sales and use more Etsy services during the fourth-quarter holiday
+              shopping season, which raises Etsy's GMS and revenue in every fiscal Q4,
+              with costs and marketing expenses following the same trend. So the question
+              is not whether even or concentrated is better in the abstract. It is whether
+              you know where to push, and whether demand actually rises at the point you
+              push. On the specific evidence available on this page — the UK's monthly
+              internet-sales share — the demand peak and the price peak both land in
+              November, which is exactly the case where concentrating can pay.
+          cn:
+            <>
+              当那个窗口的需求确实涨起来的时候。把钱集中到一个更贵的时段，只有当那里的额外需求
+              值回你付的溢价才划算。Etsy 自己的 10-K 就记着这件事：卖家在第四季度假日购物季
+              销量增加、用更多 Etsy 服务，Etsy 在每个财年的第四季度 GMS 和收入都增加，成本和
+              营销费用跟着同一个趋势走。所以问题不是抽象地比均匀和集中谁好，而是你知不知道
+              该往哪儿压，以及压的那个点需求到底涨不涨。就这一页手上的证据——英国逐月的网络零售
+              占比——需求峰和价格峰都落在十一月，而这恰恰是集中投放有可能划算的那种情形。
+        confidence: 8
+        reference:
+          - docs/5-campaign-analysis/05-budget-pacing-even-vs-weekend/cn.md
+  - name:
+      en: a company that changed pacing and got paid
+      cn: 改节奏赚到了钱的公司
+    qa:
+      - id: etsy-seller-budget-pacing
+        question:
+          en: "What did Etsy actually change, and what happened to the numbers?"
+          cn: "Etsy 到底改了什么？数上有什么变化？"
+        answer:
+          en:
+            >
+              In its FY2025 Form 10-K, Etsy credited the improvement in its Etsy Ads
+              product to three things: machine-learning-based ranking optimisation, more
+              efficient seller budget pacing, and more seamless integration of onsite ads
+              within organic search results. Alongside those, Etsy Ads advertising revenue
+              was up 62.2 million dollars year on year for 2025. Total revenue rose 2.7%
+              to 2,883.5 million dollars, and the revenue take rate — revenue divided by
+              GMS — went from 22.3% to 24.2%, a 190 basis point gain. Etsy also said its
+              marketplace GMS year-on-year performance improved by nearly nine percentage
+              points between the first quarter and the fourth quarter of 2025. Note the
+              attribution: Etsy lists three causes together, so the 62.2 million cannot be
+              attributed to pacing alone.
+          cn:
+            <>
+              在 2025 财年 10-K 里，Etsy 把 Etsy Ads 产品的效率提升归因于三件事：基于机器学习
+              的排序优化，更有效的卖家预算节奏，以及把站内广告更无缝地并进自然搜索结果。
+              在这几项一起改的同时，Etsy Ads 的广告收入 2025 年同比增加了 6220 万美元。
+              平台总收入同比涨 2.7% 到 28.835 亿美元，收入提成率（收入除以 GMS）从 22.3%
+              升到 24.2%，涨了 190 个基点。Etsy 还说，2025 年 marketplace 的 GMS 同比表现在
+              第一季度到第四季度之间改善了近 9 个百分点。这里要注意归因：Etsy 把三个原因并列
+              写在一起，所以那 6220 万不能全算在节奏头上。
+        confidence: 9
+        reference:
+          - docs/5-campaign-analysis/05-budget-pacing-even-vs-weekend/cn.md
+      - id: click-volume-before-price
+        question:
+          en: "Etsy said the 2026 increase was driven by click volume first and price per click second. Why does the order matter?"
+          cn: "Etsy 说 2026 年的增长先是点击量，其次才是单次点击价格。这个次序为什么重要？"
+        answer:
+          en:
+            >
+              Because the two sit on different sides of your control. Click volume is what
+              your pacing and your budget shape determine — how many people you show the
+              ad to, which depends on when you spend and how much you concentrate it.
+              Price per click is the auction's verdict, which you influence through bids,
+              targeting and creative, and which you do not fully control. In the 2026 nine
+              months, Etsy Ads advertising revenue was up 64.4 million dollars year on
+              year, and in the third quarter alone up 30.9 million, with click volume named
+              ahead of price. If the order is reversed — price up, volume flat — then the
+              auction got more expensive and you simply bought fewer of the same thing.
+              That is the opposite of what you want.
+          cn:
+            <>
+              因为这两样在你的控制范围的两边。点击量是你的节奏和预算形状决定的：花在什么时候、
+              集中到什么程度，决定了有多少人看到你的广告。点击价格是竞价系统的判决，你通过出价、
+              定向和素材去影响它，但不完全由你决定。2026 年前三季度，Etsy Ads 广告收入同比增加
+              6440 万美元，第三季度单季增加 3090 万美元，Etsy 把点击量排在单次点击价格之前。
+              如果次序反过来——价格涨、点击量平——那说明竞价变贵了，你只是用同样的东西买得更少，
+              这跟想要的结果正好相反。
+        confidence: 9
+        reference:
+          - docs/5-campaign-analysis/05-budget-pacing-even-vs-weekend/cn.md
+      - id: pacing-is-a-paid-feature
+        question:
+          en: "What tells you the industry treats pacing as a real lever rather than a report setting?"
+          cn: "有什么能说明行业把节奏当成一个真变量，而不是报表里的一个设置项？"
+        answer:
+          en:
+            >
+              People sell software for it. Marin Software, a listed advertising software
+              company, states in its filings that it has deployed its latest platform and is
+              "in the process of deploying new features and services, including Marin
+              budget pacing and dynamic allocation tools." Its revenue has been shrinking
+              — from 30.0 million dollars in 2020 to 17.7 million in 2023 — so it is not a
+              growth story. But the fact that a vendor put budget pacing and dynamic
+              allocation into the product name shows that advertisers are willing to pay
+              for control over the shape of their spend, not just over the amount of it.
+          cn:
+            <>
+              有人为它卖软件。Marin Software 是一家上市的广告软件公司，它在申报文件里写明，
+              已经上线最新平台，正在部署新功能和服务，其中包括「Marin 预算节奏和动态分配工具」。
+              它的收入在缩水——从 2020 年的 3000 万美元掉到 2023 年的 1770 万——所以这不算一个
+              增长故事。但一家厂商能把预算节奏和动态分配写进产品名，说明花钱的人愿意为控制
+              花钱的形状付钱，而不只是为控制花钱的数量付钱。
+        confidence: 8
+        reference:
+          - docs/5-campaign-analysis/05-budget-pacing-even-vs-weekend/cn.md

@@ -1,0 +1,71 @@
+id: x-market-2-market-research-11-coverage-gaps
+
+data:
+  - name:
+      en: coverage gaps in a statistic
+      cn: 一个数覆盖了谁、漏了谁
+    qa:
+      - id: how-to-read-a-coverage-note
+        question:
+          en: What should I look for first when I see a market statistic?
+          cn: 看到一个市场数字，我第一眼该看什么？
+        answer:
+          en: >
+            Look for the frame before the value. The single most informative line in any official series is the one that names what is inside it: the size threshold, the industry code, the year, and the unit. Eurostat's e-commerce survey series names itself "A.GE10.C-E.E_AWSVAL.PC_ETURN.EU27_2020", which reads as "10 or more employees, NACE C-E, turnover from web sales as a percentage of turnover, EU27 from 2020". Once you read that string, you know the 19.82% is a statement about a fifth of EU firms by count, not about EU firms. A number without a frame is not a fact about the world; it is a fact about a box that someone drew.
+          cn: >
+            先看框，再看值。一条官方序列里信息量最大的，是把框写出来的那一段：规模门槛、行业代码、年份、单位。Eurostat 电商调查的序列名是 "A.GE10.C-E.E_AWSVAL.PC_ETURN.EU27_2020"，读出来是「雇员 10 人及以上、NACE C-E 段、网络销售占营业额的比例、欧盟 27 国（2020 起）」。看懂这串字符，你就知道 19.82% 说的是按企业家数算不到五分之一的欧盟企业，不是欧盟企业全体。一个没有框的数不是关于世界的事实，是关于某个人画出来的盒子的事实。
+        confidence: 10
+        reference:
+          - docs/2-market-research/11-coverage-gaps/cn.md
+
+      - id: what-gets-left-out-by-size
+        question:
+          en: How much of the market does a size threshold leave out?
+          cn: 一个规模门槛能漏掉多少市场？
+        answer:
+          en: >
+            In EU retail, 5.17% of the businesses. In 2020 there were 3,212,640 retail enterprises in the EU27 and only 166,145 of them had 10 or more employees. But those 166,145 firms held 77.18% of retail turnover. The remaining 3,045,772 firms — 94.8% of the count — had 0 to 9 employees and turned over 22.6% of the money. So a size threshold does not remove a random sample; it removes the long tail and keeps the head of the distribution. The number you get is not a smaller version of the market, it is a different market with the same label.
+          cn: >
+            在欧盟零售业里，是 5.17% 的企业家数。2020 年欧盟 27 国零售业共 3,212,640 家企业，其中雇员 10 人及以上的只有 166,145 家。但正是这 166,145 家，握着零售业 77.18% 的营业额。剩下 3,045,772 家（占家数 94.8%）雇员都在 0 到 9 人之间，分走 22.6% 的营业额。所以规模门槛不是随机抽样，它砍掉的是长尾，留下的是分布的头部。你拿到的数不是这个市场的小一号版本，是换了内容却用同一个名字的另一个市场。
+        confidence: 10
+        reference:
+          - docs/2-market-research/11-coverage-gaps/cn.md
+
+      - id: which-way-the-bias-goes
+        question:
+          en: Which direction does the bias run when you miss the small end?
+          cn: 漏掉小的那一头，数字会往哪边偏？
+        answer:
+          en: >
+            It depends on what the number claims to be. Share-type figures get overstated: a platform's GMV covers only its own marketplace, so platform GMV as a share of the whole market looks larger than it is, and an N-firm concentration statistic computed only over companies with published accounts makes concentration look higher. Growth and level figures get understated: small firms have low bases and high growth rates, so a series that excludes them reports slower growth, and the turnover that sits outside the frame is simply missing from the total. One number can do both at once — overstating share while understating the market's size.
+          cn: >
+            取决于这个数声称自己在说什么。份额类的会偏高：平台的 GMV 只覆盖它自己平台上的交易，所以平台 GMV 占整个市场的比例看着比实际大；只统计能查到财报的公司算出来的前 N 家集中度，也会显得更高。增长和金额类的会偏低：小企业基数低、涨得快，把它们排除在外的序列会报出更慢的增速；框外的营业额更是直接从总额里消失了。同一个数可以两头都占——既高估份额，又低估市场规模。
+        confidence: 9
+        reference:
+          - docs/2-market-research/11-coverage-gaps/cn.md
+
+      - id: breaking-a-line-on-a-gap
+        question:
+          en: When is it wrong to draw a straight line across a gap in a time series?
+          cn: 时间序列上的断点，什么时候不该连成一条线？
+        answer:
+          en: >
+            When something real changed between the two points — the definition, the sample, or the coverage. The EU e-commerce series is a live example. The EU27 figure is 19.82% for 2024 and 28.5% for 2025, an 8.7 point jump in one year, and Eurostat's own note says the 2025 survey coverage changed and the two years are not directly comparable. Individual countries make it clearer: the Netherlands reads 28.12% in 2023, NA in 2024, and 29.91% in 2025; Belgium reads 23.8% in 2022, NA for 2023 and 2024, and 26.46% in 2025. A country going from "has data" to "no data" and back is a changing sample, not a changing market. Drawing a smooth rising line across it invents an observation that never happened.
+          cn: >
+            当两个点之间有真实的东西变过时——定义、样本或覆盖范围。欧盟电商序列就是活例子：欧盟 27 国 2024 年 19.82%，2025 年 28.5%，一年跳了 8.7 个点，而 Eurostat 自己提醒 2025 年调查覆盖范围有变，两年不能直接比。单个国家看得更清楚：荷兰 2023 年 28.12%，2024 年 NA，2025 年 29.91%；比利时 2022 年 23.8%，2023 和 2024 年都是 NA，2025 年 26.46%。一个国家从「有数据」变成「没数据」再变回来，是样本在变，不是生意在变。在这段上面连一条平滑上升的线，等于造出一个从来没发生过的观察值。
+        confidence: 10
+        reference:
+          - docs/2-market-research/11-coverage-gaps/cn.md
+
+      - id: channel-and-industry-spread
+        question:
+          en: How much can the same survey number vary by industry and by channel?
+          cn: 同一个调查的数，在行业和渠道之间能差多少？
+        answer:
+          en: >
+            By a factor of ten or more. In 2024 EU e-commerce turnover as a share of total turnover was 24.06% for wholesale (NACE G46) and 2.34% for construction (F), against 21.52% for the C-E aggregate. Within retail (G47) the channel split is stark: web sales via the company's own site or app account for 11.65% of total turnover while e-commerce marketplaces account for only 1.43%, so marketplaces carry just 11% of all retail web sales. If you size a retail e-commerce market from platform back-end data alone, you will badly understate it, and if you treat one EU average as describing every member state, you will misdescribe both Greece at 80.99% and France at 9.66%.
+          cn: >
+            十倍以上。2024 年欧盟「电商营业额占企业总营业额」，批发业（NACE G46）是 24.06%，建筑业（F）只有 2.34%，C-E 合计是 21.52%。零售业（G47）内部的渠道差距更刺眼：走自建站和 APP 的网络销售占企业总营业额 11.65%，走电商平台的只有 1.43%，平台只承担了零售网络销售的 11%。只拿平台后台的数据去推零售电商的盘子，会严重低估；拿一个欧盟平均去描述所有成员国，则会同时误判 80.99% 的希腊和 9.66% 的法国。
+        confidence: 9
+        reference:
+          - docs/2-market-research/11-coverage-gaps/cn.md

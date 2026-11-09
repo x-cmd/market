@@ -1,0 +1,67 @@
+id: x-market-7-brand-visibility-03-share-of-voice-seo-and-geo
+
+data:
+  - name:
+      en: search share of voice and AI answer share of voice
+      cn: 搜索份额与 AI 答案份额
+    qa:
+      - id: two-shares-not-one
+        question:
+          en: Why should search share of voice and AI answer share of voice be reported separately instead of combined into one "visibility" score?
+          cn: 为什么搜索份额和 AI 答案份额要分开报，不合成一个「可见度」？
+        answer:
+          en: >
+            Because the two numbers are built on samples that cannot be compared. The search side of this page covers 10 category queries and 100 result pages, where every brand competes for a handful of slots. The AI side covers 40 generated answers averaging 12 brand names each. A brand scoring 97.5% on the AI side appears in 39 of 40 answers; it cannot also claim 97.5% in a list with only ten positions. Combining the two by weighting them hides the very thing that matters, because the weight does all the work and has no basis. At 50/50 versus 70/30, On and Saucony swap places entirely — On is 90% in search and 62.5% in AI, Saucony is 0% in search and 97.5% in AI. Reported separately, the gap itself carries the finding: Saucony has content assets but no article asset, On has ranking strength but not generative strength.
+          cn: >
+            因为两个数的样本根本不可比。这一页的搜索侧是 10 个品类词、100 条结果页面，每个品牌要抢那几个位置；AI 侧是 40 段生成的答案，平均每段 12 个品牌名。一个在 AI 侧拿到 97.5% 的品牌，是出现在 40 个答案中的 39 个，它不可能在一个只有十个位置的列表里也拿到 97.5%。加权合成会把最该说清楚的东西抹掉，因为结论全由权重决定，而权重没有任何依据。50/50 和 70/30 这两种权重会把 On 和 Saucony 的相对次序完全调换——On 搜索 90%、AI 62.5%，Saucony 搜索 0%、AI 97.5%。分开报，差本身就是信息：Saucony 有内容资产但没有词条资产，On 有检索排名优势但没有生成推荐优势。
+        confidence: 9
+        reference:
+          - docs/7-brand-visibility/03-share-of-voice-seo-and-geo/cn.md
+      - id: saucony-zero-search
+        question:
+          en: A brand with zero search share but near-total AI share — what does that combination mean?
+          cn: 搜索份额为零、AI 份额接近满分的品牌，这个组合说明什么？
+        answer:
+          en: >
+            It means the brand has recommendation assets but no ranking assets. Saucony appears in none of the 10 top-10 result sets across the 10 category queries, giving it a search share of 0%. It appears in 39 of 40 AI answers, giving it an AI share of 97.5%. Mizuno is the same shape (0% versus 82.5%), as are Puma (0% versus 67.5%) and Under Armour (0% versus 45%). The search-side corpus for this measurement is the English Wikipedia full-text index, where a brand needs a standalone article that matches the category query to surface at all. The AI side rewards being named as a recommendation, which needs no such article. So the measurement is also picking up a structural difference in the two channels: search rewards being written up as an article, AI rewards being written up as a recommendation.
+          cn: >
+            说明它有推荐资产，没有排名资产。Saucony 在 10 个品类词的前 10 条结果里一次都没出现，搜索份额 0%；在 40 个 AI 答案里出现 39 次，AI 份额 97.5%。Mizuno 是同一个形状（0% 对 82.5%），Puma（0% 对 67.5%）、Under Armour（0% 对 45%）也一样。搜索侧量的是英文维基百科的全文检索，一个品牌要浮出来，得有一篇能跟品类词对上的独立词条；AI 侧奖励的是被写进推荐名单，不需要词条。所以这一页量到的同时也是两条链路本身的差别：搜索奖励「被写成条目」，AI 奖励「被写成推荐」。
+        confidence: 9
+        reference:
+          - docs/7-brand-visibility/03-share-of-voice-seo-and-geo/cn.md
+      - id: on-search-leader-ai-laggard
+        question:
+          en: On leads the search side of this measurement at 90% but drops to 62.5% on the AI side. Why?
+          cn: On 在搜索侧以 90% 排第一，到 AI 侧掉到 62.5%，为什么？
+        answer:
+          en: >
+            Because its search-side strength comes from how the corpus indexes it, not from how runners talk about it. On surfaces in 9 of the 10 category queries with an average result position of 5.1, and Altra does the same thing at 6 of 10 queries. What both have in common is a standalone English Wikipedia article whose title carries category semantics — "Altra Running" literally contains "Running", and On's article is titled "On (company)". Any retrieval that touches running pulls them in. In the AI answers, On appears in 25 of 40 and lands ninth, behind ASICS, Nike and the other mainstream running names. Its advantage was in retrieval ranking, not in being the brand a model reaches for when asked to recommend.
+          cn: >
+            因为它搜索侧的优势来自语料怎么索引它，不来自跑者怎么谈论它。On 在 10 个品类词里出现 9 次，结果平均位次 5.1；Altra 出现 6 次，也是同一个道理。两家的共同点是有一篇标题自带品类语义的英文维基独立词条——「Altra Running」的字面里就有「Running」，On 的词条叫「On (company)」，任何碰到跑步的检索都能把它们捞上来。到 AI 答案里，On 出现在 40 个答案中的 25 个，排第 9，落在 ASICS、Nike 这些主流跑鞋品牌后面。它的优势在检索排名，不在被模型当成推荐首选。
+        confidence: 9
+        reference:
+          - docs/7-brand-visibility/03-share-of-voice-seo-and-geo/cn.md
+      - id: repeat-the-question
+        question:
+          en: Why does the AI share need the same question asked four times?
+          cn: AI 份额为什么同一个问题要问 4 次？
+        answer:
+          en: >
+            Because generation is a sample, not a lookup. Asking the model for brands to recommend for "minimalist running shoes" produced Vibram, INOV-8 and Reebok on the first run; on the third run those three were replaced by HOKA, Puma and On. A single ask therefore measures that one sample, not the brand's stable presence. This page reports the aggregate over 40 answers (10 queries times 4 repetitions), so each brand's share is the share of answers in which it appeared. A single-answer result cannot be reported as a share at all. The repetition count is itself a design choice: it trades measurement noise against cost, and the resulting share carries whatever uncertainty that number of repetitions leaves behind.
+          cn: >
+            因为生成是抽样，不是查表。问模型「minimalist running shoes」推荐哪些品牌，第一次的答案里是 Vibram、INOV-8、Reebok，第三次这三个换成了 HOKA、Puma、On。单次提问量的只是那一次抽样，不是这个品牌的稳定出现率。这一页报的是 40 个答案（10 个词各问 4 次）的合计，一个品牌的份额就是它出现在多少个答案里。单次结果根本不能当份额报。重复次数本身是个取舍：它拿测量噪声换成本，而最终那个份额带着这个重复次数留下的所有不确定性。
+        confidence: 10
+        reference:
+          - docs/7-brand-visibility/03-share-of-voice-seo-and-geo/cn.md
+      - id: fix-the-brand-universe-first
+        question:
+          en: Why does the brand list have to be fixed before the data is collected?
+          cn: 品牌名单为什么必须在取数之前定死？
+        answer:
+          en: >
+            Because adding or renaming a brand after seeing the data changes the shares, and the change looks like a finding. This page fixed the full brand universe of 32 names before the first query went out, along with the normalisation rules that map Hoka and HOKA to one brand, On and "On (company)" to one brand, Topo and "Topo Athletic" to one brand. Brand presence is decided by a word-boundary match on the result title, the one-line description and the body excerpt for search, and on the answer text for AI. Had the universe been widened after the fact — say to admit Columbia or Joma into the search universe because they showed up in the AI answers — the search-side shares of every other brand would have been silently recomputed downward, and the resulting table would look authoritative while being an artifact of when the list was drawn.
+          cn: >
+            因为取完数再改名单或改名，份额会跟着变，而这个变化看起来像一个发现。这一页在第一个查询发出去之前就定死了 32 个品牌的全集，也定死了归一规则：Hoka 和 HOKA 算一个，On 和「On (company)」算一个，Topo 和「Topo Athletic」算一个。品牌是否出现，搜索侧按结果标题、一行摘要、正文摘录三段文本做词边界匹配，AI 侧按答案文本匹配。如果事后再把名单放宽——比如因为 Columbia、Joma 在 AI 答案里出现了，就把它们补进搜索侧的全集——其余每一个品牌的搜索份额都会被悄悄压低，而那张表看上去依然权威，其实只是「名单什么时候画的」的产物。
+        confidence: 9
+        reference:
+          - docs/7-brand-visibility/03-share-of-voice-seo-and-geo/cn.md

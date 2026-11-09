@@ -1,0 +1,67 @@
+id: x-market-7-brand-visibility-02-visibility-three-measures
+
+data:
+  - name:
+      en: three rulers for brand visibility
+      cn: 量品牌可见度的三把尺子
+    qa:
+      - id: share-needs-aligned-denominator
+        question:
+          en: Why does NIKE's share of US shoe store sales come out at 123%?
+          cn: 为什么 NIKE 占美国鞋店零售额的比例算出 123%？
+        answer:
+          en: >
+            Because the numerator and the denominator do not cover the same ground. NIKE's FY2023 revenue of 51.217 billion dollars is global, spans every product category, and includes both wholesale and direct-to-consumer sales. The denominator is BEA's "Shoe stores" retail line, 41.557 billion dollars, covering shoe stores inside the United States alone. The two are not the same piece of ground, so the ratio exceeds 100%. This is not a data error — it is the requirement that a share needs matching scope on both sides. Fixing it means either a global footwear market size (paid research) or NIKE's US shoe-store sales (not disclosed by brand in the filings), and the second one is not available from public sources. The same numerator against the broader "Clothing and clothing accessories stores" line, 333.604 billion dollars, gives 15.4%. Neither figure is a market share; each answers a different question.
+          cn: >
+            因为分子和分母不是同一片地面。NIKE 2023 财年营收 512.17 亿美元是全球、全品类、含批发和直营；分母是 BEA 的「鞋店」零售行 415.57 亿美元，只覆盖美国境内的鞋类专卖店。两个数不在同一片地面上，比出来就超过了 100%。这不是数据错了，是「份额」这个词要求分子分母口径一致。修它有两条路：换成全球鞋类市场规模（付费研究机构的活儿），或者把分子换成 NIKE 在美国鞋店的销售额（财报的分部表不按品牌拆美国销量，公开渠道取不到）。同一个分子除以更宽的「服装及服装配饰店」3336.04 亿美元，得到 15.4%。这两个数都不是市场份额，各回答一个不同的问题。
+        confidence: 10
+        reference:
+          - docs/7-brand-visibility/02-visibility-three-measures/cn.md
+      - id: rank-depends-on-query-word
+        question:
+          en: A brand ranks first for one category keyword and nowhere for another. Which one is its real position?
+          cn: 同一个品牌换个品类词名次就变了，哪一个才是它的真实位置？
+        answer:
+          en: >
+            Neither one is "the" position — each answers the question it was asked. On a Wikimedia search snapshot taken 2026-11-09, Columbia Sportswear ranks 2nd for "sportswear" (only the disambiguation page is ahead of it), while NIKE ranks 15th for "sneakers", behind "Sneakers (song)" by ITZY, "Sneakers (band)" and "Sneaker collecting". For "running shoes", NIKE and Adidas do not make the top 20 at all; the list runs On at 5, Altra Running at 7, Brooks Sports at 9, Asics at 12, Hoka at 14. A single number would have to pick one keyword and hide the rest. Search results also shift between calls — a re-fetch of the same query moved NIKE from 15th to 17th — so a rank without its keyword, its date and its result list is not a reproducible fact.
+          cn: >
+            哪个都不是「真实位置」——每一个只回答它被问的那个问题。2026-11-09 的 Wikimedia 检索快照里，Columbia Sportswear 搜「sportswear」排第 2（前面只有一个消歧义页）；NIKE 搜「sneakers」排第 15，排在它前面的是 ITZY 的歌「Sneakers (song)」、「Sneakers (band)」和「Sneaker collecting」。搜「running shoes」，NIKE 和 Adidas 干脆没进前 20，前十里是 On（第 5）、Altra Running（第 7）、Brooks Sports（第 9）、Asics（第 12）、Hoka（第 14）。要压成一个数，就得挑一个关键词、藏起其余的。检索结果本身还会漂：同一个查询重取一次，NIKE 从第 15 变成第 17。所以**名次不带关键词、不带日期、不带结果列表，就不是一个可复现的事实**。
+        confidence: 9
+        reference:
+          - docs/7-brand-visibility/02-visibility-three-measures/cn.md
+      - id: sentiment-denominator-flips-ranking
+        question:
+          en: Why does the sentiment ruler put Skechers ahead of NIKE on one measure and behind it on another?
+          cn: 情绪尺怎么一会儿把 Skechers 排在 NIKE 前面，一会儿又排在后面？
+        answer:
+          en: >
+            Because the denominator changes the answer, and both denominators are defensible. Counting raw occurrences of conflict words in the Wikipedia articles, NIKE has 34 and Skechers has 18 — NIKE looks worse. But NIKE's article runs 14,621 words and Skechers' runs 2,581, so per ten thousand words the counts are 23.3 for NIKE and 69.7 for Skechers — Skechers looks worse, and roughly three times as bad. The same texts, the same fixed word list, two different denominators, opposite conclusions. This is why a sentiment number must always ship with its denominator, and why the absolute counts here are small enough (Columbia has just 2 conflict words in the entire article) that the measure is usable for comparing brands relative to each other but not as an authoritative sentiment score.
+          cn: >
+            因为换分母就换答案，而两个分母都站得住。数维基条目里冲突类词的**绝对次数**：NIKE 34 处，Skechers 18 处，NIKE 看着更糟。但 NIKE 的条目有 14621 个词，Skechers 只有 2581 个，**按每万词折算**就成了 NIKE 23.3、Skechers 69.7——Skechers 更糟，而且差不多糟三倍。同一批文本、同一张固定词表，两个分母，两个相反的结论。所以情绪数必须带着分母一起报。这一页的绝对次数也很小（Columbia 整篇只有 2 处冲突词），**只能用来比品牌之间的相对高低，不能当权威情绪分引用**。
+        confidence: 9
+        reference:
+          - docs/7-brand-visibility/02-visibility-three-measures/cn.md
+      - id: search-first-not-ai-mentioned
+        question:
+          en: A brand ranks near the top in search but does not get mentioned in AI answers. Why does rank not explain it?
+          cn: 一个品牌搜索排得很靠前，AI 答案里却没人提，为什么名次解释不了？
+        answer:
+          en: >
+            Because ranking and mention are produced by different things. A search engine returns a list; position is the whole output. A generative answer writes a paragraph, and which brands appear in it depends on what the model can build a narrative from in the material it read. Columbia Sportswear ranks 2nd for "sportswear" but its article runs only 2,206 words, against 9,688 for Adidas and 14,621 for NIKE — a thin corpus is less likely to get woven into a summary. There is a fourth ruler here, AI-answer mention share, and it is the one most often passed off as one of the other three. No reproducible public series exists for it: you have to run a fixed question set, record which brands appear, and repeat that for every model, every prompt and every time window. This page leaves that cell empty on purpose.
+          cn: >
+            因为名次和提及是两样不同机制产出的。搜索引擎返回一个列表，位置就是全部产出；生成式回答写的是一段话，哪几个品牌出现，取决于模型在读到的材料里能凑出什么叙述。Columbia Sportswear 搜「sportswear」排第 2，可它的条目正文只有 2206 个词，Adidas 9688 个，Nike 14621 个——**语料越薄，被综述时带上的概率越低**。这里其实有第四把尺子（AI 答案里的提及份额），而且它是最常被人拿前三把冒充的一把。这一格没有可复现的公开序列：得跑一批固定问题、记下答案里出现了谁，还要对每个模型、每版提示词、每个时间窗重做一遍。**这一页这一格是故意留空的。**
+        confidence: 8
+        reference:
+          - docs/7-brand-visibility/02-visibility-three-measures/cn.md
+      - id: company-name-kills-visibility
+        question:
+          en: How much does using the company name instead of the brand name cost you?
+          cn: 用公司名去查品牌，代价有多大？
+        answer:
+          en: >
+            Nearly everything. Deckers Outdoor has one CIK, 0000910521, and 3.63 billion dollars in FY2023 revenue, but its Wikipedia article drew 331 views in the 34 months from January 2024 to October 2026 — 0.002% of the pageview share across eleven brands, the smallest of any of them. The same company's HOKA article, under its own name, drew 154,790 views over the same period, about 468 times as many. The company name is the one that has an SEC filing, a legal name and an audited revenue line; the brand name is the one the public actually looks up. This is why the entity in a visibility query has to be settled before any number is pulled, and why the same article's sibling page, on cataloguing public signals, makes the brand-versus-company split its first section.
+          cn: >
+            几乎全丢。Deckers Outdoor 只有一个 CIK（0000910521）、2023 财年营收 36.27 亿美元，可它的维基条目在 2024 年 1 月到 2026 年 10 月的 34 个月里只被访问了 331 次——十一个品牌里最少的那个，份额 0.002%。同一家公司的 HOKA 条目挂在自己名字下，同期 154,790 次访问，是前者的约 468 倍。有 SEC 文件、有法定名称、有审计过的营收的是公司名；**公众真正去查的是品牌名**。所以可见度查询里，主体得先定下来再取数。同系列的上一篇（把公开信号编成目录）把「品牌 vs 公司」放在第一节，原因就在这里。
+        confidence: 9
+        reference:
+          - docs/7-brand-visibility/02-visibility-three-measures/cn.md

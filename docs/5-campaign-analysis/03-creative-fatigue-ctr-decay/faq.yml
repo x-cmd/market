@@ -1,0 +1,267 @@
+id: x-market-5-campaign-analysis-03-creative-fatigue-ctr-decay
+
+data:
+  - name:
+      en: why the click-through rate falls on its own
+      cn: CTR 为什么会自己往下掉
+    qa:
+      - id: same-creative-lower-ctr
+        question:
+          en: "Nothing changed in the ad — same creative, same landing page, same budget — and CTR is still sliding down week over week. Am I imagining it?"
+          cn: "素材没改、落地页没动、预算也没变，CTR 却在一周一周往下走。是我多心了吗？"
+        answer:
+          en:
+            >
+              You are not imagining it. Yahoo Gemini's native advertising line measured this on
+              real delivery data: every impression was bucketed by how many times that user had
+              already seen the same campaign, and the click-through rate in each bucket was
+              normalised against the bucket of users who had never seen it. The average CTR is
+              down 20% after a single repeat exposure, and down about 50% after seven. This
+              is advertising fatigue — the industry term is wear-out, meaning the creative's
+              effectiveness decays as exposure count rises. The paper puts it bluntly: fatigue
+              produces a "dramatic drop" in click-through rate, which is why Yahoo built
+              frequency into its ranking model as a learned feature rather than a hard rule.
+          cn:
+            >
+              你没有多心。Yahoo Gemini 的原生广告线用真实投放数据量过这件事：每一次曝光都按
+              「这个用户此前看过同一组广告多少次」分桶，每桶的点击率再拿「从没看过的那一桶」
+              归一化。结果是，平均 CTR 在一次重复曝光之后掉 20%，在 7 次之后掉掉约一半。
+              这就是广告疲劳，业界的黑话叫 wear-out（磨损），意思是素材的效力随着曝光次数增加
+              而衰减。论文写得很直白：疲劳带来的是 CTR 的「dramatic drop」，所以 Yahoo 才把
+              频次做成模型里一个要自己学的特征，而不是写死的规则。
+        confidence: 9
+        reference:
+          - docs/5-campaign-analysis/03-creative-fatigue-ctr-decay/cn.md
+      - id: where-the-loss-happens
+        question:
+          en: "Does the damage happen steadily, or all at once early on?"
+          cn: "损失是一开始就集中爆发，还是均匀地摊在每一周？"
+        answer:
+          en:
+            >
+              All at once, early on. Reading the normalised CTR curve off Figure 3 of the Yahoo
+              paper: the first repeat exposure costs about 18%, the curve falls from 69% to 50%
+              between the second and the seventh exposure, and after that it is essentially flat
+              — still around 43% at the 24th exposure. The paper's own wording is that the
+              rate of CTR descent decreases with the number of views. Practical consequence:
+              a creative loses the most value in its first few exposures, so a rotation that
+              swaps out creatives too early never gets to the flatter tail, and that tail is
+              where the lower-frequency impressions live, which are typically the
+              highest-quality ones for conversion.
+          cn:
+            >
+              集中在一开始。Yahoo 那篇论文 Figure 3 的归一化 CTR 曲线：第一次重复曝光就掉
+              约 18%，第 2 次到第 7 次之间从 69% 滑到 50%，之后就基本走平，第 24 次曝光时
+              还在 43% 附近。论文自己的措辞是 CTR 的下降速率随曝光次数递减。实际含义是：
+              一张素材的价值损失集中在最前面几次曝光，所以轮换得太早，就永远吃不到后面
+              那段平缓区间，而那段里的低频曝光恰恰通常是转化质量最好的部分。
+        confidence: 9
+        reference:
+          - docs/5-campaign-analysis/03-creative-fatigue-ctr-decay/cn.md
+      - id: who-gets-fatigued
+        question:
+          en: "Is fatigue the same for everyone, or does it hit some groups harder?"
+          cn: "疲劳对所有人都一样，还是有些人群掉得更狠？"
+        answer:
+          en:
+            >
+              Gender barely matters; age matters a great deal. In the Yahoo breakdown the male
+              and female fatigue curves are almost identical. Users whose gender is unknown
+              tolerate far more repetition — the paper speculates they are mostly unregistered
+              visitors arriving from external search or social sites who typically see the ad
+              once and leave. Age is the real differentiator: after five views, the measured
+              fatigue for the 50-to-60 age group is more than double that of the 20-to-30
+              group, and the increase eventually flattens, with the 50-to-60 and 60-to-70
+              groups showing nearly identical patterns. The authors note this runs against the
+              intuition that younger users are more used to ads, and suggest the opposite —
+              that younger users have grown up with advertising as part of browsing.
+          cn:
+            >
+              性别几乎没影响，年龄影响很大。Yahoo 的分组里，男性和女性的疲劳曲线几乎一模一样。
+              性别未知的用户耐受度高得多，论文推测他们多半是未注册用户，从外部搜索或社交网站
+              进来，通常看一次就走了。真正有差别的是年龄：看过 5 次之后，50 到 60 岁组测到的
+              疲劳幅度是 20 到 30 岁组的两倍多，而且增幅最后会趋缓，50 到 60 岁和 60 到 70 岁
+              两组的疲劳形态几乎一样。作者自己也说这跟直觉相反，直觉是年轻用户更习惯广告，
+              他们的解释正好反过来——年轻用户从小就是在有广告的浏览环境里长大的。
+        confidence: 8
+        reference:
+          - docs/5-campaign-analysis/03-creative-fatigue-ctr-decay/cn.md
+  - name:
+      en: reading the curve and picking the moment
+      cn: 读曲线和选换的时机
+    qa:
+      - id: not-a-saturation-curve
+        question:
+          en: "Is this the same shape as a saturation curve? I keep seeing people reach for the wrong one."
+          cn: "这条曲线跟饱和曲线是同一个形状吗？我老看见有人用错。"
+        answer:
+          en:
+            >
+              No, and the two produce opposite conclusions. A saturation curve starts slow,
+              speeds up, and approaches an upper bound — the shape you use for audience
+              coverage growing while increment shrinks. The fatigue curve is the other way
+              round: steep first, flat afterwards. Loss is largest on the earliest exposures
+              and the marginal loss per additional exposure keeps shrinking. Read a CTR
+              decline through the wrong lens and you will conclude the opposite thing: through
+              a saturation lens you get "we are near the ceiling, more spend is pointless";
+              through a fatigue lens you get "the worst of it is over, it has settled". The
+              fact is that the creative loses the most value in its first few exposures.
+          cn:
+            >
+              不是，而且这两条曲线会导出完全相反的结论。饱和曲线先慢后快，最后趋近一个上限，
+              用在「受众被逐步覆盖、增量越来越少」那种场景上。疲劳曲线是反过来的：先陡后平。
+              损失集中在最前面几次曝光，之后每多一次曝光，边际损失越来越小。用错镜头读 CTR
+              下跌，结论会整个翻过来：拿饱和曲线去看，你会得到「快触顶了，继续投没意义」；
+              拿疲劳曲线去看，你会得到「掉得最狠的那段已经过去了，后面稳了」。而事实是，
+              素材恰恰在最前面那几次曝光里损失最大。
+        confidence: 9
+        reference:
+          - docs/5-campaign-analysis/03-creative-fatigue-ctr-decay/cn.md
+      - id: when-to-swap
+        question:
+          en: "What is the actual trigger for swapping a creative out?"
+          cn: "换素材的具体触发条件是什么？"
+        answer:
+          en:
+            >
+              When the click-through rate falls to below half of what the creative itself
+              delivered in its first week. The denominator is the point: your own first-week
+              CTR for that creative, not an industry average and not last month's number for
+              a different ad. The first-week figure carries the creative's own quality,
+              category appeal and audience fit; dividing by it tells you how much of this
+              creative's effectiveness is left, whereas dividing by an industry average tells
+              you how this creative compares to peers, which is a different question. Half is
+              the right cut rather than "down 20% and swap" because the steepest losses happen
+              earliest — swapping too early means you never reach the flatter tail, and that
+              tail is where the lowest-frequency and usually best-converting impressions sit.
+          cn:
+            >
+              CTR 掉到这张素材自己上线首周的一半以下。关键在分母：用的是**这张素材自己的**首周
+              CTR，不是行业平均值，也不是上个月另一张图的数。首周那个数里装着这张素材的基础
+              质量、类目吸引力和受众匹配度，拿它做分母，量的是「这张图还剩多少效力」；拿行业
+              均值做分母，量的是「这张图比同行好不好」，那是另一个问题。为什么是一半而不是
+              「跌了 20% 就换」？因为损失最陡的那段在最前面，过早换就永远到不了后面那段平缓
+              区间，而那段里的低频曝光通常是转化最好的部分。
+        confidence: 9
+        reference:
+          - docs/5-campaign-analysis/03-creative-fatigue-ctr-decay/cn.md
+      - id: is-it-fatigue-or-something-else
+        question:
+          en: "Before I swap the creative, how do I tell fatigue apart from something else that also moves CTR?"
+          cn: "换素材之前，怎么分清是疲劳还是别的原因也在拖 CTR？"
+        answer:
+          en:
+            >
+              Look at whether the frequency distribution moved. Fatigue has a signature: it is
+              concentrated in the people who have seen the creative many times, and swapping in
+              a new creative brings them back up because they are treated as new faces. If
+              average frequency per user is roughly what it was last week and CTR still
+              dropped by half, it is not fatigue — targeting changed, the season turned, the
+              landing page broke, or competition got heavier. Changing the creative a hundred
+              times will not fix any of those, and the curve will keep sliding. One more caveat
+              from the same literature: CTR declines monotonically with fatigue but conversion
+              rate does not. The CyberAgent paper reports a more complex relationship for
+              conversion, with both positive and negative effects, so judging a creative on
+              CTR alone can retire something whose conversion is still holding up.
+          cn:
+            >
+              看频次分布有没有跟着变。疲劳有个指纹：它集中在那些已经看过很多次的人身上，换一张
+              新素材，这批人会重新被当成新面孔对待，CTR 也就回来了。如果人均曝光频次跟上周
+              差不多、CTR 却掉了一半，那不是疲劳，是定向变了、季节过了、落地页挂了、或者竞争
+              变激烈了。换一百张素材也修不好这些，那条曲线还是往下走。还有一条同一批文献里的
+              提醒：CTR 随疲劳单调下降，但转化率不是。CyberAgent 那篇论文说转化率的关系更复杂，
+              正面负面效应都有，所以只看 CTR 就给素材定生死，可能会在转化还稳的时候把素材换掉。
+        confidence: 9
+        reference:
+          - docs/5-campaign-analysis/03-creative-fatigue-ctr-decay/cn.md
+  - name:
+      en: planning the rotation
+      cn: 给轮换排期
+    qa:
+      - id: how-long-can-one-creative-run
+        question:
+          en: "How long can one creative run? I want a number, not a rule of thumb."
+          cn: "一张素材能跑多久？我要个数，不是经验说法。"
+        answer:
+          en:
+            >
+              There is no single number, because it depends entirely on frequency. Take the
+              fatigue curve: CTR halves somewhere around the seventh exposure. With an average
+              of 4 impressions per user per week, that crossing lands in week 2. With 1
+              impression per user per week it lands in week 7. With 8 per week it lands inside
+              the first week. Convert frequency into weeks with: impressions per user per week
+              times your target frequency, divided by 7. The worked case on this page runs one
+              creative for six weeks on a narrow audience at 4 impressions per user per week,
+              spends 600,000 across the six weeks for 157,718 clicks, and watches cost per
+              click climb from 3.21 to 4.22 — a 31% rise. Refreshing at week 4 would have
+              produced 10,894 more clicks over the final three weeks, which at a 20,000 cost
+              for the new video works out to 1.84 per click, roughly half the do-nothing cost.
+          cn:
+            >
+              没有单一数字，因为完全取决于频次。看疲劳曲线：CTR 大概在第 7 次曝光附近掉到一半。
+              人均每周曝光 4 次，这个拐点落在第 2 周。人均每周 1 次，拐点落在第 7 周。人均
+              每周 8 次，拐点不到 1 周就到了。频次换算成周数的公式是：人均每周曝光次数乘以
+              目标频次，再除以 7。这一页的案例是在一个很窄的受众上用一张素材跑六周，人均每周
+              曝光 4 次，六周花了 60 万换来 15.8 万次点击，单次点击成本从 3.21 元涨到 4.22 元，
+              涨了 31%。第 4 周换素材的话，最后三周能多拿 10,894 次点击，按新视频 2 万元的
+              成本算，单次点击成本 1.84 元，差不多是不换的一半。
+        confidence: 8
+        reference:
+          - docs/5-campaign-analysis/03-creative-fatigue-ctr-decay/cn.md
+      - id: how-big-a-creative-library
+        question:
+          en: "How many creatives do I need to keep in the library to run a rotation?"
+          cn: "要维持轮换，素材库得备多少张？"
+        answer:
+          en:
+            >
+              Enough to cover the rotation period multiplied by the number of creatives running
+              at once. On the worked case — four weeks per creative, three running at a time —
+              that is at least twelve. If the library holds only four, you start recycling the
+              same handful from week five, which pushes the fatigue level across the whole
+              account up rather than holding it flat. One more constraint worth respecting:
+              do not make the replacement look too much like the original. Fatigue propagates
+              across similar creatives, because the fatigue calculation weights each past
+              exposure by how similar that creative was to the one being served. Swapping the
+              copy but keeping the same scene and subject largely repays the same fatigue you
+              were trying to escape.
+          cn:
+            >
+              够覆盖轮换周期乘以同时在投的素材数就够。按这个案例——一张素材撑四周、同时在投
+              三张——至少要 12 张。素材库只有四张的话，第五周你就会开始翻来覆去用同一批素材，
+              等于把整个账户的疲劳水平往上抬，而不是压住。还有一条约束值得守：别把新素材
+              做得跟旧素材太像。疲劳会在相似的素材之间传过去，因为算疲劳的时候，每一次历史
+              曝光都要按「当时那个素材跟现在投的这个有多像」加权。只换文案、主体还是同一个
+              场景，等于又把你想躲的那份疲劳请回来了。
+        confidence: 8
+        reference:
+          - docs/5-campaign-analysis/03-creative-fatigue-ctr-decay/cn.md
+      - id: frequency-capping-or-rotating-creatives
+        question:
+          en: "Is frequency capping just a different way of saying the same thing as rotating creatives?"
+          cn: "频控和换素材，是不是同一件事的两种说法？"
+        answer:
+          en:
+            >
+              Two ends of the same wear, and the controlled experiments make the price of
+              ignoring it concrete. Yahoo's soft frequency capping — frequency as a learned
+              model feature rather than a hard serving rule — delivered a 7.3% CPM lift in
+              online bucket testing, with a further 3.6% coming from removing the hard capping
+              rules and keeping only the soft model. On the creative-selection side, the
+              fatigue-aware algorithm at CyberAgent beat the click-rate-only baseline by 21%
+              and 32% on two of three campaigns in CTR relative to random selection, and the
+              baseline was actually 5% worse than random on the third campaign. Frequency
+              capping works on showing a given person the ad fewer times; creative rotation
+              works on showing them something they have not seen yet. Different levers on one
+              problem.
+          cn:
+            >
+              是同一种磨损的两个头，两边的对照实验把忽略它的代价算得很清楚。Yahoo 的软频控
+              ——把频次做成模型里学出来的特征，而不是写死的投放规则——在线桶测试里拿到 7.3%
+              的 CPM 提升，其中把硬频控规则撤掉、只留软频控的部分又贡献了 3.6%。选素材这一头，
+              CyberAgent 的疲劳感知算法在三个活动里的两个上，CTR 比随机选材高 21% 和 32%，
+              第三个活动上老办法甚至比随机选材还差 5%。频控是在「同一个人少看几次」上使劲，
+              换素材是在「换一张他没看腻的」上使劲。不同的杠杆，同一个问题。
+        confidence: 9
+        reference:
+          - docs/5-campaign-analysis/03-creative-fatigue-ctr-decay/cn.md

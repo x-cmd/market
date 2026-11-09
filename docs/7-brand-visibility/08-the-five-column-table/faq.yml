@@ -1,0 +1,67 @@
+id: x-market-7-brand-visibility-08-the-five-column-table
+
+data:
+  - name:
+      en: the five columns a handed-over table must have
+      cn: 交过来的表必须有的五列
+    qa:
+      - id: which-five-columns
+        question:
+          en: Which five columns does a brand-visibility table need before you can use it?
+          cn: 一张品牌可见度的表，动手之前必须凑齐哪五列？
+        answer:
+          en: >
+            Term, channel, date, count, sentiment. The term says which string you are counting and how it is matched — a term you cannot spell out with a matching rule is a term you cannot use. The channel says where the data came from, which decides whether it measures the brand at all: a brand's own app and a multi-brand retailer's app are two different channels. The date says how long the observation window was, and it is the observation window rather than the collection date that matters. The count says which counting unit you used: occurrences, mentions or review rows are three different numbers drawn from the same text. The sentiment says whether the data is praise or criticism, and which label produced it. Drop any one of these and a specific wrong reading becomes possible. In the data behind this page, dropping the term turns 168 matches into 0, dropping the date turns 500 reviews into anything between 114 days and 1,415 days of coverage, and dropping the count unit moves a mention rate by 1.9 percentage points.
+          cn: >
+            词、渠道、日期、次数、情绪。**词**写的是在数哪个字符串、怎么匹配——写不出匹配规则的词，就是不能用的词。**渠道**写的是这条数据从哪儿来，它决定这份数据到底在不在量这个品牌：品牌自有 App 和多品牌零售 App 是两种渠道。**日期**写的是统计窗有多长，要紧的是统计窗而不是观测日。**次数**写的是用了哪个计数单位：出现次数、提及次数、评论条数，是同一批文本上的三个不同的数。**情绪**写的是这份数据是褒是贬、谁打的标。少一列，就有了一种具体的错误读法。这一页的数据里，少了**词**这一列，168 次匹配会变成 0 次；少了**日期**这一列，同样 500 条评论可以是 114 天也可以是 1,415 天的覆盖；少了**次数**的单位，一个提及率会差 1.9 个百分点。
+        confidence: 9
+        reference:
+          - docs/7-brand-visibility/08-the-five-column-table/cn.md
+      - id: on-preposition-false-positives
+        question:
+          en: A table says the brand On was mentioned 168 times with 72% negative sentiment. Is that real?
+          cn: 一张表说 On 被提了 168 次、其中 72% 是差评。这条数是真的吗？
+        answer:
+          en: >
+            No. It is the number a naive word-boundary match produces, and every one of those 168 matches is the English preposition "on", not the brand. The 500 most recent reviews on the US App Store for the Nike app contain "Love the app on my phone, but can't sign in on my iPad", "I order a pair of shoes to train for a marathon on Nov 1 and they tell me they are out of stock on Nov 5", and "Best thing ever I got a divorce with my wife just go full-time shopping on Nike". Require the capitalized form followed by a brand-owned word — Cloud, Running, Shoes, Sneakers, Trainers, Holding — or the domain on.com, and the count in that channel falls to zero. The same rule finds 47 genuine mentions across 38 reviews in On's own app, where 10.5% of the reviews are 1-2 star against a naive figure of 17.1%. The gap between 168 and 0 is the entire distance between a table whose term column is "On" and one whose term column is "On, brand, matched as On/ON + Cloud|Running|Shoes|Sneakers|Trainers|Holding or on.com".
+          cn: >
+            不是。这是按单词边界朴素匹配出来的数，那 168 次全是英文介词 on，没有一次是在说 On 这个品牌。Nike App 美国区最近 500 条评论里，on 出现在这些地方：「Love the app **on** my phone, but can't sign in on my iPad」「I order a pair of shoes to train for a marathon **on** Nov 1 and they tell me they are out of stock **on** Nov 5」「Best thing ever I got a divorce with my wife just go full-time shopping **on** Nike」。加上品牌专有搭配的限制——大写的 On/ON 后面必须紧跟 Cloud、Running、Shoes、Sneakers、Trainers、Holding 这些品牌自有词，或者出现 on.com——这个渠道的数就变成 0。同一套规则在 On 自家 App 上抓到 47 次，分布在 38 条评论里，1-2 星占 10.5%（朴素匹配报的是 17.1%）。**168 到 0 的距离，就是「词」那一列写「On」和写「On（品牌，匹配 On/ON + Cloud|Running|Shoes|Sneakers|Trainers|Holding 或 on.com）」的距离。**
+        confidence: 10
+        reference:
+          - docs/7-brand-visibility/08-the-five-column-table/cn.md
+      - id: own-app-vs-retailer-app
+        question:
+          en: Why does the channel column matter — is a brand's own app a good place to measure it?
+          cn: 渠道这一列为什么要紧——拿品牌自己的 App 来量，算是个好地方吗？
+        answer:
+          en: >
+            No, and the reason is that the reviews on a brand's own app are not about the brand. They are about login, shipping speed, returns and coupons. Nike's own app has 125 reviews containing the word "on" and 72% of them are 1-2 star — but that is Nike users complaining about Nike's app, and it is zero reviews about the brand On. The retailer apps are the closer thing to an outside view: Zappos, Finish Line and DICK'S each sell a dozen brands, so a brand named there is named in a comparison rather than in a complaint about one app. Counting reviews that mention the word "on", the brand-owned apps give On 158, Nike 125, adidas 59 and Under Armour 40, while the retailer apps give Zappos 84, Finish Line 89 and DICK'S 64. None of those numbers is a brand's visibility, because none of them survives the word-matching check. A channel is worth reporting only when the channel can produce the object being measured, and "the brand's own app" produces the app, not the brand.
+          cn: >
+            不算，因为品牌自有 App 上的评论说的不是这个品牌，说的是登录、发货速度、退换货和优惠券。Nike 自家 App 里提到 on 的 125 条评论，72% 是 1-2 星——但那是 Nike 用户在骂 Nike 的 App，关于 On 这个牌子的评论是 0 条。零售 App 才更接近外部视角：Zappos、Finish Line、DICK'S 各自卖十几个品牌，品牌出现在那儿，是被拿来比较的，不是在抱怨某一个 App。按提到 on 这个词的评论条数算，品牌自有 App 是 On 158、Nike 125、adidas 59、Under Armour 40，零售 App 是 Zappos 84、Finish Line 89、DICK'S 64。**这些数没有一个能读成品牌可见度，因为没有一个能通过词匹配这一关。** 一个渠道只有在能量到你真正要量的那个对象时才值得报，而「品牌自家 App」量出来的是 App，不是品牌。
+        confidence: 9
+        reference:
+          - docs/7-brand-visibility/08-the-five-column-table/cn.md
+      - id: five-hundred-reviews-span
+        question:
+          en: A table says "the latest 500 reviews". How long a period does that actually cover?
+          cn: 一张表写着「最近 500 条评论」。这段时间到底有多长？
+        answer:
+          en: >
+            It depends on how busy the channel is, and the variation is large. In the data behind this page, the 500 most recent US App Store reviews of Zappos span 1,415 days, from 2022-12-15 to 2026-10-30, which is 0.35 reviews a day. The 500 most recent of adidas span 114 days and the 500 most recent of DICK'S span 119 days, roughly 4.4 and 4.2 reviews a day. The Apple Customer Reviews RSS endpoint serves at most ten pages of fifty, so 500 is not a sample the analyst chose — it is everything the public interface will give, and the interface's shape silently picks the window length for you. A table that records only "latest 500 reviews" and leaves the date range blank is hiding a twelve-fold difference in coverage.
+          cn: >
+            取决于这个渠道有多忙，而且差别很大。这一页的数据里，Zappos 最近 500 条美国区 App Store 评论横跨 **1,415 天**（2022-12-15 到 2026-10-30），日均 0.35 条；adidas 的 500 条只跨 **114 天**，DICK'S 的 500 条跨 **119 天**，日均 4.4 条和 4.2 条。Apple Customer Reviews RSS 接口最多给 10 页、每页 50 条，所以 500 条不是分析师挑的样本，**是公开接口能给的全部**，接口的形状替你悄悄决定了统计窗的长度。**一张只写「最近 500 条评论」、日期范围留白的表，藏起来的是 12 倍的覆盖度差异。**
+        confidence: 10
+        reference:
+          - docs/7-brand-visibility/08-the-five-column-table/cn.md
+      - id: zero-versus-not-found
+        question:
+          en: A cell in the table is 0. Does that mean the brand was never mentioned?
+          cn: 表上一格是 0。这是不是说这个品牌从没被提到过？
+        answer:
+          en: >
+            Not necessarily, and the difference matters. Take a fixed window of 2026-08-10 to 2026-11-08 and count again. Zappos has 500 reviews in total but only 10 of them fall inside that 90-day window, because its 500 reviews are spread over four years. The cell "On mentions on Zappos in the last 90 days = 0" is arithmetically true, and what it actually says is "Zappos had 10 reviews in that window and none of them mentioned On". That is a coverage fact, not a market fact. Two other cases produce a zero or a blank: the data source may not support the grain at all, and a genuine zero must be written as a zero rather than dropped. The page therefore distinguishes three kinds of empty cell — zero with a stated denominator, zero with no coverage in that window, and NA where the interface cannot go that fine. Apple's own documentation adds the region caveat that makes the same point at the top level: the store's summary rating is computed per territory, so the same app yields different numbers in the US and in Japan.
+          cn: >
+            不一定，这个差别很要紧。取一个固定窗口——2026-08-10 到 2026-11-08 这 90 天——再数一遍。Zappos 总共 500 条评论，但只有 **10 条**落进这个窗口，因为它那 500 条摊了四年。于是「Zappos 渠道近 90 天提到 On 的次数 = 0」这个格子在算术上是真的，它实际说的是「**Zappos 在这 90 天里只有 10 条评论，其中 0 条提到 On**」。**这是覆盖度的事实，不是市场的事实。** 另外两种情况也会产出 0 或空白：数据源本身不支持这个粒度；以及真正的 0 必须写成 0，不能省略。所以这一页把空格子分成三类写：0（附分母说明）、0（该窗口无覆盖）、NA（接口到不了这个粒度）。苹果自己的文档在顶层也点了同一件事：商店评分按地区分开算，同一款应用在美国和日本是两个数。
+        confidence: 9
+        reference:
+          - docs/7-brand-visibility/08-the-five-column-table/cn.md

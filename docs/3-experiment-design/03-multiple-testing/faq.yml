@@ -1,0 +1,240 @@
+id: x-market-3-experiment-design-03-multiple-testing
+
+data:
+  - name:
+      en: how false positives appear
+      cn: 假阳性是怎么冒出来的
+    qa:
+      - id: twenty-tests-three-significant
+        question:
+          en: "I ran 20 variants and three of them look significant. What is the chance they are all real?"
+          cn: "我跑了 20 个变体，其中三个看着显著。它们全是真的概率有多大？"
+        answer:
+            en:
+              >
+                If the true effect in every variant is zero, the chance that at least one of them
+                comes back significant is 1 − 0.95^20, about 64%. So with twenty tests you are more
+                likely than not to produce a false positive. The three you found are not three
+                independent findings — they are three draws from a pool where false positives are
+                guaranteed to be present, and the fact that you kept the ones that were significant
+                means you kept the smallest p-values by construction. The number of expected false
+                positives in twenty tests is exactly 1.0 (20 × 0.05); in 100 tests it is 5.
+            cn:
+              >
+                如果二十个变体的真实效果全是零，那么至少有一个报出显著的概率是 1 − 0.95²⁰，
+                约 64%。也就是说跑二十次，你拿到假阳性的概率大于五成。你看到的三个不是三个独立的发现，
+                而是同一个池子里必然混着假阳性，而你又恰好把显著的那几个留了下来——换句话说，
+                你留下的是 p 值最小的那些，这是筛选动作本身造成的。二十次检验里的假阳性期望个数正好是
+                1.0（20 × 0.05）；一百次是 5 个。
+        confidence: 9
+        reference:
+          - docs/3-experiment-design/03-multiple-testing/cn.md
+      - id: picking-the-largest-effect
+        question:
+          en: "I only report the variant with the biggest lift. Why is that worse than reporting all twenty?"
+          cn: "我只报提升最大的那个变体，为什么比把二十个都报出来更糟？"
+        answer:
+            en:
+              >
+                Because reporting the largest lift and reporting all twenty are the same procedure
+                with different formatting. If you show all twenty, the reader sees the flat ones and
+                the one spike and can discount accordingly. If you show only the spike, the reader
+                has no way to know that nineteen others were flat. Picking the maximum of twenty noisy
+                estimates inflates the reported effect well beyond the truth: the maximum of twenty
+                draws is not a typical draw, it is the tail of the distribution. The reported
+                number still carries the same standard error as any other single variant — it just
+                now also carries the bias of the selection.
+            cn:
+              >
+                因为「只报最大的那个」和「把二十个都报出来」其实是同一个动作，只是排版不同。
+                把二十个都摊开，读者能看到十九个平的和一个尖的，自己会打折；
+                只放那个尖的，读者无从知道另外十九个是平的。在二十个带噪声的估计里挑最大值，
+                报出来的数会明显高于真值——二十次抽样的最大值不是典型抽样，它是分布的尾巴。
+                这个数本身的标准误跟其他任何一个变体一样，但它还额外背上了「被挑过」的偏差。
+        confidence: 9
+        reference:
+          - docs/3-experiment-design/03-multiple-testing/cn.md
+      - id: p-hacking-vs-pre-registration
+        question:
+          en: "What is the difference between p-hacking and simply reporting several variants?"
+          cn: "「p-hacking」和「把几个变体都报出来」差在哪？"
+        answer:
+            en:
+              >
+                They differ in when the decision to look was made. P-hacking means the number of
+                comparisons grew after the data was visible — you kept cutting until something
+                crossed the threshold, and you are not supposed to. Reporting several pre-planned
+                variants is not p-hacking, but it still raises the false-positive rate for anyone
+                who applies a 0.05 threshold to each of them. The clean version of reporting
+                several variants is to pre-register: write down the hypotheses and the number of
+                tests before the experiment starts, then apply a correction to the threshold.
+                Then the number of comparisons is a property of the design rather than of the
+                result.
+            cn:
+              >
+                区别在「决定要看」这个动作发生在什么时候。p-hacking 是数据出来之后才让比较次数变多——
+                你一直切到有一个越过阈值为止，这是不能做的。把几个事先规划好的变体都报出来不是 p-hacking，
+                但对每个都用 0.05 的门槛去判，假阳性率照样上去了。干净的做法是预先指定：开跑前写下假设
+                和要检验的次数，然后对门槛做校正。这样比较次数就成了设计的一部分，而不是结果的一部分。
+        confidence: 8
+        reference:
+          - docs/3-experiment-design/03-multiple-testing/cn.md
+  - name:
+      en: three ways to handle it
+      cn: 三种收拾办法
+    qa:
+      - id: bonferroni
+        question:
+          en: "What does Bonferroni correction actually change?"
+          cn: "Bonferroni 校正到底改了什么？"
+        answer:
+            en:
+              >
+                It tightens the significance threshold from 0.05 to 0.05/m, where m is the number of
+                hypotheses. With twenty tests the threshold becomes 0.0025, so each individual
+                comparison has to clear a much higher bar before you call it significant. The
+                guarantee it buys is on the family of tests, not on any single one: the
+                probability that at least one false positive appears anywhere in the family is kept
+                at 5%. The cost is conservatism — real effects that would have been detected one by
+                one can be missed. Holm's correction relaxes the threshold step by step across the
+                ranked p-values while keeping the same family-wise guarantee.
+            cn:
+              >
+                它把显著性门槛从 0.05 压到 0.05/m，m 是要检验的假设个数。测二十组，阈值就变成 0.0025，
+                每一组都得越过高得多的门槛才算显著。它买到的是「这一族检验」层面的保证：
+                整族里至少出现一个假阳性的概率被压在 5%。代价是保守——单独看能测出来的真效果可能被漏掉。
+                Holm 校正则是按 p 值排序逐级放松门槛，但整族的保证不变。
+        confidence: 9
+        reference:
+          - docs/3-experiment-design/03-multiple-testing/cn.md
+      - id: benjamini-hochberg
+        question:
+          en: "What does Benjamini-Hochberg control, and what does it give up?"
+          cn: "Benjamini-Hochberg 控制的是什么，它放弃了什么？"
+        answer:
+            en:
+              >
+                Benjamini-Hochberg controls the false discovery rate: the expected share of the
+                results you declare significant that are actually false positives. It does not
+                control the probability of at least one false positive. That is a weaker guarantee,
+                and in exchange the threshold is far less harsh than Bonferroni — with many tests
+                it recovers real effects that Bonferroni would miss. The practical trade-off:
+                if you will act on every individual significant result, BH-style procedures let more
+                true effects through; if you need the stronger family-wise guarantee, use Holm
+                or Bonferroni.
+            cn:
+              >
+                Benjamini-Hochberg 控制的是错误发现率：被你判为显著的结果里，假阳性平均占多大比例。
+                它不控制「至少出现一个假阳性」的概率。这个保证更弱，代价换来的是门槛比 Bonferroni 宽松得多——
+                组数多的时候能捞回 Bonferroni 会漏掉的真效果。实际取舍是：你要对每一个显著结果都动手，
+                用 BH 这类办法能让更多真效果通过；你需要整族那个更强的保证，就用 Holm 或 Bonferroni。
+        confidence: 8
+        reference:
+          - docs/3-experiment-design/03-multiple-testing/cn.md
+      - id: omnibus-test
+        question:
+          en: "How does an omnibus test avoid the multiple-comparison trap?"
+          cn: "统一分组的检验是怎么避开多重比较这个坑的？"
+        answer:
+            en:
+              >
+                It changes the question. Instead of asking "is variant B better than control?" m
+                times, it asks once: "do any of these groups differ from each other?" That single
+                test — ANOVA for normal data, Kruskal-Wallis for data that is not normal — is
+                evaluated at the standard 0.05 threshold, and if it comes back insignificant, the
+                conclusion is that no pair is reliably distinguishable. Only when the omnibus test
+                is significant do you run the follow-up pairwise comparisons, with a correction
+                applied there. The protection comes from the fact that the decision to drill down
+                is made by a pre-set rule rather than by looking at which pair happens to look
+                biggest.
+            cn:
+              >
+                它换了个问题。不再是「B 变体比对照好吗」问 m 次，而是一次问完：
+                「这几组之间，有没有至少一组不一样？」这个整体检验（正态数据用 ANOVA，
+                不服从正态的用 Kruskal-Wallis）用常规的 0.05 门槛判一次，不显著就下结论：
+                没有哪一对能可靠地区分。整体显著了，才去做后续的成对比较，并在那里加上校正。
+                保护来自哪里——要不要往下钻，是由事先定好的规则决定，不是由「哪一对看起来最大」决定。
+        confidence: 9
+        reference:
+          - docs/3-experiment-design/03-multiple-testing/cn.md
+  - name:
+      en: deciding the design
+      cn: 决定怎么测
+    qa:
+      - id: how-many-variants
+        question:
+          en: "How many variants should I test in one go?"
+          cn: "一次该测几个变体？"
+        answer:
+            en:
+              >
+                As many as the number of questions you actually need answered, and no more. The
+                count is set by the questions, not by the traffic you have available. If you need
+                to know which of five ideas works, that is five tests and you accept a 23% chance
+                of at least one false positive, or you tighten the threshold to 0.01 and say so in
+                advance. If you only need to know whether the whole redesign works, that is one
+                A/B test against control, with the winning variant chosen afterwards from a
+                separate experiment. Traffic is not a reason to add variants: adding them lowers
+                the chance of finding a real effect as it raises the chance of a false one.
+            cn:
+              >
+                跟你真正需要回答的问题一样多，一个不多。次数由问题定，不由流量定。
+                如果你需要知道五个想法里哪个有效，那就是五次检验，你要接受 23% 的假阳性概率，
+                或者把阈值收紧到 0.01 并事先说明；如果你只需要知道这次改版整体有没有用，
+                那就是一次 A/B 测试，结果出来之后再用另一个实验去挑赢家。
+                流量多不构成加变体的理由：多加变体，在抬高假阳性概率的同时，
+                反而压低了找到真效果的概率。
+        confidence: 8
+        reference:
+          - docs/3-experiment-design/03-multiple-testing/cn.md
+      - id: stacking-significant-variants
+        question:
+          en: "Three variants each look significant. Can I just ship all three together?"
+          cn: "三个变体各自都显著，能不能三个一起上线？"
+        answer:
+            en:
+              >
+                No, and the reason is not statistical conservatism but a missing test. Each
+                variant was measured against the original page, one at a time. Shipping all three
+                together creates a combination that was never measured, and interactions between
+                them can go either way — the changes can reinforce each other, or the two
+                strongest-looking tweaks can cannibalise the same users. Furthermore, the three
+                "significant" results may not even be three independent pieces of evidence: if
+                the same users were exposed to more than one variant, part of the lift can be
+                the same luck counted three times. Test the combination as a new single
+                hypothesis against control before you ship it.
+            cn:
+              >
+                不能，而且原因不是统计上的保守，是**少了一次检验**。每个变体都是单独跟原页面比的，
+                三个一起上线就组成了一个从没测过的组合，它们之间的相互作用可以是任一方向——
+                互相放大，或者两个看起来最强的改动抢同一批用户。而且这三个「显著」甚至可能不是三份独立的证据：
+                如果同一批人被多个变体影响，那部分提升可能就是同一份运气被数了三遍。
+                真要一起上，先把组合当成一个新的假设，跟对照组单独测一次。
+        confidence: 9
+        reference:
+          - docs/3-experiment-design/03-multiple-testing/cn.md
+      - id: same-problem-in-channels
+        question:
+          en: "I test 20 channels and put budget into the ones that came out significant. Same problem?"
+          cn: "我测了 20 个渠道，把预算加到显著的那几个上。是不是同一个问题？"
+        answer:
+            en:
+              >
+                Yes, it is the same trap with different clothes. Reading a table of 20 channels,
+                picking the significant ones and moving budget into them is a selection step, and
+                selection is what manufactures the false positives. With 20 channels at a 0.05
+                threshold you expect one false positive in the set even if every channel truly
+                contributes zero. The remedies carry over directly: decide in advance which
+                channels the test is about, correct the threshold for the number of channels, or
+                run one overall test across channels and only drill into a pair when the overall
+                test says there is something to find.
+            cn:
+              >
+                是的，同一个坑换了件衣服。读一张 20 个渠道的表，挑出显著的那些加预算，
+                这是一次筛选，而筛选正是制造假阳值的那个动作。20 个渠道、0.05 的门槛，
+                即使每个渠道真的贡献都是零，你也会期望集里出现 1 个假阳性。
+                收拾办法可以直接搬过来：事先定好这次测试关心哪几个渠道；对渠道数做阈值校正；
+                或者先对所有渠道做一次整体检验，整体有东西才往下钻。
+        confidence: 8
+        reference:
+          - docs/3-experiment-design/03-multiple-testing/cn.md

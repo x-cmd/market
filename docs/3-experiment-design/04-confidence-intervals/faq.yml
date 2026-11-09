@@ -1,0 +1,245 @@
+id: x-market-3-experiment-design-04-confidence-intervals
+
+data:
+  - name:
+      en: what the interval actually means
+      cn: 区间到底在说什么
+    qa:
+      - id: what-does-95-percent-mean
+        question:
+          en: "What does it really mean to say the effect is 4.0 with a 95% confidence interval?"
+          cn: 「ROI 4.0，95% 置信区间」这句话到底在讲什么？
+        answer:
+          en:
+            >
+              It means the true value has a 95% probability of falling inside that range, and
+              it means the interval was built so that 95% of repeated runs of the same
+              experiment would produce an interval containing the truth. It does not mean
+              "I am 95% sure". The width tells you how much data you spent, not how clear
+              the picture is. If the interval spans zero, the correct reading is "we could not
+              tell", not "there is no effect" — an experiment with a true effect of zero and
+              one with a true effect of +12 percentage points look nearly identical when the
+              sample is small enough.
+          cn:
+            >
+              意思是真值有 95% 的概率落在这个范围里；这个区间是按「重复跑同一场实验，
+              95% 的次数会盖住真值」的方式造出来的。它不是「我有 95% 的把握」——
+              区间宽度告诉你花了多少样本，不告诉你事情有多清楚。区间跨过零的时候，
+              正确的读法是「测不出来」，不是「没有效果」：效果是 0 的实验和效果是
+              +12 个百分点的实验，样本量一样小时，区间长得几乎一样。
+        confidence: 9
+        reference:
+          - docs/3-experiment-design/04-confidence-intervals/cn.md
+      - id: same-sample-different-width
+        question:
+          en: "Two teams ran the same test on the same number of users. Why are their intervals so different?"
+          cn: 两组人用同样多的人跑同一场实验，为什么区间差这么多？
+        answer:
+          en:
+            >
+              Because interval width is driven by three things, and only one of them is the
+              sample size: the sample size, the variance in the outcome, and the size of the
+              effect. The clearest real illustration is US furniture and home furnishings
+              store sales from BEA. Averaging the same twelve months of 2019 gives a
+              point estimate of 10,713 million dollars with a 95% interval half-width of
+              97 million. The same computation on 2020 gives a half-width of 1,249 million —
+              thirteen times wider, on the same twelve observations, because March to June
+              2020 collapsed and rebounded. Variance is a property of the business, not of
+              your traffic.
+          cn:
+            >
+              因为区间宽度由三样东西决定，样本量只是其中一样：样本量、结果本身的波动程度、
+              以及效应大小。最清楚的真实例子是 BEA 的美国家具与家居用品专卖店月度销售额。
+              同样取 2019 年的 12 个月，点估计 10,713 百万美元，95% 区间半宽 97 百万美元。
+              同样算法用在 2020 年，半宽是 1,249 百万美元——观测数一样多，宽了 13 倍，
+              原因是 2020 年 3 月到 6 月先塌后弹。**波动是生意本身的属性，不是你的流量带来的。**
+        confidence: 9
+        reference:
+          - docs/3-experiment-design/04-confidence-intervals/cn.md
+      - id: narrow-interval-wrong-model
+        question:
+          en: "The interval is narrow. Does that mean the conclusion is right?"
+          cn: 区间很窄，是不是就说明结论是对的？
+        answer:
+          en:
+            >
+              No. A narrow interval only says the estimate is precise, not that the thing
+              you measured is the thing you wanted. The interval covers the premise that
+              the model form is right; it does not cover whether the model form is right.
+              eBay is the clean example: the same brand-keyword ad data gave a return of
+              4,100% from a regression with no controls, 1,400% from a regression with
+              time and geo controls, and −63% from the randomised experiment, whose 95%
+              interval is [−124%, −3%]. Adding control variables narrowed the estimate and
+              moved it nowhere near the truth. Watch the interval you report, but watch
+              the pipeline that produced it too.
+          cn:
+            >
+              不是。区间窄只说明估计精确，不说明你量的是你想量的那个东西。
+              区间覆盖的是「模型形式是对的」这个前提，不覆盖模型形式本身对不对。
+              eBay 就是干净的例子：同一批品牌词广告数据，回归不加控制变量算出 4100%，
+              加了时间和地区控制变量算出 1400%，随机实验算出 −63%（95% 区间 [−124%, −3%]）。
+              多加控制变量让估计变窄了，离真值却一步没近。**区间要盯，产生区间的流程更要盯。**
+        confidence: 9
+        reference:
+          - docs/3-experiment-design/04-confidence-intervals/cn.md
+  - name:
+      en: comparing two channels
+      cn: 两个渠道怎么比
+    qa:
+      - id: overlapping-intervals
+        question:
+          en: "Channel A has ROI 4.0 and channel B has 3.4, but the intervals overlap. Can I compare them?"
+          cn: 渠道 A 的 ROI 是 4.0，渠道 B 是 3.4，但区间重叠了。能比吗？
+        answer:
+          en:
+            >
+              Yes — you compare them by the difference, not by the two point estimates.
+              With A at 4.0 (95% interval [1.2, 6.8], half-width 2.8) and B at 3.4
+              ([2.1, 4.7], half-width 1.3), the difference is 0.6. The standard error of
+              the difference is the two standard errors combined in quadrature, and 1.96
+              times that gives ±3.09, so the difference has a 95% interval of [−2.5, 3.7].
+              That interval straddles zero, which means the existing data cannot separate
+              the two channels. Two further points: a wider interval on A does not mean A
+              is worse, it means A's experiment was sloppier; and if the two channels were
+              measured as arms of the same experiment, you can compute the difference
+              directly instead of stacking two independent experiments' uncertainty.
+          cn:
+            >
+              能，但要比的是差值，不是两个点估计各自的值。A 是 4.0（95% 区间 [1.2, 6.8]，
+              半宽 2.8），B 是 3.4（[2.1, 4.7]，半宽 1.3），差值 0.6。差值的标准误是两个标准误
+              平方和再开根，1.96 倍是 ±3.09，所以差值的 95% 区间是 [−2.5, 3.7]。
+              这个区间跨过零，意味着以现有数据分不出两个渠道的高下。另外两点：
+              A 的区间更宽不代表 A 更差，只代表 A 那场实验设计得更糙；
+              如果两个渠道本来就是同一场实验的两个组，差值可以直接算，
+              不用再叠一层两场独立实验的不确定性。
+        confidence: 9
+        reference:
+          - docs/3-experiment-design/04-confidence-intervals/cn.md
+      - id: is-the-difference-worth-chasing
+        question:
+          en: "The intervals overlap, so should I just skip the comparison?"
+          cn: 区间重叠了，那是不是就不用比了？
+        answer:
+          en:
+            >
+              Overlap does not decide whether comparing is worth it — the business size of
+              the gap does. If channel A spends 1 million per month and channel B spends
+              500,000, a gap of 0.6 in ROI is 600,000 per month of incremental revenue on A,
+              far larger than either interval's half-width, and it is worth spending another
+              round of traffic to separate them. If both channels spend 50,000 per month,
+              the same 0.6 is only 30,000, and that is not worth buying more data for.
+              Decide what difference in money the question is worth, then look at whether
+              the interval can resolve that.
+          cn:
+            >
+              重叠不决定要不要比，**差距的业务量级才决定**。渠道 A 一个月花 100 万、B 花 50 万，
+              0.6 的 ROI 差距在 A 上是每月 60 万增量收入，远大于两个区间的半宽，
+              那就值得再花一轮流量去分辨。如果两个渠道一个月各花 5 万，同一个 0.6 只有 3 万块，
+              不值得为它买数据。先算清楚这个问题值多少钱，再看区间能不能分辨出这个数。
+        confidence: 9
+        reference:
+          - docs/3-experiment-design/04-confidence-intervals/cn.md
+      - id: picking-winner-from-many
+        question:
+          en: "I tested five cuts of the data and only one came out significant. Is that interval trustworthy?"
+          cn: 试了五个切面，只有一个显著。那个区间能信吗？
+        answer:
+          en:
+            >
+              No. That interval is manufactured by the selection, not earned by the data.
+              Running many cuts and reporting only the significant one produces an interval
+              that is far narrower than the uncertainty actually present, because the width
+              of the winner was never computed across all the cuts that failed. A narrow
+              interval on a selectively reported result says nothing about how likely the
+              true effect is to be real. Report the whole family of intervals, or adjust
+              for the number of comparisons, or pre-commit to the cut before looking.
+          cn:
+            >
+              不能。那个区间是筛出来的，不是数据挣来的。试了多个切面只报那个显著的，
+              得到的区间会远窄于实际存在的不确定性，因为落选的那些切面从来没参与过宽度计算。
+              **一个被筛选过的结果上的窄区间，说明不了真效果有多可能是真的。**
+              要么把整族区间一起报出来，要么按比较次数做校正，要么在开跑前就把切哪个切面定下来。
+        confidence: 8
+        reference:
+          - docs/3-experiment-design/04-confidence-intervals/cn.md
+  - name:
+      en: reporting numbers with intervals
+      cn: 报数带上区间
+    qa:
+      - id: how-to-report
+        question:
+          en: "What exactly should go next to the number when I report it?"
+          cn: 报数的时候，数字旁边到底该写什么？
+        answer:
+          en:
+            >
+              Three things, every time: the point estimate, the interval, and how the
+              interval was obtained. A workable line reads: "Incremental ROI 4.0, 95%
+              confidence interval [1.2, 6.8]; n = 12,480 per arm, 6-week experiment,
+              randomised assignment, metric is incremental order value within 14 days."
+              The third part is the one most often dropped, and it is the one that tells
+              a reader six months later whether the number came out of a large experiment
+              or a small one. Without an interval, a number is a half-finished result
+              rather than a conclusion.
+          cn:
+            >
+              三样东西，一次都不能少：点估计、区间、区间是怎么来的。一行能直接抄的写法是：
+              「增量 ROI 4.0，95% 置信区间 [1.2, 6.8]；n = 每组 12,480，实验期 6 周，
+              随机分流，指标为 14 天内增量订单金额。」第三样最常被省，
+              而它恰恰是半年后别人判断这个数出自多大的实验的唯一依据。
+              **没有区间的数不是结论，是半成品。**
+        confidence: 9
+        reference:
+          - docs/3-experiment-design/04-confidence-intervals/cn.md
+      - id: wide-interval-still-decide
+        question:
+          en: "My interval is very wide. Does that mean I cannot make any decision?"
+          cn: 我的区间很宽，是不是就什么都不能定了？
+        answer:
+          en:
+            >
+              It means this particular number cannot carry the decision, not that you have
+              to fall back on the point estimate. A wide interval is usually a statement
+              about the experiment, not about the world: the sample was too small, or the
+              outcome was too noisy, or the effect was too small to resolve. The honest
+              responses are to run a bigger experiment, to change the design, or to make
+              the decision on a different basis such as the downside case. What is not
+              honest is quietly dropping the interval and acting on the point estimate,
+              because that is the one number the data does not support.
+          cn:
+            >
+              这句话的意思是「这个数撑不起这个决定」，不是「你还是用那个数吧」。
+              区间宽通常说的是实验本身：样本太小、结果太吵、或者效果小到分辨不出来。
+              正经的应对是跑一场更大的实验、换一种设计，或者换一个依据做决定，
+              比如只按下限那一端的最坏情况来算。不诚实的是悄悄把区间扔掉，
+              转头拿点估计去做事——**那恰恰是数据唯一不支持的那个数。**
+        confidence: 9
+        reference:
+          - docs/3-experiment-design/04-confidence-intervals/cn.md
+      - id: roi-4-what-it-changed
+        question:
+          en: "We measured ROI 4.0 with an interval from 1.2 to 6.8. What did that interval actually change?"
+          cn: 我们测出 ROI 4.0，区间是 1.2 到 6.8。这个区间实际改变了什么？
+        answer:
+          en:
+            >
+              It changed a specific decision. A consumer brand spent 1 million on search
+              ads and measured 4 million in incremental revenue, giving ROI 4.0, with a 95%
+              interval of [1.2, 6.8]. The team had planned to add 2 million of spend on the
+              strength of the 4.0. They did not, because if the true value sits at the 1.2
+              end, the incremental revenue from that extra 2 million may only break even
+              against the spend itself. Reading 4.0 alone turns "looks like a sure thing"
+              into a bigger bet; reading [1.2, 6.8] turns it into a smaller step. The
+              interval also has a cost: the experiment ran six weeks with 10% of traffic
+              held back, and rigor has a bill.
+          cn:
+            >
+              它改掉了一个具体的决定。某消费品牌在搜索广告上花了 100 万，测出增量收入 400 万，
+              ROI 点估计 4.0，95% 区间 [1.2, 6.8]。团队原本打算照着 4.0 再加投 200 万。
+              他们没加——**因为如果真值落在 1.2 那一端，加投的 200 万带回来的增量收入
+              扣掉投放本身，可能只是持平。** 只读 4.0，「看起来稳赚」会变成更大的赌注；
+              读 [1.2, 6.8]，它变成一个先小步试的决定。区间也有代价：
+              实验跑了六周，10% 的流量被扣住，**严谨是有账单的。**
+        confidence: 8
+        reference:
+          - docs/3-experiment-design/04-confidence-intervals/cn.md

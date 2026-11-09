@@ -1,0 +1,226 @@
+id: x-market-4-performance-analysis-05-did-it-work-three-weeks-later
+
+data:
+  - name:
+      en: why the effect is not there yet
+      cn: 效果为什么还没出来
+    qa:
+      - id: not-yet-vs-not-at-all
+        question:
+          en: Is a result of only +1% after three weeks evidence that the campaign failed?
+          cn: 第三周只有 +1%，能不能说明这次投放失败了？
+        answer:
+          en: >
+            No. A report tells you what has accumulated so far, not what the campaign produced.
+            An effect of a given size is only partly in the number at any given moment. In the
+            worked example on this page, a promotion's total effect is 260 incremental units,
+            but only 88 of them have arrived in week one, 130 by week three, and 231 by week
+            eight. A +1% reading at week three is consistent with a campaign whose final effect
+            is large and a campaign whose final effect is zero. The number alone cannot separate
+            the two, which is exactly why the window has to be fixed before the launch, not
+            after the third week.
+          cn: >
+            不能。报表说的是「到目前为止累计发生了什么」，不是「这次投放产生了什么」。同样大小
+            的效果，在任何一个时点上只有一部分在数里。这一页的算例里，一次促销的全部效果是 260 件
+            增量，第 1 周到了 88 件，第 3 周 130 件，第 8 周 231 件。第三周 +1% 这个读数，既可能是
+            一个最终效果很大的投放，也可能是一个最终效果为零的投放。这个数本身分不出这两件事——
+            这正是窗口必须在开投之前定好、而不是第三周之后补的原因。
+        confidence: 10
+        reference:
+          - docs/4-performance-analysis/05-did-it-work-three-weeks-later/cn.md
+      - id: natural-swing-size
+        question:
+          en: How much does a category move on its own, with no campaign at all?
+          cn: 一个品类自己一个月能波动多少，跟投放没关系的那种？
+        answer:
+          en: >
+            Enough to swamp a small effect. In US furniture and home furnishings stores, implied
+            volume (sales divided by the chain-type price index) moved from 94.9 in September 2023
+            to 92.4 in October and back to 96.3 in November. Nothing changed in the business
+            between those months, so a 4% swing is what this category does on its own. Across
+            2019 to 2023 the month-over-month change after removing seasonality has a standard
+            deviation of about 2%. A campaign effect of 3% is therefore not separable from noise
+            in a short window, and the same 3% would look like a real result if the window were
+            long enough and a control group were in place.
+          cn: >
+            足够把一个小的效果淹掉。美国家具与家居用品专卖店的隐含销量（销售额除以连锁型价格指数），
+            2023 年 9 月 94.9，10 月 92.4，11 月 96.3。这几个月中间生意上什么都没变，4% 的摆动就是
+            这个品类自己会做的事。2019 到 2023 年，去掉季节之后的月度环比变化，标准差约 2%。
+            所以 3% 的效果在短窗口里跟噪声分不开；同样的 3%，窗口够长、对照组到位，是能读出来的。
+        confidence: 9
+        reference:
+          - docs/4-performance-analysis/05-did-it-work-three-weeks-later/cn.md
+
+  - name:
+      en: what makes the effect arrive late
+      cn: 效果为什么会晚到
+    qa:
+      - id: three-sources-of-lag
+        question:
+          en: What are the reasons an effect takes weeks to show up?
+          cn: 效果要好几周才出来，有哪几个原因？
+        answer:
+          en: >
+            Three. First, residual carryover from the advertising itself: the effect decays day by
+            day, and how fast depends on the channel. In the Adstock formulation used in media
+            mix modelling, the daily retention rate lambda is what sets the tail. Google Research's
+            2017 paper on Bayesian media mix modelling gives typical priors of 0.1 to 0.3 for
+            search, 0.7 for social, and 0.7 to 0.9 for television. At lambda 0.3 only 2.7% of
+            day zero's effect is left by day three; at lambda 0.9, 47.8% is still there at day
+            seven and 10.9% at day twenty-one. Second, the decision cycle of the customer, which
+            is set by the category: buying a sofa takes weeks of measuring and comparing, buying a
+            snack takes minutes. Third, approval, which matters in B2B where a lead has to pass a
+            budget cycle before it becomes an order.
+          cn: >
+            三个。第一是广告本身的残留，效果按天衰减，快慢由渠道决定。营销组合模型里的 Adstock 用的
+            就是每天保留多少这个参数。Google Research 2017 年那篇讲贝叶斯营销组合模型的文章给的常见
+            取值：搜索 0.1 到 0.3，社交 0.7，电视 0.7 到 0.9。λ 取 0.3，第 3 天只剩 2.7%；λ 取 0.9，
+            第 7 天还剩 47.8%，第 21 天还剩 10.9%。第二是顾客的决策周期，由品类定：买沙发要量尺寸、
+            比价格，好几周；买零食几分钟。第三是审批，B 端一个线索要走完一轮预算才变成订单。
+        confidence: 9
+        reference:
+          - docs/4-performance-analysis/05-did-it-work-three-weeks-later/cn.md
+      - id: season-can-fake-a-result
+        question:
+          en: Can the calendar make a campaign look like it worked when it did not?
+          cn: 季节会不会让一次没效果的投放看起来像有效？
+        answer:
+          en: >
+            It can make it look effective, and it can also make it look like a failure. In
+            calendar-adjusted EU retail turnover, February sits at 90.1 on a scale where the
+            average month is 100, and December at 106.1. A campaign run in December therefore
+            gets a 17.8% seasonal tailwind it did not earn, and a campaign run in February gets
+            a 13% headwind against it. Promotions do the same thing by pulling demand forward: a
+            November sale makes November look like a triumph and December look like a collapse,
+            and neither is real. This is why the seasonality of a category has to be removed
+            before any campaign number is read.
+          cn: >
+            会，而且两个方向都会。日历调整后的欧盟零售营业额，二月是 90.1（全年月均=100），十二月是
+            106.1。十二月做的投放白拿 17.8% 的季节顺风，二月做的投放白挨 13% 的逆风。促销是把需求
+            往前挪，效果一样：一场十一月大促让十一月像巨大的成功、十二月像巨大的失败，两边都不真。
+            所以读任何一次投放的数字之前，季节得先剥掉。
+        confidence: 9
+        reference:
+          - docs/4-performance-analysis/05-did-it-work-three-weeks-later/cn.md
+
+  - name:
+      en: how to check whether it worked
+      cn: 怎么查这次到底有没有效
+    qa:
+      - id: four-steps
+        question:
+          en: What do you actually do to find out whether a campaign worked?
+          cn: 要做哪几步才能查清这次投放有没有效？
+        answer:
+          en: >
+            Four. Put a contemporaneous control group in place: not this month against last
+            month, but the group that did not get the campaign, measured over the same calendar
+            days, and it has to be given the same amount of time. Plot the time series, with
+            eight weeks before, the campaign weeks, and eight weeks after on one axis, because a
+            real effect lifts, plateaus and then decays while a single point at week three
+            cannot tell you which of those you are looking at. Rule out whatever else ran in
+            the same period, since without a control group no single chart can separate a
+            packaging change, a second platform, a livestream launch and a price change from
+            the campaign itself. And know in advance how small an effect you need to resolve,
+            because a 5% lift has a 95% confidence interval half-width of 9% at a sample of
+            2000, 29% at 200, and 56% at 50.
+          cn: >
+            四步。第一，摆同期对照：不是这个月比上个月，是没拿到这次投放的那组人，在同样的日历日上
+            当参照，而且对照也要给同样长的时间。第二，看时间序列，把投放前 8 周、投放期间、投放后 8 周
+            画在同一条轴上——真效果会抬起来、维持平台、然后回落，只看第三周那个点你不知道自己在看哪一个。
+            第三，把同期别的动作排掉：没有同期对照，换包装、上第二个平台、开直播、改价格，没有一张
+            单独的图能把它们分开。第四，事先知道自己要分辨多小的效果：同样一个 5% 的提升，样本量 2000
+            时 95% 置信区间半宽 9%，200 时 29%，50 时 56%。
+        confidence: 9
+        reference:
+          - docs/4-performance-analysis/05-did-it-work-three-weeks-later/cn.md
+      - id: lengthening-window-is-inefficient
+        question:
+          en: Does waiting longer give you a more reliable answer?
+          cn: 窗口拉得更长，答案就更可靠吗？
+        answer:
+          en: >
+            It helps, but it is a slow way to buy precision. The width of a confidence interval
+            shrinks with the square root of the sample size, so going from a 3-week window to
+            a 12-week window multiplies the sample by four and narrows the interval by only
+            about half. Along the curve on this page, the effect is 89% arrived at week eight
+            and still not finished at week twelve. Lengthening the window is spending real
+            business opportunity to buy statistical certainty, and the return on that spend
+            falls quickly.
+          cn: >
+            有用，但靠它买精度很慢。置信区间的宽度跟样本量的平方根成反比，所以窗口从 3 周拉到 12 周，
+            样本量涨 4 倍，区间只收窄一半左右。这一页那条曲线上，第 8 周效果到了 89%，第 12 周还没满。
+            拉长窗口等于拿真实的业务机会去换统计上的确定性，这个换法的收益很快就变小了。
+        confidence: 8
+        reference:
+          - docs/4-performance-analysis/05-did-it-work-three-weeks-later/cn.md
+
+  - name:
+      en: setting the window
+      cn: 怎么定窗口
+    qa:
+      - id: three-things-that-set-the-window
+        question:
+          en: What should determine how long you wait before judging a campaign?
+          cn: 一次投放要等多久才算完，该由什么决定？
+        answer:
+          en: >
+            Three things, and none of them is how long you would like to wait. First, the
+            decision cycle of the category: three weeks is the floor for furniture, because
+            that is roughly how long a buyer takes, and three weeks is pure waste for a snack
+            that gets bought in minutes. Second, how long the channel's effect carries, which
+            differs by channel, so the windows are not the same length. Third, how small an
+            effect you need to resolve, since separating 3% from 30% is a hundredfold
+            difference in sample size and a correspondingly different window. Write the window
+            on the campaign brief before it launches, not as a sentence added afterwards that
+            says let's give it two more weeks.
+          cn: >
+            三件事，没有一件是你想等多久。第一是品类的决策周期：家具是三周打底，因为买家差不多就要走
+            三周；零食几分钟就下单，三周纯属浪费。第二是渠道的效果拖多久，各渠道不一样，窗口自然
+            不等长。第三是你要分辨多小的效果，分辨 3% 和分辨 30% 差 100 倍样本量，窗口也跟着差。
+            把窗口写在开投之前的投放单上，而不是事后补一句「我们再看两周」。
+        confidence: 9
+        reference:
+          - docs/4-performance-analysis/05-did-it-work-three-weeks-later/cn.md
+      - id: cost-of-calling-too-early
+        question:
+          en: What does it cost to stop a campaign in week three?
+          cn: 在第三周把投放停掉，代价是什么？
+        answer:
+          en: >
+            In the worked example on this page, the campaign cost 260,000. Judged on the 130
+            incremental units that had arrived by week three, the return reads as 0.8 times the
+            spend, which looks like a loss. Judged on the 231 units that had arrived by week
+            eight, it reads as 1.78 times, which looks like a profit. Same money, same
+            campaign, two answers, and the difference is entirely the week you read the data.
+            Stopping in week three does not just forgo the second half of the return; it also
+            writes off the half that had already been earned, and because the mistake shows up
+            as "saved budget", it is very hard to spot in the numbers afterwards.
+          cn: >
+            这一页的算例里，这次投放花了 26 万。按第 3 周已经到账的 130 件算，回报是 0.8 倍，看着像亏；
+            按第 8 周到账的 231 件算，是 1.78 倍，看着像赚。同一笔钱、同一次活动，两个答案，差别全在
+            你哪一周收数。第三周停手不只是少了后半段的回报，还把已经赚到的那一半也一笔勾销了；而这个
+            错误在报表上表现为「省下了预算」，事后很难发现。
+        confidence: 9
+        reference:
+          - docs/4-performance-analysis/05-did-it-work-three-weeks-later/cn.md
+      - id: when-nothing-shows-up
+        question:
+          en: What if the window closes and still there is no effect?
+          cn: 窗口到了还是没效果，那算什么意思？
+        answer:
+          en: >
+            That is a conclusion, not an excuse to keep waiting. At the end of the window there
+            are three things worth checking: whether the campaign should have worked at all,
+            which the marginal return and saturation curves would have said; whether somebody
+            changed something else in the middle, which would mean the control group is not
+            clean; and whether the window you set was too short for that channel. What you
+            should not do is extend the window indefinitely, because that is not caution, it
+            is turning a decision into no decision.
+          cn: >
+            那是一个结论，不是继续等的理由。窗口到了要查三件事：算下来它本来是不是就不该有效（边际回报
+            和饱和曲线会告诉你）；中途是不是有人改了什么（那说明对照不干净）；还有这个渠道的窗口是不是
+            你定短了。不该做的是无限往后延窗口——那不是谨慎，那是把一个决定拖成一个不做决定。
+        confidence: 9
+        reference:
+          - docs/4-performance-analysis/05-did-it-work-three-weeks-later/cn.md

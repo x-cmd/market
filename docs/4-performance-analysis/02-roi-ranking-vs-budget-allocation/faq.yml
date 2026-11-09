@@ -1,0 +1,177 @@
+id: x-market-4-performance-analysis-02-roi-ranking-vs-budget-allocation
+
+data:
+  - name:
+      en: why the ranking misleads
+      cn: 排名为什么会骗人
+    qa:
+      - id: ranking-is-retrospective
+        question:
+          en: Why can't you use the ROI ranking to decide where to add money?
+          cn: 为什么不能拿 ROI 排名来决定加钱顺序？
+        answer:
+          en: >
+            Because ROI is computed as total return divided by total spend, so it is a
+            retrospective number. It tells you how well the money already in the channel
+            performed, not what the next unit would buy. The channel at the top of the ranking
+            is often the one you have already funded most heavily, which is exactly the channel
+            whose marginal return has already fallen. A worked example on this page has four
+            channels whose average ROI and last-band marginal ROI produce completely opposite
+            orderings: the channel ranked first on average is ranked last on marginal.
+          cn: >
+            因为 ROI 是总回报除以总花费算出来的，它是个回头看的数。它说的是已经投在这个渠道里的
+            钱干得怎么样，不是下一块钱能换回什么。排名在第一的那个渠道，往往恰恰是你已经投得最多的
+            那个，也就是边际早就掉下来的那个。这一页的算例里，四个渠道按平均 ROI 排和按最后一档
+            边际 ROI 排是两个完全相反的顺序：平均第一的那个，边际排在最后。
+        confidence: 10
+        reference:
+          - docs/4-performance-analysis/02-roi-ranking-vs-budget-allocation/cn.md
+      - id: what-average-roi-hides
+        question:
+          en: What does the average ROI hide?
+          cn: 平均 ROI 藏了什么？
+        answer:
+          en: >
+            Two things, and neither of them answers the question of what happens if you add more.
+            First, it hides how much volume the channel has already absorbed, which is usually why
+            its average is high. Second, it hides the fact that the average is really the average
+            of the traffic the channel originally won. The cheap, high-intent inventory came
+            first and pulled the average up; the long tail you added later is diluting it, and
+            the current average says nothing about what the next increment will fetch.
+          cn: >
+            两样，而且两样都答不了「再加会怎样」。第一，它藏了这个渠道已经吃掉了多少量，而平均数高
+            通常正是这个原因。第二，它藏了这个平均其实是当初那批流量的平均。便宜、意图强的库存先
+            到，把平均数拉高了；后来加进来的长尾在稀释它。所以现在的平均数说明不了下一笔增量能拿到什么。
+        confidence: 9
+        reference:
+          - docs/4-performance-analysis/02-roi-ranking-vs-budget-allocation/cn.md
+      - id: biggest-channel-saturates
+        question:
+          en: Does the biggest channel really tend to saturate first?
+          cn: 总量最大的渠道真的会先到饱和吗？
+        answer:
+          en: >
+            In the US market the pattern is visible in the published numbers. Search was the
+            largest digital advertising format in 2024 at 102.9 billion dollars, 39.8% of the
+            market, and grew 15.9% that year. In 2025 its growth slowed to 11% while social
+            grew 32.6%, and social at 117.7 billion dollars overtook search at 114.2 billion
+            for the first time. Search did not shrink, it grew more slowly than a channel with
+            only about four fifths of its size. That is what saturation looks like from the
+            outside, and the budget tables of individual advertisers are a scaled-down version.
+          cn: >
+            在美国市场，这个pattern在公开发布的数字里看得见。搜索广告 2024 年是最大的数字广告形式，
+            1029 亿美元，占 39.8%，当年增长 15.9%。2025 年它的增速掉到 11%，社交涨 32.6%，
+            社交 1177 亿首次超过搜索的 1142 亿。搜索没有萎缩，它只是比一个规模只有它八成的渠道
+            长得慢。从外面看，饱和就是这个样子；单个广告主的预算表是这个的缩小版。
+        confidence: 9
+        reference:
+          - docs/4-performance-analysis/02-roi-ranking-vs-budget-allocation/cn.md
+
+  - name:
+      en: what to look at instead
+      cn: 该看的是哪个数
+    qa:
+      - id: marginal-roi-definition
+        question:
+          en: What is marginal ROI and how do you compute it from data you already have?
+          cn: 边际 ROI 是什么？用手头已有的数怎么算？
+        answer:
+          en: >
+            Marginal ROI is what one more unit of money brings back, and it is computed per band
+            of spend. Cut the month's spend into bands, look at what each band returned, and
+            divide. The last band is the number that answers "what if I add 20,000 more".
+            It is a curve rather than a single number, so it must be recomputed every period.
+            In the worked example on this page, search advertising returned 288万 on 120万 of
+            spend, an average of 2.40, while its last band of 24万 returned only 12万, a
+            marginal of 0.5. Both numbers come from the same month and the same channel.
+          cn: >
+            边际 ROI 是再多加一块钱能换回多少，按花费分档算。把一个月的花费切成若干段，看每一段
+            换回多少，除一下。最后一档就是「再多加 20 万会怎样」的答案。它是条曲线不是一个数，
+            所以每个周期都要重算。这一页的算例里，搜索广告 120 万换回 288 万，平均 ROI 2.40；
+            最后一档 24 万只换回 12 万，边际是 0.5。两个数来自同一个月、同一个渠道。
+        confidence: 10
+        reference:
+          - docs/4-performance-analysis/02-roi-ranking-vs-budget-allocation/cn.md
+      - id: cost-of-getting-it-wrong
+        question:
+          en: How much does it cost to add money to the wrong channel?
+          cn: 把钱加到错的渠道，代价有多大？
+        answer:
+          en: >
+            In the worked example, adding the next 20万 to the channel with the highest average
+            ROI returns 10万, while adding the same 20万 to the channel with the highest
+            marginal ROI returns 58万. The gap is 48万 on a single 20万 tranche, a factor of
+            5.8. Over a whole quarter of repeated allocation the gap compounds, because the
+            mistake is not a one-off but a standing rule that keeps directing money to whichever
+            channel has already been funded most.
+          cn: >
+            算例里，同样再加 20 万，给平均 ROI 最高的渠道换回 10 万，给边际 ROI 最高的渠道换回
+            58 万。差 48 万，5.8 倍。这个差距在一个季度里反复分配会累积，因为这不是一次性的失误，
+            而是一条一直在把钱导向「已经被投得最多」那个渠道的固定做法。
+        confidence: 9
+        reference:
+          - docs/4-performance-analysis/02-roi-ranking-vs-budget-allocation/cn.md
+      - id: both-numbers-are-needed
+        question:
+          en: Should you stop tracking ROI altogether?
+          cn: ROI 这个数以后就不用看了吗？
+        answer:
+          en: >
+            No. ROI answers its own question well, which is how this period's money performed.
+            It is useful for reporting, for comparing against peers, and for tracking the same
+            channel over time. The mistake is using it for the allocation decision. Keep both
+            columns in the same table, and read the marginal column when the question is where
+            the next unit of money should go.
+          cn: >
+            不是。ROI 答它自己的问题答得很好：这笔钱这段时间干得怎么样。汇报、跟同行比、看同一个
+            渠道的同比环比，都用得上。错的是拿它做分配决定。两个数放在同一张表里，做加钱决定的时候
+            看边际那一列。
+        confidence: 9
+        reference:
+          - docs/4-performance-analysis/02-roi-ranking-vs-budget-allocation/cn.md
+
+  - name:
+      en: how to do it
+      cn: 具体怎么做
+    qa:
+      - id: three-steps
+        question:
+          en: What are the steps to get from a ranking to an allocation?
+          cn: 从一份排名走到一个分配，要哪几步？
+        answer:
+          en: >
+            Three. Band the spend for every channel, keeping each band at around a tenth of total
+            spend so it is not buried in noise. Compute the marginal ROI of each band. Then add
+            money to whichever band currently has the highest marginal, and stop when it no longer
+            beats the others. That last step is the equal-marginal rule, and it is where a total
+            budget gets split across channels rather than simply handed to one of them.
+          cn: >
+            三步。先给每个渠道的花费分档，每档大致保持在总花费的一成，别细到每一档都埋在噪声里。
+            再算每档的边际 ROI。然后把钱加到当前边际最高的那一档上，加到它不再比其他渠道高为止。
+            最后一步就是等边际原则，总预算跨渠道怎么分就在这一步，见
+            [→ 等边际原则：最优分配的判据](../../8-analysis-toolbox/07-equal-marginal-returns-principle/cn.md)。
+        confidence: 9
+        reference:
+          - docs/4-performance-analysis/02-roi-ranking-vs-budget-allocation/cn.md
+      - id: attribution-caveat
+        question:
+          en: Does the ROI in a platform dashboard work for this?
+          cn: 平台后台那个 ROI 能直接拿来排吗？
+        answer:
+          en: >
+            Not without a check. Platform dashboards report ROI under the platform's own
+            attribution rule, which is not an incrementality measure. Some of the sales credited
+            to the channel would have happened anyway, and in some cases the platform's own
+            published experiment showed the return on paid search to be negative where the
+            observational estimate was over 1,400%. Ranking on a platform number can therefore
+            produce a different ordering than ranking on incremental return, so confirm which
+            basis the number uses before it drives a budget shift.
+          cn: >
+            先别急，得先确认口径。平台后台用的是平台自己的归因规则，不是增量口径。被算到这个渠道头上
+            的销售里有一部分本来也会发生；平台自己公布的搜索广告实验里，观测口径算出 1400% 以上，
+            随机实验的真值却是负的。所以按平台数字排出来的顺序，和按增量回报排出来的顺序可能不是
+            一个顺序，钱要挪之前先把口径问清楚，见
+            [→ 没有广告，这些单会成交吗](../../1-report-overview/06-incrementality-chart/cn.md)。
+        confidence: 8
+        reference:
+          - docs/4-performance-analysis/02-roi-ranking-vs-budget-allocation/cn.md

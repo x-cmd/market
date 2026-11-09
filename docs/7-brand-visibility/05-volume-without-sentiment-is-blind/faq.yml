@@ -1,0 +1,67 @@
+id: x-market-7-brand-visibility-05-volume-without-sentiment-is-blind
+
+data:
+  - name:
+      en: volume and sentiment for brand mentions
+      cn: 品牌提及的声量与情绪
+    qa:
+      - id: doubled-volume-all-negative
+        question:
+          en: Can a brand's mention volume double while every mention is negative?
+          cn: 品牌提及量翻倍，会不会全是不好的那一面？
+        answer:
+          en: >
+            Yes, and this page has the receipts. Pokémon GO on the US App Store went from an average of 12.3 reviews a day across 2026-10-07 to 10-18 to 52 reviews on 2026-10-19 — 4.2 times the baseline. On that single day 28 of the 52 reviews carried 1 or 2 stars, a negative share of 53.8% against 48.6% over the preceding twelve days. The reviews name the cause: version 0.433.1 shipped on 2026-10-16, and titles that day include "Issues after recent update", "Update is trash", "Bugged Update", "Constantly crashing" and "Game keeps crashing". Grouped by the version string the reviews carry, version 0.433.1 collected 223 of the 500 reviews in the window — more than any other version by a wide margin. The brand was mentioned four times as often, and nearly every extra mention was a complaint. The body text says who is being blamed: "Ever since Scopely bought this app they have made changes that make basically everything worse" and "Scopely ruined it". Volume on its own would have been reported as a 320% visibility win. With sentiment attached it is 200-plus new complaints in 48 hours.
+          cn: >
+            会，而且这一页有实证。宝可梦 GO 在美国区 App Store 上，2026 年 10 月 07 日到 18 日的评论日均 12.3 条，10 月 19 日一天 52 条，是基线的 4.2 倍。同一天那 52 条里有 28 条是 1 星或 2 星，差评率 53.8%，比前 12 天的 48.6% 高 5.2 个百分点。评论把原因写明了：版本 0.433.1 在 10 月 16 日前后上线，那天的标题有「Issues after recent update」「Update is trash」「Bugged Update」「Constantly crashing」「Game keeps crashing」。按评论自带的版本号分组，0.433.1 这一个版本就占了整个窗口 500 条里的 223 条，比任何其他版本都多出一大截。**这个牌子被提的次数翻了四倍，多出来的每一条几乎都是投诉。** 正文的矛头还指向了具体的人：「Ever since Scopely bought this app they have made changes that make basically everything worse」「Scopely ruined it」。只报声量，这一天是「可见度上涨 320%」；带上情绪，它是「48 小时内多了 200 多条投诉」。
+        confidence: 9
+        reference:
+          - docs/7-brand-visibility/05-volume-without-sentiment-is-blind/cn.md
+      - id: who-labels-sentiment
+        question:
+          en: Who decides whether a mention is positive or negative?
+          cn: 一条提及算好算坏，是谁定的？
+        answer:
+          en: >
+            Three different parties, and they do not agree. The user labels by tapping one to five stars — the method this page uses — which has the advantage that the label and the text come from the same person and that the rating is publicly visible on the store page. A model labels by matching text against a lexicon or a classifier; Hutto and Gilbert's VADER (ICWSM, 2014) does it with a human-curated list of sentiment words plus rules for punctuation and intensifiers, and it struggles with irony and jargon. The platform labels too, and this is the layer most people miss: Apple's own developer documentation states that the review summaries on an App Store product page are generated using large language models, compiling highlights and key information from individual reviews into a short paragraph, refreshed regularly. Nobody labels that summary as AI-written, so a reader takes it for a human's words. Apple's documentation also says the summary rating is computed per territory and can be reset when a new version ships, which means even the headline number for a brand can be a choice someone made rather than a fixed fact.
+          cn: >
+            三方在打，结论还会不一致。第一种是用户自己打：点 1 到 5 星，这是这一页用的方法，好处是标签和正文出自同一个人，而且星级公开挂在商店页面上。第二种是机器打：用词典或分类模型判极性。Hutto 与 Gilbert 提出的 VADER（2014 年 ICWSM）靠一张人工整理的情感词表加三条处理标点和程度副词的规则，对反讽和行业黑话经常打错。第三种是平台自己打，这一层最容易被忽略：苹果自己的开发者文档写明，App Store 商品页上的评论摘要是**用大语言模型生成的**，「把用户评论里的亮点和关键信息汇成一小段」，并且会定期刷新。摘要下面没有任何「这是 AI 写的」的标注，读者默认那是人写的。同一份文档还说，总评分按地区分开算，发布新版本时可以重置——**连品牌首页那个大数字，都可能是有人做的一个选择，不是一条固定的事实。**
+        confidence: 9
+        reference:
+          - docs/7-brand-visibility/05-volume-without-sentiment-is-blind/cn.md
+      - id: label-text-mismatch
+        question:
+          en: How do you find out that a sentiment label is wrong?
+          cn: 怎么发现情绪标签打错了？
+        answer:
+          en: >
+            Read the text next to the label. This page compared the star rating of all 500 reviews against the lean of the body text, using a two-way word list, and found that 6.6% of the 1-2 star reviews read clearly positive and 2.8% of the 4-5 star reviews read clearly negative. The instances are concrete: a 1-star review from 2026-11-05 titled "Bad" praises the game and the group activities; a 1-star review titled "Why would you reduce the amount of ballon encounters? Arguably the best feature in my opinion. Nice job!" is five-star praise; a 4-star review from 2026-11-06 is titled "Not working"; a 5-star review titled "Incredible" explains that the app kicks the user off the account. The method matters as much as the number: the word list is crude, so the percentages are a magnitude rather than a precise rate. But it answers the only question that matters — can this label be trusted. In practice, sampling twenty reviews at random and reading the label and the body side by side is enough to size the error. That error rate belongs in the report next to the sentiment figure, because it is the uncertainty on that figure.
+          cn: >
+            把正文和标签并排读。这一页拿 500 条评论全部对照了一遍：用一张正反两向的词表给正文定倾向，再跟星级比。**1-2 星组里有 6.6% 的评论正文明显在夸，4-5 星组里有 2.8% 明显在骂。** 实例很具体：2026 年 11 月 5 日一条标题是「Bad」的 1 星评论，正文在夸这个游戏好玩、组队活动不错；一条标题是「Why would you reduce the amount of ballon encounters? Arguably the best feature in my opinion. Nice job!」的 1 星评论，是五星好话；11 月 6 日一条 4 星评论标题直接叫「Not working」；一条 5 星评论标题叫「Incredible」，正文说的是「it kicks me off of my account sometimes」。方法本身跟数字一样要紧：词表粗糙，所以这两个百分比只能当量级，不能当精确值。但它回答了唯一要紧的问题——**这个标签能不能信。** 实际做法更简单：随机抽 20 条，把星级和正文并排读一遍，就能量出误差。这个误差率要跟情绪数一起报出去，因为它就是那个数的不确定度。
+        confidence: 9
+        reference:
+          - docs/7-brand-visibility/05-volume-without-sentiment-is-blind/cn.md
+      - id: comment-vs-conversation-sentiment
+        question:
+          en: Why is the sentiment of one comment not the same as the sentiment of the whole conversation?
+          cn: 为什么一条评论里的情绪，跟整段对话里的情绪不一样？
+        answer:
+          en: >
+            Because they are computed over different populations, and the gap is large. The App Store summary rating for Pokémon GO is 4.00, built from 656,621 lifetime ratings going back to the app's July 2016 launch. The actual mean of the most recent 500 reviews is 2.84, with 48.2% at 1-2 stars. The mean for the single worst week in the window, W43, is 2.69. Three defensible numbers, three different questions. The same pattern holds across the comparison set: Facebook's lifetime rating is 4.53 against 3.28 for its recent 500; WhatsApp's is 4.68 against 3.36. All three sit well below their lifetime figure, so this is not one app in trouble — it is how a lifetime aggregate dilutes recent bad news. Apple's documentation makes the dilution concrete: the summary rating is computed per territory and can be reset when a new version ships. Any report of "brand sentiment" has to say which population it means.
+          cn: >
+            因为它们算在不同的人群上，而且差得很远。宝可梦 GO 在 App Store 商品页上的累计评分是 4.00 分，背后是 656,621 条从 2016 年 7 月上线加到今天的评分记录。最近 500 条评论的实际均分是 2.84 分，差评率 48.2%。窗口里最差的一周（W43）均分是 2.69 分。**三个都说得通的数，回答的是三个不同的问题。** 对照的两家也一样：Facebook 累计 4.53 分对近期 3.28 分，WhatsApp 累计 4.68 分对近期 3.36 分。三家的近期数都明显低于自己的终身数，所以这不是某一家出了事，是终身累计这个算法本身会把最近的坏消息稀释掉。苹果文档把稀释这件事写得很具体：总评分按地区分开算，发布新版本时可以重置。所以任何一份报告里的「品牌情绪」，都得先说清算的是哪一群人。
+        confidence: 9
+        reference:
+          - docs/7-brand-visibility/05-volume-without-sentiment-is-blind/cn.md
+      - id: rss-500-limit
+        question:
+          en: What are the limits of the data behind these sentiment numbers?
+          cn: 这些情绪数字背后的数据，有什么取不动的边界？
+        answer:
+          en: >
+            The Apple Customer Reviews RSS endpoint allows at most ten pages of fifty reviews each, so the newest 500 reviews is the most the public interface gives. The service says so itself: a request for page eleven returns "CustomerReviews RSS page depth is limited to 10". Three consequences follow, and all three belong in the report. It is a window on the most recent period, not the full history — 500 reviews covered 2026-10-07 to 2026-11-07 for Pokémon GO, 32 days, which shows the 2026-10-19 spike and says nothing about last year. It counts people willing to write, not people holding an opinion, and a failure inflates both the volume and the negative share at once, so 48.2% must not be read as "half the users are unhappy". And the window length varies with how busy the app is: the same 500 reviews span 32 days for Pokémon GO, 14 for WhatsApp and 5 for Facebook, so "recent" is not the same stretch of time across apps and cross-app sentiment comparisons have to align that first.
+          cn: >
+            苹果 Customer Reviews RSS 接口最多翻 10 页，每页 50 条，也就是公开接口最多给**最新的 500 条评论**。服务自己会这么说：请求第 11 页会返回「CustomerReviews RSS page depth is limited to 10」。三个后果都得写进报告。第一，它只是最近一段时间的窗口，不是全部历史——500 条覆盖宝可梦 GO 的 2026 年 10 月 7 日到 11 月 7 日，32 天，能看出 10 月 19 日那根尖峰，看不出去年发生了什么。第二，它数的是愿意写评论的人，不是心里有意见的人；一次故障会同时放大声量和差评率，所以 48.2% 不能读成「一半用户不满」。第三，窗口长度随应用的热度变：同样 500 条，宝可梦 GO 摊 32 天，WhatsApp 摊 14 天，Facebook 只摊 5 天——**两个应用的「近期」不是同一段时间长度**，跨应用比情绪之前得先把这一条对齐。
+        confidence: 10
+        reference:
+          - docs/7-brand-visibility/05-volume-without-sentiment-is-blind/cn.md

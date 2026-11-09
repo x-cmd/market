@@ -1,0 +1,67 @@
+id: x-market-7-brand-visibility-01-brand-entry-public-signals
+
+data:
+  - name:
+      en: brand public signals catalogue
+      cn: 品牌公开信号目录
+    qa:
+      - id: brand-vs-company
+        question:
+          en: Why does it matter that a brand and a company are not the same thing?
+          cn: 为什么「品牌」和「公司」要分开？
+        answer:
+          en: >
+            Because the public signal hangs off a name, and the names are not interchangeable. NIKE's company name in SEC filings is "NIKE, Inc." and its Wikipedia article is "Nike, Inc." — but "Nike (company)" is a separate, nearly empty article. Over 2024-01 to 2026-10 the first article drew 3,674,630 pageviews and the second drew 3,033, a ratio of 1,212 to 1. Pull the wrong article and the brand's public visibility measures as essentially zero. The reverse case is Deckers Outdoor, whose single CIK 0000910521 covers both UGG and HOKA, while their search interest lives under entirely different names. Get the entity wrong and every cell downstream inherits the error.
+          cn: >
+            因为公开信号挂在名字上，而名字不能互相替代。NIKE 在 SEC 文件里的公司名是 "NIKE, Inc."，它的维基条目是 "Nike, Inc."——但 "Nike (company)" 是另一条几乎空着的条目。2024-01 到 2026-10，前者被访问 3,674,630 次，后者只有 3,033 次，差 1212 倍。取错条目，品牌可见度这一格就基本等于零。反过来的例子是 Deckers Outdoor，一个 CIK（0000910521）同时装着 UGG 和 HOKA，而它们的搜索热度挂在完全不同的名字上。主体错了，后面每一格都跟着错。
+        confidence: 10
+        reference:
+          - docs/7-brand-visibility/01-brand-entry-public-signals/cn.md
+      - id: three-share-paths
+        question:
+          en: What are the ways to establish a brand's market share, and which one is reliable?
+          cn: 份额有哪几条公开路径，哪条能站得住？
+        answer:
+          en: >
+            Three. Official statistics, third-party estimates, and shares backed out of company accounts. Official statistics are the most reproducible but usually stop at the industry level — the Eurostat figure of 19.82% for the EU27 in 2024 covers e-commerce's share of enterprise turnover, not any single brand. Third-party estimates are the weakest: the denominator, the channel coverage and the sample size are usually not published, so an unexplained third-party number in a brand entry quietly becomes "official data" the next time somebody quotes it. The account-backed path is the one this page uses, because every input can be traced: the numerator comes from the RevenueFromContractWithCustomerExcludingAssessedTax tag in SEC XBRL, the denominator from BEA's retail sales statistics. A share derived this way must be published together with the formula — a bare percentage tells the reader nothing about which denominator was used.
+          cn: >
+            三条。官方统计、第三方估算、用财报倒推。官方统计最能复现，但通常只到行业层——欧盟 2024 年那个 19.82% 是网络销售占企业总营业额的比例，不是任何一个品牌。第三方估算最弱：分母是什么、含不含电商、样本多大，多半查不到；一个没写清口径的第三方数进了品牌条目，下次被人引用时就变成了「官方数据」。财报倒推是这一页用的那条，因为每个成分都能追回原文——分子取 SEC XBRL 的 RevenueFromContractWithCustomerExcludingAssessedTax 标签，分母取 BEA 零售销售统计。这样算出来的份额必须连算式一起放出去，只写一个百分数，读者没法知道你用的是哪个分母。
+        confidence: 9
+        reference:
+          - docs/7-brand-visibility/01-brand-entry-public-signals/cn.md
+      - id: price-premium-blank
+        question:
+          en: Why is the brand-to-brand price premium left blank?
+          cn: 为什么品牌对品牌的价格溢价这一格是空的？
+        answer:
+          en: >
+            Because the number cannot be reproduced from a public source. A brand's own price list is not a dataset — the website changes without notice, and once the price moves there is nothing left to point at. Computing a premium also requires settling three choices that change the answer: who you compare against, list price or transaction price, and how the price is sampled. This page therefore splits price into two cells. Category price movement uses the BLS footwear CPI (seasonally adjusted, 1982-84=100), which ran 144.074 in January 2024 and 145.486 in January 2025 — but it covers all footwear, not one brand, so it cannot say whether one label charges more than another. The brand-to-brand premium stays empty. That is not a shortcut in data collection; the cell genuinely does not exist in public channels today.
+          cn: >
+            因为这个数在公开渠道复现不出来。品牌自己的价目表不是一个数据集——官网改价不留痕，改完就没有东西可指了。算溢价还得先定三个会改变答案的选择：跟谁比、比标价还是成交价、怎么取价。所以这一页把价格拆成两格。品类价格走势用 BLS 鞋类 CPI（季调，1982-84=100），2024 年 1 月 144.074，2025 年 1 月 145.486——但它覆盖全部鞋类，说明不了任何一个牌子比另一个贵多少。品牌对品牌的溢价留空。这不是取数偷懒，是这一格在公开渠道今天真的不存在。
+        confidence: 9
+        reference:
+          - docs/7-brand-visibility/01-brand-entry-public-signals/cn.md
+      - id: pageviews-not-sales
+        question:
+          en: Does Wikipedia pageview volume tell you whether a brand is selling well?
+          cn: 维基条目访问量能说明品牌卖得好不好吗？
+        answer:
+          en: >
+            No, and the four brands in this page show why. Between January 2024 and October 2026, NIKE's article fell from an average of 175 thousand views a month in the first half of 2024 to 46 thousand in August 2026 and 51 thousand in September 2026. Over the same stretch NIKE's revenue was flat: 46.31 billion dollars in FY2025 and 46.40 billion in FY2026. Visibility dropped hard, revenue did not. What pageviews do measure is how many people actively went looking for a brand. They say nothing about sales, because the people who look a brand up on Wikipedia and the people who buy it overlap very little. They say nothing about sentiment either — a view is an open, not a positive or negative mention.
+          cn: >
+            不能，这页的四家公司就是证据。2024 年 1 月到 2026 年 10 月，NIKE 的条目从 2024 年上半年月均 175 千次掉到 2026 年 8 月的 46 千次、9 月的 51 千次。同期 NIKE 的营收是平的：2025 财年 463.1 亿美元，2026 财年 464.0 亿美元。可见度掉了一大截，营收没掉。访问量真正量的是「有多少人主动去查这个品牌」，它说明不了销量——去维基百科查一个牌子的人，和会买这个牌子的人，重叠很小。它也说明不了情绪——访问量是打开，不是说好话还是坏话。
+        confidence: 9
+        reference:
+          - docs/7-brand-visibility/01-brand-entry-public-signals/cn.md
+      - id: single-brand-revenue-gap
+        question:
+          en: Can you get HOKA's revenue separately from UGG's?
+          cn: 能单独查到 HOKA 的营收吗？
+        answer:
+          en: >
+            Not from the machine-readable interface. Deckers' annual report states what UGG and what HOKA each sold, but that sits in a table inside the PDF, not in an XBRL tag. SEC's companyconcept endpoint returns revenue without segment dimensions, so there is no way to pull the HOKA line out of it with a single request. The cell is left empty rather than filled by subtracting a guessed HOKA figure from Deckers' total, because an estimate dropped into a table that claims every number traces back to a source turns into a fact the next time somebody quotes it. Single-brand ad spend is even further out of reach: no company splits advertising cost by brand.
+          cn: >
+            从机器可读的接口里取不到。Deckers 年报正文里有 UGG 和 HOKA 各自卖了多少，但那在 PDF 的表格里，不是 XBRL 标签。SEC 的 companyconcept 接口返回的营收不带分部维度，一条请求拉不出 HOKA 那一行。这一格留空，没有用猜的 HOKA 数去减 Deckers 总营收来填——一个估算值混进一份声称每个数都能追回原文的表，下次被人引用时就变成了事实。单品牌广告费更是够不着：没有公司按品牌拆广告费。
+        confidence: 10
+        reference:
+          - docs/7-brand-visibility/01-brand-entry-public-signals/cn.md

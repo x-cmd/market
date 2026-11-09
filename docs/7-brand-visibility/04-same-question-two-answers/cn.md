@@ -1,0 +1,122 @@
+# 问 AI 同一个问题，答案会变
+
+同一个问题问一次，得到的那个数不算数。
+
+```text
+https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E5%90%8C%E4%B8%80%E9%81%93%E9%A2%98%E9%97%AE%2020%20%E6%AC%A1%EF%BC%9A%E5%90%84%E5%93%81%E7%89%8C%E8%A2%AB%E7%82%B9%E5%90%8D%E7%9A%84%E6%AC%A1%E6%95%B0%EF%BC%88%E6%8F%90%E9%97%AE%EF%BC%9A%E6%8E%A8%E8%8D%90%E8%B7%91%E9%9E%8B%EF%BC%8C2026-11-09%EF%BC%89%22%7D%2C%22color%22%3A%5B%22%232563eb%22%2C%22%23dc2626%22%2C%22%2364748b%22%2C%22%23f59e0b%22%2C%22%230891b2%22%2C%22%238b5cf6%22%2C%22%2365a30d%22%2C%22%23db2777%22%5D%2C%22xAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%22%E8%A2%AB%E7%82%B9%E5%90%8D%E6%AC%A1%E6%95%B0%EF%BC%88%E6%BB%A1%E5%88%86%2020%20%E6%AC%A1%EF%BC%89%22%2C%22axisLabel%22%3A%7B%22formatter%22%3A%22%7Bvalue%7D%22%7D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%22ASICS%22%2C%22Nike%22%2C%22Saucony%22%2C%22Hoka%22%2C%22New%20Balance%22%2C%22Brooks%22%2C%22361%C2%B0%22%2C%22Adidas%22%2C%22%E7%89%B9%E6%AD%A5%22%2C%22Salomon%22%2C%22%E6%9D%8E%E5%AE%81%22%2C%22%E9%B8%BF%E6%98%9F%E5%B0%94%E5%85%8B%22%5D%2C%22axisLabel%22%3A%7B%22interval%22%3A0%7D%7D%2C%22grid%22%3A%7B%22left%22%3A90%2C%22right%22%3A60%2C%22top%22%3A60%2C%22bottom%22%3A50%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%2C%22axisPointer%22%3A%7B%22type%22%3A%22shadow%22%7D%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22%22%2C%22type%22%3A%22bar%22%2C%22data%22%3A%5B18%2C18%2C13%2C11%2C9%2C8%2C7%2C6%2C4%2C4%2C2%2C1%5D%2C%22label%22%3A%7B%22show%22%3Atrue%2C%22position%22%3A%22right%22%2C%22formatter%22%3A%22%7Bc%7D%22%7D%2C%22stack%22%3Anull%7D%5D%7D&w=760&h=460
+```
+
+<a href="https://x-cmd.com/draw/explore/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E5%90%8C%E4%B8%80%E9%81%93%E9%A2%98%E9%97%AE%2020%20%E6%AC%A1%EF%BC%9A%E5%90%84%E5%93%81%E7%89%8C%E8%A2%AB%E7%82%B9%E5%90%8D%E7%9A%84%E6%AC%A1%E6%95%B0%EF%BC%88%E6%8F%90%E9%97%AE%EF%BC%9A%E6%8E%A8%E8%8D%90%E8%B7%91%E9%9E%8B%EF%BC%8C2026-11-09%EF%BC%89%22%7D%2C%22color%22%3A%5B%22%232563eb%22%2C%22%23dc2626%22%2C%22%2364748b%22%2C%22%23f59e0b%22%2C%22%230891b2%22%2C%22%238b5cf6%22%2C%22%2365a30d%22%2C%22%23db2777%22%5D%2C%22xAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%22%E8%A2%AB%E7%82%B9%E5%90%8D%E6%AC%A1%E6%95%B0%EF%BC%88%E6%BB%A1%E5%88%86%2020%20%E6%AC%A1%EF%BC%89%22%2C%22axisLabel%22%3A%7B%22formatter%22%3A%22%7Bvalue%7D%22%7D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%22ASICS%22%2C%22Nike%22%2C%22Saucony%22%2C%22Hoka%22%2C%22New%20Balance%22%2C%22Brooks%22%2C%22361%C2%B0%22%2C%22Adidas%22%2C%22%E7%89%B9%E6%AD%A5%22%2C%22Salomon%22%2C%22%E6%9D%8E%E5%AE%81%22%2C%22%E9%B8%BF%E6%98%9F%E5%B0%94%E5%85%8B%22%5D%2C%22axisLabel%22%3A%7B%22interval%22%3A0%7D%7D%2C%22grid%22%3A%7B%22left%22%3A90%2C%22right%22%3A60%2C%22top%22%3A60%2C%22bottom%22%3A50%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%2C%22axisPointer%22%3A%7B%22type%22%3A%22shadow%22%7D%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22%22%2C%22type%22%3A%22bar%22%2C%22data%22%3A%5B18%2C18%2C13%2C11%2C9%2C8%2C7%2C6%2C4%2C4%2C2%2C1%5D%2C%22label%22%3A%7B%22show%22%3Atrue%2C%22position%22%3A%22right%22%2C%22formatter%22%3A%22%7Bc%7D%22%7D%2C%22stack%22%3Anull%7D%5D%7D&w=760&h=460"><img src="https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E5%90%8C%E4%B8%80%E9%81%93%E9%A2%98%E9%97%AE%2020%20%E6%AC%A1%EF%BC%9A%E5%90%84%E5%93%81%E7%89%8C%E8%A2%AB%E7%82%B9%E5%90%8D%E7%9A%84%E6%AC%A1%E6%95%B0%EF%BC%88%E6%8F%90%E9%97%AE%EF%BC%9A%E6%8E%A8%E8%8D%90%E8%B7%91%E9%9E%8B%EF%BC%8C2026-11-09%EF%BC%89%22%7D%2C%22color%22%3A%5B%22%232563eb%22%2C%22%23dc2626%22%2C%22%2364748b%22%2C%22%23f59e0b%22%2C%22%230891b2%22%2C%22%238b5cf6%22%2C%22%2365a30d%22%2C%22%23db2777%22%5D%2C%22xAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%22%E8%A2%AB%E7%82%B9%E5%90%8D%E6%AC%A1%E6%95%B0%EF%BC%88%E6%BB%A1%E5%88%86%2020%20%E6%AC%A1%EF%BC%89%22%2C%22axisLabel%22%3A%7B%22formatter%22%3A%22%7Bvalue%7D%22%7D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%22ASICS%22%2C%22Nike%22%2C%22Saucony%22%2C%22Hoka%22%2C%22New%20Balance%22%2C%22Brooks%22%2C%22361%C2%B0%22%2C%22Adidas%22%2C%22%E7%89%B9%E6%AD%A5%22%2C%22Salomon%22%2C%22%E6%9D%8E%E5%AE%81%22%2C%22%E9%B8%BF%E6%98%9F%E5%B0%94%E5%85%8B%22%5D%2C%22axisLabel%22%3A%7B%22interval%22%3A0%7D%7D%2C%22grid%22%3A%7B%22left%22%3A90%2C%22right%22%3A60%2C%22top%22%3A60%2C%22bottom%22%3A50%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%2C%22axisPointer%22%3A%7B%22type%22%3A%22shadow%22%7D%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22%22%2C%22type%22%3A%22bar%22%2C%22data%22%3A%5B18%2C18%2C13%2C11%2C9%2C8%2C7%2C6%2C4%2C4%2C2%2C1%5D%2C%22label%22%3A%7B%22show%22%3Atrue%2C%22position%22%3A%22right%22%2C%22formatter%22%3A%22%7Bc%7D%22%7D%2C%22stack%22%3Anull%7D%5D%7D&w=760&h=460" width="760" alt="brand_mentions_in_20_runs"></a>
+
+**GEO 的数必须重复测，单次不算数。** 这一页用一次真实实验说明：同一道「推荐跑鞋」问 20 次，品牌被点名的次数从 1 次到 18 次不等。问 1 次得到的数，95% 区间宽到能把「从没被提过」包进去。
+
+## 同一道题，为什么三个答案
+
+「推荐跑鞋」这四个字，同一个模型、同一天、同一批可用信息，问三次得到三份答案，三份答案连品牌名单都不一样。
+
+- 第 1 次：ASICS、Saucony、Nike、Brooks，四个。
+- 第 2 次：ASICS、Nike、Hoka、特步、李宁、361°、Saucony，七个。
+- 第 3 次：ASICS、Nike、Hoka，三个。
+
+三份答案里 ASICS 和 Nike 都出现了，名单长度却从 3 个到 7 个不等。第 3 次只有三个品牌，第 2 次有七个。第 7 次里排第一的甚至不是这两个，是 361°——而第 2 次里 361° 排在第 6 位。**同一个问题，同一个品牌，位次能差 5 格。**
+
+## 答案为什么会变
+
+生成模型不是查库，是一步步选下一个词。每一步都有几个可选的词，选哪个带随机性。同一个开头，后面的句子就可能长成两个不同的样子。
+
+这带来一个后果：**同一个问题、同一天、同一个模型，问两次可以给出互相矛盾的答案。** 这不是 bug，是采样方式的必然结果。
+
+还有一层：有些答案根本不是答案。实验里的第 13 次和第 19 次，模型没有推荐任何跑鞋，而是反问「你的预算多少」「脚型偏宽还是偏窄」。**这两次在打分时算「零提及」，但它们不是「这个品牌排得靠后」，而是「这一轮压根没进入品牌比较」。** 把这两种情况混在一个计数里，报出来的数就废了。
+
+## 要问多少次才够
+
+问的次数决定你能说多精确。这不是感觉，是算术。
+
+```text
+https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E9%97%AE%E5%A4%9A%E5%B0%91%E6%AC%A1%E6%89%8D%E5%A4%9F%EF%BC%9A95%25%20%E5%8C%BA%E9%97%B4%E5%8D%8A%E5%AE%BD%E9%9A%8F%E6%8F%90%E9%97%AE%E6%AC%A1%E6%95%B0%E7%9A%84%E6%94%B6%E7%AA%84%EF%BC%88%E7%9C%9F%E5%AE%9E%E6%8F%90%E5%8F%8A%E7%8E%87%2065%25%EF%BC%89%22%7D%2C%22color%22%3A%5B%22%232563eb%22%2C%22%23dc2626%22%2C%22%2364748b%22%2C%22%23f59e0b%22%2C%22%230891b2%22%2C%22%238b5cf6%22%2C%22%2365a30d%22%2C%22%23db2777%22%5D%2C%22xAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%221%22%2C%225%22%2C%2210%22%2C%2220%22%2C%2230%22%2C%2250%22%2C%22100%22%2C%22200%22%2C%22500%22%5D%2C%22axisLabel%22%3A%7B%22interval%22%3A0%7D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%2295%25%20%E5%8C%BA%E9%97%B4%E5%8D%8A%E5%AE%BD%EF%BC%88%E7%99%BE%E5%88%86%E7%82%B9%EF%BC%89%22%7D%2C%22grid%22%3A%7B%22left%22%3A80%2C%22right%22%3A40%2C%22top%22%3A60%2C%22bottom%22%3A50%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%2C%22axisPointer%22%3A%7B%22type%22%3A%22shadow%22%7D%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22%22%2C%22type%22%3A%22line%22%2C%22data%22%3A%5B39.7%2C32.6%2C26.0%2C19.3%2C16.0%2C12.9%2C9.2%2C6.6%2C4.2%5D%2C%22label%22%3A%7B%22show%22%3Atrue%2C%22position%22%3A%22top%22%2C%22formatter%22%3A%22%7Bc%7D%22%7D%2C%22stack%22%3Anull%7D%5D%7D&w=760&h=420
+```
+
+<a href="https://x-cmd.com/draw/explore/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E9%97%AE%E5%A4%9A%E5%B0%91%E6%AC%A1%E6%89%8D%E5%A4%9F%EF%BC%9A95%25%20%E5%8C%BA%E9%97%B4%E5%8D%8A%E5%AE%BD%E9%9A%8F%E6%8F%90%E9%97%AE%E6%AC%A1%E6%95%B0%E7%9A%84%E6%94%B6%E7%AA%84%EF%BC%88%E7%9C%9F%E5%AE%9E%E6%8F%90%E5%8F%8A%E7%8E%87%2065%25%EF%BC%89%22%7D%2C%22color%22%3A%5B%22%232563eb%22%2C%22%23dc2626%22%2C%22%2364748b%22%2C%22%23f59e0b%22%2C%22%230891b2%22%2C%22%238b5cf6%22%2C%22%2365a30d%22%2C%22%23db2777%22%5D%2C%22xAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%221%22%2C%225%22%2C%2210%22%2C%2220%22%2C%2230%22%2C%2250%22%2C%22100%22%2C%22200%22%2C%22500%22%5D%2C%22axisLabel%22%3A%7B%22interval%22%3A0%7D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%2295%25%20%E5%8C%BA%E9%97%B4%E5%8D%8A%E5%AE%BD%EF%BC%88%E7%99%BE%E5%88%86%E7%82%B9%EF%BC%89%22%7D%2C%22grid%22%3A%7B%22left%22%3A80%2C%22right%22%3A40%2C%22top%22%3A60%2C%22bottom%22%3A50%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%2C%22axisPointer%22%3A%7B%22type%22%3A%22shadow%22%7D%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22%22%2C%22type%22%3A%22line%22%2C%22data%22%3A%5B39.7%2C32.6%2C26.0%2C19.3%2C16.0%2C12.9%2C9.2%2C6.6%2C4.2%5D%2C%22label%22%3A%7B%22show%22%3Atrue%2C%22position%22%3A%22top%22%2C%22formatter%22%3A%22%7Bc%7D%22%7D%2C%22stack%22%3Anull%7D%5D%7D&w=760&h=420"><img src="https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E9%97%AE%E5%A4%9A%E5%B0%91%E6%AC%A1%E6%89%8D%E5%A4%9F%EF%BC%9A95%25%20%E5%8C%BA%E9%97%B4%E5%8D%8A%E5%AE%BD%E9%9A%8F%E6%8F%90%E9%97%AE%E6%AC%A1%E6%95%B0%E7%9A%84%E6%94%B6%E7%AA%84%EF%BC%88%E7%9C%9F%E5%AE%9E%E6%8F%90%E5%8F%8A%E7%8E%87%2065%25%EF%BC%89%22%7D%2C%22color%22%3A%5B%22%232563eb%22%2C%22%23dc2626%22%2C%22%2364748b%22%2C%22%23f59e0b%22%2C%22%230891b2%22%2C%22%238b5cf6%22%2C%22%2365a30d%22%2C%22%23db2777%22%5D%2C%22xAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%221%22%2C%225%22%2C%2210%22%2C%2220%22%2C%2230%22%2C%2250%22%2C%22100%22%2C%22200%22%2C%22500%22%5D%2C%22axisLabel%22%3A%7B%22interval%22%3A0%7D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%2295%25%20%E5%8C%BA%E9%97%B4%E5%8D%8A%E5%AE%BD%EF%BC%88%E7%99%BE%E5%88%86%E7%82%B9%EF%BC%89%22%7D%2C%22grid%22%3A%7B%22left%22%3A80%2C%22right%22%3A40%2C%22top%22%3A60%2C%22bottom%22%3A50%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%2C%22axisPointer%22%3A%7B%22type%22%3A%22shadow%22%7D%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22%22%2C%22type%22%3A%22line%22%2C%22data%22%3A%5B39.7%2C32.6%2C26.0%2C19.3%2C16.0%2C12.9%2C9.2%2C6.6%2C4.2%5D%2C%22label%22%3A%7B%22show%22%3Atrue%2C%22position%22%3A%22top%22%2C%22formatter%22%3A%22%7Bc%7D%22%7D%2C%22stack%22%3Anull%7D%5D%7D&w=760&h=420" width="760" alt="ci_halfwidth_vs_sample_size"></a>
+
+假设一个品牌的真实提及率是 65%（实验里 Saucony 在 20 次中被点名 13 次，正好是 65%）。问不同次数，95% 置信区间的半宽：
+
+| 问几次 | 点估计 | 95% 区间 | 半宽 |
+|---|---|---|---|
+| 1 | 100% | 20.7% — 100% | ±39.7pp |
+| 5 | 60% | 23.1% — 88.2% | ±32.6pp |
+| 20 | 65% | 43.3% — 81.9% | ±19.3pp |
+| 50 | 64% | 50.1% — 75.9% | ±12.9pp |
+| 100 | 65% | 55.3% — 73.6% | ±9.2pp |
+| 200 | 65% | 58.2% — 71.3% | ±6.6pp |
+
+问 1 次，区间宽到能把「这个品牌从没被提过」包进去。问 20 次，区间还有 ±19 个百分点——**Saucony 和 New Balance 在 20 次的实验里差 20 个百分点，但这两个数的区间大幅重叠，光看这两个数分不出高下。**
+
+翻倍样本，区间只收窄约三成。样本量跟精度是开平方的关系：问 4 倍次数，区间才缩一半。**所以「多问几次」的收益是递减的，问到精度够用就停。**
+
+## 一堆答案，怎么变成一个数
+
+20 个答案不能读成一个结论，要读成一个分布。
+
+```text
+https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E6%8D%A2%E4%B8%AA%E9%97%AE%E9%A2%98%EF%BC%8C%E5%90%8D%E5%8D%95%E9%87%8D%E6%8E%92%EF%BC%9A%E4%B8%A4%E4%B8%AA%E9%97%AE%E9%A2%98%E7%9A%84%E5%93%81%E7%89%8C%E6%8F%90%E5%8F%8A%E7%8E%87%22%7D%2C%22color%22%3A%5B%22%232563eb%22%2C%22%23dc2626%22%2C%22%2364748b%22%2C%22%23f59e0b%22%2C%22%230891b2%22%2C%22%238b5cf6%22%2C%22%2365a30d%22%2C%22%23db2777%22%5D%2C%22xAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%22ASICS%22%2C%22Saucony%22%2C%22New%20Balance%22%2C%22Hoka%22%2C%22Brooks%22%2C%22Nike%22%2C%22361%C2%B0%22%5D%2C%22axisLabel%22%3A%7B%22interval%22%3A0%7D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%22%E6%8F%90%E5%8F%8A%E7%8E%87%20%25%22%2C%22axisLabel%22%3A%7B%22formatter%22%3A%22%7Bvalue%7D%25%22%7D%7D%2C%22grid%22%3A%7B%22left%22%3A80%2C%22right%22%3A40%2C%22top%22%3A80%2C%22bottom%22%3A60%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%7D%2C%22legend%22%3A%7B%22data%22%3A%5B%22%E6%8E%A8%E8%8D%90%E8%B7%91%E9%9E%8B%EF%BC%8820%20%E6%AC%A1%EF%BC%89%22%2C%22%E9%80%82%E5%90%88%E6%96%B0%E6%89%8B%E7%9A%84%E9%95%BF%E8%B7%9D%E7%A6%BB%E6%85%A2%E8%B7%91%E9%9E%8B%EF%BC%8815%20%E6%AC%A1%EF%BC%89%22%5D%2C%22top%22%3A30%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22%E6%8E%A8%E8%8D%90%E8%B7%91%E9%9E%8B%EF%BC%8820%20%E6%AC%A1%EF%BC%89%22%2C%22data%22%3A%5B90.0%2C65.0%2C45.0%2C55.0%2C40.0%2C90.0%2C35.0%5D%2C%22type%22%3A%22bar%22%7D%2C%7B%22name%22%3A%22%E9%80%82%E5%90%88%E6%96%B0%E6%89%8B%E7%9A%84%E9%95%BF%E8%B7%9D%E7%A6%BB%E6%85%A2%E8%B7%91%E9%9E%8B%EF%BC%8815%20%E6%AC%A1%EF%BC%89%22%2C%22data%22%3A%5B100.0%2C93.3%2C93.3%2C73.3%2C60.0%2C6.7%2C6.7%5D%2C%22type%22%3A%22bar%22%7D%5D%7D&w=760&h=440
+```
+
+<a href="https://x-cmd.com/draw/explore/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E6%8D%A2%E4%B8%AA%E9%97%AE%E9%A2%98%EF%BC%8C%E5%90%8D%E5%8D%95%E9%87%8D%E6%8E%92%EF%BC%9A%E4%B8%A4%E4%B8%AA%E9%97%AE%E9%A2%98%E7%9A%84%E5%93%81%E7%89%8C%E6%8F%90%E5%8F%8A%E7%8E%87%22%7D%2C%22color%22%3A%5B%22%232563eb%22%2C%22%23dc2626%22%2C%22%2364748b%22%2C%22%23f59e0b%22%2C%22%230891b2%22%2C%22%238b5cf6%22%2C%22%2365a30d%22%2C%22%23db2777%22%5D%2C%22xAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%22ASICS%22%2C%22Saucony%22%2C%22New%20Balance%22%2C%22Hoka%22%2C%22Brooks%22%2C%22Nike%22%2C%22361%C2%B0%22%5D%2C%22axisLabel%22%3A%7B%22interval%22%3A0%7D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%22%E6%8F%90%E5%8F%8A%E7%8E%87%20%25%22%2C%22axisLabel%22%3A%7B%22formatter%22%3A%22%7Bvalue%7D%25%22%7D%7D%2C%22grid%22%3A%7B%22left%22%3A80%2C%22right%22%3A40%2C%22top%22%3A80%2C%22bottom%22%3A60%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%7D%2C%22legend%22%3A%7B%22data%22%3A%5B%22%E6%8E%A8%E8%8D%90%E8%B7%91%E9%9E%8B%EF%BC%8820%20%E6%AC%A1%EF%BC%89%22%2C%22%E9%80%82%E5%90%88%E6%96%B0%E6%89%8B%E7%9A%84%E9%95%BF%E8%B7%9D%E7%A6%BB%E6%85%A2%E8%B7%91%E9%9E%8B%EF%BC%8815%20%E6%AC%A1%EF%BC%89%22%5D%2C%22top%22%3A30%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22%E6%8E%A8%E8%8D%90%E8%B7%91%E9%9E%8B%EF%BC%8820%20%E6%AC%A1%EF%BC%89%22%2C%22data%22%3A%5B90.0%2C65.0%2C45.0%2C55.0%2C40.0%2C90.0%2C35.0%5D%2C%22type%22%3A%22bar%22%7D%2C%7B%22name%22%3A%22%E9%80%82%E5%90%88%E6%96%B0%E6%89%8B%E7%9A%84%E9%95%BF%E8%B7%9D%E7%A6%BB%E6%85%A2%E8%B7%91%E9%9E%8B%EF%BC%8815%20%E6%AC%A1%EF%BC%89%22%2C%22data%22%3A%5B100.0%2C93.3%2C93.3%2C73.3%2C60.0%2C6.7%2C6.7%5D%2C%22type%22%3A%22bar%22%7D%5D%7D&w=760&h=440"><img src="https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E6%8D%A2%E4%B8%AA%E9%97%AE%E9%A2%98%EF%BC%8C%E5%90%8D%E5%8D%95%E9%87%8D%E6%8E%92%EF%BC%9A%E4%B8%A4%E4%B8%AA%E9%97%AE%E9%A2%98%E7%9A%84%E5%93%81%E7%89%8C%E6%8F%90%E5%8F%8A%E7%8E%87%22%7D%2C%22color%22%3A%5B%22%232563eb%22%2C%22%23dc2626%22%2C%22%2364748b%22%2C%22%23f59e0b%22%2C%22%230891b2%22%2C%22%238b5cf6%22%2C%22%2365a30d%22%2C%22%23db2777%22%5D%2C%22xAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%22ASICS%22%2C%22Saucony%22%2C%22New%20Balance%22%2C%22Hoka%22%2C%22Brooks%22%2C%22Nike%22%2C%22361%C2%B0%22%5D%2C%22axisLabel%22%3A%7B%22interval%22%3A0%7D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%22%E6%8F%90%E5%8F%8A%E7%8E%87%20%25%22%2C%22axisLabel%22%3A%7B%22formatter%22%3A%22%7Bvalue%7D%25%22%7D%7D%2C%22grid%22%3A%7B%22left%22%3A80%2C%22right%22%3A40%2C%22top%22%3A80%2C%22bottom%22%3A60%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%7D%2C%22legend%22%3A%7B%22data%22%3A%5B%22%E6%8E%A8%E8%8D%90%E8%B7%91%E9%9E%8B%EF%BC%8820%20%E6%AC%A1%EF%BC%89%22%2C%22%E9%80%82%E5%90%88%E6%96%B0%E6%89%8B%E7%9A%84%E9%95%BF%E8%B7%9D%E7%A6%BB%E6%85%A2%E8%B7%91%E9%9E%8B%EF%BC%8815%20%E6%AC%A1%EF%BC%89%22%5D%2C%22top%22%3A30%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22%E6%8E%A8%E8%8D%90%E8%B7%91%E9%9E%8B%EF%BC%8820%20%E6%AC%A1%EF%BC%89%22%2C%22data%22%3A%5B90.0%2C65.0%2C45.0%2C55.0%2C40.0%2C90.0%2C35.0%5D%2C%22type%22%3A%22bar%22%7D%2C%7B%22name%22%3A%22%E9%80%82%E5%90%88%E6%96%B0%E6%89%8B%E7%9A%84%E9%95%BF%E8%B7%9D%E7%A6%BB%E6%85%A2%E8%B7%91%E9%9E%8B%EF%BC%8815%20%E6%AC%A1%EF%BC%89%22%2C%22data%22%3A%5B100.0%2C93.3%2C93.3%2C73.3%2C60.0%2C6.7%2C6.7%5D%2C%22type%22%3A%22bar%22%7D%5D%7D&w=760&h=440" width="760" alt="two_questions_mention_rates"></a>
+
+- **提及率**：20 次里被点名 18 次，报 90%，并且带上 95% 区间（69.9% — 97.2%）。区间比点估计宽，这就是这件事的真相。
+- **位次分布**：ASICS 的位次在 1 到 5 之间，中位是 1；361° 在 1 到 7 之间，中位是 5。**同一个品牌在同一个问题下，位次能差 6 位。**
+- **答案形状**：20 次里 2 次没有点名任何品牌。这两次要么单独列，要么报告时写清有几次没有进入比较。
+
+```text
+https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E5%90%8C%E4%B8%80%E4%B8%AA%E5%93%81%E7%89%8C%EF%BC%8C%E4%BD%8D%E6%AC%A1%E8%83%BD%E5%B7%AE%E5%87%A0%E6%A0%BC%EF%BC%9A20%20%E6%AC%A1%E6%8F%90%E9%97%AE%E9%87%8C%E7%9A%84%E4%BD%8D%E6%AC%A1%E8%8C%83%E5%9B%B4%22%7D%2C%22color%22%3A%5B%22%232563eb%22%2C%22%23dc2626%22%2C%22%2364748b%22%2C%22%23f59e0b%22%2C%22%230891b2%22%2C%22%238b5cf6%22%2C%22%2365a30d%22%2C%22%23db2777%22%5D%2C%22xAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%22ASICS%22%2C%22Nike%22%2C%22Saucony%22%2C%22Hoka%22%2C%22New%20Balance%22%2C%22361%C2%B0%22%5D%2C%22axisLabel%22%3A%7B%22interval%22%3A0%7D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%22%E4%BD%8D%E6%AC%A1%EF%BC%881%20%3D%20%E6%8E%92%E7%AC%AC%E4%B8%80%EF%BC%89%22%2C%22axisLabel%22%3A%7B%22formatter%22%3A%22%7Bvalue%7D%22%7D%7D%2C%22grid%22%3A%7B%22left%22%3A80%2C%22right%22%3A40%2C%22top%22%3A80%2C%22bottom%22%3A60%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%7D%2C%22legend%22%3A%7B%22data%22%3A%5B%22%E4%BD%8D%E6%AC%A1%E5%8C%BA%E9%97%B4%E4%B8%8B%E6%B2%BF%EF%BC%88%E6%9C%80%E5%A5%BD%E7%9A%84%E4%B8%80%E6%AC%A1%EF%BC%89%22%2C%22%E4%BD%8D%E6%AC%A1%E5%8C%BA%E9%97%B4%E4%B8%8A%E6%B2%BF%EF%BC%88%E6%9C%80%E5%B7%AE%E7%9A%84%E4%B8%80%E6%AC%A1%EF%BC%89%22%5D%2C%22top%22%3A30%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22%E4%BD%8D%E6%AC%A1%E5%8C%BA%E9%97%B4%E4%B8%8B%E6%B2%BF%EF%BC%88%E6%9C%80%E5%A5%BD%E7%9A%84%E4%B8%80%E6%AC%A1%EF%BC%89%22%2C%22data%22%3A%5B1%2C1%2C1%2C2%2C2%2C1%5D%2C%22type%22%3A%22bar%22%2C%22stack%22%3A%22total%22%7D%2C%7B%22name%22%3A%22%E4%BD%8D%E6%AC%A1%E5%8C%BA%E9%97%B4%E4%B8%8A%E6%B2%BF%EF%BC%88%E6%9C%80%E5%B7%AE%E7%9A%84%E4%B8%80%E6%AC%A1%EF%BC%89%22%2C%22data%22%3A%5B5%2C6%2C7%2C5%2C7%2C7%5D%2C%22type%22%3A%22bar%22%2C%22stack%22%3A%22total%22%7D%5D%7D&w=760&h=440
+```
+
+<a href="https://x-cmd.com/draw/explore/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E5%90%8C%E4%B8%80%E4%B8%AA%E5%93%81%E7%89%8C%EF%BC%8C%E4%BD%8D%E6%AC%A1%E8%83%BD%E5%B7%AE%E5%87%A0%E6%A0%BC%EF%BC%9A20%20%E6%AC%A1%E6%8F%90%E9%97%AE%E9%87%8C%E7%9A%84%E4%BD%8D%E6%AC%A1%E8%8C%83%E5%9B%B4%22%7D%2C%22color%22%3A%5B%22%232563eb%22%2C%22%23dc2626%22%2C%22%2364748b%22%2C%22%23f59e0b%22%2C%22%230891b2%22%2C%22%238b5cf6%22%2C%22%2365a30d%22%2C%22%23db2777%22%5D%2C%22xAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%22ASICS%22%2C%22Nike%22%2C%22Saucony%22%2C%22Hoka%22%2C%22New%20Balance%22%2C%22361%C2%B0%22%5D%2C%22axisLabel%22%3A%7B%22interval%22%3A0%7D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%22%E4%BD%8D%E6%AC%A1%EF%BC%881%20%3D%20%E6%8E%92%E7%AC%AC%E4%B8%80%EF%BC%89%22%2C%22axisLabel%22%3A%7B%22formatter%22%3A%22%7Bvalue%7D%22%7D%7D%2C%22grid%22%3A%7B%22left%22%3A80%2C%22right%22%3A40%2C%22top%22%3A80%2C%22bottom%22%3A60%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%7D%2C%22legend%22%3A%7B%22data%22%3A%5B%22%E4%BD%8D%E6%AC%A1%E5%8C%BA%E9%97%B4%E4%B8%8B%E6%B2%BF%EF%BC%88%E6%9C%80%E5%A5%BD%E7%9A%84%E4%B8%80%E6%AC%A1%EF%BC%89%22%2C%22%E4%BD%8D%E6%AC%A1%E5%8C%BA%E9%97%B4%E4%B8%8A%E6%B2%BF%EF%BC%88%E6%9C%80%E5%B7%AE%E7%9A%84%E4%B8%80%E6%AC%A1%EF%BC%89%22%5D%2C%22top%22%3A30%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22%E4%BD%8D%E6%AC%A1%E5%8C%BA%E9%97%B4%E4%B8%8B%E6%B2%BF%EF%BC%88%E6%9C%80%E5%A5%BD%E7%9A%84%E4%B8%80%E6%AC%A1%EF%BC%89%22%2C%22data%22%3A%5B1%2C1%2C1%2C2%2C2%2C1%5D%2C%22type%22%3A%22bar%22%2C%22stack%22%3A%22total%22%7D%2C%7B%22name%22%3A%22%E4%BD%8D%E6%AC%A1%E5%8C%BA%E9%97%B4%E4%B8%8A%E6%B2%BF%EF%BC%88%E6%9C%80%E5%B7%AE%E7%9A%84%E4%B8%80%E6%AC%A1%EF%BC%89%22%2C%22data%22%3A%5B5%2C6%2C7%2C5%2C7%2C7%5D%2C%22type%22%3A%22bar%22%2C%22stack%22%3A%22total%22%7D%5D%7D&w=760&h=440"><img src="https://x-cmd.com/draw/echarts?d=%7B%22title%22%3A%7B%22text%22%3A%22%E5%90%8C%E4%B8%80%E4%B8%AA%E5%93%81%E7%89%8C%EF%BC%8C%E4%BD%8D%E6%AC%A1%E8%83%BD%E5%B7%AE%E5%87%A0%E6%A0%BC%EF%BC%9A20%20%E6%AC%A1%E6%8F%90%E9%97%AE%E9%87%8C%E7%9A%84%E4%BD%8D%E6%AC%A1%E8%8C%83%E5%9B%B4%22%7D%2C%22color%22%3A%5B%22%232563eb%22%2C%22%23dc2626%22%2C%22%2364748b%22%2C%22%23f59e0b%22%2C%22%230891b2%22%2C%22%238b5cf6%22%2C%22%2365a30d%22%2C%22%23db2777%22%5D%2C%22xAxis%22%3A%7B%22type%22%3A%22category%22%2C%22data%22%3A%5B%22ASICS%22%2C%22Nike%22%2C%22Saucony%22%2C%22Hoka%22%2C%22New%20Balance%22%2C%22361%C2%B0%22%5D%2C%22axisLabel%22%3A%7B%22interval%22%3A0%7D%7D%2C%22yAxis%22%3A%7B%22type%22%3A%22value%22%2C%22name%22%3A%22%E4%BD%8D%E6%AC%A1%EF%BC%881%20%3D%20%E6%8E%92%E7%AC%AC%E4%B8%80%EF%BC%89%22%2C%22axisLabel%22%3A%7B%22formatter%22%3A%22%7Bvalue%7D%22%7D%7D%2C%22grid%22%3A%7B%22left%22%3A80%2C%22right%22%3A40%2C%22top%22%3A80%2C%22bottom%22%3A60%7D%2C%22tooltip%22%3A%7B%22trigger%22%3A%22axis%22%7D%2C%22legend%22%3A%7B%22data%22%3A%5B%22%E4%BD%8D%E6%AC%A1%E5%8C%BA%E9%97%B4%E4%B8%8B%E6%B2%BF%EF%BC%88%E6%9C%80%E5%A5%BD%E7%9A%84%E4%B8%80%E6%AC%A1%EF%BC%89%22%2C%22%E4%BD%8D%E6%AC%A1%E5%8C%BA%E9%97%B4%E4%B8%8A%E6%B2%BF%EF%BC%88%E6%9C%80%E5%B7%AE%E7%9A%84%E4%B8%80%E6%AC%A1%EF%BC%89%22%5D%2C%22top%22%3A30%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22%E4%BD%8D%E6%AC%A1%E5%8C%BA%E9%97%B4%E4%B8%8B%E6%B2%BF%EF%BC%88%E6%9C%80%E5%A5%BD%E7%9A%84%E4%B8%80%E6%AC%A1%EF%BC%89%22%2C%22data%22%3A%5B1%2C1%2C1%2C2%2C2%2C1%5D%2C%22type%22%3A%22bar%22%2C%22stack%22%3A%22total%22%7D%2C%7B%22name%22%3A%22%E4%BD%8D%E6%AC%A1%E5%8C%BA%E9%97%B4%E4%B8%8A%E6%B2%BF%EF%BC%88%E6%9C%80%E5%B7%AE%E7%9A%84%E4%B8%80%E6%AC%A1%EF%BC%89%22%2C%22data%22%3A%5B5%2C6%2C7%2C5%2C7%2C7%5D%2C%22type%22%3A%22bar%22%2C%22stack%22%3A%22total%22%7D%5D%7D&w=760&h=440" width="760" alt="rank_range_across_runs"></a>
+
+报数的时候，三样东西要一起给：**提及率、区间、位次范围**。只给一个百分数，读者不知道这个数有多稳。
+
+## 同一道题问五次，五个答案
+
+「适合新手的长距离慢跑鞋」，问五次：
+
+- 第 1 次：ASICS、New Balance、Saucony、Hoka、Brooks。
+- 第 2 次：ASICS、New Balance、Brooks、Saucony、Hoka。
+- 第 3 次：ASICS、Brooks、Hoka。
+- 第 4 次：New Balance、ASICS、Saucony。
+- 第 5 次：ASICS、Saucony、Hoka、New Balance。
+
+这五次里每个品牌都出现了，但第 3 次没有 Saucony 也没有 New Balance，第 4 次没有 Hoka 也没有 Brooks。**「ASICS 每次都被提到」在这里是可靠的，「Hoka 大概会被提到」不是。**
+
+## 换个问题，答案市场就换了
+
+同一批品牌，换一道问题，名单重排。
+
+| 品牌 | 「推荐跑鞋」（20 次） | 「适合新手的长距离慢跑鞋」（15 次） |
+|---|---|---|
+| ASICS | 90.0% | 100.0% |
+| Saucony | 65.0% | 93.3% |
+| New Balance | 45.0% | 93.3% |
+| Hoka | 55.0% | 73.3% |
+| Brooks | 40.0% | 60.0% |
+| Nike | 90.0% | 6.7% |
+| 361° | 35.0% | 6.7% |
+
+Nike 在宽问题里 20 次被点名 18 次，在窄问题里 15 次只被点名 1 次。New Balance 反过来，从 45% 涨到 93.3%。**这不是模型的立场变了，是问题变了——问题定义了要回答什么，被提到的品牌自然跟着换。**
+
+这一点对测量方式有直接后果：**换一个问法，等于换了一个市场。** 报出来的数只对那一句问法有效。想说明「我的品牌在 AI 里有多响」，得先说清问的是哪一句话。
+
+## 这个数必须重复问，单次不算数
+
+把这一页能带走的收成三句：
+
+**第一，单次提问的数不是数。** 它是这批答案里的一个，采样波动可能比品牌之间的差距还大。问一次得到的 90%，跟问 20 次得到的 90%，是两个意思完全不同的东西。
+
+**第二，报数要带区间。** 每一页都得说清问了几次、问的什么、用哪个模型、哪一天问的。区间比点估计难看，但它是诚实的。
+
+**第三，问题集本身就是口径。** 同一批品牌换个问法，排名能整个翻过来。**测量的不是「品牌有多响」，是「在这组问题下，这批品牌被提到多少」。**
+
+往下的两页会接着往下算：份额怎么除、搜索里的份额和 AI 答案里的份额怎么分开报。
+
+**数据**：本次实验用 MiniMax-M3 模型，2026-11-09 通过 Anthropic 兼容接口发起。两组问题分别重复 20 次和 15 次，每组用同一句提问、同一批参数。品牌提及按答案正文中首次出现的品牌名与型号关键词匹配，位次按首次出现位置排序。95% 区间用 Wilson 区间（z=1.96）。
+
+**复现**：`for i in $(seq 1 20); do curl -s -X POST "$ANTHROPIC_BASE_URL/v1/messages" -H "x-api-key: $ANTHROPIC_AUTH_TOKEN" -H "anthropic-version: 2023-06-01" -H "content-type: application/json" -d '{"model":"MiniMax-M3","max_tokens":1200,"messages":[{"role":"user","content":"推荐跑鞋"}]}' -o run_$i.json; done`
