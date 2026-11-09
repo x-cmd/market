@@ -1,0 +1,55 @@
+id: x-market-6-budget-optimization-01-equal-marginal-returns
+
+data:
+  - name:
+      en: equal marginal returns
+      cn: 等边际原则
+    qa:
+      - id: what-it-says
+        question:
+          en: What does the equal marginal rule actually say?
+          cn: 等边际原则到底说了什么？
+        answer:
+          en: >
+            When the total budget is fixed, total return is maximised when every channel earns the same amount on the last dollar. Not the same average return — the same return on the final slice. That common value is the shadow price of the budget: how much extra total return one more dollar would buy.
+          cn: >
+            总量固定的时候，各渠道在「最后一块钱」上赚得一样多，总回报就最大。不是平均回报一样多，是最后那一刀一样多。这个共同的值就是预算的影子价格：预算再多给一块，总回报能多涨多少。
+        confidence: 10
+        reference:
+          - docs/6-budget-optimization/01-equal-marginal-returns/cn.md
+      - id: why-not-average-roi
+        question:
+          en: Why not just rank channels by average ROI?
+          cn: 为什么不直接按平均 ROI 排名？
+        answer:
+          en: >
+            Because an average hides the saturation point. A channel that took 40% of the budget can still show the highest average ROI while its marginal return has fallen below everyone else's. In the worked example, all-in on search gives 1.17; equalising the marginals gives 2.52 — more than double, from the same money.
+          cn: >
+            因为平均数把饱和点藏起来了。吃掉四成预算的渠道，平均 ROI 还能是最高的，但它最后一块钱的回报早就掉到别人下面了。算例里，全给搜索是 1.17，按边际拉平是 2.52——同样的钱，翻了一倍还多。
+        confidence: 10
+        reference:
+          - docs/6-budget-optimization/01-equal-marginal-returns/cn.md
+      - id: when-it-fails
+        question:
+          en: When does the rule stop holding?
+          cn: 什么情况下这条原则不成立？
+        answer:
+          en: >
+            Four ways. The marginal cannot be estimated, because you never split spend into bands. The total is not fixed, so the question is how much to spend rather than how to split it. A hard cap or floor exists, so the optimum sits on the constraint, not at the crossing. And channels interact, so one channel's spend moves another's marginal.
+          cn: >
+            四种情况。边际估不出来，因为从没把花费分档。总投放量不固定，那问题就变成总共该花多少，而不是怎么分。有硬上限或下限，最优解就落在约束边界上，不是交点。还有渠道之间互相影响，一家加钱会动到另一家的边际。
+        confidence: 9
+        reference:
+          - docs/6-budget-optimization/01-equal-marginal-returns/cn.md
+      - id: how-precise
+        question:
+          en: How precise does the optimal split need to be?
+          cn: 最优分配要精确到什么程度？
+        answer:
+          en: >
+            Less precise than you would expect. The crossing usually sits on a flat part of the curves, so a marginal estimated a little wrong moves the split without moving the total much. That is reassuring rather than worrying: here you are afraid of leaving money on the table, not of reading noise as signal, so err toward splitting one more band and looking.
+          cn: >
+            比你以为的要松。交点通常落在曲线很平的地方，所以边际估糙一点，最优分配会偏，总回报却掉不了多少。这反而是好消息：这里你怕的是漏掉一块能赚的钱，不是把噪声当信号——所以宁可多切一档看看。
+        confidence: 8
+        reference:
+          - docs/6-budget-optimization/01-equal-marginal-returns/cn.md

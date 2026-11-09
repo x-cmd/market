@@ -1,0 +1,43 @@
+id: x-market-2-market-research-10-cross-source-triangulation
+
+data:
+  - name:
+      en: cross checking a number
+      cn: 交叉验证
+    qa:
+      - id: why-two-sources
+        question:
+          en: Why check a number against a second source at all?
+          cn: 一个数为什么要再找一个来源对一遍？
+        answer:
+          en: >
+            Because the second source is not there to confirm the first. It is there to disagree with it. Most of the time the two agree and you have learned little. The valuable case is when they do not, because then the difference points at a specific definitional choice — a different universe, a different time window, a different population — and you can go find which one you actually meant.
+          cn: >
+            因为第二个来源不是来确认第一个的，是来跟第一个吵架的。多数时候两边一致，你其实没学到什么；有价值的是它们对不上的那种情况——差值指向一个具体的口径选择：范围不同、时间窗不同、覆盖的人不同，然后你就能去查清楚，自己真正要的是哪一个。
+        confidence: 10
+        reference:
+          - docs/2-market-research/10-cross-source-triangulation/cn.md
+      - id: what-second-source
+        question:
+          en: What makes a good second source?
+          cn: 什么样的第二个来源才算好？
+        answer:
+          en: >
+            Three tests. Independent: it must not be computed from the same upstream data as the first, or agreement proves nothing. Aligned: the time window and the population have to match, or you are comparing two different questions. Known bias: you should be able to say which way it leans, so that when it disagrees you know who to believe.
+          cn: >
+            三个检验。独立：不能和第一个来自同一个上游数据，不然一致说明不了任何事。对齐：时间窗和覆盖的人得一样，不然你是在比两个不同的问题。已知偏向：你要说得清它往哪边偏，这样它跟你不一致时，你知道该信谁。
+        confidence: 9
+        reference:
+          - docs/2-market-research/10-cross-source-triangulation/cn.md
+      - id: disagreeing-numbers
+        question:
+          en: The two sources disagree. What do I check first?
+          cn: 两个来源对不上，先查哪一样？
+        answer:
+          en: >
+            Definition first, then timing. Ask what population each one covers and what period each one measures — a survey of households and a survey of consumers are different populations, and a trailing quarter against a leading quarter are different periods. Only after you have ruled those out do you look for an error in one of the two computations.
+          cn: >
+            先查口径，再查时间。先问两边各覆盖了谁、各量了哪一段时间——家庭访问调查和消费者调查是不同的人群，尾季和首季是不同的时期。这两条都排除掉了，再去找哪一边的算错了。
+        confidence: 9
+        reference:
+          - docs/2-market-research/10-cross-source-triangulation/cn.md
